@@ -2,6 +2,8 @@
 
 A Chrome extension by Corsen AI for discovering, inspecting and exercising WebMCP tools.
 
+**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/webmcp-explorer/pccddgfopjiggjhhlgndlghimbdndjef)**
+
 - Discover JavaScript tools and declarative form inventories, including frame provenance.
 - Run tools manually, save recipes and inspect results and unknown effects.
 - Review security indicators, proposed fixes and a provisional heuristic grade.
@@ -52,5 +54,5 @@ Linux Chrome 155 headful campaign passed 70/70. Native UI and MCP flows passed o
 Chrome 155 and Windows Chrome 157 ARM64. See [QUALIFICATION.md](QUALIFICATION.md) for the exact
 scope and [SOURCE-SHA256.json](SOURCE-SHA256.json) for the qualified product-file hashes.
 
-This repository publishes the release candidate's source. The 2.3.0-rc1 candidate has not been
-published to the Chrome Web Store or npm.
+The Chrome Web Store currently distributes version **2.2.0**. This repository contains the
+qualified **2.3.0-rc1** source; the **2.3.0 Store update is being prepared**.
