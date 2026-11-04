@@ -56,4 +56,5 @@ Chrome 155 and Windows Chrome 157 ARM64. See [QUALIFICATION.md](QUALIFICATION.md
 scope and [SOURCE-SHA256.json](SOURCE-SHA256.json) for the qualified product-file hashes.
 
 The Chrome Web Store currently distributes version **2.2.0**. This repository contains the
-qualified **2.3.0-rc1** source; the **2.3.0 Store update is being prepared**.
+qualified **2.3.0-rc1** source. The **2.3.0 update was submitted to Google for review on
+4 November 2026**, with automatic publication after approval.
