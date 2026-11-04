@@ -1,0 +1,27 @@
+id: WMP-0017
+title: Background tabs align timers to one second; in-page durations of waiting tools inflate
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: a tool that awaits setTimeout(3000) reports about 3000 ms in page
+observed: >
+  Executed from the side panel while the page's tab was in the background, a 3000 ms tool
+  measured 3982 ms inside the page. Chrome aligns timers of background tabs to one-second
+  boundaries; the measurement is right, the tab was simply not in front.
+impact:
+  - durations measured by an inspector depend on whether the inspected tab is visible
+  - a "slow tool" verdict needs the tab's visibility as context
+workaround: >
+  Keep in-page duration and extension round trip apart, and read durations knowing that a
+  background tab is throttled.
+evidence:
+  fixture: fixtures/slow.html
+  automated_test: tools/e2e/inflight.mjs (C1 output)
+  chrome_e2e: true
+spec_status:
+  documented: true (Chrome timer throttling)
+  implementation_specific: true
+products_affected: [WebMCP Explorer]
+status: observed

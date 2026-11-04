@@ -1,0 +1,28 @@
+id: WMP-0010
+title: Target.closeTarget kills the service worker on demand; chrome.storage.session survives it
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: n/a (extension platform, CDP)
+expected: there is no reliable way to kill a worker from a test
+observed: >
+  Target.closeTarget on the service_worker target, sent over the browser-level CDP endpoint,
+  terminates the worker immediately; the next runtime message starts a fresh one. In-memory
+  state is gone; chrome.storage.session keeps its contents across the restart and is emptied
+  when the browser closes.
+impact:
+  - worker death is testable, so recovery code can be verified rather than trusted
+  - storage.session is the right place for in-flight state and for secrets that must not
+    reach disk
+workaround: n/a — this is the technique
+evidence:
+  automated_test: tools/e2e/worker-lifetime.mjs, tools/cdp.mjs (stopServiceWorker)
+  chrome_e2e: true
+  decision: D-050, D-051
+  commit: e6558f9
+spec_status:
+  documented: true (DevTools protocol)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

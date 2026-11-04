@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Declarative WebMCP tools</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}form{margin:12px 0;padding:12px;border:1px solid #ddd;border-radius:8px}label{display:block;margin:4px 0}</style></head>
+<body>
+<h1>Declarative tools</h1>
+<p>Three forms carrying the declarative WebMCP attributes and no <code>registerTool</code> call
+at all. Whether they surface through <code>getTools()</code> is a property of the browser, and
+this page exists so that Explorer's behaviour against them is measured, not assumed.</p>
+<p id="state">…</p>
+
+<h2>1 — plain declarative form</h2>
+<form id="subscribe" toolname="subscribe_newsletter"
+      tooldescription="Subscribe an email address to the newsletter.">
+  <label>Email <input name="email" type="email" required
+      toolparamdescription="The address to subscribe."></label>
+  <label>Plan
+    <select name="plan" toolparamdescription="Which edition to receive.">
+      <option value="weekly">weekly</option>
+      <option value="daily">daily</option>
+    </select>
+  </label>
+  <button type="submit">Subscribe</button>
+</form>
+
+<h2>2 — declarative form with <code>toolautosubmit</code></h2>
+<form id="ping" toolname="ping_server" tooldescription="Ping the server once." toolautosubmit>
+  <label>Note <input name="note" toolparamdescription="Free text carried with the ping."></label>
+  <button type="submit">Ping</button>
+</form>
+
+<h2>3 — declarative form inside a shadow root</h2>
+<div id="shadow-host"></div>
+
+<pre id="log" style="background:#f4f4f2;padding:12px;border-radius:8px;white-space:pre-wrap"></pre>
+
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+const log = document.getElementById('log');
+const lines = [];
+const say = (text) => { lines.push(text); log.textContent = lines.join('\n'); };
+
+// A shadow root with its own declarative form, built with DOM calls.
+const host = document.getElementById('shadow-host');
+const shadow = host.attachShadow({ mode: 'open' });
+const shadowForm = document.createElement('form');
+shadowForm.id = 'shadowed';
+shadowForm.setAttribute('toolname', 'shadow_tool');
+shadowForm.setAttribute('tooldescription', 'Lives inside a shadow root.');
+const shadowLabel = document.createElement('label');
+shadowLabel.append('Value ');
+const shadowInput = document.createElement('input');
+shadowInput.name = 'value';
+shadowInput.setAttribute('toolparamdescription', 'Any value.');
+shadowLabel.append(shadowInput);
+const shadowButton = document.createElement('button');
+shadowButton.type = 'submit';
+shadowButton.textContent = 'Send';
+shadowForm.append(shadowLabel, shadowButton);
+shadow.append(shadowForm);
+
+// Every form answers an agent invocation through respondWith, as the declarative API defines.
+function handle(form, build) {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const invoked = Boolean(event.agentInvoked);
+    const data = Object.fromEntries(new FormData(form).entries());
+    say(`${form.getAttribute('toolname')} submitted, agentInvoked=${invoked}`);
+    if (invoked && typeof event.respondWith === 'function') {
+      event.respondWith(Promise.resolve(JSON.stringify(build(data))));
+    }
+  });
+}
+handle(document.getElementById('subscribe'), (d) => ({ subscribed: d.email, plan: d.plan }));
+handle(document.getElementById('ping'), (d) => ({ pong: true, note: d.note ?? '' }));
+handle(shadowForm, (d) => ({ shadow: d.value ?? '' }));
+
+// What the runtime says about these forms, for the test and for the reader.
+window.addEventListener('toolactivated', (e) => say(`toolactivated ${e.toolName ?? ''}`));
+window.addEventListener('toolcancel', (e) => say(`toolcancel ${e.toolName ?? ''}`));
+
+if (!mc) {
+  state.textContent = 'WebMCP unavailable';
+} else {
+  Promise.resolve(mc.getTools()).then((tools) => {
+    const names = Array.from(tools ?? []).map((t) => t.name);
+    state.textContent = `getTools() sees ${names.length} tool(s): ${names.join(', ') || 'none'}`;
+  }).catch((error) => { state.textContent = 'getTools threw: ' + error.message; });
+}
+</script>
+</body>
+</html>

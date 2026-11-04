@@ -1,0 +1,40 @@
+id: WMP-0051
+title: In a document served with Origin-Agent-Cluster ?0, Chrome 153 and 155 keep the document.modelContext accessor but reject every call with a SecurityError naming document.domain; Chrome 157 lets the API work there
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 and 155.0.8059.84 throw; 157.0.8103.6 works; linux64, --headless=new; page http://localhost:8777/oac0/basic.html served by fixtures/serve.mjs with the header
+  mode: native
+expected: >
+  Chrome's documentation (read 2026-09-04) said WebMCP is only available in origin-isolated
+  documents. The specification removed the origin-keyed agent cluster requirement on 2026-09-30
+  (#330).
+observed: >
+  Reading document.modelContext on the opt-out document does not throw; the object is there
+  with its four methods. registerTool() returns a promise that rejects, and getTools() rejects,
+  both with SecurityError "document.modelContext cannot be used when document.domain is
+  enabled." on 153 and 155 (the same sentence an extension page gets, WMP-0007), so the page
+  can register nothing and an inspector that calls getTools() receives the rejection, not a
+  list. window.originAgentCluster is false there. On 157 registration, getTools() and
+  executeTool() all work on the same document, and window.originAgentCluster is still false.
+reliable_discriminator: >
+  window.originAgentCluster === false together with a getTools() rejection whose name is
+  SecurityError and whose message names document.domain
+impact:
+  - a probe that reports the rejection only as a discovery error leaves the person without the cause; the originAgentCluster signal names it
+  - the origin-isolation requirement is build-dependent from 157 on; a diagnosis must quote the browser rather than assert the rule
+  - a site that sets Origin-Agent-Cluster ?0 or document.domain loses WebMCP on 153 to 155 and regains it on 157
+workaround: >
+  Carry the rejection with the frame, pair it with window.originAgentCluster === false, and
+  report origin-not-isolated with the browser's own sentence (page/probe.js, core/env.js).
+evidence:
+  fixture: fixtures/serve.mjs route /oac0/, fixtures/basic.html
+  automated_test: tools/probe-platform.mjs on the /oac0/ page
+  chrome_e2e: true
+  decision: D-128
+spec_status:
+  documented: >
+    the requirement was removed from the specification on 2026-09-30 (#330); Chrome 157 follows
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: observed

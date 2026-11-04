@@ -1,0 +1,32 @@
+id: WMP-0018
+title: Stable Chrome 152 exposes nothing without enable-webmcp-testing; Chrome for Testing 152 exposes it unflagged
+date_observed: 2026-09-04
+environment:
+  browser: Chrome (stable) and Chrome for Testing
+  version: 152.0.7977.66 / 152.0.7977.82
+  mode: testing-flag
+expected: a Chrome 152 user sees document.modelContext
+observed: >
+  On the developer's stable Chrome, document.modelContext and navigator.modelContext were
+  both undefined until chrome://flags/#enable-webmcp-testing was enabled and Chrome
+  relaunched (a tab reload was not enough). Chrome for Testing 152 exposed the API without
+  any flag, so the "unavailable" state cannot be reproduced there.
+impact:
+  - most Store installers will see nothing on first launch, so the environment screen is the
+    product's first screen
+  - an automated test of the "unavailable" state needs a simulated diagnosis
+workaround: >
+  Diagnose the environment on several axes and lead the user to the flag and to a demo page;
+  never assume the API exists.
+evidence:
+  fixture: fixtures/probe.html
+  automated_test: test/env.test.js, test/env.diagnose.test.js
+  chrome_e2e: true
+  decision: D-017, D-049
+  commit: 22318c2
+  source: docs/research/2026-09-04-live-environment-observations.md
+spec_status:
+  documented: true (origin trial and flag)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen Context]
+status: confirmed

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Many tools</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Many tools</h1>
+<p>Registers <code>?n=</code> tools (default 100) to exercise the performance budgets.</p>
+<p id="state">registering…</p>
+<script type="module">
+const params = new URLSearchParams(location.search);
+const count = Math.max(0, Math.min(5000, Number(params.get('n') ?? 100)));
+
+const CATEGORIES = ['search', 'read', 'write', 'compute', 'navigate'];
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+
+if (!mc) {
+  state.textContent = 'WebMCP unavailable';
+} else {
+  const startedAt = performance.now();
+  for (let i = 0; i < count; i += 1) {
+    const category = CATEGORIES[i % CATEGORIES.length];
+    mc.registerTool({
+      name: `${category}_item_${String(i).padStart(4, '0')}`,
+      description: `Synthetic ${category} tool number ${i}, used to measure Explorer at scale.`,
+      inputSchema: {
+        type: 'object',
+        properties: {
+          query: { type: 'string', description: 'What to look for' },
+          limit: { type: 'integer', minimum: 1, maximum: 100, default: 10 },
+          mode: { type: 'string', enum: ['fast', 'thorough'] },
+        },
+        required: ['query'],
+      },
+      annotations: { readOnlyHint: i % 3 !== 0 },
+      execute: async () => JSON.stringify({ index: i, category }),
+    });
+  }
+  const ms = Math.round(performance.now() - startedAt);
+  state.textContent = `${count} tools registered in ${ms} ms`;
+  document.title = `Many tools (${count})`;
+}
+</script>
+</body>
+</html>

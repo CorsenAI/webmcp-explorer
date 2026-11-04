@@ -1,0 +1,37 @@
+id: WMP-0032
+title: Without a window session, headful Chrome on macOS registers the extension worker and then aborts; --headless=new runs the same suite
+date_observed: 2026-09-06
+environment:
+  browser: Chrome for Testing 152.0.7977.82 (mac-arm64) on macOS 26.5.1, Apple Silicon
+  mode: SSH login, launchd session "Background" (launchctl managername), SSH uid different from the console uid
+expected: >
+  A browser started with --remote-debugging-port either fails to start or keeps running; a
+  launcher that has seen the extension's service worker in /json/list can hand the browser to the
+  test scenarios.
+observed: >
+  Headful Chrome started from the SSH shell logs "DevTools listening", registers the extension's
+  worker (visible in /json/list about one second in), then dies two seconds after start with
+  "Trace/BPT trap: 5" (exit status 133), its stderr showing NSNotificationCenter and
+  CVDisplayLinkCreateWithCGDisplay failures — no window server for that session. Every scenario
+  then fails with ECONNREFUSED on the CDP port. The same binary with --headless=new stays up,
+  answers /json/version, loads the unpacked extension and plays the whole 27-scenario suite.
+reliable_discriminator: >
+  on macOS `launchctl managername` prints "Aqua" for a session with a window server and
+  "Background" for an SSH login; on Linux, DISPLAY / WAYLAND_DISPLAY unset
+impact:
+  - a launcher that only waits for the worker to appear reports success on a browser that is already gone
+  - a suite run over SSH on a Mac (CI, a remote machine) must start Chrome with --headless=new, which loads extensions and speaks CDP like the headful build
+  - nothing appears on the console user's screen during such a run, which is also the polite outcome on a personal machine
+workaround: >
+  Detect the session type before launching (launchctl managername on macOS, DISPLAY on Linux) and
+  add --headless=new; after the worker registers, wait a moment and check the process is alive and
+  CDP still answers; keep Chrome's stderr in a file — the reason is only there.
+evidence:
+  automated_test: tools/run-e2e.sh (window_session), tools/launch-test-chrome.mjs (liveness check, chrome-stderr.log)
+  decision: D-059
+  chrome_e2e: true
+spec_status:
+  documented: false (macOS process/session behaviour, not WebMCP)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

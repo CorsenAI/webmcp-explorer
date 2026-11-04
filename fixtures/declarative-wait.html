@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Declarative form that waits for a person</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}form{margin:12px 0;padding:12px;border:1px solid #ddd;border-radius:8px}label{display:block;margin:4px 0}</style></head>
+<body>
+<h1>A form an agent fills in and a person submits</h1>
+<p>One declarative WebMCP form, without <code>toolautosubmit</code>: when an agent calls it, the browser fills it in and
+waits for someone to press <em>Send</em>. Its fields are named <code>query</code> and <code>q</code> because the
+simulated provider (<code>fixtures/mock-llm.mjs</code>) sends both, and Chrome refuses a declarative call that names a
+field the form does not have (measured on Chrome 155, 2026-10-21). Used by <code>tools/e2e/declarative-wait.mjs</code>.</p>
+
+<form id="archive" toolname="search_archive"
+      tooldescription="Search the archive. A librarian checks the request and presses Send.">
+  <label>Query <input name="query" toolparamdescription="What to look for."></label>
+  <label>Short form <input name="q" toolparamdescription="The same query, abbreviated."></label>
+  <button type="submit">Send</button>
+</form>
+
+<pre id="log" style="background:#f4f4f2;padding:12px;border-radius:8px;white-space:pre-wrap"></pre>
+
+<script type="module">
+const log = document.getElementById('log');
+const lines = [];
+const say = (text) => { lines.push(text); log.textContent = lines.join('\n'); };
+const form = document.getElementById('archive');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const invoked = Boolean(event.agentInvoked);
+  const data = Object.fromEntries(new FormData(form).entries());
+  say(`search_archive submitted, agentInvoked=${invoked}`);
+  if (invoked && typeof event.respondWith === 'function') {
+    event.respondWith(Promise.resolve(JSON.stringify({ searched: data.query ?? '', checkedBy: data.q ?? '' })));
+  }
+});
+
+// Chrome 152–155 dispatch these on window, 157 on document.modelContext (WMP-0050).
+const mc = document.modelContext;
+for (const target of [window, mc].filter(Boolean)) {
+  target.addEventListener('toolactivated', (e) => say(`toolactivated ${e.toolName ?? ''}`));
+  target.addEventListener('toolcancel', (e) => say(`toolcancel ${e.toolName ?? ''}`));
+}
+</script>
+</body>
+</html>

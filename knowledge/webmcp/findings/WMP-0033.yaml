@@ -1,0 +1,32 @@
+id: WMP-0033
+title: getTools() returns the tool's title; an empty string when the page gave none
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82 and 153.0.8010.36 (linux64)
+  mode: native
+expected: >
+  The vendor documentation of 2026-09-01 lists `title` as an optional field of the descriptor
+  passed to registerTool; whether it is read back through getTools() is not stated.
+observed: >
+  A tool registered with title "Probe title" comes back from getTools() with title "Probe title";
+  a tool registered without one comes back with title "". The key is present on every tool
+  object, alongside annotations, description, inputSchema, name, origin and window.
+reliable_discriminator: typeof tool.title === 'string'
+impact:
+  - an inspector that drops the field shows only the machine name of a tool the page also named for people
+  - a contract snapshot without the title misses one kind of change a deploy can make
+workaround: >
+  Keep the title in the registry, show it next to the name when it differs, search on it, and
+  record it in snapshots as a detail of the contract without folding it into the fingerprint,
+  so older snapshots stay comparable.
+evidence:
+  fixture: tools/probe-platform.mjs (probe_shape)
+  automated_test: test/title-and-kind.test.js
+  chrome_e2e: true
+  decision: D-060
+spec_status:
+  documented: partially (descriptor field in the vendor docs; read-back not stated)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

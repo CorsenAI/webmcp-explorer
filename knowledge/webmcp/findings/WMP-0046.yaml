@@ -1,0 +1,43 @@
+id: WMP-0046
+title: Chrome 155 returns inputSchema as an object and executeTool() accepts only an object; a JSON string is refused with a TypeError, and arguments are still not validated against the schema
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 (Stable channel of the CfT feed on 2026-10-17) and 157.0.8103.6 (Beta), linux64, --headless=new, enable-webmcp-testing profile; 153.0.8010.36 measured side by side the same minute
+  mode: native
+expected: >
+  The specification (Draft CG Report, 16 October 2026) types RegisteredTool.inputSchema as an
+  object and declares executeTool(tool, optional any inputObject), rejecting a non-Object input
+  with a TypeError (PRs #241 of 2026-08-14, #246 of 2026-08-17, #251 of 2026-09-10, #279 of
+  2026-09-26). Chrome 152 and 153 did the opposite (WMP-0003, WMP-0034, WMP-0037).
+observed: >
+  On 155, typeof tool.inputSchema is "object" for an imperative tool and for a declarative form.
+  executeTool(tool, '{"query":"x"}') rejects with TypeError "Failed to execute 'executeTool' on
+  'ModelContext': invalid input object: value is not an object"; on 157 the sentence is
+  "parameter 2 is not of type 'object'.". An object is accepted and the tool's execute receives
+  an object. A malformed JSON string gets the same TypeError. {query: 7} against a string-typed
+  property reaches the tool unchanged on 153, 155 and 157, so the runtime still validates
+  nothing. 153 is unchanged (string only; an object fails with UnknownError "Failed to parse
+  input arguments").
+reliable_discriminator: >
+  typeof (await document.modelContext.getTools())[i].inputSchema on the running build, read
+  before each call (page/execute.js, D-075); the binding TypeError message starts with
+  "Failed to execute 'executeTool'" on both 155 and 157.
+impact:
+  - any caller that sends a JSON string breaks on every Chrome from 155 on
+  - the contract fingerprint must be computed on the parsed schema, never the wire form (D-025 holds)
+  - argument validation remains the caller's job on every measured build
+workaround: >
+  Choose the argument form from the shape inputSchema comes back in on the same runtime, keep
+  the single fallback on a binding TypeError, never a third attempt (D-075).
+evidence:
+  fixture: fixtures/basic.html
+  automated_test: tools/probe-platform.mjs (executeWithString, executeWithObject, executeWithBadJson, executeWithSchemaViolation), outputs recorded in docs/research/2026-10-18-platform-155-157.md
+  chrome_e2e: true
+  decision: D-128
+spec_status:
+  documented: >
+    yes, since 2026-08-14 (schema) and 2026-08-17 (arguments); Chrome 155 now follows the text
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

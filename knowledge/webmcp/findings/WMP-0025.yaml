@@ -1,0 +1,29 @@
+id: WMP-0025
+title: A declarative <form toolname> inside a shadow root is invisible to a light-DOM scan
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: document.querySelectorAll('[toolname]') finds every declarative form on the page
+observed: >
+  Two forms in the light DOM were found; a third, identical in every attribute but placed in
+  an open shadow root, was not. querySelectorAll does not pierce shadow roots. The runtime,
+  however, exposes all three through getTools() (WMP-0029): the shadow-root tool is listed,
+  it simply cannot be labelled "declarative" from the DOM.
+impact:
+  - an inspector that marks tools "declarative" by scanning the DOM misses shadow-DOM forms
+  - a security scan of declarative surfaces needs a shadow-root walk to be complete
+workaround: >
+  Walk open shadow roots explicitly when the aim is completeness; closed shadow roots stay
+  out of reach and must be declared as such.
+evidence:
+  fixture: fixtures/declarative.html
+  automated_test: tools/e2e/declarative.mjs (E4)
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: n/a (DOM behaviour)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

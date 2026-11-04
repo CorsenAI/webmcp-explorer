@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Cross-origin iframe without allow</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}iframe{display:block;width:100%;height:56px;border:1px solid #ddd}</style></head>
+<body>
+<h1>Cross-origin iframe, no <code>allow="tools"</code></h1>
+<p>The only child here is cross-origin and its embed does not delegate the tools policy. An
+inspector must say so when it cannot reach it, rather than report an empty frame.</p>
+<p id="state">registering…</p>
+<iframe src="http://127.0.0.1:8788/child-cross.html"></iframe>
+<script type="module">
+import { registerDemoTool, report } from './register.js';
+const ok = registerDemoTool(
+  'noallow_top_tool',
+  'A tool on the top-level document of the no-allow fixture.',
+  { type: 'object', properties: {} },
+  { top: true },
+);
+report(ok ? 'noallow_top_tool registered' : 'WebMCP unavailable');
+</script>
+</body>
+</html>

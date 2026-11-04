@@ -1,0 +1,40 @@
+id: WMP-0029
+title: Chrome 152 exposes declarative <form toolname> tools through getTools(); a form without toolautosubmit waits for a person
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: >
+  Unknown before measuring: whether declarative forms appear in getTools(), how they execute,
+  and what an inspector sees meanwhile.
+observed: >
+  Three forms with toolname/tooldescription/toolparamdescription attributes and no registerTool
+  call were all listed by getTools() — one of them inside an open shadow root — with an
+  inputSchema derived from the fields (properties email, plan; required email).
+  Executing the form marked toolautosubmit resolved at once with the payload the page passed to
+  event.respondWith, and the page saw event.agentInvoked === true.
+  Executing a form without toolautosubmit fired toolactivated on window, pre-filled the fields
+  with the arguments, marked the form with :tool-form-active and its submit button with
+  :tool-submit-active, and then waited: executeTool resolved only when the submit button was
+  pressed, with the respondWith payload. Left alone it did not resolve within 15 s.
+reliable_discriminator: >
+  a declarative tool is only recognisable from the DOM (an element with the toolname attribute);
+  the tool object from getTools() does not say how it was registered
+impact:
+  - an inspector executing a declarative tool may wait on a human; "Running…" alone reads as a hang
+  - a light-DOM scan labels declarative tools but misses shadow-root forms (WMP-0025)
+  - Source Finder has nothing to locate, since no registerTool call exists
+workaround: >
+  Say next to the Run button that a declarative form may wait for someone to submit it; label
+  as declarative only what the DOM scan proves, never infer (D-016).
+evidence:
+  fixture: fixtures/declarative.html
+  automated_test: tools/e2e/declarative.mjs
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: true (declarative API docs describe toolautosubmit, respondWith, the pseudo-classes)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WebMCP probe</title>
+<style>
+  body { font: 14px/1.6 system-ui, sans-serif; margin: 24px; max-width: 760px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #e3e3df; }
+  th { width: 220px; font-weight: 500; }
+  pre { background: #f4f4f2; padding: 12px; border-radius: 8px; white-space: pre-wrap; }
+  .ok { color: #0f6e56; font-weight: 600; }
+  .no { color: #a32d2d; font-weight: 600; }
+  h2 { font-size: 16px; font-weight: 500; margin-top: 24px; }
+</style>
+</head>
+<body>
+<h1>WebMCP probe</h1>
+<p id="verdict">running…</p>
+<p id="reason"></p>
+<table id="checks"></table>
+<h2>Raw signals</h2>
+<pre id="raw"></pre>
+
+<script type="module">
+import { probeMainWorld } from '/src/page/probe.js';
+import { diagnoseEnvironment } from '/src/core/env.js';
+
+const LABELS = {
+  secureContext: 'Secure context',
+  originIsolation: 'Origin isolation',
+  apiAvailability: 'WebMCP API',
+  toolsPermission: 'Tools permission',
+  frameContext: 'Frame context',
+  capability: 'Capability state',
+};
+
+const REASON_TEXT = {
+  'insecure-context': 'This page is not a secure context. WebMCP is never exposed here.',
+  'origin-not-isolated': 'This document is not origin-isolated. Origin-Agent-Cluster: ?0 disables WebMCP.',
+  'tools-policy-blocked': 'The tools Permissions Policy blocks this frame. A cross-origin iframe needs allow="tools".',
+  'api-absent': 'The WebMCP runtime is not exposed. Enable chrome://flags/#enable-webmcp-testing and relaunch Chrome.',
+  'api-partial': 'The WebMCP object exists but its surface is not the one Explorer expects.',
+  'polyfill-active': 'A polyfill is providing WebMCP. This is not the native implementation.',
+};
+
+// Never innerHTML: every value below originates from the inspected page.
+function addRow(table, label, value) {
+  const tr = document.createElement('tr');
+  const th = document.createElement('th');
+  const td = document.createElement('td');
+  th.textContent = label;
+  td.textContent = value;
+  tr.append(th, td);
+  table.append(tr);
+}
+
+const signals = await probeMainWorld(null);
+const d = diagnoseEnvironment(signals);
+
+const verdict = document.getElementById('verdict');
+const good = d.checks.apiAvailability === 'available';
+verdict.textContent = good ? 'WebMCP IS AVAILABLE' : 'WebMCP IS NOT AVAILABLE';
+verdict.className = good ? 'ok' : 'no';
+document.title = good ? 'PROBE-OK' : 'PROBE-FAIL';
+
+document.getElementById('reason').textContent = d.reason ? REASON_TEXT[d.reason] : '';
+
+const table = document.getElementById('checks');
+for (const [key, value] of Object.entries(d.checks)) {
+  const text = key === 'originIsolation'
+    ? `originAgentCluster: ${value.originAgentCluster} · crossOriginIsolated: ${value.crossOriginIsolated}`
+    : String(value);
+  addRow(table, LABELS[key] ?? key, text);
+}
+if (d.missing.length) addRow(table, 'Missing methods', d.missing.join(', '));
+addRow(table, 'Tools discovered', signals.tools.map((t) => t.name).join(', ') || '(none)');
+addRow(table, 'Child frames', String(signals.childFrames.length));
+
+document.getElementById('raw').textContent = JSON.stringify(
+  {
+    userAgent: (navigator.userAgent.match(/Chrome\/[\d.]+/) || ['n/a'])[0],
+    reason: d.reason,
+    ...signals,
+  },
+  null, 2,
+);
+</script>
+</body>
+</html>

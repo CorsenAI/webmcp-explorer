@@ -1,0 +1,31 @@
+id: WMP-0012
+title: A tool whose execute resolves null comes back from executeTool as the string "null"
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: >
+  The vendor documentation says execute may return null when the call caused a navigation, so
+  an inspector expects a distinguishable null.
+observed: >
+  executeTool() resolved with the string "null" for a tool returning null. There is no
+  observable null: a tool returning null and a tool returning the text "null" are identical
+  from the caller's side.
+reliable_discriminator: none available
+impact:
+  - that the call ended in a navigation cannot be inferred from a null result in this Chrome
+  - a result parsed as JSON shows the value null, which is honest but ambiguous
+workaround: >
+  Show the result exactly as received and name the ambiguity next to it. Do not guess a
+  navigation from it; detect navigation from the tab lifecycle instead (WMP-0011).
+evidence:
+  fixture: fixtures/slow.html (null_tool)
+  automated_test: tools/e2e/inflight.mjs (C4)
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: contradicted by observation
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

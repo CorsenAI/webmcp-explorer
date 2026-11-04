@@ -1,0 +1,31 @@
+id: WMP-0053
+title: window.originAgentCluster is the readable origin-isolation signal (true on secure loopback, false under Origin-Agent-Cluster ?0); document.originAgentCluster is undefined on every build
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36, 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new
+  mode: native
+expected: >
+  The HTML specification and MDN define originAgentCluster on Window, true when the window is in
+  an origin-keyed agent cluster.
+observed: >
+  window.originAgentCluster is true on http://localhost:8777/basic.html on all three builds and
+  false on the /oac0/ variant served with Origin-Agent-Cluster ?0; typeof
+  document.originAgentCluster is "undefined" everywhere. WMP-0023 recorded "originAgentCluster
+  is undefined" because it was read off document.
+reliable_discriminator: >
+  typeof window.originAgentCluster === 'boolean'
+impact:
+  - a probe that reads the property off document never fills the origin-isolation axis of the diagnosis
+  - read off window, the axis is populated on every measured build
+workaround: Read window.originAgentCluster (page/probe.js).
+evidence:
+  fixture: fixtures/basic.html, fixtures/serve.mjs route /oac0/
+  automated_test: tools/probe-platform.mjs (originAgentCluster)
+  chrome_e2e: true
+  source: https://developer.mozilla.org/en-US/docs/Web/API/Window/originAgentCluster
+spec_status:
+  documented: yes (HTML)
+  implementation_specific: false
+products_affected: [WebMCP Explorer]
+status: confirmed

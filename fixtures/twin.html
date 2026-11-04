@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Twin widget</title>
+<style>body{font:13px/1.5 system-ui,sans-serif;margin:8px}b{font-size:18px}</style></head>
+<body>
+<p>Twin widget — counter: <b id="count">0</b> <span id="label"></span></p>
+<script type="module">
+// The same file is embedded twice by twins.html. Each copy is a separate document with its own
+// counter and its own registrations of the SAME tool names: two live instances of one logical
+// tool. An inspector must keep both and must bump only the one it was asked to.
+const mc = document.modelContext || navigator.modelContext;
+const count = document.getElementById('count');
+document.getElementById('label').textContent = `(${location.search || 'no query'})`;
+let value = 0;
+
+if (mc) {
+  mc.registerTool({
+    name: 'get_state',
+    description: 'Read this widget\'s counter.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: true },
+    execute: async () => JSON.stringify({ count: value, query: location.search }),
+  });
+  mc.registerTool({
+    name: 'bump',
+    description: 'Increase this widget\'s counter by one and return it.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: false },
+    execute: async () => {
+      value += 1;
+      count.textContent = String(value);
+      return JSON.stringify({ count: value, query: location.search });
+    },
+  });
+}
+</script>
+</body>
+</html>

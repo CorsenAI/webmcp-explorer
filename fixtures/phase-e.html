@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Phase E local qualification</title>
+<h1>Local qualification — synthetic records only</h1><output id="state">starting</output>
+<script type="module">
+window.phaseE={read:0,debit:0,ready:false};
+const show=()=>document.querySelector('#state').textContent=JSON.stringify(phaseE);
+const mc=document.modelContext;
+if(mc){
+ await mc.registerTool({name:'phase_e_read',description:'Read the synthetic qualification receipt for the requested ticket. No account or payment is accessed.',
+  inputSchema:{type:'object',properties:{ticket:{type:'string',enum:['phase-e-qualification'],maxLength:40}},required:['ticket'],additionalProperties:false},
+  annotations:{readOnlyHint:true},execute:args=>{phaseE.read++;show();return {ticket:args.ticket,receipt:'E-LIVE-OK',readCount:phaseE.read};}});
+ if(!new URL(location).searchParams.has('readonly'))await mc.registerTool({name:'phase_e_pay',description:'Apply one synthetic laboratory debit. No real payment or external service is involved.',
+  inputSchema:{type:'object',properties:{invoice:{type:'string',enum:['E-SYNTHETIC'],maxLength:40},amount:{type:'integer',minimum:1,maximum:1}},required:['invoice','amount'],additionalProperties:false},
+  annotations:{readOnlyHint:false,destructiveHint:true,consequentialHint:true},execute:args=>{phaseE.debit++;show();return {invoice:args.invoice,debit:phaseE.debit,receipt:'E-APPROVED-ONCE'};}});
+ phaseE.ready=true;show();
+}
+</script></html>

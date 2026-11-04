@@ -1,0 +1,33 @@
+id: WMP-0003
+title: inputSchema is returned by getTools() as a JSON string, not an object
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: the schema object passed to registerTool comes back as an object
+observed: >
+  getTools() returns inputSchema as a JSON string. Code that reads schema.properties on it
+  sees undefined and renders an empty form.
+reliable_discriminator: typeof tool.inputSchema === 'string'
+impact:
+  - generated forms come out empty
+  - schema fingerprints differ between the registered object and the string read back
+workaround: >
+  Parse the schema at one single point; accept object, string, null or empty string; treat a
+  JSON scalar as "not a schema" rather than as one. Fingerprint the canonical parsed form so
+  string and object yield the same fingerprint.
+evidence:
+  fixture: fixtures/basic.html
+  automated_test: test/schema-parse.test.js, test/identity.test.js
+  chrome_e2e: true
+  decision: D-025
+  commit: e439bfc
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: superseded
+superseded_by: WMP-0046
+superseded_note: >
+  True for Chrome 152 and 153. Measured 2026-10-18, Chrome 155 (Stable) returns inputSchema as an object (WMP-0046).

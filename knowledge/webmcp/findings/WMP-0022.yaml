@@ -1,0 +1,24 @@
+id: WMP-0022
+title: Reloading an extension loaded from the command line does not reliably pick up changed files
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: n/a (tooling)
+expected: chrome.runtime.reload() or the Reload button reloads the edited source
+observed: >
+  After editing files under the --load-extension directory, reloading served stale code often
+  enough to produce two false diagnoses in one day.
+impact:
+  - a fix appears not to work when it was simply never loaded
+workaround: build a fresh copy of the extension into a new directory for every launch
+evidence:
+  automated_test: tools/build-test-extension.mjs, tools/launch-test-chrome.mjs
+  chrome_e2e: true
+  decision: D-022
+  commit: 117bf78
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

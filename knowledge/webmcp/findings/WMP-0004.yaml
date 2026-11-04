@@ -1,0 +1,32 @@
+id: WMP-0004
+title: Annotations are normalised by the browser; consequentialHint does not exist in Chrome 152
+date_observed: 2026-09-04
+environment:
+  browser: Chrome
+  version: 152.0.7977.66
+  mode: native
+expected: annotations come back as registered, consequentialHint included (it is in the vendor docs)
+observed: >
+  A tool registered with { consequentialHint: true } is returned with
+  { readOnlyHint: false, untrustedContentHint: false }. The browser normalises the annotation
+  set to the ones it knows; consequentialHint is dropped.
+impact:
+  - a UI that hard-codes a badge for consequentialHint promises something that never shows
+  - annotation fingerprints are stable across registrations because of the normalisation
+workaround: >
+  Display the annotations actually present, never a fixed list; adapt per capability, not per
+  browser version (D-009).
+evidence:
+  fixture: fixtures/probe.html
+  automated_test: test/identity.test.js
+  chrome_e2e: true
+  decision: D-009
+  commit: b65ebb6
+  source: docs/research/2026-09-04-live-environment-observations.md
+spec_status:
+  documented: partially (the vendor docs list consequentialHint)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed
+note_2026_10_18: >
+  Still true for Chrome 152 and 153. From Chrome 155 consequentialHint survives registration (WMP-0047), and from Chrome 157 debugging does too (WMP-0048).

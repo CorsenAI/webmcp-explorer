@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Northwind Outfitters — outdoor gear</title>
+<style>
+  :root { --ink: #1c1c1a; --muted: #6b6b66; --line: #e6e4df; --accent: #185fa5; --ok: #0f6e56; --warn: #a35a00; --danger: #a32d2d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: #fbfaf7; }
+  header { display: flex; align-items: center; gap: 18px; padding: 14px 24px; background: #fff; border-bottom: 1px solid var(--line); }
+  .brand { font-weight: 700; font-size: 17px; letter-spacing: 0.01em; }
+  .brand small { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+  .search { flex: 1; display: flex; gap: 8px; }
+  .search input { flex: 1; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+  .search button, .card button { padding: 8px 12px; border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 8px; font: inherit; cursor: pointer; }
+  main { display: grid; grid-template-columns: 1fr 240px; gap: 20px; padding: 20px 24px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .lead { margin: 0 0 14px; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
+  .card.hit { border-color: var(--accent); box-shadow: 0 0 0 2px #185fa533; }
+  .card.dim { opacity: 0.45; }
+  .name { font-weight: 600; }
+  .cat { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .row { display: flex; justify-content: space-between; align-items: center; }
+  .price { font-weight: 600; }
+  .stock { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #e8f4ef; color: var(--ok); }
+  .stock.out { background: #f8e7e7; color: var(--danger); }
+  .stock.low { background: #fdf1e2; color: var(--warn); }
+  aside { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px; align-self: start; }
+  aside h2 { font-size: 15px; margin: 0 0 8px; }
+  aside ul { list-style: none; padding: 0; margin: 0 0 10px; }
+  aside li { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed var(--line); }
+  .total { display: flex; justify-content: space-between; font-weight: 700; margin-top: 6px; }
+  .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+  #state { position: fixed; right: 12px; bottom: 8px; font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Northwind Outfitters<small>Outdoor gear, shipped from the valley</small></div>
+  <form class="search" id="search-form"><input id="q" placeholder="Search jackets, packs, camp gear…" aria-label="Search"><button type="submit">Search</button></form>
+</header>
+<main>
+  <section>
+    <h1>Autumn collection</h1>
+    <p class="lead" id="lead">8 products · every action on this page is also exposed to agents as a WebMCP tool.</p>
+    <div class="grid" id="grid"></div>
+  </section>
+  <aside>
+    <h2>Your cart</h2>
+    <ul id="cart"><li><span class="note">Nothing yet</span></li></ul>
+    <div class="total"><span>Total</span><span id="total">€0</span></div>
+    <p class="note" id="coupon">No coupon applied.</p>
+  </aside>
+</main>
+<p id="state">registering…</p>
+<script type="module">
+// A small but real storefront: the tools below change what you see on this page. It exists so
+// Explorer can be shown on something that looks like a site rather than a test page, with
+// tools whose names, descriptions and annotations mean what they say.
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+
+const CATALOGUE = [
+  { id: 'nw-101', name: 'Alpine Shell Jacket', category: 'jackets', price: 189, stock: 6, blurb: 'Three-layer waterproof shell, 20k/20k.' },
+  { id: 'nw-102', name: 'Trail Runner Shoes', category: 'footwear', price: 129, stock: 0, blurb: 'Grippy outsole, wide toe box.' },
+  { id: 'nw-103', name: 'Merino Base Layer', category: 'apparel', price: 79, stock: 14, blurb: '180 g/m² merino, flatlock seams.' },
+  { id: 'nw-104', name: 'Summit Backpack 40L', category: 'packs', price: 159, stock: 3, blurb: 'Alpine pack with removable frame.' },
+  { id: 'nw-105', name: 'Titanium Cook Set', category: 'camp', price: 65, stock: 9, blurb: 'Pot, lid and mug, 290 g in all.' },
+  { id: 'nw-106', name: 'Down Sleeping Bag −5°', category: 'camp', price: 249, stock: 2, blurb: '800 fill power, 900 g.' },
+  { id: 'nw-107', name: 'Carbon Trekking Poles', category: 'accessories', price: 89, stock: 11, blurb: 'Foldable, 210 g per pole.' },
+  { id: 'nw-108', name: 'Headlamp 600 lm', category: 'accessories', price: 45, stock: 25, blurb: 'USB-C, red mode, 60 h.' },
+];
+const ORDERS = { 'NW-1042': { status: 'shipped', carrier: 'DPD', eta: '2026-09-08' }, 'NW-1043': { status: 'packing', eta: '2026-09-09' } };
+const cart = [];
+let coupon = null;
+
+const grid = document.getElementById('grid');
+function stockBadge(p) {
+  if (p.stock === 0) return '<span class="stock out">out of stock</span>';
+  if (p.stock <= 3) return `<span class="stock low">only ${p.stock} left</span>`;
+  return `<span class="stock">in stock</span>`;
+}
+function renderGrid(hits = null) {
+  grid.replaceChildren(...CATALOGUE.map((p) => {
+    const card = document.createElement('article');
+    card.className = 'card' + (hits ? (hits.includes(p.id) ? ' hit' : ' dim') : '');
+    const cat = document.createElement('div'); cat.className = 'cat'; cat.textContent = p.category;
+    const name = document.createElement('div'); name.className = 'name'; name.textContent = p.name;
+    const blurb = document.createElement('div'); blurb.className = 'note'; blurb.textContent = p.blurb;
+    const row = document.createElement('div'); row.className = 'row';
+    const price = document.createElement('span'); price.className = 'price'; price.textContent = `€${p.price}`;
+    const stock = document.createElement('span'); stock.className = 'stock' + (p.stock === 0 ? ' out' : p.stock <= 3 ? ' low' : '');
+    stock.textContent = p.stock === 0 ? 'out of stock' : p.stock <= 3 ? `only ${p.stock} left` : 'in stock';
+    row.append(price, stock);
+    const button = document.createElement('button'); button.type = 'button'; button.textContent = 'Add to cart';
+    button.disabled = p.stock === 0;
+    button.addEventListener('click', () => addToCart(p.id, 1));
+    card.append(cat, name, blurb, row, button);
+    return card;
+  }));
+}
+function renderCart() {
+  const list = document.getElementById('cart');
+  if (cart.length === 0) {
+    const li = document.createElement('li'); const s = document.createElement('span'); s.className = 'note'; s.textContent = 'Nothing yet'; li.append(s);
+    list.replaceChildren(li);
+  } else {
+    list.replaceChildren(...cart.map((line) => {
+      const p = CATALOGUE.find((x) => x.id === line.id);
+      const li = document.createElement('li');
+      const a = document.createElement('span'); a.textContent = `${line.quantity} × ${p.name}`;
+      const b = document.createElement('span'); b.textContent = `€${p.price * line.quantity}`;
+      li.append(a, b);
+      return li;
+    }));
+  }
+  document.getElementById('total').textContent = `€${total()}`;
+  document.getElementById('coupon').textContent = coupon ? `Coupon ${coupon.code}: −${coupon.percent}% applied.` : 'No coupon applied.';
+}
+function subtotal() { return cart.reduce((sum, line) => sum + CATALOGUE.find((x) => x.id === line.id).price * line.quantity, 0); }
+function total() { const s = subtotal(); return coupon ? Math.round(s * (100 - coupon.percent) / 100) : s; }
+
+function search({ query = '', category, maxPrice, inStockOnly = false }) {
+  // Word by word, the way a catalogue search behaves: "waterproof jacket" matches a product
+  // whose name says jacket and whose description says waterproof.
+  const words = String(query).toLowerCase().split(/\s+/).filter(Boolean);
+  const haystack = (p) => `${p.name} ${p.blurb} ${p.category}`.toLowerCase();
+  const found = CATALOGUE.filter((p) => words.every((w) => haystack(p).includes(w))
+    && (!category || p.category === category)
+    && (typeof maxPrice !== 'number' || p.price <= maxPrice)
+    && (!inStockOnly || p.stock > 0));
+  renderGrid(found.map((p) => p.id));
+  document.getElementById('lead').textContent = `${found.length} of ${CATALOGUE.length} products match.`;
+  return found.map(({ id, name, category, price, stock }) => ({ id, name, category, price, stock, inStock: stock > 0 }));
+}
+function addToCart(id, quantity = 1) {
+  const p = CATALOGUE.find((x) => x.id === id);
+  if (!p) throw new Error(`No product with id ${id}`);
+  if (p.stock === 0) throw new Error(`${p.name} is out of stock`);
+  const line = cart.find((x) => x.id === id);
+  if (line) line.quantity += quantity; else cart.push({ id, quantity });
+  renderCart();
+  return { cart, total: total() };
+}
+
+document.getElementById('search-form').addEventListener('submit', (e) => { e.preventDefault(); search({ query: document.getElementById('q').value }); });
+renderGrid();
+renderCart();
+
+if (!mc) {
+  state.textContent = 'WebMCP unavailable';
+} else {
+  const register = (descriptor) => mc.registerTool(descriptor);
+  register({
+    name: 'search_products',
+    description: 'Search the catalogue by keyword, category, maximum price and availability. Highlights the matches on the page.',
+    inputSchema: { type: 'object', properties: {
+      query: { type: 'string', description: 'Free text matched against name, description and category' },
+      category: { type: 'string', enum: ['jackets', 'footwear', 'apparel', 'packs', 'camp', 'accessories'] },
+      maxPrice: { type: 'number', minimum: 0, maximum: 1000, description: 'Highest price to include, in euros' },
+      inStockOnly: { type: 'boolean', default: false },
+    }, required: ['query'] },
+    annotations: { readOnlyHint: true },
+    // Controlled output changes for selected-field regression journeys. The ordinary shop
+    // still searches its actual catalogue; no native API is patched or re-registered.
+    execute: async (input) => {
+      if (new URLSearchParams(location.search).has('field-checks')) {
+        if (typeof window.__shopFieldResultText === 'string') return window.__shopFieldResultText;
+        if (window.__shopFieldResult !== undefined) return JSON.stringify(window.__shopFieldResult);
+      }
+      return JSON.stringify({ products: search(input ?? {}) });
+    },
+  });
+  register({
+    name: 'get_product',
+    description: 'Get one product\'s details, price and stock level by id.',
+    inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'Product id, for example nw-101' } }, required: ['id'] },
+    annotations: { readOnlyHint: true },
+    execute: async ({ id }) => { const p = CATALOGUE.find((x) => x.id === id); if (!p) throw new Error(`No product with id ${id}`); return JSON.stringify({ ...p, inStock: p.stock > 0 }); },
+  });
+  register({
+    name: 'add_to_cart',
+    description: 'Add a product to the cart. Fails when the product is out of stock.',
+    inputSchema: { type: 'object', properties: { id: { type: 'string' }, quantity: { type: 'integer', minimum: 1, maximum: 10, default: 1 } }, required: ['id'] },
+    annotations: { readOnlyHint: false },
+    execute: async ({ id, quantity = 1 }) => JSON.stringify(addToCart(id, quantity)),
+  });
+  register({
+    name: 'get_cart',
+    description: 'Read the cart: lines, quantities, coupon and total.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: true },
+    execute: async () => JSON.stringify({ cart, coupon, subtotal: subtotal(), total: total() }),
+  });
+  register({
+    name: 'apply_coupon',
+    description: 'Apply a coupon code to the cart. OUTDOOR10 takes ten percent off.',
+    inputSchema: { type: 'object', properties: { code: { type: 'string' } }, required: ['code'] },
+    annotations: { readOnlyHint: false },
+    execute: async ({ code }) => {
+      const upper = String(code).toUpperCase();
+      if (upper !== 'OUTDOOR10') throw new Error(`Unknown coupon ${code}`);
+      coupon = { code: upper, percent: 10 };
+      renderCart();
+      return JSON.stringify({ applied: coupon, total: total() });
+    },
+  });
+  register({
+    name: 'track_order',
+    description: 'Track an order by its number, for example NW-1042.',
+    inputSchema: { type: 'object', properties: { orderNumber: { type: 'string', pattern: '^NW-\\d{4}$' } }, required: ['orderNumber'] },
+    annotations: { readOnlyHint: true },
+    execute: async ({ orderNumber }) => { const o = ORDERS[String(orderNumber).toUpperCase()]; if (!o) throw new Error(`No order ${orderNumber}`); return JSON.stringify({ orderNumber, ...o }); },
+  });
+  state.textContent = '6 tools registered';
+
+  // For the live timeline: a tool that appears later, and can be taken away again.
+  let lateController = null;
+  window.__shopLate = () => {
+    if (lateController) return false;
+    lateController = new AbortController();
+    mc.registerTool({
+      name: 'notify_when_back',
+      description: 'Ask to be emailed when a product is back in stock.',
+      inputSchema: { type: 'object', properties: { id: { type: 'string' }, email: { type: 'string', format: 'email' } }, required: ['id', 'email'] },
+      annotations: { readOnlyHint: false },
+      execute: async ({ id, email }) => JSON.stringify({ id, email, registered: true }),
+    }, { signal: lateController.signal });
+    return true;
+  };
+  window.__shopUnregisterLate = () => { if (!lateController) return false; lateController.abort(); lateController = null; return true; };
+}
+</script>
+</body>
+</html>

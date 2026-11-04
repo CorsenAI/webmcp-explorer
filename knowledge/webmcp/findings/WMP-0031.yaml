@@ -1,0 +1,32 @@
+id: WMP-0031
+title: An IndexedDB index orders equal keys by primary key; a limit applied while iterating returns an arbitrary subset
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing 152.0.7977.82 (Windows) and Chromium 152.0.7977.64 (Linux, snap)
+  mode: n/a (web platform, IndexedDB)
+expected: >
+  Iterating an index with a cursor in "prev" direction on a single key value yields records
+  newest first, or at least in a stable order across machines.
+observed: >
+  Records sharing the same index key come out in primary-key order — here a random id — so
+  cutting after `limit` records and only then sorting by time returned an arbitrary subset. On
+  Windows the random keys happened to sort the newest record first and every test passed; on
+  Linux they did not, and "the latest call" of a tool was an older one. The behaviour is the
+  specified one; the assumption was wrong.
+reliable_discriminator: >
+  a compound index [key, time], or reading every matching record before sorting and slicing
+impact:
+  - any "latest N for this key" query that limits while iterating a single-field index is wrong on some machines and right on others
+  - a suite run on one machine cannot detect it; a second platform did
+workaround: >
+  Read the key's records whole (the store is bounded), sort by time, then slice — or index on
+  [key, time] and iterate that.
+evidence:
+  automated_test: tools/e2e/form-run.mjs (C9, both platforms), tools/run-e2e.sh
+  decision: D-058
+  chrome_e2e: true
+spec_status:
+  documented: true (IndexedDB specification, index record ordering)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

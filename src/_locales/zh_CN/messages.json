@@ -1,0 +1,4942 @@
+{
+  "actionTitle": {
+    "message": "打开 WebMCP Explorer"
+  },
+  "agentSessions_allChats": {
+    "message": "全部会话"
+  },
+  "agentSessions_allChatsHelp": {
+    "message": "显示此站点上的所有对话。"
+  },
+  "agentSessions_allChatsShort": {
+    "message": "全部"
+  },
+  "agentSessions_continuing": {
+    "message": "正在继续此对话（已记录 $1 个目标）— 模型将看到此前的所有对话内容。"
+  },
+  "agentSessions_continuingOne": {
+    "message": "正在继续此对话 — 模型将看到此前的对话内容。"
+  },
+  "agentSessions_delete": {
+    "message": "删除"
+  },
+  "agentSessions_deleteHelp": {
+    "message": "从此设备上删除此对话。"
+  },
+  "agentSessions_empty": {
+    "message": "暂无对话记录。已完成的运行仅保存在当前设备上。"
+  },
+  "agentSessions_groupDeleteHelp": {
+    "message": "删除此分组。组内对话仍保留在历史记录中。"
+  },
+  "agentSessions_groupEmpty": {
+    "message": "此分组中暂无对话。"
+  },
+  "agentSessions_groupNew": {
+    "message": "+ 新建分组"
+  },
+  "agentSessions_groupNewHelp": {
+    "message": "创建分组以整理当前站点的对话。"
+  },
+  "agentSessions_groupNewPrompt": {
+    "message": "新分组名称："
+  },
+  "agentSessions_historyHelp": {
+    "message": "在此站点上完成的运行记录（仅保存在当前设备上）。打开即可重新阅读或继续对话。"
+  },
+  "agentSessions_historyN": {
+    "message": "对话历史记录 ($1)"
+  },
+  "agentSessions_historyOne": {
+    "message": "对话历史记录 (1)"
+  },
+  "agentSessions_moveToGroup": {
+    "message": "将此对话移动到分组"
+  },
+  "agentSessions_nTurns": {
+    "message": "$1 个目标"
+  },
+  "agentSessions_new": {
+    "message": "新建会话"
+  },
+  "agentSessions_newHelp": {
+    "message": "开始新对话。此前的会话仍保留在历史记录中。"
+  },
+  "agentSessions_noGroup": {
+    "message": "未分组"
+  },
+  "agentSessions_oneTurn": {
+    "message": "1 个目标"
+  },
+  "agentSetup_aKeyIsStoredType": {
+    "message": "已暂存密钥 — 输入新内容即可替换"
+  },
+  "agentSetup_aRunThatHitsA": {
+    "message": "达到配额上限的运行会停止并明确提示，绝不会静默截断。"
+  },
+  "agentSetup_addKeyFirst": {
+    "message": "发送前请添加会话密钥或解锁加密保险库。"
+  },
+  "agentSetup_allowFirst": {
+    "message": "请先在“模型设置”中允许访问您的服务商地址。"
+  },
+  "agentSetup_allowRequestsTo1": {
+    "message": "允许向 $1 发送请求"
+  },
+  "agentSetup_apiKey": {
+    "message": "API 密钥"
+  },
+  "agentSetup_askTheEndpointWhichModels": {
+    "message": "向服务端点查询可用模型列表"
+  },
+  "agentSetup_askingTheEndpoint": {
+    "message": "正在查询服务端点…"
+  },
+  "agentSetup_budgets": {
+    "message": "执行配额"
+  },
+  "agentSetup_checkingAccessToTheEndpoint": {
+    "message": "正在检查端点访问权限…"
+  },
+  "agentSetup_chooseHelp": {
+    "message": "AI 为可选项。您可以使用自带 API 密钥的云端服务商，或连接 Ollama、LM Studio 等本地服务。工具、检查和配方无需 AI 即可使用。"
+  },
+  "agentSetup_chooseProvider": {
+    "message": "选择 AI 服务商"
+  },
+  "agentSetup_couldNotListModels": {
+    "message": "无法获取模型列表。"
+  },
+  "agentSetup_deleteTheStoredKey": {
+    "message": "删除已暂存的密钥"
+  },
+  "agentSetup_endpoint": {
+    "message": "服务端点 (Endpoint)"
+  },
+  "agentSetup_endpointAllowed": {
+    "message": "端点已授权"
+  },
+  "agentSetup_endpointHelp": {
+    "message": "需兼容 OpenAI Chat API，路径将自动追加。"
+  },
+  "agentSetup_explorerMaySendRequestsTo": {
+    "message": "Explorer 已获准向此地址发送请求。"
+  },
+  "agentSetup_forget": {
+    "message": "清除"
+  },
+  "agentSetup_howManyTimesTheModel": {
+    "message": "Explorer 停止前最多可询问模型的回合数"
+  },
+  "agentSetup_howManyToolExecutionsA": {
+    "message": "单次运行最多可执行的工具调用次数"
+  },
+  "agentSetup_keptInMemoryOnlyNever": {
+    "message": "Chrome 重启或扩展重新加载、更新、停用时，会话密钥会被清除。 将加密密钥保存在此设备，每次浏览器会话解锁一次。修改时需再次输入密码短语。忘记后无法恢复。"
+  },
+  "agentSetup_keptInMemoryUntilChrome": {
+    "message": "Chrome 重启或扩展重新加载、更新、停用时，会话密钥会被清除。 将加密密钥保存在此设备，每次浏览器会话解锁一次。修改时需再次输入密码短语。忘记后无法恢复。"
+  },
+  "agentSetup_keyHeldUntilChromeCloses": {
+    "message": "此提供商已有可用密钥。"
+  },
+  "agentSetup_listModels": {
+    "message": "检查连接 / 获取模型列表"
+  },
+  "agentSetup_model": {
+    "message": "模型"
+  },
+  "agentSetup_modelHelp": {
+    "message": "请选择支持工具调用的对话模型。可用模型取决于您的服务商账户或本地已安装模型。"
+  },
+  "agentSetup_modelName": {
+    "message": "选择或输入模型 ID"
+  },
+  "agentSetup_modelTurns": {
+    "message": "模型回合数"
+  },
+  "agentSetup_modelsFound": {
+    "message": "已连接。共发现 $1 个可用模型，请在“模型”字段中选择。"
+  },
+  "agentSetup_noKey": {
+    "message": "无密钥"
+  },
+  "agentSetup_noModelsFound": {
+    "message": "已连接，但未返回任何模型。若使用本地服务，请先下载或加载模型后重试，或直接输入模型 ID。"
+  },
+  "agentSetup_onlyHttpAndHttpsEndpoints": {
+    "message": "仅支持使用 http 和 https 服务端点。"
+  },
+  "agentSetup_onlyThisAddressExplorerAsks": {
+    "message": "仅限此地址。Explorer 向 Chrome 申请权限，并由 Chrome 向您确认。"
+  },
+  "agentSetup_openSetup": {
+    "message": "配置 AI 模型"
+  },
+  "agentSetup_openSetupHelp": {
+    "message": "打开 AI 设置：选择云端服务商或本地模型服务器。此项可选，工具、检查和配方无需 AI 即可使用。"
+  },
+  "agentSetup_optionalForThisEndpoint": {
+    "message": "此端点为可选。"
+  },
+  "agentSetup_pasteYourApiKey": {
+    "message": "粘贴您的 API 密钥"
+  },
+  "agentSetup_provider": {
+    "message": "服务商"
+  },
+  "agentSetup_reviewSettings": {
+    "message": "请在“模型设置”中检查您的服务商配置。"
+  },
+  "agentSetup_saveKey": {
+    "message": "保存密钥"
+  },
+  "agentSetup_selectModel": {
+    "message": "请在“模型设置”中选择模型。可测试连接以获取可用模型列表，或直接输入模型 ID。"
+  },
+  "agentSetup_setAnEndpointFirst": {
+    "message": "请先设置服务端点地址。"
+  },
+  "agentSetup_thatIsNotAValid": {
+    "message": "这不是有效的 URL。"
+  },
+  "agentSetup_thisEndpointIsPlainHttp": {
+    "message": "此端点使用明文 http 且不在本机上，密钥与提示词将未加密传输，Explorer 拒绝发送。请使用 https 或 localhost。"
+  },
+  "agentSetup_thisProviderNeedsAnEndpoint": {
+    "message": "此服务商需要配置端点地址。"
+  },
+  "agentSetup_thisProviderWillRefuseThe": {
+    "message": "未提供密钥时，该服务商将拒绝请求。"
+  },
+  "agentSetup_toolCalls": {
+    "message": "工具调用次数"
+  },
+  "agentSetup_usageHelp": {
+    "message": "云端调用遵循您服务商的计费与配额规则；本地模型需要运行中的本地服务与相应硬件。"
+  },
+  "agentSetup_whichModelServiceToTalk": {
+    "message": "选择要连接的模型服务商"
+  },
+  "agentTranscript_aTraceHoldsTheGoal": {
+    "message": "追踪记录包含目标、模型发送的参数以及页面工具返回的内容。分享前请先审阅。"
+  },
+  "agentTranscript_adaptedItem": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_adaptedRootOnly": {
+    "message": "其根组合器已合并为单个对象"
+  },
+  "agentTranscript_anotherToolAlreadyUsesThat": {
+    "message": "另一个工具已使用该名称"
+  },
+  "agentTranscript_answer": {
+    "message": "回答"
+  },
+  "agentTranscript_answered": {
+    "message": "已回答"
+  },
+  "agentTranscript_askingTheModel": {
+    "message": "正在询问模型…"
+  },
+  "agentTranscript_budgetCalls": {
+    "message": "配额上限：$1。"
+  },
+  "agentTranscript_budgetSteps": {
+    "message": "配额上限：$1。达到上限时停止运行并提示。"
+  },
+  "agentTranscript_calls": {
+    "message": "工具调用"
+  },
+  "agentTranscript_cancelled": {
+    "message": "已取消"
+  },
+  "agentTranscript_chromeStoppedTheExtensionS": {
+    "message": "Chrome 在运行期间停止了扩展后台进程。由于模型调用可能已计费且工具可能已执行，Explorer 不会自动重启它。此前的所有记录均已保留，您可以手动重新运行。"
+  },
+  "agentTranscript_chromeStoppedTheExtensionS2": {
+    "message": "Chrome 在运行期间停止了扩展后台进程。"
+  },
+  "agentTranscript_errorHelp": {
+    "message": "已将此错误反馈给模型，模型可据此作出响应。"
+  },
+  "agentTranscript_executionDetails": {
+    "message": "执行详情"
+  },
+  "agentTranscript_executionDetailsHelp": {
+    "message": "检查原始目标、模型消息、工具参数和确切结果。打开此追踪记录不会执行任何操作。"
+  },
+  "agentTranscript_explorer": {
+    "message": "Explorer"
+  },
+  "agentTranscript_explorerWasNotGrantedIts": {
+    "message": "Explorer 未获该源站授权，因此无法运行此工具"
+  },
+  "agentTranscript_exportThisRun": {
+    "message": "导出本次运行记录"
+  },
+  "agentTranscript_failed": {
+    "message": "失败"
+  },
+  "agentTranscript_goal": {
+    "message": "目标"
+  },
+  "agentTranscript_interruptedByChrome": {
+    "message": "被 Chrome 中断"
+  },
+  "agentTranscript_itsInputSchemaCouldNot": {
+    "message": "其输入 Schema 无法解析，因此 Explorer 不会向模型描述该工具"
+  },
+  "agentTranscript_itsInputSchemaIsNot": {
+    "message": "其输入 Schema 不是对象类型"
+  },
+  "agentTranscript_measuredInPage": {
+    "message": "在页面内测得的耗时。"
+  },
+  "agentTranscript_mocked": {
+    "message": "模拟"
+  },
+  "agentTranscript_mockedHelp": {
+    "message": "由您的本地覆盖返回结果，页面工具未实际执行。"
+  },
+  "agentTranscript_model": {
+    "message": "模型"
+  },
+  "agentTranscript_modelUsed": {
+    "message": "使用模型：$1"
+  },
+  "agentTranscript_nFailed": {
+    "message": "$1 失败"
+  },
+  "agentTranscript_nFailedHelp": {
+    "message": "返回错误的工具调用。模型已收到错误通知并可据此调整。"
+  },
+  "agentTranscript_nMocked": {
+    "message": "$1 次模拟"
+  },
+  "agentTranscript_nMockedHelp": {
+    "message": "由您的覆盖配置响应而非页面真实返回，此运行不能证明真实工具正常工作。"
+  },
+  "agentTranscript_nModelTurns": {
+    "message": "$1 次模型回合"
+  },
+  "agentTranscript_nToolCalls": {
+    "message": "$1 次工具调用"
+  },
+  "agentTranscript_nToolNamesWereChanged": {
+    "message": "已为模型转换 $1 个工具名称"
+  },
+  "agentTranscript_nToolSchemasWereAdapted": {
+    "message": "已为模型适配 $1 个工具 Schema"
+  },
+  "agentTranscript_nToolsWereNotOffered": {
+    "message": "$1 个工具未提供给模型"
+  },
+  "agentTranscript_nameDashReason": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_noRunYetDescribeWhat": {
+    "message": "您的对话将显示在这里。请在“模型设置”中选择 AI，然后提问或试用此页面的工具。"
+  },
+  "agentTranscript_oneModelTurn": {
+    "message": "1 次模型回合"
+  },
+  "agentTranscript_oneToolCall": {
+    "message": "1 次工具调用"
+  },
+  "agentTranscript_oneToolNameWasChanged": {
+    "message": "已为模型转换 1 个工具名称"
+  },
+  "agentTranscript_oneToolSchemaWasAdapted": {
+    "message": "已为模型适配 1 个工具 Schema"
+  },
+  "agentTranscript_oneToolWasNotOffered": {
+    "message": "1 个工具未提供给模型"
+  },
+  "agentTranscript_parenDetail": {
+    "message": " ($1)"
+  },
+  "agentTranscript_renamedItem": {
+    "message": "$1 → $2 ($3)"
+  },
+  "agentTranscript_result1": {
+    "message": "结果 · $1"
+  },
+  "agentTranscript_running": {
+    "message": "运行中"
+  },
+  "agentTranscript_runningTools": {
+    "message": "正在页面上运行工具…"
+  },
+  "agentTranscript_stoppedModelTurnBudgetReached": {
+    "message": "已停止：已达到模型回合数配额上限"
+  },
+  "agentTranscript_stoppedToolCallBudgetReached": {
+    "message": "已停止：已达到工具调用次数配额上限"
+  },
+  "agentTranscript_theApiRejectsTheseCharacters": {
+    "message": "API 不接受这些字符"
+  },
+  "agentTranscript_tokens": {
+    "message": "输入 $1 / 输出 $2"
+  },
+  "agentTranscript_tokensHelp": {
+    "message": "服务商报告的 Token 消耗量。"
+  },
+  "agentTranscript_waitingForForm": {
+    "message": "正在等待页面上的表单 $1。除非页面自动提交，否则需在页面上确认并点击提交按钮，或点击“取消”。"
+  },
+  "agentTranscript_you": {
+    "message": "您"
+  },
+  "agentTranscript_youDisabledItWithAn": {
+    "message": "您已通过本地覆盖禁用了该工具"
+  },
+  "agent_aRunIsInProgress": {
+    "message": "当前已有运行正在进行中。"
+  },
+  "agent_allowTheEndpointFirst": {
+    "message": "请先授权该服务端点。"
+  },
+  "agent_answerAs": {
+    "message": "回答身份"
+  },
+  "agent_cancel": {
+    "message": "取消"
+  },
+  "agent_copied": {
+    "message": "已复制"
+  },
+  "agent_copyItToTheClipboard": {
+    "message": "复制到剪贴板"
+  },
+  "agent_copyRequest": {
+    "message": "复制请求"
+  },
+  "agent_explorerSendsNothingCopyThis": {
+    "message": "Explorer 不会外发任何数据。将此请求复制到任意聊天窗口，再将回复粘贴回来，工具调用仍会在页面上执行。"
+  },
+  "agent_feedTheReplyBack": {
+    "message": "回填模型回复"
+  },
+  "agent_fixFirst": {
+    "message": "请先解决：$1。"
+  },
+  "agent_goal": {
+    "message": "任务目标"
+  },
+  "agent_jumpToLatest": {
+    "message": "跳转到最新消息"
+  },
+  "agent_jumpToLatestHelp": {
+    "message": "您向上翻阅时收到了新回复，点击即可回到对话底部。"
+  },
+  "agent_manualMode": {
+    "message": "手动模式"
+  },
+  "agent_nToolsOnThisPageWillBeOffered": {
+    "message": "此页面上的 $1 个工具将提供给模型（Explorer 无法准确描述的工具除外）。"
+  },
+  "agent_oneToolOnThisPageWillBeOffered": {
+    "message": "此页面上的 1 个工具将提供给模型（Explorer 无法准确描述的情况除外）。"
+  },
+  "agent_openInWindow": {
+    "message": "在大窗口中打开此对话"
+  },
+  "agent_pasteTheModelReplyHere": {
+    "message": "在此粘贴模型回复 — 原始 JSON 响应或纯文本均可"
+  },
+  "agent_send": {
+    "message": "发送"
+  },
+  "agent_sendHelp": {
+    "message": "携带页面工具向模型发送此消息。按 Enter 发送，Shift+Enter 换行。"
+  },
+  "agent_sendTheGoalAndThis": {
+    "message": "将目标和此页面的工具发送给模型。"
+  },
+  "agent_starterHelp": {
+    "message": "将此建议提示词填入任务输入框"
+  },
+  "agent_starterSummarize": {
+    "message": "总结页面工具"
+  },
+  "agent_starterSummarizePrompt": {
+    "message": "列出此页面上的所有工具，并说明每个工具的适用场景。"
+  },
+  "agent_starterTryTool": {
+    "message": "试运行 $1"
+  },
+  "agent_starterTryToolPrompt": {
+    "message": "使用合理的测试参数调用 $1，并总结返回结果。"
+  },
+  "agent_stopAfterTheCurrentStep": {
+    "message": "在当前步骤完成后停止"
+  },
+  "agent_toolsAvailable": {
+    "message": "$1 个页面工具可用"
+  },
+  "agent_tryAgain": {
+    "message": "重试"
+  },
+  "agent_tryAgainHelp": {
+    "message": "向此页面再次提出相同问题。新回答会追加在同一对话下方，不会覆盖原有内容。"
+  },
+  "agent_whatShouldTheAgentTry": {
+    "message": "希望代理在此页面上尝试完成什么任务？"
+  },
+  "annotationDeclaredHelp": {
+    "message": "由站点自行声明。Explorer 仅如实展示，不作担保。"
+  },
+  "audit_clean": {
+    "message": "未发现契约质量问题。"
+  },
+  "audit_export": {
+    "message": "导出审计报告"
+  },
+  "audit_exportJsonHelp": {
+    "message": "将所有审计发现导出为结构化数据，便于脚本处理或提交工单。"
+  },
+  "audit_exportMarkdownHelp": {
+    "message": "可直接用于评审的报告，按工具得分从低到高排列。"
+  },
+  "audit_exportNote": {
+    "message": "导出内容仅包含页面声明的工具描述与 Schema，绝不包含页面正文内容。"
+  },
+  "audit_failN": {
+    "message": "$1 项不达标"
+  },
+  "audit_intro": {
+    "message": "工具契约声明质量评分（评估描述、Schema 与注解是否便于模型理解）— 绝非安全评级。"
+  },
+  "audit_noTools": {
+    "message": "此页面暂无可审计的工具。"
+  },
+  "audit_passN": {
+    "message": "$1 项通过"
+  },
+  "audit_pointsHelp": {
+    "message": "该问题扣除的工具质量分数。"
+  },
+  "audit_rule_descDuplicate": {
+    "message": "与另外 $1 个工具使用了完全相同的描述：模型只能在它们之间盲猜。"
+  },
+  "audit_rule_descGeneric": {
+    "message": "描述仅重复了工具名称，没有提供任何有效信息。"
+  },
+  "audit_rule_descMissing": {
+    "message": "缺少描述：调用模型无法判断何时应使用此工具。"
+  },
+  "audit_rule_descNoAction": {
+    "message": "首行未以动作动词开头 — 建议使用“Search…”、“Add…”、“Get…”以便模型快速识别意图。"
+  },
+  "audit_rule_descRestatesName": {
+    "message": "描述只是换了种方式重复工具名称，没有补充新事实。"
+  },
+  "audit_rule_descTooLong": {
+    "message": "描述超过 80 个词：过长的提示词会挤占其他工具的上下文窗口。"
+  },
+  "audit_rule_descTooShort": {
+    "message": "少于四个词：信息量不足，模型难以将其与同类工具区分开。"
+  },
+  "audit_rule_paramMissingDesc": {
+    "message": "$2 个输入属性中有 $1 个缺少描述。"
+  },
+  "audit_rule_paramUntyped": {
+    "message": "$2 个输入属性中有 $1 个没有可解析的类型。"
+  },
+  "audit_rule_schemaMissing": {
+    "message": "缺少对象类型的输入 Schema：模型只能靠猜测传入参数。"
+  },
+  "audit_scoreHelp": {
+    "message": "声明质量评分 — 并非安全性评分。"
+  },
+  "audit_scoreN": {
+    "message": "$1/100"
+  },
+  "audit_warnN": {
+    "message": "$1 项有建议"
+  },
+  "baseline_forget": {
+    "message": "清除基线"
+  },
+  "baseline_forgetHelp": {
+    "message": "删除当前站点已保存的基线，后续复查不再与其对比。"
+  },
+  "baseline_lastCheck": {
+    "message": "上次复查 $1：新增 $2 项，已解决 $3 项"
+  },
+  "baseline_newChip": {
+    "message": "基线后新增"
+  },
+  "baseline_newChipHelp": {
+    "message": "仅显示已保存基线中不存在的新发现。"
+  },
+  "baseline_noChange": {
+    "message": "自基线以来：无新增问题。"
+  },
+  "baseline_none": {
+    "message": "当前站点尚未保存安全基线。在审阅结果符合预期时保存基线，后续审阅与定期复查将自动与其比对。"
+  },
+  "baseline_save": {
+    "message": "保存当前为基线"
+  },
+  "baseline_saveHelp": {
+    "message": "将当前站点的审阅结果与合约指纹保存在本机，不会外发任何数据。"
+  },
+  "baseline_savedAt": {
+    "message": "基线保存于 $1 — $2 项发现，$3 个工具"
+  },
+  "baseline_since": {
+    "message": "自基线以来：新增 $1 ($2)，已解决 $3 · 工具新增 $4，移除 $5，合约变更 $6"
+  },
+  "baseline_sinceHelp": {
+    "message": "展示当前审阅相对于基线的新增与消除项。"
+  },
+  "baseline_title": {
+    "message": "安全审查基线"
+  },
+  "baseline_titleHelp": {
+    "message": "将当前的审阅发现与工具合约保存为站点基线，以便追踪后续变化。"
+  },
+  "baseline_toolsAdded": {
+    "message": "新增工具：$1"
+  },
+  "baseline_toolsChanged": {
+    "message": "合约变更：$1"
+  },
+  "baseline_toolsRemoved": {
+    "message": "已移除工具：$1"
+  },
+  "baseline_truncated": {
+    "message": "基线最多保留前 300 条发现和 1,000 个工具；当前站点超出了此上限。"
+  },
+  "baseline_update": {
+    "message": "更新基线"
+  },
+  "baseline_updateHelp": {
+    "message": "用当前的审阅结果替换已保存的基线。"
+  },
+  "checkApiAvailability": {
+    "message": "WebMCP API"
+  },
+  "checkApiAvailabilityRefused": {
+    "message": "已拒绝"
+  },
+  "checkCapability": {
+    "message": "支持方式"
+  },
+  "checkFrameContext": {
+    "message": "框架上下文"
+  },
+  "checkOriginIsolation": {
+    "message": "源隔离 (Origin isolation)"
+  },
+  "checkSecureContext": {
+    "message": "安全上下文 (HTTPS)"
+  },
+  "checkToolsPermission": {
+    "message": "tools 权限策略"
+  },
+  "checks_duplicateDescription": {
+    "message": "此页面上的另一个工具具有相同的描述：$1。模型无法仅凭描述区分它们。"
+  },
+  "checks_duplicateName": {
+    "message": "另一个框架注册了同名工具；模型将通过不同的别名区分它们。"
+  },
+  "checks_intro": {
+    "message": "该工具声明的合约中存在的缺失项，可能导致 Agent 选错工具或传参错误。Explorer 仅客观列出，不作评分。"
+  },
+  "checks_levelNote": {
+    "message": "提示"
+  },
+  "checks_levelWarn": {
+    "message": "警告"
+  },
+  "checks_nOnCard": {
+    "message": "$1 项检查提示"
+  },
+  "checks_nameNeedsAlias": {
+    "message": "模型 API 不直接接受此名称（仅限字母、数字、_ 和 -，最长 64 字符）；Explorer 会使用别名提供它。"
+  },
+  "checks_noAnnotations": {
+    "message": "未声明任何注解。readOnlyHint 可告知 Agent 调用该工具是否会修改状态。"
+  },
+  "checks_noDescription": {
+    "message": "缺少描述。模型没有任何依据来选择此工具。"
+  },
+  "checks_noSchema": {
+    "message": "缺少输入 Schema。如果工具需要参数，模型无法得知具体是哪些参数。"
+  },
+  "checks_none": {
+    "message": "无可标记项：描述、Schema 和注解均已齐备。"
+  },
+  "checks_oneOnCard": {
+    "message": "1 项检查提示"
+  },
+  "checks_propertyWithoutDescription": {
+    "message": "缺少描述的属性：$1。"
+  },
+  "checks_requiredNotDeclared": {
+    "message": "标记为必填但未在 properties 中声明：$1。"
+  },
+  "checks_schemaError": {
+    "message": "输入 Schema 解析失败：$1"
+  },
+  "checks_schemaNotObject": {
+    "message": "输入 Schema 不是对象 Schema（类型为 $1）。工具参数始终是对象。"
+  },
+  "checks_shortDescription": {
+    "message": "描述过短（$1 个字符）。请说明工具的用途、使用时机及返回值。"
+  },
+  "checks_title": {
+    "message": "契约检查"
+  },
+  "checks_titleCount": {
+    "message": "契约检查 ($1)"
+  },
+  "common_error": {
+    "message": "错误"
+  },
+  "common_frameN": {
+    "message": "框架 #$1"
+  },
+  "common_ms": {
+    "message": "$1 毫秒"
+  },
+  "common_ok": {
+    "message": "正常"
+  },
+  "connector_add": {
+    "message": "添加连接器"
+  },
+  "connector_addHelp": {
+    "message": "校验端点安全规则后，将此连接器保存到服务商列表中。"
+  },
+  "connector_addOne": {
+    "message": "添加自定义连接器"
+  },
+  "connector_added": {
+    "message": "连接器已添加。请在上方服务商列表中选择它。"
+  },
+  "connector_delete": {
+    "message": "删除"
+  },
+  "connector_deleteHelp": {
+    "message": "移除此连接器并从内存中清除其密钥。"
+  },
+  "connector_dialect": {
+    "message": "请求协议格式"
+  },
+  "connector_dialectHelp": {
+    "message": "服务端点遵循的 API 协议类型，Explorer 原生支持全部三种。"
+  },
+  "connector_help": {
+    "message": "自定义连接器是您配置的模型端点。Chrome 管理访问权限，远程端点需要 HTTPS，并使用所选密钥存储模式。"
+  },
+  "connector_key": {
+    "message": "需要 API 密钥"
+  },
+  "connector_keyHelp": {
+    "message": "选中后，此连接器需要 API 密钥，使用您选择的存储模式。"
+  },
+  "connector_mark": {
+    "message": "自定义"
+  },
+  "connector_name": {
+    "message": "名称"
+  },
+  "connector_nameHelp": {
+    "message": "显示在服务商列表中，最多 60 个字符。"
+  },
+  "connector_none": {
+    "message": "暂无自定义连接器。"
+  },
+  "connector_section": {
+    "message": "自定义连接器"
+  },
+  "connector_url": {
+    "message": "端点地址"
+  },
+  "connector_urlHelp": {
+    "message": "Explorer 调用的基础 URL，例如 https://my-gateway.internal/v1。仅本机服务允许使用明文 http。"
+  },
+  "diagnosticExport": {
+    "message": "检查并导出此诊断凭据"
+  },
+  "diagnosticExportNote": {
+    "message": "包含当前显示的观察结果、站点地址与具体错误信息。分享前请先检查预览内容。"
+  },
+  "diagnosticInvalid": {
+    "message": "预览内容必须是有效的 JSON 才能复制或下载。"
+  },
+  "diagnosticPreview": {
+    "message": "诊断凭据预览"
+  },
+  "diagnosticPreviewHelp": {
+    "message": "导出前可在此查看或编辑诊断凭据。打开预览不会对页面产生任何影响。"
+  },
+  "discoveryComplete": {
+    "message": "发现完成"
+  },
+  "discoveryFailed": {
+    "message": "Discovery 失败"
+  },
+  "discoveryNextAction": {
+    "message": "请确认页面已成功加载，然后刷新工具列表。若问题持续，请在反馈时附上以下信息。"
+  },
+  "discoveryPartial": {
+    "message": "部分发现"
+  },
+  "discoveryRetry": {
+    "message": "刷新工具"
+  },
+  "discoveryRetryHelp": {
+    "message": "在当前页面上重新发现工具。此操作不会调用任何工具。"
+  },
+  "discovery_check": {
+    "message": "扫描源站"
+  },
+  "discovery_checkHelp": {
+    "message": "单次请求当前源站的三个约定路径及页面响应头，并列出响应结果。"
+  },
+  "discovery_disclosure": {
+    "message": "点击检查将由 Explorer 向 $1 发送针对 /.well-known/webmcp、/.well-known/webmcp.json 和 /llms.txt 的 GET 请求，以及读取当前页面响应头的 GET 请求。不会联系任何其他地址。"
+  },
+  "discovery_intro": {
+    "message": "三个发现文件是可选约定，并非WebMCP要求。扫描还会读取Permissions-Policy、CSP及CORS标头。不携带凭据、不跟随重定向，每个响应体上限64 KiB。结果仅描述这些响应，不代表已认证会话或浏览器的有效策略。"
+  },
+  "discovery_notGranted": {
+    "message": "Explorer 尚未获准访问此源站：请先授予站点访问权限。"
+  },
+  "discovery_results": {
+    "message": "$1 — 状态 $2"
+  },
+  "discovery_resultsHelp": {
+    "message": "各路径的响应详情：HTTP 状态码、内容类型与大小，或错误信息。"
+  },
+  "discovery_title": {
+    "message": "发现约定 — 可选网络检查"
+  },
+  "discovery_titleHelp": {
+    "message": "获取部分 Agent 和审计工具检查的发现文件，并读取页面的 Permissions-Policy 响应头。仅在点击按钮时运行。"
+  },
+  "enableFlagBody": {
+    "message": "用于本地开发测试：若您的 Chrome 版本提供此实验标志 (Flag)，请将其设为 Enabled 并重启 Chrome。"
+  },
+  "enableFlagTitle": {
+    "message": "检查真实网站"
+  },
+  "enableFlagWhy": {
+    "message": "Chrome 为本地测试提供了此标志及 Origin Trial。实际可用性取决于浏览器版本及网页是否注册了工具。"
+  },
+  "envUnavailableTitle": {
+    "message": "当前页面不可用 WebMCP"
+  },
+  "env_apiAvailabilityHelp": {
+    "message": "检查 document.modelContext 是否暴露了 Explorer 所需的方法。"
+  },
+  "env_browserSaid": {
+    "message": "浏览器返回信息：$1"
+  },
+  "env_capabilityHelp": {
+    "message": "当前标签页提供 WebMCP 的方式。"
+  },
+  "env_frameContextHelp": {
+    "message": "跨源 iframe 需要父页面声明 allow=\"tools\"。"
+  },
+  "env_missingMethods": {
+    "message": "缺失的方法"
+  },
+  "env_missingMethodsHelp": {
+    "message": "Explorer 期望调用但未找到的方法。"
+  },
+  "env_originIsolationHelp": {
+    "message": "WebMCP 仅在源隔离文档中可用。Origin-Agent-Cluster: ?0 会将其禁用。"
+  },
+  "env_secureContextHelp": {
+    "message": "WebMCP 仅在安全上下文（HTTPS 或 localhost）中暴露。"
+  },
+  "env_toolsPermissionHelp": {
+    "message": "tools 权限策略。“unobservable”表示当前浏览器未暴露该策略供检查。"
+  },
+  "evalsEditor_aModelIsNotDeterministic": {
+    "message": "模型并非确定性的。单次尝试就像一次侥幸成功一样说明不了什么。"
+  },
+  "evalsEditor_aModelThatGetsThere": {
+    "message": "经过三次错误调用才达到目标的模型并未真正理解描述。"
+  },
+  "evalsEditor_addACase": {
+    "message": "添加用例"
+  },
+  "evalsEditor_andCallItFirst": {
+    "message": " 并首先调用它"
+  },
+  "evalsEditor_asksForAToolTo": {
+    "message": "要求首先调用某个工具，但未指定工具名称"
+  },
+  "evalsEditor_attempts": {
+    "message": "尝试次数"
+  },
+  "evalsEditor_checksNothingSoItWould": {
+    "message": "未设置任何检查项，因此无论模型做什么都会通过"
+  },
+  "evalsEditor_deleteThisCase": {
+    "message": "删除此用例"
+  },
+  "evalsEditor_expectsAndForbidsTheSame": {
+    "message": "同时期望并禁止了同一个工具"
+  },
+  "evalsEditor_hasNoGoal": {
+    "message": "没有设置目标"
+  },
+  "evalsEditor_mustNotCall": {
+    "message": "禁止调用"
+  },
+  "evalsEditor_notOnThisPage": {
+    "message": "$1 不在此页面上"
+  },
+  "evalsEditor_notOnThisPageHelp": {
+    "message": "该用例会因为与模型无关的原因而失败。"
+  },
+  "evalsEditor_oneGoalOneExpectation": {
+    "message": "一个目标，一项预期"
+  },
+  "evalsEditor_remove": {
+    "message": "移除"
+  },
+  "evalsEditor_shouldCall": {
+    "message": "应当调用"
+  },
+  "evalsEditor_suiteName": {
+    "message": "套件名称"
+  },
+  "evalsEditor_toolThatShouldBeCalled": {
+    "message": "应当被调用的工具"
+  },
+  "evalsEditor_toolsThatMustNotBe": {
+    "message": "禁止调用的工具（以逗号分隔）"
+  },
+  "evalsEditor_untitledSuite": {
+    "message": "未命名套件"
+  },
+  "evalsEditor_whatShouldTheAgentBe": {
+    "message": "应当要求代理执行什么任务？"
+  },
+  "evalsEditor_writtenAgainst1RunningIt": {
+    "message": "针对 $1 编写。允许在其他页面运行，但"
+  },
+  "evalsEditor_writtenAgainstNote": {
+    "message": "针对 $1 编写。允许在其他页面运行，但结果含义会有所不同。"
+  },
+  "evalsResults_1NamedByTheSuite": {
+    "message": "$1 — 套件中已指定，但未由以下位置暴露："
+  },
+  "evalsResults_attemptsJudged": {
+    "message": "可进行评判的尝试次数。"
+  },
+  "evalsResults_broken": {
+    "message": "已损坏"
+  },
+  "evalsResults_brokenHelp": {
+    "message": "在此更改前通过，现在失败。"
+  },
+  "evalsResults_calledForbidden": {
+    "message": "调用了被禁止的 $1"
+  },
+  "evalsResults_cancelled": {
+    "message": "已取消"
+  },
+  "evalsResults_casePointsHelp": {
+    "message": "用例即使仍未通过也可能有所改善——从 0/5 到 2/5 就是进步。"
+  },
+  "evalsResults_compareWithThePreviousRun": {
+    "message": "与上一次运行对比"
+  },
+  "evalsResults_comparedWithThePreviousRun": {
+    "message": "与上一次运行相比"
+  },
+  "evalsResults_couldNotRun": {
+    "message": "无法运行"
+  },
+  "evalsResults_countTimesMiss": {
+    "message": "$1× $2"
+  },
+  "evalsResults_differentFirstChoice": {
+    "message": "首选工具不同"
+  },
+  "evalsResults_expectedToolNeverCalled": {
+    "message": "从未调用预期的工具"
+  },
+  "evalsResults_exportThisResult": {
+    "message": "导出此结果"
+  },
+  "evalsResults_failed": {
+    "message": "失败"
+  },
+  "evalsResults_fixed": {
+    "message": "已修复"
+  },
+  "evalsResults_fixedHelp": {
+    "message": "在此更改前失败，现在通过。"
+  },
+  "evalsResults_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "evalsResults_nBroken": {
+    "message": "$1 项损坏"
+  },
+  "evalsResults_nCouldNotRun": {
+    "message": "$1 项无法运行"
+  },
+  "evalsResults_nCouldNotRunHelp": {
+    "message": "已从比率中排除：这些情况与页面本身无关。"
+  },
+  "evalsResults_nDisabled": {
+    "message": "$1 项已禁用"
+  },
+  "evalsResults_nFailed": {
+    "message": "$1 失败"
+  },
+  "evalsResults_nFixed": {
+    "message": "$1 项已修复"
+  },
+  "evalsResults_nPassed": {
+    "message": "$1/$2 通过"
+  },
+  "evalsResults_nRewritten": {
+    "message": "$1 项已重写"
+  },
+  "evalsResults_noRate": {
+    "message": "无比率"
+  },
+  "evalsResults_noRateHelp": {
+    "message": "没有任何可评判的尝试，因此不计算比率——而非记为零（零意味着模型每次都出错）。"
+  },
+  "evalsResults_noResultYetRunThe": {
+    "message": "暂无结果。运行套件以查看模型会选择哪些工具。"
+  },
+  "evalsResults_notComparable": {
+    "message": "无法比较"
+  },
+  "evalsResults_notComparableHelp": {
+    "message": "两次运行中有一次无法评判，因此该用例无法说明更改的影响。"
+  },
+  "evalsResults_nothing": {
+    "message": "无"
+  },
+  "evalsResults_nothingCouldBeJudgedSo": {
+    "message": "没有任何可评判的尝试，因此不计算比率——而非记为零（零意味着模型每次都出错）。"
+  },
+  "evalsResults_ofAttempts": {
+    "message": "占尝试次数的 $1"
+  },
+  "evalsResults_ofAttemptsHelp": {
+    "message": "按所有可评判用例计算的平均值。"
+  },
+  "evalsResults_overridesInForceDuringThis": {
+    "message": "本次运行期间生效的覆盖项：$1。"
+  },
+  "evalsResults_passed": {
+    "message": "通过"
+  },
+  "evalsResults_points": {
+    "message": "$1 分"
+  },
+  "evalsResults_pointsHelp": {
+    "message": "通过尝试占比的变化幅度。"
+  },
+  "evalsResults_previousRun": {
+    "message": "上一次运行"
+  },
+  "evalsResults_reachedForFirst": {
+    "message": "首先选择了：$1"
+  },
+  "evalsResults_sameGoalsRunTwiceWhat": {
+    "message": "相同目标运行两次——变化对比"
+  },
+  "evalsResults_shouldCall1": {
+    "message": "应调用 $1"
+  },
+  "evalsResults_staleCase": {
+    "message": "自本次运行后契约已更改"
+  },
+  "evalsResults_staleCaseHelp": {
+    "message": "此用例期望的工具当前向模型提供的描述或 Schema 与记录该结果时不同。该结果对当次运行依然成立，但不代表工具目前的状态。"
+  },
+  "evalsResults_staleCount": {
+    "message": "$1 个用例基于已更改的契约"
+  },
+  "evalsResults_staleGone": {
+    "message": "页面上已无此工具"
+  },
+  "evalsResults_staleGoneHelp": {
+    "message": "此用例期望的工具已不再注册于该页面。"
+  },
+  "evalsResults_staleHelp": {
+    "message": "这些用例是基于此后已发生变更的描述或 Schema 评判的。请重新运行评测套件以检验当前状态下的工具。"
+  },
+  "evalsResults_staleOne": {
+    "message": "1 个用例基于已更改的契约"
+  },
+  "evalsResults_stillFailing": {
+    "message": "仍然失败"
+  },
+  "evalsResults_stillPassing": {
+    "message": "仍然通过"
+  },
+  "evalsResults_theExpectedToolWasCalled": {
+    "message": "已调用预期工具，但不是第一个调用"
+  },
+  "evalsResults_theExpectedToolWasNever": {
+    "message": "从未调用预期的工具"
+  },
+  "evalsResults_theReportNamesTheGoals": {
+    "message": "报告包含目标、模型选择的工具以及生效的覆盖项。分享前请先审阅。"
+  },
+  "evalsResults_thisRun": {
+    "message": "本次运行"
+  },
+  "evalsResults_unknownToolsNote": {
+    "message": "$1 — 评测套件中指定了这些工具，但此页面未暴露它们。这些用例的失败原因不在模型。"
+  },
+  "evalsResults_yourLabel": {
+    "message": "您为本次运行设置的标签。"
+  },
+  "evals_anEmptySuite": {
+    "message": "创建一个空的评估套件，然后添加任务与预期。"
+  },
+  "evals_attemptGoal": {
+    "message": "尝试 $1 — $2"
+  },
+  "evals_chromeStoppedTheExtensionS": {
+    "message": "在此套件运行期间，Chrome 停止了扩展的后台工作线程。由于已发起的模型调用会产生费用，Explorer 不会自动重启它。请在准备好后手动重新运行。"
+  },
+  "evals_delete": {
+    "message": "删除"
+  },
+  "evals_deleteThisSuiteAndIts": {
+    "message": "删除此套件及其结果"
+  },
+  "evals_fixModelSetup": {
+    "message": "请先修复模型设置：$1。"
+  },
+  "evals_fixTheFlaggedCasesFirst": {
+    "message": "请先修复标记的用例——不检查任何内容的用例总是会通过。"
+  },
+  "evals_fromThisPage": {
+    "message": "从当前页面生成"
+  },
+  "evals_interrupted": {
+    "message": "已中断"
+  },
+  "evals_interruptedHelp": {
+    "message": "在此套件运行期间，Chrome 停止了扩展的后台工作线程。"
+  },
+  "evals_labelThisRunBeforeRewrite": {
+    "message": "为本次运行添加标签——“重写前”、“重写后”"
+  },
+  "evals_labelsAreWhatMakeThe": {
+    "message": "添加标签能让后续的对比结果更加清晰易读。"
+  },
+  "evals_manualModeCannotRunA": {
+    "message": "手动模式无法运行评估套件：它需要您在每次调用时手动参与。"
+  },
+  "evals_new": {
+    "message": "新建"
+  },
+  "evals_newSuite": {
+    "message": "新建套件"
+  },
+  "evals_noSuiteYetStartFrom": {
+    "message": "尚无评测套件。可从当前页面生成（每个工具生成一个用例），然后再行编辑。"
+  },
+  "evals_oneCasePerToolEach": {
+    "message": "每个工具生成一个用例，分别请求对应工具，作为编辑的起点。"
+  },
+  "evals_runEveryCaseEveryAttempt": {
+    "message": "依次运行每个用例的每次尝试。"
+  },
+  "evals_runLabel": {
+    "message": "运行标签"
+  },
+  "evals_runSuite": {
+    "message": "运行评测集"
+  },
+  "evals_runs": {
+    "message": "$1/$2 次运行"
+  },
+  "evals_runsDone": {
+    "message": "已完成 $1/$2 次运行"
+  },
+  "evals_starting": {
+    "message": "正在启动…"
+  },
+  "evals_stopNow": {
+    "message": "立即停止评测套件。当前进行中的尝试及页面上等待的工具调用均会被取消，并计为“已取消”而非“失败”。"
+  },
+  "evals_suite": {
+    "message": "套件"
+  },
+  "evals_unknownToolsCount": {
+    "message": "$1 个未知工具"
+  },
+  "evals_waitingForForm": {
+    "message": "正在等待页面上的表单 $1：表单已填写，等待提交。如果无人提交，评估将在 $2 秒后取消该调用。"
+  },
+  "evals_whichSuiteToRun": {
+    "message": "选择要运行的套件"
+  },
+  "exportBar_aReportContainsWhatThe": {
+    "message": "报告包含页面返回的数据。分享前请先审阅。"
+  },
+  "exportBar_console": {
+    "message": "控制台代码片段"
+  },
+  "exportBar_copied": {
+    "message": "已复制 $1。"
+  },
+  "exportBar_copy": {
+    "message": "复制"
+  },
+  "exportBar_copyThe1ReportTo": {
+    "message": "将 $1 报告复制到剪贴板"
+  },
+  "exportBar_downloadThe1ReportAs": {
+    "message": "将 $1 报告下载为文件"
+  },
+  "exportBar_export": {
+    "message": "导出报告"
+  },
+  "exportBar_forConsole": {
+    "message": "粘贴到 DevTools 中该工具所在的框架内"
+  },
+  "exportBar_forPlaywright": {
+    "message": ".spec.ts测试：@playwright/test、明确的运行ID和CHROME程序"
+  },
+  "exportBar_forReview": {
+    "message": "用于代码评审或 Issue"
+  },
+  "exportBar_forScript": {
+    "message": "用于脚本处理或差异对比"
+  },
+  "exportBar_json": {
+    "message": "JSON"
+  },
+  "exportBar_markdown": {
+    "message": "Markdown"
+  },
+  "exportBar_playwright": {
+    "message": "Playwright 脚本"
+  },
+  "exportBar_save": {
+    "message": "保存文件"
+  },
+  "exportBar_savedFile": {
+    "message": "已保存 $1。"
+  },
+  "extDescription": {
+    "message": "检查、测试、调试并审查网站向 AI 代理暴露的 WebMCP 工具的安全性。"
+  },
+  "extName": {
+    "message": "WebMCP Explorer"
+  },
+  "fieldChecks_addHelp": {
+    "message": "将字段和比较条件添加到此检查中，然后连同参数一起保存该命名检查。"
+  },
+  "fieldChecks_addRule": {
+    "message": "添加字段规则"
+  },
+  "fieldChecks_added": {
+    "message": "规则已添加。请保存具名检查以保留这些规则和参数。"
+  },
+  "fieldChecks_cancelEdit": {
+    "message": "放弃规则编辑"
+  },
+  "fieldChecks_cancelEditHelp": {
+    "message": "放弃未完成的规则编辑，保留已添加的规则。"
+  },
+  "fieldChecks_chooseResult": {
+    "message": "从结果中选择字段"
+  },
+  "fieldChecks_chooseResultHelp": {
+    "message": "浏览本次运行的数据并选择一个字段。此操作不会执行工具。"
+  },
+  "fieldChecks_editRule": {
+    "message": "编辑规则"
+  },
+  "fieldChecks_editRuleHelp": {
+    "message": "编辑字段规则 $1；点击更新以应用更改。"
+  },
+  "fieldChecks_editSaved": {
+    "message": "编辑检查"
+  },
+  "fieldChecks_editSavedHelp": {
+    "message": "加载已保存的名称、参数和预期以进行编辑。保存后将更新此条目。"
+  },
+  "fieldChecks_emptyKey": {
+    "message": "（空字段名）"
+  },
+  "fieldChecks_expectFields": {
+    "message": "选定的结果字段"
+  },
+  "fieldChecks_intro": {
+    "message": "仅检查重要的字段。其他字段的变化不会导致此检查失败。以下所有规则均须通过。"
+  },
+  "fieldChecks_jsonValueNote": {
+    "message": "请输入 JSON：数字填 1，文本填 \"ready\"，或填 true、null、列表或对象。数值比较会保留精确位数。"
+  },
+  "fieldChecks_keepSaved": {
+    "message": "保留已保存的预期"
+  },
+  "fieldChecks_limit": {
+    "message": "一项检查最多可包含 $1 条字段规则。"
+  },
+  "fieldChecks_needResult": {
+    "message": "成功运行工具后即可从完整结果中选择字段，您也可以手动输入字段路径。"
+  },
+  "fieldChecks_op_equals": {
+    "message": "等于此 JSON 值"
+  },
+  "fieldChecks_op_exists": {
+    "message": "字段存在"
+  },
+  "fieldChecks_op_length_equals": {
+    "message": "列表长度等于"
+  },
+  "fieldChecks_op_length_max": {
+    "message": "列表长度至多为"
+  },
+  "fieldChecks_op_length_min": {
+    "message": "列表长度至少为"
+  },
+  "fieldChecks_op_missing": {
+    "message": "字段缺失"
+  },
+  "fieldChecks_op_number_max": {
+    "message": "数值至多为"
+  },
+  "fieldChecks_op_number_min": {
+    "message": "数值至少为"
+  },
+  "fieldChecks_op_text_contains": {
+    "message": "文本包含"
+  },
+  "fieldChecks_operator": {
+    "message": "比较方式"
+  },
+  "fieldChecks_operatorHelp": {
+    "message": "选择该字段必须满足的条件。每条规则都必须通过。"
+  },
+  "fieldChecks_path": {
+    "message": "字段路径"
+  },
+  "fieldChecks_pathHelp": {
+    "message": "从结果中选择字段或输入路径（如 /products/0/id）。留空表示整个结果。字段名中的 ~ 请写为 ~0，/ 请写为 ~1。"
+  },
+  "fieldChecks_pendingRule": {
+    "message": "在保存检查前，请先添加或更新未完成的字段规则，或放弃其编辑。"
+  },
+  "fieldChecks_pickHelp": {
+    "message": "选择字段 $1 进行检查"
+  },
+  "fieldChecks_removeRule": {
+    "message": "移除规则"
+  },
+  "fieldChecks_removeRuleHelp": {
+    "message": "从此草稿中移除字段规则 $1。保存检查以保留更改。"
+  },
+  "fieldChecks_ruleResults": {
+    "message": "字段检查结果 ($1)"
+  },
+  "fieldChecks_ruleResultsHelp": {
+    "message": "显示每条规则、其预期值以及工具实际返回的结果。"
+  },
+  "fieldChecks_selectHelp": {
+    "message": "选择一个字段名称。展开嵌套数据或显示更多项目以访问其他字段。"
+  },
+  "fieldChecks_textValueNote": {
+    "message": "输入纯文本，无需 JSON 引号。匹配区分大小写。"
+  },
+  "fieldChecks_updateRule": {
+    "message": "更新规则"
+  },
+  "fieldChecks_value": {
+    "message": "预期值"
+  },
+  "fieldChecks_valueHelp": {
+    "message": "输入要比较的值。JSON 会区分数字、文本、null、列表和对象。"
+  },
+  "fieldChecks_wholeResult": {
+    "message": "选择整个结果"
+  },
+  "fieldChecks_wholeResultHelp": {
+    "message": "使用空字段路径检查整个 JSON 值。"
+  },
+  "grantAction": {
+    "message": "Enable Explorer 在此站点"
+  },
+  "grantBody": {
+    "message": "WebMCP Explorer 需要访问此网站以发现并测试其页面暴露的 WebMCP 工具。除非您选择“在所有网站上允许”，否则仅授予对此网站的访问权限。"
+  },
+  "grantDenied": {
+    "message": "未授予访问权限。Explorer 尚无法检查此网站。"
+  },
+  "grantMoreOrigins": {
+    "message": "授予访问权限以检查其工具"
+  },
+  "grantTitle": {
+    "message": "允许检查此站点"
+  },
+  "help_adaptedTools": {
+    "message": "部分模型服务商拒绝工具 Schema 根级的 oneOf、anyOf 或 allOf。Explorer 已将其转换为普通对象并在描述中注明规则；页面自身的 Schema 未做改动。"
+  },
+  "help_annotationsBody": {
+    "message": "注解是工具自行声明的属性（如只读或不受信任内容）。Explorer 会显示浏览器报告的内容，但它们并非对工具实际行为的独立保证。"
+  },
+  "help_annotationsTitle": {
+    "message": "只读与其他徽章"
+  },
+  "help_applyOverride": {
+    "message": "在 Explorer 中保存这些更改。配置的模拟响应在启用期间会替代真实的工具调用。"
+  },
+  "help_auditBody": {
+    "message": "审计会对每个工具声明的契约（描述、Schema、注解）进行评分，帮助调用模型准确选择和调用工具。它评估的是网站所发布契约的质量，而非安全裁定；如何修理由您自行判断。"
+  },
+  "help_auditTitle": {
+    "message": "审计"
+  },
+  "help_automateBody": {
+    "message": "手动配方无需模型即可复用最多 20 个经审阅的调用：具名输入和显式选取的前序结果字段可作为后续步骤的参数。请先审阅页面、框架与本地模拟，然后单步运行或运行剩余步骤。暂停与停止均为显式操作，中断的运行绝不会自动恢复。代理实验室与评测为可选功能；手动模式允许您使用自己的模型驱动循环，Explorer 不会对外发送任何数据。"
+  },
+  "help_automateTitle": {
+    "message": "试用代理与评估"
+  },
+  "help_budgets": {
+    "message": "设置单次代理运行允许的最大模型轮次和工具调用次数。"
+  },
+  "help_button": {
+    "message": "帮助"
+  },
+  "help_buttonHelp": {
+    "message": "查看当前界面说明、快速上手指南和开发者工作流。"
+  },
+  "help_callers": {
+    "message": "显示捕获到的此工具的其他注册位置。"
+  },
+  "help_chooseBody": {
+    "message": "在“工具”中打开卡片并阅读其描述。打开卡片仅作检查，不会触发执行。在真实网站上运行工具可能会改变页面状态，请选择您了解其用途的操作。内置演示可供练习。"
+  },
+  "help_chooseTitle": {
+    "message": "选择工具"
+  },
+  "help_close": {
+    "message": "关闭"
+  },
+  "help_closeHelp": {
+    "message": "返回当前界面，不修改表单也不执行工具。"
+  },
+  "help_contractChecks": {
+    "message": "展开缺失或不一致的工具元数据检查。这些属于契约诊断，而非安全评估。"
+  },
+  "help_debugBody": {
+    "message": "“历史”显示单次调用。“时间线”跟踪发现与执行过程。为网站启用“插桩模式”并刷新页面后，“源码”可捕获工具注册位置（无法恢复启用前的注册）。“覆盖”可修改 Explorer 的本地视图并模拟返回结果，其激活状态会明确标出。"
+  },
+  "help_debugTitle": {
+    "message": "排查失败原因"
+  },
+  "help_demoBody": {
+    "message": "在演示页面中，打开 search_products，在 query 中输入 MacBook 并按“运行”。它只会在扩展内置的模拟商店中搜索，不会下达真实订单。"
+  },
+  "help_detail_history": {
+    "message": "查看此工具的历史调用、检查返回结果或重放输入参数。"
+  },
+  "help_detail_override": {
+    "message": "修改 Explorer 中此工具的本地定义，或模拟响应结果以进行测试。"
+  },
+  "help_detail_run": {
+    "message": "准备输入参数并执行此工具。仅打开“运行”标签页不会触发执行。"
+  },
+  "help_detail_schema": {
+    "message": "检查工具的输入 Schema、必填字段和契约检查项。"
+  },
+  "help_developer": {
+    "message": "开发者指南"
+  },
+  "help_developerHelp": {
+    "message": "了解调试、回归检查、代理测试及可复现报告的工作流。"
+  },
+  "help_disabled": {
+    "message": "当前不可用；请查看控件旁的状态或提示信息。"
+  },
+  "help_excludedTools": {
+    "message": "显示从模型请求中排除的工具及每项排除的原因。"
+  },
+  "help_explanations": {
+    "message": "指南说明"
+  },
+  "help_export": {
+    "message": "展开可用的复制与下载格式。不会自动分享任何内容。"
+  },
+  "help_fillBody": {
+    "message": "使用“运行”选项卡中的表单填写参数。标有 * 的字段为必填项。输入也称为参数。“Schema”选项卡说明了字段类型与规则；JSON 模式支持直接编辑源码。核对数值后按“运行”。"
+  },
+  "help_fillTitle": {
+    "message": "填写输入参数"
+  },
+  "help_frameBody": {
+    "message": "源（Origin）是包含协议和端口的网站地址。框架（Frame）是嵌入的页面。两个框架可能暴露同名工具，Explorer 会将它们的执行目标严格区分开。"
+  },
+  "help_frameTitle": {
+    "message": "源与框架"
+  },
+  "help_glossary": {
+    "message": "WebMCP 术语解释"
+  },
+  "help_glossaryHelp": {
+    "message": "展开工具、模式、框架、注解及原生支持的定义。"
+  },
+  "help_hintsBody": {
+    "message": "readOnlyHint、consequentialHint、untrustedContentHint 和 debugging 是页面对工具作出的声明。代理会据此决定运行前是否征求确认。这些声明仅供参考，Explorer 会将它们与工具名称和描述进行比对。"
+  },
+  "help_hintsTitle": {
+    "message": "提示（注解）"
+  },
+  "help_historyEntry": {
+    "message": "展开此记录的调用以检查其输入、结果及重放选项。"
+  },
+  "help_inlineBody": {
+    "message": "工具是此页面提供的一项可执行操作。打开卡片即可阅读其功能说明，并在运行前核对输入参数。"
+  },
+  "help_inspectBody": {
+    "message": "“工具”可按名称、描述、源和注解筛选当前页面。打开工具后可在“Schema”中查看输入契约与检查项，“运行”支持表单填写或原始 JSON。请留意名称下方显示的所属框架。"
+  },
+  "help_inspectTitle": {
+    "message": "检查工具契约"
+  },
+  "help_instrumentOff": {
+    "message": "停止捕获此网站的新注册位置。重新加载页面以移除插桩包装器。"
+  },
+  "help_introBody": {
+    "message": "WebMCP 允许网站暴露名为“工具”的命名操作。Explorer 会展示这些工具并让您亲自试用。检查或运行工具无需 AI 账号。"
+  },
+  "help_introTitle": {
+    "message": "探索网站提供的功能"
+  },
+  "help_manualReply": {
+    "message": "解析粘贴的模型回复并继续手动代理运行。回复中包含的工具调用可能会被执行。"
+  },
+  "help_missingRegistrations": {
+    "message": "检查插桩模式捕获到、但未出现在浏览器暴露工具列表中的注册项。"
+  },
+  "help_modelSetup": {
+    "message": "选择提供商和模型，管理连接并设置执行预算。"
+  },
+  "help_nativeBody": {
+    "message": "“原生”表示浏览器直接提供 WebMCP API。“Polyfill”则通过 JavaScript 提供实现（内置演示即采用此方式）。演示可用并不代表所有网站都支持 WebMCP。"
+  },
+  "help_nativeTitle": {
+    "message": "原生与 Polyfill"
+  },
+  "help_nav_agent": {
+    "message": "Agent 实验室：测试大模型如何发现并调用当前页面的工具。"
+  },
+  "help_nav_audit": {
+    "message": "审计：对工具描述与输入 Schema 的声明质量进行客观评分。"
+  },
+  "help_nav_evals": {
+    "message": "评测：使用可重复的测试集验证工具选择与调用准确性。"
+  },
+  "help_nav_security": {
+    "message": "对可见工具声明进行被动检查，提供证据和来源。迹象不等于已证实攻击。检查和生成修复建议不会调用工具。源站扫描和主动探测需在下方明确操作。 对可见声明的启发式评估，并非安全认证。未验证项列在下方。高分不代表操作已获授权。"
+  },
+  "help_nav_settings": {
+    "message": "设置：管理站点访问权限、本地存储数据、界面语言及配置备份。"
+  },
+  "help_nav_timeline": {
+    "message": "时间线：实时记录工具注册、注销和调用事件。"
+  },
+  "help_nav_tools": {
+    "message": "工具：列出当前页面暴露的 WebMCP 工具、检查其 Schema 并手动调用。"
+  },
+  "help_new": {
+    "message": "初次了解 WebMCP？"
+  },
+  "help_newHelp": {
+    "message": "显示简短介绍和分步指南。打开此面板不会运行任何工具。"
+  },
+  "help_originalOverride": {
+    "message": "展开页面声明的原始值，以便与您的本地覆盖进行对比。"
+  },
+  "help_poisoningBody": {
+    "message": "植入在工具名称、描述或 Schema 中的指令，企图诱导代理将其当作用户本人的指令来执行。Explorer 会将此类语句标记为风险指标并附上原文摘录。"
+  },
+  "help_poisoningTitle": {
+    "message": "工具投毒"
+  },
+  "help_provenanceBody": {
+    "message": "由插桩模式（在“设置”中按网站启用并刷新页面）捕获注册该工具的脚本来源。来自其他源的脚本可以在页面上添加或替换工具。"
+  },
+  "help_provenanceTitle": {
+    "message": "来源追溯"
+  },
+  "help_rawSchema": {
+    "message": "展开原始 JSON 输入 Schema 以供直接检查。"
+  },
+  "help_readBody": {
+    "message": "结果展示工具返回的内容，或说明调用失败原因的报错。历史记录保存了过往调用。“再次运行”会重复执行该操作，因此也可能重复产生其副作用。"
+  },
+  "help_readTitle": {
+    "message": "查看返回结果"
+  },
+  "help_regressionsBody": {
+    "message": "保存调用并配置完整结果比对或指定字段断言。选择关键字段（如非空商品列表）并查看每次失败的对比详情。仅修改预期断言时，已保存的检查会保留原始参数。重放前可对比契约快照并审阅契约漂移。"
+  },
+  "help_regressionsTitle": {
+    "message": "捕捉回归问题"
+  },
+  "help_renamedTools": {
+    "message": "显示发送给模型的工具别名，以及原始名称需要修改的原因。"
+  },
+  "help_resumeTimeline": {
+    "message": "恢复记录此标签页的新时间线事件。"
+  },
+  "help_saveKey": {
+    "message": "在当前 Chrome 会话中保存此提供商密钥。关闭 Chrome 时会自动清除。"
+  },
+  "help_savedCalls": {
+    "message": "保存此工具的输入参数、将其加载到表单中，或运行已保存的调用与检查。"
+  },
+  "help_savedChecks": {
+    "message": "查看已保存的预期、重新运行检查并导出结果。"
+  },
+  "help_schemaBody": {
+    "message": "模式（Schema）描述可接受的输入：名称、类型、必填字段和约束条件。JSON 是表示这些值的文本格式。当模式可表示为表单字段时，Explorer 会自动构建表单。"
+  },
+  "help_schemaProperty": {
+    "message": "展开此 Schema 属性以查看其描述、约束条件和嵌套字段。"
+  },
+  "help_schemaTitle": {
+    "message": "模式与 JSON"
+  },
+  "help_screen": {
+    "message": "当前画面"
+  },
+  "help_screenHelp": {
+    "message": "阅读当前 Explorer 界面上所显示控件的说明。"
+  },
+  "help_screenIntro": {
+    "message": "以下说明对应您打开“帮助”时所在的界面。关闭指南即可使用其控件。"
+  },
+  "help_securityBody": {
+    "message": "对可见工具声明进行被动检查，提供证据和来源。迹象不等于已证实攻击。检查和生成修复建议不会调用工具。源站扫描和主动探测需在下方明确操作。 对可见声明的启发式评估，并非安全认证。未验证项列在下方。高分不代表操作已获授权。"
+  },
+  "help_securityTitle": {
+    "message": "审查安全与治理"
+  },
+  "help_sharingBody": {
+    "message": "运行后，“复现此调用”提供 Markdown、JSON、控制台代码片段和 Playwright 脚本。导出内容包含调用数据并注明覆盖项。分享前请审阅内容。重放代码片段或脚本会再次执行该操作。"
+  },
+  "help_sharingTitle": {
+    "message": "分享可复现的调用"
+  },
+  "help_snapshots": {
+    "message": "保存当前的工具契约，并与早期快照或其他环境进行对比。"
+  },
+  "help_source": {
+    "message": "显示捕获到的注册位置，或说明未能捕获源码位置的原因。"
+  },
+  "help_start": {
+    "message": "从这里开始"
+  },
+  "help_startAction": {
+    "message": "查看入门步骤"
+  },
+  "help_startHelp": {
+    "message": "了解如何选择工具、填写输入并阅读结果，或在内置演示中进行练习。"
+  },
+  "help_title": {
+    "message": "Explorer 指南"
+  },
+  "help_toolBody": {
+    "message": "工具是页面提供的命名操作。参数则是您传递给它的值（例如搜索关键词）。"
+  },
+  "help_toolCardsBody": {
+    "message": "打开工具可阅读完整描述、检查输入 Schema 并准备调用。卡片最多预览三行描述文字。打开卡片不会执行该工具。"
+  },
+  "help_toolCardsTitle": {
+    "message": "工具卡片"
+  },
+  "help_toolTitle": {
+    "message": "工具与参数"
+  },
+  "help_topics": {
+    "message": "指南主题"
+  },
+  "history_probeBadge": {
+    "message": "探测"
+  },
+  "history_probeBadgeHelp": {
+    "message": "此调用由主动安全探测（$1）发起，而非人工输入。"
+  },
+  "missingReg_abortedBeforeSettled": {
+    "message": "页面在注册完成前中止了注册所使用的信号，因此 Chrome 拒绝了该注册，未将其列入工具列表。"
+  },
+  "missingReg_allExposed": {
+    "message": "插桩模式在此页面上观测到 $1 次 registerTool() 调用，且全部已由 getTools() 暴露。"
+  },
+  "missingReg_badgeNoDescription": {
+    "message": "无描述"
+  },
+  "missingReg_detailNoRecord": {
+    "message": "此调用没有记录到更多信息。"
+  },
+  "missingReg_detailNotExposed": {
+    "message": "registerTool() 已正常返回且未观察到移除操作，但 getTools() 未列出该工具。"
+  },
+  "missingReg_detailPromiseRejected": {
+    "message": "注册 Promise 被拒绝且未被捕获处理：$1"
+  },
+  "missingReg_detailRemoved": {
+    "message": "页面释放了注册时使用的 AbortSignal。这是正常的移除操作，并非缺陷。"
+  },
+  "missingReg_detailThrew": {
+    "message": "registerTool() 抛出了异常：$1"
+  },
+  "missingReg_detailUnobserved": {
+    "message": "registerTool() 返回了 Promise，但 Explorer 未能观察到其结果：页面自行捕获的拒绝不会留下任何事件。getTools() 未列出该工具。"
+  },
+  "missingReg_emptyDescription": {
+    "message": "描述符的 description 为空。Chrome 153 会拒绝此类注册并抛出 InvalidStateError（缺少必填描述，实测 WMP-0039）。"
+  },
+  "missingReg_frame": {
+    "message": "框架 #$1"
+  },
+  "missingReg_intro": {
+    "message": "插桩模式在此网站的框架中观察到了这些 registerTool() 调用，但 getTools() 未列出它们。"
+  },
+  "missingReg_limits": {
+    "message": "仅在启用插桩模式并刷新页面后对 registerTool() 调用可见——不适用于声明式表单。"
+  },
+  "missingReg_promiseUnobserved": {
+    "message": "由页面自行捕获处理的注册 Promise 拒绝不会留下任何可供 Explorer 观察到的事件。"
+  },
+  "missingReg_registeredTimes": {
+    "message": "已注册 $1 次"
+  },
+  "missingReg_stateNotExposed": {
+    "message": "未暴露"
+  },
+  "missingReg_stateRejected": {
+    "message": "已拒绝"
+  },
+  "missingReg_stateRemoved": {
+    "message": "已注册后又被移除"
+  },
+  "missingReg_stateUnknown": {
+    "message": "未观察到结果"
+  },
+  "missingReg_title": {
+    "message": "未列出工具的 registerTool() 调用 ($1)"
+  },
+  "needActionAlt": {
+    "message": "或者允许 Explorer 访问所有网站"
+  },
+  "needActionAltHelp": {
+    "message": "一次性授予对所有 http 和 https 网站的访问权限。如果您不想每次都点击工具栏图标，可以使用此选项。"
+  },
+  "needActionBody": {
+    "message": "只有当您从扩展程序按钮打开 Explorer 时，Chrome 才会提供当前页面地址。从侧边栏自身的下拉列表打开不会授予该权限。Explorer 绝不会在后台读取您的标签页。"
+  },
+  "needActionHintAlt": {
+    "message": "Chrome 工具栏右上角。拼图形状的扩展程序按钮位于侧边栏按钮左侧。"
+  },
+  "needActionHintCaption": {
+    "message": "点击拼图图标，然后点击 WebMCP Explorer。"
+  },
+  "needActionPin": {
+    "message": "新安装的扩展程序默认未固定，因此工具栏上还没有 Explorer 图标。在该菜单中点击 WebMCP Explorer 旁的图钉图标，即可将其固定在工具栏上。"
+  },
+  "needActionTitle": {
+    "message": "只需点击一下，Explorer 即可检查此页面"
+  },
+  "networkNotice_1SendsYourGoalThis": {
+    "message": "$1 会发送您的目标、此页面的 WebMCP 工具名称、描述与 Schema，"
+  },
+  "networkNotice_chatDisclosure": {
+    "message": "点击“发送”会将您的消息、工具 Schema、参数和执行结果（可能包含页面数据）分享给 $1。"
+  },
+  "networkNotice_chooseProvider": {
+    "message": "选择一个 AI 开始对话。不会自动连接任何提供商。"
+  },
+  "networkNotice_disclosure": {
+    "message": "当 $1 运行时，您的目标、此页面的 WebMCP 工具名称、描述与 Schema、工具调用参数及工具返回结果会发送至 $2。工具结果可能包含此页面上的数据。不会向 Corsen AI 发送任何内容。"
+  },
+  "networkNotice_localWhere": {
+    "message": "本机上的 $1 ($2)"
+  },
+  "networkNotice_manualModeSendsNothingAnywhere": {
+    "message": "手动模式不会向任何地方发送数据。Explorer 负责构建请求，由您自行传递。"
+  },
+  "networkNotice_remoteWhere": {
+    "message": "位于 $2 的 $1"
+  },
+  "networkNotice_running": {
+    "message": "运行时"
+  },
+  "networkNotice_theConfiguredEndpoint": {
+    "message": "已配置的端点"
+  },
+  "noTabBody": {
+    "message": "请先打开一个 http 或 https 网页，然后重新打开 Explorer。"
+  },
+  "noTabTitle": {
+    "message": "没有可检查的标签页"
+  },
+  "noToolsBody": {
+    "message": "当前页面未暴露任何工具。如果您预期有工具，请刷新页面并检查控制台。"
+  },
+  "noToolsTitle": {
+    "message": "此页面上没有 WebMCP 工具"
+  },
+  "noTools_instrumentButton": {
+    "message": "启用插桩模式并重新加载"
+  },
+  "noTools_instrumentButtonHelp": {
+    "message": "注册一个在站点自身代码运行前包装 WebMCP 注册调用的脚本，并重新加载页面。稍后可在“设置”中将其关闭。"
+  },
+  "noTools_instrumentHint": {
+    "message": "如果此页面确实调用了 registerTool()，插桩模式可以展示每次调用的去向——被拒绝、被移除，或已接受但仍未暴露。"
+  },
+  "noTools_instrumentOn": {
+    "message": "此网站已启用插桩模式，但未观察到任何 registerTool() 调用。"
+  },
+  "notInjected": {
+    "message": "未注入"
+  },
+  "notInjectedHelp": {
+    "message": "此工具来自未向 Explorer 授权的源，因此其框架未知。"
+  },
+  "openDemo": {
+    "message": "打开演示页面"
+  },
+  "openDemoHelp": {
+    "message": "打开扩展内置的 WebMCP 演示页面，包含可直接运行的示例工具。"
+  },
+  "probes_busy": {
+    "message": "此标签页已有正在进行的探测运行。"
+  },
+  "probes_cancelled": {
+    "message": "已在第 $1/$2 次调用后停止 · $3 项发现"
+  },
+  "probes_consent": {
+    "message": "我拥有此网站 ($1) 的控制权，并同意探测程序在我的会话中调用其工具"
+  },
+  "probes_consentHelp": {
+    "message": "运行任何探测前必须勾选。将在本设备上记住对此网站的授权；可在此处或“设置 → 存储的数据”中撤销。"
+  },
+  "probes_consentRequired": {
+    "message": "探测未运行：请先确认您控制此网站。"
+  },
+  "probes_consequential": {
+    "message": "声明为有副作用"
+  },
+  "probes_disclosure": {
+    "message": "运行探测会在您的浏览器会话中对 $2 上选定的 $1 个工具各发起最多五次调用（使用自动生成的参数与畸形参数）。不会向任何外部地址发送数据，结果与发现项均保留在当前设备上。"
+  },
+  "probes_done": {
+    "message": "已发起 $1 次调用 · $2 项发现"
+  },
+  "probes_history": {
+    "message": "每次调用都会记录在该工具的“历史”中，并标记为“探测”。"
+  },
+  "probes_intro": {
+    "message": "被动审查仅读取契约；主动探测则会在当前页面与会话中实际调用所选工具，依次传入由 Schema 生成的合规参数以及 Schema 禁止的参数（类型错误、缺少必填项、未知属性、10,000 字符长字符串）。每个工具最多调用五次，逐个串行执行、可随时取消，并全部作为探测记录在历史中。会改变状态的工具将实际产生状态变更。"
+  },
+  "probes_none": {
+    "message": "探测未发现问题。已执行调用：$1 次。"
+  },
+  "probes_notPreselected": {
+    "message": "未预选：此工具未声明为只读，对其进行探测可能会改变状态"
+  },
+  "probes_progress": {
+    "message": "第 $1 / $2 次调用 · $3 · $4"
+  },
+  "probes_run": {
+    "message": "运行探测"
+  },
+  "probes_runHelp": {
+    "message": "对所选工具启动探测。在您确认控制此网站并至少选择一个工具之前处于禁用状态。"
+  },
+  "probes_stop": {
+    "message": "停止"
+  },
+  "probes_stopHelp": {
+    "message": "取消正在进行的调用并结束运行。已完成的调用无法撤销。"
+  },
+  "probes_title": {
+    "message": "主动安全探测 — 仅限自有站点"
+  },
+  "probes_titleHelp": {
+    "message": "对所选工具运行一组固定的测试调用，观察其代码如何处理模式禁止的输入以及返回什么内容。仅在您受控的网站上使用。"
+  },
+  "probes_toolHelp": {
+    "message": "将此工具纳入探测运行。"
+  },
+  "probes_tools": {
+    "message": "要探测的工具"
+  },
+  "prompt_cancel": {
+    "message": "清空表单"
+  },
+  "prompt_cancelHelp": {
+    "message": "停止编辑；表单恢复为新建提示词状态。"
+  },
+  "prompt_choose": {
+    "message": "扮演角色（系统提示词）"
+  },
+  "prompt_chooseHelp": {
+    "message": "模型在每个目标前接收的指令。默认项为产品内置提示词；您自定义的配置文件也会显示在此处。"
+  },
+  "prompt_defaultLabel": {
+    "message": "Explorer 默认"
+  },
+  "prompt_delete": {
+    "message": "删除"
+  },
+  "prompt_deleteHelp": {
+    "message": "移除此提示词。如果当前已选中它，代理实验室将回退到产品默认设置。"
+  },
+  "prompt_edit": {
+    "message": "编辑"
+  },
+  "prompt_editHelp": {
+    "message": "将此提示词加载到下方表单中进行修改。"
+  },
+  "prompt_help": {
+    "message": "提示词决定模型的行为方式，但它无法解除任何限制：工具模式、调用规则和安全拒绝机制均独立于提示词之外，且不可修改。"
+  },
+  "prompt_manage": {
+    "message": "管理提示词"
+  },
+  "prompt_manageHelp": {
+    "message": "编写、编辑和删除上方列出的命名提示词。"
+  },
+  "prompt_name": {
+    "message": "名称"
+  },
+  "prompt_nameHelp": {
+    "message": "显示在上方列表中。最多 40 个字符。"
+  },
+  "prompt_none": {
+    "message": "暂无自定义提示词。"
+  },
+  "prompt_save": {
+    "message": "保存提示词"
+  },
+  "prompt_saveHelp": {
+    "message": "创建此提示词。请填写名称和指令内容。"
+  },
+  "prompt_saved": {
+    "message": "提示词已保存。"
+  },
+  "prompt_showDefault": {
+    "message": "查看产品默认提示词"
+  },
+  "prompt_showDefaultHelp": {
+    "message": "未选择自定义配置时，每次运行实际发送的系统提示词内容。"
+  },
+  "prompt_text": {
+    "message": "指令内容"
+  },
+  "prompt_textHelp": {
+    "message": "选中此提示词期间，每次运行都会将其作为系统提示词发送给模型。"
+  },
+  "prompt_textPlaceholder": {
+    "message": "示例：你是一个谨慎的购物助手。仅调用只读工具；在调用任何购买类工具前先询问用户。"
+  },
+  "prompt_update": {
+    "message": "更新提示词"
+  },
+  "readable_boolean": {
+    "message": "布尔值"
+  },
+  "readable_emptyList": {
+    "message": "空列表（0 项）"
+  },
+  "readable_emptyObject": {
+    "message": "空对象（0 个字段）"
+  },
+  "readable_emptyText": {
+    "message": "空文本"
+  },
+  "readable_expandHelp": {
+    "message": "展开此嵌套值以检查其字段或条目。结果本身保持不变。"
+  },
+  "readable_fields": {
+    "message": "$1 个字段"
+  },
+  "readable_item": {
+    "message": "第 $1 项"
+  },
+  "readable_items": {
+    "message": "$1 项"
+  },
+  "readable_more": {
+    "message": "显示接下来 $1 项（剩余 $2 项）"
+  },
+  "readable_moreHelp": {
+    "message": "在本设备上显示此结果的更多内容。不会执行任何工具。"
+  },
+  "readable_noValue": {
+    "message": "无值"
+  },
+  "readable_null": {
+    "message": "null"
+  },
+  "readable_number": {
+    "message": "数字"
+  },
+  "readable_rawJson": {
+    "message": "原始 JSON"
+  },
+  "readable_rawJsonHelp": {
+    "message": "查看工具返回的原始 JSON 字符串（保留原始数字精度与空白字符）。打开它不会执行工具。"
+  },
+  "readable_string": {
+    "message": "文本"
+  },
+  "reasonApiAbsent": {
+    "message": "此页面未暴露 WebMCP 运行时。下方检查项展示了 Explorer 所能观测到的状况，但不能直接断定 API 缺失的原因。"
+  },
+  "reasonApiCallRejected": {
+    "message": "浏览器拒绝了此文档中的 WebMCP 调用：$1"
+  },
+  "reasonApiPartial": {
+    "message": "存在 WebMCP 对象，但未暴露 Explorer 期望的方法。此浏览器可能运行着不同版本的 API。"
+  },
+  "reasonInsecureContext": {
+    "message": "此页面不是安全上下文（Secure Context），因此不会暴露 WebMCP。请通过 https 提供服务或使用 localhost。"
+  },
+  "reasonOriginNotIsolated": {
+    "message": "此文档未按源隔离（使用了 Origin-Agent-Cluster: ?0 或 document.domain）。当前浏览器版本要求 WebMCP 文档必须按源隔离，因此拒绝了此处的所有调用（下方引用了浏览器的原始报错）。较新版本已不再有此要求。"
+  },
+  "reasonPolyfillActive": {
+    "message": "当前由 Polyfill 提供 WebMCP。这并非浏览器原生实现，行为可能存在差异。"
+  },
+  "reasonToolsPolicyBlocked": {
+    "message": "此框架中的 tools 权限被阻止。跨源 iframe 需要嵌入它的页面声明 allow=\"tools\"。"
+  },
+  "recipes_acceptContract": {
+    "message": "使用当前契约"
+  },
+  "recipes_acceptContractHelp": {
+    "message": "记录此工具当前的页面/框架指纹与 Schema 指纹。请对照新 Schema 核对参数与检查项。"
+  },
+  "recipes_activeRunEdit": {
+    "message": "在编辑其定义或开始另一项审阅前，请先停止或完成本次运行。"
+  },
+  "recipes_addBinding": {
+    "message": "添加绑定"
+  },
+  "recipes_addBindingHelp": {
+    "message": "将此显式引用添加到步骤中。运行前会检查结构、目标路径和顺序。"
+  },
+  "recipes_addInput": {
+    "message": "添加命名输入"
+  },
+  "recipes_addInputHelp": {
+    "message": "添加一个可复用的值，并为其指定有意义的名称和默认值。"
+  },
+  "recipes_addStep": {
+    "message": "添加步骤"
+  },
+  "recipes_addStepHelp": {
+    "message": "追加一个经审阅的调用，然后选择其工具、所属框架和参数。最多 20 个步骤。"
+  },
+  "recipes_argumentPath": {
+    "message": "参数字段路径"
+  },
+  "recipes_argumentPathHelp": {
+    "message": "指向此绑定所要替换的参数占位符的 JSON Pointer。留空则替换整个参数对象。"
+  },
+  "recipes_arguments": {
+    "message": "字面量参数"
+  },
+  "recipes_argumentsHelp": {
+    "message": "在命名输入或前序步骤结果绑定替换选定字段之前，经过审阅的字面量参数值。"
+  },
+  "recipes_back": {
+    "message": "返回工具列表"
+  },
+  "recipes_backHelp": {
+    "message": "保留此草稿并返回工具列表。正在运行的配方将继续执行，直至暂停或停止。"
+  },
+  "recipes_bindingDescription": {
+    "message": "$1 ← $2"
+  },
+  "recipes_bindingLimit": {
+    "message": "每个步骤最多使用 50 个显式绑定。"
+  },
+  "recipes_bindingResult": {
+    "message": "步骤 $1，结果 $2"
+  },
+  "recipes_bindingSource": {
+    "message": "值来源"
+  },
+  "recipes_bindingSourceHelp": {
+    "message": "选择一个命名输入或前序步骤。不会自动推断任何内容。"
+  },
+  "recipes_bindings": {
+    "message": "使用命名输入或前序结果"
+  },
+  "recipes_bindingsHelp": {
+    "message": "将命名输入或前序步骤的结果字段连接到现有的参数字段。"
+  },
+  "recipes_bindingsIntro": {
+    "message": "请先在字面量参数中添加占位符。绑定仅替换该确切字段。JSON Pointer 使用 /name 和 /items/0 格式；斜杠转义为 ~1，波浪号转义为 ~0。引用只能指向前序步骤。"
+  },
+  "recipes_check": {
+    "message": "结果检查"
+  },
+  "recipes_checkFailed": {
+    "message": "检查未通过"
+  },
+  "recipes_checkHelp": {
+    "message": "可选要求调用返回成功结果或特定字段值。即使旧的预期错误检查通过，工具调用失败仍会中止配方运行。"
+  },
+  "recipes_check_fields": {
+    "message": "选择结果字段"
+  },
+  "recipes_check_keep": {
+    "message": "保留已保存的预期"
+  },
+  "recipes_check_none": {
+    "message": "无额外检查"
+  },
+  "recipes_check_ok": {
+    "message": "调用成功"
+  },
+  "recipes_chooseSource": {
+    "message": "选择命名输入或前序结果"
+  },
+  "recipes_chooseTool": {
+    "message": "选择工具"
+  },
+  "recipes_confirmDelete": {
+    "message": "确认删除"
+  },
+  "recipes_confirmDiscard": {
+    "message": "再次点击“放弃此草稿”以丢弃未保存的更改。"
+  },
+  "recipes_continueDraft": {
+    "message": "继续编辑草稿"
+  },
+  "recipes_continueDraftHelp": {
+    "message": "重新打开当前配方，不会丢失未完成的编辑。"
+  },
+  "recipes_copied": {
+    "message": "已复制预览内容。"
+  },
+  "recipes_copyExport": {
+    "message": "复制预览"
+  },
+  "recipes_copyExportHelp": {
+    "message": "复制所审阅的精确预览内容。复制前会验证配方 JSON。"
+  },
+  "recipes_deleteRecipe": {
+    "message": "删除已保存的配方"
+  },
+  "recipes_deleteRecipeHelp": {
+    "message": "移除此已保存的定义。保留的运行记录会单独存放。"
+  },
+  "recipes_discard": {
+    "message": "放弃此草稿"
+  },
+  "recipes_discardHelp": {
+    "message": "放弃未完成的配方编辑并返回“工具”。已保存的定义仍会保留。"
+  },
+  "recipes_down": {
+    "message": "下移"
+  },
+  "recipes_downHelp": {
+    "message": "将此步骤后移。运行前请检查所有依赖它的引用。"
+  },
+  "recipes_downloadExport": {
+    "message": "下载预览"
+  },
+  "recipes_downloadExportHelp": {
+    "message": "将审阅后的配方 JSON 或运行报告 Markdown 保存为本地文件。"
+  },
+  "recipes_exportNotice": {
+    "message": "分享前请检查并编辑此预览。其中可能包含来自参数、结果、检查项、URL 或本地模拟的值。Explorer 无法识别任意页面数据中的所有机密信息。配方导出不会传递身份验证状态或网站访问权限。"
+  },
+  "recipes_exportPreview": {
+    "message": "导出预览"
+  },
+  "recipes_exportPreviewHelp": {
+    "message": "在此处审阅或移除选定的数据。更改仅影响本次导出。配方 JSON 必须保持为有效的定义格式。"
+  },
+  "recipes_exportRecipe": {
+    "message": "导出配方定义"
+  },
+  "recipes_exportRecipeHelp": {
+    "message": "准备包含可复用定义的版本化 JSON（不含运行结果）。"
+  },
+  "recipes_exportRun": {
+    "message": "导出运行报告"
+  },
+  "recipes_exportRunHelp": {
+    "message": "准备本次运行记录的可编辑 Markdown 报告。"
+  },
+  "recipes_failure": {
+    "message": "错误"
+  },
+  "recipes_format_json": {
+    "message": "JSON 值"
+  },
+  "recipes_format_text": {
+    "message": "文本"
+  },
+  "recipes_guide": {
+    "message": "配方工作原理"
+  },
+  "recipes_guideBody": {
+    "message": "可从工具执行结果点击“用于配方”开始，或手动添加步骤并选择工具。使用表单或精确 JSON 填写参数。为每次运行间需要调整的值命名，并将其显式绑定到参数上。后续步骤可通过 JSON Pointer 引用前序步骤的结果。运行前请核对调用顺序与本地覆盖规则。中途停止无法撤销页面已经生效的操作。"
+  },
+  "recipes_guideHelp": {
+    "message": "阅读关于步骤、命名输入、检查项和执行流程的简短指南。"
+  },
+  "recipes_identity": {
+    "message": "网站：$1 · 框架路径：$2 · 记录的契约：$3"
+  },
+  "recipes_importNotice": {
+    "message": "导入仅会打开草稿。在运行前，当前活动页面必须与记录的源、框架位置和契约相匹配。"
+  },
+  "recipes_importRecipe": {
+    "message": "导入配方 JSON"
+  },
+  "recipes_importRecipeHelp": {
+    "message": "检查配方定义并打开可编辑的草稿。导入绝不会执行任何工具。"
+  },
+  "recipes_importText": {
+    "message": "配方 JSON"
+  },
+  "recipes_importTextHelp": {
+    "message": "粘贴版本 1 的 WebMCP Explorer 配方。文本仅作为数据验证，绝不会作为代码执行。"
+  },
+  "recipes_includeArguments": {
+    "message": "包含输入与参数"
+  },
+  "recipes_includeArgumentsHelp": {
+    "message": "如不需要，可从报告中移除参数部分。相关值仍可能出现在结果、错误或检查项中。"
+  },
+  "recipes_includeResults": {
+    "message": "包含原始结果"
+  },
+  "recipes_includeResultsHelp": {
+    "message": "从报告中移除原始结果部分。检查说明和覆盖项中仍可能包含观察到的数据。"
+  },
+  "recipes_inputDefault": {
+    "message": "默认值"
+  },
+  "recipes_inputDefaultHelp": {
+    "message": "已保存的初始值。下方的运行值可在不修改定义的情况下覆盖它。"
+  },
+  "recipes_inputFormat": {
+    "message": "值格式"
+  },
+  "recipes_inputFormatHelp": {
+    "message": "“文本”保留为字符串。“JSON”接受带类型的数字、布尔值、null、列表或对象。"
+  },
+  "recipes_inputLimit": {
+    "message": "一个配方最多支持 20 个命名输入。"
+  },
+  "recipes_inputName": {
+    "message": "输入名称"
+  },
+  "recipes_inputNameHelp": {
+    "message": "使用以字母开头的唯一名称；允许使用字母、数字、下划线和连字符。"
+  },
+  "recipes_inputSource": {
+    "message": "输入：$1"
+  },
+  "recipes_inputs": {
+    "message": "命名输入"
+  },
+  "recipes_inputsHelp": {
+    "message": "定义可复用的值（如搜索关键词），并将其显式绑定到步骤参数。"
+  },
+  "recipes_intro": {
+    "message": "无需 AI 模型即可复用一组经过审阅的工具调用。配方可将前一步骤的结果传递给后续调用，并清晰展示每一步的执行情况。"
+  },
+  "recipes_jsonOnly": {
+    "message": "此 Schema 需要使用 JSON 编辑器。仍可直接编写精确参数。"
+  },
+  "recipes_keepDraft": {
+    "message": "当前草稿有未保存的更改。在打开其他定义之前，请先继续编辑并保存或放弃该草稿。"
+  },
+  "recipes_mocked": {
+    "message": "本地模拟"
+  },
+  "recipes_mockedHelp": {
+    "message": "Explorer 从经过审阅的本地覆盖中提供了此结果；并未调用页面上的真实工具。"
+  },
+  "recipes_name": {
+    "message": "配方名称"
+  },
+  "recipes_nameHelp": {
+    "message": "为该序列帮助您重复执行的任务命名。"
+  },
+  "recipes_newRecipe": {
+    "message": "新建配方"
+  },
+  "recipes_newRecipeHelp": {
+    "message": "在此页面上新建一个最多包含 20 个手动调用的空序列。"
+  },
+  "recipes_next": {
+    "message": "运行下一步"
+  },
+  "recipes_nextHelp": {
+    "message": "仅执行接下来的一个步骤，然后在后续调用前暂停。"
+  },
+  "recipes_noCompleteResult": {
+    "message": "此步骤尚无完整的成功结果。请输入经过审阅的 JSON Pointer，它将在步骤运行时进行检查。"
+  },
+  "recipes_openImport": {
+    "message": "验证并打开草稿"
+  },
+  "recipes_openImportHelp": {
+    "message": "验证版本、大小、工具及前向引用。不会执行任何调用。"
+  },
+  "recipes_openRun": {
+    "message": "查看运行记录"
+  },
+  "recipes_openRunHelp": {
+    "message": "查看保留的结果和中断详情。打开运行记录不会恢复执行。"
+  },
+  "recipes_openSaved": {
+    "message": "打开配方"
+  },
+  "recipes_openSavedHelp": {
+    "message": "打开此已保存的定义，以便在执行前进行编辑和审阅。"
+  },
+  "recipes_pause": {
+    "message": "在此步骤后暂停"
+  },
+  "recipes_pauseHelp": {
+    "message": "等待当前工具执行完毕，并在调用下一步骤前暂停。"
+  },
+  "recipes_pending": {
+    "message": "步骤 $1 处于等待或不确定状态（调用 $2）。其页面操作可能已经发生。"
+  },
+  "recipes_pendingRule": {
+    "message": "在保存或审阅此配方前，请先添加或放弃未完成的字段规则。"
+  },
+  "recipes_pickBinding": {
+    "message": "从已观察到的结果中选择字段"
+  },
+  "recipes_pickBindingHelp": {
+    "message": "浏览所选前序步骤保留的结果。被截断的结果无法提供字段预览。"
+  },
+  "recipes_recentRun": {
+    "message": "$1 · $2"
+  },
+  "recipes_recipesCount": {
+    "message": "$1 个定义 · $2 次运行"
+  },
+  "recipes_recipesData": {
+    "message": "配方与执行记录"
+  },
+  "recipes_refreshExport": {
+    "message": "重新生成预览"
+  },
+  "recipes_refreshExportHelp": {
+    "message": "用最新选定的定义或报告部分替换预览中的手动编辑。"
+  },
+  "recipes_remaining": {
+    "message": "运行剩余步骤"
+  },
+  "recipes_remainingHelp": {
+    "message": "按顺序运行剩余的已审阅步骤。遇到失败、缺失值或页面变更时将自动停止。"
+  },
+  "recipes_removeBinding": {
+    "message": "移除绑定"
+  },
+  "recipes_removeBindingHelp": {
+    "message": "保留字面量参数值，并移除此输入/结果引用。"
+  },
+  "recipes_removeInput": {
+    "message": "移除输入"
+  },
+  "recipes_removeInputHelp": {
+    "message": "移除此命名输入。运行配方前，必须更新所有指向它的绑定。"
+  },
+  "recipes_removeStep": {
+    "message": "移除步骤"
+  },
+  "recipes_removeStepHelp": {
+    "message": "从草稿中移除此调用。后续步骤对它的引用需要重新检查。"
+  },
+  "recipes_resultExcerpt": {
+    "message": "已存储摘要：$1 / $2 个字符。此日志中不包含原始完整结果。"
+  },
+  "recipes_resultHeading": {
+    "message": "$1. $2 · $3"
+  },
+  "recipes_resultHeadingHelp": {
+    "message": "展开实际执行结果、精确参数以及所选字段的检查情况。"
+  },
+  "recipes_resultPath": {
+    "message": "前序结果字段路径"
+  },
+  "recipes_resultPathHelp": {
+    "message": "指向该步骤完整成功 JSON 结果内部的 JSON Pointer。若字段缺失，将停止执行。"
+  },
+  "recipes_retention": {
+    "message": "配方定义保存在本地：最多 30 个配方，每个最多 20 步，总计不超过 2 MB。运行日志在 3 MB 内最多保留 8 次运行记录，仅淘汰较早的已完成记录。每条存储结果最多显示 20,000 个字符。Explorer 或浏览器重启后绝不会自动恢复运行。"
+  },
+  "recipes_review": {
+    "message": "运行前审阅"
+  },
+  "recipes_reviewHeading": {
+    "message": "审阅本次运行"
+  },
+  "recipes_reviewHelp": {
+    "message": "重新扫描当前页面，并核对记录的每个工具、框架、契约、输入和本地覆盖项。"
+  },
+  "recipes_reviewNotice": {
+    "message": "调用已绑定到 $1 及其当前框架文档。请检查下方的本地模拟项。依赖前序结果的绑定将在源结果生成后进行校验。此审阅将在两分钟后过期。"
+  },
+  "recipes_reviewOverrides": {
+    "message": "本地覆盖与模拟"
+  },
+  "recipes_reviewOverridesHelp": {
+    "message": "以下是运行前检查到的本地覆盖项。列表为空表示这些步骤没有任何覆盖项。"
+  },
+  "recipes_reviewStep": {
+    "message": "$2 · $3 · 框架路径 $4"
+  },
+  "recipes_root": {
+    "message": "（根）"
+  },
+  "recipes_runHeading": {
+    "message": "运行：$1"
+  },
+  "recipes_runInputValue": {
+    "message": "运行值"
+  },
+  "recipes_runInputValueHelp": {
+    "message": "文本输入保持为纯文本。其他输入使用 JSON 语法并保留其数据类型。"
+  },
+  "recipes_runInputs": {
+    "message": "本次运行的值"
+  },
+  "recipes_runInputsHelp": {
+    "message": "修改本次运行的命名输入值，而不改变已保存的默认值。编辑后请重新审阅。"
+  },
+  "recipes_runStatus": {
+    "message": "$1 · 已记录 $2 / $3 步"
+  },
+  "recipes_save": {
+    "message": "保存配方"
+  },
+  "recipes_saveHelp": {
+    "message": "将定义保存在本地（与运行结果分开存储）。未通过验证的定义仍可继续编辑。"
+  },
+  "recipes_saved": {
+    "message": "配方已保存在本地。"
+  },
+  "recipes_schema": {
+    "message": "当前工具模式"
+  },
+  "recipes_schemaHelp": {
+    "message": "查看实时契约。更新已记录的契约需要显式确认操作。"
+  },
+  "recipes_site": {
+    "message": "记录的网站：$1"
+  },
+  "recipes_siteRecipes": {
+    "message": "当前站点的配方"
+  },
+  "recipes_siteRecipesHelp": {
+    "message": "打开此页面源下已保存的手动序列与近期运行记录。"
+  },
+  "recipes_stepHeading": {
+    "message": "$1. $2"
+  },
+  "recipes_stepHeadingHelp": {
+    "message": "展开此步骤以审阅其目标工具、参数、绑定及可选检查项。"
+  },
+  "recipes_stepLimit": {
+    "message": "一个配方最多支持 20 个步骤。请将此任务拆分为多个较小的配方。"
+  },
+  "recipes_stepSource": {
+    "message": "步骤 $1：$2"
+  },
+  "recipes_stop": {
+    "message": "停止"
+  },
+  "recipes_stopHelp": {
+    "message": "尽可能取消当前调用并停止序列。已完成的页面操作无法撤销。"
+  },
+  "recipes_success": {
+    "message": "成功"
+  },
+  "recipes_title": {
+    "message": "手动配方"
+  },
+  "recipes_toggleArguments": {
+    "message": "切换 表单 / JSON"
+  },
+  "recipes_toggleArgumentsHelp": {
+    "message": "切换编辑字面量参数的方式。打开表单视图前必须先修正无效的 JSON。"
+  },
+  "recipes_tool": {
+    "message": "工具与框架"
+  },
+  "recipes_toolHelp": {
+    "message": "选择此步骤要调用的确切实时工具和框架。"
+  },
+  "recipes_toolMissing": {
+    "message": "没有可用的兼容实时工具。请返回“工具”检查网站访问权限或打开记录的页面，然后刷新。草稿和结果仍保留在此处。"
+  },
+  "recipes_toolOption": {
+    "message": "$1 · $2 · 框架 $3"
+  },
+  "recipes_unavailableRunControl": {
+    "message": "当前运行状态下此控件不可用。已中断或已完成的运行需要重新审阅。"
+  },
+  "recipes_up": {
+    "message": "上移"
+  },
+  "recipes_upHelp": {
+    "message": "将此步骤前移。所有绑定仍必须仅指向前序步骤。"
+  },
+  "recipes_use": {
+    "message": "在配方中使用"
+  },
+  "recipes_useHelp": {
+    "message": "仅将此调用添加到当前标签页的配方草稿中。运行前请核对其参数与依赖关系。"
+  },
+  "recipes_usedArguments": {
+    "message": "实际发送的参数"
+  },
+  "recipes_usedArgumentsHelp": {
+    "message": "查看应用命名输入和前序结果绑定后解析出的最终参数。"
+  },
+  "registrationHelp": {
+    "message": "从 DOM 观察到的注册类型。"
+  },
+  "retry": {
+    "message": "重试"
+  },
+  "savedCalls_checkBadge": {
+    "message": "检查"
+  },
+  "savedCalls_checkEqualsHelp": {
+    "message": "期望完全匹配此文本：$1"
+  },
+  "savedCalls_checkErrorHelp": {
+    "message": "期望该调用失败。"
+  },
+  "savedCalls_checkJsonHelp": {
+    "message": "期望此 JSON（忽略键顺序和空白字符）：$1"
+  },
+  "savedCalls_checkOkHelp": {
+    "message": "期望该调用成功。"
+  },
+  "savedCalls_contractChanged": {
+    "message": "契约已更改"
+  },
+  "savedCalls_contractChangedHelp": {
+    "message": "自保存此调用以来，工具的描述、Schema 或注解已发生变化，但当前参数仍然有效。"
+  },
+  "savedCalls_delete": {
+    "message": "删除"
+  },
+  "savedCalls_deleteHelp": {
+    "message": "删除此已保存的调用。"
+  },
+  "savedCalls_expectError": {
+    "message": "调用失败"
+  },
+  "savedCalls_expectHelp": {
+    "message": "使此已保存调用作为检查项所需满足的结果条件。不设预期的调用仅作为书签。"
+  },
+  "savedCalls_expectLabel": {
+    "message": "预期结果"
+  },
+  "savedCalls_expectLastResult": {
+    "message": "与上次运行结果相同"
+  },
+  "savedCalls_expectNone": {
+    "message": "无（仅作书签）"
+  },
+  "savedCalls_expectOk": {
+    "message": "调用成功"
+  },
+  "savedCalls_fail": {
+    "message": "✕ 失败 — $1"
+  },
+  "savedCalls_load": {
+    "message": "加载"
+  },
+  "savedCalls_loadHelp": {
+    "message": "将这些参数填入编辑器。"
+  },
+  "savedCalls_namePlaceholder": {
+    "message": "为这些参数命名"
+  },
+  "savedCalls_needsReview": {
+    "message": "需要审阅"
+  },
+  "savedCalls_needsReviewHelp": {
+    "message": "自保存此调用以来，工具的 Schema 已发生变化，参数不再匹配。请加载并修正参数后重新保存。"
+  },
+  "savedCalls_noVerdict": {
+    "message": "无判定结果 — $1"
+  },
+  "savedCalls_none": {
+    "message": "此工具尚无已保存的调用。可将常用的参数保存下来：页面刷新后依然保留，且在 Schema 变更时会自动重新校验。"
+  },
+  "savedCalls_notValid": {
+    "message": "编辑器中的参数无效；请先修正后再保存。"
+  },
+  "savedCalls_pass": {
+    "message": "✓ 通过 — $1"
+  },
+  "savedCalls_run": {
+    "message": "运行"
+  },
+  "savedCalls_runAll": {
+    "message": "运行全部检查"
+  },
+  "savedCalls_runAllHelp": {
+    "message": "依次运行每个带有预期的已保存调用并评判结果。需要审阅的调用将被跳过并明确标注。"
+  },
+  "savedCalls_runAllSummary": {
+    "message": "$1 项通过，$2 项失败，$3 项跳过（需审阅），$4 个书签未作评判。"
+  },
+  "savedCalls_runBlocked": {
+    "message": "此调用在运行前需要审阅：$1"
+  },
+  "savedCalls_runHelp": {
+    "message": "立即使用这些参数运行该工具。"
+  },
+  "savedCalls_save": {
+    "message": "保存当前参数"
+  },
+  "savedCalls_saveHelp": {
+    "message": "将编辑器中的参数以此名称保存，以便日后（即使在页面刷新或重新部署后）再次运行。"
+  },
+  "savedCalls_saved": {
+    "message": "已保存。此工具共保留 $1 项。"
+  },
+  "savedCalls_savedAt": {
+    "message": "保存于 $1"
+  },
+  "savedCalls_skippedNeedsReview": {
+    "message": "已跳过 — 需要审阅：$1"
+  },
+  "savedCalls_title": {
+    "message": "已保存的调用与检查"
+  },
+  "savedCalls_titleCount": {
+    "message": "已保存的调用 ($1)"
+  },
+  "schemaForm_anArrayOfObjectsIs": {
+    "message": "对象数组以 JSON 方式编辑，以免静默丢失任何字段。"
+  },
+  "schemaForm_editThisPropertyAsJson": {
+    "message": "请以 JSON 方式编辑此属性。"
+  },
+  "schemaForm_explorerCannotTellWhatThis": {
+    "message": "Explorer 无法判断此数组包含的元素类型。请以 JSON 方式编辑。"
+  },
+  "schemaForm_isRequired": {
+    "message": "$1 为必填项"
+  },
+  "schemaForm_mustBeNumber": {
+    "message": "$1 必须是数字"
+  },
+  "schemaForm_notSpecified": {
+    "message": "未指定"
+  },
+  "schemaForm_notValidJson": {
+    "message": "$1 不是有效的 JSON"
+  },
+  "schemaForm_oneValuePerLine": {
+    "message": "每行一个值"
+  },
+  "schemaForm_required": {
+    "message": "必填"
+  },
+  "schemaForm_thisPropertyAllowsSeveralTypes": {
+    "message": "此属性允许使用多种类型。请以 JSON 方式编辑。"
+  },
+  "schemaForm_thisPropertyIsNestedToo": {
+    "message": "此属性嵌套层级过深，无法渲染为表单。"
+  },
+  "schemaForm_thisPropertyUsesAllofEdit": {
+    "message": "此属性使用了 allOf。请以 JSON 方式编辑。"
+  },
+  "schemaForm_thisPropertyUsesAnyofExplorer": {
+    "message": "此属性使用了 anyOf。Explorer 不会猜测您打算使用哪个分支。"
+  },
+  "schemaForm_thisPropertyUsesOneofExplorer": {
+    "message": "此属性使用了 oneOf。Explorer 不会猜测您打算使用哪个分支。"
+  },
+  "schemaForm_thisPropertyUsesRefWhich": {
+    "message": "此属性使用了 Explorer 不会解析的 $$ref。请以 JSON 方式编辑。"
+  },
+  "schemaForm_thisToolTakesNoArguments": {
+    "message": "此工具不需要任何参数。"
+  },
+  "schemaForm_tupleArraysAreEditedAs": {
+    "message": "元组数组以 JSON 方式编辑。"
+  },
+  "schemaTree_nestedTooDeeplyToExpand": {
+    "message": "嵌套层级过深，无法展开。"
+  },
+  "schemaTree_rawJsonSchema": {
+    "message": "原始 JSON Schema"
+  },
+  "schemaTree_theSchemaDeclaresNoProperties": {
+    "message": "该模式未声明任何属性。"
+  },
+  "schemaTree_thisToolDeclaresNoInput": {
+    "message": "此工具未声明输入 Schema。"
+  },
+  "sec_accepts_missing_required_fix": {
+    "message": "请在工具代码中校验必填参数，并在缺失时返回指明缺失字段名称的错误。"
+  },
+  "sec_accepts_missing_required_title": {
+    "message": "工具接受了缺少必填参数的调用"
+  },
+  "sec_accepts_missing_required_why": {
+    "message": "省略了必填属性，但工具仍当作有效调用返回：声明的契约与代码实际强制执行的规则不一致。"
+  },
+  "sec_accepts_out_of_schema_input_fix": {
+    "message": "在工具代码中验证每个参数，并在类型错误时返回明确的错误信息。"
+  },
+  "sec_accepts_out_of_schema_input_title": {
+    "message": "工具接受了错误类型的参数"
+  },
+  "sec_accepts_out_of_schema_input_why": {
+    "message": "传入了与 Schema 声明类型不符的值，但工具仍将其视为有效输入并返回了结果。浏览器不会校验参数（实测 WMP-0046）；工具自身的代码是唯一的校验层（规范 §6.3.1.3）。"
+  },
+  "sec_accepts_unbounded_input_fix": {
+    "message": "在模式中使用 maxLength 限制参数长度，并在代码中强制执行。"
+  },
+  "sec_accepts_unbounded_input_title": {
+    "message": "工具接受了长达 10,000 个字符的字符串"
+  },
+  "sec_accepts_unbounded_input_why": {
+    "message": "未设置 maxLength 的自由文本参数接受了超长内容。长度限制可压缩注入指令可利用的空间（规范 §6.4.2）。"
+  },
+  "sec_accepts_unknown_property_fix": {
+    "message": "在代码中明确忽略或拒绝未知属性。"
+  },
+  "sec_accepts_unknown_property_title": {
+    "message": "工具接受了未知属性"
+  },
+  "sec_accepts_unknown_property_why": {
+    "message": "未声明的额外属性被接受了。Chrome 指南允许模式宽松而代码严格；此结果供了解实现的开发者确认是否符合预期。"
+  },
+  "sec_consequential_without_hint_fix": {
+    "message": "将 annotations.consequentialHint 设为 true；若工具仅用于启动需由用户亲自完成的流程，请重命名该工具。"
+  },
+  "sec_consequential_without_hint_title": {
+    "message": "具有重大后果的操作未声明 consequentialHint"
+  },
+  "sec_consequential_without_hint_why": {
+    "message": "名称或描述使用了支付、发送、预订、删除等会对用户产生实质影响的动词；若未声明 consequentialHint，代理可能会在未征得确认的情况下直接执行（规范 §6.4.5、§6.3.2）。"
+  },
+  "sec_convention_llms_txt_present_fix": {
+    "message": "如果提供该文件，请保持内容准确；它是可选的。"
+  },
+  "sec_convention_llms_txt_present_title": {
+    "message": "提供了 llms.txt 文件"
+  },
+  "sec_convention_llms_txt_present_why": {
+    "message": "llms.txt 是一种提供机器可读网站摘要的非正式约定（Lighthouse 的代理审计会检查它），与 WebMCP 浏览器 API 无关。"
+  },
+  "sec_convention_manifest_invalid_fix": {
+    "message": "请提供有效的 JSON 或移除该文件。"
+  },
+  "sec_convention_manifest_invalid_title": {
+    "message": "提供了 /.well-known/webmcp 文件，但内容不是有效的 JSON"
+  },
+  "sec_convention_manifest_invalid_why": {
+    "message": "该路径有响应，但响应体无法解析为 JSON；遵循此约定的读取方无法获得可用内容。"
+  },
+  "sec_convention_manifest_present_fix": {
+    "message": "请使其与页面实际注册的工具保持一致，或将其移除；它并非正式标准。"
+  },
+  "sec_convention_manifest_present_title": {
+    "message": "提供了 /.well-known/webmcp 清单文件"
+  },
+  "sec_convention_manifest_present_why": {
+    "message": "发现了遵循社区约定的发现清单。它不属于 W3C CG 草案的一部分；某些审计工具和目录会读取它。使用浏览器 API 的代理不需要它。"
+  },
+  "sec_convention_permissions_policy_absent_fix": {
+    "message": "在不使用 WebMCP 的页面上发送 Permissions-Policy: tools=()；若使用则无需操作。"
+  },
+  "sec_convention_permissions_policy_absent_title": {
+    "message": "页面响应未设置针对 tools 的 Permissions-Policy"
+  },
+  "sec_convention_permissions_policy_absent_why": {
+    "message": "未设置该响应头时适用默认策略：允许当前页面及同源框架使用 WebMCP。不使用 WebMCP 的页面可发送 Permissions-Policy: tools=()，防止任何注入脚本注册工具（规范 §6.4.1）。"
+  },
+  "sec_convention_permissions_policy_fix": {
+    "message": "请检查允许列表是否符合您的预期。"
+  },
+  "sec_convention_permissions_policy_title": {
+    "message": "页面的 Permissions-Policy 指定了 tools 功能"
+  },
+  "sec_convention_permissions_policy_why": {
+    "message": "响应头显式限制或委派了 WebMCP 权限（规范 §6.4.1）。这是规范推荐在不使用 WebMCP 的地方禁用它的机制。"
+  },
+  "sec_cross_origin_frame_tools_fix": {
+    "message": "确认该嵌入符合预期；向 Explorer 授予对该框架源的访问权限以审阅其工具。"
+  },
+  "sec_cross_origin_frame_tools_title": {
+    "message": "来自跨源框架的工具"
+  },
+  "sec_cross_origin_frame_tools_why": {
+    "message": "来自其他源的框架在此页面上暴露了工具。代理会将它们与您的工具一并看到。"
+  },
+  "sec_debugging_tool_exposed_fix": {
+    "message": "仅在开发构建中或开发者设置开启时注册调试工具。"
+  },
+  "sec_debugging_tool_exposed_title": {
+    "message": "此页面暴露了调试用途的工具"
+  },
+  "sec_debugging_tool_exposed_why": {
+    "message": "annotations.debugging 将工具标记为仅供开发调试使用。但在用户访问的页面上，任何代理都可以调用它。"
+  },
+  "sec_delegated_tools_policy_fix": {
+    "message": "仅在您信任其代访客执行操作的嵌入框架上保留 allow=\"tools\"。"
+  },
+  "sec_delegated_tools_policy_title": {
+    "message": "页面将 tools 策略委派给了另一个源"
+  },
+  "sec_delegated_tools_policy_why": {
+    "message": "iframe 带有 allow=\"tools\" 属性：嵌入源可以在此页面上注册工具（规范 §6.4.1 描述了该策略；Chrome 建议仅向受信任的源开放）。"
+  },
+  "sec_high_risk_read_without_hint_fix": {
+    "message": "对于会披露敏感数据的读取操作，建议设置 consequentialHint，并尽量减少工具返回的数据量。"
+  },
+  "sec_high_risk_read_without_hint_title": {
+    "message": "读取敏感数据但未声明 consequentialHint"
+  },
+  "sec_high_risk_read_without_hint_why": {
+    "message": "该工具会读取地址、余额、凭据或健康数据。只读性质的敏感信息披露是否应要求用户确认仍是规范中的开放议题（#331）；在定论之前，声明该提示是更为稳妥的选择。"
+  },
+  "sec_legacy_host_fix": {
+    "message": "请改用 document.modelContext。"
+  },
+  "sec_legacy_host_title": {
+    "message": "正在使用旧版宿主对象 navigator.modelContext"
+  },
+  "sec_legacy_host_why": {
+    "message": "API 已迁移至 document.modelContext；依赖 navigator 别名的页面使用的是兼容路径。"
+  },
+  "sec_no_tools_policy_open_fix": {
+    "message": "在不使用 WebMCP 的页面上发送 Permissions-Policy: tools=()。"
+  },
+  "sec_no_tools_policy_open_title": {
+    "message": "虽无工具，但 WebMCP 在此页面上仍处于开放状态"
+  },
+  "sec_no_tools_policy_open_why": {
+    "message": "未暴露任何工具的页面仍可能被注入的脚本注册工具。Permissions-Policy: tools=() 可在脚本运行前为文档及其框架关闭该 API（规范 §6.4.1）。"
+  },
+  "sec_opaque_origin_tool_fix": {
+    "message": "为该框架提供真实的源，或移除其工具。"
+  },
+  "sec_opaque_origin_tool_title": {
+    "message": "来自不透明源（opaque origin）的工具"
+  },
+  "sec_opaque_origin_tool_why": {
+    "message": "沙盒化（sandbox）或 about:blank 框架具有不透明源，其工具无法归属到具体网站。"
+  },
+  "sec_output_directive_fix": {
+    "message": "请返回结构化数据，而非面向代理的指令性文字；对包含他人所写文本的结果标记 untrustedContentHint。"
+  },
+  "sec_output_directive_title": {
+    "message": "返回结果读起来像对代理的指令"
+  },
+  "sec_output_directive_why": {
+    "message": "工具输出中包含面向代理的祈使语句。输出注入（规范 §6.3.1.2）是页面或其用户在调用后操控代理的常见方式。"
+  },
+  "sec_output_markup_fix": {
+    "message": "返回纯数据，交由代理自行格式化。"
+  },
+  "sec_output_markup_title": {
+    "message": "结果中包含标记语言或模板标记"
+  },
+  "sec_output_markup_why": {
+    "message": "结果中的 HTML 标签、代码围栏或提示词模板标记常被用作携带注入指令的载体。"
+  },
+  "sec_output_over_budget_fix": {
+    "message": "精简返回内容、对结果进行分页，或返回可供代理按需获取的引用。"
+  },
+  "sec_output_over_budget_title": {
+    "message": "返回结果超出 1.5K 字符的输出预算"
+  },
+  "sec_output_over_budget_why": {
+    "message": "Chrome 指南建议工具输出控制在约 1,500 个字符以内；过大的结果不仅消耗上下文窗口，还会扩大输出注入的攻击面。"
+  },
+  "sec_output_personal_data_fix": {
+    "message": "仅返回任务所需的内容；对包含个人数据或用户编写数据的结果标记 untrustedContentHint。"
+  },
+  "sec_output_personal_data_title": {
+    "message": "返回结果似乎包含个人数据"
+  },
+  "sec_output_personal_data_why": {
+    "message": "未声明 untrustedContentHint 的有效调用返回了电子邮箱、电话号码或疑似银行卡号。该结果会发送给调用此工具的任何代理（规范 §6.3.3，OWASP MCP10）。"
+  },
+  "sec_probe_call_failed_fix": {
+    "message": "确保模式所隐含的示例输入能够正常工作，或收紧模式约束（添加 enum、format、examples）。"
+  },
+  "sec_probe_call_failed_title": {
+    "message": "工具在传入自动生成的有效参数时调用失败"
+  },
+  "sec_probe_call_failed_why": {
+    "message": "使用根据其自身 Schema（必填字段与默认值）生成的参数调用时，该工具返回了错误。代理在首次调用时也会遇到同样的错误。"
+  },
+  "sec_re_registered_in_session_fix": {
+    "message": "将之前保存的快照与当前契约进行对比（工具 → 快照）；尽可能在每个文档中仅注册一次工具。"
+  },
+  "sec_re_registered_in_session_title": {
+    "message": "在本次会话中被移除后又重新注册"
+  },
+  "sec_re_registered_in_session_why": {
+    "message": "消失后又重新出现的工具可能是重新挂载的同一工具，也可能是同名下的不同契约（arXiv 2606.06387，规范 Issue #92）。时间线观测到了这一变化，但 Explorer 未自动比对前后的契约。"
+  },
+  "sec_readonly_claim_on_mutating_verb_fix": {
+    "message": "移除 readOnlyHint，或重命名工具使其名称与实际行为一致；每次更改后请重新审阅提示注解。"
+  },
+  "sec_readonly_claim_on_mutating_verb_title": {
+    "message": "名称表明会修改状态的工具却声明了 readOnlyHint"
+  },
+  "sec_readonly_claim_on_mutating_verb_why": {
+    "message": "代理可能会跳过对只读工具的确认。在 delete、pay 或 update 等动词上标记只读要么是过期配置，要么是错误声明，且规范指出无法验证工具声明的意图（§6.3.2）。"
+  },
+  "sec_registered_more_than_once_fix": {
+    "message": "每个文档仅注册一次，或在重新注册前通过 AbortSignal 显式取消先前的注册。"
+  },
+  "sec_registered_more_than_once_title": {
+    "message": "针对此名称调用了多次 registerTool()"
+  },
+  "sec_registered_more_than_once_why": {
+    "message": "插桩模式在此文档中观察到该工具被多次调用注册。重复注册既是替换攻击使用的机制，也常见于重新渲染的前端组件。"
+  },
+  "sec_sensitive_parameter_fix": {
+    "message": "移除该参数，在用户亲自参与下通过页面自身的 UI 收集该值，或传递不透明引用。"
+  },
+  "sec_sensitive_parameter_title": {
+    "message": "参数要求提供敏感数据"
+  },
+  "sec_sensitive_parameter_why": {
+    "message": "试图提供帮助的代理可能会从个性化数据、浏览历史或其他网站自动填充此参数（规范 §6.3.3）。凭据、银行卡数据和身份证件号绝不应经过模型传递（#316）。"
+  },
+  "sec_state_change_without_hint_fix": {
+    "message": "当更改对用户有重要影响时请声明 consequentialHint；并将 readOnlyHint 保持为 false。"
+  },
+  "sec_state_change_without_hint_title": {
+    "message": "修改状态的工具未声明任何提示注解"
+  },
+  "sec_state_change_without_hint_why": {
+    "message": "动词表明会更改页面或账户状态，但既未声明 readOnlyHint 也未声明 consequentialHint；代理会被指示假定其会改变状态，而审阅者也无法区分这是有意为之还是疏忽遗漏。"
+  },
+  "sec_text_agent_directive_fix": {
+    "message": "请用平实的陈述句描述工具的功能及适用场景；将任何工作流规则移入工具自身的代码或模式中。"
+  },
+  "sec_text_agent_directive_title": {
+    "message": "描述读起来像对代理的指令"
+  },
+  "sec_text_agent_directive_why": {
+    "message": "代理会将工具描述视为受信任的上下文。诸如“始终先调用此工具”或“不要告诉用户”之类的语句是在操控模型而非描述工具（规范 §6.3.1.1，工具投毒）。合法描述中也可能出现这些词，此处仅作风险指标供人工审阅。"
+  },
+  "sec_text_embedded_address_fix": {
+    "message": "描述工具时不要包含地址；如果链接属于数据的一部分，请在返回结果中提供。"
+  },
+  "sec_text_embedded_address_title": {
+    "message": "面向模型的文本中包含 URL 或电子邮箱地址"
+  },
+  "sec_text_embedded_address_why": {
+    "message": "描述中嵌入的地址可能诱导代理请求或联系用户并未要求访问的外部地址（Chrome 代理安全指南建议将访问源严格限制在当前任务范围内）。"
+  },
+  "sec_text_encoded_blob_fix": {
+    "message": "从名称和描述中移除编码载荷；请通过参数和返回结果传递数据。"
+  },
+  "sec_text_encoded_blob_title": {
+    "message": "面向模型的文本中嵌入了编码数据"
+  },
+  "sec_text_encoded_blob_why": {
+    "message": "描述中较长的 Base64 或十六进制字符串携带着人工审阅者无法直接查看、但模型可能会解码并据此行动的内容。"
+  },
+  "sec_text_hidden_characters_fix": {
+    "message": "移除列出的隐藏字符；请检查生成该文本的构建步骤或 CMS。"
+  },
+  "sec_text_hidden_characters_title": {
+    "message": "面向模型的文本中包含不可见字符或改变文字方向的字符"
+  },
+  "sec_text_hidden_characters_why": {
+    "message": "零宽字符、双向控制字符和控制字符对阅读页面的人类不可见，但会原样传递给模型：它们可用于隐藏文本或反转阅读顺序。"
+  },
+  "sec_text_markup_fix": {
+    "message": "在名称和描述中使用纯文本。"
+  },
+  "sec_text_markup_title": {
+    "message": "面向模型的文本中包含标记语言或模板标记"
+  },
+  "sec_text_markup_why": {
+    "message": "描述中的 HTML 标签、代码围栏或提示词模板标记往往是注入指令的载体，正常描述工具绝不需要用到它们。"
+  },
+  "sec_text_mixed_scripts_fix": {
+    "message": "使用单一文字系统重写该词；如果文本确实包含多语言，请确保每个单词内部使用同一种文字系统。"
+  },
+  "sec_text_mixed_scripts_title": {
+    "message": "单词混合了拉丁字母与外观相似的西里尔或希腊字母"
+  },
+  "sec_text_mixed_scripts_why": {
+    "message": "同形异义字符会让两个不同的字符串在人类看来完全相同，而模型和验证器却将其视为两个不同的词（Unicode TR36）。"
+  },
+  "sec_text_over_budget_fix": {
+    "message": "请将文本缩短至预算范围内；将详细说明放入模式的参数描述中。"
+  },
+  "sec_text_over_budget_title": {
+    "message": "文本超出代理所应用的字符预算"
+  },
+  "sec_text_over_budget_why": {
+    "message": "Chrome 指南建议工具描述不超过 500 字符、参数描述不超过 150 字符、名称不超过 30 字符；过长的文本更容易被截断，或在填充内容中隐藏注入指令（规范 §6.4.2）。"
+  },
+  "sec_third_party_registration_fix": {
+    "message": "审阅该脚本，锁定其版本或从您自己的源提供服务；并在生产环境中记录工具注册日志。"
+  },
+  "sec_third_party_registration_title": {
+    "message": "由跨源脚本注册"
+  },
+  "sec_third_party_registration_why": {
+    "message": "此工具由来自页面源之外的代码（如 CDN、边缘桥接器或插件）注册。页面上的任何脚本都可以添加或替换工具（会话中工具注入，arXiv 2606.06387）。"
+  },
+  "sec_ugc_without_untrusted_hint_fix": {
+    "message": "对于返回他人编写文本的工具，请将 annotations.untrustedContentHint 设为 true。"
+  },
+  "sec_ugc_without_untrusted_hint_title": {
+    "message": "包含他人生成的内容但未声明 untrustedContentHint"
+  },
+  "sec_ugc_without_untrusted_hint_why": {
+    "message": "评论、留言、消息或抓取的网页文本可能包含针对代理的指令（输出注入，规范 §6.3.1.2）。untrustedContentHint 会告知代理将返回结果仅作为普通数据处理。"
+  },
+  "sec_unbounded_string_fix": {
+    "message": "在适用处添加 maxLength、enum 或 format；且无论如何都要在工具代码中进行校验。"
+  },
+  "sec_unbounded_string_title": {
+    "message": "未设置长度限制的自由文本参数"
+  },
+  "sec_unbounded_string_why": {
+    "message": "无界字符串会扩大注入指令可携带的内容空间（规范 §6.4.2）。Chrome 建议在代码中进行严格验证；模式中的 maxLength 或 enum 也能告知代理合理的输入范围。"
+  },
+  "security_axis_environment": {
+    "message": "环境"
+  },
+  "security_axis_governance": {
+    "message": "治理"
+  },
+  "security_axis_injection": {
+    "message": "注入攻击面"
+  },
+  "security_axis_lifecycle": {
+    "message": "生命周期"
+  },
+  "security_axis_privacy": {
+    "message": "隐私"
+  },
+  "security_axis_surface": {
+    "message": "暴露面"
+  },
+  "security_cardBadgeHelp": {
+    "message": "此工具安全发现中的最高严重级别。打开“安全”部分查看具体证据。"
+  },
+  "security_clean": {
+    "message": "未发现问题。已评估以下规则；同时列出了无法直接观察的项目。"
+  },
+  "security_coverage": {
+    "message": "$1 个工具 · $2 条规则 · $3 项发现（$4 项实测，$5 项指标）"
+  },
+  "security_coverageHelp": {
+    "message": "审阅覆盖范围：页面上的工具数、针对每个工具评估的规则数，以及按性质分类的发现数。"
+  },
+  "security_detailIntro": {
+    "message": "关于此工具的文本、提示、模式和来源的检查发现。“指标”是值得审阅的模式特征，而非确凿证据。"
+  },
+  "security_detailNone": {
+    "message": "此工具未发现安全问题。"
+  },
+  "security_detailTitle": {
+    "message": "安全审阅"
+  },
+  "security_detailTitleCount": {
+    "message": "安全审阅 ($1)"
+  },
+  "security_evidence": {
+    "message": "证据"
+  },
+  "security_exportLabel": {
+    "message": "导出此安全审查报告"
+  },
+  "security_exportNote": {
+    "message": "包含页面提供的证据、修复建议、未验证项和暂定分数。分享前请审阅。"
+  },
+  "security_filterAxis": {
+    "message": "仅显示此类别的发现。"
+  },
+  "security_filterSeverity": {
+    "message": "仅显示此严重级别的发现。"
+  },
+  "security_fix": {
+    "message": "修复建议"
+  },
+  "security_frame": {
+    "message": "框架 #$1"
+  },
+  "security_hideReviewed": {
+    "message": "隐藏已审阅项"
+  },
+  "security_hideReviewedHelp": {
+    "message": "隐藏已标记为“已审阅”的发现。如果工具契约发生变化，它们会重新显示。"
+  },
+  "security_intro": {
+    "message": "对可见工具声明进行被动检查，提供证据和来源。迹象不等于已证实攻击。检查和生成修复建议不会调用工具。源站扫描和主动探测需在下方明确操作。"
+  },
+  "security_itemHelp": {
+    "message": "展开以阅读证据、重要性说明、修复建议及参考来源。"
+  },
+  "security_markReviewed": {
+    "message": "标记为已审阅"
+  },
+  "security_markReviewedHelp": {
+    "message": "记住您已针对此工具和契约审阅过该发现。若契约更改，它会重新出现。仅保存在本设备上。"
+  },
+  "security_natureHelp": {
+    "message": "实测：Explorer 直接观察到了该事实。指标：通常意味着潜在问题的模式特征；请结合证据自行判断。"
+  },
+  "security_natureIndicator": {
+    "message": "指标"
+  },
+  "security_natureObserved": {
+    "message": "实测"
+  },
+  "security_noMatch": {
+    "message": "没有符合这些筛选条件的发现。"
+  },
+  "security_noTools": {
+    "message": "此页面上没有可供审查的工具。"
+  },
+  "security_no_lifecycle": {
+    "message": "生命周期：此标签页的实时时间线尚无事件。请打开“时间线”，或在页面变化期间保持此部分处于打开状态。"
+  },
+  "security_no_refused_frames": {
+    "message": "被浏览器拒绝 WebMCP 调用的框架：$1。"
+  },
+  "security_no_registration_provenance": {
+    "message": "注册来源：此网站未启用插桩模式，因此 Explorer 无法判断每个工具是由哪个脚本注册的。请在“设置”中开启并刷新页面。"
+  },
+  "security_no_ungranted_origins": {
+    "message": "Explorer 尚无权检查其源的框架：$1。请从状态栏授予访问权限以审阅其工具。"
+  },
+  "security_notObservable": {
+    "message": "此处无法观察"
+  },
+  "security_openTool": {
+    "message": "打开工具"
+  },
+  "security_openToolHelp": {
+    "message": "打开此工具的详情页：Schema、检查与运行。"
+  },
+  "security_pageFinding": {
+    "message": "此页面"
+  },
+  "security_reviewedBadge": {
+    "message": "已审阅"
+  },
+  "security_sevHelp": {
+    "message": "迹象成立时的潜在影响，与证据及综合分数不同。"
+  },
+  "security_sev_critical": {
+    "message": "严重"
+  },
+  "security_sev_high": {
+    "message": "高危"
+  },
+  "security_sev_info": {
+    "message": "信息"
+  },
+  "security_sev_low": {
+    "message": "低危"
+  },
+  "security_sev_medium": {
+    "message": "中危"
+  },
+  "security_sources": {
+    "message": "参考来源"
+  },
+  "security_title": {
+    "message": "安全"
+  },
+  "security_unmarkReviewed": {
+    "message": "取消已审阅标记"
+  },
+  "security_unmarkReviewedHelp": {
+    "message": "将此发现重新标记为未审阅。"
+  },
+  "security_why": {
+    "message": "风险说明"
+  },
+  "settings_about": {
+    "message": "关于"
+  },
+  "settings_agentAccess": {
+    "message": "外部 Agent 桥接权限"
+  },
+  "settings_agentAccessAllowed": {
+    "message": "已允许"
+  },
+  "settings_agentAccessBody": {
+    "message": "允许哪些网站向 Explorer 询问其所在页面的信息。Explorer 仅响应清单（manifest）中声明的源，且必须先由您在此处手动开启。"
+  },
+  "settings_agentAccessLast": {
+    "message": "最近一次请求：$1 请求了“$2”。"
+  },
+  "settings_agentAccessNeedPermission": {
+    "message": "需要先授予 Chrome 对该网站的访问权限才能开启代理访问。请重试并在弹窗中点击允许。"
+  },
+  "settings_agentAccessNone": {
+    "message": "当前构建版本未声明任何允许与 Explorer 通信的网站。"
+  },
+  "settings_agentAccessOff": {
+    "message": "撤销"
+  },
+  "settings_agentAccessOffHelp": {
+    "message": "立即停止响应 $1。下一次请求将被拒绝。"
+  },
+  "settings_agentAccessOn": {
+    "message": "允许"
+  },
+  "settings_agentAccessOnHelp": {
+    "message": "允许 $1 请求 Explorer 列出并调用其自身页面上声明的工具。不会向其暴露任何其他内容。"
+  },
+  "settings_agentConfigured": {
+    "message": "已配置：$1"
+  },
+  "settings_agentLab": {
+    "message": "代理实验室"
+  },
+  "settings_agentLabBody": {
+    "message": "提供商、端点、模型和预算保存在此设备。密钥使用会话内存或可选的加密保险库。"
+  },
+  "settings_agentNotConfigured": {
+    "message": "未选择 AI。工具、检查和配方无需 AI 即可使用。"
+  },
+  "settings_agentSessions": {
+    "message": "代理会话记录"
+  },
+  "settings_agentSessionsCount": {
+    "message": "$2 个站点共 $1 次会话"
+  },
+  "settings_allHttp": {
+    "message": "所有 http 网站"
+  },
+  "settings_allHttps": {
+    "message": "所有 https 网站"
+  },
+  "settings_allSites": {
+    "message": "所有网站（http 和 https）"
+  },
+  "settings_allowAll": {
+    "message": "允许访问所有网站"
+  },
+  "settings_allowAllHelp": {
+    "message": "选择允许检查所有 http 和 https 网站，无需逐一开启。Chrome 会向您请求确认。"
+  },
+  "settings_auditedLastCheck": {
+    "message": "上次复查 $1：$2 项新增"
+  },
+  "settings_auditedSite": {
+    "message": "$1 — 基线 $2，$3 项发现"
+  },
+  "settings_auditedSites": {
+    "message": "已审计的网站"
+  },
+  "settings_bundle": {
+    "message": "备份与迁移设置"
+  },
+  "settings_bundleApplied": {
+    "message": "已应用：$1 个连接器，$2 个提示词。安全检查已丢弃 $3 个连接器（$3 = 0 表示未丢弃）。"
+  },
+  "settings_bundleBody": {
+    "message": "导出提供商设置、连接器和提示词。不包含密钥、密码短语或加密保险库；导入后请单独配置凭据。"
+  },
+  "settings_bundleExport": {
+    "message": "下载设置文件"
+  },
+  "settings_bundleExportHelp": {
+    "message": "将您的配置保存为一个 JSON 文件。按安全设计不包含任何密钥。"
+  },
+  "settings_bundleImport": {
+    "message": "应用设置"
+  },
+  "settings_bundleImportButtonHelp": {
+    "message": "用文件中的内容替换当前的连接器和提示词，并应用其提供商选择。每个条目在生效前都会重新校验。"
+  },
+  "settings_bundleImportHelp": {
+    "message": "文件会逐条校验：若某个连接器的端点会以明文传输密钥，则会被丢弃，其余项正常应用。"
+  },
+  "settings_bundleImportPlaceholder": {
+    "message": "在此粘贴 webmcp-explorer-settings 文件的完整 JSON 内容"
+  },
+  "settings_bundleImportTitle": {
+    "message": "粘贴设置文件以在此应用"
+  },
+  "settings_bundleIntro": {
+    "message": "通过单个文件即可将您的提供商选择、预算、自定义连接器和提示词迁移到其他浏览器或电脑。"
+  },
+  "settings_bundleNotJson": {
+    "message": "不是有效的 JSON——请粘贴从第一个 { 到最后一个 } 的完整文件内容。"
+  },
+  "settings_calls": {
+    "message": "$1 次调用"
+  },
+  "settings_clear": {
+    "message": "清除"
+  },
+  "settings_clearAll": {
+    "message": "清除已保存的数据和密钥"
+  },
+  "settings_clearAllHelp": {
+    "message": "清除已保存的工作、设置、会话密钥和加密保险库。保留调用回执以防止重放。"
+  },
+  "settings_clearHelp": {
+    "message": "删除 $1。执行前会要求再次确认。"
+  },
+  "settings_cleared": {
+    "message": "已清除。"
+  },
+  "settings_confirm": {
+    "message": "确认：清除"
+  },
+  "settings_confirmAll": {
+    "message": "确认：全部清除"
+  },
+  "settings_confirmForget": {
+    "message": "确认：忘记"
+  },
+  "settings_confirmHelp": {
+    "message": "请在几秒内再次点击以确认删除。否则不会删除任何内容。"
+  },
+  "settings_connectors": {
+    "message": "自定义连接器"
+  },
+  "settings_connectorsCount": {
+    "message": "$1 个连接器"
+  },
+  "settings_data": {
+    "message": "本地存储数据"
+  },
+  "settings_dataBody": {
+    "message": "管理此 Chrome 配置文件中存储的数据。卸载扩展会删除其本地数据。"
+  },
+  "settings_endpoints": {
+    "message": "模型服务端点"
+  },
+  "settings_endpointsBody": {
+    "message": "已授权供 Agent 实验室连接模型服务商的源站。撤销后将无法向该端点发起运行，直至重新授权。"
+  },
+  "settings_evals": {
+    "message": "评测套件与结果"
+  },
+  "settings_evalsCount": {
+    "message": "$1 个套件，$2 条结果"
+  },
+  "settings_forgetAgent": {
+    "message": "清除代理实验室设置与密钥"
+  },
+  "settings_forgetAgentHelp": {
+    "message": "恢复为手动模式：清除所有提供商的端点、模型和密钥。"
+  },
+  "settings_forgetBaseline": {
+    "message": "移除"
+  },
+  "settings_forgetBaselineHelp": {
+    "message": "删除此网站的基线。定期复查将停止与它比对。"
+  },
+  "settings_history": {
+    "message": "执行历史记录"
+  },
+  "settings_instrumented": {
+    "message": "已插桩"
+  },
+  "settings_items": {
+    "message": "$1 项"
+  },
+  "settings_keyInMemory": {
+    "message": "内存中已存密钥"
+  },
+  "settings_keyInMemoryHelp": {
+    "message": "此提供商已有可用密钥。 Chrome 重启或扩展重新加载、更新、停用时，会话密钥会被清除。"
+  },
+  "settings_languageAuto": {
+    "message": "跟随浏览器默认 (Auto)"
+  },
+  "settings_languageDesc": {
+    "message": "选择 WebMCP Explorer 的界面显示语言，或跟随浏览器默认语言。"
+  },
+  "settings_languageHeading": {
+    "message": "界面语言 (Language)"
+  },
+  "settings_languageHelp": {
+    "message": "立即切换 WebMCP Explorer 的界面显示语言"
+  },
+  "settings_languageLabel": {
+    "message": "显示语言"
+  },
+  "settings_noAuditedSites": {
+    "message": "尚无网站保存基线。请从“安全”部分保存基线。"
+  },
+  "settings_noBackend": {
+    "message": "Explorer 没有后端服务器：绝不会向 Corsen AI 发送任何数据。唯一离开您设备的数据是您点击“运行”时发送给所配置模型的内容。完整隐私政策请参阅 Chrome 应用商店页面。"
+  },
+  "settings_noInstrumented": {
+    "message": "所有站点均已关闭插桩模式。"
+  },
+  "settings_noSites": {
+    "message": "Explorer 尚未获得任何站点的访问权限。请打开网页并使用“在此站点上启用 Explorer”。"
+  },
+  "settings_notRemoved": {
+    "message": "权限未被移除。"
+  },
+  "settings_oneCall": {
+    "message": "1 次调用"
+  },
+  "settings_oneItem": {
+    "message": "1 项"
+  },
+  "settings_overrides": {
+    "message": "覆盖与模拟 (Mocks)"
+  },
+  "settings_permissionError": {
+    "message": "Chrome 拒绝了请求：$1"
+  },
+  "settings_recheck": {
+    "message": "复查打开的标签页"
+  },
+  "settings_recheckAlarm": {
+    "message": "已安排每 $1 分钟复查一次。"
+  },
+  "settings_recheckEvery": {
+    "message": "间隔"
+  },
+  "settings_recheckEveryHelp": {
+    "message": "重新审阅已打开标签页的频率。"
+  },
+  "settings_recheckHelp": {
+    "message": "每隔设定时间，对已保存基线且 Explorer 有权检查的打开标签页进行重新审阅，并在工具栏徽章上显示新增发现的数量。默认关闭。"
+  },
+  "settings_recheckMinutes": {
+    "message": "$1 分钟"
+  },
+  "settings_recheckNow": {
+    "message": "立即复查"
+  },
+  "settings_recheckNowHelp": {
+    "message": "立即审阅具有基线的已打开标签页，并在此处报告结果。"
+  },
+  "settings_recheckOff": {
+    "message": "未启用定时复查。"
+  },
+  "settings_recheckResult": {
+    "message": "已检查 $1 个网站；自基线以来新增 $2 项发现。"
+  },
+  "settings_revoke": {
+    "message": "撤销权限"
+  },
+  "settings_revokeHelp": {
+    "message": "撤回 Explorer 对 $1 的访问权限。Chrome 会立即移除该授权。"
+  },
+  "settings_savedCalls": {
+    "message": "已保存的调用"
+  },
+  "settings_security": {
+    "message": "安全基线与巡检"
+  },
+  "settings_securityBody": {
+    "message": "管理已保存安全基线的网站，以及对已打开标签页的定期复查。复查仅对已打开且 Explorer 有权检查的标签页运行常规被动审阅；绝不会打开新页面、运行主动探测或向外发送任何数据。"
+  },
+  "settings_securityReviewed": {
+    "message": "安全审阅数据"
+  },
+  "settings_securityReviewedHelp": {
+    "message": "您标记为“已审阅”的发现、声明受您控制以运行探测的网站、已保存的基线以及定期复查设置。清除操作会将它们全部移除。"
+  },
+  "settings_siteAccess": {
+    "message": "站点访问权限"
+  },
+  "settings_siteAccessBody": {
+    "message": "Chrome 授权 Explorer 检查的网站列表。"
+  },
+  "settings_snapshots": {
+    "message": "合约快照"
+  },
+  "settings_snapshotsCount": {
+    "message": "$2 个站点共 $1 个"
+  },
+  "settings_sourceFinder": {
+    "message": "源码定位器"
+  },
+  "settings_sourceFinderBody": {
+    "message": "已启用插桩模式（Instrumentation Mode）的网站。这是唯一会修改页面的功能：脚本会在页面代码运行前包装 WebMCP 注册调用，从而定位每个工具的注册源码位置。关闭后将在下次刷新页面时生效。"
+  },
+  "settings_storageUse": {
+    "message": "已用存储空间：约 $1 KB（Chrome 报告的扩展总占用）。"
+  },
+  "settings_title": {
+    "message": "设置"
+  },
+  "settings_turnOff": {
+    "message": "关闭"
+  },
+  "settings_turnOffHelp": {
+    "message": "停止对 $1 进行插桩。操作后请重新加载页面。"
+  },
+  "settings_version": {
+    "message": "WebMCP Explorer $1 · Corsen AI"
+  },
+  "sidepanel_agentLab": {
+    "message": "代理实验室"
+  },
+  "sidepanel_audit": {
+    "message": "审计"
+  },
+  "sidepanel_clearWhatThePanelRemembers": {
+    "message": "清除面板在此标签页上的界面状态记忆。您的评测集、结果、覆盖配置和历史记录都会保留。"
+  },
+  "sidepanel_demoPage": {
+    "message": "演示页面"
+  },
+  "sidepanel_evals": {
+    "message": "评测"
+  },
+  "sidepanel_noResponseFromTheService": {
+    "message": "Service Worker 无响应。"
+  },
+  "sidepanel_nothingToStopThisPanel": {
+    "message": "没有正在运行的任务 — 面板已处于初始状态。"
+  },
+  "sidepanel_originHelp": {
+    "message": "Explorer 当前正在检查的页面"
+  },
+  "sidepanel_railLabel": {
+    "message": "功能区"
+  },
+  "sidepanel_refreshLabel": {
+    "message": "重新运行发现"
+  },
+  "sidepanel_resetLabel": {
+    "message": "停止并重置此面板"
+  },
+  "sidepanel_stopTheAgentRunAnd": {
+    "message": "停止此标签页上的 Agent 运行和评测套件，并清除面板状态记忆。"
+  },
+  "sidepanel_timeline": {
+    "message": "时间线"
+  },
+  "snapshots_1ThePageRightNow": {
+    "message": "$1 → 当前页面"
+  },
+  "snapshots_aToolListIsA": {
+    "message": "工具列表是与每个来访代理的契约。现在保存一份快照，下次 Explorer 就能准确告诉您哪些地方发生了变化。"
+  },
+  "snapshots_added": {
+    "message": "新增"
+  },
+  "snapshots_addedHelp": {
+    "message": "此工具之前不存在。"
+  },
+  "snapshots_annotations": {
+    "message": "注解"
+  },
+  "snapshots_compareCross": {
+    "message": "对比"
+  },
+  "snapshots_compareCrossHelp": {
+    "message": "逐个工具对比该站点快照与当前页面之间的差异。"
+  },
+  "snapshots_compareWithNow": {
+    "message": "与当前状态对比"
+  },
+  "snapshots_contractChanged": {
+    "message": "契约已更改"
+  },
+  "snapshots_crossHeader": {
+    "message": "$1（摄于 $2）→ 此页面 ($3)"
+  },
+  "snapshots_crossNote": {
+    "message": "两个网站的源不同，因此工具按名称和框架进行匹配；源本身的差异不会作为变更报告。"
+  },
+  "snapshots_deleteThisSnapshot": {
+    "message": "删除此快照"
+  },
+  "snapshots_description": {
+    "message": "描述"
+  },
+  "snapshots_empty": {
+    "message": "（空）"
+  },
+  "snapshots_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "snapshots_inputSchema": {
+    "message": "输入 Schema"
+  },
+  "snapshots_labelThisSnapshotBeforeDeploy": {
+    "message": "为此快照添加标签——“部署前”"
+  },
+  "snapshots_movedFrame": {
+    "message": "框架已移动"
+  },
+  "snapshots_movedFrameHelp": {
+    "message": "同一工具、同名，但位于不同框架中。网站并未将其删除重建。"
+  },
+  "snapshots_nToolsUnchanged": {
+    "message": "$1 个工具未发生变化。"
+  },
+  "snapshots_noSnapshotOfThisSite": {
+    "message": "当前站点尚无已保存的快照。"
+  },
+  "snapshots_nothingChanged": {
+    "message": "无变化"
+  },
+  "snapshots_now": {
+    "message": "当前"
+  },
+  "snapshots_oneOfTheTwoCaptures": {
+    "message": "两次捕获中有一次不完整，因此显示为“已移除”的工具可能只是未被观察到。请授予缺失源的访问权限后重新对比以确认。"
+  },
+  "snapshots_oneToolUnchanged": {
+    "message": "1 个工具未发生变化。"
+  },
+  "snapshots_otherSites": {
+    "message": "与其他站点对比"
+  },
+  "snapshots_otherSitesHelp": {
+    "message": "选择在另一站点（如预发环境或生产环境）上拍摄的快照并与当前页面进行对比。由于两个站点的源不同，工具将按名称和所属框架进行匹配。"
+  },
+  "snapshots_partialCapture": {
+    "message": "部分捕获"
+  },
+  "snapshots_pickSite": {
+    "message": "网站"
+  },
+  "snapshots_pickSnapshot": {
+    "message": "快照"
+  },
+  "snapshots_prefixColonText": {
+    "message": "$1: $2"
+  },
+  "snapshots_recordTheToolsThisPage": {
+    "message": "记录此页面当前声明的工具，以便日后对比"
+  },
+  "snapshots_removed": {
+    "message": "已移除"
+  },
+  "snapshots_removedHelp": {
+    "message": "此工具已不存在。"
+  },
+  "snapshots_saveASnapshot": {
+    "message": "保存快照"
+  },
+  "snapshots_saved": {
+    "message": "已保存。此网站共保留 $1 份快照。"
+  },
+  "snapshots_savedCallsAffected": {
+    "message": "$1 个已保存的调用需要审阅：$2"
+  },
+  "snapshots_savedCallsFine": {
+    "message": "$1 个已保存的调用仍符合新模式。"
+  },
+  "snapshots_schemaChanges": {
+    "message": "模式中的变更内容："
+  },
+  "snapshots_schemaMoved": {
+    "message": "Schema 发生了此摘要无法逐项列出的结构性变更；指纹已改变。"
+  },
+  "snapshots_sinceThatSnapshot": {
+    "message": "自该快照以来的变化"
+  },
+  "snapshots_snapshots": {
+    "message": "合约快照"
+  },
+  "snapshots_someFramesWereNotObserved": {
+    "message": "部分框架未被观察到，因此未出现在此快照中并不代表工具不存在。"
+  },
+  "snapshots_title": {
+    "message": "标题"
+  },
+  "snapshots_unchanged": {
+    "message": "未变"
+  },
+  "snapshots_unknownFrame": {
+    "message": "未知框架"
+  },
+  "snapshots_unknownTime": {
+    "message": "未知时间"
+  },
+  "snapshots_was": {
+    "message": "原为"
+  },
+  "snapshots_whatChanged": {
+    "message": "契约中发生变化的内容。"
+  },
+  "snapshots_whatChangedBetweenThisSnapshot": {
+    "message": "此快照与当前页面之间的变更对比"
+  },
+  "snapshots_whetherItsSchemaCanBe": {
+    "message": "其模式是否可读"
+  },
+  "status_1Frame": {
+    "message": "1 个框架"
+  },
+  "status_1Tool": {
+    "message": "1 个工具"
+  },
+  "status_apiMismatch": {
+    "message": "API 不匹配"
+  },
+  "status_compatibility": {
+    "message": "兼容层 (Polyfill)"
+  },
+  "status_devFlag": {
+    "message": "开发者标志"
+  },
+  "status_everyOriginExposingToolsIs": {
+    "message": "已授权所有暴露工具的源"
+  },
+  "status_missingApiMethods": {
+    "message": "缺失的 API 方法：$1"
+  },
+  "status_nFrames": {
+    "message": "$1 个框架"
+  },
+  "status_nTools": {
+    "message": "$1 个工具"
+  },
+  "status_native": {
+    "message": "原生"
+  },
+  "status_originTrial": {
+    "message": "源试用 (Origin Trial)"
+  },
+  "status_partialMany": {
+    "message": "部分发现 — $1 个源未授权"
+  },
+  "status_partialOne": {
+    "message": "部分发现 — 1 个源未授权"
+  },
+  "status_partialRefusedHelp": {
+    "message": "这些框架中存在 WebMCP 对象，但浏览器拒绝了列出其工具的调用：$1"
+  },
+  "status_partialRefusedMany": {
+    "message": "部分发现 — 浏览器拒绝了 $1 个框架"
+  },
+  "status_partialRefusedOne": {
+    "message": "部分发现 — 浏览器拒绝了 1 个框架"
+  },
+  "status_refused": {
+    "message": "已拒绝"
+  },
+  "status_securityNew": {
+    "message": "安全：$1 项新增"
+  },
+  "status_securityNewHelp": {
+    "message": "未包含在此网站已保存基线中的新发现；最高严重级别为 $1。打开“安全”查看详情。"
+  },
+  "status_toolsDiscoveredAndFramesExplorer": {
+    "message": "已发现的工具数及 Explorer 成功进入的框架数"
+  },
+  "status_unavailable": {
+    "message": "不可用"
+  },
+  "status_webmcpRuntimeDetectedForThis": {
+    "message": "此标签页检测到的 WebMCP 运行时环境"
+  },
+  "timeline_1Ms": {
+    "message": "$1 ms"
+  },
+  "timeline_agent": {
+    "message": "代理"
+  },
+  "timeline_clear": {
+    "message": "清空"
+  },
+  "timeline_discardTheRecordedEvents": {
+    "message": "清空已记录的事件"
+  },
+  "timeline_explorerObservesToolChangesWithout": {
+    "message": "Explorer 在不篡改页面的前提下观察工具变化。在两次采样之间注册并立即移除的工具不会显示在此处。工具发现与工具列表始终是准确的，仅极快周期的事件顺序可能不够完整。"
+  },
+  "timeline_exportNote": {
+    "message": "该记录按时间先后顺序列出每个已记录事件及其工具、框架、耗时和错误。由于采用采样机制，两次快照之间注册并移除的工具不会包含在内。"
+  },
+  "timeline_exportThisTimeline": {
+    "message": "导出时间线报告"
+  },
+  "timeline_kindActivated": {
+    "message": "已激活"
+  },
+  "timeline_kindCancelled": {
+    "message": "已取消"
+  },
+  "timeline_kindExecuted": {
+    "message": "已执行"
+  },
+  "timeline_kindFailed": {
+    "message": "失败"
+  },
+  "timeline_kindRegistered": {
+    "message": "已注册"
+  },
+  "timeline_kindUnregistered": {
+    "message": "已注销"
+  },
+  "timeline_lifecycle": {
+    "message": "生命周期"
+  },
+  "timeline_nDropped": {
+    "message": "已丢弃 $1 项（缓冲区已满）"
+  },
+  "timeline_nMissedPaused": {
+    "message": "暂停期间错过了 $1 项"
+  },
+  "timeline_nRecorded": {
+    "message": "共记录 $1 条"
+  },
+  "timeline_nShown": {
+    "message": "显示 $1 条"
+  },
+  "timeline_nothingRecordedYetRegistrationsAnd": {
+    "message": "暂无记录。工具的注册、注销和调用事件会实时显示在这里。"
+  },
+  "timeline_pause": {
+    "message": "暂停"
+  },
+  "timeline_recordingIsPaused": {
+    "message": "记录已暂停。"
+  },
+  "timeline_resume": {
+    "message": "继续"
+  },
+  "timeline_sampled": {
+    "message": " · 采样模式"
+  },
+  "timeline_showOnly1Events": {
+    "message": "仅显示 $1 事件"
+  },
+  "timeline_stopRecordingNewEvents": {
+    "message": "停止记录新事件"
+  },
+  "toolDetails_1Params": {
+    "message": "$1 个参数"
+  },
+  "toolDetails_argsSentAsObject": {
+    "message": "此浏览器接受对象形式的输入参数而非 JSON 字符串；Explorer 已按对象方式发送。"
+  },
+  "toolDetails_autoSubmit": {
+    "message": "自动提交"
+  },
+  "toolDetails_backToTheToolList": {
+    "message": "返回工具列表"
+  },
+  "toolDetails_cancel": {
+    "message": "取消"
+  },
+  "toolDetails_cancelHelp": {
+    "message": "停止等待此调用。在 Chrome 153 及更高版本中，还会通知页面工具中止执行；其后续返回的任何结果都将被丢弃。"
+  },
+  "toolDetails_cancelled": {
+    "message": "已从 Explorer 取消。页面上的工具可能仍完成了其操作，但其返回结果已被丢弃。"
+  },
+  "toolDetails_cancelling": {
+    "message": "正在取消…"
+  },
+  "toolDetails_changeTheArgumentsAndRun": {
+    "message": "修改参数并重新运行"
+  },
+  "toolDetails_chars": {
+    "message": "$1 个字符"
+  },
+  "toolDetails_code1": {
+    "message": "代码：$1"
+  },
+  "toolDetails_consequential": {
+    "message": "有副作用"
+  },
+  "toolDetails_copyRegisterTool": {
+    "message": "复制 registerTool(…)"
+  },
+  "toolDetails_copyRegisterToolHelp": {
+    "message": "复制可直接粘贴的 navigator.modelContext.registerTool(…) 代码片段"
+  },
+  "toolDetails_copyScriptToolConfig": {
+    "message": "复制 ScriptToolConfig"
+  },
+  "toolDetails_copyScriptToolConfigHelp": {
+    "message": "将此工具的声明式 ScriptToolConfig JSON 配置复制到剪贴板"
+  },
+  "toolDetails_debugging": {
+    "message": "调试"
+  },
+  "toolDetails_declarativeWaits": {
+    "message": "声明式表单工具：除非声明了自动提交，否则浏览器会填入表单并等待人工点击提交按钮。"
+  },
+  "toolDetails_disabled": {
+    "message": "已禁用"
+  },
+  "toolDetails_disabledHelp": {
+    "message": "覆盖设置已拒绝调用此工具。"
+  },
+  "toolDetails_edit": {
+    "message": "编辑参数"
+  },
+  "toolDetails_editTheArgumentsAsRaw": {
+    "message": "以原始 JSON 编辑参数"
+  },
+  "toolDetails_executeThisToolInIts": {
+    "message": "在此工具所属的框架中执行它"
+  },
+  "toolDetails_form": {
+    "message": "表单视图"
+  },
+  "toolDetails_genericError": {
+    "message": "这是 Chrome 自身的固定报错文本，而非工具返回的信息：在 Chrome 153 中，工具抛出的任何错误都会以带有此文本的 UnknownError 形式返回给调用方（实测，WMP-0044）。如果工具记录了具体错误，请查看页面的控制台。"
+  },
+  "toolDetails_goBackToTheGenerated": {
+    "message": "返回生成的表单"
+  },
+  "toolDetails_json": {
+    "message": "</> JSON"
+  },
+  "toolDetails_loading": {
+    "message": "正在加载…"
+  },
+  "toolDetails_msInPage": {
+    "message": "页面内耗时 $1 ms"
+  },
+  "toolDetails_msRoundTrip": {
+    "message": "往返耗时 $1 ms"
+  },
+  "toolDetails_overridden": {
+    "message": "已覆盖"
+  },
+  "toolDetails_overriddenHelp": {
+    "message": "Explorer 正在本地修改此工具的外观定义或返回内容。"
+  },
+  "toolDetails_ranInFrame": {
+    "message": "已在框架 #$1 中运行"
+  },
+  "toolDetails_rawJsonHelp": {
+    "message": "原始 JSON 格式的参数。在此处编辑后，切回表单视图会显示相同的值。"
+  },
+  "toolDetails_rawJsonLabel": {
+    "message": "原始 JSON 参数"
+  },
+  "toolDetails_readOnly": {
+    "message": "只读"
+  },
+  "toolDetails_reproduce": {
+    "message": "复现此调用"
+  },
+  "toolDetails_reproduceNote": {
+    "message": "报告与脚本包含调用参数及页面返回结果。它们会指明所属框架、等待工具注册、拒绝同名冲突工具，并在结果来自本地覆盖而非真实页面时明确注明。"
+  },
+  "toolDetails_result": {
+    "message": "运行结果"
+  },
+  "toolDetails_runAgain": {
+    "message": "再次运行"
+  },
+  "toolDetails_runTool": {
+    "message": "运行工具"
+  },
+  "toolDetails_running": {
+    "message": "正在运行…"
+  },
+  "toolDetails_schemaNotRenderable": {
+    "message": "此模式无法渲染为表单。请参阅 JSON 编辑器中的说明。"
+  },
+  "toolDetails_string": {
+    "message": "字符串"
+  },
+  "toolDetails_stringParsedAsJson": {
+    "message": "字符串 · 已解析为 JSON"
+  },
+  "toolDetails_tabHistory": {
+    "message": "历史"
+  },
+  "toolDetails_tabOverride": {
+    "message": "覆盖 (Mock)"
+  },
+  "toolDetails_tabRun": {
+    "message": "运行"
+  },
+  "toolDetails_tabSchema": {
+    "message": "模式 (Schema)"
+  },
+  "toolDetails_theJsonIsNotValid": {
+    "message": "JSON 格式无效。"
+  },
+  "toolDetails_theToolFailed": {
+    "message": "工具执行失败。"
+  },
+  "toolDetails_theToolReturnedNoValue": {
+    "message": "工具未返回任何值。这通常意味着该调用触发了页面跳转。"
+  },
+  "toolDetails_theToolReturnedNull": {
+    "message": "工具返回了 null。Chrome 会将其作为文本 \"null\" 传递，因此返回 null 的工具与返回文本 \"null\" 的工具在此处显示相同。"
+  },
+  "toolDetails_thisSchemaUsesConstructsExplorer": {
+    "message": "此 Schema 使用了 Explorer 不会擅自猜测的语法结构，因此请直接以 JSON 方式编辑参数。"
+  },
+  "toolDetails_untrustedContent": {
+    "message": "非受信任内容"
+  },
+  "toolHistory_1Calls": {
+    "message": "$1 次调用"
+  },
+  "toolHistory_arguments": {
+    "message": "参数"
+  },
+  "toolHistory_calls": {
+    "message": "调用次数"
+  },
+  "toolHistory_callsHelp": {
+    "message": "已记录的执行次数"
+  },
+  "toolHistory_clearHistory": {
+    "message": "清空历史记录"
+  },
+  "toolHistory_deleteEveryRecordedCallFor": {
+    "message": "删除所有工具的全部调用记录"
+  },
+  "toolHistory_max": {
+    "message": "最大"
+  },
+  "toolHistory_maxHelp": {
+    "message": "耗时最长的调用记录"
+  },
+  "toolHistory_msIncludingHop": {
+    "message": "含扩展中转耗时共 $1 ms"
+  },
+  "toolHistory_noRecordedCallForThis": {
+    "message": "此工具暂无历史调用记录。"
+  },
+  "toolHistory_p50": {
+    "message": "P50"
+  },
+  "toolHistory_p50Help": {
+    "message": "页面内执行耗时中位数"
+  },
+  "toolHistory_p95": {
+    "message": "P95"
+  },
+  "toolHistory_p95Help": {
+    "message": "页面内执行耗时的第 95 百分位数"
+  },
+  "toolHistory_replay": {
+    "message": "重放"
+  },
+  "toolHistory_replayInFrame1": {
+    "message": "在框架 #$1 中重放"
+  },
+  "toolHistory_resultTruncatedForStorageOriginal": {
+    "message": "为节省存储已截断结果。原始长度：$1 个字符。"
+  },
+  "toolHistory_runThisToolAgainWith": {
+    "message": "使用完全相同的参数再次运行此工具"
+  },
+  "toolHistory_success": {
+    "message": "成功率"
+  },
+  "toolHistory_successHelp": {
+    "message": "无错误返回的调用比例"
+  },
+  "toolHistory_thisCallWasMadeInFrame1": {
+    "message": "此调用最初在框架 #$1 中发起，且该框架仍拥有此工具。重放将在该框架中运行，而非打开当前界面时所在的框架。"
+  },
+  "toolHistory_untimed": {
+    "message": "未计时"
+  },
+  "toolHistory_untimedHelp": {
+    "message": "未能到达工具的调用，因此未测量执行时长"
+  },
+  "toolOverride_applyOnceThenUseThe": {
+    "message": " 仅生效一次，随后使用真实工具"
+  },
+  "toolOverride_applyOverride": {
+    "message": "应用覆盖配置"
+  },
+  "toolOverride_callsReachTheRealTool": {
+    "message": "调用将正常发送至真实工具。"
+  },
+  "toolOverride_deleteThisOverrideEntirely": {
+    "message": "彻底删除此覆盖设置"
+  },
+  "toolOverride_descriptionDeclared": {
+    "message": "网站声明的原始描述"
+  },
+  "toolOverride_descriptionOverride": {
+    "message": "覆盖描述"
+  },
+  "toolOverride_disableThisTool": {
+    "message": " 禁用此工具"
+  },
+  "toolOverride_emptyResult": {
+    "message": "空结果"
+  },
+  "toolOverride_error": {
+    "message": "错误"
+  },
+  "toolOverride_errorMessage": {
+    "message": "错误消息"
+  },
+  "toolOverride_explorerIsChangingWhatThis": {
+    "message": "Explorer 正在修改此工具的外观定义或返回内容。"
+  },
+  "toolOverride_failAsATimeoutAfter": {
+    "message": "在下方设定的延迟后以超时错误失败。"
+  },
+  "toolOverride_failWithTheMessageBelow": {
+    "message": "不调用真实工具，直接以下方消息返回失败。"
+  },
+  "toolOverride_latencyHelp": {
+    "message": "在所有模拟模式下，返回响应前等待的延迟时间。"
+  },
+  "toolOverride_latencyMs": {
+    "message": "延迟 (ms)"
+  },
+  "toolOverride_leaveEmptyToKeepThe": {
+    "message": "留空以保留网站声明的原始描述"
+  },
+  "toolOverride_leaveEmptyToKeepThe2": {
+    "message": "留空以保留网站声明的原始模式"
+  },
+  "toolOverride_malformed": {
+    "message": "格式错误"
+  },
+  "toolOverride_mockResponse": {
+    "message": "模拟返回 (Mock)"
+  },
+  "toolOverride_noOverrideOnThisTool": {
+    "message": "此工具尚未设置本地覆盖。"
+  },
+  "toolOverride_none": {
+    "message": "（无）"
+  },
+  "toolOverride_off": {
+    "message": "关闭"
+  },
+  "toolOverride_overrideActive": {
+    "message": "覆盖已启用"
+  },
+  "toolOverride_response": {
+    "message": "响应内容"
+  },
+  "toolOverride_returnAnEmptyStringThe": {
+    "message": "返回空字符串——大多数代理容易忘记处理的边界情况。"
+  },
+  "toolOverride_returnDeliberatelyInvalidJsonTo": {
+    "message": "故意返回无效的 JSON，用于测试代理的解析容错逻辑。"
+  },
+  "toolOverride_returnThePayloadBelowInstead": {
+    "message": "不调用真实工具，直接返回下方的响应载荷。"
+  },
+  "toolOverride_schemaDeclared": {
+    "message": "网站声明的原始模式"
+  },
+  "toolOverride_schemaNotJson": {
+    "message": "模式覆盖不是有效的 JSON：$1"
+  },
+  "toolOverride_schemaOverride": {
+    "message": "覆盖模式"
+  },
+  "toolOverride_simulatedFailure": {
+    "message": "模拟失败"
+  },
+  "toolOverride_success": {
+    "message": "成功"
+  },
+  "toolOverride_theToolStaysListedAnd": {
+    "message": "工具仍显示在列表中并带有标记，但所有调用都会被拒绝。"
+  },
+  "toolOverride_timeout": {
+    "message": "超时"
+  },
+  "toolResult_reproUnavailable": {
+    "message": "无法读取当前生效的覆盖项。请重新打开此结果以导出准确的复现内容。"
+  },
+  "toolResult_reproduceHelp": {
+    "message": "将此调用复制或下载为 Markdown、JSON、控制台代码片段或 Playwright 脚本。"
+  },
+  "toolResult_saveCheck": {
+    "message": "保存为检查项"
+  },
+  "toolResult_saveCheckHelp": {
+    "message": "将这些参数和本次结果保存为后续运行的预期结果。"
+  },
+  "toolResult_showAll": {
+    "message": "显示全部 $1 个字符"
+  },
+  "toolResult_showAllHelp": {
+    "message": "在面板中渲染完整结果。超长文本可能需要一点时间才能显示完毕。"
+  },
+  "toolResult_shownPartial": {
+    "message": "正在显示前 $1 个字符（共 $2 个）。面板保持流畅响应；点击一下即可查看完整内容。"
+  },
+  "toolResult_shownWhole": {
+    "message": "已显示全部 $1 个字符。"
+  },
+  "toolSource_calledFrom1More": {
+    "message": "另有 $1 处调用"
+  },
+  "toolSource_capturedAtRegistration": {
+    "message": "注册时已捕获"
+  },
+  "toolSource_explorerCanRecordWhereEach": {
+    "message": "Explorer 可以记录每个工具是在何处注册的，但仅限开启监听之后。由于必须在页面运行前注入脚本（会修改页面），该功能默认关闭，仅在您主动开启时对当前站点生效。"
+  },
+  "toolSource_explorerWillWrapRegistertoolOn": {
+    "message": "Explorer 将在此站点上包装 registerTool，以记录每个工具的注册来源。由于这会修改页面，除非您主动开启，否则默认保持关闭。"
+  },
+  "toolSource_in1": {
+    "message": "位于 $1()"
+  },
+  "toolSource_offForThisSiteReload": {
+    "message": "已在此网站关闭。重新加载页面以在不带包装器的状态下运行。"
+  },
+  "toolSource_onForThisSiteBut": {
+    "message": "已在此网站开启，但此工具是在插桩启动前注册的。请重新加载页面。"
+  },
+  "toolSource_onForThisSiteReload": {
+    "message": "已在此网站开启。请重新加载页面——无法事后追溯已注册的工具。"
+  },
+  "toolSource_recordedByInstrumentationModeWhen": {
+    "message": "由插桩模式在页面调用 registerTool 时直接记录，并非推断结果。"
+  },
+  "toolSource_registeredTimes": {
+    "message": "已注册 $1 次"
+  },
+  "toolSource_registeredTimesHelp": {
+    "message": "页面多次注册了该名称。此处显示的是第一次注册的位置。"
+  },
+  "toolSource_source": {
+    "message": "源码位置"
+  },
+  "toolSource_sourceDotLocation": {
+    "message": "源码 · $1"
+  },
+  "toolSource_theSourceIsNotKnown": {
+    "message": "源码位置未知。"
+  },
+  "toolSource_turnOffInstrumentationMode": {
+    "message": "关闭插桩模式"
+  },
+  "toolSource_turnOnInstrumentationMode": {
+    "message": "开启插桩模式 (Instrumentation Mode)"
+  },
+  "toolsHeading": {
+    "message": "工具"
+  },
+  "tools_changeTheSortOrder": {
+    "message": "切换排序方式"
+  },
+  "tools_checksExportNote": {
+    "message": "报告包含每项检查的参数与结果；这些均是页面返回的数据。"
+  },
+  "tools_checksIntro": {
+    "message": "在部署后运行已保存的检查。缺失的工具（包括来自框架的工具）仍会保留在报告中。"
+  },
+  "tools_checksLegacyScope": {
+    "message": "早期保存的检查缺少网站上下文信息。请在其工具存在时重新保存一次，以便跟踪跨源框架中缺失的工具。"
+  },
+  "tools_checksReadiness": {
+    "message": "运行前提示：$1 项检查无法使用当前列出的工具。"
+  },
+  "tools_checksReadinessHelp": {
+    "message": "尚未运行任何检查。请检查页面及其框架，或更新已保存的检查以匹配当前工具。更改页面后请刷新工具列表。"
+  },
+  "tools_checksReviewReason": {
+    "message": "需要审阅：$1"
+  },
+  "tools_checksRun": {
+    "message": "运行此站点的全部检查"
+  },
+  "tools_checksRunHelp": {
+    "message": "在各工具所属的框架内，依次运行此页面上所有工具的全部已保存检查。若某个工具已消失，会明确报告而不会静默跳过。"
+  },
+  "tools_checksRunning": {
+    "message": "正在运行 $1 / $2…"
+  },
+  "tools_checksSummary": {
+    "message": "$1 项通过，$2 项失败，$3 项需审阅，$4 项缺失。"
+  },
+  "tools_checksTitle": {
+    "message": "此站点的已保存检查 ($1)"
+  },
+  "tools_checksToolGone": {
+    "message": "工具已消失 — 此页面上没有 $1 的活动实例"
+  },
+  "tools_countAll": {
+    "message": "$1 个工具"
+  },
+  "tools_countShown": {
+    "message": "显示 $1 / 共 $2 个工具"
+  },
+  "tools_exportThisPageSTools": {
+    "message": "导出此页面的工具报告"
+  },
+  "tools_filterByNameDescriptionOr": {
+    "message": "按名称、描述或来源筛选"
+  },
+  "tools_frame": {
+    "message": "框架 (Frame)"
+  },
+  "tools_inputsNone": {
+    "message": "无输入参数"
+  },
+  "tools_inputsOptional": {
+    "message": "可选参数：$1"
+  },
+  "tools_inputsRequired": {
+    "message": "必填参数：$1"
+  },
+  "tools_name": {
+    "message": "名称"
+  },
+  "tools_noToolMatchesTheseFilters": {
+    "message": "没有匹配当前筛选条件的工具。"
+  },
+  "tools_open1ToInspectIts": {
+    "message": "打开 $1 以检查其 Schema 并运行"
+  },
+  "tools_origin": {
+    "message": "来源 (Origin)"
+  },
+  "tools_schemaError": {
+    "message": "Schema 错误"
+  },
+  "tools_searchTools": {
+    "message": "搜索工具"
+  },
+  "tools_searchToolsByNameDescription": {
+    "message": "按名称、描述或来源搜索工具"
+  },
+  "tools_sort1": {
+    "message": "排序：$1"
+  },
+  "tools_theReportListsTheTools": {
+    "message": "报告列出了此页面声明的所有工具、描述及其 Schema，并附带说明 Explorer 未能观测到的任何部分。"
+  },
+  "tools_titleHelp": {
+    "message": "页面为此工具提供的标题，显示在工具名称旁边。"
+  },
+  "vault_passphrase": {
+    "message": "主密码短语"
+  },
+  "vault_passphraseHelp": {
+    "message": "至少 12 个字符。解锁或修改加密密钥时需要输入，不会保存。"
+  },
+  "vault_error": {
+    "message": "操作失败。请检查密码短语和可用存储空间。"
+  },
+  "vault_create": {
+    "message": "启用加密存储"
+  },
+  "vault_unlock": {
+    "message": "解锁保险库"
+  },
+  "vault_lock": {
+    "message": "锁定并清除会话密钥"
+  },
+  "vault_session": {
+    "message": "仅为本次会话保留密钥"
+  },
+  "vault_delete": {
+    "message": "删除保险库及全部密钥"
+  },
+  "vault_deleteHelp": {
+    "message": "移除所有提供商的加密存储和会话密钥。点击两次确认。"
+  },
+  "vault_confirmDelete": {
+    "message": "确认：删除全部密钥"
+  },
+  "vault_locked": {
+    "message": "加密保险库 — 已锁定"
+  },
+  "vault_unlocked": {
+    "message": "加密保险库 — 本次会话已解锁"
+  },
+  "vault_optional": {
+    "message": "可选的加密保险库"
+  },
+  "vault_help": {
+    "message": "将加密密钥保存在此设备，每次浏览器会话解锁一次。修改时需再次输入密码短语。忘记后无法恢复。"
+  },
+  "vault_keyAvailable": {
+    "message": "此提供商已有可用密钥。"
+  },
+  "vault_sessionHelp": {
+    "message": "Chrome 重启或扩展重新加载、更新、停用时，会话密钥会被清除。"
+  },
+  "emulation_enable": {
+    "message": "为此网站启用 JS 模拟"
+  },
+  "emulation_disable": {
+    "message": "停用 JS 模拟"
+  },
+  "emulation_active": {
+    "message": "本次会话已启用 JS 模拟"
+  },
+  "emulation_help": {
+    "message": "可在本次浏览器会话中为此网站启用 JS 模拟。需要网站访问权限和重新加载。HTML 表单仅供查看，不模拟浏览器原生保障。"
+  },
+  "emulation_reload": {
+    "message": "重新加载页面以应用更改。未保存的编辑可能丢失。"
+  },
+  "emulation_reloadButton": {
+    "message": "重新加载页面"
+  },
+  "emulation_inventoryOnly": {
+    "message": "仅供查看"
+  },
+  "emulation_inventoryHelp": {
+    "message": "此 HTML 表单需原生 WebMCP 才能执行。模式仅为估算，无法推断提交处理程序的检查。"
+  },
+  "emulation_inferred": {
+    "message": "从 HTML 推断的模式"
+  },
+  "execution_unknown": {
+    "message": "操作可能已经发生。Explorer 不会重试。发起新请求前请检查页面。"
+  },
+  "execution_trace": {
+    "message": "引擎：$1 · 参数：$2 · 调用次数：$3"
+  },
+  "vault_lockHelp": {
+    "message": "立即清除已解密的会话缓存，保留此设备上的加密保险库。"
+  },
+  "vault_sessionModeHelp": {
+    "message": "使用密码短语解密，移除持久保险库，仅在会话内存中保留密钥。"
+  },
+  "invocation_receiptsHelp": {
+    "message": "调用回执：$1。身份哈希和状态可防止清除历史后重放。不含参数、结果或密钥，卸载扩展时删除。"
+  },
+  "security_scoreValue": {
+    "description": "Phase B security review.",
+    "message": "$1/100 · 等级 $2 · 暂定",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "security_scoreUnavailable": {
+    "description": "Phase B security review.",
+    "message": "无法评分：未发现工具"
+  },
+  "security_scoreCaution": {
+    "description": "Phase B security review.",
+    "message": "对可见声明的启发式评估，并非安全认证。未验证项列在下方。高分不代表操作已获授权。"
+  },
+  "security_scoreMethod": {
+    "description": "Phase B security review.",
+    "message": "评分计算方式"
+  },
+  "security_scoreFormula": {
+    "description": "Phase B security review.",
+    "message": "公式 v1：从100分开始，每个规则/工具仅按最高严重度扣分一次：严重40、高20、中10、低5、信息0。存在严重项时上限49，下限0。A ≥90、B ≥80、C ≥70、D ≥60、E ≥50、F <50。隐藏或标记已审阅不会改变分数。"
+  },
+  "security_showFix": {
+    "description": "Phase B security review.",
+    "message": "显示修复建议"
+  },
+  "security_copyFix": {
+    "description": "Phase B security review.",
+    "message": "复制修复建议"
+  },
+  "security_copyFixHelp": {
+    "description": "Phase B security review.",
+    "message": "复制模板，不应用或执行。"
+  },
+  "security_fixCopied": {
+    "description": "Phase B security review.",
+    "message": "修复建议已复制"
+  },
+  "security_fixCopyError": {
+    "description": "Phase B security review.",
+    "message": "复制失败。请选中代码并手动复制。"
+  },
+  "security_fixReview": {
+    "description": "Phase B security review.",
+    "message": "供开发者审阅的模板，绝不自动应用。请检查名称、限制、验证和服务器授权。占位实现会拒绝执行。"
+  },
+  "security_no_authenticationConsent": {
+    "description": "Phase B security review.",
+    "message": "无法从此契约验证身份认证、服务器授权及人工批准：$1。未检查会话凭据。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_schemaLimits": {
+    "description": "Phase B security review.",
+    "message": "架构检查不完整：$1。不会获取远程引用。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_similarityLimit": {
+    "description": "Phase B security review.",
+    "message": "描述比较达到检查上限：$1。未检查的组合可能存在其他歧义。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_originScan": {
+    "description": "Phase B security review.",
+    "message": "尚未请求源站标头和发现文件。可使用下方的“扫描源站”检查。"
+  },
+  "security_no_originScanIncomplete": {
+    "description": "Phase B security review.",
+    "message": "源站扫描不完整：响应不可用、发生重定向或达到限制。未进行重试。"
+  },
+  "sec_text_active_payload_title": {
+    "description": "Phase B security review.",
+    "message": "工具文本中的主动载荷标记"
+  },
+  "sec_text_active_payload_why": {
+    "description": "Phase B security review.",
+    "message": "脚本标签、覆盖指令或外部Markdown图片可能误导代理。这是迹象，并非执行或数据外传的证据。"
+  },
+  "sec_text_active_payload_fix": {
+    "description": "Phase B security review.",
+    "message": "将代理指令替换为客观的操作描述。审阅所有架构描述，将不可信文本与可信指令分开。"
+  },
+  "sec_mutation_hints_incomplete_title": {
+    "description": "Phase B security review.",
+    "message": "变更意图声明不完整"
+  },
+  "sec_mutation_hints_incomplete_why": {
+    "description": "Phase B security review.",
+    "message": "动词暗示状态变更。WebMCP提示仅供参考，无法强制批准或授权。"
+  },
+  "sec_mutation_hints_incomplete_fix": {
+    "description": "Phase B security review.",
+    "message": "对已审阅的变更设置readOnlyHint:false和consequentialHint:true。另行实现确认和服务器授权。"
+  },
+  "sec_permissive_object_title": {
+    "description": "Phase B security review.",
+    "message": "对象架构允许未声明的输入"
+  },
+  "sec_permissive_object_why": {
+    "description": "Phase B security review.",
+    "message": "明确允许额外属性，或敏感工具未封闭对象边界。这描述的是架构，而非服务器验证。"
+  },
+  "sec_permissive_object_fix": {
+    "description": "Phase B security review.",
+    "message": "审阅additionalProperties:false和嵌套约束。封闭对象前检查组合架构及兼容性，并在服务器再次验证。"
+  },
+  "sec_mutating_auto_submit_title": {
+    "description": "Phase B security review.",
+    "message": "变更表单可自动提交"
+  },
+  "sec_mutating_auto_submit_why": {
+    "description": "Phase B security review.",
+    "message": "toolautosubmit移除了原生的手动提交步骤。身份认证和自定义确认逻辑仍未知。agentInvoked表示来源，不代表人工同意。"
+  },
+  "sec_mutating_auto_submit_fix": {
+    "description": "Phase B security review.",
+    "message": "对敏感操作考虑移除toolautosubmit。在服务器将授权和批准绑定到确切账户、参数和操作。"
+  },
+  "sec_legacy_registration_title": {
+    "description": "Phase B security review.",
+    "message": "发现旧版注册方式"
+  },
+  "sec_legacy_registration_why": {
+    "description": "Phase B security review.",
+    "message": "此注册使用navigator命名空间或provideContext。兼容性取决于运行时，存在本身不证明可被利用。"
+  },
+  "sec_legacy_registration_fix": {
+    "description": "Phase B security review.",
+    "message": "验证目标浏览器后，迁移到document.modelContext.registerTool并用AbortSignal清理。勿重复注册回调。"
+  },
+  "sec_token_estimate_over_budget_title": {
+    "description": "Phase B security review.",
+    "message": "超出描述的估算预算"
+  },
+  "sec_token_estimate_over_budget_why": {
+    "description": "Phase B security review.",
+    "message": "估算超过800个词元，按UTF-8字节数除以4并向上取整。准确数量取决于模型的分词器。"
+  },
+  "sec_token_estimate_over_budget_fix": {
+    "description": "Phase B security review.",
+    "message": "缩短操作和参数描述，但保留必要约束。需要准确预算时，请使用目标模型的分词器测量。"
+  },
+  "sec_ambiguous_description_title": {
+    "description": "Phase B security review.",
+    "message": "相似描述可能影响选择"
+  },
+  "sec_ambiguous_description_why": {
+    "description": "Phase B security review.",
+    "message": "不同名称工具的描述词集合Jaccard相似度至少为0.80。词汇重叠不证明行为相同。"
+  },
+  "sec_ambiguous_description_fix": {
+    "description": "Phase B security review.",
+    "message": "描述各操作独有的范围、输入和结果。避免指令代理优先选择某个工具或先调用其他工具。"
+  },
+  "sec_convention_csp_title": {
+    "description": "Phase B security review.",
+    "message": "CSP响应标头观测"
+  },
+  "sec_convention_csp_why": {
+    "description": "Phase B security review.",
+    "message": "记录的是无凭据响应的标头，而非有效策略。缺少标头不排除存在meta策略。"
+  },
+  "sec_convention_csp_fix": {
+    "description": "Phase B security review.",
+    "message": "根据真实脚本和连接审阅CSP，先用Report-Only和应用测试验证变更。"
+  },
+  "sec_convention_cors_title": {
+    "description": "Phase B security review.",
+    "message": "CORS响应标头观测"
+  },
+  "sec_convention_cors_why": {
+    "description": "Phase B security review.",
+    "message": "仅为标头证据，未测试浏览器跨源请求。通配源与凭据组合不兼容带凭据的CORS，并不证明凭据泄漏。"
+  },
+  "sec_convention_cors_fix": {
+    "description": "Phase B security review.",
+    "message": "仅在必要时允许预期源。勿为消除诊断而启用通配CORS；请单独测试认证行为。"
+  },
+  "sec_convention_unavailable_title": {
+    "description": "Phase B security review.",
+    "message": "发现响应不可用或不完整"
+  },
+  "sec_convention_unavailable_why": {
+    "description": "Phase B security review.",
+    "message": "响应失败、重定向、超出限制或返回非成功状态。可选发现文件并非WebMCP强制端点。"
+  },
+  "sec_convention_unavailable_fix": {
+    "description": "Phase B security review.",
+    "message": "若本应发布此约定，请检查所列响应。仅因缺失无需安全修复；未进行自动重试。"
+  },
+  "bridge_title": {
+    "message": "本地MCP桥接",
+    "description": "Phase C local bridge."
+  },
+  "bridge_intro": {
+    "message": "将可信的本地MCP客户端连接到明确共享的标签页。仅有网站权限不会共享标签页。导航、撤销权限和重新连接会清除绑定。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pairingNote": {
+    "message": "复制的配置包含此浏览器会话的密钥，仅应交给可信MCP客户端。重启浏览器或重新加载扩展后需重新配对。伴随程序使用Node.js在本地运行，无依赖。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_port": {
+    "message": "桥接端口",
+    "description": "Phase C local bridge."
+  },
+  "bridge_portHelp": {
+    "message": "端口范围1024–65535。始终连接127.0.0.1，拒绝远程地址。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeout": {
+    "message": "批准超时（秒）",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeoutHelp": {
+    "message": "5至60秒。无响应、连接关闭或批准过期时拒绝调用。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_path": {
+    "message": "本地伴随脚本（可选）",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathPlaceholder": {
+    "message": "默认使用已安装的webmcp-bridge命令",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathHelp": {
+    "message": "未安装的本地源码可填写packages/webmcp-bridge/cli.mjs的绝对路径。Explorer只复制配置，不启动命令。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_auto": {
+    "message": "自动允许符合条件的只读调用",
+    "description": "Phase C local bridge."
+  },
+  "bridge_autoHelp": {
+    "message": "提示可能不实。严重或高风险发现、变更迹象、重要操作及未验证参数仍需批准。安全等级本身不会授予权限。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enable": {
+    "message": "为此会话启用",
+    "description": "Phase C local bridge."
+  },
+  "bridge_disable": {
+    "message": "断开连接",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enableHelp": {
+    "message": "启用或断开本地桥接。断开时清除共享与批准。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_save": {
+    "message": "保存桥接设置",
+    "description": "Phase C local bridge."
+  },
+  "bridge_saveHelp": {
+    "message": "应用此会话的端口、超时和只读偏好。更改端口会重新连接并清除共享标签页。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyConfig": {
+    "message": "复制MCP客户端配置",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyHelp": {
+    "message": "为可信MCP客户端复制本地命令、端口、扩展身份及会话密钥。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copied": {
+    "message": "会话配置已复制",
+    "description": "Phase C local bridge."
+  },
+  "bridge_tab": {
+    "message": "要共享的标签页",
+    "description": "Phase C local bridge."
+  },
+  "bridge_share": {
+    "message": "共享所选标签页",
+    "description": "Phase C local bridge."
+  },
+  "bridge_shareHelp": {
+    "message": "仅公开所选且已有权限标签页的工具。共享前请确认源站。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshare": {
+    "message": "停止共享",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshareHelp": {
+    "message": "立即使此标签页工具失效并拒绝待批准请求。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reset": {
+    "message": "清除配对",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resetHelp": {
+    "message": "断开连接、清除所有共享标签页并丢弃此会话配对密钥。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resume": {
+    "message": "已审查未知影响 — 恢复",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resumeHelp": {
+    "message": "确认已审查不确定的操作。不会重放；新请求前需明确重新共享标签页。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unknown": {
+    "message": "因未知影响已暂停。恢复前请检查页面；未重放任何调用。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status": {
+    "message": "桥接：$1",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_status_disabled": {
+    "message": "已禁用",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connecting": {
+    "message": "正在验证本地伴随程序",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connected": {
+    "message": "已认证并连接",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_reconnecting": {
+    "message": "等待已认证的伴随程序",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_authentication_failed": {
+    "message": "认证被拒绝",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_error": {
+    "message": "连接不可用",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approvalTitle": {
+    "message": "Corsen Guard — 需要批准",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reasons": {
+    "message": "审查原因：$1。下方为确切JSON，不可见控制字符已转义。",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_deadline": {
+    "message": "未获批准时将在$1秒后自动拒绝。",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_approve": {
+    "message": "仅批准一次",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approveHelp": {
+    "message": "仅授权此确切请求。源站、文档、契约变更或请求过期时会拒绝。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_deny": {
+    "message": "拒绝",
+    "description": "Phase C local bridge."
+  },
+  "bridge_denyHelp": {
+    "message": "拒绝此请求，不调用页面工具。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_expired": {
+    "message": "批准已过期或失效。未发起任何新操作。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_manual_mode": {
+    "message": "每次调用均需批准",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_not_read_only": {
+    "message": "未声明为只读",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_consequential": {
+    "message": "重要或破坏性操作",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_mutating": {
+    "message": "可能改变状态",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_critical": {
+    "message": "B阶段严重发现",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_high": {
+    "message": "B阶段高风险发现",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_incomplete_schema": {
+    "message": "架构不完整",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_unchecked_arguments": {
+    "message": "参数未完全验证",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_uncaptured_annotations": {
+    "message": "未捕获注册时的注解"
+  },
+  "export_copySpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "复制Playwright测试"
+  },
+  "export_saveSpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "保存Playwright测试"
+  },
+  "export_playwrightHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "导出包含契约及输出断言的独立.spec.ts测试。执行前请审阅数据并明确指定运行ID，不会自动重试。"
+  },
+  "export_specNeedsData": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "可执行导出需要完整参数和结果，请先恢复这些部分。"
+  },
+  "export_sarifHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "用于CI审阅的SARIF 2.1.0。源码注释需要将运行时位置映射到仓库，不会虚构文件或行号。"
+  },
+  "status_legacy": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "旧版API"
+  },
+  "status_emulated": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS模拟"
+  },
+  "status_inventorySplit": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS $1 · 表单 $2 · ? $3",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "status_inventoryHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "已观察的注册：JS为捕获的命令式工具，表单为检测到的声明式表单，?为未分类。不推断封闭Shadow根。"
+  },
+  "status_grade": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "安全评估 $1*",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_copyFlag": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "复制标志网址"
+  }
+}

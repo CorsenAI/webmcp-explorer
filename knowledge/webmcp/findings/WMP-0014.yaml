@@ -1,0 +1,25 @@
+id: WMP-0014
+title: Reloading the tab under a running tool settles the injection with no result
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: same uncertainty as WMP-0011
+observed: >
+  chrome.tabs.reload() during a 6 s tool run settled executeScript within milliseconds with
+  an injection result carrying no value. The reloaded page was discoverable again, child
+  frame included, and the call could be recorded as failed rather than left pending.
+impact:
+  - a reload is a clean failure case, unlike a navigation started by the tool itself
+workaround: report the missing value as a failure with a reason; never record an execution
+evidence:
+  fixture: fixtures/slow.html
+  automated_test: tools/e2e/inflight.mjs (A13)
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

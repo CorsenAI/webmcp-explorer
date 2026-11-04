@@ -1,0 +1,4942 @@
+{
+  "actionTitle": {
+    "message": "פתח את WebMCP Explorer"
+  },
+  "agentSessions_allChats": {
+    "message": "כל השיחות"
+  },
+  "agentSessions_allChatsHelp": {
+    "message": "הצג את כל השיחות באתר זה."
+  },
+  "agentSessions_allChatsShort": {
+    "message": "הכל"
+  },
+  "agentSessions_continuing": {
+    "message": "ממשיך שיחה זו ($1 מטרות מתועדות) — המודל יראה את כל מה שנאמר עד כה."
+  },
+  "agentSessions_continuingOne": {
+    "message": "ממשיך שיחה זו — המודל יראה את מה שנאמר קודם."
+  },
+  "agentSessions_delete": {
+    "message": "מחק"
+  },
+  "agentSessions_deleteHelp": {
+    "message": "מחק שיחה זו ממכשיר זה."
+  },
+  "agentSessions_empty": {
+    "message": "אין עדיין שיחות. הרצות שהסתיימו נשמרות כאן, במכשיר זה בלבד."
+  },
+  "agentSessions_groupDeleteHelp": {
+    "message": "מחק קבוצה זו. השיחות שבה נשארות בהיסטוריה."
+  },
+  "agentSessions_groupEmpty": {
+    "message": "אין עדיין שיחות בקבוצה זו."
+  },
+  "agentSessions_groupNew": {
+    "message": "+ קבוצה"
+  },
+  "agentSessions_groupNewHelp": {
+    "message": "צור קבוצה לארגון השיחות של אתר זה."
+  },
+  "agentSessions_groupNewPrompt": {
+    "message": "שם הקבוצה החדשה:"
+  },
+  "agentSessions_historyHelp": {
+    "message": "ריצות שהסתיימו באתר זה, נשמרות במכשיר זה בלבד. פתח אחת כדי לקרוא שוב או להמשיך אותה."
+  },
+  "agentSessions_historyN": {
+    "message": "היסטוריית שיחות ($1)"
+  },
+  "agentSessions_historyOne": {
+    "message": "היסטוריית שיחות (1)"
+  },
+  "agentSessions_moveToGroup": {
+    "message": "העבר שיחה זו לקבוצה"
+  },
+  "agentSessions_nTurns": {
+    "message": "$1 מטרות"
+  },
+  "agentSessions_new": {
+    "message": "שיחה חדשה"
+  },
+  "agentSessions_newHelp": {
+    "message": "התחל שיחה חדשה. שיחות קודמות נשארות בהיסטוריה."
+  },
+  "agentSessions_noGroup": {
+    "message": "ללא קבוצה"
+  },
+  "agentSessions_oneTurn": {
+    "message": "מטרה אחת"
+  },
+  "agentSetup_aKeyIsStoredType": {
+    "message": "מפתח שמור בזיכרון — הקלד כדי להחליפו"
+  },
+  "agentSetup_aRunThatHitsA": {
+    "message": "הרצה שמגיעה לתקציב נעצרת ומציינת זאת. היא לעולם אינה נחתכת בשקט."
+  },
+  "agentSetup_addKeyFirst": {
+    "message": "לפני השליחה יש להוסיף מפתח להפעלה או לפתוח את הכספת המוצפנת."
+  },
+  "agentSetup_allowFirst": {
+    "message": "אפשר גישה לכתובת הספק שלך בהגדרות המודל."
+  },
+  "agentSetup_allowRequestsTo1": {
+    "message": "אפשר בקשות אל $1"
+  },
+  "agentSetup_apiKey": {
+    "message": "מפתח API"
+  },
+  "agentSetup_askTheEndpointWhichModels": {
+    "message": "שאל את נקודת הקצה אילו מודלים היא משרתת"
+  },
+  "agentSetup_askingTheEndpoint": {
+    "message": "פונה אל נקודת הקצה…"
+  },
+  "agentSetup_budgets": {
+    "message": "מגבלות תקציב"
+  },
+  "agentSetup_checkingAccessToTheEndpoint": {
+    "message": "בודק הרשאת גישה לנקודת הקצה…"
+  },
+  "agentSetup_chooseHelp": {
+    "message": "שימוש ב-AI הוא אופציונלי. ניתן להשתמש בספק ענן עם מפתח API משלך או להתחבר לשרת מקומי כגון Ollama או LM Studio. כלים, בדיקות ותסריטים פועלים גם ללא AI."
+  },
+  "agentSetup_chooseProvider": {
+    "message": "בחר ספק AI"
+  },
+  "agentSetup_couldNotListModels": {
+    "message": "לא ניתן להציג את רשימת המודלים."
+  },
+  "agentSetup_deleteTheStoredKey": {
+    "message": "מחק את המפתח השמור"
+  },
+  "agentSetup_endpoint": {
+    "message": "נקודת קצה (Endpoint)"
+  },
+  "agentSetup_endpointAllowed": {
+    "message": "נקודת קצה מורשית"
+  },
+  "agentSetup_endpointHelp": {
+    "message": "חייב לתמוך ב-API הצ׳אט של OpenAI. הנתיב מתווסף עבורך."
+  },
+  "agentSetup_explorerMaySendRequestsTo": {
+    "message": "Explorer רשאי לשלוח בקשות לכתובת זו."
+  },
+  "agentSetup_forget": {
+    "message": "שכח"
+  },
+  "agentSetup_howManyTimesTheModel": {
+    "message": "כמה פעמים ניתן לפנות למודל לפני ש-Explorer עוצר"
+  },
+  "agentSetup_howManyToolExecutionsA": {
+    "message": "כמה הרצות כלים רשאית הרצה בודדת לבצע"
+  },
+  "agentSetup_keptInMemoryOnlyNever": {
+    "message": "מפתחות ההפעלה נמחקים בהפעלה מחדש של Chrome או בטעינה מחדש, בעדכון או בהשבתה של התוסף. שמירת מפתחות מוצפנים במכשיר ופתיחתם פעם אחת בכל הפעלת דפדפן. שינויים דורשים הזנה חוזרת של ביטוי הסיסמה. ביטוי שנשכח אינו ניתן לשחזור."
+  },
+  "agentSetup_keptInMemoryUntilChrome": {
+    "message": "מפתחות ההפעלה נמחקים בהפעלה מחדש של Chrome או בטעינה מחדש, בעדכון או בהשבתה של התוסף. שמירת מפתחות מוצפנים במכשיר ופתיחתם פעם אחת בכל הפעלת דפדפן. שינויים דורשים הזנה חוזרת של ביטוי הסיסמה. ביטוי שנשכח אינו ניתן לשחזור."
+  },
+  "agentSetup_keyHeldUntilChromeCloses": {
+    "message": "קיים מפתח זמין לספק זה."
+  },
+  "agentSetup_listModels": {
+    "message": "בדוק חיבור / הצג מודלים"
+  },
+  "agentSetup_model": {
+    "message": "מודל"
+  },
+  "agentSetup_modelHelp": {
+    "message": "בחר מודל צ׳אט התומך בקריאות כלים. הזמינות תלויה בחשבון הספק או במודלים המקומיים שלך."
+  },
+  "agentSetup_modelName": {
+    "message": "בחר או הזן מזהה מודל"
+  },
+  "agentSetup_modelTurns": {
+    "message": "תורי מודל"
+  },
+  "agentSetup_modelsFound": {
+    "message": "מחובר. $1 מודלים זמינים; בחר אחד בשדה המודל."
+  },
+  "agentSetup_noKey": {
+    "message": "ללא מפתח"
+  },
+  "agentSetup_noModelsFound": {
+    "message": "מחובר, אך לא נמצאו מודלים. בשרת מקומי, טען מודל תחילה או הזן את מזהה המודל."
+  },
+  "agentSetup_onlyHttpAndHttpsEndpoints": {
+    "message": "ניתן להשתמש רק בנקודות קצה מסוג http ו-https."
+  },
+  "agentSetup_onlyThisAddressExplorerAsks": {
+    "message": "כתובת זו בלבד. Explorer מבקש מ-Chrome, ו-Chrome מבקש את אישורך."
+  },
+  "agentSetup_openSetup": {
+    "message": "הגדר את ה-AI שלך"
+  },
+  "agentSetup_openSetupHelp": {
+    "message": "פתח את הגדרות ה-AI: בחר ספק ענן או שרת מודל מקומי. אופציונלי."
+  },
+  "agentSetup_optionalForThisEndpoint": {
+    "message": "אופציונלי עבור נקודת קצה זו."
+  },
+  "agentSetup_pasteYourApiKey": {
+    "message": "הדבק את מפתח ה-API שלך"
+  },
+  "agentSetup_provider": {
+    "message": "ספק"
+  },
+  "agentSetup_reviewSettings": {
+    "message": "בדוק את הגדרות הספק שלך בהגדרות המודל."
+  },
+  "agentSetup_saveKey": {
+    "message": "שמור מפתח"
+  },
+  "agentSetup_selectModel": {
+    "message": "בחר מודל בהגדרות המודל. בדוק חיבור לקבלת רשימת מודלים או הזן מזהה מודל."
+  },
+  "agentSetup_setAnEndpointFirst": {
+    "message": "הגדר תחילה נקודת קצה."
+  },
+  "agentSetup_thatIsNotAValid": {
+    "message": "זוהי אינה כתובת URL תקינה."
+  },
+  "agentSetup_thisEndpointIsPlainHttp": {
+    "message": "נקודת קצה זו משתמשת ב-http לא מוצפן מחוץ למחשב שלך. Explorer לא ישלח אליה מפתחות או בקשות. השתמש ב-https או ב-localhost."
+  },
+  "agentSetup_thisProviderNeedsAnEndpoint": {
+    "message": "ספק זה דורש כתובת נקודת קצה."
+  },
+  "agentSetup_thisProviderWillRefuseThe": {
+    "message": "ספק זה ידחה את הבקשה ללא מפתח."
+  },
+  "agentSetup_toolCalls": {
+    "message": "קריאות כלים"
+  },
+  "agentSetup_usageHelp": {
+    "message": "שימוש בענן כפוף לתמחור ולמכסות של הספק שלך. מודלים מקומיים דורשים שרת פעיל."
+  },
+  "agentSetup_whichModelServiceToTalk": {
+    "message": "אל איזה שירות מודל להתחבר"
+  },
+  "agentTranscript_aTraceHoldsTheGoal": {
+    "message": "מעקב מכיל את המטרה, הארגומנטים שהמודל שלח ומה שכלי הדף החזירו. קרא אותו לפני שיתוף."
+  },
+  "agentTranscript_adaptedItem": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_adaptedRootOnly": {
+    "message": "צירוף השורש שלו מוזג לאובייקט אחד"
+  },
+  "agentTranscript_anotherToolAlreadyUsesThat": {
+    "message": "כלי אחר כבר משתמש בשם זה"
+  },
+  "agentTranscript_answer": {
+    "message": "תשובה"
+  },
+  "agentTranscript_answered": {
+    "message": "נענה"
+  },
+  "agentTranscript_askingTheModel": {
+    "message": "שואל את המודל…"
+  },
+  "agentTranscript_budgetCalls": {
+    "message": "תקציב: $1."
+  },
+  "agentTranscript_budgetSteps": {
+    "message": "תקציב: $1. הרצה שמגיעה אליו נעצרת ומציינת זאת."
+  },
+  "agentTranscript_calls": {
+    "message": "קריאות"
+  },
+  "agentTranscript_cancelled": {
+    "message": "בוטל"
+  },
+  "agentTranscript_chromeStoppedTheExtensionS": {
+    "message": "Chrome עצר את תהליך הרקע של התוסף בזמן ההרצה. Explorer אינו מפעיל אותו מחדש אוטומטית. כל מה שהתרחש עד כה נשמר, וניתן להריץ שוב."
+  },
+  "agentTranscript_chromeStoppedTheExtensionS2": {
+    "message": "Chrome עצר את תהליך הרקע של התוסף בזמן ההרצה."
+  },
+  "agentTranscript_errorHelp": {
+    "message": "השגיאה הוצגה למודל כדי שיוכל להגיב בהתאם."
+  },
+  "agentTranscript_executionDetails": {
+    "message": "פרטי ביצוע"
+  },
+  "agentTranscript_executionDetailsHelp": {
+    "message": "בדוק את המטרה המקורית, הודעות המודל, ארגומנטי הכלים והתוצאות המדויקות. פתיחת מעקב זה אינה מריצה דבר."
+  },
+  "agentTranscript_explorer": {
+    "message": "Explorer"
+  },
+  "agentTranscript_explorerWasNotGrantedIts": {
+    "message": "ל-Explorer לא ניתנה הרשאה למקור שלו ולכן לא יכול היה להריץ אותו"
+  },
+  "agentTranscript_exportThisRun": {
+    "message": "ייצא ריצה זו"
+  },
+  "agentTranscript_failed": {
+    "message": "נכשל"
+  },
+  "agentTranscript_goal": {
+    "message": "מטרה"
+  },
+  "agentTranscript_interruptedByChrome": {
+    "message": "הופסק על ידי Chrome"
+  },
+  "agentTranscript_itsInputSchemaCouldNot": {
+    "message": "לא ניתן היה לפענח את סכמת הקלט שלו, לכן Explorer לא יתאר אותו"
+  },
+  "agentTranscript_itsInputSchemaIsNot": {
+    "message": "סכמת הקלט שלו אינה אובייקט"
+  },
+  "agentTranscript_measuredInPage": {
+    "message": "נמדד בתוך הדף."
+  },
+  "agentTranscript_mocked": {
+    "message": "מודמה"
+  },
+  "agentTranscript_mockedHelp": {
+    "message": "הדריסה המקומית שלך ענתה; הדף לא רץ."
+  },
+  "agentTranscript_model": {
+    "message": "מודל"
+  },
+  "agentTranscript_modelUsed": {
+    "message": "מודל בשימוש: $1"
+  },
+  "agentTranscript_nFailed": {
+    "message": "$1 נכשל"
+  },
+  "agentTranscript_nFailedHelp": {
+    "message": "קריאות כלים שהחזירו שגיאה. המודל עודכן ויכול היה להגיב."
+  },
+  "agentTranscript_nMocked": {
+    "message": "$1 מודמים"
+  },
+  "agentTranscript_nMockedHelp": {
+    "message": "נענה על ידי הדריסה שלך ולא על ידי הדף. הרצה זו אינה הוכחה שהכלי האמיתי פועל."
+  },
+  "agentTranscript_nModelTurns": {
+    "message": "$1 תורי מודל"
+  },
+  "agentTranscript_nToolCalls": {
+    "message": "$1 קריאות כלי"
+  },
+  "agentTranscript_nToolNamesWereChanged": {
+    "message": "$1 שמות כלים שונו עבור המודל"
+  },
+  "agentTranscript_nToolSchemasWereAdapted": {
+    "message": "$1 סכמות כלים הותאמו עבור המודל"
+  },
+  "agentTranscript_nToolsWereNotOffered": {
+    "message": "$1 כלים לא הוצעו למודל"
+  },
+  "agentTranscript_nameDashReason": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_noRunYetDescribeWhat": {
+    "message": "השיחה שלך תופיע כאן. בחר את ה-AI בהגדרת מודל, ואז שאל שאלה או נסה את הכלים של דף זה."
+  },
+  "agentTranscript_oneModelTurn": {
+    "message": "תור מודל 1"
+  },
+  "agentTranscript_oneToolCall": {
+    "message": "קריאת כלי 1"
+  },
+  "agentTranscript_oneToolNameWasChanged": {
+    "message": "שם כלי אחד שונה עבור המודל"
+  },
+  "agentTranscript_oneToolSchemaWasAdapted": {
+    "message": "סכמת כלי אחת הותאמה עבור המודל"
+  },
+  "agentTranscript_oneToolWasNotOffered": {
+    "message": "כלי אחד לא הוצע למודל"
+  },
+  "agentTranscript_parenDetail": {
+    "message": " ($1)"
+  },
+  "agentTranscript_renamedItem": {
+    "message": "$1 → $2 ($3)"
+  },
+  "agentTranscript_result1": {
+    "message": "תוצאה · $1"
+  },
+  "agentTranscript_running": {
+    "message": "פועל"
+  },
+  "agentTranscript_runningTools": {
+    "message": "מריץ כלים בדף…"
+  },
+  "agentTranscript_stoppedModelTurnBudgetReached": {
+    "message": "נעצר: הגיע לתקציב תורי המודל"
+  },
+  "agentTranscript_stoppedToolCallBudgetReached": {
+    "message": "נעצר: הגיע לתקציב קריאות הכלים"
+  },
+  "agentTranscript_theApiRejectsTheseCharacters": {
+    "message": "ה-API דוחה תווים אלה"
+  },
+  "agentTranscript_tokens": {
+    "message": "$1 קלט / $2 פלט"
+  },
+  "agentTranscript_tokensHelp": {
+    "message": "טוקנים שדווחו על ידי הספק."
+  },
+  "agentTranscript_waitingForForm": {
+    "message": "ממתין לטופס $1 בדף. אלא אם הדף שולח אותו אוטומטית, יש לאשר ולשלוח אותו בדף או ללחוץ על ביטול."
+  },
+  "agentTranscript_you": {
+    "message": "את/ה"
+  },
+  "agentTranscript_youDisabledItWithAn": {
+    "message": "השבתת אותו באמצעות דריסה מקומית"
+  },
+  "agent_aRunIsInProgress": {
+    "message": "הרצה מתבצעת כעת."
+  },
+  "agent_allowTheEndpointFirst": {
+    "message": "אפשר תחילה את נקודת הקצה."
+  },
+  "agent_answerAs": {
+    "message": "ענה בתור"
+  },
+  "agent_cancel": {
+    "message": "ביטול"
+  },
+  "agent_copied": {
+    "message": "הועתק"
+  },
+  "agent_copyItToTheClipboard": {
+    "message": "העתק ללוח"
+  },
+  "agent_copyRequest": {
+    "message": "העתק בקשה"
+  },
+  "agent_explorerSendsNothingCopyThis": {
+    "message": "Explorer אינו שולח דבר. העתק בקשה זו לכל צ׳אט, הדבק את התשובה חזרה, וקריאות הכלים ירוצו מול הדף."
+  },
+  "agent_feedTheReplyBack": {
+    "message": "הזן את התשובה חזרה"
+  },
+  "agent_fixFirst": {
+    "message": "תקן תחילה: $1."
+  },
+  "agent_goal": {
+    "message": "מטרה"
+  },
+  "agent_jumpToLatest": {
+    "message": "קפוץ להודעה האחרונה"
+  },
+  "agent_jumpToLatestHelp": {
+    "message": "התקבלה תשובה בזמן שקראת למעלה. לחיצה אחת מחזירה לסוף השיחה."
+  },
+  "agent_manualMode": {
+    "message": "מצב ידני"
+  },
+  "agent_nToolsOnThisPageWillBeOffered": {
+    "message": "$1 כלים בדף זה יוצעו למודל, למעט כלים ש-Explorer אינו יכול לתאר באופן מהימן."
+  },
+  "agent_oneToolOnThisPageWillBeOffered": {
+    "message": "כלי אחד בדף זה יוצע למודל, למעט אם Explorer אינו יכול לתאר אותו באופן מהימן."
+  },
+  "agent_openInWindow": {
+    "message": "פתח שיחה זו בחלון גדול"
+  },
+  "agent_pasteTheModelReplyHere": {
+    "message": "הדבק כאן את תשובת המודל — תגובת ה-JSON הגולמית או הטקסט שלה"
+  },
+  "agent_send": {
+    "message": "שלח"
+  },
+  "agent_sendHelp": {
+    "message": "שלח הודעה זו למודל עם כלי הדף. Enter שולח; Shift+Enter יורד שורה."
+  },
+  "agent_sendTheGoalAndThis": {
+    "message": "שלח את המטרה ואת הכלים של דף זה למודל."
+  },
+  "agent_starterHelp": {
+    "message": "מלא את שדה המטרה עם הצעת פרומפט זו"
+  },
+  "agent_starterSummarize": {
+    "message": "סכם את כלי הדף"
+  },
+  "agent_starterSummarizePrompt": {
+    "message": "פרט את הכלים בדף זה והסבר מתי להשתמש בכל אחד מהם."
+  },
+  "agent_starterTryTool": {
+    "message": "נסה את $1"
+  },
+  "agent_starterTryToolPrompt": {
+    "message": "קרא ל-$1 עם קלט בדיקה הגיוני וסכם את התוצאה."
+  },
+  "agent_stopAfterTheCurrentStep": {
+    "message": "עצור לאחר השלב הנוכחי"
+  },
+  "agent_toolsAvailable": {
+    "message": "$1 כלי דף זמינים"
+  },
+  "agent_tryAgain": {
+    "message": "נסה שוב"
+  },
+  "agent_tryAgainHelp": {
+    "message": "שאל את דף זה את אותה שאלה שוב. התשובה החדשה מתווספת לאותה שיחה מתחת לראשונה — דבר אינו נדרס."
+  },
+  "agent_whatShouldTheAgentTry": {
+    "message": "מה הסוכן צריך לנסות לעשות עם דף זה?"
+  },
+  "annotationDeclaredHelp": {
+    "message": "מוצהר על ידי האתר. Explorer מציג זאת אך אינו מאמת זאת."
+  },
+  "audit_clean": {
+    "message": "אין ממצאי חוזה."
+  },
+  "audit_export": {
+    "message": "ייצא את דוח הביקורת"
+  },
+  "audit_exportJsonHelp": {
+    "message": "כל ממצא כנתונים, עבור סקריפט או דיווח תקלה."
+  },
+  "audit_exportMarkdownHelp": {
+    "message": "דוח מוכן לסקירה, מהכלי בעל הציון הנמוך ביותר."
+  },
+  "audit_exportNote": {
+    "message": "הייצוא כולל את מה שהדף מצהיר על כליו — תיאורים וסכמות, לעולם לא תוכן דף."
+  },
+  "audit_failN": {
+    "message": "$1 נכשלו"
+  },
+  "audit_intro": {
+    "message": "ציון איכות החוזה המוצהר של כל כלי (תיאורים, סכמות, אנוטציות) — לעולם אינו דירוג אבטחה."
+  },
+  "audit_noTools": {
+    "message": "אין עדיין כלים לביקורת בדף זה."
+  },
+  "audit_passN": {
+    "message": "$1 תקינים"
+  },
+  "audit_pointsHelp": {
+    "message": "נקודות שממצא זה מפחית מציון הכלי."
+  },
+  "audit_rule_descDuplicate": {
+    "message": "תיאור זהה משותף עם עוד $1 כלים: המודל ייאלץ לנחש ביניהם."
+  },
+  "audit_rule_descGeneric": {
+    "message": "התיאור חוזר רק על שם הכלי ואינו מוסיף מידע."
+  },
+  "audit_rule_descMissing": {
+    "message": "חסר תיאור: מודל קורא אינו יכול להחליט מתי להשתמש בכלי זה."
+  },
+  "audit_rule_descNoAction": {
+    "message": "השורה הראשונה אינה מתחילה בפועל פעולה — העדף \"Search…\", \"Add…\", \"Get…\"."
+  },
+  "audit_rule_descRestatesName": {
+    "message": "התיאור מנסח מחדש את שם הכלי ללא עובדות חדשות."
+  },
+  "audit_rule_descTooLong": {
+    "message": "מעל 80 מילים בתיאור: הנחיות ארוכות מעמיסות על חלון ההקשר."
+  },
+  "audit_rule_descTooShort": {
+    "message": "פחות מארבע מילים: לא מספיק כדי להבדיל את הכלי מאחרים."
+  },
+  "audit_rule_paramMissingDesc": {
+    "message": "ל-$1 מתוך $2 מאפייני קלט אין תיאור."
+  },
+  "audit_rule_paramUntyped": {
+    "message": "ל-$1 מתוך $2 מאפייני קלט אין טיפוס מוגדר."
+  },
+  "audit_rule_schemaMissing": {
+    "message": "אין סכמת קלט מסוג אובייקט: הארגומנטים נשלחים כניחוש."
+  },
+  "audit_scoreHelp": {
+    "message": "ציון איכות החוזה המוצהר — אינו ציון אבטחה."
+  },
+  "audit_scoreN": {
+    "message": "$1/100"
+  },
+  "audit_warnN": {
+    "message": "$1 עם הערות"
+  },
+  "baseline_forget": {
+    "message": "שכח קו בסיס"
+  },
+  "baseline_forgetHelp": {
+    "message": "מחק את קו הבסיס השמור לאתר זה."
+  },
+  "baseline_lastCheck": {
+    "message": "בדיקה אחרונה $1: $2 חדשים, $3 נפתרו"
+  },
+  "baseline_newChip": {
+    "message": "חדש מאז קו הבסיס"
+  },
+  "baseline_newChipHelp": {
+    "message": "הצג רק ממצאים שלא הופיעו בקו הבסיס השמור."
+  },
+  "baseline_noChange": {
+    "message": "מאז קו הבסיס: אין ממצאים חדשים."
+  },
+  "baseline_none": {
+    "message": "טרם נשמר קו בסיס לאתר זה. שמור קו בסיס כדי להשוות מולו סקירות עתידיות."
+  },
+  "baseline_save": {
+    "message": "שמור קו בסיס"
+  },
+  "baseline_saveHelp": {
+    "message": "שמור את הממצאים וטביעות האצבע של החוזים במכשיר זה."
+  },
+  "baseline_savedAt": {
+    "message": "קו בסיס נשמר ב-$1 — $2 ממצאים, $3 כלים"
+  },
+  "baseline_since": {
+    "message": "מאז קו הבסיס: $1 חדשים ($2), $3 נפתרו · כלים שנוספו $4, הוסרו $5, חוזים שהשתנו $6"
+  },
+  "baseline_sinceHelp": {
+    "message": "מה שסקירה זו מציגה לעומת קו הבסיס."
+  },
+  "baseline_title": {
+    "message": "קו בסיס שמור"
+  },
+  "baseline_titleHelp": {
+    "message": "שמור את הממצאים והחוזים הנוכחיים כנקודת ייחוס לאתר זה."
+  },
+  "baseline_toolsAdded": {
+    "message": "כלים שנוספו: $1"
+  },
+  "baseline_toolsChanged": {
+    "message": "חוזים שהשתנו: $1"
+  },
+  "baseline_toolsRemoved": {
+    "message": "כלים שהוסרו: $1"
+  },
+  "baseline_truncated": {
+    "message": "קו הבסיס שומר את 300 הממצאים הראשונים ו-1,000 כלים."
+  },
+  "baseline_update": {
+    "message": "עדכן קו בסיס"
+  },
+  "baseline_updateHelp": {
+    "message": "החלף את קו הבסיס השמור בסקירה הנוכחית."
+  },
+  "checkApiAvailability": {
+    "message": "WebMCP API"
+  },
+  "checkApiAvailabilityRefused": {
+    "message": "נדחה"
+  },
+  "checkCapability": {
+    "message": "יכולת"
+  },
+  "checkFrameContext": {
+    "message": "הקשר מסגרת"
+  },
+  "checkOriginIsolation": {
+    "message": "בידוד מקור"
+  },
+  "checkSecureContext": {
+    "message": "הקשר מאובטח"
+  },
+  "checkToolsPermission": {
+    "message": "הרשאת tools"
+  },
+  "checks_duplicateDescription": {
+    "message": "לכלי אחר בדף זה יש אותו תיאור: $1. מודל אינו יכול להבחין ביניהם לפיו."
+  },
+  "checks_duplicateName": {
+    "message": "מסגרת אחרת רושמת כלי באותו שם; מודלים רואים את שניהם תחת כינויים נפרדים."
+  },
+  "checks_intro": {
+    "message": "פערים בחוזה המוצהר של כלי זה שעלולים לגרום לסוכן לבחור כלי שגוי או לקרוא לו באופן שגוי."
+  },
+  "checks_levelNote": {
+    "message": "הערה"
+  },
+  "checks_levelWarn": {
+    "message": "אזהרה"
+  },
+  "checks_nOnCard": {
+    "message": "$1 הערות חוזה"
+  },
+  "checks_nameNeedsAlias": {
+    "message": "ממשקי API של מודלים אינם מקבלים שם זה כפי שהוא; Explorer מציע אותו תחת כינוי."
+  },
+  "checks_noAnnotations": {
+    "message": "לא הוצהרו אנוטציות. readOnlyHint מציין לסוכן אם הקריאה משנה מצב."
+  },
+  "checks_noDescription": {
+    "message": "אין תיאור. למודל אין לפי מה לבחור בכלי זה."
+  },
+  "checks_noSchema": {
+    "message": "אין סכמת קלט. אם הכלי מקבל ארגומנטים, מודל אינו יכול לדעת אילו."
+  },
+  "checks_none": {
+    "message": "אין ממצאים לציון: התיאור, הסכמה והאנוטציות כולם קיימים."
+  },
+  "checks_oneOnCard": {
+    "message": "הערת חוזה 1"
+  },
+  "checks_propertyWithoutDescription": {
+    "message": "מאפיינים ללא תיאור: $1."
+  },
+  "checks_requiredNotDeclared": {
+    "message": "נדרשים אך לא הוגדרו במאפיינים: $1."
+  },
+  "checks_schemaError": {
+    "message": "סכמת הקלט אינה ניתנת לפענוח: $1"
+  },
+  "checks_schemaNotObject": {
+    "message": "סכמת הקלט אינה סכמת אובייקט (סוג $1). ארגומנטים של כלי הם תמיד אובייקט."
+  },
+  "checks_shortDescription": {
+    "message": "תיאור קצר ($1 תווים). ציין מה הכלי עושה, מתי להשתמש בו ומה הוא מחזיר."
+  },
+  "checks_title": {
+    "message": "בדיקות חוזה"
+  },
+  "checks_titleCount": {
+    "message": "בדיקות חוזה ($1)"
+  },
+  "common_error": {
+    "message": "שגיאה"
+  },
+  "common_frameN": {
+    "message": "מסגרת #$1"
+  },
+  "common_ms": {
+    "message": "$1 מ״ש"
+  },
+  "common_ok": {
+    "message": "תקין"
+  },
+  "connector_add": {
+    "message": "הוסף מחבר"
+  },
+  "connector_addHelp": {
+    "message": "בודק את כללי נקודת הקצה ושומר את המחבר ברשימת הספקים."
+  },
+  "connector_addOne": {
+    "message": "הוסף מחבר מותאם אישית"
+  },
+  "connector_added": {
+    "message": "המחבר נוסף. בחר אותו ברשימת הספקים למעלה."
+  },
+  "connector_delete": {
+    "message": "מחק"
+  },
+  "connector_deleteHelp": {
+    "message": "מסיר מחבר זה ומוחק את המפתח שלו מהזיכרון."
+  },
+  "connector_dialect": {
+    "message": "ניב בקשה (Dialect)"
+  },
+  "connector_dialectHelp": {
+    "message": "איזה API נקודת הקצה מדברת. Explorer תומך בשלושתם."
+  },
+  "connector_help": {
+    "message": "מחברים מותאמים הם נקודות גישה למודלים שהגדרתם. Chrome מנהל את הרשאות הגישה; גישה מרוחקת דורשת HTTPS. חל מצב אחסון המפתחות שנבחר."
+  },
+  "connector_key": {
+    "message": "דורש מפתח API"
+  },
+  "connector_keyHelp": {
+    "message": "אם האפשרות מסומנת, המחבר דורש מפתח API. חל מצב האחסון שנבחר."
+  },
+  "connector_mark": {
+    "message": "מותאם אישית"
+  },
+  "connector_name": {
+    "message": "שם"
+  },
+  "connector_nameHelp": {
+    "message": "מוצג ברשימת הספקים. עד 60 תווים."
+  },
+  "connector_none": {
+    "message": "אין עדיין מחברים מותאמים אישית."
+  },
+  "connector_section": {
+    "message": "מחברים מותאמים אישית"
+  },
+  "connector_url": {
+    "message": "נקודת קצה"
+  },
+  "connector_urlHelp": {
+    "message": "כתובת הבסיס ש-Explorer קורא לה. http רגיל מותר רק במחשב זה."
+  },
+  "diagnosticExport": {
+    "message": "בדוק וייצא ראיה זו"
+  },
+  "diagnosticExportNote": {
+    "message": "כולל את התצפיות המוצגות, כתובות האתרים והשגיאות המדויקות. בדוק את התצוגה המקדימה לפני השיתוף."
+  },
+  "diagnosticInvalid": {
+    "message": "התצוגה המקדימה חייבת להיות JSON תקין לפני העתקה או הורדה."
+  },
+  "diagnosticPreview": {
+    "message": "תצוגה מקדימה של ראיות אבחון"
+  },
+  "diagnosticPreviewHelp": {
+    "message": "קרא או ערוך את הראיות לפני הייצוא. פתיחה אינה משנה דבר בדף."
+  },
+  "discoveryComplete": {
+    "message": "הגילוי הושלם"
+  },
+  "discoveryFailed": {
+    "message": "Discovery נכשל"
+  },
+  "discoveryNextAction": {
+    "message": "ודא שהדף נטען בהצלחה ולאחר מכן רענן את הכלים."
+  },
+  "discoveryPartial": {
+    "message": "גילוי חלקי"
+  },
+  "discoveryRetry": {
+    "message": "רענן כלים"
+  },
+  "discoveryRetryHelp": {
+    "message": "נסה לגלות כלים מחדש בדף הנוכחי. פעולה זו אינה מריצה כלי."
+  },
+  "discovery_check": {
+    "message": "סריקת המקור"
+  },
+  "discovery_checkHelp": {
+    "message": "שלוף פעם אחת את שלושת הנתיבים המוסכמים ואת כותרות הדף ממקור זה."
+  },
+  "discovery_disclosure": {
+    "message": "לחיצה שולחת בקשות GET מ-Explorer אל $1 עבור /.well-known/webmcp, /.well-known/webmcp.json ו-/llms.txt ובקשה אחת לקריאת כותרות הדף."
+  },
+  "discovery_intro": {
+    "message": "שלושת הקבצים הם מוסכמות אופציונליות, לא דרישות WebMCP. הסריקה קוראת גם כותרות Permissions-Policy, CSP ו־CORS. ללא פרטי גישה או מעקב אחר הפניות, עם מגבלת 64 KiB לגוף תגובה. התוצאות מתארות תגובות אלה, לא הפעלות מאומתות או מדיניות דפדפן אפקטיבית."
+  },
+  "discovery_notGranted": {
+    "message": "Explorer אינו מורשה לשלוף ממקור זה: הענק תחילה גישה לאתר."
+  },
+  "discovery_results": {
+    "message": "$1 — סטטוס $2"
+  },
+  "discovery_resultsHelp": {
+    "message": "תשובת כל נתיב: קוד HTTP, סוג תוכן וגודל, או השגיאה."
+  },
+  "discovery_title": {
+    "message": "מוסכמות גילוי — בדיקות רשת אופציונליות"
+  },
+  "discovery_titleHelp": {
+    "message": "שלוף את קובצי הגילוי וקרא את כותרת ה-Permissions-Policy של הדף."
+  },
+  "enableFlagBody": {
+    "message": "לפיתוח מקומי, אם גרסת Chrome שלך מציעה דגל זה, הפעל אותו והפעל מחדש את Chrome."
+  },
+  "enableFlagTitle": {
+    "message": "לבדיקת אתרים אמיתיים"
+  },
+  "enableFlagWhy": {
+    "message": "Chrome מתעד דגל זה לבדיקות מקומיות ומציע גם ניסוי מקור (Origin Trial)."
+  },
+  "envUnavailableTitle": {
+    "message": "WebMCP אינו זמין כאן"
+  },
+  "env_apiAvailabilityHelp": {
+    "message": "האם document.modelContext חושף את המתודות ש-Explorer זקוק להן."
+  },
+  "env_browserSaid": {
+    "message": "הדפדפן דיווח: $1"
+  },
+  "env_capabilityHelp": {
+    "message": "כיצד WebMCP מסופק בכרטיסייה זו."
+  },
+  "env_frameContextHelp": {
+    "message": "מסגרות iframe חוצות-מקור דורשות allow=\"tools\" מהדף המטמיע."
+  },
+  "env_missingMethods": {
+    "message": "מתודות חסרות"
+  },
+  "env_missingMethodsHelp": {
+    "message": "מתודות ש-Explorer מצפה להן אך לא נמצאו."
+  },
+  "env_originIsolationHelp": {
+    "message": "WebMCP זמין רק במסמכים מבודדי-מקור. Origin-Agent-Cluster: ?0 משבית אותו."
+  },
+  "env_secureContextHelp": {
+    "message": "WebMCP נחשף רק בהקשר מאובטח (HTTPS או localhost)."
+  },
+  "env_toolsPermissionHelp": {
+    "message": "מדיניות ההרשאות tools. \"unobservable\" פירושו שהדפדפן אינו חושף תכונה זו לבדיקה."
+  },
+  "evalsEditor_aModelIsNotDeterministic": {
+    "message": "מודל אינו דטרמיניסטי. ניסיון בודד מוכיח מעט מאוד, בדיוק כמו קריאה מוצלחת במקרה."
+  },
+  "evalsEditor_aModelThatGetsThere": {
+    "message": "מודל שמגיע ליעד אחרי שלוש קריאות שגויות לא הבין את התיאורים."
+  },
+  "evalsEditor_addACase": {
+    "message": "הוספת מקרה"
+  },
+  "evalsEditor_andCallItFirst": {
+    "message": " ולקרוא לו ראשון"
+  },
+  "evalsEditor_asksForAToolTo": {
+    "message": "מבקש לקרוא לכלי ראשון מבלי לציין את שמו"
+  },
+  "evalsEditor_attempts": {
+    "message": "ניסיונות"
+  },
+  "evalsEditor_checksNothingSoItWould": {
+    "message": "לא בודק דבר, ולכן יעבור בהצלחה בלי קשר למה שהמודל יעשה"
+  },
+  "evalsEditor_deleteThisCase": {
+    "message": "מחיקת מקרה זה"
+  },
+  "evalsEditor_expectsAndForbidsTheSame": {
+    "message": "מצפה ואוסר על אותו כלי עצמו"
+  },
+  "evalsEditor_hasNoGoal": {
+    "message": "ללא מטרה מוגדרת"
+  },
+  "evalsEditor_mustNotCall": {
+    "message": "אסור לקרוא ל-"
+  },
+  "evalsEditor_notOnThisPage": {
+    "message": "$1 אינו נמצא בדף זה"
+  },
+  "evalsEditor_notOnThisPageHelp": {
+    "message": "המקרה ייכשל מסיבה שאינה קשורה כלל למודל."
+  },
+  "evalsEditor_oneGoalOneExpectation": {
+    "message": "מטרה אחת, ציפייה אחת"
+  },
+  "evalsEditor_remove": {
+    "message": "הסרה"
+  },
+  "evalsEditor_shouldCall": {
+    "message": "צריך לקרוא ל-"
+  },
+  "evalsEditor_suiteName": {
+    "message": "שם הסוויטה"
+  },
+  "evalsEditor_toolThatShouldBeCalled": {
+    "message": "הכלי שיש לקרוא לו"
+  },
+  "evalsEditor_toolsThatMustNotBe": {
+    "message": "כלים שאסור לקרוא להם, מופרדים בפסיקים"
+  },
+  "evalsEditor_untitledSuite": {
+    "message": "סוויטה ללא שם"
+  },
+  "evalsEditor_whatShouldTheAgentBe": {
+    "message": "מה יש לבקש מהסוכן לעשות?"
+  },
+  "evalsEditor_writtenAgainst1RunningIt": {
+    "message": "נכתב עבור $1. מותר להריץ במקום אחר, אך "
+  },
+  "evalsEditor_writtenAgainstNote": {
+    "message": "נכתב עבור $1. מותר להריץ במקום אחר, אך משמעות התוצאה תהיה שונה."
+  },
+  "evalsResults_1NamedByTheSuite": {
+    "message": "$1 — מצוין בסוויטה אך אינו חשוף על ידי "
+  },
+  "evalsResults_attemptsJudged": {
+    "message": "ניסיונות שניתן היה להעריך."
+  },
+  "evalsResults_broken": {
+    "message": "נשבר"
+  },
+  "evalsResults_brokenHelp": {
+    "message": "עבר לפני השינוי הזה, נכשל כעת."
+  },
+  "evalsResults_calledForbidden": {
+    "message": "קרא ל-$1, דבר שאסור"
+  },
+  "evalsResults_cancelled": {
+    "message": "בוטל"
+  },
+  "evalsResults_casePointsHelp": {
+    "message": "מקרה יכול להישאר כושל ועדיין להשתפר — מעבר מ-0/5 ל-2/5 הוא התקדמות."
+  },
+  "evalsResults_compareWithThePreviousRun": {
+    "message": "השוואה להרצה הקודמת"
+  },
+  "evalsResults_comparedWithThePreviousRun": {
+    "message": "בהשוואה להרצה הקודמת"
+  },
+  "evalsResults_couldNotRun": {
+    "message": "לא ניתן להריץ"
+  },
+  "evalsResults_countTimesMiss": {
+    "message": "$1× $2"
+  },
+  "evalsResults_differentFirstChoice": {
+    "message": "בחירה ראשונה שונה"
+  },
+  "evalsResults_expectedToolNeverCalled": {
+    "message": "הכלי המצופה מעולם לא נקרא"
+  },
+  "evalsResults_exportThisResult": {
+    "message": "ייצוא תוצאה זו"
+  },
+  "evalsResults_failed": {
+    "message": "נכשל"
+  },
+  "evalsResults_fixed": {
+    "message": "תוקן"
+  },
+  "evalsResults_fixedHelp": {
+    "message": "נכשל לפני השינוי הזה, עובר כעת."
+  },
+  "evalsResults_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "evalsResults_nBroken": {
+    "message": "$1 נשברו"
+  },
+  "evalsResults_nCouldNotRun": {
+    "message": "$1 לא ניתנים להרצה"
+  },
+  "evalsResults_nCouldNotRunHelp": {
+    "message": "מוחרגים מהשיעור: מקרים אלה אינם מעידים דבר על הדף."
+  },
+  "evalsResults_nDisabled": {
+    "message": "$1 מושבתים"
+  },
+  "evalsResults_nFailed": {
+    "message": "$1 נכשל"
+  },
+  "evalsResults_nFixed": {
+    "message": "$1 תוקנו"
+  },
+  "evalsResults_nPassed": {
+    "message": "$1/$2 עבר"
+  },
+  "evalsResults_nRewritten": {
+    "message": "$1 שוכתבו"
+  },
+  "evalsResults_noRate": {
+    "message": "אין שיעור"
+  },
+  "evalsResults_noRateHelp": {
+    "message": "לא ניתן היה להעריך דבר, לכן אין שיעור — לא אפס, שהיה מרמז שהמודל תמיד טעה."
+  },
+  "evalsResults_noResultYetRunThe": {
+    "message": "אין עדיין תוצאה. הריצו את הסוויטה כדי לראות באילו כלים המודל בוחר."
+  },
+  "evalsResults_notComparable": {
+    "message": "לא בר-השוואה"
+  },
+  "evalsResults_notComparableHelp": {
+    "message": "אחת משתי ההרצות לא ניתנה להערכה, ולכן מקרה זה אינו מעיד דבר על השינוי."
+  },
+  "evalsResults_nothing": {
+    "message": "כלום"
+  },
+  "evalsResults_nothingCouldBeJudgedSo": {
+    "message": "לא ניתן היה להעריך דבר, לכן אין שיעור — לא אפס, שהיה מרמז שהמודל תמיד טעה."
+  },
+  "evalsResults_ofAttempts": {
+    "message": "$1 מהניסיונות"
+  },
+  "evalsResults_ofAttemptsHelp": {
+    "message": "ממוצע על פני המקרים שניתן היה להעריך."
+  },
+  "evalsResults_overridesInForceDuringThis": {
+    "message": "דריסות שהיו בתוקף במהלך הרצה זו: $1."
+  },
+  "evalsResults_passed": {
+    "message": "עבר"
+  },
+  "evalsResults_points": {
+    "message": "$1 נקודות"
+  },
+  "evalsResults_pointsHelp": {
+    "message": "השינוי בשיעור הניסיונות שעברו בהצלחה."
+  },
+  "evalsResults_previousRun": {
+    "message": "הרצה קודמת"
+  },
+  "evalsResults_reachedForFirst": {
+    "message": "נבחר ראשון: $1"
+  },
+  "evalsResults_sameGoalsRunTwiceWhat": {
+    "message": "אותן מטרות, שתי הרצות — מה השתנה"
+  },
+  "evalsResults_shouldCall1": {
+    "message": "צריך לקרוא ל-$1"
+  },
+  "evalsResults_staleCase": {
+    "message": "החוזה השתנה מאז הרצה זו"
+  },
+  "evalsResults_staleCaseHelp": {
+    "message": "הכלי שמקרה זה מצפה לו מוצע למודלים עם תיאור או סכמה שונים מאשר בעת תיעוד תוצאה זו. התוצאה עדיין נכונה לאותה ריצה, אך אינה מעידה על הכלי כפי שהוא כעת."
+  },
+  "evalsResults_staleCount": {
+    "message": "$1 מקרים על חוזה שהשתנה"
+  },
+  "evalsResults_staleGone": {
+    "message": "הכלי אינו קיים עוד בדף"
+  },
+  "evalsResults_staleGoneHelp": {
+    "message": "הכלי שמקרה זה מצפה לו אינו רשום עוד בדף."
+  },
+  "evalsResults_staleHelp": {
+    "message": "מקרים אלה נשפטו מול תיאור או סכמה שהשתנו מאז. הרץ שוב את הסדרה כדי לשפוט את הכלים כפי שהם כעת."
+  },
+  "evalsResults_staleOne": {
+    "message": "מקרה אחד על חוזה שהשתנה"
+  },
+  "evalsResults_stillFailing": {
+    "message": "עדיין נכשל"
+  },
+  "evalsResults_stillPassing": {
+    "message": "עדיין עובר"
+  },
+  "evalsResults_theExpectedToolWasCalled": {
+    "message": "הכלי המצופה נקרא, אך לא ראשון"
+  },
+  "evalsResults_theExpectedToolWasNever": {
+    "message": "הכלי המצופה מעולם לא נקרא"
+  },
+  "evalsResults_theReportNamesTheGoals": {
+    "message": "הדוח מציין את המטרות, הכלים שהמודל בחר וכל דריסה שהייתה בתוקף. קראו אותו לפני השיתוף."
+  },
+  "evalsResults_thisRun": {
+    "message": "הרצה זו"
+  },
+  "evalsResults_unknownToolsNote": {
+    "message": "$1 — מצוינים בסדרה אך אינם חשופים בדף זה. מקרים אלה נכשלו מסיבה שאינה קשורה למודל."
+  },
+  "evalsResults_yourLabel": {
+    "message": "התווית שלך להרצה זו."
+  },
+  "evals_anEmptySuite": {
+    "message": "צרו סוויטת הערכה ריקה, ואז הוסיפו משימות וציפיות."
+  },
+  "evals_attemptGoal": {
+    "message": "ניסיון $1 — $2"
+  },
+  "evals_chromeStoppedTheExtensionS": {
+    "message": "Chrome עצר את תהליך הרקע של התוסף בזמן שהסוויטה רצה. Explorer אינו מפעיל אותה מחדש מעצמו, משום שקריאות המודל שכבר בוצעו בתשלום. הריצו שוב כשאתם מוכנים."
+  },
+  "evals_delete": {
+    "message": "מחק"
+  },
+  "evals_deleteThisSuiteAndIts": {
+    "message": "מחיקת סוויטה זו ותוצאותיה"
+  },
+  "evals_fixModelSetup": {
+    "message": "תקנו תחילה את הגדרת המודל: $1."
+  },
+  "evals_fixTheFlaggedCasesFirst": {
+    "message": "תקנו תחילה את המקרים המסומנים — מקרה שאינו בודק דבר תמיד עובר."
+  },
+  "evals_fromThisPage": {
+    "message": "מדף זה"
+  },
+  "evals_interrupted": {
+    "message": "נקטע"
+  },
+  "evals_interruptedHelp": {
+    "message": "Chrome עצר את תהליך הרקע של התוסף בזמן שהסוויטה רצה."
+  },
+  "evals_labelThisRunBeforeRewrite": {
+    "message": "תייגו הרצה זו — \"לפני שכתוב\", \"אחרי שכתוב\""
+  },
+  "evals_labelsAreWhatMakeThe": {
+    "message": "תוויות הן מה שהופך את ההשוואה לקריאה לאחר מכן."
+  },
+  "evals_manualModeCannotRunA": {
+    "message": "מצב ידני אינו יכול להריץ סוויטה: הוא דורש התערבות שלך בכל קריאה."
+  },
+  "evals_new": {
+    "message": "חדשה"
+  },
+  "evals_newSuite": {
+    "message": "סוויטה חדשה"
+  },
+  "evals_noSuiteYetStartFrom": {
+    "message": "אין סדרה עדיין. התחל מדף זה כדי לקבל מקרה אחד לכל כלי, ואז ערוך אותה."
+  },
+  "evals_oneCasePerToolEach": {
+    "message": "מקרה אחד לכל כלי, שכל אחד מבקש את אותו כלי. נקודת התחלה לעריכה."
+  },
+  "evals_runEveryCaseEveryAttempt": {
+    "message": "הרצת כל מקרה וכל ניסיון, זה אחר זה."
+  },
+  "evals_runLabel": {
+    "message": "תווית הרצה"
+  },
+  "evals_runSuite": {
+    "message": "הרץ סדרה"
+  },
+  "evals_runs": {
+    "message": "$1/$2 הרצות"
+  },
+  "evals_runsDone": {
+    "message": "$1/$2 הרצות הושלמו"
+  },
+  "evals_starting": {
+    "message": "מתחיל…"
+  },
+  "evals_stopNow": {
+    "message": "עצור את הסדרה כעת. הניסיון הפעיל מבוטל יחד עם כל קריאת כלי שממתינה בדף, ונספר כמבוטל ולא ככישלון."
+  },
+  "evals_suite": {
+    "message": "סוויטה"
+  },
+  "evals_unknownToolsCount": {
+    "message": "$1 כלים לא מוכרים"
+  },
+  "evals_waitingForForm": {
+    "message": "ממתין לטופס $1 בדף: הוא מולא וממתין לשליחה. Evals יבטל את הקריאה לאחר $2 שניות אם איש לא ישלח."
+  },
+  "evals_whichSuiteToRun": {
+    "message": "איזו סוויטה להריץ"
+  },
+  "exportBar_aReportContainsWhatThe": {
+    "message": "דוח מכיל את מה שהדף החזיר. קראו אותו לפני השיתוף."
+  },
+  "exportBar_console": {
+    "message": "קטע קוד למסוף"
+  },
+  "exportBar_copied": {
+    "message": "$1 הועתק."
+  },
+  "exportBar_copy": {
+    "message": "העתק"
+  },
+  "exportBar_copyThe1ReportTo": {
+    "message": "העתקת דוח ה-$1 ללוח"
+  },
+  "exportBar_downloadThe1ReportAs": {
+    "message": "הורדת דוח ה-$1 כקובץ"
+  },
+  "exportBar_export": {
+    "message": "ייצוא"
+  },
+  "exportBar_forConsole": {
+    "message": "להדבקה ב-DevTools, במסגרת של הכלי"
+  },
+  "exportBar_forPlaywright": {
+    "message": "בדיקת .spec.ts: ‏@playwright/test, מזהה מפורש וקובץ CHROME"
+  },
+  "exportBar_forReview": {
+    "message": "לסקירה או לדיווח תקלה"
+  },
+  "exportBar_forScript": {
+    "message": "לסקריפט או להשוואת שינויים (diff)"
+  },
+  "exportBar_json": {
+    "message": "JSON"
+  },
+  "exportBar_markdown": {
+    "message": "Markdown"
+  },
+  "exportBar_playwright": {
+    "message": "סקריפט Playwright"
+  },
+  "exportBar_save": {
+    "message": "שמור"
+  },
+  "exportBar_savedFile": {
+    "message": "$1 נשמר."
+  },
+  "extDescription": {
+    "message": "בדקו, נסו, דבגו וסקרו את האבטחה של כלי ה-WebMCP שאתר חושף לסוכני בינה מלאכותית."
+  },
+  "extName": {
+    "message": "WebMCP Explorer"
+  },
+  "fieldChecks_addHelp": {
+    "message": "הוסיפו את השדה וההשוואה לבדיקה זו, ולאחר מכן שמרו את הבדיקה בשם יחד עם הארגומנטים שלה."
+  },
+  "fieldChecks_addRule": {
+    "message": "הוספת כלל שדה"
+  },
+  "fieldChecks_added": {
+    "message": "הכלל נוסף. שמור את הבדיקה בשם כדי לשמור כללים וארגומנטים אלה."
+  },
+  "fieldChecks_cancelEdit": {
+    "message": "ביטול עריכת הכלל"
+  },
+  "fieldChecks_cancelEditHelp": {
+    "message": "ביטול עריכת הכלל שלא הושלמה ושמירה על הכללים שכבר נוספו."
+  },
+  "fieldChecks_chooseResult": {
+    "message": "בחירת שדה מהתוצאה"
+  },
+  "fieldChecks_chooseResultHelp": {
+    "message": "עיינו בנתוני הרצה זו ובחרו שדה. פעולה זו אינה מריצה את הכלי."
+  },
+  "fieldChecks_editRule": {
+    "message": "עריכת כלל"
+  },
+  "fieldChecks_editRuleHelp": {
+    "message": "ערכו את כלל השדה $1; עדכנו אותו כדי להחיל את השינויים."
+  },
+  "fieldChecks_editSaved": {
+    "message": "עריכת בדיקה"
+  },
+  "fieldChecks_editSavedHelp": {
+    "message": "טעינת השם, הארגומנטים והציפייה השמורים לעריכה. שמירה תעדכן רשומה זו."
+  },
+  "fieldChecks_emptyKey": {
+    "message": "(שם שדה ריק)"
+  },
+  "fieldChecks_expectFields": {
+    "message": "שדות תוצאה נבחרים"
+  },
+  "fieldChecks_intro": {
+    "message": "בדקו רק את השדות החשובים. שינויים בשדות אחרים לא יכשילו בדיקה זו. כל הכללים להלן חייבים לעבור."
+  },
+  "fieldChecks_jsonValueNote": {
+    "message": "הזינו JSON:‏ 1 למספר, \"ready\" לטקסט, true,‏ null, רשימה או אובייקט. השוואות מספריות שומרות על ספרות מדויקות."
+  },
+  "fieldChecks_keepSaved": {
+    "message": "שמירה על הציפייה השמורה"
+  },
+  "fieldChecks_limit": {
+    "message": "בדיקה יכולה להכיל לכל היותר $1 כללי שדה."
+  },
+  "fieldChecks_needResult": {
+    "message": "הריצו את הכלי בהצלחה כדי לבחור שדות מתוצאה מלאה. ניתן גם להזין נתיב שדה ידנית."
+  },
+  "fieldChecks_op_equals": {
+    "message": "שווה לערך JSON זה"
+  },
+  "fieldChecks_op_exists": {
+    "message": "השדה קיים"
+  },
+  "fieldChecks_op_length_equals": {
+    "message": "אורך הרשימה שווה ל-"
+  },
+  "fieldChecks_op_length_max": {
+    "message": "אורך הרשימה הוא לכל היותר"
+  },
+  "fieldChecks_op_length_min": {
+    "message": "אורך הרשימה הוא לפחות"
+  },
+  "fieldChecks_op_missing": {
+    "message": "השדה חסר"
+  },
+  "fieldChecks_op_number_max": {
+    "message": "המספר הוא לכל היותר"
+  },
+  "fieldChecks_op_number_min": {
+    "message": "המספר הוא לפחות"
+  },
+  "fieldChecks_op_text_contains": {
+    "message": "הטקסט מכיל"
+  },
+  "fieldChecks_operator": {
+    "message": "השוואה"
+  },
+  "fieldChecks_operatorHelp": {
+    "message": "בחרו מה חייב להתקיים עבור שדה זה. כל כלל חייב לעבור."
+  },
+  "fieldChecks_path": {
+    "message": "נתיב שדה"
+  },
+  "fieldChecks_pathHelp": {
+    "message": "בחרו שדה מהתוצאה או הזינו את הנתיב שלו, כגון ‎/products/0/id. השאירו ריק עבור התוצאה כולה. בשמות, כתבו ~ בתור ~0 ו-/ בתור ~1."
+  },
+  "fieldChecks_pendingRule": {
+    "message": "הוסיפו או עדכנו את כלל השדה שלא הושלם, או בטלו את עריכתו, לפני שמירת הבדיקה."
+  },
+  "fieldChecks_pickHelp": {
+    "message": "בחירת השדה $1 לבדיקה"
+  },
+  "fieldChecks_removeRule": {
+    "message": "הסרת כלל"
+  },
+  "fieldChecks_removeRuleHelp": {
+    "message": "הסרת כלל השדה $1 מטיוטה זו. שמרו את הבדיקה כדי לשמור את השינוי."
+  },
+  "fieldChecks_ruleResults": {
+    "message": "תוצאות שדות ($1)"
+  },
+  "fieldChecks_ruleResultsHelp": {
+    "message": "הצגת כל כלל, הערך המצופה שלו ומה שהכלי החזיר בפועל."
+  },
+  "fieldChecks_selectHelp": {
+    "message": "בחרו שם שדה. הרחיבו נתונים מקוננים או הציגו פריטים נוספים כדי להגיע לשדות אחרים."
+  },
+  "fieldChecks_textValueNote": {
+    "message": "הזינו טקסט מילולי, ללא מרכאות JSON. ההתאמה תלוית רישיות."
+  },
+  "fieldChecks_updateRule": {
+    "message": "עדכון כלל"
+  },
+  "fieldChecks_value": {
+    "message": "ערך מצופה"
+  },
+  "fieldChecks_valueHelp": {
+    "message": "הזינו את הערך להשוואה. JSON מבחין בין מספרים, טקסט, null, רשימות ואובייקטים."
+  },
+  "fieldChecks_wholeResult": {
+    "message": "בחירת התוצאה כולה"
+  },
+  "fieldChecks_wholeResultHelp": {
+    "message": "שימוש בנתיב שדה ריק כדי לבדוק את ערך ה-JSON כולו."
+  },
+  "grantAction": {
+    "message": "Enable Explorer באתר זה"
+  },
+  "grantBody": {
+    "message": "WebMCP Explorer זקוק לגישה לאתר זה כדי לגלות ולבדוק את כלי ה-WebMCP החשופים בדפיו. הגישה ניתנת לאתר זה בלבד, אלא אם תבחרו \"אפשר בכל האתרים\"."
+  },
+  "grantDenied": {
+    "message": "הגישה לא אושרה. Explorer עדיין אינו יכול לבדוק אתר זה."
+  },
+  "grantMoreOrigins": {
+    "message": "הענקת גישה לבדיקת הכלים שלהם"
+  },
+  "grantTitle": {
+    "message": "אפשר בדיקה של אתר זה"
+  },
+  "help_adaptedTools": {
+    "message": "חלק מהספקים דוחים oneOf,‏ anyOf או allOf בשורש של סכמת כלי. Explorer שלח אובייקט רגיל וציין את הכלל בתיאור; הסכמה של הדף עצמו לא השתנתה."
+  },
+  "help_annotationsBody": {
+    "message": "הערות (Annotations) הן הצהרות של הכלי עצמו, כגון \"קריאה בלבד\" או \"תוכן לא מהימן\". Explorer מציג את מה שהדפדפן מדווח. אין מדובר בערובות עצמאיות למה שהכלי עושה בפועל."
+  },
+  "help_annotationsTitle": {
+    "message": "קריאה בלבד ותגיות אחרות"
+  },
+  "help_applyOverride": {
+    "message": "שמירת שינויים אלה עבור Explorer. תגובת דמה מוגדרת מחליפה את קריאת הכלי האמיתית כל עוד היא פעילה."
+  },
+  "help_auditBody": {
+    "message": "הביקורת מדרגת את החוזה שכל כלי מצהיר עליו — תיאור, סכמה, אנוטציות — כדי שמודל קורא יוכל לבחור ולקרוא לו נכון. זו הערכת איכות של מה שהאתר פרסם, לא פסק דין בטיחותי; ההחלטה מה לתקן נשארת שלך."
+  },
+  "help_auditTitle": {
+    "message": "ביקורת"
+  },
+  "help_automateBody": {
+    "message": "מתכונים ידניים עושים שימוש חוזר בעד 20 קריאות שנבדקו ללא מודל: קלטים בשם ושדות תוצאה קודמים שנבחרו במפורש מזינים ארגומנטים בשלבים הבאים. בדוק את הדף, המסגרות והמוקים המקומיים, ואז הרץ שלב אחד או את יתר השלבים. השהיה ועצירה הן מפורשות; ריצות שהופסקו לעולם אינן מתחדשות מעצמן. מעבדת סוכן והערכות נשארות אופציונליות; המצב הידני מאפשר לך להוביל את הלולאה עם מודל משלך בלי ש-Explorer ישלח דבר."
+  },
+  "help_automateTitle": {
+    "message": "התנסות בסוכנים ובהערכות"
+  },
+  "help_budgets": {
+    "message": "הגדרת המספר המרבי של סבבי מודל וקריאות כלים המותרים בהרצת סוכן אחת."
+  },
+  "help_button": {
+    "message": "עזרה"
+  },
+  "help_buttonHelp": {
+    "message": "פתח הסברים למסך זה, צעדים ראשונים ותהליכי עבודה."
+  },
+  "help_callers": {
+    "message": "הצגת מיקומי הרישום הנוספים שנלכדו עבור כלי זה."
+  },
+  "help_chooseBody": {
+    "message": "פתח כרטיס בכלים וקרא את התיאור שלו. פתיחת כרטיס רק בודקת אותו. באתר אמיתי, הרצת כלי עלולה לשנות דברים; בחר פעולה שאת מטרתה אתה מבין. ההדגמה המובנית מיועדת לתרגול."
+  },
+  "help_chooseTitle": {
+    "message": "בחירת כלי"
+  },
+  "help_close": {
+    "message": "סגור"
+  },
+  "help_closeHelp": {
+    "message": "חזור למסך ללא שינוי הטופס או הרצת כלי."
+  },
+  "help_contractChecks": {
+    "message": "הרחבת בדיקות עבור מטא-נתונים חסרים או לא עקביים של הכלי. אלו אבחוני חוזה, ולא הערכת אבטחה."
+  },
+  "help_debugBody": {
+    "message": "היסטוריה מציגה קריאות בודדות. ציר זמן עוקב אחר גילוי והרצות. מקור יכול ללכוד מיקומי רישום כאשר מצב מדידה מופעל עבור אתר והדף נטען מחדש. דריסה משנה את התצוגה המקומית של Explorer ויכולה לדמות תוצאות; מצבה הפעיל מוצג במפורש."
+  },
+  "help_debugTitle": {
+    "message": "הבנת כשל"
+  },
+  "help_demoBody": {
+    "message": "בדמו, פתחו את search_products, הזינו MacBook בשדה query ולחצו על הרץ. הפעולה מחפשת בחנות מדומה בתוך התוסף; לא מתבצעת הזמנה אמיתית."
+  },
+  "help_detail_history": {
+    "message": "סקירת קריאות קודמות לכלי זה, בדיקת התוצאות שלהן או הרצה חוזרת של הקלטים."
+  },
+  "help_detail_override": {
+    "message": "שינוי התצוגה המקומית של כלי זה ב-Explorer או דימוי תגובה לצורכי בדיקה."
+  },
+  "help_detail_run": {
+    "message": "הכינו קלטים והריצו כלי זה. פתיחת הלשונית \"הרצה\" אינה מריצה אותו."
+  },
+  "help_detail_schema": {
+    "message": "בדוק את סכמת הקלט של הכלי, שדות החובה ובדיקות החוזה."
+  },
+  "help_developer": {
+    "message": "מדריך למפתחים"
+  },
+  "help_developerHelp": {
+    "message": "מצאו את תהליכי העבודה לדיבוג, בדיקות רגרסיה, סוכנים ודוחות הניתנים לשחזור."
+  },
+  "help_disabled": {
+    "message": "לא זמין כעת; בדקו את המצב או ההודעה שלצד הפקד."
+  },
+  "help_excludedTools": {
+    "message": "הצגת הכלים שהוחרגו מבקשת המודל והסיבה לכל החרגה."
+  },
+  "help_explanations": {
+    "message": "הסברי המדריך"
+  },
+  "help_export": {
+    "message": "הרחבת תסדירי ההעתקה וההורדה הזמינים. שום דבר אינו משותף אוטומטית."
+  },
+  "help_fillBody": {
+    "message": "השתמש בטופס בלשונית הרצה. שדות המסומנים ב-* הם שדות חובה. קלטים נקראים גם ארגומנטים. לשונית סכמה מסבירה את הסוגים והכללים שלהם; מצב JSON זמין לעריכה ישירה. בדוק את הערכים ולחץ על הרץ."
+  },
+  "help_fillTitle": {
+    "message": "מילוי הקלטים שלו"
+  },
+  "help_frameBody": {
+    "message": "מקור (Origin) הוא כתובת האתר כולל הפרוטוקול והפורט. מסגרת (Frame) היא דף מוטמע. שתי מסגרות יכולות לחשוף כלים באותו שם; Explorer שומר על יעדי ההרצה שלהן נפרדים."
+  },
+  "help_frameTitle": {
+    "message": "מקור ומסגרת"
+  },
+  "help_glossary": {
+    "message": "מונחי WebMCP מוסברים"
+  },
+  "help_glossaryHelp": {
+    "message": "הרחבת הגדרות של כלים, סכמות, מסגרות, הערות ותמיכה טבעית."
+  },
+  "help_hintsBody": {
+    "message": "readOnlyHint,‏ consequentialHint,‏ untrustedContentHint ו-debugging הן הצהרות שהדף מוסר לגבי כלי. סוכנים מחליטים לפיהן אם לבקש אישור לפני הרצה. הן בגדר המלצה: Explorer משווה אותן לשם הכלי ולתיאורו."
+  },
+  "help_hintsTitle": {
+    "message": "רמזים (הערות)"
+  },
+  "help_historyEntry": {
+    "message": "הרחבת קריאה מוקלטת זו כדי לבדוק את הקלטים, התוצאה ואפשרויות ההרצה החוזרת."
+  },
+  "help_inlineBody": {
+    "message": "כלי הוא פעולה שדף זה מעמיד לרשותך. פתח כרטיס כדי לקרוא מה הוא עושה ולבדוק את הקלטים שלו לפני הרצתו."
+  },
+  "help_inspectBody": {
+    "message": "כלים מסנן את הדף הנוכחי לפי שם, תיאור, מקור ואנוטציות. פתח כלי, ואז סכמה עבור חוזה הקלט והבדיקות שלו. הרצה תומכת בטופס או ב-JSON גולמי. שים לב למסגרת המוצגת מתחת לשם."
+  },
+  "help_inspectTitle": {
+    "message": "בדיקת חוזה"
+  },
+  "help_instrumentOff": {
+    "message": "הפסקת לכידת מיקומי רישום חדשים עבור אתר זה. טענו מחדש את הדף כדי להסיר את מעטפות המדידה."
+  },
+  "help_introBody": {
+    "message": "WebMCP מאפשר לאתר לחשוף פעולות בעלות שם, הנקראות כלים. Explorer מציג את הכלים הללו ומאפשר לכם לנסות אותם בעצמכם. אינכם זקוקים לחשבון AI כדי לבדוק או להריץ כלי."
+  },
+  "help_introTitle": {
+    "message": "גלו מה אתר יכול לעשות"
+  },
+  "help_manualReply": {
+    "message": "ניתוח תשובת המודל שהודבקה והמשך הרצת הסוכן הידנית. קריאות כלים בתשובה זו עשויות להתבצע."
+  },
+  "help_missingRegistrations": {
+    "message": "בדיקת רישומים שנצפו על ידי מצב מדידה אך חסרים מהכלים החשופים של הדפדפן."
+  },
+  "help_modelSetup": {
+    "message": "בחירת ספק ומודל, ניהול החיבור והגדרת תקציבי הרצה."
+  },
+  "help_nativeBody": {
+    "message": "טבעי (Native) פירושו שהדפדפן מספק את ה-API של WebMCP.‏ Polyfill מספק מימוש ב-JavaScript; הדמו המובנה משתמש בכזה. דמו עובד אינו מוכיח שכל אתר תומך ב-WebMCP."
+  },
+  "help_nativeTitle": {
+    "message": "טבעי ו-Polyfill"
+  },
+  "help_nav_agent": {
+    "message": "מעבדת סוכן: בדוק כיצד מודל שפה מגלה ומפעיל את הכלים בדף."
+  },
+  "help_nav_audit": {
+    "message": "ביקורת איכות: ציון עובדתי לאיכות התיאורים והסכמות המוצהרים."
+  },
+  "help_nav_evals": {
+    "message": "הערכות: סדרות בדיקה חוזרות לאימות בחירת כלים והרצתם."
+  },
+  "help_nav_security": {
+    "message": "ממצאים פסיביים מהצהרות כלי גלויות, עם ראיות ומקורות. סימנים אינם הוכחה לתקיפה. הסקירה ויצירת התיקון אינן מפעילות כלים. סריקת מקור ובדיקות פעילות דורשות פעולה מפורשת למטה. סקירה היוריסטית של הצהרות גלויות, לא אישור אבטחה. הבדיקות הלא ידועות מפורטות למטה. ציון גבוה אינו מתיר פעולה."
+  },
+  "help_nav_settings": {
+    "message": "הגדרות: גישה לאתרים, נתונים מקומיים, שפת ממשק וגיבוי."
+  },
+  "help_nav_timeline": {
+    "message": "ציר זמן: זרם חי של רישומי כלים, הסרות וקריאות."
+  },
+  "help_nav_tools": {
+    "message": "כלים: רשימת כלי ה-WebMCP שהדף חושף, בדיקת הסכמות שלהם והרצה ידנית."
+  },
+  "help_new": {
+    "message": "חדשים ב-WebMCP?"
+  },
+  "help_newHelp": {
+    "message": "הצגת הקדמה קצרה ומדריך שלב-אחר-שלב. פתיחה זו אינה מריצה שום כלי."
+  },
+  "help_originalOverride": {
+    "message": "הרחבת הערך המקורי שהוצהר על ידי הדף להשוואה מול הדריסה המקומית שלך."
+  },
+  "help_poisoningBody": {
+    "message": "הוראות שהוכנסו לשם כלי, לתיאורו או לסכמה שלו כדי שסוכן יפעל לפיהן כאילו הגיעו מהמשתמש. Explorer מסמן ביטויים אלה כאינדיקטורים יחד עם הציטוט המדויק."
+  },
+  "help_poisoningTitle": {
+    "message": "הרעלת כלי (Tool poisoning)"
+  },
+  "help_provenanceBody": {
+    "message": "איזה סקריפט רשם כלי, כפי שנלכד במצב מדידה (הגדרות, לפי אתר, לאחר טעינה מחדש). סקריפט ממקור אחר יכול להוסיף או להחליף כלים בדף."
+  },
+  "help_provenanceTitle": {
+    "message": "מקור הרישום (Provenance)"
+  },
+  "help_rawSchema": {
+    "message": "הרחב את סכמת הקלט המקורית כ-JSON לבדיקה ישירה."
+  },
+  "help_readBody": {
+    "message": "התוצאה היא מה שהכלי החזיר, או שגיאה המסבירה מדוע הקריאה נכשלה. ההיסטוריה שומרת קריאות קודמות. הרצה מחדש חוזרת על הפעולה, ולכן עלולה לחזור גם על השפעותיה."
+  },
+  "help_readTitle": {
+    "message": "קריאת התוצאה"
+  },
+  "help_regressionsBody": {
+    "message": "שמור קריאות עם בדיקות מדויקות של כלל התוצאה או של שדות נבחרים. בחר את השדות החשובים, כגון רשימת מוצרים שאינה ריקה, וקרא כל השוואה שנכשלה. בדיקות שמורות שומרות על הארגומנטים המקוריים כשאתה עורך רק את הציפיות שלהן. השווה צילומי מצב ובדוק סחיפת חוזה לפני הרצה חוזרת."
+  },
+  "help_regressionsTitle": {
+    "message": "איתור רגרסיות"
+  },
+  "help_renamedTools": {
+    "message": "הצגת כינויי הכלים שנשלחו למודל ומדוע היה צורך לשנות את השמות המקוריים."
+  },
+  "help_resumeTimeline": {
+    "message": "חידוש הקלטת אירועי ציר זמן חדשים עבור לשונית זו."
+  },
+  "help_saveKey": {
+    "message": "שמירת מפתח ספק זה בסשן Chrome הנוכחי. הוא נמחק כשסוגרים את Chrome."
+  },
+  "help_savedCalls": {
+    "message": "שמירת קלטים עבור כלי זה, טעינתם לטופס או הרצת קריאות ובדיקות שמורות."
+  },
+  "help_savedChecks": {
+    "message": "סקירת ציפיות שמורות, הרצה חוזרת של בדיקות וייצוא התוצאות שלהן."
+  },
+  "help_schemaBody": {
+    "message": "סכמה מתארת את הקלטים המותרים: שמות, טיפוסים, שדות חובה ואילוצים. JSON הוא תסדיר טקסט עבור ערכים אלה. Explorer בונה טופס כאשר ניתן לייצג את הסכמה כשדות."
+  },
+  "help_schemaProperty": {
+    "message": "הרחב מאפיין סכמה זה כדי לבדוק את התיאור, האילוצים והשדות המקוננים שלו."
+  },
+  "help_schemaTitle": {
+    "message": "סכמה ו-JSON"
+  },
+  "help_screen": {
+    "message": "מסך זה"
+  },
+  "help_screenHelp": {
+    "message": "קראו הסברים על הפקדים המוצגים כעת ב-Explorer."
+  },
+  "help_screenIntro": {
+    "message": "הסברים אלה מתארים את המסך שממנו פתחתם את העזרה. סגרו את המדריך כדי להשתמש בפקדים שלו."
+  },
+  "help_securityBody": {
+    "message": "ממצאים פסיביים מהצהרות כלי גלויות, עם ראיות ומקורות. סימנים אינם הוכחה לתקיפה. הסקירה ויצירת התיקון אינן מפעילות כלים. סריקת מקור ובדיקות פעילות דורשות פעולה מפורשת למטה. סקירה היוריסטית של הצהרות גלויות, לא אישור אבטחה. הבדיקות הלא ידועות מפורטות למטה. ציון גבוה אינו מתיר פעולה."
+  },
+  "help_securityTitle": {
+    "message": "סקירת אבטחה וממשל"
+  },
+  "help_sharingBody": {
+    "message": "לאחר הרצה, \"שחזור קריאה זו\" מציע Markdown,‏ JSON, קטע קוד למסוף וסקריפט Playwright. הייצוא כולל את נתוני הקריאה ומדווח על דריסות. בדקו את התוכן לפני השיתוף. הרצה חוזרת של קטע קוד או סקריפט מבצעת את הפעולה מחדש."
+  },
+  "help_sharingTitle": {
+    "message": "שיתוף קריאה הניתנת לשחזור"
+  },
+  "help_snapshots": {
+    "message": "שמירת חוזי הכלים הנוכחיים והשוואתם ללכידה קודמת או לסביבה אחרת."
+  },
+  "help_source": {
+    "message": "הצגת מיקום הרישום שנלכד, או הסבר מדוע לא נלכד מקור."
+  },
+  "help_start": {
+    "message": "התחילו כאן"
+  },
+  "help_startAction": {
+    "message": "הצגת הצעדים הראשונים"
+  },
+  "help_startHelp": {
+    "message": "למדו כיצד לבחור כלי, למלא את הקלטים שלו ולקרוא את התוצאה, או תרגלו בדמו המובנה."
+  },
+  "help_title": {
+    "message": "מדריך Explorer"
+  },
+  "help_toolBody": {
+    "message": "כלי הוא פעולה בעלת שם שהדף מציע. ארגומנטים הם הערכים שאתם מעבירים אליו, כגון שאילתת חיפוש."
+  },
+  "help_toolCardsBody": {
+    "message": "פתח כלי כדי לקרוא את התיאור המלא שלו, לבדוק את סכמת הקלט ולהכין קריאה. כרטיסים מציגים עד שלוש שורות מהתיאור. פתיחת כרטיס אינה מריצה את הכלי."
+  },
+  "help_toolCardsTitle": {
+    "message": "כרטיסי כלים"
+  },
+  "help_toolTitle": {
+    "message": "כלי וארגומנטים"
+  },
+  "help_topics": {
+    "message": "נושאי המדריך"
+  },
+  "history_probeBadge": {
+    "message": "בדיקת חדירה"
+  },
+  "history_probeBadgeHelp": {
+    "message": "קריאה זו בוצעה על ידי בדיקת אבטחה פעילה ($1), ולא הוקלדה על ידי אדם."
+  },
+  "missingReg_abortedBeforeSettled": {
+    "message": "הדף ביטל את האות שאיתו נרשם לפני שהרישום הושלם, ולכן Chrome דחה אותו במקום להציג את הכלי."
+  },
+  "missingReg_allExposed": {
+    "message": "מצב מכשור זיהה $1 קריאות ל-registerTool() בדף זה; כולן חשופות על ידי getTools()."
+  },
+  "missingReg_badgeNoDescription": {
+    "message": "ללא תיאור"
+  },
+  "missingReg_detailNoRecord": {
+    "message": "לא תועד דבר נוסף עבור קריאה זו."
+  },
+  "missingReg_detailNotExposed": {
+    "message": "registerTool()‎ חזר כרגיל ולא נצפתה הסרה, אך getTools()‎ אינו מציג את הכלי."
+  },
+  "missingReg_detailPromiseRejected": {
+    "message": "הבטחת הרישום נדחתה ושום דבר לא טיפל בה: $1"
+  },
+  "missingReg_detailRemoved": {
+    "message": "הדף שחרר את ה-AbortSignal שאיתו נרשם. הסרה תקינה, לא תקלה."
+  },
+  "missingReg_detailThrew": {
+    "message": "registerTool()‎ זרק חריגה: $1"
+  },
+  "missingReg_detailUnobserved": {
+    "message": "registerTool()‎ החזיר הבטחה ש-Explorer לא יכל לצפות בתוצאתה: דחייה שהדף טיפל בה בעצמו אינה משאירה אירוע. getTools()‎ אינו מציג את הכלי."
+  },
+  "missingReg_emptyDescription": {
+    "message": "התיאור במתאר היה ריק. Chrome 153 דוחה רישום כזה עם InvalidStateError בגין חובת תיאור (נמדד, WMP-0039)."
+  },
+  "missingReg_frame": {
+    "message": "מסגרת #$1"
+  },
+  "missingReg_intro": {
+    "message": "מצב מדידה זיהה קריאות registerTool()‎ אלה במסגרות האתר; getTools()‎ אינו מציג אותן."
+  },
+  "missingReg_limits": {
+    "message": "נראה רק היכן שמצב מדידה פעיל, לאחר טעינה מחדש, עבור קריאות registerTool()‎ — לעולם לא עבור טפסים הצהרתיים."
+  },
+  "missingReg_promiseUnobserved": {
+    "message": "הבטחת רישום שנדחתה וטופלה על ידי הדף עצמו אינה משאירה אירוע ש-Explorer יכול לראות."
+  },
+  "missingReg_registeredTimes": {
+    "message": "נרשם $1 פעמים"
+  },
+  "missingReg_stateNotExposed": {
+    "message": "לא חשוף"
+  },
+  "missingReg_stateRejected": {
+    "message": "נדחה"
+  },
+  "missingReg_stateRemoved": {
+    "message": "נרשם ואז הוסר"
+  },
+  "missingReg_stateUnknown": {
+    "message": "לא נצפה"
+  },
+  "missingReg_title": {
+    "message": "קריאות registerTool()‎ ללא כלי רשום ($1)"
+  },
+  "needActionAlt": {
+    "message": "או לאפשר ל-Explorer לפעול בכל האתרים"
+  },
+  "needActionAltHelp": {
+    "message": "מעניק גישה לכל אתרי http ו-https בפעם אחת. השתמשו בזה אם אינכם רוצים לעבור דרך סמל סרגל הכלים בכל פעם."
+  },
+  "needActionBody": {
+    "message": "Chrome חושף את כתובת הדף הנוכחי רק כשפותחים את Explorer מכפתור התוספים. פתיחת חלונית הצד מהרשימה שלה אינה מעניקה גישה זו. Explorer לעולם אינו קורא את הלשוניות שלכם ברקע."
+  },
+  "needActionHintAlt": {
+    "message": "הפינה הימנית העליונה של סרגל הכלים ב-Chrome. כפתור התוספים, בצורת חלק פאזל, נמצא משמאל לכפתור חלונית הצד."
+  },
+  "needActionHintCaption": {
+    "message": "לחצו על חלק הפאזל, ואז על WebMCP Explorer."
+  },
+  "needActionPin": {
+    "message": "תוסף חדש אינו מוצמד, ולכן עדיין אין סמל של Explorer. בתפריט זה, לחצו על הסיכה שלצד WebMCP Explorer כדי להשאיר כפתור משלו בסרגל הכלים."
+  },
+  "needActionTitle": {
+    "message": "Explorer זקוק ללחיצה אחת כדי לראות דף זה"
+  },
+  "networkNotice_1SendsYourGoalThis": {
+    "message": "$1 שולח את המטרה שלך, שמות כלי ה-WebMCP של דף זה, התיאורים והסכמות שלהם, "
+  },
+  "networkNotice_chatDisclosure": {
+    "message": "שליחה משתפת את ההודעות שלך, סכמות הכלים, הארגומנטים והתוצאות (שעשויות להכיל נתונים מהדף) עם $1."
+  },
+  "networkNotice_chooseProvider": {
+    "message": "בחרו מודל AI כדי להתחיל לשוחח. אף ספק אינו מקבל פנייה אוטומטית."
+  },
+  "networkNotice_disclosure": {
+    "message": "כאשר $1 רץ, המטרה שלך, שמות כלי ה-WebMCP של דף זה, התיאורים והסכמות שלהם, ארגומנטי הקריאה ותוצאות הכלים נשלחים אל $2. תוצאות הכלים עשויות להכיל נתונים מדף זה. דבר אינו נשלח אל Corsen AI."
+  },
+  "networkNotice_localWhere": {
+    "message": "$1 במחשב זה ($2)"
+  },
+  "networkNotice_manualModeSendsNothingAnywhere": {
+    "message": "מצב ידני אינו שולח דבר לשום מקום. Explorer בונה את הבקשה; אתם מעבירים אותה."
+  },
+  "networkNotice_remoteWhere": {
+    "message": "$1 בכתובת $2"
+  },
+  "networkNotice_running": {
+    "message": "הרצה"
+  },
+  "networkNotice_theConfiguredEndpoint": {
+    "message": "נקודת הקצה המוגדרת"
+  },
+  "noTabBody": {
+    "message": "פתח דף ב-http או https ולאחר מכן פתח מחדש את Explorer."
+  },
+  "noTabTitle": {
+    "message": "אין כרטיסייה לבדיקה"
+  },
+  "noToolsBody": {
+    "message": "לא נחשפו כלים בדף זה. אם ציפית לכלים, רענן את הדף ובדוק את מסוף המפתחים."
+  },
+  "noToolsTitle": {
+    "message": "אין כלי WebMCP בדף זה"
+  },
+  "noTools_instrumentButton": {
+    "message": "הפעלת מצב מדידה וטעינה מחדש"
+  },
+  "noTools_instrumentButtonHelp": {
+    "message": "רושם סקריפט שעוטף את רישום ה-WebMCP באתר זה לפני שקוד הדף רץ, ואז טוען מחדש את הדף. ניתן לכבות זאת שוב מההגדרות."
+  },
+  "noTools_instrumentHint": {
+    "message": "אם דף זה אכן קורא ל-registerTool()‎, מצב מכשור יכול להראות מה עלה בגורל כל קריאה — נדחתה, הוסרה, או התקבלה ועדיין אינה חשופה."
+  },
+  "noTools_instrumentOn": {
+    "message": "מצב מדידה פעיל עבור אתר זה ולא זיהה אף קריאה ל-registerTool()‎."
+  },
+  "notInjected": {
+    "message": "לא הוזרק"
+  },
+  "notInjectedHelp": {
+    "message": "כלי זה מגיע ממקור ש-Explorer לא קיבל אליו הרשאה, ולכן המסגרת שלו אינה ידועה."
+  },
+  "openDemo": {
+    "message": "פתח את דף ההדגמה"
+  },
+  "openDemoHelp": {
+    "message": "פותח את דף ההדגמה המובנה עם כלי WebMCP מוכנים לבדיקה."
+  },
+  "probes_busy": {
+    "message": "הרצת בדיקות חדירה כבר מתבצעת עבור לשונית זו."
+  },
+  "probes_cancelled": {
+    "message": "נעצר לאחר $1 מתוך $2 קריאות · $3 ממצאים"
+  },
+  "probes_consent": {
+    "message": "אני שולט באתר זה ($1) ומאשר שהבדיקות יקראו לכלים שלו בסשן שלי"
+  },
+  "probes_consentHelp": {
+    "message": "נדרש לפני כל הרצת בדיקות. נשמר עבור אתר זה במכשיר זה; ניתן לביטול כאן ובהגדרות ← נתונים שמורים."
+  },
+  "probes_consentRequired": {
+    "message": "הבדיקות לא הורצו: אשרו תחילה שאתם שולטים באתר זה."
+  },
+  "probes_consequential": {
+    "message": "מוצהר כבעל השפעה"
+  },
+  "probes_disclosure": {
+    "message": "הרצת בדיקות גישוש קוראת ל-$1 הכלים הנבחרים ב-$2, עד חמש פעמים לכל כלי, עם ארגומנטים מחוללים ופגומים, בסשן הדפדפן שלך. דבר אינו נשלח לשום מקום אחר. התוצאות והממצאים נשארים במכשיר זה."
+  },
+  "probes_done": {
+    "message": "$1 קריאות בוצעו · $2 ממצאים"
+  },
+  "probes_history": {
+    "message": "כל קריאה מופיעה בהיסטוריה של כלי זה, מסומנת כבדיקת חדירה."
+  },
+  "probes_intro": {
+    "message": "סקירה פסיבית קוראת את החוזה; בדיקות גישוש קוראות לכלים הנבחרים, בדף זה ובסשן שלך, עם ארגומנטים שחוללו מהסכמה שלהם ועם ארגומנטים שהסכמה אוסרת (סוג שגוי, שדה חובה חסר, מאפיין לא מוכר, מחרוזת בת 10,000 תווים). לכל היותר חמש קריאות לכלי, בזו אחר זו, ניתנות לביטול, וכולן נרשמות בהיסטוריה כבדיקות גישוש. כלי שמשנה מצב ישנה אותו."
+  },
+  "probes_none": {
+    "message": "אין ממצאים מבדיקות החדירה. קריאות שבוצעו: $1."
+  },
+  "probes_notPreselected": {
+    "message": "לא נבחר מראש: כלי זה אינו מוצהר כקריאה בלבד, ולכן בדיקתו עלולה לשנות מצב"
+  },
+  "probes_progress": {
+    "message": "$1 מתוך $2 קריאות · $3 · $4"
+  },
+  "probes_run": {
+    "message": "הרץ בדיקות"
+  },
+  "probes_runHelp": {
+    "message": "התחלת הרצת הבדיקות על הכלים שנבחרו. מושבת עד שתאשרו שאתם שולטים באתר זה ותבחרו לפחות כלי אחד."
+  },
+  "probes_stop": {
+    "message": "עצור"
+  },
+  "probes_stopHelp": {
+    "message": "ביטול הקריאה הפעילה וסיום ההרצה. קריאה שכבר בוצעה אינה ניתנת לביטול."
+  },
+  "probes_title": {
+    "message": "בדיקות אקטיביות — באתר שלך בלבד"
+  },
+  "probes_titleHelp": {
+    "message": "הריצו סדרת קריאות קבועה מול הכלים הנבחרים כדי לראות כיצד הקוד שלהם מגיב לקלטים שהסכמה אוסרת ומה מוחזר. רק באתר שבשליטתכם."
+  },
+  "probes_toolHelp": {
+    "message": "לכלול כלי זה בהרצת הבדיקות."
+  },
+  "probes_tools": {
+    "message": "כלים לבדיקה"
+  },
+  "prompt_cancel": {
+    "message": "ניקוי הטופס"
+  },
+  "prompt_cancelHelp": {
+    "message": "הפסקת העריכה; הטופס חוזר ליצירת הנחיה חדשה."
+  },
+  "prompt_choose": {
+    "message": "מענה בתור (הנחיית מערכת)"
+  },
+  "prompt_chooseHelp": {
+    "message": "אילו הוראות המודל מקבל לפני כל מטרה. ברירת המחדל היא זו שמגיעה עם המוצר; הפרופילים שלכם מופיעים כאן."
+  },
+  "prompt_defaultLabel": {
+    "message": "ברירת המחדל של Explorer"
+  },
+  "prompt_delete": {
+    "message": "מחיקה"
+  },
+  "prompt_deleteHelp": {
+    "message": "מוחק הנחיה זו. מעבדת הסוכן חוזרת לברירת המחדל של המוצר אם היא הייתה נבחרת."
+  },
+  "prompt_edit": {
+    "message": "עריכה"
+  },
+  "prompt_editHelp": {
+    "message": "טעינת הנחיה זו לטופס שלהלן כדי לשנותה."
+  },
+  "prompt_help": {
+    "message": "הנחיה קובעת כיצד המודל מתנהג. היא אינה יכולה לעקוף הגבלות: סכמות כלים, כללי קריאה וסירובי אבטחה נמצאים מחוץ להנחיה ואינם ניתנים לעריכה."
+  },
+  "prompt_manage": {
+    "message": "ניהול הנחיות"
+  },
+  "prompt_manageHelp": {
+    "message": "כתיבה, עריכה ומחיקה של ההנחיות בעלות השם הרשומות למעלה."
+  },
+  "prompt_name": {
+    "message": "שם"
+  },
+  "prompt_nameHelp": {
+    "message": "מוצג ברשימה למעלה. עד 40 תווים."
+  },
+  "prompt_none": {
+    "message": "אין עדיין הנחיות מותאמות אישית."
+  },
+  "prompt_save": {
+    "message": "שמירת הנחיה"
+  },
+  "prompt_saveHelp": {
+    "message": "יוצר הנחיה זו. מלאו את השם וההוראות."
+  },
+  "prompt_saved": {
+    "message": "ההנחיה נשמרה."
+  },
+  "prompt_showDefault": {
+    "message": "הצגת הנחיית ברירת המחדל של המוצר"
+  },
+  "prompt_showDefaultHelp": {
+    "message": "בדיוק מה שהרצה ללא פרופיל שולחת כהנחיית מערכת."
+  },
+  "prompt_text": {
+    "message": "הוראות"
+  },
+  "prompt_textHelp": {
+    "message": "נשלחות למודל כהנחיית המערכת בכל הרצה כל עוד הנחיה זו נבחרת."
+  },
+  "prompt_textPlaceholder": {
+    "message": "דוגמה: אתה סוכן קניות זהיר. קרא רק לכלי קריאה; בקש אישור לפני כל כלי שמבצע רכישה."
+  },
+  "prompt_update": {
+    "message": "עדכון הנחיה"
+  },
+  "readable_boolean": {
+    "message": "בוליאני"
+  },
+  "readable_emptyList": {
+    "message": "רשימה ריקה (0 פריטים)"
+  },
+  "readable_emptyObject": {
+    "message": "אובייקט ריק (0 שדות)"
+  },
+  "readable_emptyText": {
+    "message": "טקסט ריק"
+  },
+  "readable_expandHelp": {
+    "message": "הרחבת ערך מקונן זה כדי לבדוק את השדות או הפריטים שלו. התוצאה נשארת ללא שינוי."
+  },
+  "readable_fields": {
+    "message": "$1 שדות"
+  },
+  "readable_item": {
+    "message": "פריט $1"
+  },
+  "readable_items": {
+    "message": "$1 פריטים"
+  },
+  "readable_more": {
+    "message": "הצגת $1 הבאים ($2 נותרו)"
+  },
+  "readable_moreHelp": {
+    "message": "חשיפת חלק נוסף מתוצאה זו במכשיר זה. שום כלי אינו מורץ."
+  },
+  "readable_noValue": {
+    "message": "אין ערך"
+  },
+  "readable_null": {
+    "message": "null"
+  },
+  "readable_number": {
+    "message": "מספר"
+  },
+  "readable_rawJson": {
+    "message": "JSON מקורי"
+  },
+  "readable_rawJsonHelp": {
+    "message": "בדקו את מחרוזת ה-JSON המדויקת שהוחזרה על ידי הכלי, כולל המספרים והרווחים המקוריים. פתיחתה אינה מריצה את הכלי."
+  },
+  "readable_string": {
+    "message": "טקסט"
+  },
+  "reasonApiAbsent": {
+    "message": "סביבת הריצה של WebMCP אינה חשופה בדף זה. הבדיקות שלהלן מציגות את מה ש-Explorer יכול היה לצפות בו; הן אינן קובעות מדוע ה-API חסר."
+  },
+  "reasonApiCallRejected": {
+    "message": "הדפדפן דחה את קריאת ה-WebMCP במסמך זה: $1"
+  },
+  "reasonApiPartial": {
+    "message": "קיים אובייקט WebMCP אך הוא אינו חושף את המתודות ש-Explorer מצפה להן. ייתכן שהדפדפן מריץ גרסה אחרת של ה-API."
+  },
+  "reasonInsecureContext": {
+    "message": "דף זה אינו בהקשר מאובטח (Secure Context), ולכן WebMCP אינו חשוף בו. הגישו אותו מעל https או השתמשו ב-localhost."
+  },
+  "reasonOriginNotIsolated": {
+    "message": "מסמך זה אינו מבודד לפי מקור: הוא הוגש עם Origin-Agent-Cluster: ?0, או ש-document.domain בשימוש. גרסת דפדפן זו דורשת מסמך מבודד לפי מקור עבור WebMCP ודוחה כל קריאה כאן; הודעת הדפדפן מצוטטת להלן. גרסאות חדשות יותר אינן דורשות זאת."
+  },
+  "reasonPolyfillActive": {
+    "message": "Polyfill מספק את WebMCP. זה אינו המימוש הטבעי של הדפדפן, וההתנהגות עשויה להיות שונה."
+  },
+  "reasonToolsPolicyBlocked": {
+    "message": "הרשאת tools חסומה במסגרת זו.‏ iframe חוצה-מקורות זקוק ל-allow=\"tools\" מהדף המטמיע אותו."
+  },
+  "recipes_acceptContract": {
+    "message": "שימוש בחוזה הנוכחי הזה"
+  },
+  "recipes_acceptContractHelp": {
+    "message": "תעד את טביעות האצבע הנוכחיות של הדף/המסגרת והסכמה של כלי זה. בדוק את הארגומנטים והבדיקות מול הסכמה החדשה."
+  },
+  "recipes_activeRunEdit": {
+    "message": "עצרו או סיימו הרצה זו לפני עריכת ההגדרה שלה או התחלת סקירה אחרת."
+  },
+  "recipes_addBinding": {
+    "message": "הוספת קישור (Binding)"
+  },
+  "recipes_addBindingHelp": {
+    "message": "הוספת הפניה מפורשת זו לשלב. המבנה, נתיב היעד והסדר נבדקים לפני ההרצה."
+  },
+  "recipes_addInput": {
+    "message": "הוספת קלט בעל שם"
+  },
+  "recipes_addInputHelp": {
+    "message": "הוסיפו ערך לשימוש חוזר, ותנו לו שם משמעותי וערך ברירת מחדל."
+  },
+  "recipes_addStep": {
+    "message": "הוסף שלב"
+  },
+  "recipes_addStepHelp": {
+    "message": "הוסף קריאה שנבדקה, ואז בחר את הכלי, המסגרת והארגומנטים שלה. עד 20 שלבים."
+  },
+  "recipes_argumentPath": {
+    "message": "נתיב שדה הארגומנט"
+  },
+  "recipes_argumentPathHelp": {
+    "message": "JSON Pointer לממלא המקום של הארגומנט שקישור זה מחליף. נתיב ריק מחליף את אובייקט הארגומנטים כולו."
+  },
+  "recipes_arguments": {
+    "message": "ארגומנטים מילוליים"
+  },
+  "recipes_argumentsHelp": {
+    "message": "אלו הערכים המילוליים שנבדקו לפני שקישורים מקלטים בעלי שם או מתוצאות קודמות מחליפים את השדות הנבחרים."
+  },
+  "recipes_back": {
+    "message": "חזרה לכלים"
+  },
+  "recipes_backHelp": {
+    "message": "שמירת טיוטה זו וחזרה לרשימת הכלים. מתכון פעיל ממשיך עד להשהייתו או עצירתו."
+  },
+  "recipes_bindingDescription": {
+    "message": "$1 ← $2"
+  },
+  "recipes_bindingLimit": {
+    "message": "ניתן להשתמש בעד 50 קישורים מפורשים לכל שלב."
+  },
+  "recipes_bindingResult": {
+    "message": "שלב $1, תוצאה $2"
+  },
+  "recipes_bindingSource": {
+    "message": "הערך מגיע מ-"
+  },
+  "recipes_bindingSourceHelp": {
+    "message": "בחרו קלט בעל שם או שלב קודם אחד. שום דבר אינו מוסק אוטומטית."
+  },
+  "recipes_bindings": {
+    "message": "שימוש בקלט או בתוצאה קודמת"
+  },
+  "recipes_bindingsHelp": {
+    "message": "חברו קלט בעל שם או שדה תוצאה משלב קודם לשדה ארגומנט קיים."
+  },
+  "recipes_bindingsIntro": {
+    "message": "הוסיפו תחילה ממלא מקום בארגומנטים המילוליים. קישור מחליף רק את השדה המדויק הזה. JSON Pointer משתמש ב-‎/name וב-‎/items/0; החליפו לוכסן ב-~1 וטילדה ב-~0. הפניות מצביעות רק על שלבים קודמים."
+  },
+  "recipes_check": {
+    "message": "בדיקת תוצאה"
+  },
+  "recipes_checkFailed": {
+    "message": "הבדיקה נכשלה"
+  },
+  "recipes_checkHelp": {
+    "message": "דרוש באופן אופציונלי תוצאה מוצלחת או ערכי שדות נבחרים. כלי שנכשל עוצר את המתכון גם אם בדיקת שגיאה צפויה ישנה עוברת."
+  },
+  "recipes_check_fields": {
+    "message": "בחירת שדות תוצאה"
+  },
+  "recipes_check_keep": {
+    "message": "שמירה על הציפייה השמורה"
+  },
+  "recipes_check_none": {
+    "message": "ללא בדיקה נוספת"
+  },
+  "recipes_check_ok": {
+    "message": "הקריאה מצליחה"
+  },
+  "recipes_chooseSource": {
+    "message": "בחירת קלט בעל שם או תוצאה קודמת"
+  },
+  "recipes_chooseTool": {
+    "message": "בחירת כלי"
+  },
+  "recipes_confirmDelete": {
+    "message": "אישור מחיקה"
+  },
+  "recipes_confirmDiscard": {
+    "message": "לחצו שוב על \"ביטול טיוטה זו\" כדי למחוק את השינויים שלא נשמרו."
+  },
+  "recipes_continueDraft": {
+    "message": "המשך טיוטה"
+  },
+  "recipes_continueDraftHelp": {
+    "message": "פתיחה מחדש של המתכון הנוכחי מבלי לאבד שינויים שטרם הושלמו."
+  },
+  "recipes_copied": {
+    "message": "התצוגה המקדימה הועתקה."
+  },
+  "recipes_copyExport": {
+    "message": "העתקת תצוגה מקדימה"
+  },
+  "recipes_copyExportHelp": {
+    "message": "העתקת התצוגה המקדימה המדויקת שנבדקה.‏ JSON המתכון מאומת לפני ההעתקה."
+  },
+  "recipes_deleteRecipe": {
+    "message": "מחיקת מתכון שמור"
+  },
+  "recipes_deleteRecipeHelp": {
+    "message": "הסרת הגדרה שמורה זו. תיעוד ההרצות השמור נשמר בנפרד."
+  },
+  "recipes_discard": {
+    "message": "ביטול טיוטה זו"
+  },
+  "recipes_discardHelp": {
+    "message": "ביטול שינויי מתכון שלא הושלמו וחזרה ל\"כלים\". הגדרה שנשמרה נשארת מאוחסנת."
+  },
+  "recipes_down": {
+    "message": "הזזה למטה"
+  },
+  "recipes_downHelp": {
+    "message": "העברת שלב זה קדימה בסדר. בדקו הפניות תלויות לפני ההרצה."
+  },
+  "recipes_downloadExport": {
+    "message": "הורדת תצוגה מקדימה"
+  },
+  "recipes_downloadExportHelp": {
+    "message": "שמירת ה-JSON של המתכון שנבדק או דוח ה-Markdown של ההרצה כקובץ מקומי."
+  },
+  "recipes_exportNotice": {
+    "message": "בדקו וערכו תצוגה מקדימה זו לפני השיתוף. היא עשויה להכיל ערכים מארגומנטים, תוצאות, בדיקות, כתובות URL או תגובות דמה מקומיות. Explorer אינו יכול לזהות כל סוד בנתוני דף שרירותיים. ייצוא מתכונים אינו מעביר אימות או גישה לאתר."
+  },
+  "recipes_exportPreview": {
+    "message": "תצוגה מקדימה לייצוא"
+  },
+  "recipes_exportPreviewHelp": {
+    "message": "בדקו או הסירו נתונים נבחרים כאן. השינויים משפיעים על ייצוא זה בלבד. ה-JSON של המתכון חייב להישאר הגדרה תקפה."
+  },
+  "recipes_exportRecipe": {
+    "message": "ייצוא הגדרת מתכון"
+  },
+  "recipes_exportRecipeHelp": {
+    "message": "הכנת JSON מבוקר-גרסה המכיל את ההגדרה לשימוש חוזר, ללא תוצאות הרצה."
+  },
+  "recipes_exportRun": {
+    "message": "ייצוא דוח הרצה"
+  },
+  "recipes_exportRunHelp": {
+    "message": "הכנת דוח Markdown ניתן לעריכה של הרצה שנצפתה."
+  },
+  "recipes_failure": {
+    "message": "שגיאה"
+  },
+  "recipes_format_json": {
+    "message": "ערך JSON"
+  },
+  "recipes_format_text": {
+    "message": "טקסט"
+  },
+  "recipes_guide": {
+    "message": "כיצד פועלים מתכונים"
+  },
+  "recipes_guideBody": {
+    "message": "התחל מתוצאת כלי באמצעות \"השתמש במתכון\", או הוסף שלב ובחר את הכלי שלו. מלא את הארגומנטים באמצעות הטופס או JSON מדויק. תן שם לערך שתרצה לשנות בין ריצות, וחבר אותו במפורש לארגומנט. שלב מאוחר יותר יכול להשתמש ב-JSON Pointer מתוצאה מוקדמת. בדוק את סדר הקריאות והמעקפים המקומיים לפני ההרצה. עצירה אינה יכולה לבטל פעולה שכבר בוצעה בדף."
+  },
+  "recipes_guideHelp": {
+    "message": "קראו מדריך קצר על שלבים, קלטים בעלי שם, בדיקות והרצה."
+  },
+  "recipes_identity": {
+    "message": "אתר: $1 · נתיב מסגרת: $2 · חוזה מתועד: $3"
+  },
+  "recipes_importNotice": {
+    "message": "הייבוא פותח טיוטה בלבד. הדף הפעיל חייב להתאים למקור, למיקומי המסגרות ולחוזים המתועדים לפני הרצה."
+  },
+  "recipes_importRecipe": {
+    "message": "ייבוא JSON של מתכון"
+  },
+  "recipes_importRecipeHelp": {
+    "message": "בדיקת הגדרת מתכון ופתיחת טיוטה ניתנת לעריכה. ייבוא לעולם אינו מריץ כלי."
+  },
+  "recipes_importText": {
+    "message": "JSON של המתכון"
+  },
+  "recipes_importTextHelp": {
+    "message": "הדביקו מתכון WebMCP Explorer מגרסה 1. הטקסט מאומת כנתונים, ולעולם אינו מורץ כקוד."
+  },
+  "recipes_includeArguments": {
+    "message": "לכלול קלטים וארגומנטים"
+  },
+  "recipes_includeArgumentsHelp": {
+    "message": "הסרת סעיפי הארגומנטים מהדוח אם אינם נדרשים. ערכים עדיין עשויים להופיע בתוצאות, בשגיאות או בבדיקות."
+  },
+  "recipes_includeResults": {
+    "message": "לכלול תוצאות גולמיות"
+  },
+  "recipes_includeResultsHelp": {
+    "message": "הסרת סעיפי התוצאות הגולמיות מהדוח. הסברי בדיקות ודריסות עדיין עשויים להכיל נתונים שנצפו."
+  },
+  "recipes_inputDefault": {
+    "message": "ערך ברירת מחדל"
+  },
+  "recipes_inputDefaultHelp": {
+    "message": "ערך ההתחלה השמור. ערכי ההרצה שלהלן יכולים לדרוס אותו מבלי לשנות את ההגדרה."
+  },
+  "recipes_inputFormat": {
+    "message": "תסדיר הערך"
+  },
+  "recipes_inputFormatHelp": {
+    "message": "טקסט שומר על מחרוזת. JSON מקבל מספר מוגדר, בוליאני, null, רשימה או אובייקט."
+  },
+  "recipes_inputLimit": {
+    "message": "מתכון תומך בעד 20 קלטים בעלי שם."
+  },
+  "recipes_inputName": {
+    "message": "שם הקלט"
+  },
+  "recipes_inputNameHelp": {
+    "message": "השתמשו בשם ייחודי המתחיל באות; אותיות, ספרות, קו תחתון ומקף מותרים."
+  },
+  "recipes_inputSource": {
+    "message": "קלט: $1"
+  },
+  "recipes_inputs": {
+    "message": "קלטים בעלי שם"
+  },
+  "recipes_inputsHelp": {
+    "message": "הגדירו ערכים לשימוש חוזר כגון שאילתת חיפוש. קשרו אותם במפורש לארגומנט של שלב."
+  },
+  "recipes_intro": {
+    "message": "עשו שימוש חוזר במספר קריאות כלים בדוקות ללא מודל AI. מתכון מעביר ערך מתוצאה קודמת לקריאה מאוחרת יותר, ומציג בדיוק מה קרה."
+  },
+  "recipes_jsonOnly": {
+    "message": "סכמה זו מחייבת שימוש בעורך ה-JSON. ארגומנטים מדויקים נשארים זמינים."
+  },
+  "recipes_keepDraft": {
+    "message": "בטיוטה יש שינויים שלא נשמרו. המשיכו אותה ושמרו או בטלו אותה לפני פתיחת הגדרה אחרת."
+  },
+  "recipes_mocked": {
+    "message": "תגובת דמה מקומית"
+  },
+  "recipes_mockedHelp": {
+    "message": "Explorer סיפק תוצאה זו מתוך דריסה מקומית שנבדקה; הוא לא הפעיל את הכלי האמיתי בדף."
+  },
+  "recipes_name": {
+    "message": "שם המתכון"
+  },
+  "recipes_nameHelp": {
+    "message": "תנו שם למשימה שרצף זה עוזר לכם לחזור עליה."
+  },
+  "recipes_newRecipe": {
+    "message": "תרחיש חדש"
+  },
+  "recipes_newRecipeHelp": {
+    "message": "התחל רצף ריק של עד 20 קריאות ידניות בדף זה."
+  },
+  "recipes_next": {
+    "message": "הרצת השלב הבא"
+  },
+  "recipes_nextHelp": {
+    "message": "הרצת שלב אחד הבא בדיוק, ואז השהיה לפני כל קריאה נוספת."
+  },
+  "recipes_noCompleteResult": {
+    "message": "עדיין אין תוצאה מלאה ומוצלחת עבור שלב זה. הזינו את ה-JSON Pointer שנבדק; הוא ייבדק כשהשלב ירוץ."
+  },
+  "recipes_openImport": {
+    "message": "אימות ופתיחת טיוטה"
+  },
+  "recipes_openImportHelp": {
+    "message": "אימות גרסה, גודל, כלים והפניות אחורה. אף קריאה לא תורץ."
+  },
+  "recipes_openRun": {
+    "message": "קריאת הרצה"
+  },
+  "recipes_openRunHelp": {
+    "message": "קריאת התוצאות השמורות ופרטי ההפסקה. פתיחת הרצה אינה ממשיכה אותה."
+  },
+  "recipes_openSaved": {
+    "message": "פתיחת מתכון"
+  },
+  "recipes_openSavedHelp": {
+    "message": "פתיחת הגדרה שמורה זו לעריכה ולסקירה לפני ההרצה."
+  },
+  "recipes_pause": {
+    "message": "השהיה לאחר שלב זה"
+  },
+  "recipes_pauseHelp": {
+    "message": "לאפשר לכלי הנוכחי להסתיים, ואז להמתין לפני הפעלת שלב נוסף."
+  },
+  "recipes_pending": {
+    "message": "שלב $1 ממתין או אינו ודאי (קריאה $2). ייתכן שפעולתו בדף כבר התרחשה."
+  },
+  "recipes_pendingRule": {
+    "message": "הוסיפו או בטלו את כלל השדה שלא הושלם לפני שמירה או סקירה של מתכון זה."
+  },
+  "recipes_pickBinding": {
+    "message": "בחירת שדה מתוצאה שנצפתה"
+  },
+  "recipes_pickBindingHelp": {
+    "message": "עיינו בתוצאה השמורה של השלב הקודם שנבחר. תוצאה קטועה אינה יכולה לספק תצוגה מקדימה של שדות."
+  },
+  "recipes_recentRun": {
+    "message": "$1 · $2"
+  },
+  "recipes_recipesCount": {
+    "message": "$1 הגדרות · $2 הרצות"
+  },
+  "recipes_recipesData": {
+    "message": "תרחישים וראיות הרצה"
+  },
+  "recipes_refreshExport": {
+    "message": "בנייה מחדש של התצוגה המקדימה"
+  },
+  "recipes_refreshExportHelp": {
+    "message": "החלפת העריכות בתצוגה המקדימה בסעיפי ההגדרה או הדוח העדכניים שנבחרו."
+  },
+  "recipes_remaining": {
+    "message": "הרצת השאר"
+  },
+  "recipes_remainingHelp": {
+    "message": "הרצת השלבים הבדוקים שנותרו לפי הסדר. עוצר במקרה של כשל, ערך חסר או שינוי בדף."
+  },
+  "recipes_removeBinding": {
+    "message": "הסרת קישור"
+  },
+  "recipes_removeBindingHelp": {
+    "message": "שמירה על ערך הארגומנט המילולי והסרת הפניה זו לקלט/תוצאה."
+  },
+  "recipes_removeInput": {
+    "message": "הסרת קלט"
+  },
+  "recipes_removeInputHelp": {
+    "message": "הסרת קלט בעל שם זה. יש לעדכן כל קישור אליו לפני שניתן יהיה להריץ את המתכון."
+  },
+  "recipes_removeStep": {
+    "message": "הסרת שלב"
+  },
+  "recipes_removeStepHelp": {
+    "message": "הסרת קריאה זו מהטיוטה. הפניות מאוחרות יותר אליה ידרשו בדיקה מחדש."
+  },
+  "recipes_resultExcerpt": {
+    "message": "תקציר שמור: $1 מתוך $2 תווים. התוצאה המלאה המקורית אינה זמינה ביומן זה."
+  },
+  "recipes_resultHeading": {
+    "message": "$1. $2 · $3"
+  },
+  "recipes_resultHeadingHelp": {
+    "message": "הרחבת התוצאה בפועל, הארגומנטים המדויקים וכל בדיקת שדות נבחרים."
+  },
+  "recipes_resultPath": {
+    "message": "נתיב שדה בתוצאה קודמת"
+  },
+  "recipes_resultPathHelp": {
+    "message": "JSON Pointer לתוך תוצאת ה-JSON המלאה והמוצלחת של אותו שלב. שדה חסר עוצר את ההרצה."
+  },
+  "recipes_retention": {
+    "message": "ההגדרות נשארות מקומיות: עד 30 מתכונים, 20 שלבים בכל אחד, 2 MB בסך הכול. יומני ההרצה שומרים עד 8 הרצות בתוך 3 MB; רק תיעוד ישן שהושלם מפונה. תוצאות שמורות מציגות עד 20,000 תווים כל אחת. הרצה לעולם אינה מתחדשת אוטומטית לאחר הפעלה מחדש של Explorer או הדפדפן."
+  },
+  "recipes_review": {
+    "message": "סקירה לפני הרצה"
+  },
+  "recipes_reviewHeading": {
+    "message": "סקירת הרצה זו"
+  },
+  "recipes_reviewHelp": {
+    "message": "גילוי מחדש של הדף הנוכחי ואימות כל כלי, מסגרת, חוזה, קלט ודריסה מקומית שתועדו."
+  },
+  "recipes_reviewNotice": {
+    "message": "הקריאות קשורות אל $1 ואל מסמכי המסגרות הנוכחיים שלו. בדקו את תגובות הדמה המקומיות להלן. קישור לתוצאה מאוחרת נבדק כשתוצאת המקור קיימת. תוקף סקירה זו פג לאחר שתי דקות."
+  },
+  "recipes_reviewOverrides": {
+    "message": "דריסות ותגובות דמה מקומיות"
+  },
+  "recipes_reviewOverridesHelp": {
+    "message": "אלו הדריסות המקומיות המדויקות שנבדקו לפני ההרצה. רשימה ריקה פירושה שלא נמצאו כאלה עבור שלבים אלה."
+  },
+  "recipes_reviewStep": {
+    "message": "$2 · $3 · נתיב מסגרת $4"
+  },
+  "recipes_root": {
+    "message": "(שורש)"
+  },
+  "recipes_runHeading": {
+    "message": "הרצה: $1"
+  },
+  "recipes_runInputValue": {
+    "message": "ערך להרצה"
+  },
+  "recipes_runInputValueHelp": {
+    "message": "קלטי טקסט נשארים טקסט. ערכי ברירת מחדל אחרים משתמשים בתחביר JSON ושומרים על הטיפוס שלהם."
+  },
+  "recipes_runInputs": {
+    "message": "ערכים עבור הרצה זו"
+  },
+  "recipes_runInputsHelp": {
+    "message": "שנו ערכים בעלי שם עבור הרצה זו מבלי לשנות את ברירות המחדל השמורות. בצעו סקירה מחדש לאחר העריכה."
+  },
+  "recipes_runStatus": {
+    "message": "$1 · $2 מתוך $3 שלבים תועדו"
+  },
+  "recipes_save": {
+    "message": "שמירת מתכון"
+  },
+  "recipes_saveHelp": {
+    "message": "שמירת ההגדרה מקומית, בנפרד מתוצאות ההרצה שנצפו. הגדרות לא תקפות נשארות ניתנות לעריכה."
+  },
+  "recipes_saved": {
+    "message": "המתכון נשמר מקומית."
+  },
+  "recipes_schema": {
+    "message": "סכמת הכלי הנוכחית"
+  },
+  "recipes_schemaHelp": {
+    "message": "קריאת החוזה הפעיל. עדכון החוזה המתועד דורש פעולה מפורשת."
+  },
+  "recipes_site": {
+    "message": "אתר מתועד: $1"
+  },
+  "recipes_siteRecipes": {
+    "message": "תרחישים לאתר זה"
+  },
+  "recipes_siteRecipesHelp": {
+    "message": "פתח רצפים ידניים שמורים וריצות אחרונות עבור מקור דף זה."
+  },
+  "recipes_stepHeading": {
+    "message": "$1. $2"
+  },
+  "recipes_stepHeadingHelp": {
+    "message": "הרחבת שלב זה כדי לבדוק את היעד, הארגומנטים, הקישורים והבדיקה האופציונלית שלו."
+  },
+  "recipes_stepLimit": {
+    "message": "מתכון תומך בעד 20 שלבים. פצלו משימה זו למתכונים קטנים יותר."
+  },
+  "recipes_stepSource": {
+    "message": "שלב $1: $2"
+  },
+  "recipes_stop": {
+    "message": "עצירה"
+  },
+  "recipes_stopHelp": {
+    "message": "ביטול הקריאה הנוכחית במידת האפשר ועצירת הרצף. פעולות דף שהושלמו אינן ניתנות לביטול."
+  },
+  "recipes_success": {
+    "message": "הצלחה"
+  },
+  "recipes_title": {
+    "message": "מתכון ידני"
+  },
+  "recipes_toggleArguments": {
+    "message": "החלפת טופס / JSON"
+  },
+  "recipes_toggleArgumentsHelp": {
+    "message": "שינוי אופן עריכת הארגומנטים המילוליים. יש לתקן JSON לא תקין לפני פתיחת הטופס."
+  },
+  "recipes_tool": {
+    "message": "כלי ומסגרת"
+  },
+  "recipes_toolHelp": {
+    "message": "בחרו את הכלי הפעיל והמסגרת המדויקים ששלב זה אמור לקרוא להם."
+  },
+  "recipes_toolMissing": {
+    "message": "אין כלי פעיל תואם זמין. חזרו ל\"כלים\" כדי לבדוק גישה לאתר או לפתוח את הדף המתועד, ואז רעננו. הטיוטה והתוצאות נשארות כאן."
+  },
+  "recipes_toolOption": {
+    "message": "$1 · $2 · מסגרת $3"
+  },
+  "recipes_unavailableRunControl": {
+    "message": "פקד זה אינו זמין במצב ההרצה הנוכחי. הרצות שנקטעו או הסתיימו דורשות סקירה חדשה."
+  },
+  "recipes_up": {
+    "message": "הזזה למעלה"
+  },
+  "recipes_upHelp": {
+    "message": "העברת שלב זה מוקדם יותר. קישורים חייבים להמשיך להפנות רק לשלבים קודמים."
+  },
+  "recipes_use": {
+    "message": "שימוש במתכון"
+  },
+  "recipes_useHelp": {
+    "message": "הוסף רק קריאה זו לטיוטת המתכון הנוכחית של כרטיסייה זו. בדוק את הארגומנטים והתלויות שלה לפני ההרצה."
+  },
+  "recipes_usedArguments": {
+    "message": "ארגומנטים שנשלחו בפועל"
+  },
+  "recipes_usedArgumentsHelp": {
+    "message": "קריאת הארגומנטים שנפתרו לאחר החלת קישורי קלטים בעלי שם ותוצאות קודמות."
+  },
+  "registrationHelp": {
+    "message": "סוג הרישום שנצפה מתוך ה-DOM."
+  },
+  "retry": {
+    "message": "נסה שוב"
+  },
+  "savedCalls_checkBadge": {
+    "message": "בדיקה"
+  },
+  "savedCalls_checkEqualsHelp": {
+    "message": "מצפה לטקסט זה בדיוק: $1"
+  },
+  "savedCalls_checkErrorHelp": {
+    "message": "מצפה שהקריאה תיכשל."
+  },
+  "savedCalls_checkJsonHelp": {
+    "message": "מצפה ל-JSON זה (ללא תלות בסדר המפתחות והרווחים): $1"
+  },
+  "savedCalls_checkOkHelp": {
+    "message": "מצפה שהקריאה תצליח."
+  },
+  "savedCalls_contractChanged": {
+    "message": "החוזה השתנה"
+  },
+  "savedCalls_contractChangedHelp": {
+    "message": "תיאור הכלי, הסכמה או האנוטציות שלו השתנו מאז שקריאה זו נשמרה; הארגומנטים עדיין תקפים."
+  },
+  "savedCalls_delete": {
+    "message": "מחק"
+  },
+  "savedCalls_deleteHelp": {
+    "message": "מחיקת קריאה שמורה זו."
+  },
+  "savedCalls_expectError": {
+    "message": "הקריאה נכשלת"
+  },
+  "savedCalls_expectHelp": {
+    "message": "מה צריכה להיות התוצאה כדי שקריאה שמורה זו תיחשב לבדיקה. קריאה ללא ציפייה היא סימנייה בלבד."
+  },
+  "savedCalls_expectLabel": {
+    "message": "ציפייה"
+  },
+  "savedCalls_expectLastResult": {
+    "message": "אותה תוצאה כמו בהרצה האחרונה"
+  },
+  "savedCalls_expectNone": {
+    "message": "כלום (סימנייה)"
+  },
+  "savedCalls_expectOk": {
+    "message": "הקריאה מצליחה"
+  },
+  "savedCalls_fail": {
+    "message": "✕ נכשל — $1"
+  },
+  "savedCalls_load": {
+    "message": "טען"
+  },
+  "savedCalls_loadHelp": {
+    "message": "הצבת ארגומנטים אלה בעורך."
+  },
+  "savedCalls_namePlaceholder": {
+    "message": "תנו שם לארגומנטים אלה"
+  },
+  "savedCalls_needsReview": {
+    "message": "דורש בדיקה"
+  },
+  "savedCalls_needsReviewHelp": {
+    "message": "סכמת הכלי השתנתה מאז שקריאה זו נשמרה והארגומנטים אינם מתאימים לה עוד. טען אותם, תקן ושמור מחדש."
+  },
+  "savedCalls_noVerdict": {
+    "message": "אין הכרעה — $1"
+  },
+  "savedCalls_none": {
+    "message": "אין עדיין קריאה שמורה לכלי זה. שמור את הארגומנטים שאתה חוזר אליהם: הם נשמרים בטעינה מחדש ונבדקים שוב כשהסכמה משתנה."
+  },
+  "savedCalls_notValid": {
+    "message": "הארגומנטים בעורך אינם תקינים; תקנו אותם לפני השמירה."
+  },
+  "savedCalls_pass": {
+    "message": "✓ עבר — $1"
+  },
+  "savedCalls_run": {
+    "message": "הרץ"
+  },
+  "savedCalls_runAll": {
+    "message": "הרץ את כל הבדיקות"
+  },
+  "savedCalls_runAllHelp": {
+    "message": "הרצת כל קריאה שמורה הכוללת ציפייה, זו אחר זו, והערכת כל תוצאה. קריאות הדורשות בדיקה מדולגות ומצוינות כך."
+  },
+  "savedCalls_runAllSummary": {
+    "message": "$1 עברו, $2 נכשלו, $3 דולגו (דורשים בדיקה), $4 סימניות ללא שיפוט."
+  },
+  "savedCalls_runBlocked": {
+    "message": "קריאה זו דורשת בדיקה לפני שניתן להריצה: $1"
+  },
+  "savedCalls_runHelp": {
+    "message": "הרץ את הכלי עם ארגומנטים אלה כעת."
+  },
+  "savedCalls_save": {
+    "message": "שמור ארגומנטים נוכחיים"
+  },
+  "savedCalls_saveHelp": {
+    "message": "שמירת הארגומנטים שבעורך תחת שם זה כדי להריצם שוב מאוחר יותר — גם לאחר טעינה מחדש או פריסה."
+  },
+  "savedCalls_saved": {
+    "message": "נשמר. $1 שמורים עבור כלי זה."
+  },
+  "savedCalls_savedAt": {
+    "message": "נשמר ב-$1"
+  },
+  "savedCalls_skippedNeedsReview": {
+    "message": "דולג — דורש בדיקה: $1"
+  },
+  "savedCalls_title": {
+    "message": "קריאות ובדיקות שמורות"
+  },
+  "savedCalls_titleCount": {
+    "message": "קריאות שמורות ($1)"
+  },
+  "schemaForm_anArrayOfObjectsIs": {
+    "message": "מערך של אובייקטים נערך כ-JSON כדי ששום דבר לא יאבד בשקט."
+  },
+  "schemaForm_editThisPropertyAsJson": {
+    "message": "ערכו מאפיין זה כ-JSON."
+  },
+  "schemaForm_explorerCannotTellWhatThis": {
+    "message": "Explorer אינו יכול לקבוע מה מערך זה מכיל. ערכו אותו כ-JSON."
+  },
+  "schemaForm_isRequired": {
+    "message": "$1 הוא שדה חובה"
+  },
+  "schemaForm_mustBeNumber": {
+    "message": "$1 חייב להיות מספר"
+  },
+  "schemaForm_notSpecified": {
+    "message": "לא צוין"
+  },
+  "schemaForm_notValidJson": {
+    "message": "$1 אינו JSON תקין"
+  },
+  "schemaForm_oneValuePerLine": {
+    "message": "ערך אחד בכל שורה"
+  },
+  "schemaForm_required": {
+    "message": "חובה"
+  },
+  "schemaForm_thisPropertyAllowsSeveralTypes": {
+    "message": "מאפיין זה מתיר מספר טיפוסים. ערכו אותו כ-JSON."
+  },
+  "schemaForm_thisPropertyIsNestedToo": {
+    "message": "מאפיין זה מקונן עמוק מדי להצגה כטופס."
+  },
+  "schemaForm_thisPropertyUsesAllofEdit": {
+    "message": "מאפיין זה משתמש ב-allOf. ערכו אותו כ-JSON."
+  },
+  "schemaForm_thisPropertyUsesAnyofExplorer": {
+    "message": "מאפיין זה משתמש ב-anyOf.‏ Explorer לא ינחש לאיזה ענף התכוונתם."
+  },
+  "schemaForm_thisPropertyUsesOneofExplorer": {
+    "message": "מאפיין זה משתמש ב-oneOf.‏ Explorer לא ינחש לאיזה ענף התכוונתם."
+  },
+  "schemaForm_thisPropertyUsesRefWhich": {
+    "message": "מאפיין זה משתמש ב-$$ref, ש-Explorer אינו מפענח. ערכו אותו כ-JSON."
+  },
+  "schemaForm_thisToolTakesNoArguments": {
+    "message": "כלי זה אינו מקבל ארגומנטים."
+  },
+  "schemaForm_tupleArraysAreEditedAs": {
+    "message": "מערכי Tuple נערכים כ-JSON."
+  },
+  "schemaTree_nestedTooDeeplyToExpand": {
+    "message": "מקונן עמוק מדי להרחבה."
+  },
+  "schemaTree_rawJsonSchema": {
+    "message": "סכמת JSON גולמית"
+  },
+  "schemaTree_theSchemaDeclaresNoProperties": {
+    "message": "הסכמה אינה מצהירה על מאפיינים."
+  },
+  "schemaTree_thisToolDeclaresNoInput": {
+    "message": "כלי זה אינו מצהיר על סכמת קלט."
+  },
+  "sec_accepts_missing_required_fix": {
+    "message": "בדוק ארגומנטי חובה בקוד הכלי והחזר שגיאה המציינת את השדה החסר."
+  },
+  "sec_accepts_missing_required_title": {
+    "message": "הכלי קיבל קריאה ללא ארגומנט חובה"
+  },
+  "sec_accepts_missing_required_why": {
+    "message": "מאפיין חובה הושמט והכלי השיב כאילו הקריאה תקינה: החוזה המוצהר אינו תואם למה שהקוד אוכף בפועל."
+  },
+  "sec_accepts_out_of_schema_input_fix": {
+    "message": "אמתו כל ארגומנט בקוד הכלי והחזירו שגיאה מפורטת עבור טיפוס שגוי."
+  },
+  "sec_accepts_out_of_schema_input_title": {
+    "message": "הכלי קיבל ארגומנט מטיפוס שגוי"
+  },
+  "sec_accepts_out_of_schema_input_why": {
+    "message": "נשלח ערך מסוג שונה מזה שהסכמה מצהירה עליו והכלי השיב כאילו הוא תקין. הדפדפן אינו מאמת ארגומנטים (נמדד, WMP-0046); קוד הכלי הוא שכבת האימות היחידה (מפרט §6.3.1.3)."
+  },
+  "sec_accepts_unbounded_input_fix": {
+    "message": "הגבילו את הפרמטר באמצעות maxLength בסכמה ואכפו זאת בקוד."
+  },
+  "sec_accepts_unbounded_input_title": {
+    "message": "הכלי קיבל מחרוזת באורך 10,000 תווים"
+  },
+  "sec_accepts_unbounded_input_why": {
+    "message": "פרמטר טקסט חופשי ללא maxLength קיבל ערך ארוך מאוד. מגבלות אורך מצמצמות את המקום שהוראה מוזרקת יכולה לנצל (מפרט §6.4.2)."
+  },
+  "sec_accepts_unknown_property_fix": {
+    "message": "התעלמו או דחו מאפיינים לא מוכרים באופן מכוון בקוד."
+  },
+  "sec_accepts_unknown_property_title": {
+    "message": "הכלי קיבל מאפיין לא מוכר"
+  },
+  "sec_accepts_unknown_property_why": {
+    "message": "מאפיין נוסף שלא הוצהר התקבל. הנחיות Chrome מתירות סכמות גמישות עם קוד קפדני; זוהי עובדה לידיעת מי שמכיר את המימוש."
+  },
+  "sec_consequential_without_hint_fix": {
+    "message": "הגדירו את annotations.consequentialHint ל-true, או שנו את שם הכלי אם הוא רק מתחיל תהליך שהאדם משלים בעצמו."
+  },
+  "sec_consequential_without_hint_title": {
+    "message": "פעולה בעלת השפעה ללא consequentialHint"
+  },
+  "sec_consequential_without_hint_why": {
+    "message": "השם או התיאור משתמשים בפועל שמשלם, שולח, מזמין, מוחק או מחייב את האדם; ללא consequentialHint סוכן עלול להריץ אותו בלי לשאול (מפרט §6.4.5, §6.3.2)."
+  },
+  "sec_convention_llms_txt_present_fix": {
+    "message": "שמרו אותו מדויק אם אתם מגישים אותו; הוא אופציונלי."
+  },
+  "sec_convention_llms_txt_present_title": {
+    "message": "מוגש קובץ llms.txt"
+  },
+  "sec_convention_llms_txt_present_why": {
+    "message": "llms.txt הוא מוסכמה לא-רשמית לתקציר אתר קריא-מכונה, הנבדקת בביקורות הסוכנים של Lighthouse. אין לה קשר ל-API הדפדפן של WebMCP."
+  },
+  "sec_convention_manifest_invalid_fix": {
+    "message": "הגישו JSON תקין או הסירו את הקובץ."
+  },
+  "sec_convention_manifest_invalid_title": {
+    "message": "מוגש קובץ ‎/.well-known/webmcp אך הוא אינו JSON"
+  },
+  "sec_convention_manifest_invalid_why": {
+    "message": "הנתיב משיב אך תוכנו אינו מתפענח כ-JSON; קורא המצפה למוסכמה זו אינו מקבל דבר שמיש."
+  },
+  "sec_convention_manifest_present_fix": {
+    "message": "שמרו אותו עקבי עם הכלים שהדף רושם בפועל, או הסירו אותו; זה אינו תקן רשמי."
+  },
+  "sec_convention_manifest_present_title": {
+    "message": "מוגש מניפסט ‎/.well-known/webmcp"
+  },
+  "sec_convention_manifest_present_why": {
+    "message": "נמצא מניפסט גילוי לפי מוסכמת הקהילה. הוא אינו חלק מטיוטת ה-W3C CG; חלק מכלי הביקורת והאינדקסים קוראים אותו. סוכנים המשתמשים ב-API הדפדפן אינם זקוקים לו."
+  },
+  "sec_convention_permissions_policy_absent_fix": {
+    "message": "שלחו Permissions-Policy: tools=()‎ בדפים שאינם משתמשים ב-WebMCP; אחרת אין צורך בפעולה."
+  },
+  "sec_convention_permissions_policy_absent_title": {
+    "message": "אין Permissions-Policy עבור tools בתגובת הדף"
+  },
+  "sec_convention_permissions_policy_absent_why": {
+    "message": "ללא הכותרת חלה ברירת המחדל: WebMCP מותר עבור הדף ומסגרות מאותו מקור. דף שאינו משתמש ב-WebMCP יכול לשלוח Permissions-Policy: tools=()‎ כדי שאף סקריפט מוזרק לא יוכל לרשום כלים (מפרט §6.4.1)."
+  },
+  "sec_convention_permissions_policy_fix": {
+    "message": "בדקו שרשימת ההיתרים תואמת את כוונתכם."
+  },
+  "sec_convention_permissions_policy_title": {
+    "message": "ה-Permissions-Policy של הדף מציינת את תכונת tools"
+  },
+  "sec_convention_permissions_policy_why": {
+    "message": "כותרת התגובה מגבילה או מאצילה את WebMCP במפורש (מפרט §6.4.1). זהו המנגנון שהמפרט ממליץ עליו להשבתת WebMCP היכן שאינו בשימוש."
+  },
+  "sec_cross_origin_frame_tools_fix": {
+    "message": "אשרו שההטמעה מכוונת; העניקו ל-Explorer גישה למקור המסגרת כדי לסקור את הכלים שלה."
+  },
+  "sec_cross_origin_frame_tools_title": {
+    "message": "כלים ממסגרת של מקור אחר"
+  },
+  "sec_cross_origin_frame_tools_why": {
+    "message": "מסגרת ממקור אחר חושפת כלים בדף זה. סוכנים רואים אותם לצד הכלים שלך."
+  },
+  "sec_debugging_tool_exposed_fix": {
+    "message": "רשמו כלי דיבוג רק בגרסאות פיתוח או מאחורי הגדרת מפתחים."
+  },
+  "sec_debugging_tool_exposed_title": {
+    "message": "כלי ניפוי שגיאות חשוף בדף זה"
+  },
+  "sec_debugging_tool_exposed_why": {
+    "message": "annotations.debugging מסמן כלי המיועד לכלי פיתוח. בדף שאנשים מבקרים בו, כל סוכן יכול לקרוא לו."
+  },
+  "sec_delegated_tools_policy_fix": {
+    "message": "השאירו allow=\"tools\" רק בהטמעות שאתם סומכים עליהן לפעול בשם המבקרים שלכם."
+  },
+  "sec_delegated_tools_policy_title": {
+    "message": "הדף מאציל את מדיניות ה-tools למקור אחר"
+  },
+  "sec_delegated_tools_policy_why": {
+    "message": "מסגרת iframe נושאת allow=\"tools\"‎: המקור המוטמע רשאי לרשום כלים בדף זה (מפרט §6.4.1 מתאר את המדיניות; Chrome ממליץ לחשוף רק למקורות מהימנים)."
+  },
+  "sec_high_risk_read_without_hint_fix": {
+    "message": "שקלו להוסיף consequentialHint בקריאות החושפות מידע רגיש, וצמצמו את מה שהכלי מחזיר."
+  },
+  "sec_high_risk_read_without_hint_title": {
+    "message": "קריאת מידע רגיש ללא consequentialHint"
+  },
+  "sec_high_risk_read_without_hint_why": {
+    "message": "הכלי קורא כתובות, יתרות, פרטי הזדהות או נתוני בריאות. השאלה אם חשיפת מידע בקריאה בלבד צריכה לדרוש אישור נמצאת בדיון פתוח במפרט (#331); עד להכרעה, הצהרת הרמז היא הבחירה הזהירה."
+  },
+  "sec_legacy_host_fix": {
+    "message": "השתמשו ב-document.modelContext."
+  },
+  "sec_legacy_host_title": {
+    "message": "נעשה שימוש במארח הישן navigator.modelContext"
+  },
+  "sec_legacy_host_why": {
+    "message": "ה-API עבר אל document.modelContext; דף המסתמך על הכינוי ב-navigator תלוי בנתיב תאימות לאחור."
+  },
+  "sec_no_tools_policy_open_fix": {
+    "message": "שלחו Permissions-Policy: tools=()‎ מדפים שאינם משתמשים ב-WebMCP."
+  },
+  "sec_no_tools_policy_open_title": {
+    "message": "אין כלים, אך WebMCP נשאר פתוח בדף זה"
+  },
+  "sec_no_tools_policy_open_why": {
+    "message": "דף שאינו חושף כלים עדיין עלול לקבל כלים מכל סקריפט מוזרק.‏ Permissions-Policy: tools=()‎ סוגר את ה-API עבור המסמך והמסגרות שלו לפני הרצת סקריפטים (מפרט §6.4.1)."
+  },
+  "sec_opaque_origin_tool_fix": {
+    "message": "תנו למסגרת מקור אמיתי או הסירו את הכלים שלה."
+  },
+  "sec_opaque_origin_tool_title": {
+    "message": "כלי ממקור אטום (opaque origin)"
+  },
+  "sec_opaque_origin_tool_why": {
+    "message": "למסגרות בארגז חול (sandbox) או about:blank יש מקור אטום; לא ניתן לשייך את הכלים שלהן לאתר מזוהה."
+  },
+  "sec_output_directive_fix": {
+    "message": "החזירו נתונים, לא טקסט המופנה לסוכן; סמנו תוצאות הנושאות טקסט של אחרים באמצעות untrustedContentHint."
+  },
+  "sec_output_directive_title": {
+    "message": "התוצאה נקראת כמו הוראה לסוכן"
+  },
+  "sec_output_directive_why": {
+    "message": "פלט הכלי מכיל ביטויים המופנים לסוכן. הזרקת פלט (מפרט §6.3.1.2) היא הדרך שבה דף או משתמשיו מכוונים סוכן לאחר הקריאה."
+  },
+  "sec_output_markup_fix": {
+    "message": "החזירו נתונים גולמיים; תנו לסוכן לעצב אותם."
+  },
+  "sec_output_markup_title": {
+    "message": "תגיות עיצוב או אסימוני תבנית בתוצאה"
+  },
+  "sec_output_markup_why": {
+    "message": "תגיות HTML, גדרות קוד או אסימוני תבנית פרומפט בתוצאה מהווים נשא להוראות מוזרקות."
+  },
+  "sec_output_over_budget_fix": {
+    "message": "החזירו פחות מידע, חלקו את התוצאה לעמודים, או החזירו הפניה שהסוכן יכול לעקוב אחריה."
+  },
+  "sec_output_over_budget_title": {
+    "message": "התוצאה חורגת מתקציב הפלט של 1.5K תווים"
+  },
+  "sec_output_over_budget_why": {
+    "message": "הנחיות Chrome מקצות כ-1,500 תווים לפלט של כלי; תוצאות גדולות יותר צורכות הקשר ומרחיבות את שטח הפנים להזרקת פלט."
+  },
+  "sec_output_personal_data_fix": {
+    "message": "החזירו רק את מה שהמשימה דורשת; סמנו תוצאות הנושאות מידע אישי או תוכן שנכתב על ידי משתמשים באמצעות untrustedContentHint."
+  },
+  "sec_output_personal_data_title": {
+    "message": "נראה שהתוצאה מכילה מידע אישי"
+  },
+  "sec_output_personal_data_why": {
+    "message": "כתובת דוא\"ל, מספר טלפון או מספר דמוי כרטיס אשראי חזרו מקריאה תקינה ללא untrustedContentHint. התוצאה עוברת לכל סוכן שקרא לכלי (מפרט §6.3.3, OWASP MCP10)."
+  },
+  "sec_probe_call_failed_fix": {
+    "message": "דאגו שהדוגמה המשתמעת מהסכמה תעבוד, או הדקו את הסכמה (enum,‏ format,‏ examples)."
+  },
+  "sec_probe_call_failed_title": {
+    "message": "הכלי נכשל עם ארגומנטים תקינים שחוללו מהסכמה"
+  },
+  "sec_probe_call_failed_why": {
+    "message": "כשנקרא עם ארגומנטים שחוללו מהסכמה שלו עצמו (שדות חובה וערכי ברירת מחדל), הכלי החזיר שגיאה. סוכן היה נתקל באותה שגיאה בקריאה הראשונה שלו."
+  },
+  "sec_re_registered_in_session_fix": {
+    "message": "השוו תמונת מצב שנלקחה קודם לחוזה הנוכחי (כלים ← תמונות מצב); רשמו כלים פעם אחת בלבד לכל מסמך כשאפשר."
+  },
+  "sec_re_registered_in_session_title": {
+    "message": "הוסר ונרשם מחדש בסשן זה"
+  },
+  "sec_re_registered_in_session_why": {
+    "message": "כלי שנעלם וחוזר עשוי להיות אותו כלי שהורכב מחדש, או חוזה שונה תחת אותו שם (arXiv 2606.06387, סוגיית מפרט #92). ציר הזמן זיהה את השינוי; Explorer לא השווה בין החוזים."
+  },
+  "sec_readonly_claim_on_mutating_verb_fix": {
+    "message": "הסירו את readOnlyHint או שנו את שם הכלי כך שיתאים לפעולתו; בדקו מחדש את הרמזים לאחר כל שינוי."
+  },
+  "sec_readonly_claim_on_mutating_verb_title": {
+    "message": "readOnlyHint על כלי ששמו מעיד שהוא משנה מצב"
+  },
+  "sec_readonly_claim_on_mutating_verb_why": {
+    "message": "סוכנים עשויים לדלג על אישור עבור כלים לקריאה בלבד. תווית קריאה בלבד על פועל כגון delete,‏ pay או update היא מיושנת או שגויה, והמפרט מציין שלא ניתן לאמת כוונה מוצהרת (§6.3.2)."
+  },
+  "sec_registered_more_than_once_fix": {
+    "message": "רשמו פעם אחת לכל מסמך, או בטלו את הרישום במפורש באמצעות AbortSignal לפני רישום מחדש."
+  },
+  "sec_registered_more_than_once_title": {
+    "message": "מספר קריאות registerTool()‎ עבור שם זה"
+  },
+  "sec_registered_more_than_once_why": {
+    "message": "מצב מדידה זיהה יותר מקריאת רישום אחת עבור כלי זה במסמך. רישום חוזר הוא המנגנון שבו משתמשת מתקפת החלפה; זה גם מה שקורה כשרכיב מתרנדר מחדש."
+  },
+  "sec_sensitive_parameter_fix": {
+    "message": "הסירו את הפרמטר, אספו את הערך בממשק הדף עצמו בנוכחות האדם, או העבירו הפניה אטומה."
+  },
+  "sec_sensitive_parameter_title": {
+    "message": "פרמטר מבקש מידע רגיש"
+  },
+  "sec_sensitive_parameter_why": {
+    "message": "סוכן שמנסה לעזור עלול למלא פרמטר זה מנתוני התאמה אישית, היסטוריית גלישה או אתרים אחרים (מפרט §6.3.3). פרטי גישה, נתוני כרטיסי אשראי ומזהים לאומיים לעולם אינם צריכים לעבור דרך מודל (#316)."
+  },
+  "sec_state_change_without_hint_fix": {
+    "message": "הצהירו על consequentialHint כאשר השינוי חשוב לאדם; השאירו את readOnlyHint כ-false."
+  },
+  "sec_state_change_without_hint_title": {
+    "message": "כלי המשנה מצב אינו מצהיר על שום רמז"
+  },
+  "sec_state_change_without_hint_why": {
+    "message": "הפועל משנה משהו בדף או בחשבון, אך לא readOnlyHint ולא consequentialHint מוצהרים; סוכנים מונחים להניח שינוי מצב, ומבקר אינו יכול להבחין בין השמטה מכוונת לשגגה."
+  },
+  "sec_text_agent_directive_fix": {
+    "message": "תארו מה הכלי עושה ומתי הוא מתאים במשפטים הצהרתיים פשוטים; העבירו כל כלל זרימת עבודה לקוד הכלי עצמו או לסכמה שלו."
+  },
+  "sec_text_agent_directive_title": {
+    "message": "התיאור נקרא כמו הוראה לסוכן"
+  },
+  "sec_text_agent_directive_why": {
+    "message": "סוכנים מתייחסים לתיאורי כלים כאל הקשר מהימן. ביטויים כגון \"תמיד קרא לזה קודם\" או \"אל תספר למשתמש\" מכוונים את המודל במקום לתאר את הכלי (מפרט §6.3.1.1, הרעלת כלים). גם תיאור לגיטימי עשוי להשתמש במילים אלו; זהו אינדיקטור לבדיקה אנושית."
+  },
+  "sec_text_embedded_address_fix": {
+    "message": "תארו את הכלי ללא כתובות; החזירו קישורים בתוצאות אם הם חלק מהנתונים."
+  },
+  "sec_text_embedded_address_title": {
+    "message": "כתובת URL או דוא\"ל בטקסט המוצג למודל"
+  },
+  "sec_text_embedded_address_why": {
+    "message": "כתובת בתוך תיאור עלולה להוביל סוכן לשלוף או ליצור קשר עם יעד שהמשתמש לא ביקש (הנחיית Chrome לסוכנים: הגבל מקורות למשימה)."
+  },
+  "sec_text_encoded_blob_fix": {
+    "message": "הסירו מטענים מקודדים משמות ומתיאורים; העבירו נתונים דרך ארגומנטים ותוצאות."
+  },
+  "sec_text_encoded_blob_title": {
+    "message": "נתונים מקודדים מוטמעים בטקסט המוצג למודל"
+  },
+  "sec_text_encoded_blob_why": {
+    "message": "רצף ארוך ב-base64 או בהקסדצימלי בתיאור נושא תוכן שקורא אנושי אינו יכול לבדוק ומודל עלול לפענח או לפעול לפיו."
+  },
+  "sec_text_hidden_characters_fix": {
+    "message": "הסירו את התווים המצוינים; בדקו את שלב הבנייה או מערכת ה-CMS שיצרו את הטקסט."
+  },
+  "sec_text_hidden_characters_title": {
+    "message": "תווים בלתי-נראים או משני-כיוון בטקסט המוצג למודל"
+  },
+  "sec_text_hidden_characters_why": {
+    "message": "תווים ברוחב אפס, תווים דו-כיווניים ותווי בקרה אינם נראים לאדם הקורא את הדף אך מגיעים למודל כלשונם: הם יכולים להסתיר טקסט או להפוך את כיוון הקריאה שלו."
+  },
+  "sec_text_markup_fix": {
+    "message": "השתמשו בטקסט רגיל בשמות ובתיאורים."
+  },
+  "sec_text_markup_title": {
+    "message": "תגיות עיצוב או אסימוני תבנית בטקסט המוצג למודל"
+  },
+  "sec_text_markup_why": {
+    "message": "תגיות HTML, גדרות קוד או אסימוני תבניות פרומפט בתיאור הם נשא נפוץ להזרקת הוראות ולעולם אינם נדרשים כדי לתאר כלי."
+  },
+  "sec_text_mixed_scripts_fix": {
+    "message": "כתבו מחדש את המילה בכתב אחד; אם הטקסט באמת רב-לשוני, שמרו כל מילה בכתב יחיד."
+  },
+  "sec_text_mixed_scripts_title": {
+    "message": "מילה מערבבת אותיות לטיניות עם אותיות קיריליות או יווניות דומות-מראה"
+  },
+  "sec_text_mixed_scripts_why": {
+    "message": "אותיות דומות-מראה גורמות לשתי מחרוזות שונות להיראות זהות לאדם בעוד שמודל ומאמת רואים שתי מילים שונות (Unicode TR36)."
+  },
+  "sec_text_over_budget_fix": {
+    "message": "קצרו בהתאם לתקציבים; העבירו פרטים לתיאורי הפרמטרים בסכמה."
+  },
+  "sec_text_over_budget_title": {
+    "message": "טקסט החורג מהתקציבים שסוכנים מחילים"
+  },
+  "sec_text_over_budget_why": {
+    "message": "הנחיות Chrome מקצות 500 תווים לתיאור, 150 לתיאור פרמטר ו-30 לשם; טקסט ארוך יותר עלול להיחתך או להסתיר הוראה בתוך מלל עודף (מפרט §6.4.2)."
+  },
+  "sec_third_party_registration_fix": {
+    "message": "בדקו את הסקריפט, קבעו את גרסתו או הגישו אותו מהמקור שלכם; תעדו רישומים בסביבת הייצור."
+  },
+  "sec_third_party_registration_title": {
+    "message": "נרשם על ידי סקריפט ממקור אחר"
+  },
+  "sec_third_party_registration_why": {
+    "message": "כלי זה נרשם על ידי קוד שהוגש ממקור שונה מזה של הדף: CDN, גשר קצה או תוסף. כל סקריפט בדף יכול להוסיף או להחליף כלים (הזרקת כלים באמצע סשן, arXiv 2606.06387)."
+  },
+  "sec_ugc_without_untrusted_hint_fix": {
+    "message": "הגדירו את annotations.untrustedContentHint ל-true בכלים המחזירים טקסט שנכתב על ידי אחרים."
+  },
+  "sec_ugc_without_untrusted_hint_title": {
+    "message": "תוכן מאנשים אחרים ללא untrustedContentHint"
+  },
+  "sec_ugc_without_untrusted_hint_why": {
+    "message": "ביקורות, תגובות, הודעות או טקסט שנשלף מדפים עלולים לשאת הוראות המכוונות לסוכן (הזרקת פלט, מפרט §6.3.1.2).‏ untrustedContentHint מורה לסוכנים להתייחס לתוצאה כאל נתונים בלבד."
+  },
+  "sec_unbounded_string_fix": {
+    "message": "הוסיפו maxLength,‏ enum או format היכן שקיים כזה; אמתו בקוד הכלי בכל מקרה."
+  },
+  "sec_unbounded_string_title": {
+    "message": "פרמטרי טקסט חופשי ללא מגבלת אורך"
+  },
+  "sec_unbounded_string_why": {
+    "message": "מחרוזות ללא הגבלת אורך מרחיבות את מה שהוראה מוזרקת יכולה לשאת (מפרט §6.4.2).‏ Chrome ממליץ לאמת בקפדנות בקוד; maxLength או enum בסכמה גם מבהירים לסוכנים מה מתאים."
+  },
+  "security_axis_environment": {
+    "message": "סביבה"
+  },
+  "security_axis_governance": {
+    "message": "ממשל"
+  },
+  "security_axis_injection": {
+    "message": "משטח הזרקה"
+  },
+  "security_axis_lifecycle": {
+    "message": "מחזור חיים"
+  },
+  "security_axis_privacy": {
+    "message": "פרטיות"
+  },
+  "security_axis_surface": {
+    "message": "שטח חשיפה"
+  },
+  "security_cardBadgeHelp": {
+    "message": "החומרה הגבוהה ביותר מבין ממצאי האבטחה של כלי זה. פתחו את סעיף האבטחה לצפייה בראיות."
+  },
+  "security_clean": {
+    "message": "לא נמצאו ממצאים. הכללים שלהלן הוערכו; מה שלא ניתן היה לצפות בו מפורט."
+  },
+  "security_coverage": {
+    "message": "$1 כלים · $2 כללים · $3 ממצאים ($4 נצפו, $5 אינדיקטורים)"
+  },
+  "security_coverageHelp": {
+    "message": "היקף הסקירה: כלים בדף, כללים שהוערכו עבור כל אחד, וממצאים לפי אופיים."
+  },
+  "security_detailIntro": {
+    "message": "ממצאים לגבי הטקסט, הרמזים, הסכמה והמקור של כלי זה. אינדיקטורים הם דפוסים לבדיקה, ולא הוכחה."
+  },
+  "security_detailNone": {
+    "message": "לא נמצאו ממצאים עבור כלי זה."
+  },
+  "security_detailTitle": {
+    "message": "סקירת אבטחה"
+  },
+  "security_detailTitleCount": {
+    "message": "סקירת אבטחה ($1)"
+  },
+  "security_evidence": {
+    "message": "ראיה"
+  },
+  "security_exportLabel": {
+    "message": "ייצא סקירת אבטחה זו"
+  },
+  "security_exportNote": {
+    "message": "כולל ראיות מהדף, תיקונים מוצעים, בדיקות לא ידועות וציון זמני. יש לבדוק לפני שיתוף."
+  },
+  "security_filterAxis": {
+    "message": "הצגת ממצאים מסוג זה בלבד."
+  },
+  "security_filterSeverity": {
+    "message": "הצגת ממצאים בחומרה זו בלבד."
+  },
+  "security_fix": {
+    "message": "מה לעשות"
+  },
+  "security_frame": {
+    "message": "מסגרת #$1"
+  },
+  "security_hideReviewed": {
+    "message": "הסתר שנבדקו"
+  },
+  "security_hideReviewedHelp": {
+    "message": "הסתרת הממצאים שסימנתם כ\"נסקרו\". הם יופיעו מחדש אם חוזה הכלי ישתנה."
+  },
+  "security_intro": {
+    "message": "ממצאים פסיביים מהצהרות כלי גלויות, עם ראיות ומקורות. סימנים אינם הוכחה לתקיפה. הסקירה ויצירת התיקון אינן מפעילות כלים. סריקת מקור ובדיקות פעילות דורשות פעולה מפורשת למטה."
+  },
+  "security_itemHelp": {
+    "message": "פתחו כדי לקרוא את הראיות, מדוע זה חשוב, מה לעשות ואת המקורות."
+  },
+  "security_markReviewed": {
+    "message": "סמן כנבדק"
+  },
+  "security_markReviewedHelp": {
+    "message": "זכור שבדקתם ממצא זה עבור כלי וחוזה אלה. הוא יחזור אם החוזה ישתנה. נשמר במכשיר זה בלבד."
+  },
+  "security_natureHelp": {
+    "message": "נצפה: Explorer זיהה את העובדה עצמה. אינדיקטור: דפוס שלרוב מעיד על בעיה; קראו את הראיות והחליטו."
+  },
+  "security_natureIndicator": {
+    "message": "אינדיקטור"
+  },
+  "security_natureObserved": {
+    "message": "נצפה"
+  },
+  "security_noMatch": {
+    "message": "אין ממצא התואם למסננים אלה."
+  },
+  "security_noTools": {
+    "message": "אין כלים לסקירה בדף זה."
+  },
+  "security_no_lifecycle": {
+    "message": "מחזור חיים: בציר הזמן החי אין עדיין אירועים עבור לשונית זו. פתחו את ציר הזמן או השאירו סעיף זה פתוח בזמן שהדף משתנה."
+  },
+  "security_no_refused_frames": {
+    "message": "מסגרות שהדפדפן דחה את קריאות ה-WebMCP שלהן: $1."
+  },
+  "security_no_registration_provenance": {
+    "message": "מקור הרישום: מצב מדידה כבוי עבור אתר זה, ולכן Explorer אינו יכול לדעת איזה סקריפט רשם כל כלי. הפעילו אותו בהגדרות וטענו מחדש את הדף."
+  },
+  "security_no_ungranted_origins": {
+    "message": "מסגרות ממקורות ש-Explorer אינו רשאי לבדוק: $1. העניקו גישה משורת המצב כדי לסקור את הכלים שלהן."
+  },
+  "security_notObservable": {
+    "message": "לא ניתן לצפייה כאן"
+  },
+  "security_openTool": {
+    "message": "פתח כלי"
+  },
+  "security_openToolHelp": {
+    "message": "פתח את פרטי הכלי: סכמה, בדיקות והרצה."
+  },
+  "security_pageFinding": {
+    "message": "דף זה"
+  },
+  "security_reviewedBadge": {
+    "message": "נסקר"
+  },
+  "security_sevHelp": {
+    "message": "השפעה אפשרית אם הסימן נכון; נפרדת מהוכחה ומהציון הכולל."
+  },
+  "security_sev_critical": {
+    "message": "קריטית"
+  },
+  "security_sev_high": {
+    "message": "גבוהה"
+  },
+  "security_sev_info": {
+    "message": "מידע"
+  },
+  "security_sev_low": {
+    "message": "נמוכה"
+  },
+  "security_sev_medium": {
+    "message": "בינונית"
+  },
+  "security_sources": {
+    "message": "מקורות"
+  },
+  "security_title": {
+    "message": "אבטחה"
+  },
+  "security_unmarkReviewed": {
+    "message": "בטל סימון"
+  },
+  "security_unmarkReviewedHelp": {
+    "message": "הצגת ממצא זה מחדש כחדש."
+  },
+  "security_why": {
+    "message": "למה זה חשוב"
+  },
+  "settings_about": {
+    "message": "אודות"
+  },
+  "settings_agentAccess": {
+    "message": "גישת סוכנים חיצוניים"
+  },
+  "settings_agentAccessAllowed": {
+    "message": "מורשה"
+  },
+  "settings_agentAccessBody": {
+    "message": "אילו אתרים מורשים לשאול את Explorer על הדף שבו הם נמצאים. Explorer משיב רק למקורות המוצהרים במניפסט שלו, ורק לאחר שהפעלתם כל אחד מהם כאן."
+  },
+  "settings_agentAccessLast": {
+    "message": "בקשה אחרונה שנצפתה: $1 ביקש את \"$2\"."
+  },
+  "settings_agentAccessNeedPermission": {
+    "message": "Chrome זקוק להרשאה שלכם באתר זה לפני שניתן להפעיל גישת סוכן. נסו שוב ואשרו את החלונית."
+  },
+  "settings_agentAccessNone": {
+    "message": "אף אתר אינו מוצהר כמורשה לתקשר עם Explorer בגרסה זו."
+  },
+  "settings_agentAccessOff": {
+    "message": "ביטול הרשאה"
+  },
+  "settings_agentAccessOffHelp": {
+    "message": "הפסקת המענה ל-$1 באופן מיידי. הבקשה הבאה תידחה."
+  },
+  "settings_agentAccessOn": {
+    "message": "אפשר"
+  },
+  "settings_agentAccessOnHelp": {
+    "message": "אפשרו ל-$1 לבקש מ-Explorer להציג ולקרוא לכלים המוצהרים בדף שלו עצמו. שום דבר אחר אינו נחשף בפניו."
+  },
+  "settings_agentConfigured": {
+    "message": "מוגדר: $1"
+  },
+  "settings_agentLab": {
+    "message": "מעבדת סוכן"
+  },
+  "settings_agentLabBody": {
+    "message": "הספק, נקודת הגישה, המודל והתקציבים נשמרים במכשיר. המפתחות נשמרים בזיכרון ההפעלה או בכספת מוצפנת אופציונלית."
+  },
+  "settings_agentNotConfigured": {
+    "message": "לא נבחר מודל AI. כלים, בדיקות ומתכונים פועלים גם ללא AI."
+  },
+  "settings_agentSessions": {
+    "message": "שיחות סוכן"
+  },
+  "settings_agentSessionsCount": {
+    "message": "$1 שיחות ב-$2 אתרים"
+  },
+  "settings_allHttp": {
+    "message": "כל אתרי http"
+  },
+  "settings_allHttps": {
+    "message": "כל אתרי https"
+  },
+  "settings_allSites": {
+    "message": "כל האתרים (http ו-https)"
+  },
+  "settings_allowAll": {
+    "message": "אפשר בכל האתרים"
+  },
+  "settings_allowAllHelp": {
+    "message": "בחירה בבדיקת כל אתרי http ו-https מבלי להפעיל כל אחד בנפרד. Chrome יבקש מכם אישור."
+  },
+  "settings_auditedLastCheck": {
+    "message": "בדיקה חוזרת אחרונה $1: $2 חדשים"
+  },
+  "settings_auditedSite": {
+    "message": "$1 — קו בסיס $2, $3 ממצאים"
+  },
+  "settings_auditedSites": {
+    "message": "אתרים מבוקרים"
+  },
+  "settings_bundle": {
+    "message": "גיבוי והעברת הגדרות"
+  },
+  "settings_bundleApplied": {
+    "message": "הוחל: $1 מחברים, $2 הנחיות. $3 מחברים הושמטו בבדיקת הבטיחות ($3 = 0 פירושו אף אחד)."
+  },
+  "settings_bundleBody": {
+    "message": "ייצוא הגדרות ספקים, מחברים והנחיות. מפתחות, ביטויי סיסמה והכספת המוצפנת אינם נכללים; יש להגדיר פרטי גישה בנפרד לאחר הייבוא."
+  },
+  "settings_bundleExport": {
+    "message": "הורדת קובץ הגדרות"
+  },
+  "settings_bundleExportHelp": {
+    "message": "שומר קובץ JSON אחד עם התצורה שלכם. ללא מפתחות בפנים, מתוך תכנון."
+  },
+  "settings_bundleImport": {
+    "message": "החלת הגדרות"
+  },
+  "settings_bundleImportButtonHelp": {
+    "message": "מחליף את המחברים וההנחיות הנוכחיים באלו שבקובץ, ומחיל את בחירת הספק שלו. כל רשומה נבדקת מחדש לפני החלתה."
+  },
+  "settings_bundleImportHelp": {
+    "message": "הקובץ מאומת רשומה אחר רשומה: מחבר שנקודת הקצה שלו תעביר מפתח בטקסט גלוי מושמט, והשאר מוחל."
+  },
+  "settings_bundleImportPlaceholder": {
+    "message": "הדביקו כאן את ה-JSON המלא של קובץ webmcp-explorer-settings"
+  },
+  "settings_bundleImportTitle": {
+    "message": "הדבקת קובץ הגדרות להחלה כאן"
+  },
+  "settings_bundleIntro": {
+    "message": "קובץ אחד מעביר את בחירת הספק, התקציבים, המחברים המותאמים וההנחיות שלכם לדפדפן או למחשב אחר."
+  },
+  "settings_bundleNotJson": {
+    "message": "זה אינו JSON תקין — הדביקו את הקובץ כולו, מה-{ הראשון ועד ה-} האחרון."
+  },
+  "settings_calls": {
+    "message": "$1 קריאות"
+  },
+  "settings_clear": {
+    "message": "נקה"
+  },
+  "settings_clearAll": {
+    "message": "מחיקת הנתונים והמפתחות השמורים"
+  },
+  "settings_clearAllHelp": {
+    "message": "מחיקת העבודה השמורה, ההגדרות, מפתחות ההפעלה והכספת המוצפנת. רישומי ההפעלות נשמרים למניעת הרצה חוזרת."
+  },
+  "settings_clearHelp": {
+    "message": "מחיקת $1. מבקש אישור נוסף לפני הביצוע."
+  },
+  "settings_cleared": {
+    "message": "נוקה."
+  },
+  "settings_confirm": {
+    "message": "אישור: ניקוי"
+  },
+  "settings_confirmAll": {
+    "message": "אישור: ניקוי הכול"
+  },
+  "settings_confirmForget": {
+    "message": "אישור: שכח"
+  },
+  "settings_confirmHelp": {
+    "message": "לחצו שוב תוך מספר שניות כדי למחוק. אחרת שום דבר אינו נמחק."
+  },
+  "settings_connectors": {
+    "message": "מחברים מותאמים אישית"
+  },
+  "settings_connectorsCount": {
+    "message": "$1 מחברים"
+  },
+  "settings_data": {
+    "message": "נתונים שמורים"
+  },
+  "settings_dataBody": {
+    "message": "ניהול הנתונים השמורים בפרופיל Chrome זה. הסרת התוסף מוחקת את הנתונים המקומיים שלו."
+  },
+  "settings_endpoints": {
+    "message": "נקודות קצה של מודלים"
+  },
+  "settings_endpointsBody": {
+    "message": "מקורות שהורשו כדי שמעבדת הסוכן תוכל לתקשר עם ספק מודל. ביטול הרשאה משבית הרצות מולו עד לאישור מחדש."
+  },
+  "settings_evals": {
+    "message": "חבילות הערכה ותוצאות"
+  },
+  "settings_evalsCount": {
+    "message": "$1 חבילות, $2 תוצאות"
+  },
+  "settings_forgetAgent": {
+    "message": "מחיקת הגדרות ומפתחות של מעבדת הסוכן"
+  },
+  "settings_forgetAgentHelp": {
+    "message": "חזרה למצב ידני: ללא נקודת קצה, ללא מודל וללא מפתח עבור אף ספק."
+  },
+  "settings_forgetBaseline": {
+    "message": "שכח"
+  },
+  "settings_forgetBaselineHelp": {
+    "message": "מחיקת קו הבסיס של אתר זה. הבדיקה החוזרת תפסיק להשוות אליו."
+  },
+  "settings_history": {
+    "message": "היסטוריית הרצות"
+  },
+  "settings_instrumented": {
+    "message": "מנטר"
+  },
+  "settings_items": {
+    "message": "$1 פריטים"
+  },
+  "settings_keyInMemory": {
+    "message": "מפתח בזיכרון"
+  },
+  "settings_keyInMemoryHelp": {
+    "message": "קיים מפתח זמין לספק זה. מפתחות ההפעלה נמחקים בהפעלה מחדש של Chrome או בטעינה מחדש, בעדכון או בהשבתה של התוסף."
+  },
+  "settings_languageAuto": {
+    "message": "ברירת מחדל של הדפדפן (Auto)"
+  },
+  "settings_languageDesc": {
+    "message": "בחר את שפת הממשק של WebMCP Explorer, או השתמש בשפת ברירת המחדל של הדפדפן."
+  },
+  "settings_languageHeading": {
+    "message": "שפה (Language)"
+  },
+  "settings_languageHelp": {
+    "message": "החלף מיידית את שפת הממשק של WebMCP Explorer"
+  },
+  "settings_languageLabel": {
+    "message": "שפת ממשק"
+  },
+  "settings_noAuditedSites": {
+    "message": "לאף אתר אין עדיין קו בסיס. שמרו אחד מסעיף האבטחה."
+  },
+  "settings_noBackend": {
+    "message": "ל-Explorer אין שרת אחורי (Backend): שום דבר אינו נשלח לעולם ל-Corsen AI. הנתונים היחידים שעוזבים את המחשב שלכם הם מה שאתם שולחים למודל שהגדרתם כשאתם לוחצים על הרץ. מדיניות הפרטיות המלאה מופיעה בדף התוסף ב-Chrome Web Store."
+  },
+  "settings_noInstrumented": {
+    "message": "מצב מדידה כבוי בכל האתרים."
+  },
+  "settings_noSites": {
+    "message": "ל-Explorer אין עדיין גישה לאף אתר. פתח דף והשתמש ב\"הפעל את Explorer באתר זה\"."
+  },
+  "settings_notRemoved": {
+    "message": "ההרשאה לא הוסרה."
+  },
+  "settings_oneCall": {
+    "message": "קריאה אחת"
+  },
+  "settings_oneItem": {
+    "message": "פריט אחד"
+  },
+  "settings_overrides": {
+    "message": "דריסות והדמיות (Mocks)"
+  },
+  "settings_permissionError": {
+    "message": "Chrome דחה: $1"
+  },
+  "settings_recheck": {
+    "message": "בדיקה חוזרת של לשוניות פתוחות"
+  },
+  "settings_recheckAlarm": {
+    "message": "מתוזמןכל $1 דקות."
+  },
+  "settings_recheckEvery": {
+    "message": "כל"
+  },
+  "settings_recheckEveryHelp": {
+    "message": "באיזו תדירות הלשוניות הפתוחות נסקרות מחדש."
+  },
+  "settings_recheckHelp": {
+    "message": "בכל מרווח זמן, סוקר מחדש כל לשונית פתוחה שלאתר שלה יש קו בסיס וש-Explorer רשאי לבדוק, ומציג על תג סרגל הכלים את מספר הממצאים החדשים. כבוי כברירת מחדל."
+  },
+  "settings_recheckMinutes": {
+    "message": "$1 דקות"
+  },
+  "settings_recheckNow": {
+    "message": "בדיקה חוזרת כעת"
+  },
+  "settings_recheckNowHelp": {
+    "message": "סקירה מיידית של הלשוניות הפתוחות שיש להן קו בסיס והצגת התוצאה כאן."
+  },
+  "settings_recheckOff": {
+    "message": "לא מתוזמן."
+  },
+  "settings_recheckResult": {
+    "message": "נבדקו $1 אתרים; $2 ממצאים חדשים מאז קו הבסיס שלהם."
+  },
+  "settings_revoke": {
+    "message": "בטל הרשאה"
+  },
+  "settings_revokeHelp": {
+    "message": "ביטול הגישה של Explorer אל $1.‏ Chrome מסיר את ההרשאה מיד."
+  },
+  "settings_savedCalls": {
+    "message": "קריאות שמורות"
+  },
+  "settings_security": {
+    "message": "אבטחה"
+  },
+  "settings_securityBody": {
+    "message": "אתרים עם קו בסיס שמור, והבדיקה החוזרת התקופתית של לשוניות פתוחות. בדיקה חוזרת מריצה את הסקירה הפסיבית הרגילה על לשוניות שכבר פתוחות וש-Explorer רשאי לבדוק; היא לעולם אינה פותחת דף, אינה מריצה בדיקת חדירה ואינה שולחת דבר."
+  },
+  "settings_securityReviewed": {
+    "message": "נתוני סקירת אבטחה"
+  },
+  "settings_securityReviewedHelp": {
+    "message": "ממצאים שסימנתם כ\"נסקרו\", האתרים שהצהרתם שבשליטתכם עבור בדיקות חדירה, קווי הבסיס השמורים והגדרת הבדיקה החוזרת. ניקוי מוחק את כולם."
+  },
+  "settings_siteAccess": {
+    "message": "גישה לאתרים"
+  },
+  "settings_siteAccessBody": {
+    "message": "האתרים ש-Chrome מתיר ל-Explorer לבדוק."
+  },
+  "settings_snapshots": {
+    "message": "תמונות מצב של חוזים"
+  },
+  "settings_snapshotsCount": {
+    "message": "$1 ב-$2 אתרים"
+  },
+  "settings_sourceFinder": {
+    "message": "מאתר מקור הרישום"
+  },
+  "settings_sourceFinderBody": {
+    "message": "אתרים שבהם מצב מדידה (Instrumentation Mode) פעיל. זוהי התכונה היחידה שמשנה את הדף: סקריפט עוטף את רישום ה-WebMCP לפני קוד הדף כדי לאתר היכן כל כלי נרשם. כיבוי ייכנס לתוקף בטעינה הבאה."
+  },
+  "settings_storageUse": {
+    "message": "נפח אחסון בשימוש: כ-$1 KB לפי דיווח Chrome."
+  },
+  "settings_title": {
+    "message": "הגדרות"
+  },
+  "settings_turnOff": {
+    "message": "כיבוי"
+  },
+  "settings_turnOffHelp": {
+    "message": "הפסקת הניטור עבור $1. טענו מחדש את הדף לאחר מכן."
+  },
+  "settings_version": {
+    "message": "WebMCP Explorer $1 · Corsen AI"
+  },
+  "sidepanel_agentLab": {
+    "message": "מעבדת סוכן"
+  },
+  "sidepanel_audit": {
+    "message": "ביקורת"
+  },
+  "sidepanel_clearWhatThePanelRemembers": {
+    "message": "נקה את מה שהחלונית זוכרת עבור כרטיסייה זו. הסדרות, התוצאות וההיסטוריה שלך נשמרות."
+  },
+  "sidepanel_demoPage": {
+    "message": "דף הדגמה"
+  },
+  "sidepanel_evals": {
+    "message": "הערכות"
+  },
+  "sidepanel_noResponseFromTheService": {
+    "message": "אין תגובה מתהליך הרקע (Service Worker)."
+  },
+  "sidepanel_nothingToStopThisPanel": {
+    "message": "אין מה לעצור — החלונית כבר במצב התחלתי."
+  },
+  "sidepanel_originHelp": {
+    "message": "הדף ש-Explorer בודק כעת"
+  },
+  "sidepanel_railLabel": {
+    "message": "מדורים"
+  },
+  "sidepanel_refreshLabel": {
+    "message": "הרץ גילוי כלים מחדש"
+  },
+  "sidepanel_resetLabel": {
+    "message": "עצור ואפס חלונית זו"
+  },
+  "sidepanel_stopTheAgentRunAnd": {
+    "message": "עצור את ריצת הסוכן וסדרת ההערכה בכרטיסייה זו ונקה את זיכרון החלונית."
+  },
+  "sidepanel_timeline": {
+    "message": "ציר זמן"
+  },
+  "snapshots_1ThePageRightNow": {
+    "message": "$1 ← הדף כרגע"
+  },
+  "snapshots_aToolListIsA": {
+    "message": "רשימת כלים היא חוזה מול כל סוכן שמבקר באתר. שמרו תמונת מצב כעת ו-Explorer יוכל להראות לכם בדיוק מה השתנה בפעם הבאה."
+  },
+  "snapshots_added": {
+    "message": "נוסף"
+  },
+  "snapshots_addedHelp": {
+    "message": "כלי זה לא היה קיים קודם."
+  },
+  "snapshots_annotations": {
+    "message": "הערות"
+  },
+  "snapshots_compareCross": {
+    "message": "השווה"
+  },
+  "snapshots_compareCrossHelp": {
+    "message": "מה שונה בין צילום המצב של אותו אתר לבין דף זה, כלי אחר כלי."
+  },
+  "snapshots_compareWithNow": {
+    "message": "השווה למצב הנוכחי"
+  },
+  "snapshots_contractChanged": {
+    "message": "החוזה השתנה"
+  },
+  "snapshots_crossHeader": {
+    "message": "$1, נלקח ב-$2 ← דף זה ($3)"
+  },
+  "snapshots_crossNote": {
+    "message": "שני האתרים נבדלים במקור שלהם, ולכן הכלים מותאמים לפי שם ומסגרת; הבדל המקור עצמו אינו מדווח כשינוי."
+  },
+  "snapshots_deleteThisSnapshot": {
+    "message": "מחיקת תמונת מצב זו"
+  },
+  "snapshots_description": {
+    "message": "תיאור"
+  },
+  "snapshots_empty": {
+    "message": "(ריק)"
+  },
+  "snapshots_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "snapshots_inputSchema": {
+    "message": "סכמת קלט"
+  },
+  "snapshots_labelThisSnapshotBeforeDeploy": {
+    "message": "תייגו תמונת מצב זו — \"לפני פריסה\""
+  },
+  "snapshots_movedFrame": {
+    "message": "עבר מסגרת"
+  },
+  "snapshots_movedFrameHelp": {
+    "message": "אותו כלי, אותו שם, מסגרת שונה. האתר לא מחק ויצר אותו מחדש."
+  },
+  "snapshots_nToolsUnchanged": {
+    "message": "$1 כלים ללא שינוי."
+  },
+  "snapshots_noSnapshotOfThisSite": {
+    "message": "אין תמונות מצב שמורות לאתר זה."
+  },
+  "snapshots_nothingChanged": {
+    "message": "שום דבר לא השתנה"
+  },
+  "snapshots_now": {
+    "message": "כעת"
+  },
+  "snapshots_oneOfTheTwoCaptures": {
+    "message": "אחת משתי הלכידות הייתה חלקית, ולכן כלי שמוצג כ\"הוסר\" אולי פשוט לא נצפה. העניקו גישה למקורות החסרים והשוו שוב כדי להיות בטוחים."
+  },
+  "snapshots_oneToolUnchanged": {
+    "message": "כלי אחד ללא שינוי."
+  },
+  "snapshots_otherSites": {
+    "message": "השווה לאתר אחר"
+  },
+  "snapshots_otherSitesHelp": {
+    "message": "בחר צילום מצב שנלקח באתר אחר — סביבת הבדיקות או הייצור שלך — והשווה דף זה מולו. הכלים מותאמים לפי שם ומסגרת, מאחר ששני האתרים נבדלים במקורם."
+  },
+  "snapshots_partialCapture": {
+    "message": "לכידה חלקית"
+  },
+  "snapshots_pickSite": {
+    "message": "אתר"
+  },
+  "snapshots_pickSnapshot": {
+    "message": "תמונת מצב"
+  },
+  "snapshots_prefixColonText": {
+    "message": "$1: $2"
+  },
+  "snapshots_recordTheToolsThisPage": {
+    "message": "תעד את הכלים שדף זה מצהיר עליהם כעת, להשוואה מאוחרת יותר"
+  },
+  "snapshots_removed": {
+    "message": "הוסר"
+  },
+  "snapshots_removedHelp": {
+    "message": "כלי זה איננו עוד."
+  },
+  "snapshots_saveASnapshot": {
+    "message": "שמירת תמונת מצב"
+  },
+  "snapshots_saved": {
+    "message": "נשמר. $1 שמורים עבור אתר זה."
+  },
+  "snapshots_savedCallsAffected": {
+    "message": "$1 קריאות שמורות דורשות בדיקה: $2"
+  },
+  "snapshots_savedCallsFine": {
+    "message": "$1 קריאות שמורות עדיין מתאימות לסכמה החדשה."
+  },
+  "snapshots_schemaChanges": {
+    "message": "מה השתנה בסכמה:"
+  },
+  "snapshots_schemaMoved": {
+    "message": "הסכמה השתנתה באופן שתיאור זה אינו יכול לפרט; טביעת האצבע השתנתה."
+  },
+  "snapshots_sinceThatSnapshot": {
+    "message": "מאז תמונת מצב זו"
+  },
+  "snapshots_snapshots": {
+    "message": "תמונות מצב"
+  },
+  "snapshots_someFramesWereNotObserved": {
+    "message": "חלק מהמסגרות לא נצפו, ולכן היעדרות בתמונת מצב זו אינה מוכיחה דבר."
+  },
+  "snapshots_title": {
+    "message": "כותרת"
+  },
+  "snapshots_unchanged": {
+    "message": "ללא שינוי"
+  },
+  "snapshots_unknownFrame": {
+    "message": "מסגרת לא ידועה"
+  },
+  "snapshots_unknownTime": {
+    "message": "זמן לא ידוע"
+  },
+  "snapshots_was": {
+    "message": "היה"
+  },
+  "snapshots_whatChanged": {
+    "message": "מה השתנה בחוזה."
+  },
+  "snapshots_whatChangedBetweenThisSnapshot": {
+    "message": "מה השתנה בין תמונת מצב זו לבין הדף כפי שהוא כרגע"
+  },
+  "snapshots_whetherItsSchemaCanBe": {
+    "message": "האם ניתן לקרוא את הסכמה שלו"
+  },
+  "status_1Frame": {
+    "message": "מסגרת אחת"
+  },
+  "status_1Tool": {
+    "message": "כלי אחד"
+  },
+  "status_apiMismatch": {
+    "message": "אי-התאמת API"
+  },
+  "status_compatibility": {
+    "message": "תאימות (Polyfill)"
+  },
+  "status_devFlag": {
+    "message": "דגל פיתוח"
+  },
+  "status_everyOriginExposingToolsIs": {
+    "message": "כל מקור החושף כלים מורשה"
+  },
+  "status_missingApiMethods": {
+    "message": "מתודות API חסרות: $1"
+  },
+  "status_nFrames": {
+    "message": "$1 מסגרות"
+  },
+  "status_nTools": {
+    "message": "$1 כלים"
+  },
+  "status_native": {
+    "message": "מובנה (Native)"
+  },
+  "status_originTrial": {
+    "message": "ניסוי מקור (Origin Trial)"
+  },
+  "status_partialMany": {
+    "message": "גילוי חלקי — $1 מקורות לא מורשים"
+  },
+  "status_partialOne": {
+    "message": "גילוי חלקי — מקור אחד לא מורשה"
+  },
+  "status_partialRefusedHelp": {
+    "message": "אובייקט ה-WebMCP קיים במסגרות אלה אך הדפדפן דחה את הקריאה שמפרטת את הכלים שלהן: $1"
+  },
+  "status_partialRefusedMany": {
+    "message": "גילוי חלקי — הדפדפן דחה $1 מסגרות"
+  },
+  "status_partialRefusedOne": {
+    "message": "גילוי חלקי — הדפדפן דחה מסגרת אחת"
+  },
+  "status_refused": {
+    "message": "נדחה"
+  },
+  "status_securityNew": {
+    "message": "אבטחה: $1 חדשים"
+  },
+  "status_securityNewHelp": {
+    "message": "ממצאים שאינם בקו הבסיס השמור של אתר זה; חומרה מרבית $1. פתחו את סעיף האבטחה לפירוט."
+  },
+  "status_toolsDiscoveredAndFramesExplorer": {
+    "message": "כלים שהתגלו ומסגרות ש-Explorer הצליח להיכנס אליהן"
+  },
+  "status_unavailable": {
+    "message": "לא זמין"
+  },
+  "status_webmcpRuntimeDetectedForThis": {
+    "message": "סביבת ריצת WebMCP שזוהתה עבור לשונית זו"
+  },
+  "timeline_1Ms": {
+    "message": "$1 ms"
+  },
+  "timeline_agent": {
+    "message": "סוכן"
+  },
+  "timeline_clear": {
+    "message": "נקה"
+  },
+  "timeline_discardTheRecordedEvents": {
+    "message": "מחיקת האירועים המוקלטים"
+  },
+  "timeline_explorerObservesToolChangesWithout": {
+    "message": "Explorer עוקב אחר שינויי כלים מבלי לשנות את קוד הדף. כלי שנרשם והוסר בין שתי דגימות לא יופיע כאן. הגילוי ורשימת הכלים תמיד מדויקים; רק הסדר של מחזורים מהירים מאוד עשוי להיות חלקי."
+  },
+  "timeline_exportNote": {
+    "message": "הרישום מפרט כל אירוע מוקלט עם הכלי, המסגרת, משך הזמן והשגיאה שלו, מהישן לחדש. הוא מבוסס דגימה: כלי שנרשם והוסר בין שתי דגימות אינו מופיע בו."
+  },
+  "timeline_exportThisTimeline": {
+    "message": "ייצא ציר זמן זה"
+  },
+  "timeline_kindActivated": {
+    "message": "הופעל"
+  },
+  "timeline_kindCancelled": {
+    "message": "בוטל"
+  },
+  "timeline_kindExecuted": {
+    "message": "בוצע"
+  },
+  "timeline_kindFailed": {
+    "message": "נכשל"
+  },
+  "timeline_kindRegistered": {
+    "message": "נרשם"
+  },
+  "timeline_kindUnregistered": {
+    "message": "הוסר"
+  },
+  "timeline_lifecycle": {
+    "message": "מחזור חיים"
+  },
+  "timeline_nDropped": {
+    "message": "$1 הושמטו (החוצץ מלא)"
+  },
+  "timeline_nMissedPaused": {
+    "message": "$1 הוחמצו בזמן ההשהיה"
+  },
+  "timeline_nRecorded": {
+    "message": "$1 נרשמו"
+  },
+  "timeline_nShown": {
+    "message": "$1 מוצגים"
+  },
+  "timeline_nothingRecordedYetRegistrationsAnd": {
+    "message": "טרם נרשמו אירועים. רישומים וקריאות לכלים יופיעו כאן בזמן אמת."
+  },
+  "timeline_pause": {
+    "message": "השהיה"
+  },
+  "timeline_recordingIsPaused": {
+    "message": "ההקלטה מושהית."
+  },
+  "timeline_resume": {
+    "message": "המשך"
+  },
+  "timeline_sampled": {
+    "message": " · דגימה"
+  },
+  "timeline_showOnly1Events": {
+    "message": "הצגת אירועי $1 בלבד"
+  },
+  "timeline_stopRecordingNewEvents": {
+    "message": "הפסקת הקלטת אירועים חדשים"
+  },
+  "toolDetails_1Params": {
+    "message": "$1 פרמטרים"
+  },
+  "toolDetails_argsSentAsObject": {
+    "message": "דפדפן זה מקבל את הארגומנטים כאובייקט במקום כמחרוזת JSON;‏ Explorer שלח אותם כך."
+  },
+  "toolDetails_autoSubmit": {
+    "message": "שליחה אוטומטית"
+  },
+  "toolDetails_backToTheToolList": {
+    "message": "חזרה לרשימת הכלים"
+  },
+  "toolDetails_cancel": {
+    "message": "ביטול"
+  },
+  "toolDetails_cancelHelp": {
+    "message": "הפסקת ההמתנה לקריאה זו. ב-Chrome 153 ואילך גם הכלי שבדף מקבל הוראה לעצור; כל תשובה שיחזיר לאחר מכן תתבטל."
+  },
+  "toolDetails_cancelled": {
+    "message": "בוטל מתוך Explorer. ייתכן שהכלי בדף עדיין השלים את פעולתו; תשובתו נזנחה."
+  },
+  "toolDetails_cancelling": {
+    "message": "מבטל…"
+  },
+  "toolDetails_changeTheArgumentsAndRun": {
+    "message": "שינוי הארגומנטים והרצה מחדש"
+  },
+  "toolDetails_chars": {
+    "message": "$1 תווים"
+  },
+  "toolDetails_code1": {
+    "message": "קוד: $1"
+  },
+  "toolDetails_consequential": {
+    "message": "בעל השפעה"
+  },
+  "toolDetails_copyRegisterTool": {
+    "message": "העתק registerTool(…)"
+  },
+  "toolDetails_copyRegisterToolHelp": {
+    "message": "העתק קטע קוד מוכן להדבקה של navigator.modelContext.registerTool(…)"
+  },
+  "toolDetails_copyScriptToolConfig": {
+    "message": "העתק ScriptToolConfig"
+  },
+  "toolDetails_copyScriptToolConfigHelp": {
+    "message": "העתק את אובייקט ה-JSON ההצהרתי ScriptToolConfig של כלי זה ללוח"
+  },
+  "toolDetails_debugging": {
+    "message": "ניפוי שגיאות"
+  },
+  "toolDetails_declarativeWaits": {
+    "message": "כלי טופס הצהרתי: ללא שליחה אוטומטית, הדף ממלא את הטופס וממתין ללחיצה ידנית על כפתור השליחה."
+  },
+  "toolDetails_disabled": {
+    "message": "מושבת"
+  },
+  "toolDetails_disabledHelp": {
+    "message": "קריאות לכלי זה נדחות על ידי דריסה פעילה."
+  },
+  "toolDetails_edit": {
+    "message": "ערוך"
+  },
+  "toolDetails_editTheArgumentsAsRaw": {
+    "message": "עריכת הארגומנטים כ-JSON גולמי"
+  },
+  "toolDetails_executeThisToolInIts": {
+    "message": "הרצת כלי זה במסגרת שלו"
+  },
+  "toolDetails_form": {
+    "message": "טופס"
+  },
+  "toolDetails_genericError": {
+    "message": "זהו המשפט של Chrome עצמו, ולא של הכלי: ב-Chrome 153 כל שגיאה שכלי זורק מגיעה לקורא בתור UnknownError עם טקסט זה (נמדד, WMP-0044). הודעת הכלי, אם נרשמה כזו, נמצאת במסוף של הדף."
+  },
+  "toolDetails_goBackToTheGenerated": {
+    "message": "חזרה לטופס שנוצר"
+  },
+  "toolDetails_json": {
+    "message": "</> JSON"
+  },
+  "toolDetails_loading": {
+    "message": "טוען…"
+  },
+  "toolDetails_msInPage": {
+    "message": "$1 מ\"ש בדף"
+  },
+  "toolDetails_msRoundTrip": {
+    "message": "$1 מ\"ש הלוך-חזור"
+  },
+  "toolDetails_overridden": {
+    "message": "מוחלף מקומית"
+  },
+  "toolDetails_overriddenHelp": {
+    "message": "Explorer משנה מקומית את המראה של כלי זה או את מה שהוא מחזיר."
+  },
+  "toolDetails_ranInFrame": {
+    "message": "הורץ במסגרת #$1"
+  },
+  "toolDetails_rawJsonHelp": {
+    "message": "הארגומנטים כ-JSON גולמי. ערכו אותם כאן; מעבר חזרה לטופס יציג את אותם ערכים."
+  },
+  "toolDetails_rawJsonLabel": {
+    "message": "ארגומנטים כ-JSON גולמי"
+  },
+  "toolDetails_readOnly": {
+    "message": "קריאה בלבד"
+  },
+  "toolDetails_reproduce": {
+    "message": "שחזר קריאה זו"
+  },
+  "toolDetails_reproduceNote": {
+    "message": "הדוח והסקריפטים מכילים את הארגומנטים ואת מה שהדף החזיר. הם מציינים את המסגרת, ממתינים לרישום, מסרבים להומונים, ומציינים מתי התוצאה המתועדת הגיעה ממעקף מקומי במקום מהדף."
+  },
+  "toolDetails_result": {
+    "message": "תוצאה"
+  },
+  "toolDetails_runAgain": {
+    "message": "הרץ שוב"
+  },
+  "toolDetails_runTool": {
+    "message": "הרץ כלי"
+  },
+  "toolDetails_running": {
+    "message": "מריץ…"
+  },
+  "toolDetails_schemaNotRenderable": {
+    "message": "לא ניתן להציג סכמה זו כטופס. ראו את ההערה בעורך ה-JSON."
+  },
+  "toolDetails_string": {
+    "message": "מחרוזת"
+  },
+  "toolDetails_stringParsedAsJson": {
+    "message": "מחרוזת · פוענחה כ-JSON"
+  },
+  "toolDetails_tabHistory": {
+    "message": "היסטוריה"
+  },
+  "toolDetails_tabOverride": {
+    "message": "מעקף (Mock)"
+  },
+  "toolDetails_tabRun": {
+    "message": "הרצה"
+  },
+  "toolDetails_tabSchema": {
+    "message": "סכמה"
+  },
+  "toolDetails_theJsonIsNotValid": {
+    "message": "ה-JSON אינו תקין."
+  },
+  "toolDetails_theToolFailed": {
+    "message": "הכלי נכשל."
+  },
+  "toolDetails_theToolReturnedNoValue": {
+    "message": "הכלי לא החזיר ערך. בדרך כלל פירוש הדבר שהקריאה גרמה לניווט בדף."
+  },
+  "toolDetails_theToolReturnedNull": {
+    "message": "הכלי החזיר null.‏ Chrome מעביר זאת כטקסט \"null\", ולכן כלי שמחזיר null וכלי שמחזיר את הטקסט הזה נראים כאן אותו דבר."
+  },
+  "toolDetails_thisSchemaUsesConstructsExplorer": {
+    "message": "סכמה זו משתמשת במבנים ש-Explorer לא ינחש, ולכן הארגומנטים נערכים כ-JSON."
+  },
+  "toolDetails_untrustedContent": {
+    "message": "תוכן לא מהימן"
+  },
+  "toolHistory_1Calls": {
+    "message": "$1 קריאות"
+  },
+  "toolHistory_arguments": {
+    "message": "ארגומנטים"
+  },
+  "toolHistory_calls": {
+    "message": "קריאות"
+  },
+  "toolHistory_callsHelp": {
+    "message": "מספר ההרצות המוקלטות"
+  },
+  "toolHistory_clearHistory": {
+    "message": "נקה היסטוריה"
+  },
+  "toolHistory_deleteEveryRecordedCallFor": {
+    "message": "מחיקת כל הקריאות המוקלטות עבור כל הכלים"
+  },
+  "toolHistory_max": {
+    "message": "מקסימום"
+  },
+  "toolHistory_maxHelp": {
+    "message": "הקריאה האיטית ביותר שתועדה"
+  },
+  "toolHistory_msIncludingHop": {
+    "message": "$1 מ\"ש כולל המעבר בתוסף"
+  },
+  "toolHistory_noRecordedCallForThis": {
+    "message": "אין עדיין קריאות רשומות לכלי זה."
+  },
+  "toolHistory_p50": {
+    "message": "P50"
+  },
+  "toolHistory_p50Help": {
+    "message": "משך זמן חציוני בדף"
+  },
+  "toolHistory_p95": {
+    "message": "P95"
+  },
+  "toolHistory_p95Help": {
+    "message": "האחוזון ה-95 של משך הזמן בדף"
+  },
+  "toolHistory_replay": {
+    "message": "הרץ מחדש"
+  },
+  "toolHistory_replayInFrame1": {
+    "message": "הרצה חוזרת במסגרת #$1"
+  },
+  "toolHistory_resultTruncatedForStorageOriginal": {
+    "message": "התוצאה קוצרה לצורך אחסון. אורך מקורי: $1 תווים."
+  },
+  "toolHistory_runThisToolAgainWith": {
+    "message": "הרץ כלי זה שוב עם ארגומנטים מדויקים אלה"
+  },
+  "toolHistory_success": {
+    "message": "הצלחה"
+  },
+  "toolHistory_successHelp": {
+    "message": "שיעור הקריאות שחזרו ללא שגיאה"
+  },
+  "toolHistory_thisCallWasMadeInFrame1": {
+    "message": "קריאה זו בוצעה במסגרת #$1, שעדיין מחזיקה בכלי. היא תרוץ שם שוב, ולא במסגרת שעליה נפתח מסך זה."
+  },
+  "toolHistory_untimed": {
+    "message": "ללא מדידת זמן"
+  },
+  "toolHistory_untimedHelp": {
+    "message": "קריאות שמעולם לא הגיעו לכלי, ולכן לא נמדד עבורן משך זמן"
+  },
+  "toolOverride_applyOnceThenUseThe": {
+    "message": " החלה פעם אחת בלבד, ולאחר מכן שימוש בכלי האמיתי"
+  },
+  "toolOverride_applyOverride": {
+    "message": "החל מעקף"
+  },
+  "toolOverride_callsReachTheRealTool": {
+    "message": "הקריאות מגיעות לכלי האמיתי."
+  },
+  "toolOverride_deleteThisOverrideEntirely": {
+    "message": "מחיקת דריסה זו לחלוטין"
+  },
+  "toolOverride_descriptionDeclared": {
+    "message": "התיאור שהאתר מצהיר"
+  },
+  "toolOverride_descriptionOverride": {
+    "message": "דריסת תיאור"
+  },
+  "toolOverride_disableThisTool": {
+    "message": " השבת כלי זה"
+  },
+  "toolOverride_emptyResult": {
+    "message": "תוצאה ריקה"
+  },
+  "toolOverride_error": {
+    "message": "שגיאה"
+  },
+  "toolOverride_errorMessage": {
+    "message": "הודעת שגיאה"
+  },
+  "toolOverride_explorerIsChangingWhatThis": {
+    "message": "Explorer משנה את המראה של כלי זה או את מה שהוא מחזיר."
+  },
+  "toolOverride_failAsATimeoutAfter": {
+    "message": "הכשלה כחריגת זמן (Timeout) לאחר ההשהיה שלהלן."
+  },
+  "toolOverride_failWithTheMessageBelow": {
+    "message": "הכשלה עם ההודעה שלהלן, מבלי לקרוא לכלי."
+  },
+  "toolOverride_latencyHelp": {
+    "message": "מוחלת לפני החזרת התשובה, בכל מצבי ההדמיה."
+  },
+  "toolOverride_latencyMs": {
+    "message": "השהיה (מ\"ש)"
+  },
+  "toolOverride_leaveEmptyToKeepThe": {
+    "message": "השאירו ריק כדי לשמור על התיאור שהאתר מצהיר"
+  },
+  "toolOverride_leaveEmptyToKeepThe2": {
+    "message": "השאירו ריק כדי לשמור על הסכמה שהאתר מצהיר"
+  },
+  "toolOverride_malformed": {
+    "message": "פגום (Malformed)"
+  },
+  "toolOverride_mockResponse": {
+    "message": "תגובה מדומה (Mock)"
+  },
+  "toolOverride_noOverrideOnThisTool": {
+    "message": "אין מעקף פעיל לכלי זה."
+  },
+  "toolOverride_none": {
+    "message": "(ללא)"
+  },
+  "toolOverride_off": {
+    "message": "כבוי"
+  },
+  "toolOverride_overrideActive": {
+    "message": "דריסה פעילה"
+  },
+  "toolOverride_response": {
+    "message": "תגובה"
+  },
+  "toolOverride_returnAnEmptyStringThe": {
+    "message": "החזרת מחרוזת ריקה — המקרה שרוב הסוכנים שוכחים לטפל בו."
+  },
+  "toolOverride_returnDeliberatelyInvalidJsonTo": {
+    "message": "החזרת JSON לא תקין במכוון, כדי לבדוק את מסלול הפענוח של הסוכן."
+  },
+  "toolOverride_returnThePayloadBelowInstead": {
+    "message": "החזרת המטען שלהלן במקום לקרוא לכלי."
+  },
+  "toolOverride_schemaDeclared": {
+    "message": "הסכמה שהאתר מצהיר"
+  },
+  "toolOverride_schemaNotJson": {
+    "message": "דריסת הסכמה אינה JSON תקין: $1"
+  },
+  "toolOverride_schemaOverride": {
+    "message": "דריסת סכמה"
+  },
+  "toolOverride_simulatedFailure": {
+    "message": "כשל מדומה"
+  },
+  "toolOverride_success": {
+    "message": "הצלחה"
+  },
+  "toolOverride_theToolStaysListedAnd": {
+    "message": "הכלי נשאר ברשימה ומסומן; קריאות אליו נדחות."
+  },
+  "toolOverride_timeout": {
+    "message": "חריגת זמן"
+  },
+  "toolResult_reproUnavailable": {
+    "message": "לא ניתן היה לקרוא את הדריסות הפעילות. פתחו מחדש תוצאה זו כדי לייצא שחזור מדויק."
+  },
+  "toolResult_reproduceHelp": {
+    "message": "העתקה או הורדה של קריאה זו כ-Markdown,‏ JSON, קטע קוד למסוף או סקריפט Playwright."
+  },
+  "toolResult_saveCheck": {
+    "message": "שמירה כבדיקה"
+  },
+  "toolResult_saveCheckHelp": {
+    "message": "שמירת ארגומנטים אלה ותוצאה זו כתוצאה מצופה להרצות עתידיות."
+  },
+  "toolResult_showAll": {
+    "message": "הצגת כל $1 התווים"
+  },
+  "toolResult_showAllHelp": {
+    "message": "הצגת התוצאה המלאה בחלונית. טקסט ארוך מאוד עשוי לקחת רגע לציור."
+  },
+  "toolResult_shownPartial": {
+    "message": "מוצגים $1 התווים הראשונים מתוך $2. החלונית נשארת מהירה; התשובה המלאה במרחק לחיצה אחת."
+  },
+  "toolResult_shownWhole": {
+    "message": "מוצגים כל $1 התווים."
+  },
+  "toolSource_calledFrom1More": {
+    "message": "נקרא מ-$1 מקומות נוספים"
+  },
+  "toolSource_capturedAtRegistration": {
+    "message": "נלכד בעת הרישום"
+  },
+  "toolSource_explorerCanRecordWhereEach": {
+    "message": "Explorer יכול לתעד היכן כל כלי נרשם, אך רק מהרגע שבו הוא מאזין. עליו לפעול לפני שהדף רץ, ולכן הדבר משנה את הדף ונשאר כבוי עד שתבקש זאת — באתר זה בלבד."
+  },
+  "toolSource_explorerWillWrapRegistertoolOn": {
+    "message": "Explorer יעטוף את registerTool באתר זה כדי לתעד מהיכן מגיע כל כלי. פעולה זו משנה את הדף, ולכן היא נשארת כבויה עד שתבקש."
+  },
+  "toolSource_in1": {
+    "message": "בתוך ‎$1()‎"
+  },
+  "toolSource_offForThisSiteReload": {
+    "message": "כבוי עבור אתר זה. טענו מחדש את הדף כדי להריצו שוב ללא מעטפת."
+  },
+  "toolSource_onForThisSiteBut": {
+    "message": "פעיל עבור אתר זה, אך כלי זה נרשם לפני שהמדידה החלה. טענו מחדש את הדף."
+  },
+  "toolSource_onForThisSiteReload": {
+    "message": "הופעל עבור אתר זה. טענו מחדש את הדף — לא ניתן להתחקות בדיעבד אחר כלי שכבר נרשם."
+  },
+  "toolSource_recordedByInstrumentationModeWhen": {
+    "message": "תועד על ידי מצב מדידה כשהדף קרא ל-registerTool. לא הוסק בעקיפין."
+  },
+  "toolSource_registeredTimes": {
+    "message": "נרשם $1 פעמים"
+  },
+  "toolSource_registeredTimesHelp": {
+    "message": "הדף רשם שם זה יותר מפעם אחת. המיקום המוצג הוא הראשון."
+  },
+  "toolSource_source": {
+    "message": "מקור"
+  },
+  "toolSource_sourceDotLocation": {
+    "message": "מקור · $1"
+  },
+  "toolSource_theSourceIsNotKnown": {
+    "message": "המקור אינו ידוע."
+  },
+  "toolSource_turnOffInstrumentationMode": {
+    "message": "כבה מצב ניטור מקור"
+  },
+  "toolSource_turnOnInstrumentationMode": {
+    "message": "הפעל מצב ניטור מקור"
+  },
+  "toolsHeading": {
+    "message": "כלים"
+  },
+  "tools_changeTheSortOrder": {
+    "message": "שנה את סדר המיון"
+  },
+  "tools_checksExportNote": {
+    "message": "הדוח מכיל את הארגומנטים והתוצאות של כל בדיקה; אלו נתונים שהדף החזיר."
+  },
+  "tools_checksIntro": {
+    "message": "הריצו בדיקות שמורות לאחר פריסה. כלים חסרים, כולל אלו ממסגרות, נשארים בדוח."
+  },
+  "tools_checksLegacyScope": {
+    "message": "לבדיקות ישנות חסר הקשר האתר שלהן. שמרו אותן מחדש בזמן שהכלים שלהן קיימים כדי לעקוב אחר כלים חסרים ממסגרות ממקור אחר."
+  },
+  "tools_checksReadiness": {
+    "message": "לפני הרצה: $1 בדיקות אינן יכולות להשתמש בכלים הרשומים כעת."
+  },
+  "tools_checksReadinessHelp": {
+    "message": "אף בדיקה לא הורצה. בדקו את הדף והמסגרות שלו, או עדכנו את הבדיקה השמורה כך שתתאים לכלי הנוכחי. רעננו את הכלים לאחר שינוי הדף."
+  },
+  "tools_checksReviewReason": {
+    "message": "דורש בדיקה: $1"
+  },
+  "tools_checksRun": {
+    "message": "הרץ את כל הבדיקות לאתר זה"
+  },
+  "tools_checksRunHelp": {
+    "message": "מריץ כל בדיקה שמורה של כל כלי בדף זה, זו אחר זו, במסגרת שבה חי כל כלי. כלי שנעלם מדווח ולא מדולג בשקט."
+  },
+  "tools_checksRunning": {
+    "message": "מריץ $1 מתוך $2…"
+  },
+  "tools_checksSummary": {
+    "message": "$1 עברו, $2 נכשלו, $3 דורשים בדיקה, $4 חסרים."
+  },
+  "tools_checksTitle": {
+    "message": "בדיקות שמורות לאתר זה ($1)"
+  },
+  "tools_checksToolGone": {
+    "message": "הכלי נעלם — אין מופע פעיל של $1 בדף זה"
+  },
+  "tools_countAll": {
+    "message": "$1 כלים"
+  },
+  "tools_countShown": {
+    "message": "$1 מתוך $2 כלים"
+  },
+  "tools_exportThisPageSTools": {
+    "message": "ייצא את הכלים של דף זה"
+  },
+  "tools_filterByNameDescriptionOr": {
+    "message": "סנן לפי שם, תיאור או מקור"
+  },
+  "tools_frame": {
+    "message": "מסגרת (Frame)"
+  },
+  "tools_inputsNone": {
+    "message": "ללא קלט"
+  },
+  "tools_inputsOptional": {
+    "message": "אופציונלי: $1"
+  },
+  "tools_inputsRequired": {
+    "message": "נדרש: $1"
+  },
+  "tools_name": {
+    "message": "שם"
+  },
+  "tools_noToolMatchesTheseFilters": {
+    "message": "אף כלי אינו תואם למסננים אלה."
+  },
+  "tools_open1ToInspectIts": {
+    "message": "פתח את $1 כדי לבדוק את הסכמה שלו ולהריץ אותו"
+  },
+  "tools_origin": {
+    "message": "מקור (Origin)"
+  },
+  "tools_schemaError": {
+    "message": "שגיאת סכמה"
+  },
+  "tools_searchTools": {
+    "message": "חיפוש כלים"
+  },
+  "tools_searchToolsByNameDescription": {
+    "message": "חפש כלים לפי שם, תיאור או מקור"
+  },
+  "tools_sort1": {
+    "message": "מיון: $1"
+  },
+  "tools_theReportListsTheTools": {
+    "message": "הדוח מפרט את הכלים, התיאורים והסכמות שלהם כפי שדף זה מצהיר עליהם, וכן כל דבר ש-Explorer לא יכול היה לצפות בו."
+  },
+  "tools_titleHelp": {
+    "message": "הכותרת שהדף נתן לכלי זה, לצד שמו."
+  },
+  "vault_passphrase": {
+    "message": "ביטוי סיסמה ראשי"
+  },
+  "vault_passphraseHelp": {
+    "message": "לפחות 12 תווים. נדרש לפתיחה או לשינוי מפתחות מוצפנים. אינו נשמר."
+  },
+  "vault_error": {
+    "message": "הפעולה נכשלה. יש לבדוק את ביטוי הסיסמה ואת נפח האחסון הפנוי."
+  },
+  "vault_create": {
+    "message": "הפעלת אחסון מוצפן"
+  },
+  "vault_unlock": {
+    "message": "פתיחת הכספת"
+  },
+  "vault_lock": {
+    "message": "נעילה ומחיקת מפתחות ההפעלה"
+  },
+  "vault_session": {
+    "message": "שמירת המפתחות להפעלה זו בלבד"
+  },
+  "vault_delete": {
+    "message": "מחיקת הכספת וכל המפתחות"
+  },
+  "vault_deleteHelp": {
+    "message": "מחיקת האחסון המוצפן ומפתחות ההפעלה של כל הספקים. יש ללחוץ פעמיים לאישור."
+  },
+  "vault_confirmDelete": {
+    "message": "אישור: מחיקת כל המפתחות"
+  },
+  "vault_locked": {
+    "message": "כספת מוצפנת — נעולה"
+  },
+  "vault_unlocked": {
+    "message": "כספת מוצפנת — פתוחה להפעלה זו"
+  },
+  "vault_optional": {
+    "message": "כספת מוצפנת אופציונלית"
+  },
+  "vault_help": {
+    "message": "שמירת מפתחות מוצפנים במכשיר ופתיחתם פעם אחת בכל הפעלת דפדפן. שינויים דורשים הזנה חוזרת של ביטוי הסיסמה. ביטוי שנשכח אינו ניתן לשחזור."
+  },
+  "vault_keyAvailable": {
+    "message": "קיים מפתח זמין לספק זה."
+  },
+  "vault_sessionHelp": {
+    "message": "מפתחות ההפעלה נמחקים בהפעלה מחדש של Chrome או בטעינה מחדש, בעדכון או בהשבתה של התוסף."
+  },
+  "emulation_enable": {
+    "message": "הפעלת הדמיית JS לאתר זה"
+  },
+  "emulation_disable": {
+    "message": "השבתת הדמיית JS"
+  },
+  "emulation_active": {
+    "message": "הדמיית JS מופעלת להפעלה זו"
+  },
+  "emulation_help": {
+    "message": "הדמיית JS אופציונלית לאתר למשך הפעלת הדפדפן. נדרשים הרשאת גישה וטעינה מחדש. טופסי HTML מוצגים למידע בלבד; הגנות הדפדפן המקוריות אינן מדומות."
+  },
+  "emulation_reload": {
+    "message": "יש לטעון את הדף מחדש להחלת השינוי. שינויים שלא נשמרו עלולים להימחק."
+  },
+  "emulation_reloadButton": {
+    "message": "טעינת הדף מחדש"
+  },
+  "emulation_inventoryOnly": {
+    "message": "לצפייה בלבד"
+  },
+  "emulation_inventoryHelp": {
+    "message": "הרצת טופס HTML זה דורשת WebMCP מקורי. הסכמה משוערת; לא ניתן להסיק אילו בדיקות מבצע מטפל השליחה."
+  },
+  "emulation_inferred": {
+    "message": "סכמה שהוסקה מ־HTML"
+  },
+  "execution_unknown": {
+    "message": "ייתכן שהפעולה כבר בוצעה. Explorer לא ינסה שוב. יש לבדוק את הדף לפני בקשה חדשה."
+  },
+  "execution_trace": {
+    "message": "מנוע: $1 · ארגומנטים: $2 · הפעלות: $3"
+  },
+  "vault_lockHelp": {
+    "message": "מחיקה מיידית של מטמון ההפעלה המפוענח; הכספת המוצפנת נשארת במכשיר."
+  },
+  "vault_sessionModeHelp": {
+    "message": "פענוח באמצעות ביטוי הסיסמה, הסרת הכספת הקבועה ושמירת המפתחות בזיכרון ההפעלה בלבד."
+  },
+  "invocation_receiptsHelp": {
+    "message": "רישומי הפעלות: $1. גיבובי זהות ומצבים מונעים הרצה חוזרת לאחר ניקוי ההיסטוריה. אינם כוללים ארגומנטים, תוצאות או מפתחות ונמחקים בהסרת התוסף."
+  },
+  "security_scoreValue": {
+    "description": "Phase B security review.",
+    "message": "$1/100 · דירוג $2 · זמני",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "security_scoreUnavailable": {
+    "description": "Phase B security review.",
+    "message": "אין ציון: לא נצפו כלים"
+  },
+  "security_scoreCaution": {
+    "description": "Phase B security review.",
+    "message": "סקירה היוריסטית של הצהרות גלויות, לא אישור אבטחה. הבדיקות הלא ידועות מפורטות למטה. ציון גבוה אינו מתיר פעולה."
+  },
+  "security_scoreMethod": {
+    "description": "Phase B security review.",
+    "message": "כיצד מחושב הציון"
+  },
+  "security_scoreFormula": {
+    "description": "Phase B security review.",
+    "message": "נוסחה v1: מתחילים ב־100. מפחיתים פעם אחת את החומרה המרבית לכל כלל/כלי: קריטית 40, גבוהה 20, בינונית 10, נמוכה 5, מידע 0. תקרה קריטית: 49; מינימום: 0. A ≥90, B ≥80, C ≥70, D ≥60, E ≥50, F <50. הסתרה או סימון כנסקר אינם משנים ציון."
+  },
+  "security_showFix": {
+    "description": "Phase B security review.",
+    "message": "הצגת תיקון מוצע"
+  },
+  "security_copyFix": {
+    "description": "Phase B security review.",
+    "message": "העתקת התיקון"
+  },
+  "security_copyFixHelp": {
+    "description": "Phase B security review.",
+    "message": "העתקת התבנית ללא החלה או הפעלה."
+  },
+  "security_fixCopied": {
+    "description": "Phase B security review.",
+    "message": "התיקון המוצע הועתק"
+  },
+  "security_fixCopyError": {
+    "description": "Phase B security review.",
+    "message": "ההעתקה נכשלה. יש לבחור את הקוד ולהעתיק ידנית."
+  },
+  "security_fixReview": {
+    "description": "Phase B security review.",
+    "message": "תבנית לבדיקה בידי מפתח, ללא החלה אוטומטית. יש לבדוק שמות, מגבלות, אימות והרשאות שרת. המימוש הזמני מסרב לפעול."
+  },
+  "security_no_authenticationConsent": {
+    "description": "Phase B security review.",
+    "message": "אי אפשר לאמת התחברות, הרשאות שרת ואישור אנושי מהחוזה: $1. פרטי גישה של ההפעלה לא נבדקו.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_schemaLimits": {
+    "description": "Phase B security review.",
+    "message": "סקירת הסכמה חלקית: $1. הפניות מרוחקות אינן נשלפות.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_similarityLimit": {
+    "description": "Phase B security review.",
+    "message": "השוואת התיאורים הגיעה למגבלה: $1. בזוגות שלא נבדקו תיתכן עמימות נוספת.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_originScan": {
+    "description": "Phase B security review.",
+    "message": "כותרות וקובצי גילוי של המקור לא התבקשו. לבדיקתם יש להשתמש בסריקת המקור למטה."
+  },
+  "security_no_originScanIncomplete": {
+    "description": "Phase B security review.",
+    "message": "סריקת המקור חלקית: תגובה לא זמינה, הופנתה או נקטעה. לא נעשה ניסיון חוזר."
+  },
+  "sec_text_active_payload_title": {
+    "description": "Phase B security review.",
+    "message": "סמן מטען פעיל בטקסט הכלי"
+  },
+  "sec_text_active_payload_why": {
+    "description": "Phase B security review.",
+    "message": "תגיות סקריפט, הוראות עוקפות או תמונות Markdown חיצוניות עשויות להסיט סוכן. זהו סימן, לא הוכחה להרצה או לדליפה."
+  },
+  "sec_text_active_payload_fix": {
+    "description": "Phase B security review.",
+    "message": "יש להחליף הוראות לסוכן בתיאור עובדתי ולבדוק את כל תיאורי הסכמה. יש להפריד טקסט לא מהימן מהוראות מהימנות."
+  },
+  "sec_mutation_hints_incomplete_title": {
+    "description": "Phase B security review.",
+    "message": "כוונת השינוי אינה מוצהרת במלואה"
+  },
+  "sec_mutation_hints_incomplete_why": {
+    "description": "Phase B security review.",
+    "message": "הפועל מרמז על שינוי מצב. רמזי WebMCP הם הצהרתיים ואינם אוכפים אישור או הרשאה."
+  },
+  "sec_mutation_hints_incomplete_fix": {
+    "description": "Phase B security review.",
+    "message": "לשינוי שנבדק יש להגדיר readOnlyHint:false ו־consequentialHint:true. יש לממש אישור והרשאת שרת בנפרד."
+  },
+  "sec_permissive_object_title": {
+    "description": "Phase B security review.",
+    "message": "סכמת האובייקט מאפשרת קלט לא מוצהר"
+  },
+  "sec_permissive_object_why": {
+    "description": "Phase B security review.",
+    "message": "מאפיינים נוספים מותרים, או שלכלי רגיש חסר גבול אובייקט סגור. הממצא מתאר את הסכמה, לא את אימות השרת."
+  },
+  "sec_permissive_object_fix": {
+    "description": "Phase B security review.",
+    "message": "יש לבחון additionalProperties:false ומגבלות מקוננות. יש לבדוק סכמות מורכבות ותאימות לפני סגירת אובייקטים ולאמת גם בשרת."
+  },
+  "sec_mutating_auto_submit_title": {
+    "description": "Phase B security review.",
+    "message": "טופס משנה מצב יכול להישלח אוטומטית"
+  },
+  "sec_mutating_auto_submit_why": {
+    "description": "Phase B security review.",
+    "message": "toolautosubmit מסיר את שלב השליחה הידנית המובנה. אימות ומנגנוני אישור מותאמים אינם ידועים. agentInvoked מציין מקור ולא הסכמה אנושית."
+  },
+  "sec_mutating_auto_submit_fix": {
+    "description": "Phase B security review.",
+    "message": "בפעולות רגישות יש לשקול להסיר toolautosubmit. יש לקשור בשרת את ההרשאה והאישור לחשבון, לארגומנטים ולפעולה המדויקים."
+  },
+  "sec_legacy_registration_title": {
+    "description": "Phase B security review.",
+    "message": "נצפה רישום מיושן"
+  },
+  "sec_legacy_registration_why": {
+    "description": "Phase B security review.",
+    "message": "הרישום שנצפה משתמש ב־navigator או ב־provideContext. התאימות תלויה בזמן הריצה; עצם הנוכחות אינה ניצול."
+  },
+  "sec_legacy_registration_fix": {
+    "description": "Phase B security review.",
+    "message": "לאחר בדיקת דפדפן היעד יש לעבור ל־document.modelContext.registerTool עם ניקוי באמצעות AbortSignal. אין לרשום את פונקציית הקריאה פעמיים."
+  },
+  "sec_token_estimate_over_budget_title": {
+    "description": "Phase B security review.",
+    "message": "חריגה מתקציב התיאור המשוער"
+  },
+  "sec_token_estimate_over_budget_why": {
+    "description": "Phase B security review.",
+    "message": "ההערכה עולה על 800 טוקנים, לפי בתי UTF-8 חלקי ארבע בעיגול כלפי מעלה. המספר המדויק תלוי במפצל הטוקנים של המודל."
+  },
+  "sec_token_estimate_over_budget_fix": {
+    "description": "Phase B security review.",
+    "message": "יש לקצר תיאורים בלי להסיר מגבלות נחוצות. לתקציב מדויק יש למדוד במפצל הטוקנים של מודל היעד."
+  },
+  "sec_ambiguous_description_title": {
+    "description": "Phase B security review.",
+    "message": "תיאורים דומים עלולים לבלבל את הבחירה"
+  },
+  "sec_ambiguous_description_why": {
+    "description": "Phase B security review.",
+    "message": "לשמות כלים שונים יש דמיון Jaccard של לפחות 0.80 בקבוצת המילים. חפיפה לשונית אינה מוכיחה התנהגות זהה."
+  },
+  "sec_ambiguous_description_fix": {
+    "description": "Phase B security review.",
+    "message": "יש לתאר את ההיקף, הקלט והתוצאה הייחודיים לכל פעולה. יש להימנע מהוראות להעדיף כלי או לקרוא לאחר קודם."
+  },
+  "sec_convention_csp_title": {
+    "description": "Phase B security review.",
+    "message": "נצפתה כותרת CSP בתגובה"
+  },
+  "sec_convention_csp_why": {
+    "description": "Phase B security review.",
+    "message": "זהו רישום כותרת מתגובה ללא פרטי גישה, לא המדיניות האפקטיבית. העדר כותרת אינו שולל מדיניות meta."
+  },
+  "sec_convention_csp_fix": {
+    "description": "Phase B security review.",
+    "message": "יש לבדוק CSP מול הסקריפטים והחיבורים בפועל ולנסות שינויים עם Report-Only ובדיקות יישום."
+  },
+  "sec_convention_cors_title": {
+    "description": "Phase B security review.",
+    "message": "נצפו כותרות CORS בתגובה"
+  },
+  "sec_convention_cors_why": {
+    "description": "Phase B security review.",
+    "message": "ראיות מכותרות בלבד; לא נבדקה בקשת דפדפן בין מקורות. מקור כללי עם פרטי גישה אינו תואם CORS מאומת, אך אינו הוכחה לדליפה."
+  },
+  "sec_convention_cors_fix": {
+    "description": "Phase B security review.",
+    "message": "יש להתיר רק מקורות מיועדים לפי הצורך. אין להפעיל CORS כללי כדי להשתיק אבחון; יש לבדוק התנהגות מאומתת בנפרד."
+  },
+  "sec_convention_unavailable_title": {
+    "description": "Phase B security review.",
+    "message": "תגובת הגילוי חסרה או חלקית"
+  },
+  "sec_convention_unavailable_why": {
+    "description": "Phase B security review.",
+    "message": "התגובה נכשלה, הופנתה, חרגה מהמגבלה או החזירה מצב כשל. קובצי גילוי אופציונליים אינם נקודות קצה חובה של WebMCP."
+  },
+  "sec_convention_unavailable_fix": {
+    "description": "Phase B security review.",
+    "message": "יש לבדוק את התגובה אם הייתה כוונה לפרסם את המוסכמה. העדר לבדו אינו מחייב תיקון אבטחה; לא נעשה ניסיון חוזר אוטומטי."
+  },
+  "bridge_title": {
+    "message": "גשר MCP מקומי",
+    "description": "Phase C local bridge."
+  },
+  "bridge_intro": {
+    "message": "חברו לקוח MCP מקומי מהימן ללשוניות ששיתפתם במפורש. הרשאת אתר לבדה אינה משתפת לשונית. ניווט, ביטול הרשאה וחיבור מחדש מנקים את הקישורים.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pairingNote": {
+    "message": "התצורה המועתקת מכילה סוד להפעלת דפדפן זו. שמרו אותה בלקוח MCP מהימן. הפעלת הדפדפן מחדש או טעינת התוסף מחדש מחייבות צימוד חדש. המלווה פועל מקומית עם Node.js ללא תלויות.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_port": {
+    "message": "יציאת הגשר",
+    "description": "Phase C local bridge."
+  },
+  "bridge_portHelp": {
+    "message": "יציאה 1024–65535. החיבור תמיד ל־127.0.0.1; כתובות מרוחקות נדחות.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeout": {
+    "message": "זמן לאישור (שניות)",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeoutHelp": {
+    "message": "בין 5 ל־60 שניות. ללא מענה, בניתוק או בתום הזמן הקריאה נדחית.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_path": {
+    "message": "סקריפט מלווה מקומי (אופציונלי)",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathPlaceholder": {
+    "message": "ברירת מחדל: פקודת webmcp-bridge המותקנת",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathHelp": {
+    "message": "לעותק מקומי לא מותקן יש להזין נתיב מוחלט אל packages/webmcp-bridge/cli.mjs. Explorer מעתיק תצורה ואינו מפעיל פקודות.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_auto": {
+    "message": "אישור אוטומטי לקריאות מתאימות בלבד",
+    "description": "Phase C local bridge."
+  },
+  "bridge_autoHelp": {
+    "message": "רמזים עלולים להיות שגויים. ממצאים קריטיים/גבוהים, סימני שינוי, כלים בעלי השלכות וארגומנטים לא בדוקים עדיין דורשים אישור. ציון לבדו אינו מעניק הרשאה.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enable": {
+    "message": "הפעלה למפגש זה",
+    "description": "Phase C local bridge."
+  },
+  "bridge_disable": {
+    "message": "ניתוק",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enableHelp": {
+    "message": "הפעלה או ניתוק של הגשר המקומי. ניתוק מנקה שיתופים ואישורים.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_save": {
+    "message": "שמירת הגדרות הגשר",
+    "description": "Phase C local bridge."
+  },
+  "bridge_saveHelp": {
+    "message": "החלת היציאה, הזמן והעדפת הקריאה למפגש זה. שינוי יציאה מחבר מחדש ומנקה שיתופי לשוניות.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyConfig": {
+    "message": "העתקת תצורת לקוח MCP",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyHelp": {
+    "message": "העתקת הפקודה המקומית, היציאה, זהות התוסף וסוד המפגש ללקוח MCP מהימן.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copied": {
+    "message": "תצורת המפגש הועתקה",
+    "description": "Phase C local bridge."
+  },
+  "bridge_tab": {
+    "message": "לשונית לשיתוף",
+    "description": "Phase C local bridge."
+  },
+  "bridge_share": {
+    "message": "שיתוף הלשונית שנבחרה",
+    "description": "Phase C local bridge."
+  },
+  "bridge_shareHelp": {
+    "message": "חשיפת כלים רק מהלשונית שנבחרה וכבר הורשתה. בדקו את המקור לפני שיתוף.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshare": {
+    "message": "הפסקת שיתוף",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshareHelp": {
+    "message": "ביטול מיידי של כלי הלשונית ודחיית אישורים ממתינים.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reset": {
+    "message": "מחיקת הצימוד",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resetHelp": {
+    "message": "ניתוק, ניקוי כל השיתופים ומחיקת סוד הצימוד של המפגש.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resume": {
+    "message": "בדקתי את ההשפעה הלא ידועה — המשך",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resumeHelp": {
+    "message": "אישור שבדקתם את הפעולה הלא ודאית. דבר לא יופעל מחדש; יש לשתף לשוניות שוב לפני בקשות חדשות.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unknown": {
+    "message": "מושהה עקב השפעה לא ידועה. יש לבדוק את הדף לפני המשך; שום קריאה לא הופעלה מחדש.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status": {
+    "message": "גשר: $1",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_status_disabled": {
+    "message": "מושבת",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connecting": {
+    "message": "מאמת מלווה מקומי",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connected": {
+    "message": "מאומת ומחובר",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_reconnecting": {
+    "message": "ממתין למלווה מאומת",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_authentication_failed": {
+    "message": "האימות נדחה",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_error": {
+    "message": "החיבור אינו זמין",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approvalTitle": {
+    "message": "Corsen Guard — נדרש אישור",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reasons": {
+    "message": "סיבות לבדיקה: $1. ה־JSON להלן מדויק; תווי בקרה סמויים מוצגים כבריחות.",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_deadline": {
+    "message": "ללא אישור תתבצע דחייה אוטומטית בעוד $1 שניות.",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_approve": {
+    "message": "אישור חד־פעמי",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approveHelp": {
+    "message": "אישור הבקשה המדויקת בלבד. שינוי מקור, מסמך, חוזה או פקיעת תוקף גורמים לדחייה.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_deny": {
+    "message": "דחייה",
+    "description": "Phase C local bridge."
+  },
+  "bridge_denyHelp": {
+    "message": "דחיית הבקשה ללא הפעלת כלי הדף.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_expired": {
+    "message": "האישור פג או בוטל. לא נשלחה פעולה חדשה.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_manual_mode": {
+    "message": "אישור לכל קריאה",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_not_read_only": {
+    "message": "לא הוצהר כקריאה בלבד",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_consequential": {
+    "message": "בעל השלכות או הרסני",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_mutating": {
+    "message": "שינוי מצב אפשרי",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_critical": {
+    "message": "ממצא קריטי בשלב B",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_high": {
+    "message": "ממצא בחומרה גבוהה בשלב B",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_incomplete_schema": {
+    "message": "סכמה חלקית",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_unchecked_arguments": {
+    "message": "ארגומנטים שלא נבדקו במלואם",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_uncaptured_annotations": {
+    "message": "הערות הרישום לא נלכדו"
+  },
+  "export_copySpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "העתקת בדיקת Playwright"
+  },
+  "export_saveSpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "שמירת בדיקת Playwright"
+  },
+  "export_playwrightHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "ייצוא בדיקת .spec.ts עצמאית עם בדיקות חוזה ותוצאות. יש לבדוק נתונים ולבחור מזהה ריצה מפורש לפני הפעלה. ללא ניסיונות חוזרים אוטומטיים."
+  },
+  "export_specNeedsData": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "ייצוא להפעלה דורש ארגומנטים ותוצאות מלאים. יש להחזיר תחילה את הסעיפים."
+  },
+  "export_sarifHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "SARIF 2.1.0 לסקירת CI. הערות בקוד דורשות מיפוי מיקומי זמן ריצה למאגר; לא מומצאים קבצים או שורות."
+  },
+  "status_legacy": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "API ישן"
+  },
+  "status_emulated": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS מדומה"
+  },
+  "status_inventorySplit": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS $1 · טפסים $2 · ? $3",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "status_inventoryHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "רישומים שנצפו: JS לכלים אימפרטיביים שנלכדו, טפסים לכלים הצהרתיים שזוהו, ? ללא סיווג. אין הסקה על שורשי Shadow סגורים."
+  },
+  "status_grade": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "דירוג $1*",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_copyFlag": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "העתקת כתובת הדגל"
+  }
+}

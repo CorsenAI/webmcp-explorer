@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Basic WebMCP tools</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Basic tools</h1>
+<p id="state">registering…</p>
+<script type="module">
+import { registerDemoTool, report } from './register.js';
+
+const ok1 = registerDemoTool(
+  'search_products',
+  'Search the product catalogue by keyword, category and maximum price.',
+  {
+    type: 'object',
+    properties: {
+      query: { type: 'string', description: 'Free text search' },
+      category: { type: 'string', enum: ['laptops', 'phones', 'audio'] },
+      maxPrice: { type: 'number', minimum: 0 },
+    },
+    required: ['query'],
+  },
+  { products: [{ id: 'p1', name: 'MacBook Air', price: 1199 }] },
+);
+
+const ok2 = registerDemoTool(
+  'add_to_cart',
+  'Add a product to the shopping cart.',
+  {
+    type: 'object',
+    properties: {
+      sku: { type: 'string' },
+      quantity: { type: 'integer', minimum: 1, default: 1 },
+    },
+    required: ['sku'],
+  },
+  { added: true },
+  { consequentialHint: true },
+);
+
+report(ok1 && ok2 ? 'two tools registered' : 'WebMCP unavailable — enable the flag');
+</script>
+</body>
+</html>

@@ -1,0 +1,4942 @@
+{
+  "actionTitle": {
+    "message": "فتح WebMCP Explorer"
+  },
+  "agentSessions_allChats": {
+    "message": "جميع المحادثات"
+  },
+  "agentSessions_allChatsHelp": {
+    "message": "عرض جميع المحادثات في هذا الموقع."
+  },
+  "agentSessions_allChatsShort": {
+    "message": "الكل"
+  },
+  "agentSessions_continuing": {
+    "message": "متابعة هذه المحادثة ($1 أهداف مسجلة) — سيرى النموذج كل ما قيل حتى الآن."
+  },
+  "agentSessions_continuingOne": {
+    "message": "متابعة هذه المحادثة — سيرى النموذج ما قيل سابقاً."
+  },
+  "agentSessions_delete": {
+    "message": "حذف"
+  },
+  "agentSessions_deleteHelp": {
+    "message": "حذف هذه المحادثة من هذا الجهاز."
+  },
+  "agentSessions_empty": {
+    "message": "لا يوجد شيء بعد. تُحفظ جلسات التشغيل المكتملة هنا على هذا الجهاز فقط."
+  },
+  "agentSessions_groupDeleteHelp": {
+    "message": "حذف هذه المجموعة. تبقى محادثاتها محفوظة في السجل."
+  },
+  "agentSessions_groupEmpty": {
+    "message": "لا توجد محادثات في هذه المجموعة بعد."
+  },
+  "agentSessions_groupNew": {
+    "message": "+ مجموعة"
+  },
+  "agentSessions_groupNewHelp": {
+    "message": "إنشاء مجموعة لتنظيم محادثات هذا الموقع."
+  },
+  "agentSessions_groupNewPrompt": {
+    "message": "اسم المجموعة الجديدة:"
+  },
+  "agentSessions_historyHelp": {
+    "message": "عمليات التشغيل المكتملة في هذا الموقع، والمحفوظة على هذا الجهاز فقط. افتح إحداها لقراءتها مجددًا أو متابعتها."
+  },
+  "agentSessions_historyN": {
+    "message": "سجل المحادثات ($1)"
+  },
+  "agentSessions_historyOne": {
+    "message": "سجل المحادثات (1)"
+  },
+  "agentSessions_moveToGroup": {
+    "message": "نقل هذه المحادثة إلى مجموعة"
+  },
+  "agentSessions_nTurns": {
+    "message": "$1 أهداف"
+  },
+  "agentSessions_new": {
+    "message": "جلسة جديدة"
+  },
+  "agentSessions_newHelp": {
+    "message": "بدء محادثة جديدة. تبقى الجلسات السابقة في السجل."
+  },
+  "agentSessions_noGroup": {
+    "message": "بدون مجموعة"
+  },
+  "agentSessions_oneTurn": {
+    "message": "هدف واحد"
+  },
+  "agentSetup_aKeyIsStoredType": {
+    "message": "يوجد مفتاح محفوظ — اكتب لاستبداله"
+  },
+  "agentSetup_aRunThatHitsA": {
+    "message": "يتوقف التشغيل عند بلوغ الحد المسموح به ويوضح ذلك، ولا يُقتطع بصمت أبداً."
+  },
+  "agentSetup_addKeyFirst": {
+    "message": "أضف مفتاح جلسة أو افتح الخزنة المشفرة قبل الإرسال."
+  },
+  "agentSetup_allowFirst": {
+    "message": "اسمح بالوصول إلى عنوان المزود في إعداد النموذج أولاً."
+  },
+  "agentSetup_allowRequestsTo1": {
+    "message": "السماح بالطلبات إلى $1"
+  },
+  "agentSetup_apiKey": {
+    "message": "مفتاح API"
+  },
+  "agentSetup_askTheEndpointWhichModels": {
+    "message": "استعلم من نقطة النهاية عن النماذج المتاحة"
+  },
+  "agentSetup_askingTheEndpoint": {
+    "message": "جارٍ الاستعلام من نقطة النهاية…"
+  },
+  "agentSetup_budgets": {
+    "message": "حدود التشغيل"
+  },
+  "agentSetup_checkingAccessToTheEndpoint": {
+    "message": "جارٍ التحقق من صلاحية الوصول إلى نقطة النهاية…"
+  },
+  "agentSetup_chooseHelp": {
+    "message": "الذكاء الاصطناعي اختياري. استخدم مزوداً سحابياً بمفتاح API الخاص بك أو اتصل بخادم محلي مثل Ollama أو LM Studio. تعمل الأدوات والفحوصات والوصفات بدون ذكاء اصطناعي."
+  },
+  "agentSetup_chooseProvider": {
+    "message": "اختر مزود الذكاء الاصطناعي"
+  },
+  "agentSetup_couldNotListModels": {
+    "message": "تعذر عرض قائمة النماذج."
+  },
+  "agentSetup_deleteTheStoredKey": {
+    "message": "حذف المفتاح المحفوظ"
+  },
+  "agentSetup_endpoint": {
+    "message": "نقطة النهاية (Endpoint)"
+  },
+  "agentSetup_endpointAllowed": {
+    "message": "نقطة النهاية مصرح بها"
+  },
+  "agentSetup_endpointHelp": {
+    "message": "يجب أن يدعم واجهة محادثة OpenAI. تتم إضافة المسار تلقائياً."
+  },
+  "agentSetup_explorerMaySendRequestsTo": {
+    "message": "يُسمح لـ Explorer بإرسال طلبات إلى هذا العنوان."
+  },
+  "agentSetup_forget": {
+    "message": "نسيان"
+  },
+  "agentSetup_howManyTimesTheModel": {
+    "message": "عدد المرات التي يمكن فيها سؤال النموذج قبل توقف Explorer"
+  },
+  "agentSetup_howManyToolExecutionsA": {
+    "message": "عدد عمليات تنفيذ الأدوات المسموح بها في تشغيل واحد"
+  },
+  "agentSetup_keptInMemoryOnlyNever": {
+    "message": "تُمسح مفاتيح الجلسة عند إعادة تشغيل Chrome أو إعادة تحميل الإضافة أو تحديثها أو تعطيلها. احفظ المفاتيح مشفرة على هذا الجهاز وافتحها مرة لكل جلسة متصفح. تتطلب التغييرات عبارة المرور مجددًا. لا يمكن استعادة عبارة منسية."
+  },
+  "agentSetup_keptInMemoryUntilChrome": {
+    "message": "تُمسح مفاتيح الجلسة عند إعادة تشغيل Chrome أو إعادة تحميل الإضافة أو تحديثها أو تعطيلها. احفظ المفاتيح مشفرة على هذا الجهاز وافتحها مرة لكل جلسة متصفح. تتطلب التغييرات عبارة المرور مجددًا. لا يمكن استعادة عبارة منسية."
+  },
+  "agentSetup_keyHeldUntilChromeCloses": {
+    "message": "يتوفر مفتاح لهذا المزود."
+  },
+  "agentSetup_listModels": {
+    "message": "فحص الاتصال / عرض النماذج"
+  },
+  "agentSetup_model": {
+    "message": "النموذج"
+  },
+  "agentSetup_modelHelp": {
+    "message": "اختر نموذج محادثة يدعم استدعاء الأدوات. يعتمد التوفر على حساب المزود أو النماذج المثبتة محلياً."
+  },
+  "agentSetup_modelName": {
+    "message": "اختر أو أدخل معرّف النموذج"
+  },
+  "agentSetup_modelTurns": {
+    "message": "جولات النموذج"
+  },
+  "agentSetup_modelsFound": {
+    "message": "متصل. يتوفر $1 نموذجاً؛ اختر واحداً في حقل النموذج."
+  },
+  "agentSetup_noKey": {
+    "message": "بدون مفتاح"
+  },
+  "agentSetup_noModelsFound": {
+    "message": "متصل، لكن لم يتم العثور على نماذج. في الخادم المحلي، حمّل نموذجاً أولاً أو أدخل معرّفه."
+  },
+  "agentSetup_onlyHttpAndHttpsEndpoints": {
+    "message": "يمكن استخدام نقاط النهاية عبر http وhttps فقط."
+  },
+  "agentSetup_onlyThisAddressExplorerAsks": {
+    "message": "هذا العنوان فقط. يطلب Explorer الإذن من Chrome، وChrome يطلبه منك."
+  },
+  "agentSetup_openSetup": {
+    "message": "إعداد الذكاء الاصطناعي"
+  },
+  "agentSetup_openSetupHelp": {
+    "message": "افتح إعداد الذكاء الاصطناعي: اختر مزوداً سحابياً أو خادم نموذج محلي (اختياري)."
+  },
+  "agentSetup_optionalForThisEndpoint": {
+    "message": "اختياري لنقطة النهاية هذه."
+  },
+  "agentSetup_pasteYourApiKey": {
+    "message": "الصق مفتاح API الخاص بك"
+  },
+  "agentSetup_provider": {
+    "message": "المزود"
+  },
+  "agentSetup_reviewSettings": {
+    "message": "راجع إعدادات المزود في إعداد النموذج."
+  },
+  "agentSetup_saveKey": {
+    "message": "حفظ المفتاح"
+  },
+  "agentSetup_selectModel": {
+    "message": "اختر نموذجاً في إعداد النموذج. افحص الاتصال لعرض النماذج المتاحة أو أدخل معرّف النموذج."
+  },
+  "agentSetup_setAnEndpointFirst": {
+    "message": "عيّن نقطة نهاية أولاً."
+  },
+  "agentSetup_thatIsNotAValid": {
+    "message": "عنوان URL هذا غير صالح."
+  },
+  "agentSetup_thisEndpointIsPlainHttp": {
+    "message": "نقطة النهاية هذه تستخدم http غير المشفر خارج جهازك. يرفض Explorer إرسال المفاتيح إليها. استخدم https أو localhost."
+  },
+  "agentSetup_thisProviderNeedsAnEndpoint": {
+    "message": "يحتاج هذا المزود إلى عنوان نقطة نهاية."
+  },
+  "agentSetup_thisProviderWillRefuseThe": {
+    "message": "سيرفض هذا المزود الطلب بدون مفتاح."
+  },
+  "agentSetup_toolCalls": {
+    "message": "استدعاءات الأدوات"
+  },
+  "agentSetup_usageHelp": {
+    "message": "يخضع الاستخدام السحابي لأسعار وحصص المزود الخاص بك. تتطلب النماذج المحلية خادماً قيد التشغيل."
+  },
+  "agentSetup_whichModelServiceToTalk": {
+    "message": "خدمة النموذج المراد الاتصال بها"
+  },
+  "agentTranscript_aTraceHoldsTheGoal": {
+    "message": "يحتوي السجل على الهدف والمعاملات التي أرسلها النموذج وما أعادته أدوات الصفحة. اقرأه قبل مشاركته."
+  },
+  "agentTranscript_adaptedItem": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_adaptedRootOnly": {
+    "message": "تم دمج مُركّب الجذر في كائن واحد"
+  },
+  "agentTranscript_anotherToolAlreadyUsesThat": {
+    "message": "أداة أخرى تستخدم هذا الاسم بالفعل"
+  },
+  "agentTranscript_answer": {
+    "message": "الإجابة"
+  },
+  "agentTranscript_answered": {
+    "message": "تمت الإجابة"
+  },
+  "agentTranscript_askingTheModel": {
+    "message": "جارٍ سؤال النموذج…"
+  },
+  "agentTranscript_budgetCalls": {
+    "message": "الحد: $1."
+  },
+  "agentTranscript_budgetSteps": {
+    "message": "الحد: $1. يتوقف التشغيل عند بلوغه ويوضح ذلك."
+  },
+  "agentTranscript_calls": {
+    "message": "الاستدعاءات"
+  },
+  "agentTranscript_cancelled": {
+    "message": "أُلغي"
+  },
+  "agentTranscript_chromeStoppedTheExtensionS": {
+    "message": "أوقف Chrome عامل الخلفية أثناء التشغيل. لا يعيد Explorer تشغيله تلقائياً لتجنب تكرار الفوترة أو تنفيذ الأدوات. تم حفظ كل ما حدث حتى تلك اللحظة."
+  },
+  "agentTranscript_chromeStoppedTheExtensionS2": {
+    "message": "أوقف Chrome عامل الخلفية أثناء هذا التشغيل."
+  },
+  "agentTranscript_errorHelp": {
+    "message": "تم عرض هذا الخطأ للنموذج ليتمكن من التفاعل معه."
+  },
+  "agentTranscript_executionDetails": {
+    "message": "تفاصيل التنفيذ"
+  },
+  "agentTranscript_executionDetailsHelp": {
+    "message": "افحص الهدف الأصلي ورسائل النموذج ومعاملات الأدوات والنتائج الدقيقة. فتح هذا السجل لا يُشغّل أي شيء."
+  },
+  "agentTranscript_explorer": {
+    "message": "Explorer"
+  },
+  "agentTranscript_explorerWasNotGrantedIts": {
+    "message": "لم يُمنح Explorer صلاحية الوصول إلى نطاقه فلم يتمكن من تشغيله"
+  },
+  "agentTranscript_exportThisRun": {
+    "message": "تصدير هذا التشغيل"
+  },
+  "agentTranscript_failed": {
+    "message": "فشل"
+  },
+  "agentTranscript_goal": {
+    "message": "الهدف"
+  },
+  "agentTranscript_interruptedByChrome": {
+    "message": "توقف بواسطة Chrome"
+  },
+  "agentTranscript_itsInputSchemaCouldNot": {
+    "message": "تعذّر تحليل مخطط الإدخال الخاص به، لذا لن يصفه Explorer"
+  },
+  "agentTranscript_itsInputSchemaIsNot": {
+    "message": "مخطط الإدخال الخاص به ليس كائنًا"
+  },
+  "agentTranscript_measuredInPage": {
+    "message": "تم قياسه داخل الصفحة."
+  },
+  "agentTranscript_mocked": {
+    "message": "محاكاة"
+  },
+  "agentTranscript_mockedHelp": {
+    "message": "أجاب التجاوز المحلي الخاص بك، ولم تعمل الصفحة."
+  },
+  "agentTranscript_model": {
+    "message": "النموذج"
+  },
+  "agentTranscript_modelUsed": {
+    "message": "النموذج المستخدم: $1"
+  },
+  "agentTranscript_nFailed": {
+    "message": "$1 فشل"
+  },
+  "agentTranscript_nFailedHelp": {
+    "message": "استدعاءات الأدوات التي أرجعت خطأً. تم إبلاغ النموذج بها."
+  },
+  "agentTranscript_nMocked": {
+    "message": "$1 محاكاة"
+  },
+  "agentTranscript_nMockedHelp": {
+    "message": "تمت الإجابة بواسطة التجاوز المحلي وليس الصفحة."
+  },
+  "agentTranscript_nModelTurns": {
+    "message": "$1 جولات نموذج"
+  },
+  "agentTranscript_nToolCalls": {
+    "message": "$1 استدعاءات أداة"
+  },
+  "agentTranscript_nToolNamesWereChanged": {
+    "message": "تم تعديل $1 أسماء أدوات للنموذج"
+  },
+  "agentTranscript_nToolSchemasWereAdapted": {
+    "message": "تم تكييف $1 مخططات أدوات للنموذج"
+  },
+  "agentTranscript_nToolsWereNotOffered": {
+    "message": "لم يتم تقديم $1 أدوات للنموذج"
+  },
+  "agentTranscript_nameDashReason": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_noRunYetDescribeWhat": {
+    "message": "ستظهر محادثتك هنا. اختر نموذج الذكاء الاصطناعي في إعداد النموذج، ثم اطرح سؤالاً أو جرّب أدوات هذه الصفحة."
+  },
+  "agentTranscript_oneModelTurn": {
+    "message": "جولة نموذج واحدة"
+  },
+  "agentTranscript_oneToolCall": {
+    "message": "استدعاء أداة واحد"
+  },
+  "agentTranscript_oneToolNameWasChanged": {
+    "message": "تم تعديل اسم أداة واحدة للنموذج"
+  },
+  "agentTranscript_oneToolSchemaWasAdapted": {
+    "message": "تم تكييف مخطط أداة واحدة للنموذج"
+  },
+  "agentTranscript_oneToolWasNotOffered": {
+    "message": "لم يتم تقديم أداة واحدة للنموذج"
+  },
+  "agentTranscript_parenDetail": {
+    "message": " ($1)"
+  },
+  "agentTranscript_renamedItem": {
+    "message": "$1 → $2 ($3)"
+  },
+  "agentTranscript_result1": {
+    "message": "النتيجة · $1"
+  },
+  "agentTranscript_running": {
+    "message": "قيد التشغيل"
+  },
+  "agentTranscript_runningTools": {
+    "message": "جارٍ تشغيل الأدوات في الصفحة…"
+  },
+  "agentTranscript_stoppedModelTurnBudgetReached": {
+    "message": "توقف: تم بلوغ حد جولات النموذج"
+  },
+  "agentTranscript_stoppedToolCallBudgetReached": {
+    "message": "توقف: تم بلوغ حد استدعاءات الأدوات"
+  },
+  "agentTranscript_theApiRejectsTheseCharacters": {
+    "message": "ترفض واجهة API هذه الأحرف"
+  },
+  "agentTranscript_tokens": {
+    "message": "$1 إدخال / $2 إخراج"
+  },
+  "agentTranscript_tokensHelp": {
+    "message": "عدد الرموز (Tokens) المُبلّغ عنها من المزود."
+  },
+  "agentTranscript_waitingForForm": {
+    "message": "في انتظار النموذج $1 على الصفحة. أرسله من الصفحة أو اضغط على إلغاء."
+  },
+  "agentTranscript_you": {
+    "message": "أنت"
+  },
+  "agentTranscript_youDisabledItWithAn": {
+    "message": "لقد قمت بتعطيله عبر تجاوز محلي"
+  },
+  "agent_aRunIsInProgress": {
+    "message": "يوجد تشغيل قيد التنفيذ حالياً."
+  },
+  "agent_allowTheEndpointFirst": {
+    "message": "اسمح بنقطة النهاية أولاً."
+  },
+  "agent_answerAs": {
+    "message": "الإجابة بصفتك"
+  },
+  "agent_cancel": {
+    "message": "إلغاء"
+  },
+  "agent_copied": {
+    "message": "تم النسخ"
+  },
+  "agent_copyItToTheClipboard": {
+    "message": "نسخ إلى الحافظة"
+  },
+  "agent_copyRequest": {
+    "message": "نسخ الطلب"
+  },
+  "agent_explorerSendsNothingCopyThis": {
+    "message": "لا يرسل Explorer شيئاً. انسخ هذا الطلب إلى أي محادثة، والصق الرد هنا لتنفيذ استدعاءات الأدوات على الصفحة."
+  },
+  "agent_feedTheReplyBack": {
+    "message": "إدخال الرد للمتابعة"
+  },
+  "agent_fixFirst": {
+    "message": "أصلح أولاً: $1."
+  },
+  "agent_goal": {
+    "message": "الهدف"
+  },
+  "agent_jumpToLatest": {
+    "message": "الانتقال إلى الأحدث"
+  },
+  "agent_jumpToLatestHelp": {
+    "message": "وصل رد أثناء قراءتك للأعلى. نقرة واحدة تعيدك إلى نهاية المحادثة."
+  },
+  "agent_manualMode": {
+    "message": "الوضع اليدوي"
+  },
+  "agent_nToolsOnThisPageWillBeOffered": {
+    "message": "سيتم تقديم $1 من الأدوات في هذه الصفحة إلى النموذج، باستثناء أي أداة لا يستطيع Explorer وصفها بدقة."
+  },
+  "agent_oneToolOnThisPageWillBeOffered": {
+    "message": "سيتم تقديم أداة واحدة في هذه الصفحة إلى النموذج، باستثناء ما لا يستطيع Explorer وصفه بدقة."
+  },
+  "agent_openInWindow": {
+    "message": "فتح هذه المحادثة في نافذة كبيرة"
+  },
+  "agent_pasteTheModelReplyHere": {
+    "message": "الصق رد النموذج هنا — استجابة JSON الخام أو النص فقط"
+  },
+  "agent_send": {
+    "message": "إرسال"
+  },
+  "agent_sendHelp": {
+    "message": "إرسال هذه الرسالة إلى النموذج مع أدوات الصفحة. Enter للإرسال وShift+Enter لسطر جديد."
+  },
+  "agent_sendTheGoalAndThis": {
+    "message": "أرسل الهدف وأدوات هذه الصفحة إلى النموذج."
+  },
+  "agent_starterHelp": {
+    "message": "ملء حقل الهدف بهذا التوجيه المقترح"
+  },
+  "agent_starterSummarize": {
+    "message": "تلخيص أدوات الصفحة"
+  },
+  "agent_starterSummarizePrompt": {
+    "message": "اعرض قائمة بأدوات هذه الصفحة واشرح متى تُستخدم كل أداة."
+  },
+  "agent_starterTryTool": {
+    "message": "تجربة $1"
+  },
+  "agent_starterTryToolPrompt": {
+    "message": "استدعِ $1 بمدخلات اختبار مناسبة ولخّص النتيجة."
+  },
+  "agent_stopAfterTheCurrentStep": {
+    "message": "إيقاف بعد الخطوة الحالية"
+  },
+  "agent_toolsAvailable": {
+    "message": "يتوفر $1 من أدوات الصفحة"
+  },
+  "agent_tryAgain": {
+    "message": "إعادة المحاولة"
+  },
+  "agent_tryAgainHelp": {
+    "message": "اطرح السؤال نفسه على هذه الصفحة مرة أخرى. تُضاف الإجابة الجديدة إلى المحادثة نفسها أسفل الأولى دون استبدال أي شيء."
+  },
+  "agent_whatShouldTheAgentTry": {
+    "message": "ماذا يجب أن يحاول الوكيل فعله في هذه الصفحة؟"
+  },
+  "annotationDeclaredHelp": {
+    "message": "مُعلن من قِبل الموقع. يعرضه Explorer ولا يتحقق من صحته."
+  },
+  "audit_clean": {
+    "message": "لا توجد ملاحظات على العقد."
+  },
+  "audit_export": {
+    "message": "تصدير تقرير التدقيق"
+  },
+  "audit_exportJsonHelp": {
+    "message": "كل نتيجة كبيانات جاهزة لبرنامج نصي أو تذكرة."
+  },
+  "audit_exportMarkdownHelp": {
+    "message": "تقرير جاهز للمراجعة مرتب من الأداة الأقل تقييماً."
+  },
+  "audit_exportNote": {
+    "message": "يتضمن التصدير ما تعلنه الصفحة عن أدواتها فقط — الأوصاف والمخططات، وليس محتوى الصفحة."
+  },
+  "audit_failN": {
+    "message": "$1 راسب"
+  },
+  "audit_intro": {
+    "message": "درجة جودة العقد المعلن لكل أداة (الأوصاف والمخططات والسمات) — وليست تقييمًا أمنيًا."
+  },
+  "audit_noTools": {
+    "message": "لا توجد أدوات لتدقيقها في هذه الصفحة بعد."
+  },
+  "audit_passN": {
+    "message": "$1 ناجح"
+  },
+  "audit_pointsHelp": {
+    "message": "النقاط التي يخصمها هذا الاكتشاف من درجة الأداة."
+  },
+  "audit_rule_descDuplicate": {
+    "message": "وصف مطابق مشترك مع $1 أداة أخرى: سيضطر النموذج للتخمين بينها."
+  },
+  "audit_rule_descGeneric": {
+    "message": "الوصف يكرر اسم الأداة فقط ولا يضيف أي معلومات."
+  },
+  "audit_rule_descMissing": {
+    "message": "لا يوجد وصف: لا يمكن للنموذج معرفة متى يجب استخدام هذه الأداة."
+  },
+  "audit_rule_descNoAction": {
+    "message": "السطر الأول لا يبدأ بفعل إجرائي — يُفضل \"Search…\" أو \"Add…\" أو \"Get…\"."
+  },
+  "audit_rule_descRestatesName": {
+    "message": "الوصف يعيد صياغة اسم الأداة دون أي حقائق جديدة."
+  },
+  "audit_rule_descTooLong": {
+    "message": "أكثر من 80 كلمة في الوصف: الأوصاف الطويلة تزدحم بها نافذة السياق."
+  },
+  "audit_rule_descTooShort": {
+    "message": "أقل من أربع كلمات: غير كافٍ لتمييز هذه الأداة عن غيرها."
+  },
+  "audit_rule_paramMissingDesc": {
+    "message": "$1 من أصل $2 من خصائص الإدخال بدون وصف."
+  },
+  "audit_rule_paramUntyped": {
+    "message": "$1 من أصل $2 من خصائص الإدخال بدون نوع محدد."
+  },
+  "audit_rule_schemaMissing": {
+    "message": "لا يوجد مخطط إدخال كائني: يتم تمرير المعاملات بالتخمين."
+  },
+  "audit_scoreHelp": {
+    "message": "درجة الجودة المعلنة لهذه الأدوات — وليست تصنيفًا للأمان."
+  },
+  "audit_scoreN": {
+    "message": "$1/100"
+  },
+  "audit_warnN": {
+    "message": "$1 بملاحظات"
+  },
+  "baseline_forget": {
+    "message": "نسيان خط الأساس"
+  },
+  "baseline_forgetHelp": {
+    "message": "حذف خط الأساس المحفوظ لهذا الموقع."
+  },
+  "baseline_lastCheck": {
+    "message": "آخر فحص $1: $2 جديد، $3 تم حلها"
+  },
+  "baseline_newChip": {
+    "message": "جديد منذ خط الأساس"
+  },
+  "baseline_newChipHelp": {
+    "message": "عرض النتائج التي لم تكن موجودة في خط الأساس المحفوظ فقط."
+  },
+  "baseline_noChange": {
+    "message": "منذ خط الأساس: لا يوجد جديد."
+  },
+  "baseline_none": {
+    "message": "لم يتم حفظ خط أساس لهذا الموقع بعد. احفظ واحداً لمقارنة المراجعات اللاحقة به."
+  },
+  "baseline_save": {
+    "message": "حفظ خط الأساس"
+  },
+  "baseline_saveHelp": {
+    "message": "حفظ النتائج الحالية وبصمات العقود لهذا الموقع على هذا الجهاز."
+  },
+  "baseline_savedAt": {
+    "message": "حُفظ خط الأساس في $1 — $2 نتائج، $3 أدوات"
+  },
+  "baseline_since": {
+    "message": "منذ خط الأساس: $1 جديد ($2)، $3 تم حلها · أدوات أُضيفت $4، أُزيلت $5، عقود تغيرت $6"
+  },
+  "baseline_sinceHelp": {
+    "message": "ما تُظهره هذه المراجعة مقارنة بخط الأساس."
+  },
+  "baseline_title": {
+    "message": "خط الأساس المحفوظ"
+  },
+  "baseline_titleHelp": {
+    "message": "حفظ النتائج والعقود الحالية كمرجع لهذا الموقع."
+  },
+  "baseline_toolsAdded": {
+    "message": "أدوات أُضيفت: $1"
+  },
+  "baseline_toolsChanged": {
+    "message": "عقود تغيرت: $1"
+  },
+  "baseline_toolsRemoved": {
+    "message": "أدوات أُزيلت: $1"
+  },
+  "baseline_truncated": {
+    "message": "يحتفظ خط الأساس بأول 300 نتيجة و1,000 أداة."
+  },
+  "baseline_update": {
+    "message": "تحديث خط الأساس"
+  },
+  "baseline_updateHelp": {
+    "message": "استبدال خط الأساس المحفوظ بمراجعة اليوم."
+  },
+  "checkApiAvailability": {
+    "message": "WebMCP API"
+  },
+  "checkApiAvailabilityRefused": {
+    "message": "مرفوض"
+  },
+  "checkCapability": {
+    "message": "الإمكانية"
+  },
+  "checkFrameContext": {
+    "message": "سياق الإطار"
+  },
+  "checkOriginIsolation": {
+    "message": "عزل النطاق"
+  },
+  "checkSecureContext": {
+    "message": "سياق آمن"
+  },
+  "checkToolsPermission": {
+    "message": "صلاحية tools"
+  },
+  "checks_duplicateDescription": {
+    "message": "توجد أداة أخرى في هذه الصفحة لها الوصف نفسه: $1. لا يستطيع النموذج التمييز بينهما من خلاله."
+  },
+  "checks_duplicateName": {
+    "message": "يسجل إطار آخر أداة بالاسم نفسه؛ يراها النموذج بأسماء بديلة مميزة."
+  },
+  "checks_intro": {
+    "message": "ثغرات في العقد المُعلن لهذه الأداة قد تجعل الوكيل يسيء اختيارها أو استدعاءها."
+  },
+  "checks_levelNote": {
+    "message": "ملاحظة"
+  },
+  "checks_levelWarn": {
+    "message": "تحذير"
+  },
+  "checks_nOnCard": {
+    "message": "$1 ملاحظات عقد"
+  },
+  "checks_nameNeedsAlias": {
+    "message": "لا تقبل واجهات النماذج هذا الاسم كما هو؛ يقدمه Explorer تحت اسم بديل."
+  },
+  "checks_noAnnotations": {
+    "message": "لم يتم إعلان أي تلميحات. يوضح readOnlyHint للوكيل ما إذا كان الاستدعاء يغير الحالة."
+  },
+  "checks_noDescription": {
+    "message": "لا يوجد وصف. ليس لدى النموذج ما يعتمد عليه لاختيار هذه الأداة."
+  },
+  "checks_noSchema": {
+    "message": "لا يوجد مخطط إدخال. إذا كانت الأداة تقبل معاملات، فلا يمكن للنموذج معرفة ماهيتها."
+  },
+  "checks_none": {
+    "message": "لا يوجد ما يُبلّغ عنه: الوصف والمخطط والبيانات التوضيحية متوفرة جميعًا."
+  },
+  "checks_oneOnCard": {
+    "message": "ملاحظة عقد واحدة"
+  },
+  "checks_propertyWithoutDescription": {
+    "message": "خصائص بدون وصف: $1."
+  },
+  "checks_requiredNotDeclared": {
+    "message": "مطلوبة ولكنها غير معلنة كخصائص: $1."
+  },
+  "checks_schemaError": {
+    "message": "تعذّر تحليل مخطط الإدخال: $1"
+  },
+  "checks_schemaNotObject": {
+    "message": "مخطط الإدخال ليس مخطط كائن (النوع $1). معاملات الأداة تكون دائمًا كائنًا."
+  },
+  "checks_shortDescription": {
+    "message": "وصف قصير ($1 حرفًا). وضّح ما تفعله الأداة ومتى تُستخدم وما الذي تُعيده."
+  },
+  "checks_title": {
+    "message": "فحوصات العقد"
+  },
+  "checks_titleCount": {
+    "message": "فحوصات العقد ($1)"
+  },
+  "common_error": {
+    "message": "خطأ"
+  },
+  "common_frameN": {
+    "message": "إطار #$1"
+  },
+  "common_ms": {
+    "message": "$1 مللي ثانية"
+  },
+  "common_ok": {
+    "message": "ناجح"
+  },
+  "connector_add": {
+    "message": "إضافة موصل"
+  },
+  "connector_addHelp": {
+    "message": "يتحقق من قواعد نقطة النهاية ثم يحفظ هذا الموصل في قائمة المزودين."
+  },
+  "connector_addOne": {
+    "message": "إضافة موصل مخصص"
+  },
+  "connector_added": {
+    "message": "تمت إضافة الموصل. اختره من قائمة المزودين أعلاه."
+  },
+  "connector_delete": {
+    "message": "حذف"
+  },
+  "connector_deleteHelp": {
+    "message": "يزيل هذا الموصل ويمسح مفتاحه من الذاكرة."
+  },
+  "connector_dialect": {
+    "message": "صيغة الطلب"
+  },
+  "connector_dialectHelp": {
+    "message": "واجهة البرمجة التي تتحدث بها نقطة النهاية."
+  },
+  "connector_help": {
+    "message": "الموصلات المخصصة هي نقاط وصول للنماذج تحددها بنفسك. يدير Chrome الأذونات وتتطلب النقاط البعيدة HTTPS. ينطبق وضع تخزين المفاتيح المختار."
+  },
+  "connector_key": {
+    "message": "يتطلب مفتاح API"
+  },
+  "connector_keyHelp": {
+    "message": "عند تحديده يتطلب هذا الموصل مفتاح API. ينطبق وضع التخزين الذي اخترته."
+  },
+  "connector_mark": {
+    "message": "مخصص"
+  },
+  "connector_name": {
+    "message": "الاسم"
+  },
+  "connector_nameHelp": {
+    "message": "يظهر في قائمة المزودين. حتى 60 حرفاً."
+  },
+  "connector_none": {
+    "message": "لا توجد موصلات مخصصة بعد."
+  },
+  "connector_section": {
+    "message": "الموصلات المخصصة"
+  },
+  "connector_url": {
+    "message": "نقطة النهاية"
+  },
+  "connector_urlHelp": {
+    "message": "عنوان URL الأساسي الذي يستدعيه Explorer. يُسمح بـ http العادي على هذا الجهاز فقط."
+  },
+  "diagnosticExport": {
+    "message": "فحص وتصدير هذا الدليل التشخيصي"
+  },
+  "diagnosticExportNote": {
+    "message": "يتضمن الملاحظات المعروضة وعناوين المواقع والأخطاء الدقيقة. راجع المعاينة قبل المشاركة."
+  },
+  "diagnosticInvalid": {
+    "message": "يجب أن تكون المعاينة بصيغة JSON صالحة قبل نسخها أو تنزيلها."
+  },
+  "diagnosticPreview": {
+    "message": "معاينة الأدلة التشخيصية"
+  },
+  "diagnosticPreviewHelp": {
+    "message": "اقرأ أو عدّل الأدلة قبل التصدير. فتح المعاينة لا يغير شيئاً في الصفحة."
+  },
+  "discoveryComplete": {
+    "message": "اكتمل الاكتشاف"
+  },
+  "discoveryFailed": {
+    "message": "Discovery فشل"
+  },
+  "discoveryNextAction": {
+    "message": "تحقق من اكتمال تحميل الصفحة ثم حدّث الأدوات."
+  },
+  "discoveryPartial": {
+    "message": "اكتشاف جزئي"
+  },
+  "discoveryRetry": {
+    "message": "تحديث الأدوات"
+  },
+  "discoveryRetryHelp": {
+    "message": "إعادة محاولة اكتشاف الأدوات في الصفحة الحالية دون استدعاء أي أداة."
+  },
+  "discovery_check": {
+    "message": "فحص المصدر"
+  },
+  "discovery_checkHelp": {
+    "message": "جلب المسارات الثلاثة المتعارف عليها وترويسات الصفحة من هذا النطاق مرة واحدة."
+  },
+  "discovery_disclosure": {
+    "message": "يرسل الفحص طلبات GET من Explorer إلى $1 للمسارات /.well-known/webmcp و/.well-known/webmcp.json و/llms.txt وطلب GET لقراءة ترويسات الصفحة."
+  },
+  "discovery_intro": {
+    "message": "الملفات الثلاثة أعراف اختيارية وليست متطلبات WebMCP. يقرأ الفحص أيضاً ترويسات Permissions-Policy وCSP وCORS. يُحذف الاعتماد وتُرفض إعادة التوجيه ويُحدّ كل جسم استجابة بـ64 KiB. النتائج تصف هذه الاستجابات لا الجلسات المصادَق عليها أو سياسة المتصفح الفعلية."
+  },
+  "discovery_notGranted": {
+    "message": "لا يمكن لـ Explorer الجلب من هذا النطاق: امنح حق الوصول للموقع أولاً."
+  },
+  "discovery_results": {
+    "message": "$1 — الحالة $2"
+  },
+  "discovery_resultsHelp": {
+    "message": "استجابة كل مسار: حالة HTTP ونوع المحتوى والحجم أو الخطأ."
+  },
+  "discovery_title": {
+    "message": "اتفاقيات الاكتشاف — فحوصات شبكة اختيارية"
+  },
+  "discovery_titleHelp": {
+    "message": "جلب ملفات الاكتشاف وقراءة ترويسة Permissions-Policy للصفحة عند الضغط على الزر."
+  },
+  "enableFlagBody": {
+    "message": "للتطوير المحلي، إذا كان إصدار Chrome يوفر هذا الخيار، فعّله وأعد تشغيل المتصفح."
+  },
+  "enableFlagTitle": {
+    "message": "لفحص المواقع الحقيقية"
+  },
+  "enableFlagWhy": {
+    "message": "يوثق Chrome هذا الخيار للاختبار المحلي ويوفر أيضاً تجربة نطاق (Origin Trial)."
+  },
+  "envUnavailableTitle": {
+    "message": "WebMCP غير متاح هنا"
+  },
+  "env_apiAvailabilityHelp": {
+    "message": "ما إذا كان document.modelContext يوفر الدوال التي يحتاجها Explorer."
+  },
+  "env_browserSaid": {
+    "message": "أفاد المتصفح: $1"
+  },
+  "env_capabilityHelp": {
+    "message": "كيفية توفير WebMCP في علامة التبويب هذه."
+  },
+  "env_frameContextHelp": {
+    "message": "تحتاج إطارات iframe العابرة للنطاقات إلى allow=\"tools\" من الصفحة المضمّنة."
+  },
+  "env_missingMethods": {
+    "message": "الدوال المفقودة"
+  },
+  "env_missingMethodsHelp": {
+    "message": "الدوال التي يتوقعها Explorer ولكن لم يتم العثور عليها."
+  },
+  "env_originIsolationHelp": {
+    "message": "يتوفر WebMCP فقط في المستندات المعزولة حسب النطاق. الترويسة Origin-Agent-Cluster: ?0 تعطله."
+  },
+  "env_secureContextHelp": {
+    "message": "لا يُكشف WebMCP إلا في سياق آمن (HTTPS أو localhost)."
+  },
+  "env_toolsPermissionHelp": {
+    "message": "سياسة الصلاحيات tools. تعني \"unobservable\" أن المتصفح لا يكشف هذه الميزة للفحص."
+  },
+  "evalsEditor_aModelIsNotDeterministic": {
+    "message": "النموذج غير حتمي. محاولة واحدة لا تثبت أكثر من مجرد ضربة حظ."
+  },
+  "evalsEditor_aModelThatGetsThere": {
+    "message": "النموذج الذي يصل للهدف بعد ثلاث استدعاءات خاطئة لم يفهم الأوصاف."
+  },
+  "evalsEditor_addACase": {
+    "message": "إضافة حالة"
+  },
+  "evalsEditor_andCallItFirst": {
+    "message": " واستدعاؤها أولاً"
+  },
+  "evalsEditor_asksForAToolTo": {
+    "message": "يطلب استدعاء أداة أولاً دون تسمية أي أداة"
+  },
+  "evalsEditor_attempts": {
+    "message": "المحاولات"
+  },
+  "evalsEditor_checksNothingSoItWould": {
+    "message": "لا يتحقق من شيء، لذا سينجح مهما فعل النموذج"
+  },
+  "evalsEditor_deleteThisCase": {
+    "message": "حذف هذه الحالة"
+  },
+  "evalsEditor_expectsAndForbidsTheSame": {
+    "message": "يتوقع ويحظر نفس الأداة في آن واحد"
+  },
+  "evalsEditor_hasNoGoal": {
+    "message": "بلا هدف محدد"
+  },
+  "evalsEditor_mustNotCall": {
+    "message": "يجب ألا يستدعي"
+  },
+  "evalsEditor_notOnThisPage": {
+    "message": "$1 غير موجود في هذه الصفحة"
+  },
+  "evalsEditor_notOnThisPageHelp": {
+    "message": "ستفشل الحالة لسبب لا علاقة له بالنموذج."
+  },
+  "evalsEditor_oneGoalOneExpectation": {
+    "message": "هدف واحد، توقع واحد"
+  },
+  "evalsEditor_remove": {
+    "message": "إزالة"
+  },
+  "evalsEditor_shouldCall": {
+    "message": "يجب أن يستدعي"
+  },
+  "evalsEditor_suiteName": {
+    "message": "اسم المجموعة"
+  },
+  "evalsEditor_toolThatShouldBeCalled": {
+    "message": "الأداة التي يجب استدعاؤها"
+  },
+  "evalsEditor_toolsThatMustNotBe": {
+    "message": "الأدوات التي يجب عدم استدعائها، مفصولة بفواصل"
+  },
+  "evalsEditor_untitledSuite": {
+    "message": "مجموعة بدون عنوان"
+  },
+  "evalsEditor_whatShouldTheAgentBe": {
+    "message": "ماذا يجب أن يُطلب من الوكيل فعله؟"
+  },
+  "evalsEditor_writtenAgainst1RunningIt": {
+    "message": "كُتب من أجل $1. يُسمح بتشغيله في مكان آخر، لكن "
+  },
+  "evalsEditor_writtenAgainstNote": {
+    "message": "كُتب من أجل $1. يُسمح بتشغيله في مكان آخر، لكن النتيجة ستعني شيئاً مختلفاً."
+  },
+  "evalsResults_1NamedByTheSuite": {
+    "message": "$1 — مذكور في المجموعة ولكنه غير مكشوف بواسطة "
+  },
+  "evalsResults_attemptsJudged": {
+    "message": "المحاولات التي أمكن تقييمها."
+  },
+  "evalsResults_broken": {
+    "message": "معطّل"
+  },
+  "evalsResults_brokenHelp": {
+    "message": "كان ينجح قبل هذا التغيير، ويفشل الآن."
+  },
+  "evalsResults_calledForbidden": {
+    "message": "استدعى $1، وهو أمر محظور"
+  },
+  "evalsResults_cancelled": {
+    "message": "ملغى"
+  },
+  "evalsResults_casePointsHelp": {
+    "message": "يمكن أن تظل الحالة فاشلة ومع ذلك تتحسن — الانتقال من 0/5 إلى 2/5 يعد تقدماً."
+  },
+  "evalsResults_compareWithThePreviousRun": {
+    "message": "مقارنة بالتشغيل السابق"
+  },
+  "evalsResults_comparedWithThePreviousRun": {
+    "message": "مقارنةً بالتشغيل السابق"
+  },
+  "evalsResults_couldNotRun": {
+    "message": "تعذّر التشغيل"
+  },
+  "evalsResults_countTimesMiss": {
+    "message": "$1× $2"
+  },
+  "evalsResults_differentFirstChoice": {
+    "message": "اختيار أول مختلف"
+  },
+  "evalsResults_expectedToolNeverCalled": {
+    "message": "لم يتم استدعاء الأداة المتوقعة أبداً"
+  },
+  "evalsResults_exportThisResult": {
+    "message": "تصدير هذه النتيجة"
+  },
+  "evalsResults_failed": {
+    "message": "فشل"
+  },
+  "evalsResults_fixed": {
+    "message": "تم إصلاحه"
+  },
+  "evalsResults_fixedHelp": {
+    "message": "كان يفشل قبل هذا التغيير، وينجح الآن."
+  },
+  "evalsResults_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "evalsResults_nBroken": {
+    "message": "$1 معطّل"
+  },
+  "evalsResults_nCouldNotRun": {
+    "message": "$1 تعذّر تشغيله"
+  },
+  "evalsResults_nCouldNotRunHelp": {
+    "message": "مستبعدة من المعدل: هذه الحالات لا تعكس شيئاً عن الصفحة."
+  },
+  "evalsResults_nDisabled": {
+    "message": "$1 معطّلة"
+  },
+  "evalsResults_nFailed": {
+    "message": "$1 فشل"
+  },
+  "evalsResults_nFixed": {
+    "message": "$1 تم إصلاحه"
+  },
+  "evalsResults_nPassed": {
+    "message": "$1/$2 نجح"
+  },
+  "evalsResults_nRewritten": {
+    "message": "$1 أعيدت كتابته"
+  },
+  "evalsResults_noRate": {
+    "message": "بلا معدل"
+  },
+  "evalsResults_noRateHelp": {
+    "message": "لم يمكن تقييم أي شيء، لذا لا يوجد معدل — وليس صفراً، لأن الصفر يعني أن النموذج أخطأ دائماً."
+  },
+  "evalsResults_noResultYetRunThe": {
+    "message": "لا توجد نتيجة بعد. شغّل المجموعة لمعرفة الأدوات التي يختارها النموذج."
+  },
+  "evalsResults_notComparable": {
+    "message": "غير قابل للمقارنة"
+  },
+  "evalsResults_notComparableHelp": {
+    "message": "تعذّر تقييم إحدى عمليتي التشغيل، لذا لا توضح هذه الحالة شيئاً عن التغيير."
+  },
+  "evalsResults_nothing": {
+    "message": "لا شيء"
+  },
+  "evalsResults_nothingCouldBeJudgedSo": {
+    "message": "لم يمكن تقييم أي شيء، لذا لا يوجد معدل — وليس صفراً، لأن الصفر يعني أن النموذج أخطأ دائماً."
+  },
+  "evalsResults_ofAttempts": {
+    "message": "$1 من المحاولات"
+  },
+  "evalsResults_ofAttemptsHelp": {
+    "message": "المتوسط محسوب عبر الحالات التي أمكن تقييمها."
+  },
+  "evalsResults_overridesInForceDuringThis": {
+    "message": "التجاوزات السارية أثناء هذا التشغيل: $1."
+  },
+  "evalsResults_passed": {
+    "message": "نجح"
+  },
+  "evalsResults_points": {
+    "message": "$1 نقطة"
+  },
+  "evalsResults_pointsHelp": {
+    "message": "التغيّر في نسبة المحاولات الناجحة."
+  },
+  "evalsResults_previousRun": {
+    "message": "التشغيل السابق"
+  },
+  "evalsResults_reachedForFirst": {
+    "message": "اختير أولاً: $1"
+  },
+  "evalsResults_sameGoalsRunTwiceWhat": {
+    "message": "نفس الأهداف، شُغّلت مرتين — ما الذي تغيّر"
+  },
+  "evalsResults_shouldCall1": {
+    "message": "يجب استدعاء $1"
+  },
+  "evalsResults_staleCase": {
+    "message": "تغيّر العقد منذ هذا التشغيل"
+  },
+  "evalsResults_staleCaseHelp": {
+    "message": "الأداة التي تتوقعها هذه الحالة تُقدَّم للنماذج بوصف أو مخطط مختلف عمّا كان عليه عند تسجيل هذه النتيجة. تظل النتيجة صحيحة لتلك التشغيلة، لكنها لا تعكس حالة الأداة الآن."
+  },
+  "evalsResults_staleCount": {
+    "message": "$1 حالات على عقد متغيّر"
+  },
+  "evalsResults_staleGone": {
+    "message": "الأداة لم تعد موجودة في الصفحة"
+  },
+  "evalsResults_staleGoneHelp": {
+    "message": "الأداة التي تتوقعها هذه الحالة لم تعد مسجلة في الصفحة."
+  },
+  "evalsResults_staleHelp": {
+    "message": "تم تقييم هذه الحالات وفق وصف أو مخطط تغيّر منذ ذلك الحين. أعد تشغيل المجموعة لتقييم الأدوات كما هي الآن."
+  },
+  "evalsResults_staleOne": {
+    "message": "حالة واحدة على عقد متغيّر"
+  },
+  "evalsResults_stillFailing": {
+    "message": "لا يزال يفشل"
+  },
+  "evalsResults_stillPassing": {
+    "message": "لا يزال ينجح"
+  },
+  "evalsResults_theExpectedToolWasCalled": {
+    "message": "تم استدعاء الأداة المتوقعة، ولكن ليس أولاً"
+  },
+  "evalsResults_theExpectedToolWasNever": {
+    "message": "لم يتم استدعاء الأداة المتوقعة أبداً"
+  },
+  "evalsResults_theReportNamesTheGoals": {
+    "message": "يذكر التقرير الأهداف والأدوات التي اختارها النموذج وأي تجاوز كان سارياً. اقرأه قبل مشاركته."
+  },
+  "evalsResults_thisRun": {
+    "message": "هذا التشغيل"
+  },
+  "evalsResults_unknownToolsNote": {
+    "message": "$1 — مذكورة في المجموعة ولكنها غير مكشوفة في هذه الصفحة. فشلت تلك الحالات لسبب لا يتعلق بالنموذج."
+  },
+  "evalsResults_yourLabel": {
+    "message": "تسميتك لهذا التشغيل."
+  },
+  "evals_anEmptySuite": {
+    "message": "أنشئ مجموعة تقييم فارغة، ثم أضف المهام والتوقعات."
+  },
+  "evals_attemptGoal": {
+    "message": "المحاولة $1 — $2"
+  },
+  "evals_chromeStoppedTheExtensionS": {
+    "message": "أوقف Chrome عامل الخلفية للإضافة أثناء تشغيل هذه المجموعة. لا يعيد Explorer تشغيلها تلقائياً لأن استدعاءات النموذج التي تمت قد احتُسبت تكلفتها. أعد تشغيلها عندما تكون مستعداً."
+  },
+  "evals_delete": {
+    "message": "حذف"
+  },
+  "evals_deleteThisSuiteAndIts": {
+    "message": "حذف هذه المجموعة ونتائجها"
+  },
+  "evals_fixModelSetup": {
+    "message": "أصلح إعداد النموذج أولاً: $1."
+  },
+  "evals_fixTheFlaggedCasesFirst": {
+    "message": "أصلح الحالات المعلّمة أولاً — فالحالة التي لا تتحقق من شيء تنجح دائماً."
+  },
+  "evals_fromThisPage": {
+    "message": "من هذه الصفحة"
+  },
+  "evals_interrupted": {
+    "message": "متوقف"
+  },
+  "evals_interruptedHelp": {
+    "message": "أوقف Chrome عامل الخلفية للإضافة أثناء تشغيل هذه المجموعة."
+  },
+  "evals_labelThisRunBeforeRewrite": {
+    "message": "ضع تسمية لهذا التشغيل — \"قبل إعادة الكتابة\"، \"بعد إعادة الكتابة\""
+  },
+  "evals_labelsAreWhatMakeThe": {
+    "message": "التسميات هي ما يجعل المقارنة واضحة وقابلة للقراءة لاحقاً."
+  },
+  "evals_manualModeCannotRunA": {
+    "message": "لا يمكن للوضع اليدوي تشغيل مجموعة تقييم: فهو يحتاج لتدخلك في كل استدعاء."
+  },
+  "evals_new": {
+    "message": "جديدة"
+  },
+  "evals_newSuite": {
+    "message": "مجموعة جديدة"
+  },
+  "evals_noSuiteYetStartFrom": {
+    "message": "لا توجد مجموعة بعد. ابدأ من هذه الصفحة للحصول على حالة لكل أداة، ثم عدّلها."
+  },
+  "evals_oneCasePerToolEach": {
+    "message": "حالة واحدة لكل أداة، تطلب كل منها تلك الأداة. نقطة بداية قابلة للتعديل."
+  },
+  "evals_runEveryCaseEveryAttempt": {
+    "message": "تشغيل كل حالة وكل محاولة، الواحدة تلو الأخرى."
+  },
+  "evals_runLabel": {
+    "message": "تسمية التشغيل"
+  },
+  "evals_runSuite": {
+    "message": "تشغيل المجموعة"
+  },
+  "evals_runs": {
+    "message": "$1/$2 تشغيل"
+  },
+  "evals_runsDone": {
+    "message": "اكتمل $1/$2 تشغيل"
+  },
+  "evals_starting": {
+    "message": "جارٍ البدء…"
+  },
+  "evals_stopNow": {
+    "message": "أوقف المجموعة الآن. يتم إلغاء المحاولة الجارية مع أي استدعاء أداة لا يزال قيد الانتظار في الصفحة، وتُحتسب ملغاة لا فاشلة."
+  },
+  "evals_suite": {
+    "message": "المجموعة"
+  },
+  "evals_unknownToolsCount": {
+    "message": "$1 أدوات غير معروفة"
+  },
+  "evals_waitingForForm": {
+    "message": "بانتظار النموذج $1 في الصفحة: تم ملؤه وينتظر الإرسال. يلغي التقييم هذا الاستدعاء بعد $2 ثانية إذا لم يرسله أحد."
+  },
+  "evals_whichSuiteToRun": {
+    "message": "أي مجموعة يتم تشغيلها"
+  },
+  "exportBar_aReportContainsWhatThe": {
+    "message": "يحتوي التقرير على ما أعادته الصفحة. اقرأه قبل مشاركته."
+  },
+  "exportBar_console": {
+    "message": "مقتطف وحدة التحكم"
+  },
+  "exportBar_copied": {
+    "message": "تم نسخ $1."
+  },
+  "exportBar_copy": {
+    "message": "نسخ"
+  },
+  "exportBar_copyThe1ReportTo": {
+    "message": "نسخ تقرير $1 إلى الحافظة"
+  },
+  "exportBar_downloadThe1ReportAs": {
+    "message": "تنزيل تقرير $1 كملف"
+  },
+  "exportBar_export": {
+    "message": "تصدير"
+  },
+  "exportBar_forConsole": {
+    "message": "للصق في DevTools داخل إطار الأداة"
+  },
+  "exportBar_forPlaywright": {
+    "message": "اختبار .spec.ts: ‏@playwright/test ومعرّف صريح وملف CHROME"
+  },
+  "exportBar_forReview": {
+    "message": "للمراجعة أو لتذكرة مشكلة"
+  },
+  "exportBar_forScript": {
+    "message": "لنص برمجي أو مقارنة فروق (diff)"
+  },
+  "exportBar_json": {
+    "message": "JSON"
+  },
+  "exportBar_markdown": {
+    "message": "Markdown"
+  },
+  "exportBar_playwright": {
+    "message": "نص Playwright"
+  },
+  "exportBar_save": {
+    "message": "حفظ"
+  },
+  "exportBar_savedFile": {
+    "message": "تم حفظ $1."
+  },
+  "extDescription": {
+    "message": "افحص واختبر ونقّح وراجع أمان أدوات WebMCP التي يكشفها موقع الويب لوكلاء الذكاء الاصطناعي."
+  },
+  "extName": {
+    "message": "WebMCP Explorer"
+  },
+  "fieldChecks_addHelp": {
+    "message": "أضف الحقل والمقارنة إلى هذا الفحص، ثم احفظ الفحص المسمّى مع وسائطه."
+  },
+  "fieldChecks_addRule": {
+    "message": "إضافة قاعدة حقل"
+  },
+  "fieldChecks_added": {
+    "message": "تمت إضافة القاعدة. احفظ الفحص المسمّى للاحتفاظ بهذه القواعد والمعاملات."
+  },
+  "fieldChecks_cancelEdit": {
+    "message": "تجاهل تعديل القاعدة"
+  },
+  "fieldChecks_cancelEditHelp": {
+    "message": "تجاهل تعديل القاعدة غير المكتمل والاحتفاظ بالقواعد المضافة مسبقاً."
+  },
+  "fieldChecks_chooseResult": {
+    "message": "اختيار حقل من النتيجة"
+  },
+  "fieldChecks_chooseResultHelp": {
+    "message": "تصفّح بيانات هذا التشغيل واختر حقلاً. هذا لا يقوم بتشغيل الأداة."
+  },
+  "fieldChecks_editRule": {
+    "message": "تعديل القاعدة"
+  },
+  "fieldChecks_editRuleHelp": {
+    "message": "عدّل قاعدة الحقل $1؛ قم بتحديثها لتطبيق تغييراتك."
+  },
+  "fieldChecks_editSaved": {
+    "message": "تعديل الفحص"
+  },
+  "fieldChecks_editSavedHelp": {
+    "message": "حمّل الاسم والوسائط والتوقعات المحفوظة لتعديلها. يؤدي الحفظ إلى تحديث هذا الإدخال."
+  },
+  "fieldChecks_emptyKey": {
+    "message": "(اسم حقل فارغ)"
+  },
+  "fieldChecks_expectFields": {
+    "message": "حقول النتيجة المحددة"
+  },
+  "fieldChecks_intro": {
+    "message": "تحقق فقط من الحقول المهمة. التغييرات في الحقول الأخرى لن تؤدي إلى فشل هذا الفحص. يجب أن تنجح جميع القواعد أدناه."
+  },
+  "fieldChecks_jsonValueNote": {
+    "message": "أدخل JSON: مثل 1 لرقم، أو \"ready\" لنص، أو true أو null أو قائمة أو كائن. تحافظ المقارنات الرقمية على الأرقام الدقيقة."
+  },
+  "fieldChecks_keepSaved": {
+    "message": "الاحتفاظ بالتوقع المحفوظ"
+  },
+  "fieldChecks_limit": {
+    "message": "يمكن أن يحتوي الفحص على $1 قواعد حقل كحد أقصى."
+  },
+  "fieldChecks_needResult": {
+    "message": "شغّل الأداة بنجاح لاختيار حقول من نتيجة كاملة. يمكنك أيضاً إدخال مسار الحقل بنفسك."
+  },
+  "fieldChecks_op_equals": {
+    "message": "يساوي قيمة JSON هذه"
+  },
+  "fieldChecks_op_exists": {
+    "message": "الحقل موجود"
+  },
+  "fieldChecks_op_length_equals": {
+    "message": "طول القائمة يساوي"
+  },
+  "fieldChecks_op_length_max": {
+    "message": "طول القائمة على الأكثر"
+  },
+  "fieldChecks_op_length_min": {
+    "message": "طول القائمة على الأقل"
+  },
+  "fieldChecks_op_missing": {
+    "message": "الحقل مفقود"
+  },
+  "fieldChecks_op_number_max": {
+    "message": "الرقم على الأكثر"
+  },
+  "fieldChecks_op_number_min": {
+    "message": "الرقم على الأقل"
+  },
+  "fieldChecks_op_text_contains": {
+    "message": "النص يحتوي على"
+  },
+  "fieldChecks_operator": {
+    "message": "المقارنة"
+  },
+  "fieldChecks_operatorHelp": {
+    "message": "اختر ما يجب أن يتحقق لهذا الحقل. يجب أن تنجح كل قاعدة."
+  },
+  "fieldChecks_path": {
+    "message": "مسار الحقل"
+  },
+  "fieldChecks_pathHelp": {
+    "message": "اختر حقلاً من النتيجة أو أدخل مساره، مثل ‎/products/0/id. اتركه فارغاً لكامل النتيجة. في الأسماء، اكتب ~ كـ ~0 و / كـ ~1."
+  },
+  "fieldChecks_pendingRule": {
+    "message": "أضف أو حدّث قاعدة الحقل غير المكتملة، أو تجاهل تعديلها، قبل حفظ الفحص."
+  },
+  "fieldChecks_pickHelp": {
+    "message": "اختر الحقل $1 للفحص"
+  },
+  "fieldChecks_removeRule": {
+    "message": "إزالة القاعدة"
+  },
+  "fieldChecks_removeRuleHelp": {
+    "message": "أزل قاعدة الحقل $1 من هذه المسودة. احفظ الفحص للاحتفاظ بالتغيير."
+  },
+  "fieldChecks_ruleResults": {
+    "message": "نتائج الحقول ($1)"
+  },
+  "fieldChecks_ruleResultsHelp": {
+    "message": "عرض كل قاعدة وقيمتها المتوقعة وما أعادته الأداة فعلياً."
+  },
+  "fieldChecks_selectHelp": {
+    "message": "اختر اسم حقل. وسّع البيانات المتداخلة أو اعرض المزيد من العناصر للوصول إلى حقول أخرى."
+  },
+  "fieldChecks_textValueNote": {
+    "message": "أدخل النص الحرفي بدون علامات اقتباس JSON. المطابقة حساسة لحالة الأحرف."
+  },
+  "fieldChecks_updateRule": {
+    "message": "تحديث القاعدة"
+  },
+  "fieldChecks_value": {
+    "message": "القيمة المتوقعة"
+  },
+  "fieldChecks_valueHelp": {
+    "message": "أدخل القيمة المراد مقارنتها. يميز JSON بين الأرقام والنصوص وnull والقوائم والكائنات."
+  },
+  "fieldChecks_wholeResult": {
+    "message": "اختيار النتيجة بالكامل"
+  },
+  "fieldChecks_wholeResultHelp": {
+    "message": "استخدم مسار حقل فارغاً للتحقق من قيمة JSON بأكملها."
+  },
+  "grantAction": {
+    "message": "Enable Explorer في هذا الموقع"
+  },
+  "grantBody": {
+    "message": "يحتاج WebMCP Explorer إلى إذن الوصول إلى هذا الموقع لاكتشاف واختبار أدوات WebMCP التي تعرضها صفحاته. يُمنح الوصول لهذا الموقع فقط ما لم تختر السماح في جميع المواقع."
+  },
+  "grantDenied": {
+    "message": "لم يتم منح حق الوصول. لا يستطيع Explorer فحص هذا الموقع بعد."
+  },
+  "grantMoreOrigins": {
+    "message": "منح حق الوصول لفحص أدواتها"
+  },
+  "grantTitle": {
+    "message": "السماح بفحص هذا الموقع"
+  },
+  "help_adaptedTools": {
+    "message": "ترفض بعض الجهات المزوّدة oneOf أو anyOf أو allOf في جذر مخطط الأداة. أرسل Explorer كائنًا بسيطًا وذكر القاعدة في الوصف؛ ولم يتغير مخطط الصفحة الأصلي."
+  },
+  "help_annotationsBody": {
+    "message": "التعليقات التوضيحية هي ادعاءات تصرح بها الأداة، مثل القراءة فقط أو المحتوى غير الموثوق. يعرض Explorer ما يبلغ عنه المتصفح، وهي ليست ضمانات مستقلة لما تفعله الأداة فعلياً."
+  },
+  "help_annotationsTitle": {
+    "message": "القراءة فقط والشارات الأخرى"
+  },
+  "help_applyOverride": {
+    "message": "احفظ هذه التغييرات في Explorer. تحل المحاكاة المُعدّة محل استدعاء الأداة الحقيقي طالما كانت نشطة."
+  },
+  "help_auditBody": {
+    "message": "يقوم التدقيق بتقييم العقد الذي تعلنه كل أداة — الوصف والمخطط والبيانات التوضيحية — حتى يتمكن النموذج المستدعي من اختيارها واستدعائها بشكل صحيح. إنه مقياس لجودة ما نشره الموقع وليس حكمًا أمنيًا؛ ويبقى قرار الإصلاح لك."
+  },
+  "help_auditTitle": {
+    "message": "التدقيق"
+  },
+  "help_automateBody": {
+    "message": "تعيد الوصفات اليدوية استخدام ما يصل إلى 20 استدعاءً تمت مراجعته دون نموذج: تُغذّي المدخلات المسمّاة وحقول النتائج السابقة المختارة معاملات الخطوات اللاحقة. راجع الصفحة والإطارات والمحاكاة المحلية، ثم شغّل خطوة واحدة أو الخطوات المتبقية. الإيقاف المؤقت والتوقف صريحان؛ ولا تُستأنف العمليات المتوقفة تلقائيًا أبدًا. يظل مختبر الوكيل والتقييمات اختياريين؛ ويتيح لك الوضع اليدوي إدارة الحلقة بنموذجك الخاص دون أن يرسل Explorer أي شيء."
+  },
+  "help_automateTitle": {
+    "message": "تجربة الوكلاء والتقييمات"
+  },
+  "help_budgets": {
+    "message": "حدد الحد الأقصى لأدوار النموذج واستدعاءات الأدوات المسموح بها في تشغيل وكيل واحد."
+  },
+  "help_button": {
+    "message": "مساعدة"
+  },
+  "help_buttonHelp": {
+    "message": "فتح الشروحات الخاصة بهذه الشاشة والخطوات الأولى وسير عمل المطور."
+  },
+  "help_callers": {
+    "message": "عرض مواقع التسجيل الإضافية الملتقطة لهذه الأداة."
+  },
+  "help_chooseBody": {
+    "message": "افتح بطاقة في قسم الأدوات واقرأ وصفها. فتح البطاقة يفحصها فقط. في المواقع الحقيقية قد يؤدي تشغيل الأداة إلى إحداث تغييرات؛ اختر إجراءً تفهم غرضه. العرض التوضيحي المدمج مخصص للتدريب."
+  },
+  "help_chooseTitle": {
+    "message": "اختيار أداة"
+  },
+  "help_close": {
+    "message": "إغلاق"
+  },
+  "help_closeHelp": {
+    "message": "العودة إلى الشاشة دون تعديل النموذج أو تشغيل أي أداة."
+  },
+  "help_contractChecks": {
+    "message": "وسّع فحوصات البيانات الوصفية المفقودة أو غير المتسقة للأداة. هذه تشخيصات للعقد وليست تقييماً أمنياً."
+  },
+  "help_debugBody": {
+    "message": "يعرض السجل الاستدعاءات الفردية. ويتتبع الجدول الزمني الاكتشاف والتنفيذ. ويمكن للمصدر التقاط مواقع التسجيل عند تفعيل وضع القياس للموقع وإعادة تحميل الصفحة. ويغيّر التجاوز العرض المحلي لـ Explorer ويمكنه محاكاة النتائج؛ وتُعرض حالته النشطة بوضوح."
+  },
+  "help_debugTitle": {
+    "message": "فهم سبب الفشل"
+  },
+  "help_demoBody": {
+    "message": "في العرض التوضيحي، افتح search_products، وأدخل MacBook في حقل query واضغط على تشغيل. يبحث ذلك في متجر محاكى داخل الإضافة؛ ولا يتم إجراء أي طلب حقيقي."
+  },
+  "help_detail_history": {
+    "message": "راجع الاستدعاءات السابقة لهذه الأداة، وافحص نتائجها أو أعد تشغيل مدخلاتها."
+  },
+  "help_detail_override": {
+    "message": "غيّر العرض المحلي لهذه الأداة في Explorer أو حاكِ استجابة لأغراض الاختبار."
+  },
+  "help_detail_run": {
+    "message": "جهّز المدخلات وشغّل هذه الأداة. فتح علامة تبويب التشغيل لا يقوم بتشغيلها تلقائياً."
+  },
+  "help_detail_schema": {
+    "message": "افحص مخطط إدخال الأداة والحقول المطلوبة وفحوصات العقد."
+  },
+  "help_developer": {
+    "message": "دليل المطوّر"
+  },
+  "help_developerHelp": {
+    "message": "تعرّف على سير العمل لتصحيح الأخطاء وفحوصات التراجع والوكلاء والتقارير القابلة لإعادة الإنتاج."
+  },
+  "help_disabled": {
+    "message": "غير متاح حالياً؛ تحقق من الحالة أو الرسالة بجانب عنصر التحكم."
+  },
+  "help_excludedTools": {
+    "message": "عرض الأدوات التي تم استبعادها من طلب النموذج وسبب كل استبعاد."
+  },
+  "help_explanations": {
+    "message": "شروحات الدليل"
+  },
+  "help_export": {
+    "message": "وسّع تنسيقات النسخ والتنزيل المتاحة. لا تتم مشاركة أي شيء تلقائياً."
+  },
+  "help_fillBody": {
+    "message": "استخدم النموذج في تبويب تشغيل. الحقول المعلّمة بعلامة * مطلوبة. تُسمّى المدخلات أيضًا معاملات. يوضح تبويب المخطط أنواعها وقواعدها؛ ويتاح وضع JSON للتحرير المباشر. تحقّق من القيم ثم اضغط على تشغيل."
+  },
+  "help_fillTitle": {
+    "message": "ملء مدخلاته"
+  },
+  "help_frameBody": {
+    "message": "المصدر (Origin) هو عنوان الموقع مع البروتوكول والمنفذ. والإطار (Frame) هو صفحة مضمّنة. يمكن لإطارين كشف أدوات بنفس الاسم؛ ويحافظ Explorer على فصل أهداف التنفيذ الخاصة بهما."
+  },
+  "help_frameTitle": {
+    "message": "المصدر والإطار"
+  },
+  "help_glossary": {
+    "message": "شرح مصطلحات WebMCP"
+  },
+  "help_glossaryHelp": {
+    "message": "وسّع تعريفات الأدوات والمخططات والإطارات والتعليقات التوضيحية والدعم الأصلي."
+  },
+  "help_hintsBody": {
+    "message": "إن readOnlyHint وconsequentialHint وuntrustedContentHint وdebugging هي تصريحات تقدّمها الصفحة حول الأداة. يقرر الوكلاء من خلالها ما إذا كان يجب طلب التأكيد قبل التشغيل. وهي إرشادية: يقارنها Explorer باسم الأداة ووصفها."
+  },
+  "help_hintsTitle": {
+    "message": "التلميحات (التعليقات التوضيحية)"
+  },
+  "help_historyEntry": {
+    "message": "وسّع هذا الاستدعاء المسجل لفحص مدخلاته ونتيجته وخيارات إعادة التشغيل."
+  },
+  "help_inlineBody": {
+    "message": "الأداة هي إجراء تتيحه هذه الصفحة. افتح البطاقة لقراءة ما تفعله ومراجعة مدخلاتها قبل تشغيلها."
+  },
+  "help_inspectBody": {
+    "message": "يصفّي قسم الأدوات الصفحة الحالية حسب الاسم والوصف والمصدر والبيانات التوضيحية. افتح أداة ثم المخطط لعرض عقد الإدخال وفحوصاته. يدعم التشغيل نموذجًا أو JSON خامًا. انتبه إلى الإطار المعروض أسفل الاسم."
+  },
+  "help_inspectTitle": {
+    "message": "فحص العقد"
+  },
+  "help_instrumentOff": {
+    "message": "إيقاف التقاط مواقع التسجيل الجديدة لهذا الموقع. أعد تحميل الصفحة لإزالة أغلفة القياس."
+  },
+  "help_introBody": {
+    "message": "يتيح WebMCP لموقع الويب كشف إجراءات مسمّاة تُعرف بالأدوات. يعرض Explorer هذه الأدوات ويتيح لك تجربتها بنفسك. لا تحتاج إلى حساب ذكاء اصطناعي لفحص أداة أو تشغيلها."
+  },
+  "help_introTitle": {
+    "message": "استكشف ما يمكن لموقع الويب فعله"
+  },
+  "help_manualReply": {
+    "message": "حلّل رد النموذج الملصق وواصل تشغيل الوكيل اليدوي. قد يتم تنفيذ استدعاءات الأدوات الواردة في ذلك الرد."
+  },
+  "help_missingRegistrations": {
+    "message": "افحص التسجيلات التي رصدها وضع القياس ولكنها غائبة عن الأدوات المكشوفة في المتصفح."
+  },
+  "help_modelSetup": {
+    "message": "اختر مزوداً ونموذجاً، وأدر اتصاله وحدد ميزانيات التنفيذ."
+  },
+  "help_nativeBody": {
+    "message": "أصلي (Native) يعني أن المتصفح يوفر واجهة WebMCP. أما البديل البرمجي (Polyfill) فيوفر تنفيذاً بلغة JavaScript؛ ويستخدم العرض المدمج واحداً. نجاح العرض التوضيحي لا يثبت أن كل موقع يدعم WebMCP."
+  },
+  "help_nativeTitle": {
+    "message": "الدعم الأصلي والبديل البرمجي"
+  },
+  "help_nav_agent": {
+    "message": "مختبر الوكيل: اختبار كيفية اكتشاف النموذج لأدوات الصفحة واستدعائها."
+  },
+  "help_nav_audit": {
+    "message": "التدقيق: تقييم موضوعي لجودة الأوصاف والمخططات المعلنة."
+  },
+  "help_nav_evals": {
+    "message": "التقييمات: مجموعات اختبار قابلة للتكرار للتحقق من اختيار الأدوات وتشغيلها."
+  },
+  "help_nav_security": {
+    "message": "نتائج سلبية من تصريحات الأدوات الظاهرة مع الأدلة والمصادر. المؤشرات لا تثبت هجوماً. المراجعة وتوليد الإصلاحات لا يستدعيان أدوات. تتطلب فحوص المصدر والاختبارات النشطة إجراءات صريحة أدناه. مراجعة استدلالية للتصريحات الظاهرة وليست شهادة أمان. تظهر الفحوص غير المعروفة أدناه. الدرجة العالية لا تمنح إذناً لتنفيذ إجراء."
+  },
+  "help_nav_settings": {
+    "message": "الإعدادات: صلاحيات المواقع والبيانات المخزنة واللغة والنسخ الاحتياطي."
+  },
+  "help_nav_timeline": {
+    "message": "الجدول الزمني: بث مباشر لتسجيل الأدوات وإزالتها واستدعائها."
+  },
+  "help_nav_tools": {
+    "message": "الأدوات: قائمة أدوات WebMCP المعروضة في هذه الصفحة ومخططاتها وتشغيلها يدويًا."
+  },
+  "help_new": {
+    "message": "هل أنت جديد في WebMCP؟"
+  },
+  "help_newHelp": {
+    "message": "اعرض مقدمة قصيرة والدليل خطوة بخطوة. فتح هذا لا يشغّل أي أداة."
+  },
+  "help_originalOverride": {
+    "message": "وسّع القيمة الأصلية التي أعلنتها الصفحة لمقارنتها بالتجاوز المحلي الخاص بك."
+  },
+  "help_poisoningBody": {
+    "message": "تعليمات توضع في اسم الأداة أو وصفها أو مخططها ليتبعها الوكيل كما لو كانت صادرة من المستخدم. يعلّم Explorer هذه العبارات كمؤشرات مع المقتطف الدقيق."
+  },
+  "help_poisoningTitle": {
+    "message": "تسميم الأدوات"
+  },
+  "help_provenanceBody": {
+    "message": "أي نص برمجي قام بتسجيل الأداة، كما التقطه وضع القياس (الإعدادات، لكل موقع، بعد إعادة التحميل). يمكن لنص برمجي من مصدر آخر إضافة أدوات أو استبدالها في الصفحة."
+  },
+  "help_provenanceTitle": {
+    "message": "المصدر والأصل"
+  },
+  "help_rawSchema": {
+    "message": "وسّع مخطط الإدخال الأصلي بصيغة JSON للفحص المباشر."
+  },
+  "help_readBody": {
+    "message": "النتيجة هي ما أعادته الأداة، أو خطأ يوضح سبب فشل الاستدعاء. يحتفظ السجل بالاستدعاءات السابقة. إعادة التشغيل تكرر الإجراء، لذا قد تكرر آثاره أيضًا."
+  },
+  "help_readTitle": {
+    "message": "قراءة النتيجة"
+  },
+  "help_regressionsBody": {
+    "message": "احفظ الاستدعاءات مع فحوصات دقيقة للنتيجة الكاملة أو لحقول محددة. اختر الحقول المهمة، مثل قائمة منتجات غير فارغة، واقرأ كل مقارنة فاشلة. تحتفظ الفحوصات المحفوظة بالمعاملات الأصلية عند تعديل التوقعات فقط. قارن اللقطات وراجع انحراف العقد قبل إعادة التشغيل."
+  },
+  "help_regressionsTitle": {
+    "message": "اكتشاف التراجعات"
+  },
+  "help_renamedTools": {
+    "message": "عرض الأسماء المستعارة للأدوات المرسلة إلى النموذج وسبب الحاجة إلى تغيير الأسماء الأصلية."
+  },
+  "help_resumeTimeline": {
+    "message": "استئناف تسجيل أحداث الجدول الزمني الجديدة لعلامة التبويب هذه."
+  },
+  "help_saveKey": {
+    "message": "احتفظ بمفتاح المزود هذا في جلسة Chrome الحالية. يتم مسحه عند إغلاق Chrome."
+  },
+  "help_savedCalls": {
+    "message": "احفظ المدخلات لهذه الأداة، أو حمّلها في النموذج، أو شغّل الاستدعاءات والفحوصات المحفوظة."
+  },
+  "help_savedChecks": {
+    "message": "راجع التوقعات المحفوظة، وأعد تشغيل الفحوصات وصدّر نتائجها."
+  },
+  "help_schemaBody": {
+    "message": "يصف المخطط المدخلات المقبولة: الأسماء والأنواع والحقول المطلوبة والقيود. وJSON هو تنسيق نصي لتلك القيم. يبني Explorer نموذجاً عندما يمكن تمثيل المخطط كحقول."
+  },
+  "help_schemaProperty": {
+    "message": "وسّع خاصية المخطط هذه لفحص وصفها وقيودها وحقولها المتداخلة."
+  },
+  "help_schemaTitle": {
+    "message": "المخطط وJSON"
+  },
+  "help_screen": {
+    "message": "هذه الشاشة"
+  },
+  "help_screenHelp": {
+    "message": "اقرأ شروحات عناصر التحكم المعروضة حالياً في Explorer."
+  },
+  "help_screenIntro": {
+    "message": "تصف هذه الشروحات الشاشة التي فتحت المساعدة منها. أغلق الدليل لاستخدام عناصر التحكم الخاصة بها."
+  },
+  "help_securityBody": {
+    "message": "نتائج سلبية من تصريحات الأدوات الظاهرة مع الأدلة والمصادر. المؤشرات لا تثبت هجوماً. المراجعة وتوليد الإصلاحات لا يستدعيان أدوات. تتطلب فحوص المصدر والاختبارات النشطة إجراءات صريحة أدناه. مراجعة استدلالية للتصريحات الظاهرة وليست شهادة أمان. تظهر الفحوص غير المعروفة أدناه. الدرجة العالية لا تمنح إذناً لتنفيذ إجراء."
+  },
+  "help_securityTitle": {
+    "message": "مراجعة الأمان والحوكمة"
+  },
+  "help_sharingBody": {
+    "message": "بعد التشغيل، يوفّر قسم إعادة إنتاج هذا الاستدعاء تنسيقات Markdown وJSON ومقتطف وحدة تحكم ونص Playwright. تتضمن الصادرات بيانات الاستدعاء وتوضح التجاوزات. راجع المحتوى قبل المشاركة. إعادة تشغيل المقتطف أو النص البرمجي ينفذ الإجراء مرة أخرى."
+  },
+  "help_sharingTitle": {
+    "message": "مشاركة استدعاء قابل لإعادة الإنتاج"
+  },
+  "help_snapshots": {
+    "message": "احفظ عقود الأدوات الحالية وقارنها بلقطة سابقة أو ببيئة أخرى."
+  },
+  "help_source": {
+    "message": "عرض موقع التسجيل الملتقط، أو شرح سبب عدم التقاط أي مصدر."
+  },
+  "help_start": {
+    "message": "ابدأ من هنا"
+  },
+  "help_startAction": {
+    "message": "أرني الخطوات الأولى"
+  },
+  "help_startHelp": {
+    "message": "تعلّم كيفية اختيار أداة وملء مدخلاتها وقراءة النتيجة، أو تدرّب في العرض التوضيحي المدمج."
+  },
+  "help_title": {
+    "message": "دليل Explorer"
+  },
+  "help_toolBody": {
+    "message": "الأداة هي إجراء مسمّى تقدمه الصفحة. والوسائط هي القيم التي تمررها إليها، مثل استعلام البحث."
+  },
+  "help_toolCardsBody": {
+    "message": "افتح أداة لقراءة وصفها الكامل وفحص مخطط الإدخال وتحضير استدعاء. تعرض البطاقات ما يصل إلى ثلاثة أسطر من الوصف. فتح البطاقة لا يُشغّل الأداة."
+  },
+  "help_toolCardsTitle": {
+    "message": "بطاقات الأدوات"
+  },
+  "help_toolTitle": {
+    "message": "الأداة والوسائط"
+  },
+  "help_topics": {
+    "message": "مواضيع الدليل"
+  },
+  "history_probeBadge": {
+    "message": "مسبار"
+  },
+  "history_probeBadgeHelp": {
+    "message": "تم إجراء هذا الاستدعاء بواسطة مسبار أمان نشط ($1)،وليس بإدخال بشري."
+  },
+  "missingReg_abortedBeforeSettled": {
+    "message": "ألغت الصفحة الإشارة التي سجّلت بها قبل استقرار التسجيل، فرفضه Chrome بدلاً من إدراج الأداة."
+  },
+  "missingReg_allExposed": {
+    "message": "رصد وضع القياس $1 من استدعاءات registerTool() في هذه الصفحة؛ وجميعها مكشوفة عبر getTools()."
+  },
+  "missingReg_badgeNoDescription": {
+    "message": "بلا وصف"
+  },
+  "missingReg_detailNoRecord": {
+    "message": "لم يتم تسجيل أي شيء إضافي لهذا الاستدعاء."
+  },
+  "missingReg_detailNotExposed": {
+    "message": "عادت الدالة registerTool()‎ بشكل طبيعي ولم تُرصد أي إزالة، ومع ذلك لا تدرج getTools()‎ الأداة."
+  },
+  "missingReg_detailPromiseRejected": {
+    "message": "رُفض وعد التسجيل ولم يعالجه شيء: $1"
+  },
+  "missingReg_detailRemoved": {
+    "message": "حررت الصفحة إشارة AbortSignal التي سجّلت بها. إزالة طبيعية وليست خللاً."
+  },
+  "missingReg_detailThrew": {
+    "message": "أطلقت الدالة registerTool()‎ استثناءً: $1"
+  },
+  "missingReg_detailUnobserved": {
+    "message": "أعادت registerTool()‎ وعداً لم يتمكن Explorer من رصد نتيجته: فالرفض الذي تعالجه الصفحة بنفسها لا يترك أي حدث. ولا تدرج getTools()‎ الأداة."
+  },
+  "missingReg_emptyDescription": {
+    "message": "كان وصف الواصف فارغًا. يرفض Chrome 153 هذا التسجيل بالخطأ InvalidStateError لعدم وجود الوصف المطلوب (مقاس، WMP-0039)."
+  },
+  "missingReg_frame": {
+    "message": "إطار #$1"
+  },
+  "missingReg_intro": {
+    "message": "رصد وضع القياس استدعاءات registerTool()‎ هذه في إطارات هذا الموقع؛ بينما لا تدرجها getTools()‎."
+  },
+  "missingReg_limits": {
+    "message": "يظهر فقط حيث يكون وضع القياس مفعلاً، بعد إعادة التحميل، لاستدعاءات registerTool()‎ — ولا يظهر أبداً للنماذج التصريحية."
+  },
+  "missingReg_promiseUnobserved": {
+    "message": "وعد التسجيل المرفوض الذي تعالجه الصفحة بنفسها لا يترك أي حدث يمكن لـ Explorer رؤيته."
+  },
+  "missingReg_registeredTimes": {
+    "message": "سُجّل $1 مرات"
+  },
+  "missingReg_stateNotExposed": {
+    "message": "غير مكشوف"
+  },
+  "missingReg_stateRejected": {
+    "message": "مرفوض"
+  },
+  "missingReg_stateRemoved": {
+    "message": "سُجّل ثم أُزيل"
+  },
+  "missingReg_stateUnknown": {
+    "message": "غير مرصود"
+  },
+  "missingReg_title": {
+    "message": "استدعاءات registerTool()‎ بدون أداة مدرجة ($1)"
+  },
+  "needActionAlt": {
+    "message": "أو السماح لـ Explorer على جميع مواقع الويب"
+  },
+  "needActionAltHelp": {
+    "message": "يمنح حق الوصول إلى كل مواقع http وhttps مرة واحدة. استخدم هذا إذا كنت تفضل عدم النقر على أيقونة شريط الأدوات في كل مرة."
+  },
+  "needActionBody": {
+    "message": "يكشف Chrome عنوان الصفحة الحالية فقط عند فتح Explorer من زر الإضافات. فتح اللوحة الجانبية من قائمتها الخاصة لا يمنح هذا الإذن. لا يقرأ Explorer علامات التبويب في الخلفية أبداً."
+  },
+  "needActionHintAlt": {
+    "message": "أعلى يمين شريط أدوات Chrome. يقع زر الإضافات، الذي يشبه قطعة الأحجية، إلى يسار زر اللوحة الجانبية."
+  },
+  "needActionHintCaption": {
+    "message": "انقر على قطعة الأحجية، ثم على WebMCP Explorer."
+  },
+  "needActionPin": {
+    "message": "الإضافة الجديدة لا تكون مثبّتة افتراضياً، لذا لا تظهر أيقونة Explorer بعد. في تلك القائمة، انقر على الدبوس بجانب WebMCP Explorer للاحتفاظ بزرّه على شريط الأدوات."
+  },
+  "needActionTitle": {
+    "message": "يحتاج Explorer إلى نقرة واحدة لرؤية هذه الصفحة"
+  },
+  "networkNotice_1SendsYourGoalThis": {
+    "message": "يرسل $1 هدفك وأسماء أدوات WebMCP في هذه الصفحة وأوصافها ومخططاتها، "
+  },
+  "networkNotice_chatDisclosure": {
+    "message": "يؤدي الإرسال إلى مشاركة رسائلك ومخططات الأدوات والمعاملات والنتائج (التي قد تتضمن بيانات من الصفحة) مع $1."
+  },
+  "networkNotice_chooseProvider": {
+    "message": "اختر نموذج ذكاء اصطناعي لبدء المحادثة. لا يتم الاتصال بأي مزود تلقائياً."
+  },
+  "networkNotice_disclosure": {
+    "message": "عند تشغيل $1، يُرسل هدفك وأسماء أدوات WebMCP في هذه الصفحة وأوصافها ومخططاتها ومعاملات الاستدعاء ونتائج الأدوات إلى $2. قد تحتوي نتائج الأدوات على بيانات من هذه الصفحة. لا يُرسل أي شيء إلى Corsen AI."
+  },
+  "networkNotice_localWhere": {
+    "message": "$1 على هذا الجهاز ($2)"
+  },
+  "networkNotice_manualModeSendsNothingAnywhere": {
+    "message": "الوضع اليدوي لا يرسل أي شيء إلى أي مكان. يبني Explorer الطلب؛ وأنت من ينقله."
+  },
+  "networkNotice_remoteWhere": {
+    "message": "$1 في $2"
+  },
+  "networkNotice_running": {
+    "message": "التشغيل"
+  },
+  "networkNotice_theConfiguredEndpoint": {
+    "message": "نقطة النهاية المُعدّة"
+  },
+  "noTabBody": {
+    "message": "افتح صفحة عبر http أو https ثم أعد فتح Explorer."
+  },
+  "noTabTitle": {
+    "message": "لا توجد علامة تبويب قابلة للفحص"
+  },
+  "noToolsBody": {
+    "message": "لم يتم عرض أي أدوات في هذه الصفحة. إذا كنت تتوقع وجودها، فأعد تحميل الصفحة وتحقق من وحدة التحكم."
+  },
+  "noToolsTitle": {
+    "message": "لا توجد أدوات WebMCP في هذه الصفحة"
+  },
+  "noTools_instrumentButton": {
+    "message": "تفعيل وضع القياس وإعادة التحميل"
+  },
+  "noTools_instrumentButtonHelp": {
+    "message": "يسجّل نصًا برمجيًا يغلّف تسجيل WebMCP في هذا الموقع قبل تشغيل كود الصفحة نفسها، ثم يعيد تحميل الصفحة. يمكنك إيقافه مجددًا من الإعدادات."
+  },
+  "noTools_instrumentHint": {
+    "message": "إذا كانت هذه الصفحة تستدعي registerTool() بالفعل، فيمكن لوضع القياس إظهار مصير كل استدعاء — سواء أكان مرفوضًا أم مزالاً أم مقبولاً ولكنه غير مكشوف بعد."
+  },
+  "noTools_instrumentOn": {
+    "message": "وضع القياس مفعّل لهذا الموقع ولم يرصد أي استدعاء لـ registerTool()‎."
+  },
+  "notInjected": {
+    "message": "غير محقون"
+  },
+  "notInjectedHelp": {
+    "message": "تأتي هذه الأداة من مصدر لم يُمنح Explorer إذن الوصول إليه، لذا فإن إطارها غير معروف."
+  },
+  "openDemo": {
+    "message": "فتح الصفحة التجريبية"
+  },
+  "openDemoHelp": {
+    "message": "فتح الصفحة التجريبية المدمجة التي توفر أدوات WebMCP جاهزة للتجربة."
+  },
+  "probes_busy": {
+    "message": "توجد عملية تشغيل مسابير جارية بالفعل لعلامة التبويب هذه."
+  },
+  "probes_cancelled": {
+    "message": "توقف بعد $1 من أصل $2 استدعاء · $3 نتائج"
+  },
+  "probes_consent": {
+    "message": "أنا أتحكم في هذا الموقع ($1) وأوافق على أن تستدعي المسابير أدواته في جلستي"
+  },
+  "probes_consentHelp": {
+    "message": "مطلوب قبل تشغيل أي مسبار. يتم تذكره لهذا الموقع على هذا الجهاز؛ ويمكن إلغاؤه هنا وفي الإعدادات ← البيانات المخزنة."
+  },
+  "probes_consentRequired": {
+    "message": "لم يتم تشغيل المسابير: أكّد أولاً أنك تتحكم في هذا الموقع."
+  },
+  "probes_consequential": {
+    "message": "مصرّح بأنها ذات أثر"
+  },
+  "probes_disclosure": {
+    "message": "يؤدي تشغيل المجسّات إلى استدعاء $1 من الأدوات المحددة في $2، حتى خمس مرات لكل أداة، بمعاملات مولّدة وأخرى مشوّهة داخل جلسة متصفحك. لا يُرسل أي شيء إلى أي جهة أخرى، وتبقى النتائج والملاحظات على هذا الجهاز."
+  },
+  "probes_done": {
+    "message": "تم إجراء $1 استدعاء · $2 نتائج"
+  },
+  "probes_history": {
+    "message": "يظهر كل استدعاء في سجل هذه الأداة، معلّماً كمسبار."
+  },
+  "probes_intro": {
+    "message": "تقرأ المراجعة السلبية العقد فقط؛ أما المجسّات فتستدعي الأدوات المحددة في هذه الصفحة وداخل جلستك بمعاملات مولّدة من مخططها وأخرى يحظرها المخطط (نوع خاطئ، حقل مطلوب مفقود، خاصية غير معروفة، نص بطول 10,000 حرف). خمس استدعاءات كحد أقصى لكل أداة، واحدة تلو الأخرى، قابلة للإلغاء، وتُسجّل جميعها في السجل كمجسّات. الأداة التي تغيّر الحالة ستغيّرها فعليًا."
+  },
+  "probes_none": {
+    "message": "لا توجد نتائج من المسابير. الاستدعاءات المنفذة: $1."
+  },
+  "probes_notPreselected": {
+    "message": "غير محدد مسبقاً: هذه الأداة غير معلنة للقراءة فقط، لذا قد يؤدي فحصها إلى تغيير الحالة"
+  },
+  "probes_progress": {
+    "message": "$1 من أصل $2 استدعاء · $3 · $4"
+  },
+  "probes_run": {
+    "message": "تشغيل الفحوصات"
+  },
+  "probes_runHelp": {
+    "message": "ابدأ تشغيل المسابير على الأدوات المحددة. معطّل حتى تؤكد تحكمك في هذا الموقع وتحدد أداة واحدة على الأقل."
+  },
+  "probes_stop": {
+    "message": "إيقاف"
+  },
+  "probes_stopHelp": {
+    "message": "ألغِ الاستدعاء الجاري وأنهِ التشغيل. لا يمكن التراجع عن استدعاء تم تنفيذه بالفعل."
+  },
+  "probes_title": {
+    "message": "فحوصات نشطة — لموقعك الخاص"
+  },
+  "probes_titleHelp": {
+    "message": "شغّل مجموعة ثابتة من الاستدعاءات على الأدوات المحددة لمعرفة كيف يتعامل كودها مع المدخلات التي يحظرها المخطط وما الذي يعيده. فقط على موقع تتحكم فيه."
+  },
+  "probes_toolHelp": {
+    "message": "تضمين هذه الأداة في تشغيل المسابير."
+  },
+  "probes_tools": {
+    "message": "الأدوات المراد فحصها"
+  },
+  "prompt_cancel": {
+    "message": "مسح النموذج"
+  },
+  "prompt_cancelHelp": {
+    "message": "أوقف التعديل؛ يعود النموذج إلى إنشاء موجه جديد."
+  },
+  "prompt_choose": {
+    "message": "الإجابة بصفتك (موجه النظام)"
+  },
+  "prompt_chooseHelp": {
+    "message": "التعليمات التي يتلقاها النموذج قبل كل هدف. القيمة الافتراضية هي المرفقة مع المنتج؛ وتظهر ملفاتك الشخصية هنا."
+  },
+  "prompt_defaultLabel": {
+    "message": "الافتراضي لـ Explorer"
+  },
+  "prompt_delete": {
+    "message": "حذف"
+  },
+  "prompt_deleteHelp": {
+    "message": "يزيل هذا الموجه. يعود مختبر الوكيل إلى الإعداد الافتراضي للمنتج إذا كان محدداً."
+  },
+  "prompt_edit": {
+    "message": "تعديل"
+  },
+  "prompt_editHelp": {
+    "message": "حمّل هذا الموجه في النموذج أدناه لتعديله."
+  },
+  "prompt_help": {
+    "message": "يحدد الموجه كيفية تصرف النموذج، لكنه لا يفتح أي قيود: فمخططات الأدوات وقواعد الاستدعاء ورفض الأمان تقع خارج الموجه ولا يمكن تعديلها أبداً."
+  },
+  "prompt_manage": {
+    "message": "إدارة الموجهات"
+  },
+  "prompt_manageHelp": {
+    "message": "اكتب وعدّل واحذف الموجهات المسمّاة المدرجة أعلاه."
+  },
+  "prompt_name": {
+    "message": "الاسم"
+  },
+  "prompt_nameHelp": {
+    "message": "يظهر في القائمة أعلاه. حتى 40 حرفاً."
+  },
+  "prompt_none": {
+    "message": "لا توجد موجهات مخصصة بعد."
+  },
+  "prompt_save": {
+    "message": "حفظ الموجه"
+  },
+  "prompt_saveHelp": {
+    "message": "ينشئ هذا الموجه. املأ الاسم والتعليمات."
+  },
+  "prompt_saved": {
+    "message": "تم حفظ الموجه."
+  },
+  "prompt_showDefault": {
+    "message": "عرض الموجه الافتراضي للمنتج"
+  },
+  "prompt_showDefaultHelp": {
+    "message": "هو بالضبط ما يرسله التشغيل بدون ملف شخصي كموجه للنظام."
+  },
+  "prompt_text": {
+    "message": "التعليمات"
+  },
+  "prompt_textHelp": {
+    "message": "تُرسل إلى النموذج كموجه نظام في كل تشغيل طالما كان هذا الموجه محدداً."
+  },
+  "prompt_textPlaceholder": {
+    "message": "مثال: أنت وكيل تسوق حذر. استدعِ أدوات القراءة فقط؛ واسأل قبل استخدام أي أداة شراء."
+  },
+  "prompt_update": {
+    "message": "تحديث الموجه"
+  },
+  "readable_boolean": {
+    "message": "منطقي"
+  },
+  "readable_emptyList": {
+    "message": "قائمة فارغة (0 عنصر)"
+  },
+  "readable_emptyObject": {
+    "message": "كائن فارغ (0 حقل)"
+  },
+  "readable_emptyText": {
+    "message": "نص فارغ"
+  },
+  "readable_expandHelp": {
+    "message": "وسّع هذه القيمة المتداخلة لفحص حقولها أو عناصرها. تظل النتيجة دون تغيير."
+  },
+  "readable_fields": {
+    "message": "$1 حقول"
+  },
+  "readable_item": {
+    "message": "العنصر $1"
+  },
+  "readable_items": {
+    "message": "$1 عناصر"
+  },
+  "readable_more": {
+    "message": "عرض الـ $1 التالية (يتبقى $2)"
+  },
+  "readable_moreHelp": {
+    "message": "إظهار المزيد من هذه النتيجة على هذا الجهاز. لا يتم تشغيل أي أداة."
+  },
+  "readable_noValue": {
+    "message": "بلا قيمة"
+  },
+  "readable_null": {
+    "message": "null"
+  },
+  "readable_number": {
+    "message": "رقم"
+  },
+  "readable_rawJson": {
+    "message": "JSON الأصلي"
+  },
+  "readable_rawJsonHelp": {
+    "message": "افحص نص JSON الدقيق الذي أعادته الأداة، بما في ذلك الأرقام والمسافات الأصلية. فتحه لا يشغّل الأداة."
+  },
+  "readable_string": {
+    "message": "نص"
+  },
+  "reasonApiAbsent": {
+    "message": "بيئة تشغيل WebMCP غير مكشوفة في هذه الصفحة. توضح الفحوصات أدناه ما تمكّن Explorer من رصده، لكنها لا تحدد سبب غياب واجهة API."
+  },
+  "reasonApiCallRejected": {
+    "message": "رفض المتصفح استدعاء WebMCP في هذا المستند: $1"
+  },
+  "reasonApiPartial": {
+    "message": "يوجد كائن WebMCP لكنه لا يكشف الدوال التي يتوقعها Explorer. قد يشغّل هذا المتصفح إصداراً مختلفاً من واجهة API."
+  },
+  "reasonInsecureContext": {
+    "message": "هذه الصفحة ليست في سياق آمن، لذا لا يتم كشف WebMCP فيها أبداً. قدّمها عبر https أو استخدم localhost."
+  },
+  "reasonOriginNotIsolated": {
+    "message": "هذا المستند غير معزول حسب المصدر: تم تقديمه بالترويسة Origin-Agent-Cluster: ?0 أو أن document.domain قيد الاستخدام. يتطلب إصدار المتصفح هذا مستنداً معزولاً حسب المصدر لـ WebMCP ويرفض كل استدعاء هنا؛ وترد رسالة المتصفح أدناه. الإصدارات الأحدث لم تعد تتطلب ذلك."
+  },
+  "reasonPolyfillActive": {
+    "message": "يوفر بديل برمجي (Polyfill) واجهة WebMCP. هذا ليس التنفيذ الأصلي للمتصفح، وقد يختلف السلوك."
+  },
+  "reasonToolsPolicyBlocked": {
+    "message": "إذن tools محظور في هذا الإطار. يحتاج إطار iframe العابر للمصادر إلى allow=\"tools\" من الصفحة التي تضمّنه."
+  },
+  "recipes_acceptContract": {
+    "message": "استخدام هذا العقد الحالي"
+  },
+  "recipes_acceptContractHelp": {
+    "message": "سجّل بصمات الصفحة/الإطار والمخطط الحالية لهذه الأداة. راجع المعاملات والفحوصات مقابل المخطط الجديد."
+  },
+  "recipes_activeRunEdit": {
+    "message": "أوقف هذا التشغيل أو أنهه قبل تعديل تعريفه أو بدء مراجعة أخرى."
+  },
+  "recipes_addBinding": {
+    "message": "إضافة ربط"
+  },
+  "recipes_addBindingHelp": {
+    "message": "أضف هذا المرجع الصريح إلى الخطوة. يتم التحقق من البنية والمسار الهدف والترتيب قبل التشغيل."
+  },
+  "recipes_addInput": {
+    "message": "إضافة مدخل مسمّى"
+  },
+  "recipes_addInputHelp": {
+    "message": "أضف قيمة قابلة لإعادة الاستخدام، ثم امنحها اسماً واضحاً وقيمة افتراضية."
+  },
+  "recipes_addStep": {
+    "message": "إضافة خطوة"
+  },
+  "recipes_addStepHelp": {
+    "message": "أضف استدعاءً تمت مراجعته، ثم اختر أداته وإطاره ومعاملاته. الحد الأقصى 20 خطوة."
+  },
+  "recipes_argumentPath": {
+    "message": "مسار حقل الوسيط"
+  },
+  "recipes_argumentPathHelp": {
+    "message": "مؤشر JSON Pointer للعنصر النائب للوسيط الذي يستبدله هذا الربط. المسار الفارغ يستبدل كائن الوسائط بالكامل."
+  },
+  "recipes_arguments": {
+    "message": "الوسائط الحرفية"
+  },
+  "recipes_argumentsHelp": {
+    "message": "هذه هي القيم الحرفية المراجَعة قبل أن تستبدل ارتباطات المدخلات المسمّاة أو النتائج السابقة الحقول المحددة."
+  },
+  "recipes_back": {
+    "message": "العودة إلى الأدوات"
+  },
+  "recipes_backHelp": {
+    "message": "احتفظ بهذه المسودة وعد إلى قائمة الأدوات. تستمر الوصفة النشطة حتى يتم إيقافها مؤقتاً أو إنهاء تشغيلها."
+  },
+  "recipes_bindingDescription": {
+    "message": "$1 ← $2"
+  },
+  "recipes_bindingLimit": {
+    "message": "استخدم 50 ربطاً صريحاً كحد أقصى لكل خطوة."
+  },
+  "recipes_bindingResult": {
+    "message": "الخطوة $1، النتيجة $2"
+  },
+  "recipes_bindingSource": {
+    "message": "تأتي القيمة من"
+  },
+  "recipes_bindingSourceHelp": {
+    "message": "اختر مدخلاً مسمّى أو خطوة سابقة. لا يتم استنتاج أي شيء تلقائياً."
+  },
+  "recipes_bindings": {
+    "message": "استخدام مدخل أو نتيجة سابقة"
+  },
+  "recipes_bindingsHelp": {
+    "message": "اربط مدخلاً مسمّى أو حقل نتيجة من خطوة سابقة بحقل وسيط موجود."
+  },
+  "recipes_bindingsIntro": {
+    "message": "أضف عنصراً نائباً في الوسائط الحرفية أولاً. يستبدل الربط ذلك الحقل المحدد فقط. يستخدم JSON Pointer الصيغة ‎/name و‎/items/0؛ واكتب الشرطة المائلة كـ ~1 والمدة كـ ~0. تشير المراجع إلى الخطوات السابقة فقط."
+  },
+  "recipes_check": {
+    "message": "فحص النتيجة"
+  },
+  "recipes_checkFailed": {
+    "message": "فشل الفحص"
+  },
+  "recipes_checkHelp": {
+    "message": "اشترط اختياريًا نتيجة ناجحة أو قيم حقول محددة. الأداة الفاشلة توقف الوصفة حتى لو نجح فحص خطأ متوقع قديم."
+  },
+  "recipes_check_fields": {
+    "message": "اختيار حقول النتيجة"
+  },
+  "recipes_check_keep": {
+    "message": "الاحتفاظ بالتوقع المحفوظ"
+  },
+  "recipes_check_none": {
+    "message": "بلا فحص إضافي"
+  },
+  "recipes_check_ok": {
+    "message": "ينجح الاستدعاء"
+  },
+  "recipes_chooseSource": {
+    "message": "اختر مدخلاً مسمّى أو نتيجة سابقة"
+  },
+  "recipes_chooseTool": {
+    "message": "اختيار أداة"
+  },
+  "recipes_confirmDelete": {
+    "message": "تأكيد الحذف"
+  },
+  "recipes_confirmDiscard": {
+    "message": "انقر على تجاهل هذه المسودة مرة أخرى لتجاهل التغييرات غير المحفوظة."
+  },
+  "recipes_continueDraft": {
+    "message": "متابعة المسودة"
+  },
+  "recipes_continueDraftHelp": {
+    "message": "أعد فتح وصفتك الحالية دون فقدان التعديلات غير المكتملة."
+  },
+  "recipes_copied": {
+    "message": "تم نسخ المعاينة."
+  },
+  "recipes_copyExport": {
+    "message": "نسخ المعاينة"
+  },
+  "recipes_copyExportHelp": {
+    "message": "انسخ المعاينة الدقيقة التي تم فحصها. يتم التحقق من JSON الوصفة قبل النسخ."
+  },
+  "recipes_deleteRecipe": {
+    "message": "حذف الوصفة المحفوظة"
+  },
+  "recipes_deleteRecipeHelp": {
+    "message": "أزل هذا التعريف المحفوظ. يتم الاحتفاظ بسجلات التشغيل المحفوظة بشكل منفصل."
+  },
+  "recipes_discard": {
+    "message": "تجاهل هذه المسودة"
+  },
+  "recipes_discardHelp": {
+    "message": "تجاهل تعديلات الوصفة غير المكتملة وعد إلى الأدوات. يظل التعريف المحفوظ مخزناً."
+  },
+  "recipes_down": {
+    "message": "تحريك لأسفل"
+  },
+  "recipes_downHelp": {
+    "message": "انقل هذه الخطوة إلى موضع متأخر. راجع أي مراجع معتمدة عليها قبل التشغيل."
+  },
+  "recipes_downloadExport": {
+    "message": "تنزيل المعاينة"
+  },
+  "recipes_downloadExportHelp": {
+    "message": "احفظ JSON الوصفة المفحوص أو تقرير التشغيل بصيغة Markdown كملف محلي."
+  },
+  "recipes_exportNotice": {
+    "message": "افحص وعدّل هذه المعاينة قبل مشاركتها. قد تحتوي على قيم من الوسائط أو النتائج أو الفحوصات أو عناوين URL أو المحاكاة المحلية. لا يستطيع Explorer اكتشاف كل سر في بيانات الصفحة العشوائية. لا ينقل تصدير الوصفات بيانات المصادقة أو صلاحية الوصول إلى الموقع."
+  },
+  "recipes_exportPreview": {
+    "message": "معاينة التصدير"
+  },
+  "recipes_exportPreviewHelp": {
+    "message": "راجع أو أزل البيانات المحددة هنا. تؤثر التغييرات على هذا التصدير فقط. يجب أن يظل JSON الوصفة تعريفاً صالحاً."
+  },
+  "recipes_exportRecipe": {
+    "message": "تصدير تعريف الوصفة"
+  },
+  "recipes_exportRecipeHelp": {
+    "message": "جهّز ملف JSON مؤرخ الإصدار يحتوي على التعريف القابل لإعادة الاستخدام، دون نتائج التشغيل."
+  },
+  "recipes_exportRun": {
+    "message": "تصدير تقرير التشغيل"
+  },
+  "recipes_exportRunHelp": {
+    "message": "جهّز تقرير Markdown قابلاً للتعديل لهذا التشغيل المرصود."
+  },
+  "recipes_failure": {
+    "message": "خطأ"
+  },
+  "recipes_format_json": {
+    "message": "قيمة JSON"
+  },
+  "recipes_format_text": {
+    "message": "نص"
+  },
+  "recipes_guide": {
+    "message": "كيف تعمل الوصفات"
+  },
+  "recipes_guideBody": {
+    "message": "ابدأ من نتيجة أداة عبر \"استخدام في وصفة\"، أو أضف خطوة واختر أداتها. املأ معاملاتها باستخدام النموذج أو JSON الدقيق. سمِّ قيمة تريد تغييرها بين مرات التشغيل، ثم اربطها صراحةً بمعامل. يمكن لخطوة لاحقة استخدام JSON Pointer من نتيجة سابقة. راجع الاستدعاءات المرتبة والتجاوزات المحلية قبل التشغيل. الإيقاف لا يتراجع عن إجراء طبّقته الصفحة بالفعل."
+  },
+  "recipes_guideHelp": {
+    "message": "اقرأ دليلاً موجزاً حول الخطوات والمدخلات المسمّاة والفحوصات والتنفيذ."
+  },
+  "recipes_identity": {
+    "message": "الموقع: $1 · مسار الإطار: $2 · العقد المسجل: $3"
+  },
+  "recipes_importNotice": {
+    "message": "يفتح الاستيراد مسودة فقط. يجب أن تطابق الصفحة الحية المصدر المسجل ومواضع الإطارات والعقود قبل التشغيل."
+  },
+  "recipes_importRecipe": {
+    "message": "استيراد JSON الوصفة"
+  },
+  "recipes_importRecipeHelp": {
+    "message": "افحص تعريف الوصفة وافتح مسودة قابلة للتعديل. الاستيراد لا يشغّل أي أداة أبداً."
+  },
+  "recipes_importText": {
+    "message": "JSON الوصفة"
+  },
+  "recipes_importTextHelp": {
+    "message": "الصق وصفة WebMCP Explorer من الإصدار 1. يتم التحقق من النص كبيانات، ولا يُنفذ ككود أبداً."
+  },
+  "recipes_includeArguments": {
+    "message": "تضمين المدخلات والوسائط"
+  },
+  "recipes_includeArgumentsHelp": {
+    "message": "أزل أقسام الوسائط من التقرير إذا لم تكن لازمة. قد تظل القيم ظاهرة في النتائج أو الأخطاء أو الفحوصات."
+  },
+  "recipes_includeResults": {
+    "message": "تضمين النتائج الخام"
+  },
+  "recipes_includeResultsHelp": {
+    "message": "أزل أقسام النتائج الخام من التقرير. قد تظل شروحات الفحص والتجاوزات تحتوي على بيانات مرصودة."
+  },
+  "recipes_inputDefault": {
+    "message": "القيمة الافتراضية"
+  },
+  "recipes_inputDefaultHelp": {
+    "message": "القيمة المبدئية المحفوظة. يمكن لقيم التشغيل أدناه تجاوزها دون تغيير التعريف."
+  },
+  "recipes_inputFormat": {
+    "message": "تنسيق القيمة"
+  },
+  "recipes_inputFormatHelp": {
+    "message": "يحافظ النص على السلسلة النصية. ويقبل JSON رقماً محدداً أو قيمة منطقية أو null أو قائمة أو كائناً."
+  },
+  "recipes_inputLimit": {
+    "message": "تدعم الوصفة 20 مدخلاً مسمّى كحد أقصى."
+  },
+  "recipes_inputName": {
+    "message": "اسم المدخل"
+  },
+  "recipes_inputNameHelp": {
+    "message": "استخدم اسماً فريداً يبدأ بحرف؛ تُقبل الأحرف والأرقام والشرطات السفلية والواصلات."
+  },
+  "recipes_inputSource": {
+    "message": "المدخل: $1"
+  },
+  "recipes_inputs": {
+    "message": "المدخلات المسمّاة"
+  },
+  "recipes_inputsHelp": {
+    "message": "عرّف قيماً قابلة لإعادة الاستخدام مثل استعلام بحث، واربطها صراحةً بوسيط خطوة."
+  },
+  "recipes_intro": {
+    "message": "أعد استخدام بضع استدعاءات أدوات مراجَعة دون الحاجة إلى نموذج ذكاء اصطناعي. تمرر الوصفة قيمة من نتيجة سابقة إلى استدعاء لاحق، ثم تعرض ما حدث بالضبط."
+  },
+  "recipes_jsonOnly": {
+    "message": "يحتاج هذا المخطط إلى محرر JSON. تظل المعاملات الدقيقة متاحة."
+  },
+  "recipes_keepDraft": {
+    "message": "تحتوي المسودة على تغييرات غير محفوظة. تابعها واحفظها أو تجاهلها قبل فتح تعريف آخر."
+  },
+  "recipes_mocked": {
+    "message": "محاكاة محلية"
+  },
+  "recipes_mockedHelp": {
+    "message": "قدّم Explorer هذه النتيجة من تجاوز محلي مراجَع؛ ولم يستدعِ أداة الصفحة الحقيقية."
+  },
+  "recipes_name": {
+    "message": "اسم الوصفة"
+  },
+  "recipes_nameHelp": {
+    "message": "سمِّ المهمة التي يساعدك هذا التسلسل على تكرارها."
+  },
+  "recipes_newRecipe": {
+    "message": "وصفة جديدة"
+  },
+  "recipes_newRecipeHelp": {
+    "message": "ابدأ تسلسلاً فارغًا يصل إلى 20 استدعاءً يدويًا في هذه الصفحة."
+  },
+  "recipes_next": {
+    "message": "تشغيل الخطوة التالية"
+  },
+  "recipes_nextHelp": {
+    "message": "شغّل خطوة تالية واحدة فقط، ثم توقف مؤقتاً قبل أي استدعاء لاحق."
+  },
+  "recipes_noCompleteResult": {
+    "message": "لا تتوفر نتيجة ناجحة كاملة لهذه الخطوة بعد. أدخل مؤشر JSON Pointer المراجَع؛ وسيتم التحقق منه عند تشغيل الخطوة."
+  },
+  "recipes_openImport": {
+    "message": "التحقق وفتح المسودة"
+  },
+  "recipes_openImportHelp": {
+    "message": "تحقق من الإصدار والحجم والأدوات والمراجع السابقة. لن يتم تشغيل أي استدعاء."
+  },
+  "recipes_openRun": {
+    "message": "قراءة التشغيل"
+  },
+  "recipes_openRunHelp": {
+    "message": "اقرأ النتائج المحفوظة وتفاصيل التوقف. فتح التشغيل لا يستأنفه."
+  },
+  "recipes_openSaved": {
+    "message": "فتح الوصفة"
+  },
+  "recipes_openSavedHelp": {
+    "message": "افتح هذا التعريف المحفوظ لتعديله ومراجعته قبل التنفيذ."
+  },
+  "recipes_pause": {
+    "message": "إيقاف مؤقت بعد هذه الخطوة"
+  },
+  "recipes_pauseHelp": {
+    "message": "اترك الأداة الحالية تنتهي، ثم انتظر قبل استدعاء خطوة أخرى."
+  },
+  "recipes_pending": {
+    "message": "الخطوة $1 معلّقة أو غير مؤكدة (الاستدعاء $2). ربما تم تنفيذ إجرائها في الصفحة بالفعل."
+  },
+  "recipes_pendingRule": {
+    "message": "أضف أو تجاهل قاعدة الحقل غير المكتملة قبل حفظ هذه الوصفة أو مراجعتها."
+  },
+  "recipes_pickBinding": {
+    "message": "اختيار حقل من نتيجة مرصودة"
+  },
+  "recipes_pickBindingHelp": {
+    "message": "تصفّح النتيجة المحفوظة للخطوة السابقة المحددة. لا يمكن للنتيجة المقتطعة توفير معاينة للحقول."
+  },
+  "recipes_recentRun": {
+    "message": "$1 · $2"
+  },
+  "recipes_recipesCount": {
+    "message": "$1 تعريفات · $2 مرات تشغيل"
+  },
+  "recipes_recipesData": {
+    "message": "الوصفات وأدلة التشغيل"
+  },
+  "recipes_refreshExport": {
+    "message": "إعادة بناء المعاينة"
+  },
+  "recipes_refreshExportHelp": {
+    "message": "استبدل تعديلات المعاينة بأحدث أقسام التعريف أو التقرير المحددة."
+  },
+  "recipes_remaining": {
+    "message": "تشغيل الباقي"
+  },
+  "recipes_remainingHelp": {
+    "message": "شغّل الخطوات المراجَعة المتبقية بالترتيب. يتوقف عند حدوث فشل أو فقدان قيمة أو تغيّر الصفحة."
+  },
+  "recipes_removeBinding": {
+    "message": "إزالة الربط"
+  },
+  "recipes_removeBindingHelp": {
+    "message": "احتفظ بقيمة الوسيط الحرفية وأزل مرجع المدخل/النتيجة هذا."
+  },
+  "recipes_removeInput": {
+    "message": "إزالة المدخل"
+  },
+  "recipes_removeInputHelp": {
+    "message": "أزل هذا المدخل المسمّى. يجب تحديث أي ربط يشير إليه قبل تشغيل الوصفة."
+  },
+  "recipes_removeStep": {
+    "message": "إزالة الخطوة"
+  },
+  "recipes_removeStepHelp": {
+    "message": "أزل هذا الاستدعاء من المسودة. ستتطلب المراجع اللاحقة إليه مراجعة."
+  },
+  "recipes_resultExcerpt": {
+    "message": "المقتطف المخزن: $1 من أصل $2 حرف. النتيجة الكاملة الأصلية غير متوفرة في هذا السجل."
+  },
+  "recipes_resultHeading": {
+    "message": "$1. $2 · $3"
+  },
+  "recipes_resultHeadingHelp": {
+    "message": "وسّع النتيجة الفعلية والوسائط الدقيقة وأي فحص للحقول المحددة."
+  },
+  "recipes_resultPath": {
+    "message": "مسار حقل النتيجة السابقة"
+  },
+  "recipes_resultPathHelp": {
+    "message": "مؤشر JSON Pointer داخل نتيجة JSON الكاملة والناجحة لتلك الخطوة. يؤدي غياب الحقل إلى إيقاف التنفيذ."
+  },
+  "recipes_retention": {
+    "message": "تبقى التعريفات محلية: حتى 30 وصفة، 20 خطوة لكل منها، بحد أقصى 2 ميغابايت إجمالاً. تحتفظ سجلات التشغيل بما يصل إلى 8 عمليات تشغيل ضمن 3 ميغابايت؛ ولا يتم إخلاء سوى السجلات القديمة المكتملة. تعرض النتائج المخزنة حتى 20,000 حرف لكل منها. لا يستأنف التشغيل تلقائياً أبداً بعد إعادة تشغيل Explorer أو المتصفح."
+  },
+  "recipes_review": {
+    "message": "المراجعة قبل التشغيل"
+  },
+  "recipes_reviewHeading": {
+    "message": "مراجعة هذا التشغيل"
+  },
+  "recipes_reviewHelp": {
+    "message": "أعد اكتشاف الصفحة الحالية وتحقق من كل أداة وإطار وعقد ومدخل وتجاوز محلي مسجل."
+  },
+  "recipes_reviewNotice": {
+    "message": "ترتبط الاستدعاءات بـ $1 وبمستندات إطاراته الحالية. راجع المحاكاة المحلية أدناه. يتم فحص ربط النتيجة اللاحقة عند توفر النتيجة المصدر. تنتهي صلاحية هذه المراجعة بعد دقيقتين."
+  },
+  "recipes_reviewOverrides": {
+    "message": "التجاوزات والمحاكاة المحلية"
+  },
+  "recipes_reviewOverridesHelp": {
+    "message": "هذه هي التجاوزات المحلية الدقيقة التي تم فحصها قبل التشغيل. القائمة الفارغة تعني عدم وجود أي تجاوز لهذه الخطوات."
+  },
+  "recipes_reviewStep": {
+    "message": "$2 · $3 · مسار الإطار $4"
+  },
+  "recipes_root": {
+    "message": "(الجذر)"
+  },
+  "recipes_runHeading": {
+    "message": "التشغيل: $1"
+  },
+  "recipes_runInputValue": {
+    "message": "قيمة التشغيل"
+  },
+  "recipes_runInputValueHelp": {
+    "message": "تظل المدخلات النصية نصاً. وتستخدم القيم الافتراضية الأخرى صيغة JSON وتحتفظ بنوعها."
+  },
+  "recipes_runInputs": {
+    "message": "القيم الخاصة بهذا التشغيل"
+  },
+  "recipes_runInputsHelp": {
+    "message": "غيّر القيم المسمّاة لهذا التشغيل دون تغيير القيم الافتراضية المحفوظة. أعد المراجعة بعد التعديل."
+  },
+  "recipes_runStatus": {
+    "message": "$1 · تم تسجيل $2 من أصل $3 خطوات"
+  },
+  "recipes_save": {
+    "message": "حفظ الوصفة"
+  },
+  "recipes_saveHelp": {
+    "message": "احفظ التعريف محلياً بشكل منفصل عن نتائج التشغيل المرصودة. تظل التعريفات غير الصالحة قابلة للتعديل."
+  },
+  "recipes_saved": {
+    "message": "تم حفظ الوصفة محلياً."
+  },
+  "recipes_schema": {
+    "message": "مخطط الأداة الحالي"
+  },
+  "recipes_schemaHelp": {
+    "message": "اقرأ العقد الحي. يتطلب تحديث العقد المسجل إجراءً صريحاً."
+  },
+  "recipes_site": {
+    "message": "الموقع المسجل: $1"
+  },
+  "recipes_siteRecipes": {
+    "message": "وصفات لهذا الموقع"
+  },
+  "recipes_siteRecipesHelp": {
+    "message": "افتح التسلسلات اليدوية المحفوظة وعمليات التشغيل الأخيرة لمصدر هذه الصفحة."
+  },
+  "recipes_stepHeading": {
+    "message": "$1. $2"
+  },
+  "recipes_stepHeadingHelp": {
+    "message": "وسّع هذه الخطوة لمراجعة هدفها ووسائطها وارتباطاتها والفحص الاختياري."
+  },
+  "recipes_stepLimit": {
+    "message": "تدعم الوصفة 20 خطوة كحد أقصى. قسّم هذه المهمة إلى وصفات أصغر."
+  },
+  "recipes_stepSource": {
+    "message": "الخطوة $1: $2"
+  },
+  "recipes_stop": {
+    "message": "إيقاف"
+  },
+  "recipes_stopHelp": {
+    "message": "ألغِ الاستدعاء الحالي إن أمكن وأوقف التسلسل. لا يمكن التراجع عن إجراءات الصفحة المكتملة."
+  },
+  "recipes_success": {
+    "message": "نجاح"
+  },
+  "recipes_title": {
+    "message": "وصفة يدوية"
+  },
+  "recipes_toggleArguments": {
+    "message": "تبديل النموذج / JSON"
+  },
+  "recipes_toggleArgumentsHelp": {
+    "message": "غيّر طريقة تعديل الوسائط الحرفية. يجب تصحيح JSON غير الصالح قبل فتح النموذج."
+  },
+  "recipes_tool": {
+    "message": "الأداة والإطار"
+  },
+  "recipes_toolHelp": {
+    "message": "اختر الأداة الحية والإطار الدقيقين اللذين تهدف هذه الخطوة إلى استدعائهما."
+  },
+  "recipes_toolMissing": {
+    "message": "لا تتوفر أداة حية متوافقة. عد إلى الأدوات للتحقق من الوصول إلى الموقع أو افتح الصفحة المسجلة، ثم حدّث. تبقى المسودة والنتائج هنا."
+  },
+  "recipes_toolOption": {
+    "message": "$1 · $2 · إطار $3"
+  },
+  "recipes_unavailableRunControl": {
+    "message": "عنصر التحكم هذا غير متاح في حالة التشغيل الحالية. تتطلب عمليات التشغيل المتوقفة أو المنتهية مراجعة جديدة."
+  },
+  "recipes_up": {
+    "message": "تحريك لأعلى"
+  },
+  "recipes_upHelp": {
+    "message": "انقل هذه الخطوة إلى موضع أبكر. يجب أن تظل الارتباطات تشير إلى الخطوات السابقة فقط."
+  },
+  "recipes_use": {
+    "message": "استخدام في وصفة"
+  },
+  "recipes_useHelp": {
+    "message": "أضف هذا الاستدعاء فقط إلى مسودة الوصفة الحالية لعلامة التبويب هذه. راجع معاملاته وأي ارتباطات قبل التشغيل."
+  },
+  "recipes_usedArguments": {
+    "message": "الوسائط المرسلة فعلياً"
+  },
+  "recipes_usedArgumentsHelp": {
+    "message": "اقرأ الوسائط النهائية بعد تطبيق ارتباطات المدخلات المسمّاة والنتائج السابقة."
+  },
+  "registrationHelp": {
+    "message": "نوع التسجيل المرصود من DOM."
+  },
+  "retry": {
+    "message": "إعادة المحاولة"
+  },
+  "savedCalls_checkBadge": {
+    "message": "فحص"
+  },
+  "savedCalls_checkEqualsHelp": {
+    "message": "يتوقع هذا النص بالضبط: $1"
+  },
+  "savedCalls_checkErrorHelp": {
+    "message": "يتوقع فشل الاستدعاء."
+  },
+  "savedCalls_checkJsonHelp": {
+    "message": "يتوقع JSON هذا (بغض النظر عن ترتيب المفاتيح والمسافات): $1"
+  },
+  "savedCalls_checkOkHelp": {
+    "message": "يتوقع نجاح الاستدعاء."
+  },
+  "savedCalls_contractChanged": {
+    "message": "تغيّر العقد"
+  },
+  "savedCalls_contractChangedHelp": {
+    "message": "تغيّر وصف الأداة أو مخططها أو بياناتها التوضيحية منذ حفظ هذا الاستدعاء؛ لكن المعاملات لا تزال صالحة."
+  },
+  "savedCalls_delete": {
+    "message": "حذف"
+  },
+  "savedCalls_deleteHelp": {
+    "message": "إزالة هذا الاستدعاء المحفوظ."
+  },
+  "savedCalls_expectError": {
+    "message": "يفشل الاستدعاء"
+  },
+  "savedCalls_expectHelp": {
+    "message": "ما يجب أن تكون عليه النتيجة لكي يُعد هذا الاستدعاء المحفوظ فحصاً. الاستدعاء بلا توقع هو مجرد إشارة مرجعية."
+  },
+  "savedCalls_expectLabel": {
+    "message": "التوقع"
+  },
+  "savedCalls_expectLastResult": {
+    "message": "نفس نتيجة التشغيل الأخير"
+  },
+  "savedCalls_expectNone": {
+    "message": "لا شيء (إشارة مرجعية)"
+  },
+  "savedCalls_expectOk": {
+    "message": "ينجح الاستدعاء"
+  },
+  "savedCalls_fail": {
+    "message": "✕ فشل — $1"
+  },
+  "savedCalls_load": {
+    "message": "تحميل"
+  },
+  "savedCalls_loadHelp": {
+    "message": "ضع هذه الوسائط في المحرر."
+  },
+  "savedCalls_namePlaceholder": {
+    "message": "سمِّ هذه الوسائط"
+  },
+  "savedCalls_needsReview": {
+    "message": "يحتاج إلى مراجعة"
+  },
+  "savedCalls_needsReviewHelp": {
+    "message": "تغيّر مخطط الأداة منذ حفظ هذا الاستدعاء ولم تعد المعاملات متوافقة معه. حمّلها وعدّلها ثم احفظها مجددًا."
+  },
+  "savedCalls_noVerdict": {
+    "message": "لا يوجد حكم — $1"
+  },
+  "savedCalls_none": {
+    "message": "لا يوجد استدعاء محفوظ لهذه الأداة بعد. احفظ المعاملات التي تستخدمها باستمرار: فهي تبقى بعد إعادة التحميل ويُعاد فحصها عند تغيّر المخطط."
+  },
+  "savedCalls_notValid": {
+    "message": "الوسائط الموجودة في المحرر غير صالحة؛ أصلحها قبل الحفظ."
+  },
+  "savedCalls_pass": {
+    "message": "✓ نجح — $1"
+  },
+  "savedCalls_run": {
+    "message": "تشغيل"
+  },
+  "savedCalls_runAll": {
+    "message": "تشغيل جميع الفحوصات"
+  },
+  "savedCalls_runAllHelp": {
+    "message": "شغّل كل استدعاء محفوظ يحمل توقعاً، الواحد تلو الآخر، وقيّم كل نتيجة. يتم تخطي الاستدعاءات التي تحتاج إلى مراجعة مع الإشارة إلى ذلك."
+  },
+  "savedCalls_runAllSummary": {
+    "message": "نجح $1، وفشل $2، وتم تخطي $3 (بحاجة إلى مراجعة)، و$4 إشارات مرجعية دون تقييم."
+  },
+  "savedCalls_runBlocked": {
+    "message": "يحتاج هذا الاستدعاء إلى مراجعة قبل تشغيله: $1"
+  },
+  "savedCalls_runHelp": {
+    "message": "شغّل الأداة بهذه المعاملات الآن."
+  },
+  "savedCalls_save": {
+    "message": "حفظ المعاملات الحالية"
+  },
+  "savedCalls_saveHelp": {
+    "message": "احتفظ بالوسائط الموجودة في المحرر تحت هذا الاسم لتشغيلها لاحقاً — حتى بعد إعادة التحميل أو النشر."
+  },
+  "savedCalls_saved": {
+    "message": "تم الحفظ. تم الاحتفاظ بـ $1 لهذه الأداة."
+  },
+  "savedCalls_savedAt": {
+    "message": "حُفظ في $1"
+  },
+  "savedCalls_skippedNeedsReview": {
+    "message": "تم تخطيه — يحتاج إلى مراجعة: $1"
+  },
+  "savedCalls_title": {
+    "message": "الاستدعاءات والفحوصات المحفوظة"
+  },
+  "savedCalls_titleCount": {
+    "message": "الاستدعاءات المحفوظة ($1)"
+  },
+  "schemaForm_anArrayOfObjectsIs": {
+    "message": "يتم تعديل مصفوفة الكائنات بصيغة JSON حتى لا يُفقد أي شيء دون ملاحظة."
+  },
+  "schemaForm_editThisPropertyAsJson": {
+    "message": "عدّل هذه الخاصية بصيغة JSON."
+  },
+  "schemaForm_explorerCannotTellWhatThis": {
+    "message": "لا يستطيع Explorer تحديد ما تحتويه هذه المصفوفة. عدّلها بصيغة JSON."
+  },
+  "schemaForm_isRequired": {
+    "message": "$1 مطلوب"
+  },
+  "schemaForm_mustBeNumber": {
+    "message": "يجب أن يكون $1 رقماً"
+  },
+  "schemaForm_notSpecified": {
+    "message": "غير محدد"
+  },
+  "schemaForm_notValidJson": {
+    "message": "$1 ليس JSON صالحاً"
+  },
+  "schemaForm_oneValuePerLine": {
+    "message": "قيمة واحدة في كل سطر"
+  },
+  "schemaForm_required": {
+    "message": "مطلوب"
+  },
+  "schemaForm_thisPropertyAllowsSeveralTypes": {
+    "message": "تسمح هذه الخاصية بعدة أنواع. عدّلها بصيغة JSON."
+  },
+  "schemaForm_thisPropertyIsNestedToo": {
+    "message": "هذه الخاصية متداخلة بعمق كبير يتعذر معه عرضها كنموذج."
+  },
+  "schemaForm_thisPropertyUsesAllofEdit": {
+    "message": "تستخدم هذه الخاصية allOf. عدّلها بصيغة JSON."
+  },
+  "schemaForm_thisPropertyUsesAnyofExplorer": {
+    "message": "تستخدم هذه الخاصية anyOf. لن يخمن Explorer أي فرع تقصده."
+  },
+  "schemaForm_thisPropertyUsesOneofExplorer": {
+    "message": "تستخدم هذه الخاصية oneOf. لن يخمن Explorer أي فرع تقصده."
+  },
+  "schemaForm_thisPropertyUsesRefWhich": {
+    "message": "تستخدم هذه الخاصية $$ref، وهو ما لا يقوم Explorer بحلّه. عدّلها بصيغة JSON."
+  },
+  "schemaForm_thisToolTakesNoArguments": {
+    "message": "لا تقبل هذه الأداة أي معاملات."
+  },
+  "schemaForm_tupleArraysAreEditedAs": {
+    "message": "يتم تعديل مصفوفات الصفوف (Tuples) بصيغة JSON."
+  },
+  "schemaTree_nestedTooDeeplyToExpand": {
+    "message": "متداخل بعمق كبير يتعذر معه التوسيع."
+  },
+  "schemaTree_rawJsonSchema": {
+    "message": "مخطط JSON الخام"
+  },
+  "schemaTree_theSchemaDeclaresNoProperties": {
+    "message": "لا يعلن المخطط عن أي خصائص."
+  },
+  "schemaTree_thisToolDeclaresNoInput": {
+    "message": "لا تعلن هذه الأداة عن مخطط إدخال."
+  },
+  "sec_accepts_missing_required_fix": {
+    "message": "تحقّق من المعاملات المطلوبة داخل كود الأداة وأعد خطأً يذكر اسم المعامل المفقود."
+  },
+  "sec_accepts_missing_required_title": {
+    "message": "قبلت الأداة استدعاءً بدون وسيط مطلوب"
+  },
+  "sec_accepts_missing_required_why": {
+    "message": "تم إغفال خاصية مطلوبة ومع ذلك أجابت الأداة وكأن الاستدعاء صالح: العقد المعلن لا يطابق ما يفرضه الكود."
+  },
+  "sec_accepts_out_of_schema_input_fix": {
+    "message": "تحقق من كل وسيط في كود الأداة وأعد رسالة خطأ واضحة عند إدخال نوع خاطئ."
+  },
+  "sec_accepts_out_of_schema_input_title": {
+    "message": "قبلت الأداة وسيطاً من نوع خاطئ"
+  },
+  "sec_accepts_out_of_schema_input_why": {
+    "message": "أُرسلت قيمة من نوع مختلف عمّا يعلنه المخطط، ومع ذلك استجابت الأداة كما لو كانت صالحة. المتصفح لا يتحقق من صحة المعاملات (مقاس، WMP-0046)؛ وكود الأداة هو طبقة التحقق الوحيدة (المواصفة §6.3.1.3)."
+  },
+  "sec_accepts_unbounded_input_fix": {
+    "message": "قيّد المعلمة باستخدام maxLength في المخطط وافرض ذلك في الكود."
+  },
+  "sec_accepts_unbounded_input_title": {
+    "message": "قبلت الأداة سلسلة نصية بطول 10,000 حرف"
+  },
+  "sec_accepts_unbounded_input_why": {
+    "message": "قبلت معلمة نص حر بدون maxLength قيمة طويلة جداً. تقلل حدود الطول المساحة التي يمكن لتعليمة محقونة استغلالها (المواصفات §6.4.2)."
+  },
+  "sec_accepts_unknown_property_fix": {
+    "message": "تجاهل أو ارفض الخصائص غير المعروفة عمداً في الكود."
+  },
+  "sec_accepts_unknown_property_title": {
+    "message": "قبلت الأداة خاصية غير معروفة"
+  },
+  "sec_accepts_unknown_property_why": {
+    "message": "تم قبول خاصية إضافية غير معلنة. تسمح إرشادات Chrome بمخططات مرنة مع كود صارم؛ وهذه معلومة لمن يعرف تفاصيل التنفيذ."
+  },
+  "sec_consequential_without_hint_fix": {
+    "message": "عيّن annotations.consequentialHint إلى true، أو أعد تسمية الأداة إذا كانت تبدأ فقط عملية يكملها الشخص بنفسه."
+  },
+  "sec_consequential_without_hint_title": {
+    "message": "إجراء ذو أثر مهم بدون consequentialHint"
+  },
+  "sec_consequential_without_hint_why": {
+    "message": "يستخدم الاسم أو الوصف فعلاً يدفع أو يرسل أو يحجز أو يحذف أو يلزم الشخص؛ وبدون consequentialHint قد يشغّله الوكيل دون استئذان (المواصفات §6.4.5، §6.3.2)."
+  },
+  "sec_convention_llms_txt_present_fix": {
+    "message": "حافظ على دقته إذا كنت تقدمه؛ فهو اختياري."
+  },
+  "sec_convention_llms_txt_present_title": {
+    "message": "يتم تقديم ملف llms.txt"
+  },
+  "sec_convention_llms_txt_present_why": {
+    "message": "ملف llms.txt هو عرف غير رسمي لملخص موقع مقروء آلياً، تفحصه تدقيقات Lighthouse الخاصة بالوكلاء. ولا علاقة له بواجهة متصفح WebMCP."
+  },
+  "sec_convention_manifest_invalid_fix": {
+    "message": "قدّم JSON صالحاً أو أزل الملف."
+  },
+  "sec_convention_manifest_invalid_title": {
+    "message": "يتم تقديم ملف ‎/.well-known/webmcp لكنه ليس بصيغة JSON"
+  },
+  "sec_convention_manifest_invalid_why": {
+    "message": "المسار يستجيب لكن محتواه لا يُحلل كـ JSON؛ وبالتالي لا يحصل القارئ الذي يتوقع هذا العرف على شيء صالح للاستخدام."
+  },
+  "sec_convention_manifest_present_fix": {
+    "message": "حافظ على اتساقه مع الأدوات التي تسجلها الصفحة فعلياً، أو أزله؛ فهو ليس معياراً قياسياً."
+  },
+  "sec_convention_manifest_present_title": {
+    "message": "يتم تقديم بيان ‎/.well-known/webmcp"
+  },
+  "sec_convention_manifest_present_why": {
+    "message": "تم العثور على بيان اكتشاف يتبع عرف المجتمع. وهو ليس جزءاً من مسودة W3C CG؛ وتقرأه بعض أدوات التدقيق والأدلة. الوكلاء الذين يستخدمون واجهة المتصفح لا يحتاجون إليه."
+  },
+  "sec_convention_permissions_policy_absent_fix": {
+    "message": "أرسل الترويسة Permissions-Policy: tools=()‎ في الصفحات التي لا تستخدم WebMCP؛ وإلا فلا داعي لأي إجراء."
+  },
+  "sec_convention_permissions_policy_absent_title": {
+    "message": "لا توجد سياسة Permissions-Policy لميزة tools في استجابة الصفحة"
+  },
+  "sec_convention_permissions_policy_absent_why": {
+    "message": "بدون هذه الترويسة ينطبق الوضع الافتراضي: يُسمح بـ WebMCP للصفحة والإطارات من نفس المصدر. يمكن للصفحة التي لا تستخدم WebMCP إرسال Permissions-Policy: tools=()‎ لمنع أي نص برمجي محقون من تسجيل أدوات (المواصفات §6.4.1)."
+  },
+  "sec_convention_permissions_policy_fix": {
+    "message": "تحقق من أن قائمة السماح تطابق قصدك."
+  },
+  "sec_convention_permissions_policy_title": {
+    "message": "تذكر سياسة Permissions-Policy للصفحة ميزة tools"
+  },
+  "sec_convention_permissions_policy_why": {
+    "message": "تقيّد ترويسة الاستجابة أو تفوّض WebMCP صراحةً (المواصفات §6.4.1). هذه هي الآلية التي توصي بها المواصفات لتعطيل WebMCP حيث لا يُستخدم."
+  },
+  "sec_cross_origin_frame_tools_fix": {
+    "message": "تأكد من أن التضمين مقصود؛ وامنح Explorer حق الوصول إلى مصدر الإطار لمراجعة أدواته."
+  },
+  "sec_cross_origin_frame_tools_title": {
+    "message": "أدوات من إطار تابع لمصدر آخر"
+  },
+  "sec_cross_origin_frame_tools_why": {
+    "message": "يكشف إطار من مصدر آخر أدوات في هذه الصفحة. يراها الوكلاء إلى جانب أدواتك."
+  },
+  "sec_debugging_tool_exposed_fix": {
+    "message": "سجّل أدوات التصحيح في نسخ التطوير فقط أو خلف إعداد خاص بالمطورين."
+  },
+  "sec_debugging_tool_exposed_title": {
+    "message": "أداة تصحيح أخطاء مكشوفة في هذه الصفحة"
+  },
+  "sec_debugging_tool_exposed_why": {
+    "message": "تشير annotations.debugging إلى أداة مخصصة لأدوات التطوير. وفي الصفحة التي يزورها المستخدمون يمكن لأي وكيل استدعاؤها."
+  },
+  "sec_delegated_tools_policy_fix": {
+    "message": "احتفظ بـ allow=\"tools\" فقط في الإطارات المضمّنة التي تثق بها للتصرف نيابةً عن زوارك."
+  },
+  "sec_delegated_tools_policy_title": {
+    "message": "تفوّض الصفحة سياسة tools إلى مصدر آخر"
+  },
+  "sec_delegated_tools_policy_why": {
+    "message": "يحمل إطار iframe السمة allow=\"tools\": يمكن للمصدر المضمّن تسجيل أدوات في هذه الصفحة (تصف المواصفة §6.4.1 هذه السياسة؛ وتوصي Chrome بقصرها على المصادر الموثوقة)."
+  },
+  "sec_high_risk_read_without_hint_fix": {
+    "message": "فكّر في استخدام consequentialHint في عمليات القراءة التي تكشف بيانات حساسة، وقلّل ما تعيده الأداة إلى الحد الأدنى."
+  },
+  "sec_high_risk_read_without_hint_title": {
+    "message": "قراءة بيانات حساسة بدون consequentialHint"
+  },
+  "sec_high_risk_read_without_hint_why": {
+    "message": "تقرأ الأداة عناوين أو أرصدة أو بيانات اعتماد أو بيانات صحية. ما إذا كان الكشف للقراءة فقط يتطلب تأكيداً هو نقاش مفتوح في المواصفات (#331)؛ وحتى يُحسم، فإن إعلان التلميح هو الخيار الأحوط."
+  },
+  "sec_legacy_host_fix": {
+    "message": "استخدم document.modelContext."
+  },
+  "sec_legacy_host_title": {
+    "message": "يتم استخدام المضيف القديم navigator.modelContext"
+  },
+  "sec_legacy_host_why": {
+    "message": "انتقلت الواجهة إلى document.modelContext؛ والصفحة التي تعتمد على الاسم المستعار في navigator تعتمد على مسار توافق مؤقت."
+  },
+  "sec_no_tools_policy_open_fix": {
+    "message": "أرسل Permissions-Policy: tools=()‎ من الصفحات التي لا تستخدم WebMCP."
+  },
+  "sec_no_tools_policy_open_title": {
+    "message": "لا توجد أدوات، لكن WebMCP يظل مفتوحًا في هذه الصفحة"
+  },
+  "sec_no_tools_policy_open_why": {
+    "message": "الصفحة التي لا تعرض أي أدوات قد تتلقى أدوات من أي نص برمجي محقون. تغلق الترويسة Permissions-Policy: tools=()‎ الواجهة للمستند وإطاراته قبل تشغيل النصوص البرمجية (المواصفات §6.4.1)."
+  },
+  "sec_opaque_origin_tool_fix": {
+    "message": "امنح الإطار مصدراً حقيقياً أو أزل أدواته."
+  },
+  "sec_opaque_origin_tool_title": {
+    "message": "أداة من مصدر معتم (opaque origin)"
+  },
+  "sec_opaque_origin_tool_why": {
+    "message": "الإطارات المعزولة (sandbox) أو about:blank لها مصدر معتم؛ ولا يمكن نسب أدواتها إلى موقع محدد."
+  },
+  "sec_output_directive_fix": {
+    "message": "أعد بيانات وليس نصاً موجهاً للوكيل؛ وميّز النتائج التي تحمل نصوصاً كتبها آخرون باستخدام untrustedContentHint."
+  },
+  "sec_output_directive_title": {
+    "message": "تبدو النتيجة وكأنها تعليمة موجهة للوكيل"
+  },
+  "sec_output_directive_why": {
+    "message": "تحتوي مخرجات الأداة على عبارات موجهة إلى الوكيل. حقن المخرجات (المواصفات §6.3.1.2) هو الطريقة التي توجه بها الصفحة أو مستخدموها الوكيل بعد الاستدعاء."
+  },
+  "sec_output_markup_fix": {
+    "message": "أعد بيانات مجردة؛ واترك تنسيقها للوكيل."
+  },
+  "sec_output_markup_title": {
+    "message": "رموز توصيف أو عناصر قوالب في النتيجة"
+  },
+  "sec_output_markup_why": {
+    "message": "وسوم HTML أو كتل الكود أو رموز قوالب الموجهات في النتيجة تعد ناقلاً للتعليمات المحقونة."
+  },
+  "sec_output_over_budget_fix": {
+    "message": "أعد بيانات أقل، أو قسّم النتيجة إلى صفحات، أو أعد مرجعاً يمكن للوكيل متابعته."
+  },
+  "sec_output_over_budget_title": {
+    "message": "تتجاوز النتيجة ميزانية المخرجات البالغة 1.5 ألف حرف"
+  },
+  "sec_output_over_budget_why": {
+    "message": "تحدد إرشادات Chrome ميزانية مخرجات الأداة بنحو 1,500 حرف؛ فالنتائج الأكبر تستهلك السياق وتوسّع سطح حقن المخرجات."
+  },
+  "sec_output_personal_data_fix": {
+    "message": "أعد فقط ما تحتاجه المهمة؛ وميّز النتائج التي تحمل بيانات شخصية أو نصوصاً كتبها مستخدمون باستخدام untrustedContentHint."
+  },
+  "sec_output_personal_data_title": {
+    "message": "يبدو أن النتيجة تحتوي على بيانات شخصية"
+  },
+  "sec_output_personal_data_why": {
+    "message": "عاد عنوان بريد إلكتروني أو رقم هاتف أو رقم يشبه البطاقة من استدعاء صالح بدون untrustedContentHint. تنتقل النتيجة إلى أي وكيل استدعى الأداة (المواصفات §6.3.3، OWASP MCP10)."
+  },
+  "sec_probe_call_failed_fix": {
+    "message": "اجعل المثال الذي يقتضيه المخطط يعمل، أو شدّد قيود المخطط (enum، format، examples)."
+  },
+  "sec_probe_call_failed_title": {
+    "message": "فشلت الأداة عند استدعائها بمعاملات صالحة مولّدة"
+  },
+  "sec_probe_call_failed_why": {
+    "message": "عند استدعاء الأداة بمعاملات مولّدة من مخططها الخاص (الحقول المطلوبة والقيم الافتراضية)، أعادت خطأً. سيواجه أي وكيل الخطأ نفسه عند أول استدعاء."
+  },
+  "sec_re_registered_in_session_fix": {
+    "message": "قارن لقطة مأخوذة مسبقاً بالعقد الحالي (الأدوات ← اللقطات)؛ وسجّل الأدوات مرة واحدة لكل مستند متى أمكن."
+  },
+  "sec_re_registered_in_session_title": {
+    "message": "أُزيلت وأعيد تسجيلها في هذه الجلسة"
+  },
+  "sec_re_registered_in_session_why": {
+    "message": "الأداة التي تختفي ثم تعود قد تكون نفس الأداة أعيد تركيبها، أو عقداً مختلفاً تحت نفس الاسم (arXiv 2606.06387، مسألة المواصفات #92). رصد الجدول الزمني التغيير؛ لكن Explorer لم يقارن العقدين."
+  },
+  "sec_readonly_claim_on_mutating_verb_fix": {
+    "message": "أزل readOnlyHint أو أعد تسمية الأداة بحيث يطابق الاسم ما تفعله؛ وأعد مراجعة التلميحات بعد كل تغيير."
+  },
+  "sec_readonly_claim_on_mutating_verb_title": {
+    "message": "تلميح readOnlyHint على أداة يدل اسمها على تغيير الحالة"
+  },
+  "sec_readonly_claim_on_mutating_verb_why": {
+    "message": "قد يتخطى الوكلاء طلب التأكيد للأدوات المخصصة للقراءة فقط. وجود علامة القراءة فقط على فعل مثل delete أو pay أو update إما قديم أو خاطئ، وتنص المواصفات على أنه لا يمكن التحقق من النية المعلنة (§6.3.2)."
+  },
+  "sec_registered_more_than_once_fix": {
+    "message": "سجّل مرة واحدة لكل مستند، أو ألغِ التسجيل صراحةً باستخدام AbortSignal قبل التسجيل مرة أخرى."
+  },
+  "sec_registered_more_than_once_title": {
+    "message": "عدة استدعاءات registerTool()‎ لهذا الاسم"
+  },
+  "sec_registered_more_than_once_why": {
+    "message": "رصد وضع القياس أكثر من استدعاء تسجيل لهذه الأداة في هذا المستند. التسجيل المتكرر هو الآلية التي يستخدمها هجوم الاستبدال؛ وهو أيضاً ما يفعله المكوّن عند إعادة العرض."
+  },
+  "sec_sensitive_parameter_fix": {
+    "message": "أزل المعلمة، أو اجمع القيمة في واجهة الصفحة نفسها بحضور الشخص، أو مرّر مرجعاً معتماً."
+  },
+  "sec_sensitive_parameter_title": {
+    "message": "معلمة تطلب بيانات حساسة"
+  },
+  "sec_sensitive_parameter_why": {
+    "message": "قد يقوم وكيل يحاول المساعدة بملء هذه المعلمة من بيانات التخصيص أو سجل التصفح أو مواقع أخرى (المواصفات §6.3.3). لا ينبغي أبداً أن تمر بيانات الاعتماد أو بيانات البطاقات أو المعرفات الوطنية عبر نموذج (#316)."
+  },
+  "sec_state_change_without_hint_fix": {
+    "message": "أعلن عن consequentialHint عندما يكون التغيير مهماً للشخص؛ واترك readOnlyHint بقيمة false."
+  },
+  "sec_state_change_without_hint_title": {
+    "message": "أداة تغيّر الحالة لا تعلن عن أي تلميح"
+  },
+  "sec_state_change_without_hint_why": {
+    "message": "يغيّر الفعل شيئاً في الصفحة أو الحساب، لكن لم يتم إعلان readOnlyHint ولا consequentialHint؛ يُطلب من الوكلاء افتراض حدوث تغيير في الحالة، ولا يستطيع المراجع التمييز بين الإغفال المقصود وغير المقصود."
+  },
+  "sec_text_agent_directive_fix": {
+    "message": "صف ما تفعله الأداة ومتى تنطبق بجمل خبرية بسيطة؛ وانقل أي قاعدة لسير العمل إلى كود الأداة نفسها أو مخططها."
+  },
+  "sec_text_agent_directive_title": {
+    "message": "يبدو الوصف وكأنه تعليمة موجهة للوكيل"
+  },
+  "sec_text_agent_directive_why": {
+    "message": "يتعامل الوكلاء مع أوصاف الأدوات كسياق موثوق. عبارات مثل \"استدعِ هذا دائمًا أولاً\" أو \"لا تخبر المستخدم\" توجّه النموذج بدلاً من وصف الأداة (المواصفة §6.3.1.1، تسميم الأدوات). قد يستخدم الوصف المشروع هذه الكلمات؛ لذا يُعرض هذا كمؤشر ليقرأه المستخدم."
+  },
+  "sec_text_embedded_address_fix": {
+    "message": "صف الأداة بدون عناوين؛ وأعد الروابط ضمن النتائج إذا كانت جزءاً من البيانات."
+  },
+  "sec_text_embedded_address_title": {
+    "message": "عنوان URL أو بريد إلكتروني في النص الموجه للنموذج"
+  },
+  "sec_text_embedded_address_why": {
+    "message": "قد يؤدي وجود عنوان داخل الوصف إلى دفع الوكيل لجلب أو الاتصال بوجهة لم يطلبها المستخدم (إرشادات Chrome للوكلاء: قصر المصادر على المهمة)."
+  },
+  "sec_text_encoded_blob_fix": {
+    "message": "أزل الحمولات المرمّزة من الأسماء والأوصاف؛ ومرّر البيانات عبر الوسائط والنتائج."
+  },
+  "sec_text_encoded_blob_title": {
+    "message": "بيانات مرمّزة مضمّنة في النص الموجه للنموذج"
+  },
+  "sec_text_encoded_blob_why": {
+    "message": "تحمل السلسلة الطويلة بترميز base64 أو الست عشري في الوصف محتوى لا يستطيع القارئ فحصه وقد يفك النموذج ترميزه أو يتصرف بناءً عليه."
+  },
+  "sec_text_hidden_characters_fix": {
+    "message": "أزل الأحرف المدرجة؛ وتحقق من خطوة البناء أو نظام إدارة المحتوى الذي أنتج النص."
+  },
+  "sec_text_hidden_characters_title": {
+    "message": "أحرف غير مرئية أو مغيّرة للاتجاه في النص الموجه للنموذج"
+  },
+  "sec_text_hidden_characters_why": {
+    "message": "الأحرف ذات العرض الصفري وثنائية الاتجاه وأحرف التحكم غير مرئية للشخص الذي يقرأ الصفحة لكنها تصل إلى النموذج حرفياً: ويمكنها إخفاء النص أو عكس اتجاه قراءته."
+  },
+  "sec_text_markup_fix": {
+    "message": "استخدم نصاً عادياً في الأسماء والأوصاف."
+  },
+  "sec_text_markup_title": {
+    "message": "رموز توصيف أو عناصر قوالب في النص الموجه للنموذج"
+  },
+  "sec_text_markup_why": {
+    "message": "تُعد وسوم HTML أو أسوار الكود أو رموز قوالب التوجيه داخل الوصف ناقلاً شائعًا للتعليمات المحقونة، ولا حاجة إليها أبدًا لوصف الأداة."
+  },
+  "sec_text_mixed_scripts_fix": {
+    "message": "أعد كتابة الكلمة بنظام كتابة واحد؛ وإذا كان النص متعدد اللغات فعلاً، فاجعل كل كلمة بنظام كتابة واحد."
+  },
+  "sec_text_mixed_scripts_title": {
+    "message": "كلمة تخلط بين أحرف لاتينية وأحرف سيريلية أو يونانية متشابهة الشكل"
+  },
+  "sec_text_mixed_scripts_why": {
+    "message": "الأحرف المتشابهة شكلاً تجعل سلسلتين مختلفتين تبدوان متطابقتين للإنسان بينما يراهما النموذج والمدقق كلمتين مختلفتين (Unicode TR36)."
+  },
+  "sec_text_over_budget_fix": {
+    "message": "اختصر النص ضمن حدود الميزانية؛ وضع التفاصيل في أوصاف معلمات المخطط."
+  },
+  "sec_text_over_budget_title": {
+    "message": "نص يتجاوز الميزانيات التي يطبقها الوكلاء"
+  },
+  "sec_text_over_budget_why": {
+    "message": "تخصص إرشادات Chrome‏ 500 حرف للوصف، و150 حرفاً لوصف المعلمة، و30 حرفاً للاسم؛ والنص الأطول أكثر عرضة للاقتطاع أو لإخفاء تعليمة وسط الحشو (المواصفات §6.4.2)."
+  },
+  "sec_third_party_registration_fix": {
+    "message": "راجع النص البرمجي، وثبّت إصداره أو قدّمه من مصدرك الخاص؛ وسجّل عمليات التسجيل في بيئة الإنتاج."
+  },
+  "sec_third_party_registration_title": {
+    "message": "مُسجّلة بواسطة نص برمجي من مصدر آخر"
+  },
+  "sec_third_party_registration_why": {
+    "message": "تم تسجيل هذه الأداة بواسطة كود مقدّم من مصدر مختلف عن الصفحة: مثل شبكة CDN أو جسر طرفي أو إضافة. يمكن لأي نص برمجي في الصفحة إضافة أدوات أو استبدالها (حقن الأدوات أثناء الجلسة، arXiv 2606.06387)."
+  },
+  "sec_ugc_without_untrusted_hint_fix": {
+    "message": "عيّن annotations.untrustedContentHint إلى true في الأدوات التي تعيد نصوصاً كتبها آخرون."
+  },
+  "sec_ugc_without_untrusted_hint_title": {
+    "message": "محتوى من أشخاص آخرين بدون untrustedContentHint"
+  },
+  "sec_ugc_without_untrusted_hint_why": {
+    "message": "قد تحمل المراجعات أو التعليقات أو الرسائل أو نصوص الصفحات المجلوبة تعليمات تستهدف الوكيل (حقن المخرجات، المواصفات §6.3.1.2). يخبر untrustedContentHint الوكلاء بمعاملة النتيجة كبيانات فقط."
+  },
+  "sec_unbounded_string_fix": {
+    "message": "أضف maxLength أو enum أو format حيثما ينطبق ذلك؛ وتحقق دائماً داخل كود الأداة."
+  },
+  "sec_unbounded_string_title": {
+    "message": "معلمات نص حر بدون حد للطول"
+  },
+  "sec_unbounded_string_why": {
+    "message": "توسّع السلاسل النصية غير المحدودة ما يمكن أن تحمله التعليمة المحقونة (المواصفات §6.4.2). ينصح Chrome بالتحقق الصارم في الكود؛ كما أن وجود maxLength أو enum في المخطط يوضح للوكلاء القيم المناسبة."
+  },
+  "security_axis_environment": {
+    "message": "البيئة"
+  },
+  "security_axis_governance": {
+    "message": "الحوكمة"
+  },
+  "security_axis_injection": {
+    "message": "سطح الحقن"
+  },
+  "security_axis_lifecycle": {
+    "message": "دورة الحياة"
+  },
+  "security_axis_privacy": {
+    "message": "الخصوصية"
+  },
+  "security_axis_surface": {
+    "message": "السطح"
+  },
+  "security_cardBadgeHelp": {
+    "message": "أعلى درجة خطورة بين نتائج أمان هذه الأداة. افتح قسم الأمان للاطلاع على الأدلة."
+  },
+  "security_clean": {
+    "message": "لم يتم رصد أي مشكلة. تم تقييم القواعد أدناه؛ وما تعذر رصده مدرج في القائمة."
+  },
+  "security_coverage": {
+    "message": "$1 أدوات · $2 قواعد · $3 نتائج ($4 مرصودة، $5 مؤشرات)"
+  },
+  "security_coverageHelp": {
+    "message": "نطاق المراجعة: الأدوات في الصفحة، والقواعد المقيّمة لكل منها، والنتائج حسب طبيعتها."
+  },
+  "security_detailIntro": {
+    "message": "النتائج المتعلقة بنص هذه الأداة وتلميحاتها ومخططها ومصدرها. المؤشرات هي أنماط للمراجعة وليست دليلاً قاطعاً."
+  },
+  "security_detailNone": {
+    "message": "لم يتم رصد أي مشكلة لهذه الأداة."
+  },
+  "security_detailTitle": {
+    "message": "مراجعة الأمان"
+  },
+  "security_detailTitleCount": {
+    "message": "مراجعة الأمان ($1)"
+  },
+  "security_evidence": {
+    "message": "الدليل"
+  },
+  "security_exportLabel": {
+    "message": "تصدير هذه المراجعة الأمنية"
+  },
+  "security_exportNote": {
+    "message": "يتضمن أدلة من الصفحة وإصلاحات مقترحة وفحوصاً غير معروفة ودرجة مؤقتة. راجع التقرير قبل مشاركته."
+  },
+  "security_filterAxis": {
+    "message": "عرض النتائج من هذا النوع فقط."
+  },
+  "security_filterSeverity": {
+    "message": "عرض النتائج بهذه الخطورة فقط."
+  },
+  "security_fix": {
+    "message": "ما يجب فعله"
+  },
+  "security_frame": {
+    "message": "إطار #$1"
+  },
+  "security_hideReviewed": {
+    "message": "إخفاء المراجَع"
+  },
+  "security_hideReviewedHelp": {
+    "message": "أخفِ النتائج التي علّمتها كمراجَعة. ستعود للظهور إذا تغيّر عقد الأداة."
+  },
+  "security_intro": {
+    "message": "نتائج سلبية من تصريحات الأدوات الظاهرة مع الأدلة والمصادر. المؤشرات لا تثبت هجوماً. المراجعة وتوليد الإصلاحات لا يستدعيان أدوات. تتطلب فحوص المصدر والاختبارات النشطة إجراءات صريحة أدناه."
+  },
+  "security_itemHelp": {
+    "message": "افتح لقراءة الدليل، وأهميته، وما يجب فعله، والمصادر."
+  },
+  "security_markReviewed": {
+    "message": "تحديد كمراجَع"
+  },
+  "security_markReviewedHelp": {
+    "message": "تذكّر أنك راجعت هذه النتيجة لهذه الأداة وهذا العقد. تعود للظهور إذا تغيّر العقد. تُحفظ على هذا الجهاز فقط."
+  },
+  "security_natureHelp": {
+    "message": "مرصود: رصد Explorer الحقيقة بنفسه. مؤشر: نمط غالباً ما يعني وجود مشكلة؛ اقرأ الدليل وقرر."
+  },
+  "security_natureIndicator": {
+    "message": "مؤشر"
+  },
+  "security_natureObserved": {
+    "message": "مرصود"
+  },
+  "security_noMatch": {
+    "message": "لا توجد نتيجة تطابق عوامل التصفية هذه."
+  },
+  "security_noTools": {
+    "message": "لا توجد أدوات لمراجعتها في هذه الصفحة."
+  },
+  "security_no_lifecycle": {
+    "message": "دورة الحياة: لا توجد أحداث في الجدول الزمني الحي لعلامة التبويب هذه بعد. افتح الجدول الزمني أو أبقِ هذا القسم مفتوحاً أثناء تغيّر الصفحة."
+  },
+  "security_no_refused_frames": {
+    "message": "الإطارات التي رفض المتصفح استدعاءات WebMCP الخاصة بها: $1."
+  },
+  "security_no_registration_provenance": {
+    "message": "مصدر التسجيل: وضع القياس متوقف لهذا الموقع، لذا لا يستطيع Explorer معرفة أي نص برمجي سجّل كل أداة. فعّله من الإعدادات وأعد تحميل الصفحة."
+  },
+  "security_no_ungranted_origins": {
+    "message": "إطارات لمصادر لا يُسمح لـ Explorer بفحصها: $1. امنح حق الوصول من شريط الحالة لمراجعة أدواتها."
+  },
+  "security_notObservable": {
+    "message": "غير قابل للرصد هنا"
+  },
+  "security_openTool": {
+    "message": "فتح الأداة"
+  },
+  "security_openToolHelp": {
+    "message": "فتح تفاصيل هذه الأداة: المخطط والفحوصات والتشغيل."
+  },
+  "security_pageFinding": {
+    "message": "هذه الصفحة"
+  },
+  "security_reviewedBadge": {
+    "message": "تمت مراجعته"
+  },
+  "security_sevHelp": {
+    "message": "الأثر المحتمل إذا صح المؤشر؛ منفصل عن الإثبات والدرجة الإجمالية."
+  },
+  "security_sev_critical": {
+    "message": "حرجة"
+  },
+  "security_sev_high": {
+    "message": "عالية"
+  },
+  "security_sev_info": {
+    "message": "معلومة"
+  },
+  "security_sev_low": {
+    "message": "منخفضة"
+  },
+  "security_sev_medium": {
+    "message": "متوسطة"
+  },
+  "security_sources": {
+    "message": "المصادر"
+  },
+  "security_title": {
+    "message": "الأمان"
+  },
+  "security_unmarkReviewed": {
+    "message": "إلغاء التحديد"
+  },
+  "security_unmarkReviewedHelp": {
+    "message": "إظهار هذه النتيجة كجديدة مرة أخرى."
+  },
+  "security_why": {
+    "message": "لماذا يهم هذا"
+  },
+  "settings_about": {
+    "message": "حول"
+  },
+  "settings_agentAccess": {
+    "message": "وصول الوكلاء الخارجيين"
+  },
+  "settings_agentAccessAllowed": {
+    "message": "مسموح"
+  },
+  "settings_agentAccessBody": {
+    "message": "أي مواقع الويب يُسمح لها بسؤال Explorer عن الصفحة الموجودة فيها. يجيب Explorer فقط على المصادر المعلنة في بيانه، وفقط بعد تفعيل كل منها هنا."
+  },
+  "settings_agentAccessLast": {
+    "message": "آخر طلب تم رصده: طلب $1 \"$2\"."
+  },
+  "settings_agentAccessNeedPermission": {
+    "message": "يحتاج Chrome إلى إذنك على ذلك الموقع قبل تفعيل وصول الوكيل. حاول مرة أخرى واقبل المطالبة."
+  },
+  "settings_agentAccessNone": {
+    "message": "لم يتم إعلان أي موقع ويب مسموح له بالتواصل مع Explorer في هذه النسخة."
+  },
+  "settings_agentAccessOff": {
+    "message": "إلغاء"
+  },
+  "settings_agentAccessOffHelp": {
+    "message": "التوقف عن الرد على $1 فوراً. سيتم رفض الطلب التالي."
+  },
+  "settings_agentAccessOn": {
+    "message": "سماح"
+  },
+  "settings_agentAccessOnHelp": {
+    "message": "اسمح لـ $1 بأن يطلب من Explorer عرض واستدعاء الأدوات المعلنة في صفحته الخاصة. لن يصبح أي شيء آخر مرئياً له."
+  },
+  "settings_agentConfigured": {
+    "message": "مُعدّ: $1"
+  },
+  "settings_agentLab": {
+    "message": "مختبر الوكيل"
+  },
+  "settings_agentLabBody": {
+    "message": "يُحفظ المزود ونقطة الوصول والنموذج والحدود على هذا الجهاز. تستخدم المفاتيح ذاكرة الجلسة أو الخزنة المشفرة الاختيارية."
+  },
+  "settings_agentNotConfigured": {
+    "message": "لم يتم اختيار ذكاء اصطناعي. تعمل الأدوات والفحوصات والوصفات بدون ذكاء اصطناعي."
+  },
+  "settings_agentSessions": {
+    "message": "محادثات الوكيل"
+  },
+  "settings_agentSessionsCount": {
+    "message": "$1 محادثات في $2 مواقع"
+  },
+  "settings_allHttp": {
+    "message": "جميع مواقع http"
+  },
+  "settings_allHttps": {
+    "message": "جميع مواقع https"
+  },
+  "settings_allSites": {
+    "message": "جميع مواقع الويب (http وhttps)"
+  },
+  "settings_allowAll": {
+    "message": "السماح في جميع المواقع"
+  },
+  "settings_allowAllHelp": {
+    "message": "اختر السماح بفحص جميع مواقع http وhttps دون تفعيل كل موقع على حدة. سيطلب منك Chrome التأكيد."
+  },
+  "settings_auditedLastCheck": {
+    "message": "آخر إعادة فحص $1: $2 جديد"
+  },
+  "settings_auditedSite": {
+    "message": "$1 — خط الأساس $2، $3 نتائج"
+  },
+  "settings_auditedSites": {
+    "message": "المواقع المدققة"
+  },
+  "settings_bundle": {
+    "message": "النسخ الاحتياطي ونقل الإعدادات"
+  },
+  "settings_bundleApplied": {
+    "message": "تم التطبيق: $1 موصل، $2 موجه. تم استبعاد $3 موصل بواسطة فحص الأمان ($3 = 0 يعني لا شيء)."
+  },
+  "settings_bundleBody": {
+    "message": "صدّر إعدادات المزودين والموصلات والتوجيهات. تُستثنى المفاتيح وعبارات المرور والخزنة المشفرة؛ اضبط بيانات الاعتماد منفصلة بعد الاستيراد."
+  },
+  "settings_bundleExport": {
+    "message": "تنزيل ملف الإعدادات"
+  },
+  "settings_bundleExportHelp": {
+    "message": "يحفظ ملف JSON واحداً يتضمن إعداداتك. خالٍ من المفاتيح حسب التصميم."
+  },
+  "settings_bundleImport": {
+    "message": "تطبيق الإعدادات"
+  },
+  "settings_bundleImportButtonHelp": {
+    "message": "يستبدل الموصلات والموجهات الحالية بما في الملف، ويطبق اختيار المزود. يتم التحقق من كل إدخال قبل تطبيقه."
+  },
+  "settings_bundleImportHelp": {
+    "message": "يتم التحقق من الملف إدخالاً تلو الآخر: يتم استبعاد أي موصل قد تنقل نقطة نهايته مفتاحاً بشكل مكشوف، ويُطبق الباقي."
+  },
+  "settings_bundleImportPlaceholder": {
+    "message": "الصق كامل محتوى JSON لملف webmcp-explorer-settings هنا"
+  },
+  "settings_bundleImportTitle": {
+    "message": "الصق ملف إعدادات لتطبيقه هنا"
+  },
+  "settings_bundleIntro": {
+    "message": "ملف واحد ينقل اختيار المزود والميزانيات والموصلات المخصصة والموجهات إلى متصفح أو حاسوب آخر."
+  },
+  "settings_bundleNotJson": {
+    "message": "هذا ليس JSON صالحاً — الصق الملف بالكامل، من أول { إلى آخر }."
+  },
+  "settings_calls": {
+    "message": "$1 استدعاءات"
+  },
+  "settings_clear": {
+    "message": "مسح"
+  },
+  "settings_clearAll": {
+    "message": "مسح البيانات والمفاتيح المحفوظة"
+  },
+  "settings_clearAllHelp": {
+    "message": "مسح العمل المحفوظ والإعدادات ومفاتيح الجلسة والخزنة المشفرة. تبقى إيصالات الاستدعاء لمنع إعادة التنفيذ."
+  },
+  "settings_clearHelp": {
+    "message": "حذف $1. يطلب التأكيد مرة أخرى قبل التنفيذ."
+  },
+  "settings_cleared": {
+    "message": "تم المسح."
+  },
+  "settings_confirm": {
+    "message": "تأكيد: مسح"
+  },
+  "settings_confirmAll": {
+    "message": "تأكيد: مسح الكل"
+  },
+  "settings_confirmForget": {
+    "message": "تأكيد: نسيان"
+  },
+  "settings_confirmHelp": {
+    "message": "انقر مرة أخرى خلال بضع ثوانٍ للحذف. وإلا فلن يتم حذف أي شيء."
+  },
+  "settings_connectors": {
+    "message": "الموصلات المخصصة"
+  },
+  "settings_connectorsCount": {
+    "message": "$1 موصلات"
+  },
+  "settings_data": {
+    "message": "البيانات المخزنة"
+  },
+  "settings_dataBody": {
+    "message": "أدر البيانات المخزنة في ملف Chrome هذا. تؤدي إزالة الإضافة إلى حذف بياناتها المحلية."
+  },
+  "settings_endpoints": {
+    "message": "نقاط نهاية النماذج"
+  },
+  "settings_endpointsBody": {
+    "message": "النطاقات المصرح بها ليتمكن مختبر الوكيل من الاتصال بمزود النموذج. إلغاء أي منها يعطل التشغيل حتى تسمح به مجدداً."
+  },
+  "settings_evals": {
+    "message": "مجموعات التقييم والنتائج"
+  },
+  "settings_evalsCount": {
+    "message": "$1 مجموعات، $2 نتائج"
+  },
+  "settings_forgetAgent": {
+    "message": "نسيان إعدادات ومفاتيح مختبر الوكيل"
+  },
+  "settings_forgetAgentHelp": {
+    "message": "العودة إلى الوضع اليدوي: بلا نقطة نهاية، ولا نموذج، ولا مفتاح لأي مزود."
+  },
+  "settings_forgetBaseline": {
+    "message": "نسيان"
+  },
+  "settings_forgetBaselineHelp": {
+    "message": "احذف خط الأساس لهذا الموقع. ستتوقف إعادة الفحص عن مقارنته."
+  },
+  "settings_history": {
+    "message": "سجل التنفيذ"
+  },
+  "settings_instrumented": {
+    "message": "مُقاس"
+  },
+  "settings_items": {
+    "message": "$1 عناصر"
+  },
+  "settings_keyInMemory": {
+    "message": "المفتاح في الذاكرة"
+  },
+  "settings_keyInMemoryHelp": {
+    "message": "يتوفر مفتاح لهذا المزود. تُمسح مفاتيح الجلسة عند إعادة تشغيل Chrome أو إعادة تحميل الإضافة أو تحديثها أو تعطيلها."
+  },
+  "settings_languageAuto": {
+    "message": "افتراضي المتصفح (Auto)"
+  },
+  "settings_languageDesc": {
+    "message": "اختر لغة واجهة WebMCP Explorer أو اتبع لغة المتصفح الافتراضية."
+  },
+  "settings_languageHeading": {
+    "message": "اللغة (Language)"
+  },
+  "settings_languageHelp": {
+    "message": "تغيير لغة واجهة WebMCP Explorer فورًا"
+  },
+  "settings_languageLabel": {
+    "message": "لغة الواجهة"
+  },
+  "settings_noAuditedSites": {
+    "message": "لا يوجد موقع لديه خط أساس بعد. احفظ واحداً من قسم الأمان."
+  },
+  "settings_noBackend": {
+    "message": "لا يمتلك Explorer خادماً خلفياً: لا يتم إرسال أي شيء أبداً إلى Corsen AI. البيانات الوحيدة التي تغادر جهازك هي ما ترسله إلى النموذج الذي قمت بإعداده عند الضغط على تشغيل. سياسة الخصوصية الكاملة موجودة في صفحة سوق Chrome الإلكتروني."
+  },
+  "settings_noInstrumented": {
+    "message": "وضع القياس متوقف في جميع المواقع."
+  },
+  "settings_noSites": {
+    "message": "لا يملك Explorer صلاحية الوصول إلى أي موقع بعد. افتح صفحة واستخدم \"تفعيل Explorer في هذا الموقع\"."
+  },
+  "settings_notRemoved": {
+    "message": "لم تتم إزالة الإذن."
+  },
+  "settings_oneCall": {
+    "message": "استدعاء واحد"
+  },
+  "settings_oneItem": {
+    "message": "عنصر واحد"
+  },
+  "settings_overrides": {
+    "message": "التجاوزات والمحاكاة (Mocks)"
+  },
+  "settings_permissionError": {
+    "message": "رفض Chrome: $1"
+  },
+  "settings_recheck": {
+    "message": "إعادة فحص علامات التبويب المفتوحة"
+  },
+  "settings_recheckAlarm": {
+    "message": "مجدول كل $1 دقائق."
+  },
+  "settings_recheckEvery": {
+    "message": "كل"
+  },
+  "settings_recheckEveryHelp": {
+    "message": "مدى تكرار إعادة مراجعة علامات التبويب المفتوحة."
+  },
+  "settings_recheckHelp": {
+    "message": "في كل فترة، يعيد مراجعة كل علامة تبويب مفتوحة لموقع له خط أساس ويحق لـ Explorer فحصه، ويعرض عدد النتائج الجديدة على شارة شريط الأدوات. متوقف افتراضياً."
+  },
+  "settings_recheckMinutes": {
+    "message": "$1 دقائق"
+  },
+  "settings_recheckNow": {
+    "message": "إعادة الفحص الآن"
+  },
+  "settings_recheckNowHelp": {
+    "message": "راجع علامات التبويب المفتوحة التي لها خط أساس فوراً واعرض النتيجة هنا."
+  },
+  "settings_recheckOff": {
+    "message": "غير مجدول."
+  },
+  "settings_recheckResult": {
+    "message": "تم فحص $1 موقع؛ وهناك $2 نتيجة جديدة منذ خطوط الأساس الخاصة بها."
+  },
+  "settings_revoke": {
+    "message": "إلغاء الصلاحية"
+  },
+  "settings_revokeHelp": {
+    "message": "اسحب صلاحية وصول Explorer إلى $1. يزيل Chrome الإذن فوراً."
+  },
+  "settings_savedCalls": {
+    "message": "الاستدعاءات المحفوظة"
+  },
+  "settings_security": {
+    "message": "الأمان"
+  },
+  "settings_securityBody": {
+    "message": "المواقع التي لها خط أساس محفوظ، وإعادة الفحص الدوري لعلامات التبويب المفتوحة. تجري إعادة الفحص المراجعة السلبية المعتادة على علامات التبويب المفتوحة بالفعل والتي يحق لـ Explorer فحصها؛ ولا تفتح أي صفحة أبداً، ولا تشغّل أي مسبار، ولا ترسل أي شيء."
+  },
+  "settings_securityReviewed": {
+    "message": "بيانات المراجعة الأمنية"
+  },
+  "settings_securityReviewedHelp": {
+    "message": "النتائج التي علّمتها كمراجَعة، والمواقع التي أعلنت تحكمك فيها للمسابير، وخطوط الأساس المحفوظة، وإعداد إعادة الفحص. يؤدي المسح إلى إزالتها جميعاً."
+  },
+  "settings_siteAccess": {
+    "message": "الوصول إلى المواقع"
+  },
+  "settings_siteAccessBody": {
+    "message": "المواقع التي يسمح Chrome لـ Explorer بفحصها."
+  },
+  "settings_snapshots": {
+    "message": "لقطات العقود"
+  },
+  "settings_snapshotsCount": {
+    "message": "$1 عبر $2 مواقع"
+  },
+  "settings_sourceFinder": {
+    "message": "مكتشف المصدر"
+  },
+  "settings_sourceFinderBody": {
+    "message": "المواقع التي تم تفعيل وضع القياس (Instrumentation Mode) فيها. هذه هي الميزة الوحيدة التي تعدّل الصفحة لتحديد موقع تسجيل كل أداة. يسري إيقافها عند إعادة تحميل الصفحة."
+  },
+  "settings_storageUse": {
+    "message": "مساحة التخزين المستخدمة: حوالي $1 كيلوبايت وفقاً لتقرير Chrome."
+  },
+  "settings_title": {
+    "message": "الإعدادات"
+  },
+  "settings_turnOff": {
+    "message": "إيقاف"
+  },
+  "settings_turnOffHelp": {
+    "message": "أوقف قياس $1. أعد تحميل الصفحة بعد ذلك."
+  },
+  "settings_version": {
+    "message": "WebMCP Explorer $1 · Corsen AI"
+  },
+  "sidepanel_agentLab": {
+    "message": "مختبر الوكيل"
+  },
+  "sidepanel_audit": {
+    "message": "التدقيق"
+  },
+  "sidepanel_clearWhatThePanelRemembers": {
+    "message": "مسح ما تتذكره اللوحة لعلامة التبويب هذه مع الاحتفاظ بجميع بياناتك وسجلّك."
+  },
+  "sidepanel_demoPage": {
+    "message": "صفحة تجريبية"
+  },
+  "sidepanel_evals": {
+    "message": "التقييمات"
+  },
+  "sidepanel_noResponseFromTheService": {
+    "message": "لا توجد استجابة من عامل الخدمة (Service Worker)."
+  },
+  "sidepanel_nothingToStopThisPanel": {
+    "message": "لا يوجد شيء لإيقافه — هذه اللوحة في وضعها الافتراضي بالفعل."
+  },
+  "sidepanel_originHelp": {
+    "message": "الصفحة التي يفحصها Explorer حاليًا"
+  },
+  "sidepanel_railLabel": {
+    "message": "الأقسام"
+  },
+  "sidepanel_refreshLabel": {
+    "message": "إعادة تشغيل الاكتشاف"
+  },
+  "sidepanel_resetLabel": {
+    "message": "إيقاف وإعادة تعيين هذه اللوحة"
+  },
+  "sidepanel_stopTheAgentRunAnd": {
+    "message": "إيقاف تشغيل الوكيل ومجموعة التقييم في علامة التبويب هذه ومسح ذاكرة اللوحة."
+  },
+  "sidepanel_timeline": {
+    "message": "الجدول الزمني"
+  },
+  "snapshots_1ThePageRightNow": {
+    "message": "$1 ← الصفحة الآن"
+  },
+  "snapshots_aToolListIsA": {
+    "message": "قائمة الأدوات هي عقد مع كل وكيل يزور الموقع. احفظ لقطة الآن وسيخبرك Explorer بالضبط بما تغيّر في المرة القادمة."
+  },
+  "snapshots_added": {
+    "message": "أُضيفت"
+  },
+  "snapshots_addedHelp": {
+    "message": "لم تكن هذه الأداة موجودة من قبل."
+  },
+  "snapshots_annotations": {
+    "message": "التعليقات التوضيحية"
+  },
+  "snapshots_compareCross": {
+    "message": "مقارنة"
+  },
+  "snapshots_compareCrossHelp": {
+    "message": "ما يختلف بين لقطة ذلك الموقع وهذه الصفحة، أداةً بأداة."
+  },
+  "snapshots_compareWithNow": {
+    "message": "مقارنة بالوضع الحالي"
+  },
+  "snapshots_contractChanged": {
+    "message": "تغيّر العقد"
+  },
+  "snapshots_crossHeader": {
+    "message": "$1، أُخذت في $2 ← هذه الصفحة ($3)"
+  },
+  "snapshots_crossNote": {
+    "message": "يختلف الموقعان في المصدر، لذا تتم مطابقة الأدوات حسب الاسم والإطار؛ ولا يُبلّغ عن اختلاف المصدر نفسه كتغيير."
+  },
+  "snapshots_deleteThisSnapshot": {
+    "message": "حذف هذه اللقطة"
+  },
+  "snapshots_description": {
+    "message": "الوصف"
+  },
+  "snapshots_empty": {
+    "message": "(فارغ)"
+  },
+  "snapshots_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "snapshots_inputSchema": {
+    "message": "مخطط الإدخال"
+  },
+  "snapshots_labelThisSnapshotBeforeDeploy": {
+    "message": "ضع تسمية لهذه اللقطة — \"قبل النشر\""
+  },
+  "snapshots_movedFrame": {
+    "message": "انتقلت إلى إطار آخر"
+  },
+  "snapshots_movedFrameHelp": {
+    "message": "نفس الأداة ونفس الاسم، لكن في إطار مختلف. لم يقم الموقع بحذفها وإعادة إنشائها."
+  },
+  "snapshots_nToolsUnchanged": {
+    "message": "$1 أدوات دون تغيير."
+  },
+  "snapshots_noSnapshotOfThisSite": {
+    "message": "لا توجد لقطات محفوظة لهذا الموقع."
+  },
+  "snapshots_nothingChanged": {
+    "message": "لم يتغير شيء"
+  },
+  "snapshots_now": {
+    "message": "الآن"
+  },
+  "snapshots_oneOfTheTwoCaptures": {
+    "message": "كانت إحدى اللقطتين جزئية، لذا فإن الأداة التي تظهر كمزالة ربما لم يتم رصدها فحسب. امنح الإذن للمصادر المفقودة وقارن مرة أخرى للتأكد."
+  },
+  "snapshots_oneToolUnchanged": {
+    "message": "أداة واحدة دون تغيير."
+  },
+  "snapshots_otherSites": {
+    "message": "مقارنة بموقع آخر"
+  },
+  "snapshots_otherSitesHelp": {
+    "message": "اختر لقطة مأخوذة من موقع آخر — بيئة الاختبار أو الإنتاج — وقارن هذه الصفحة بها. تتم مطابقة الأدوات حسب الاسم والإطار نظرًا لاختلاف المصدر بين الموقعين."
+  },
+  "snapshots_partialCapture": {
+    "message": "التقاط جزئي"
+  },
+  "snapshots_pickSite": {
+    "message": "الموقع"
+  },
+  "snapshots_pickSnapshot": {
+    "message": "اللقطة"
+  },
+  "snapshots_prefixColonText": {
+    "message": "$1: $2"
+  },
+  "snapshots_recordTheToolsThisPage": {
+    "message": "سجّل الأدوات التي تعلنها هذه الصفحة الآن لمقارنتها لاحقًا"
+  },
+  "snapshots_removed": {
+    "message": "أُزيلت"
+  },
+  "snapshots_removedHelp": {
+    "message": "لم تعد هذه الأداة موجودة."
+  },
+  "snapshots_saveASnapshot": {
+    "message": "حفظ لقطة مرجعية"
+  },
+  "snapshots_saved": {
+    "message": "تم الحفظ. تم الاحتفاظ بـ $1 لهذا الموقع."
+  },
+  "snapshots_savedCallsAffected": {
+    "message": "$1 استدعاء محفوظ يحتاج إلى مراجعة: $2"
+  },
+  "snapshots_savedCallsFine": {
+    "message": "$1 استدعاء محفوظ لا يزال متوافقاً مع المخطط الجديد."
+  },
+  "snapshots_schemaChanges": {
+    "message": "ما الذي تغيّر في المخطط:"
+  },
+  "snapshots_schemaMoved": {
+    "message": "تغيّر المخطط بطريقة لا يمكن لهذا الوصف تفصيلها؛ وقد تغيّرت البصمة."
+  },
+  "snapshots_sinceThatSnapshot": {
+    "message": "منذ تلك اللقطة"
+  },
+  "snapshots_snapshots": {
+    "message": "اللقطات المرجعية"
+  },
+  "snapshots_someFramesWereNotObserved": {
+    "message": "لم يتم رصد بعض الإطارات، لذا فإن غياب أداة في هذه اللقطة لا يثبت شيئاً."
+  },
+  "snapshots_title": {
+    "message": "العنوان"
+  },
+  "snapshots_unchanged": {
+    "message": "دون تغيير"
+  },
+  "snapshots_unknownFrame": {
+    "message": "إطار غير معروف"
+  },
+  "snapshots_unknownTime": {
+    "message": "وقت غير معروف"
+  },
+  "snapshots_was": {
+    "message": "كان"
+  },
+  "snapshots_whatChanged": {
+    "message": "ما الذي تغيّر في العقد."
+  },
+  "snapshots_whatChangedBetweenThisSnapshot": {
+    "message": "ما الذي تغيّر بين هذه اللقطة والصفحة كما هي الآن"
+  },
+  "snapshots_whetherItsSchemaCanBe": {
+    "message": "ما إذا كان بالإمكان قراءة مخططها"
+  },
+  "status_1Frame": {
+    "message": "إطار واحد"
+  },
+  "status_1Tool": {
+    "message": "أداة واحدة"
+  },
+  "status_apiMismatch": {
+    "message": "عدم توافق API"
+  },
+  "status_compatibility": {
+    "message": "توافق (Polyfill)"
+  },
+  "status_devFlag": {
+    "message": "علامة المطور"
+  },
+  "status_everyOriginExposingToolsIs": {
+    "message": "تم منح الإذن لكل مصدر يكشف أدوات"
+  },
+  "status_missingApiMethods": {
+    "message": "دوال API المفقودة: $1"
+  },
+  "status_nFrames": {
+    "message": "$1 إطارات"
+  },
+  "status_nTools": {
+    "message": "$1 أدوات"
+  },
+  "status_native": {
+    "message": "أصلي (Native)"
+  },
+  "status_originTrial": {
+    "message": "تجربة المصدر (Origin Trial)"
+  },
+  "status_partialMany": {
+    "message": "اكتشاف جزئي — $1 مصادر غير مصرّح بها"
+  },
+  "status_partialOne": {
+    "message": "اكتشاف جزئي — مصدر واحد غير مصرّح به"
+  },
+  "status_partialRefusedHelp": {
+    "message": "يوجد كائن WebMCP في هذه الإطارات لكن المتصفح رفض الاستدعاء الذي يسرد أدواتها: $1"
+  },
+  "status_partialRefusedMany": {
+    "message": "اكتشاف جزئي — رفض المتصفح $1 إطارات"
+  },
+  "status_partialRefusedOne": {
+    "message": "اكتشاف جزئي — رفض المتصفح إطاراً واحداً"
+  },
+  "status_refused": {
+    "message": "مرفوض"
+  },
+  "status_securityNew": {
+    "message": "الأمان: $1 جديد"
+  },
+  "status_securityNewHelp": {
+    "message": "نتائج غير موجودة في خط الأساس المحفوظ لهذا الموقع؛ أعلى خطورة $1. افتح قسم الأمان للتفاصيل."
+  },
+  "status_toolsDiscoveredAndFramesExplorer": {
+    "message": "الأدوات المكتشفة والإطارات التي تمكن Explorer من الدخول إليها"
+  },
+  "status_unavailable": {
+    "message": "غير متاح"
+  },
+  "status_webmcpRuntimeDetectedForThis": {
+    "message": "بيئة تشغيل WebMCP المكتشفة لعلامة التبويب هذه"
+  },
+  "timeline_1Ms": {
+    "message": "$1 ms"
+  },
+  "timeline_agent": {
+    "message": "الوكيل"
+  },
+  "timeline_clear": {
+    "message": "مسح"
+  },
+  "timeline_discardTheRecordedEvents": {
+    "message": "تجاهل الأحداث المسجلة"
+  },
+  "timeline_explorerObservesToolChangesWithout": {
+    "message": "يرصد Explorer تغييرات الأدوات دون تعديل الصفحة. الأداة التي تُسجّل وتُزال بين عينتين لن تظهر هنا. الاكتشاف وقائمة الأدوات دقيقان دائماً؛ فقط ترتيب الدورات السريعة جداً قد يكون غير مكتمل."
+  },
+  "timeline_exportNote": {
+    "message": "يسرد السجل كل حدث مسجل مع أداته وإطاره ومدته وخطئه، من الأقدم إلى الأحدث. وهو يعتمد على أخذ العينات: لذا فإن الأداة التي تُسجّل وتُزال بين لقطتين لا تظهر فيه."
+  },
+  "timeline_exportThisTimeline": {
+    "message": "تصدير هذا الجدول الزمني"
+  },
+  "timeline_kindActivated": {
+    "message": "مُفعَّل"
+  },
+  "timeline_kindCancelled": {
+    "message": "ملغى"
+  },
+  "timeline_kindExecuted": {
+    "message": "منفذ"
+  },
+  "timeline_kindFailed": {
+    "message": "فشل"
+  },
+  "timeline_kindRegistered": {
+    "message": "مسجل"
+  },
+  "timeline_kindUnregistered": {
+    "message": "ملغى"
+  },
+  "timeline_lifecycle": {
+    "message": "دورة الحياة"
+  },
+  "timeline_nDropped": {
+    "message": "تم تجاهل $1 (الذاكرة المؤقتة ممتلئة)"
+  },
+  "timeline_nMissedPaused": {
+    "message": "فاتت $1 أثناء الإيقاف المؤقت"
+  },
+  "timeline_nRecorded": {
+    "message": "$1 مسجل"
+  },
+  "timeline_nShown": {
+    "message": "$1 معروض"
+  },
+  "timeline_nothingRecordedYetRegistrationsAnd": {
+    "message": "لم يتم تسجيل أي أحداث بعد. ستظهر عمليات التسجيل والاستدعاء هنا فور حدوثها."
+  },
+  "timeline_pause": {
+    "message": "إيقاف مؤقت"
+  },
+  "timeline_recordingIsPaused": {
+    "message": "التسجيل متوقف مؤقتًا."
+  },
+  "timeline_resume": {
+    "message": "استئناف"
+  },
+  "timeline_sampled": {
+    "message": " · عينة"
+  },
+  "timeline_showOnly1Events": {
+    "message": "عرض أحداث $1 فقط"
+  },
+  "timeline_stopRecordingNewEvents": {
+    "message": "إيقاف تسجيل الأحداث الجديدة"
+  },
+  "toolDetails_1Params": {
+    "message": "$1 معاملات"
+  },
+  "toolDetails_argsSentAsObject": {
+    "message": "يأخذ هذا المتصفح الوسائط ككائن بدلاً من سلسلة JSON؛ وقد أرسلها Explorer بهذه الطريقة."
+  },
+  "toolDetails_autoSubmit": {
+    "message": "إرسال تلقائي"
+  },
+  "toolDetails_backToTheToolList": {
+    "message": "العودة إلى قائمة الأدوات"
+  },
+  "toolDetails_cancel": {
+    "message": "إلغاء"
+  },
+  "toolDetails_cancelHelp": {
+    "message": "توقف عن انتظار هذا الاستدعاء. في Chrome 153 والإصدارات الأحدث، يتم إبلاغ أداة الصفحة بالتوقف أيضاً؛ ويتم تجاهل أي رد لاحق منها."
+  },
+  "toolDetails_cancelled": {
+    "message": "تم الإلغاء من Explorer. ربما أكملت أداة الصفحة عملها رغم ذلك؛ وقد تم تجاهل ردها."
+  },
+  "toolDetails_cancelling": {
+    "message": "جارٍ الإلغاء…"
+  },
+  "toolDetails_changeTheArgumentsAndRun": {
+    "message": "تغيير الوسائط والتشغيل مرة أخرى"
+  },
+  "toolDetails_chars": {
+    "message": "$1 حرف"
+  },
+  "toolDetails_code1": {
+    "message": "الرمز: $1"
+  },
+  "toolDetails_consequential": {
+    "message": "ذو أثر"
+  },
+  "toolDetails_copyRegisterTool": {
+    "message": "نسخ registerTool(…)"
+  },
+  "toolDetails_copyRegisterToolHelp": {
+    "message": "نسخ مقتطف navigator.modelContext.registerTool(…) جاهز للصق"
+  },
+  "toolDetails_copyScriptToolConfig": {
+    "message": "نسخ ScriptToolConfig"
+  },
+  "toolDetails_copyScriptToolConfigHelp": {
+    "message": "نسخ كائن JSON التصريحي ScriptToolConfig لهذه الأداة إلى الحافظة"
+  },
+  "toolDetails_debugging": {
+    "message": "تصحيح أخطاء"
+  },
+  "toolDetails_declarativeWaits": {
+    "message": "أداة نموذج تصريحي: ما لم يكن الإرسال تلقائيًا، تملأ الصفحة النموذج وتنتظر الضغط اليدوي على زر الإرسال."
+  },
+  "toolDetails_disabled": {
+    "message": "معطّل"
+  },
+  "toolDetails_disabledHelp": {
+    "message": "يتم رفض استدعاءات هذه الأداة بواسطة تجاوز نشط."
+  },
+  "toolDetails_edit": {
+    "message": "تعديل"
+  },
+  "toolDetails_editTheArgumentsAsRaw": {
+    "message": "تعديل الوسائط كـ JSON خام"
+  },
+  "toolDetails_executeThisToolInIts": {
+    "message": "تنفيذ هذه الأداة في إطارها الخاص"
+  },
+  "toolDetails_form": {
+    "message": "نموذج"
+  },
+  "toolDetails_genericError": {
+    "message": "هذه جملة Chrome نفسه وليست رسالة الأداة: في Chrome 153 يصل كل خطأ تطلقه الأداة إلى المستدعي كـ UnknownError بهذا النص (مقاس، WMP-0044). أما رسالة الأداة نفسها، إن سجلت واحدة، فتوجد في وحدة تحكم الصفحة."
+  },
+  "toolDetails_goBackToTheGenerated": {
+    "message": "العودة إلى النموذج المُنشأ"
+  },
+  "toolDetails_json": {
+    "message": "</> JSON"
+  },
+  "toolDetails_loading": {
+    "message": "جارٍ التحميل…"
+  },
+  "toolDetails_msInPage": {
+    "message": "$1 مللي ثانية في الصفحة"
+  },
+  "toolDetails_msRoundTrip": {
+    "message": "$1 مللي ثانية ذهاباً وإياباً"
+  },
+  "toolDetails_overridden": {
+    "message": "مُعدَّل محليًا"
+  },
+  "toolDetails_overriddenHelp": {
+    "message": "يقوم Explorer محلياً بتغيير شكل هذه الأداة أو ما تعيده."
+  },
+  "toolDetails_ranInFrame": {
+    "message": "شُغّلت في الإطار #$1"
+  },
+  "toolDetails_rawJsonHelp": {
+    "message": "الوسائط بصيغة JSON خام. عدّلها هنا؛ والعودة إلى النموذج تعرض نفس القيم."
+  },
+  "toolDetails_rawJsonLabel": {
+    "message": "الوسائط كـ JSON خام"
+  },
+  "toolDetails_readOnly": {
+    "message": "للقراءة فقط"
+  },
+  "toolDetails_reproduce": {
+    "message": "إعادة إنتاج هذا الاستدعاء"
+  },
+  "toolDetails_reproduceNote": {
+    "message": "يتضمن التقرير والنصوص البرمجية المعاملات وما أعادته الصفحة. وهي تحدد الإطار، وتنتظر التسجيل، وترفض الأدوات المتشابهة بالاسم، وتوضح متى كانت النتيجة المسجلة ناتجة عن تجاوز محلي بدلاً من الصفحة."
+  },
+  "toolDetails_result": {
+    "message": "النتيجة"
+  },
+  "toolDetails_runAgain": {
+    "message": "إعادة التشغيل"
+  },
+  "toolDetails_runTool": {
+    "message": "تشغيل الأداة"
+  },
+  "toolDetails_running": {
+    "message": "جارٍ التشغيل…"
+  },
+  "toolDetails_schemaNotRenderable": {
+    "message": "لا يمكن عرض هذا المخطط كنموذج. راجع الملاحظة في محرر JSON."
+  },
+  "toolDetails_string": {
+    "message": "سلسلة نصية"
+  },
+  "toolDetails_stringParsedAsJson": {
+    "message": "سلسلة نصية · تم تحليلها كـ JSON"
+  },
+  "toolDetails_tabHistory": {
+    "message": "السجل"
+  },
+  "toolDetails_tabOverride": {
+    "message": "تجاوز (Mock)"
+  },
+  "toolDetails_tabRun": {
+    "message": "تشغيل"
+  },
+  "toolDetails_tabSchema": {
+    "message": "المخطط"
+  },
+  "toolDetails_theJsonIsNotValid": {
+    "message": "صيغة JSON غير صالحة."
+  },
+  "toolDetails_theToolFailed": {
+    "message": "فشلت الأداة."
+  },
+  "toolDetails_theToolReturnedNoValue": {
+    "message": "لم تُعد الأداة أي قيمة. يعني هذا عادةً أن الاستدعاء تسبب في انتقال الصفحة."
+  },
+  "toolDetails_theToolReturnedNull": {
+    "message": "أعادت الأداة القيمة null. يسلّمها Chrome كنص \"null\"، لذا فإن الأداة التي تعيد null وتلك التي تعيد ذلك النص تبدوان بنفس الشكل هنا."
+  },
+  "toolDetails_thisSchemaUsesConstructsExplorer": {
+    "message": "يستخدم هذا المخطط تراكيب لن يخمنها Explorer، لذا يتم تحرير المعاملات بصيغة JSON."
+  },
+  "toolDetails_untrustedContent": {
+    "message": "محتوى غير موثوق"
+  },
+  "toolHistory_1Calls": {
+    "message": "$1 استدعاءات"
+  },
+  "toolHistory_arguments": {
+    "message": "الوسائط"
+  },
+  "toolHistory_calls": {
+    "message": "الاستدعاءات"
+  },
+  "toolHistory_callsHelp": {
+    "message": "عدد عمليات التنفيذ المسجلة"
+  },
+  "toolHistory_clearHistory": {
+    "message": "مسح السجل"
+  },
+  "toolHistory_deleteEveryRecordedCallFor": {
+    "message": "حذف كل استدعاء مسجل لجميع الأدوات"
+  },
+  "toolHistory_max": {
+    "message": "الأقصى"
+  },
+  "toolHistory_maxHelp": {
+    "message": "أبطأ استدعاء مسجل"
+  },
+  "toolHistory_msIncludingHop": {
+    "message": "$1 مللي ثانية شاملة مرور الإضافة"
+  },
+  "toolHistory_noRecordedCallForThis": {
+    "message": "لا توجد استدعاءات مسجلة لهذه الأداة بعد."
+  },
+  "toolHistory_p50": {
+    "message": "P50"
+  },
+  "toolHistory_p50Help": {
+    "message": "المدة الوسيطة داخل الصفحة"
+  },
+  "toolHistory_p95": {
+    "message": "P95"
+  },
+  "toolHistory_p95Help": {
+    "message": "المئين الخامس والتسعون للمدة داخل الصفحة"
+  },
+  "toolHistory_replay": {
+    "message": "إعادة تشغيل"
+  },
+  "toolHistory_replayInFrame1": {
+    "message": "إعادة التشغيل في الإطار #$1"
+  },
+  "toolHistory_resultTruncatedForStorageOriginal": {
+    "message": "تم اقتطاع النتيجة للتخزين. الطول الأصلي: $1 حرف."
+  },
+  "toolHistory_runThisToolAgainWith": {
+    "message": "أعد تشغيل هذه الأداة بهذه المعاملات الدقيقة نفسها"
+  },
+  "toolHistory_success": {
+    "message": "النجاح"
+  },
+  "toolHistory_successHelp": {
+    "message": "نسبة الاستدعاءات التي عادت بدون خطأ"
+  },
+  "toolHistory_thisCallWasMadeInFrame1": {
+    "message": "تم إجراء هذا الاستدعاء في الإطار #$1، الذي لا يزال يمتلك الأداة. وسيتم تشغيله هناك مرة أخرى، وليس في الإطار الذي فُتحت عليه هذه الشاشة."
+  },
+  "toolHistory_untimed": {
+    "message": "غير مقاس الزمن"
+  },
+  "toolHistory_untimedHelp": {
+    "message": "استدعاءات لم تصل إلى الأداة أبداً، لذا لم يتم قياس مدتها"
+  },
+  "toolOverride_applyOnceThenUseThe": {
+    "message": " تطبيق لمرة واحدة فقط، ثم استخدام الأداة الحقيقية"
+  },
+  "toolOverride_applyOverride": {
+    "message": "تطبيق التجاوز"
+  },
+  "toolOverride_callsReachTheRealTool": {
+    "message": "تصل الاستدعاءات إلى الأداة الحقيقية."
+  },
+  "toolOverride_deleteThisOverrideEntirely": {
+    "message": "حذف هذا التجاوز بالكامل"
+  },
+  "toolOverride_descriptionDeclared": {
+    "message": "الوصف الذي يعلنه الموقع"
+  },
+  "toolOverride_descriptionOverride": {
+    "message": "تجاوز الوصف"
+  },
+  "toolOverride_disableThisTool": {
+    "message": " تعطيل هذه الأداة"
+  },
+  "toolOverride_emptyResult": {
+    "message": "نتيجة فارغة"
+  },
+  "toolOverride_error": {
+    "message": "خطأ"
+  },
+  "toolOverride_errorMessage": {
+    "message": "رسالة الخطأ"
+  },
+  "toolOverride_explorerIsChangingWhatThis": {
+    "message": "يقوم Explorer بتغيير شكل هذه الأداة أو ما تعيده."
+  },
+  "toolOverride_failAsATimeoutAfter": {
+    "message": "الفشل بانتهاء المهلة بعد زمن التأخير المحدد أدناه."
+  },
+  "toolOverride_failWithTheMessageBelow": {
+    "message": "الفشل بالرسالة أدناه دون استدعاء الأداة."
+  },
+  "toolOverride_latencyHelp": {
+    "message": "تُطبق قبل الرد في جميع أوضاع المحاكاة."
+  },
+  "toolOverride_latencyMs": {
+    "message": "التأخير (مللي ثانية)"
+  },
+  "toolOverride_leaveEmptyToKeepThe": {
+    "message": "اتركه فارغاً للاحتفاظ بالوصف الذي يعلنه الموقع"
+  },
+  "toolOverride_leaveEmptyToKeepThe2": {
+    "message": "اتركه فارغاً للاحتفاظ بالمخطط الذي يعلنه الموقع"
+  },
+  "toolOverride_malformed": {
+    "message": "مشوّه"
+  },
+  "toolOverride_mockResponse": {
+    "message": "استجابة محاكاة (Mock)"
+  },
+  "toolOverride_noOverrideOnThisTool": {
+    "message": "لا يوجد تجاوز نشط لهذه الأداة."
+  },
+  "toolOverride_none": {
+    "message": "(لا شيء)"
+  },
+  "toolOverride_off": {
+    "message": "متوقف"
+  },
+  "toolOverride_overrideActive": {
+    "message": "التجاوز نشط"
+  },
+  "toolOverride_response": {
+    "message": "الاستجابة"
+  },
+  "toolOverride_returnAnEmptyStringThe": {
+    "message": "إعادة سلسلة نصية فارغة — وهي الحالة التي ينسى معظم الوكلاء التعامل معها."
+  },
+  "toolOverride_returnDeliberatelyInvalidJsonTo": {
+    "message": "إعادة JSON غير صالح عمداً لاختبار مسار التحليل لدى الوكيل."
+  },
+  "toolOverride_returnThePayloadBelowInstead": {
+    "message": "إعادة الحمولة أدناه بدلاً من استدعاء الأداة."
+  },
+  "toolOverride_schemaDeclared": {
+    "message": "المخطط الذي يعلنه الموقع"
+  },
+  "toolOverride_schemaNotJson": {
+    "message": "تجاوز المخطط ليس JSON صالحاً: $1"
+  },
+  "toolOverride_schemaOverride": {
+    "message": "تجاوز المخطط"
+  },
+  "toolOverride_simulatedFailure": {
+    "message": "فشل محاكى"
+  },
+  "toolOverride_success": {
+    "message": "نجاح"
+  },
+  "toolOverride_theToolStaysListedAnd": {
+    "message": "تبقى الأداة مدرجة ومعلّمة؛ ويتم رفض الاستدعاءات."
+  },
+  "toolOverride_timeout": {
+    "message": "انتهاء المهلة"
+  },
+  "toolResult_reproUnavailable": {
+    "message": "تعذرت قراءة التجاوزات النشطة. أعد فتح هذه النتيجة لتصدير إعادة إنتاج دقيقة."
+  },
+  "toolResult_reproduceHelp": {
+    "message": "انسخ هذا الاستدعاء أو نزّله بصيغة Markdown أو JSON أو مقتطف وحدة تحكم أو نص Playwright."
+  },
+  "toolResult_saveCheck": {
+    "message": "حفظ كفحص"
+  },
+  "toolResult_saveCheckHelp": {
+    "message": "احتفظ بهذه الوسائط وهذه النتيجة كنتيجة متوقعة للتشغيلات المستقبلية."
+  },
+  "toolResult_showAll": {
+    "message": "عرض كل الـ $1 حرف"
+  },
+  "toolResult_showAllHelp": {
+    "message": "عرض النتيجة بالكامل في اللوحة. قد يستغرق النص الطويل جداً لحظة للرسم."
+  },
+  "toolResult_shownPartial": {
+    "message": "يتم عرض أول $1 من أصل $2 حرف. تظل اللوحة سريعة الاستجابة؛ والإجابة الكاملة على بُعد نقرة واحدة."
+  },
+  "toolResult_shownWhole": {
+    "message": "يتم عرض كل الـ $1 حرف."
+  },
+  "toolSource_calledFrom1More": {
+    "message": "تم استدعاؤها من $1 موضع إضافي"
+  },
+  "toolSource_capturedAtRegistration": {
+    "message": "تم التقاطه عند التسجيل"
+  },
+  "toolSource_explorerCanRecordWhereEach": {
+    "message": "يمكّن Explorer من تسجيل موضع تسجيل كل أداة، ولكن فقط منذ لحظة بدء المراقبة. يجب تفعيله قبل تشغيل الصفحة، لذا فهو يعدّل الصفحة ويظل متوقفًا حتى تطلبه — في هذا الموقع فقط."
+  },
+  "toolSource_explorerWillWrapRegistertoolOn": {
+    "message": "سيغلّف Explorer الدالة registerTool في هذا الموقع ليسجّل مصدر كل أداة. يغيّر هذا الصفحة، لذا يظل متوقفًا حتى تطلبه."
+  },
+  "toolSource_in1": {
+    "message": "في ‎$1()‎"
+  },
+  "toolSource_offForThisSiteReload": {
+    "message": "متوقف لهذا الموقع. أعد تحميل الصفحة لتشغيلها بدون غلاف القياس."
+  },
+  "toolSource_onForThisSiteBut": {
+    "message": "مفعّل لهذا الموقع، لكن تم تسجيل هذه الأداة قبل بدئه. أعد تحميل الصفحة."
+  },
+  "toolSource_onForThisSiteReload": {
+    "message": "مفعّل لهذا الموقع. أعد تحميل الصفحة — لا يمكن تتبع أداة مسجلة مسبقاً بأثر رجعي."
+  },
+  "toolSource_recordedByInstrumentationModeWhen": {
+    "message": "تم تسجيله بواسطة وضع القياس عندما استدعت الصفحة registerTool. وليس مستنتجاً."
+  },
+  "toolSource_registeredTimes": {
+    "message": "سُجّل $1×"
+  },
+  "toolSource_registeredTimesHelp": {
+    "message": "سجّلت الصفحة هذا الاسم أكثر من مرة. الموقع المعروض هو الأول."
+  },
+  "toolSource_source": {
+    "message": "المصدر"
+  },
+  "toolSource_sourceDotLocation": {
+    "message": "المصدر · $1"
+  },
+  "toolSource_theSourceIsNotKnown": {
+    "message": "المصدر غير معروف."
+  },
+  "toolSource_turnOffInstrumentationMode": {
+    "message": "إيقاف وضع التتبع"
+  },
+  "toolSource_turnOnInstrumentationMode": {
+    "message": "تفعيل وضع التتبع (Instrumentation)"
+  },
+  "toolsHeading": {
+    "message": "الأدوات"
+  },
+  "tools_changeTheSortOrder": {
+    "message": "تغيير ترتيب الفرز"
+  },
+  "tools_checksExportNote": {
+    "message": "يتضمن التقرير وسائط ونتائج كل فحص؛ وهي بيانات أعادتها الصفحة."
+  },
+  "tools_checksIntro": {
+    "message": "شغّل الفحوصات المحفوظة بعد النشر. تظل الأدوات المفقودة، بما في ذلك أدوات الإطارات، موجودة في التقرير."
+  },
+  "tools_checksLegacyScope": {
+    "message": "تفتقر الفحوصات القديمة إلى سياق الموقع. احفظها مرة أخرى أثناء وجود أدواتها لتتبع الأدوات المفقودة من الإطارات ذات المصادر الأخرى."
+  },
+  "tools_checksReadiness": {
+    "message": "قبل التشغيل: لا يمكن لـ $1 فحص استخدام الأدوات المدرجة حالياً."
+  },
+  "tools_checksReadinessHelp": {
+    "message": "لم يتم تشغيل أي فحص. تحقق من الصفحة وإطاراتها، أو حدّث الفحص المحفوظ ليطابق أداته الحالية. حدّث الأدوات بعد تغيير الصفحة."
+  },
+  "tools_checksReviewReason": {
+    "message": "يحتاج إلى مراجعة: $1"
+  },
+  "tools_checksRun": {
+    "message": "تشغيل جميع الفحوصات لهذا الموقع"
+  },
+  "tools_checksRunHelp": {
+    "message": "يشغّل كل فحص محفوظ لكل أداة في هذه الصفحة، واحدًا تلو الآخر، داخل الإطار الذي توجد فيه الأداة. يتم الإبلاغ عن أي أداة اختفت ولا يتم تخطيها بصمت."
+  },
+  "tools_checksRunning": {
+    "message": "جارٍ تشغيل $1 من $2…"
+  },
+  "tools_checksSummary": {
+    "message": "نجح $1، وفشل $2، و$3 بحاجة إلى مراجعة، و$4 مفقود."
+  },
+  "tools_checksTitle": {
+    "message": "الفحوصات المحفوظة لهذا الموقع ($1)"
+  },
+  "tools_checksToolGone": {
+    "message": "الأداة غير موجودة — لا توجد نسخة نشطة من $1 في هذه الصفحة"
+  },
+  "tools_countAll": {
+    "message": "$1 أداة"
+  },
+  "tools_countShown": {
+    "message": "$1 من أصل $2 أداة"
+  },
+  "tools_exportThisPageSTools": {
+    "message": "تصدير أدوات هذه الصفحة"
+  },
+  "tools_filterByNameDescriptionOr": {
+    "message": "تصفية حسب الاسم أو الوصف أو المصدر"
+  },
+  "tools_frame": {
+    "message": "الإطار (Frame)"
+  },
+  "tools_inputsNone": {
+    "message": "بدون مدخلات"
+  },
+  "tools_inputsOptional": {
+    "message": "اختياري: $1"
+  },
+  "tools_inputsRequired": {
+    "message": "مطلوب: $1"
+  },
+  "tools_name": {
+    "message": "الاسم"
+  },
+  "tools_noToolMatchesTheseFilters": {
+    "message": "لا توجد أداة تطابق عوامل التصفية هذه."
+  },
+  "tools_open1ToInspectIts": {
+    "message": "فتح $1 لفحص مخططها وتشغيلها"
+  },
+  "tools_origin": {
+    "message": "المصدر (Origin)"
+  },
+  "tools_schemaError": {
+    "message": "خطأ في المخطط"
+  },
+  "tools_searchTools": {
+    "message": "البحث في الأدوات"
+  },
+  "tools_searchToolsByNameDescription": {
+    "message": "البحث في الأدوات حسب الاسم أو الوصف أو المصدر"
+  },
+  "tools_sort1": {
+    "message": "الترتيب: $1"
+  },
+  "tools_theReportListsTheTools": {
+    "message": "يسرد التقرير الأدوات وأوصافها ومخططاتها كما تعلنها هذه الصفحة، بالإضافة إلى أي شيء تعذّر على Explorer رصده."
+  },
+  "tools_titleHelp": {
+    "message": "العنوان الذي منحته الصفحة لهذه الأداة، بجانب اسمها."
+  },
+  "vault_passphrase": {
+    "message": "عبارة المرور الرئيسية"
+  },
+  "vault_passphraseHelp": {
+    "message": "12 حرفًا على الأقل. مطلوبة لفتح المفاتيح المشفرة أو تغييرها. لا تُحفظ أبدًا."
+  },
+  "vault_error": {
+    "message": "فشلت العملية. تحقق من عبارة المرور ومساحة التخزين المتاحة."
+  },
+  "vault_create": {
+    "message": "تفعيل التخزين المشفر"
+  },
+  "vault_unlock": {
+    "message": "فتح الخزنة"
+  },
+  "vault_lock": {
+    "message": "قفل ومسح مفاتيح الجلسة"
+  },
+  "vault_session": {
+    "message": "الاحتفاظ بالمفاتيح لهذه الجلسة فقط"
+  },
+  "vault_delete": {
+    "message": "حذف الخزنة وكل المفاتيح"
+  },
+  "vault_deleteHelp": {
+    "message": "إزالة التخزين المشفر ومفاتيح الجلسة لكل المزودين. انقر مرتين للتأكيد."
+  },
+  "vault_confirmDelete": {
+    "message": "تأكيد: حذف كل المفاتيح"
+  },
+  "vault_locked": {
+    "message": "خزنة مشفرة — مقفلة"
+  },
+  "vault_unlocked": {
+    "message": "خزنة مشفرة — مفتوحة لهذه الجلسة"
+  },
+  "vault_optional": {
+    "message": "خزنة مشفرة اختيارية"
+  },
+  "vault_help": {
+    "message": "احفظ المفاتيح مشفرة على هذا الجهاز وافتحها مرة لكل جلسة متصفح. تتطلب التغييرات عبارة المرور مجددًا. لا يمكن استعادة عبارة منسية."
+  },
+  "vault_keyAvailable": {
+    "message": "يتوفر مفتاح لهذا المزود."
+  },
+  "vault_sessionHelp": {
+    "message": "تُمسح مفاتيح الجلسة عند إعادة تشغيل Chrome أو إعادة تحميل الإضافة أو تحديثها أو تعطيلها."
+  },
+  "emulation_enable": {
+    "message": "تفعيل محاكاة JS لهذا الموقع"
+  },
+  "emulation_disable": {
+    "message": "تعطيل محاكاة JS"
+  },
+  "emulation_active": {
+    "message": "محاكاة JS مفعلة لهذه الجلسة"
+  },
+  "emulation_help": {
+    "message": "محاكاة JS اختيارية للموقع خلال جلسة المتصفح. تتطلب إذن الوصول وإعادة التحميل. نماذج HTML للفهرسة فقط؛ لا تُحاكى ضمانات المتصفح الأصلية."
+  },
+  "emulation_reload": {
+    "message": "أعد تحميل الصفحة لتطبيق التغيير. قد تضيع التعديلات غير المحفوظة."
+  },
+  "emulation_reloadButton": {
+    "message": "إعادة تحميل الصفحة"
+  },
+  "emulation_inventoryOnly": {
+    "message": "للفهرسة فقط"
+  },
+  "emulation_inventoryHelp": {
+    "message": "يتطلب تشغيل نموذج HTML هذا WebMCP الأصلي. المخطط تقديري؛ لا يمكن استنتاج فحوصات معالج الإرسال."
+  },
+  "emulation_inferred": {
+    "message": "مخطط مستنتج من HTML"
+  },
+  "execution_unknown": {
+    "message": "ربما نُفّذ الإجراء. لن يعيد Explorer المحاولة. راجع الصفحة قبل بدء طلب جديد."
+  },
+  "execution_trace": {
+    "message": "المحرك: $1 · الوسائط: $2 · الاستدعاءات: $3"
+  },
+  "vault_lockHelp": {
+    "message": "امسح ذاكرة الجلسة المفكوكة التشفير الآن مع إبقاء الخزنة المشفرة على الجهاز."
+  },
+  "vault_sessionModeHelp": {
+    "message": "فك التشفير بعبارة المرور وإزالة الخزنة الدائمة والاحتفاظ بالمفاتيح في ذاكرة الجلسة فقط."
+  },
+  "invocation_receiptsHelp": {
+    "message": "إيصالات الاستدعاء: $1. تمنع بصمات الهوية والحالات إعادة التنفيذ بعد مسح السجل. لا تتضمن وسائط أو نتائج أو مفاتيح، وتُحذف عند إزالة الإضافة."
+  },
+  "security_scoreValue": {
+    "description": "Phase B security review.",
+    "message": "$1/100 · الدرجة $2 · مؤقت",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "security_scoreUnavailable": {
+    "description": "Phase B security review.",
+    "message": "الدرجة غير متاحة: لم تُرصد أدوات"
+  },
+  "security_scoreCaution": {
+    "description": "Phase B security review.",
+    "message": "مراجعة استدلالية للتصريحات الظاهرة وليست شهادة أمان. تظهر الفحوص غير المعروفة أدناه. الدرجة العالية لا تمنح إذناً لتنفيذ إجراء."
+  },
+  "security_scoreMethod": {
+    "description": "Phase B security review.",
+    "message": "كيفية حساب الدرجة"
+  },
+  "security_scoreFormula": {
+    "description": "Phase B security review.",
+    "message": "الصيغة v1: البداية من 100. يُخصم أعلى مستوى مرة واحدة لكل قاعدة/أداة: حرج 40، عالٍ 20، متوسط 10، منخفض 5، معلومات 0. الحد الأقصى مع حالة حرجة 49 والأدنى 0. A ≥90، B ≥80، C ≥70، D ≥60، E ≥50، F <50. إخفاء النتائج أو تعليمها كمراجعة لا يغيّر الدرجة."
+  },
+  "security_showFix": {
+    "description": "Phase B security review.",
+    "message": "عرض الإصلاح المقترح"
+  },
+  "security_copyFix": {
+    "description": "Phase B security review.",
+    "message": "نسخ الإصلاح"
+  },
+  "security_copyFixHelp": {
+    "description": "Phase B security review.",
+    "message": "نسخ القالب دون تطبيقه أو تشغيله."
+  },
+  "security_fixCopied": {
+    "description": "Phase B security review.",
+    "message": "تم نسخ الإصلاح المقترح"
+  },
+  "security_fixCopyError": {
+    "description": "Phase B security review.",
+    "message": "تعذّر النسخ. حدّد الشيفرة وانسخها يدوياً."
+  },
+  "security_fixReview": {
+    "description": "Phase B security review.",
+    "message": "قالب لمراجعة المطوّر ولا يُطبّق تلقائياً. تحقّق من الأسماء والحدود والتحقق والتفويض على الخادم. يرفض التنفيذ المؤقت التشغيل."
+  },
+  "security_no_authenticationConsent": {
+    "description": "Phase B security review.",
+    "message": "لا يمكن التحقق من المصادقة وتفويض الخادم والموافقة البشرية من هذا العقد: $1. لم تُفحص بيانات اعتماد الجلسة.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_schemaLimits": {
+    "description": "Phase B security review.",
+    "message": "مراجعة المخطط غير مكتملة: $1. لا تُجلب المراجع البعيدة.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_similarityLimit": {
+    "description": "Phase B security review.",
+    "message": "بلغت مقارنة الأوصاف حداً للمراجعة: $1. قد توجد حالات غموض إضافية في الأزواج غير المفحوصة.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_originScan": {
+    "description": "Phase B security review.",
+    "message": "لم تُطلب ترويسات المصدر وملفات الاكتشاف. استخدم فحص المصدر أدناه للتحقق منها."
+  },
+  "security_no_originScanIncomplete": {
+    "description": "Phase B security review.",
+    "message": "فحص المصدر غير مكتمل: الاستجابة غير متاحة أو معاد توجيهها أو محدودة. لم تُجرَ إعادة محاولة."
+  },
+  "sec_text_active_payload_title": {
+    "description": "Phase B security review.",
+    "message": "علامة حمولة نشطة في نص الأداة"
+  },
+  "sec_text_active_payload_why": {
+    "description": "Phase B security review.",
+    "message": "قد تعيد وسوم السكربت أو تعليمات التجاوز أو صور Markdown الخارجية توجيه الوكيل. هذا مؤشر وليس إثباتاً للتنفيذ أو تسريب البيانات."
+  },
+  "sec_text_active_payload_fix": {
+    "description": "Phase B security review.",
+    "message": "استبدل تعليمات الوكيل بوصف واقعي للإجراء. راجع جميع أوصاف المخطط وافصل النص غير الموثوق عن التعليمات الموثوقة."
+  },
+  "sec_mutation_hints_incomplete_title": {
+    "description": "Phase B security review.",
+    "message": "نية التغيير غير معلنة بالكامل"
+  },
+  "sec_mutation_hints_incomplete_why": {
+    "description": "Phase B security review.",
+    "message": "يشير الفعل إلى تغيير الحالة. تلميحات WebMCP إرشادية ولا تفرض الموافقة أو التفويض."
+  },
+  "sec_mutation_hints_incomplete_fix": {
+    "description": "Phase B security review.",
+    "message": "للتغيير الذي تمت مراجعته اضبط readOnlyHint:false وconsequentialHint:true. نفّذ التأكيد وتفويض الخادم بشكل منفصل."
+  },
+  "sec_permissive_object_title": {
+    "description": "Phase B security review.",
+    "message": "مخطط الكائن يسمح بمدخلات غير معلنة"
+  },
+  "sec_permissive_object_why": {
+    "description": "Phase B security review.",
+    "message": "الخصائص الإضافية مسموحة صراحةً أو تفتقر الأداة الحساسة إلى حدود مغلقة للكائن. يصف ذلك المخطط لا التحقق على الخادم."
+  },
+  "sec_permissive_object_fix": {
+    "description": "Phase B security review.",
+    "message": "راجع additionalProperties:false والقيود المتداخلة. افحص المخططات المركبة والتوافق قبل إغلاق الكائنات وأعد التحقق على الخادم."
+  },
+  "sec_mutating_auto_submit_title": {
+    "description": "Phase B security review.",
+    "message": "نموذج يغيّر الحالة قابل للإرسال التلقائي"
+  },
+  "sec_mutating_auto_submit_why": {
+    "description": "Phase B security review.",
+    "message": "يزيل toolautosubmit خطوة الإرسال اليدوي الأصلية. تظل المصادقة ومعالجات التأكيد المخصصة غير معروفة. يشير agentInvoked إلى المصدر لا إلى موافقة بشرية."
+  },
+  "sec_mutating_auto_submit_fix": {
+    "description": "Phase B security review.",
+    "message": "راجع إزالة toolautosubmit للإجراءات الحساسة. اربط التفويض والموافقة بالحساب والمعاملات والعملية المحددة على الخادم."
+  },
+  "sec_legacy_registration_title": {
+    "description": "Phase B security review.",
+    "message": "رُصد تسجيل قديم"
+  },
+  "sec_legacy_registration_why": {
+    "description": "Phase B security review.",
+    "message": "يستخدم التسجيل المرصود navigator أو provideContext. يعتمد التوافق على بيئة التشغيل؛ الوجود وحده ليس استغلالاً."
+  },
+  "sec_legacy_registration_fix": {
+    "description": "Phase B security review.",
+    "message": "انتقل إلى document.modelContext.registerTool مع تنظيف AbortSignal بعد التحقق من المتصفح المستهدف. لا تسجّل دالة الاستدعاء مرتين."
+  },
+  "sec_token_estimate_over_budget_title": {
+    "description": "Phase B security review.",
+    "message": "تجاوز ميزانية الوصف التقديرية"
+  },
+  "sec_token_estimate_over_budget_why": {
+    "description": "Phase B security review.",
+    "message": "يتجاوز التقدير 800 رمز، بحساب بايتات UTF-8 مقسومة على أربعة والتقريب للأعلى. يعتمد العدد الدقيق على محلّل الرموز في النموذج."
+  },
+  "sec_token_estimate_over_budget_fix": {
+    "description": "Phase B security review.",
+    "message": "اختصر أوصاف الإجراء والمعاملات دون حذف القيود اللازمة. استخدم محلّل رموز النموذج المقصود عند الحاجة إلى ميزانية دقيقة."
+  },
+  "sec_ambiguous_description_title": {
+    "description": "Phase B security review.",
+    "message": "قد تربك الأوصاف المتشابهة الاختيار"
+  },
+  "sec_ambiguous_description_why": {
+    "description": "Phase B security review.",
+    "message": "تبلغ مشابهة Jaccard لمجموعات الكلمات 0.80 على الأقل لأدوات بأسماء مختلفة. التشابه اللفظي لا يثبت تطابق السلوك."
+  },
+  "sec_ambiguous_description_fix": {
+    "description": "Phase B security review.",
+    "message": "صف النطاق والمدخلات والنتيجة المميزة لكل إجراء. تجنّب توجيه الوكيل لتفضيل أداة أو استدعاء أخرى أولاً."
+  },
+  "sec_convention_csp_title": {
+    "description": "Phase B security review.",
+    "message": "رُصدت ترويسة CSP للاستجابة"
+  },
+  "sec_convention_csp_why": {
+    "description": "Phase B security review.",
+    "message": "يسجّل هذا ترويسة استجابة دون بيانات اعتماد وليس السياسة الفعلية. غياب الترويسة لا ينفي وجود سياسة meta."
+  },
+  "sec_convention_csp_fix": {
+    "description": "Phase B security review.",
+    "message": "راجع CSP وفق السكربتات والاتصالات الفعلية واختبر التغييرات باستخدام Report-Only واختبارات التطبيق."
+  },
+  "sec_convention_cors_title": {
+    "description": "Phase B security review.",
+    "message": "رُصدت ترويسات CORS للاستجابة"
+  },
+  "sec_convention_cors_why": {
+    "description": "Phase B security review.",
+    "message": "أدلة الترويسات فقط؛ لم يُختبر طلب متصفح عابر للمصادر. المصدر العام مع بيانات الاعتماد غير متوافق مع CORS المعتمد، وليس دليلاً على تسرّبها."
+  },
+  "sec_convention_cors_fix": {
+    "description": "Phase B security review.",
+    "message": "اسمح بالمصادر المقصودة فقط عند الحاجة. لا تفعّل CORS عاماً لإسكات تشخيص؛ اختبر السلوك المصادَق عليه بشكل منفصل."
+  },
+  "sec_convention_unavailable_title": {
+    "description": "Phase B security review.",
+    "message": "استجابة الاكتشاف غير متاحة أو غير مكتملة"
+  },
+  "sec_convention_unavailable_why": {
+    "description": "Phase B security review.",
+    "message": "فشلت الاستجابة أو أعادت التوجيه أو تجاوزت الحد أو أعادت حالة غير ناجحة. ملفات الاكتشاف الاختيارية ليست نقاط WebMCP إلزامية."
+  },
+  "sec_convention_unavailable_fix": {
+    "description": "Phase B security review.",
+    "message": "افحص الاستجابة إذا كنت تنوي نشر هذا العرف. الغياب وحده لا يتطلب إصلاحاً أمنياً ولم تُجرَ إعادة محاولة تلقائية."
+  },
+  "bridge_title": {
+    "message": "جسر MCP محلي",
+    "description": "Phase C local bridge."
+  },
+  "bridge_intro": {
+    "message": "اربط عميل MCP محلياً موثوقاً بعلامات التبويب التي تشاركها صراحةً. إذن الموقع وحده لا يشارك التبويب. يمسح التنقل وسحب الإذن وإعادة الاتصال الروابط.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pairingNote": {
+    "message": "تتضمن الإعدادات المنسوخة سراً لجلسة المتصفح الحالية. احتفظ بها لدى عميل MCP الموثوق. تتطلب إعادة تشغيل المتصفح أو تحميل الإضافة اقتراناً جديداً. يعمل البرنامج المرافق محلياً باستخدام Node.js دون تبعيات.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_port": {
+    "message": "منفذ الجسر",
+    "description": "Phase C local bridge."
+  },
+  "bridge_portHelp": {
+    "message": "المنفذ 1024–65535. يُستخدم دائماً 127.0.0.1 وتُرفض العناوين البعيدة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeout": {
+    "message": "مهلة الموافقة (ثوانٍ)",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeoutHelp": {
+    "message": "بين 5 و60 ثانية. يُرفض الاستدعاء عند عدم الرد أو انقطاع الاتصال أو انتهاء الموافقة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_path": {
+    "message": "السكربت المحلي المرافق (اختياري)",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathPlaceholder": {
+    "message": "الافتراضي: أمر webmcp-bridge المثبّت",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathHelp": {
+    "message": "لنسخة محلية غير مثبّتة، أدخل المسار المطلق إلى packages/webmcp-bridge/cli.mjs. ينسخ Explorer الإعدادات ولا يشغّل أوامر.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_auto": {
+    "message": "السماح التلقائي باستدعاءات القراءة المؤهلة",
+    "description": "Phase C local bridge."
+  },
+  "bridge_autoHelp": {
+    "message": "قد تكون التلميحات خاطئة. النتائج الحرجة/العالية ومؤشرات التغيير والأدوات المؤثرة والمعاملات غير المفحوصة تظل تتطلب موافقة. الدرجة وحدها لا تمنح إذناً.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enable": {
+    "message": "تفعيل هذه الجلسة",
+    "description": "Phase C local bridge."
+  },
+  "bridge_disable": {
+    "message": "قطع الاتصال",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enableHelp": {
+    "message": "تفعيل الجسر المحلي أو فصله. تُمسح المشاركات والموافقات عند الفصل.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_save": {
+    "message": "حفظ إعدادات الجسر",
+    "description": "Phase C local bridge."
+  },
+  "bridge_saveHelp": {
+    "message": "تطبيق المنفذ والمهلة وتفضيل القراءة لهذه الجلسة. يغيّر تبديل المنفذ الاتصال ويمسح التبويبات المشتركة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyConfig": {
+    "message": "نسخ إعدادات عميل MCP",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyHelp": {
+    "message": "نسخ الأمر المحلي والمنفذ وهوية الإضافة وسر الجلسة لعميل MCP الموثوق.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copied": {
+    "message": "تم نسخ إعدادات الجلسة",
+    "description": "Phase C local bridge."
+  },
+  "bridge_tab": {
+    "message": "التبويب المراد مشاركته",
+    "description": "Phase C local bridge."
+  },
+  "bridge_share": {
+    "message": "مشاركة التبويب المحدد",
+    "description": "Phase C local bridge."
+  },
+  "bridge_shareHelp": {
+    "message": "إتاحة أدوات التبويب المحدد والمصرّح به مسبقاً فقط. راجع المصدر قبل المشاركة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshare": {
+    "message": "إيقاف المشاركة",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshareHelp": {
+    "message": "إبطال أدوات هذا التبويب ورفض الموافقات المعلقة فوراً.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reset": {
+    "message": "نسيان الاقتران",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resetHelp": {
+    "message": "قطع الاتصال ومسح جميع المشاركات وحذف سر الاقتران لهذه الجلسة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resume": {
+    "message": "راجعت الأثر المجهول — استئناف",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resumeHelp": {
+    "message": "تأكيد مراجعة الإجراء غير المؤكد. لا يُعاد تنفيذ شيء؛ أعد مشاركة التبويبات صراحةً قبل الطلبات الجديدة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unknown": {
+    "message": "متوقف بعد أثر مجهول. افحص الصفحة قبل الاستئناف؛ لم يُعد أي استدعاء.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status": {
+    "message": "الجسر: $1",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_status_disabled": {
+    "message": "معطّل",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connecting": {
+    "message": "جارٍ التحقق من المرافق المحلي",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connected": {
+    "message": "موثّق ومتصل",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_reconnecting": {
+    "message": "بانتظار مرافق موثّق",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_authentication_failed": {
+    "message": "رُفض التحقق",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_error": {
+    "message": "الاتصال غير متاح",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approvalTitle": {
+    "message": "Corsen Guard — موافقة مطلوبة",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reasons": {
+    "message": "أسباب المراجعة: $1. JSON أدناه مطابق؛ أُظهرت المحارف غير المرئية بصيغة هروب.",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_deadline": {
+    "message": "يُرفض تلقائياً بعد $1 ثانية دون موافقة.",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_approve": {
+    "message": "موافقة لمرة واحدة",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approveHelp": {
+    "message": "تفويض هذا الطلب المحدد فقط. تُرفض الطلبات عند تغيّر المصدر أو المستند أو العقد أو انتهاء المهلة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_deny": {
+    "message": "رفض",
+    "description": "Phase C local bridge."
+  },
+  "bridge_denyHelp": {
+    "message": "رفض الطلب دون استدعاء أداة الصفحة.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_expired": {
+    "message": "انتهت الموافقة أو أُبطلت. لم يُرسل أي إجراء جديد.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_manual_mode": {
+    "message": "موافقة لكل استدعاء",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_not_read_only": {
+    "message": "غير معلن للقراءة فقط",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_consequential": {
+    "message": "مؤثر أو تدميري",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_mutating": {
+    "message": "تغيير محتمل للحالة",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_critical": {
+    "message": "نتيجة حرجة في المرحلة B",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_high": {
+    "message": "نتيجة عالية الخطورة في المرحلة B",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_incomplete_schema": {
+    "message": "مخطط غير مكتمل",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_unchecked_arguments": {
+    "message": "معاملات لم تُفحص بالكامل",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_uncaptured_annotations": {
+    "message": "لم تُلتقط تعليقات التسجيل"
+  },
+  "export_copySpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "نسخ اختبار Playwright"
+  },
+  "export_saveSpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "حفظ اختبار Playwright"
+  },
+  "export_playwrightHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "تصدير اختبار .spec.ts مستقل يتحقق من العقد والنتائج. راجع البيانات واختر معرّف تشغيل صريحاً قبل التنفيذ. لا إعادة محاولة تلقائية."
+  },
+  "export_specNeedsData": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "يحتاج التصدير القابل للتنفيذ إلى المعاملات والنتائج كاملة. أعد تضمين هذه الأقسام أولاً."
+  },
+  "export_sarifHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "SARIF 2.1.0 لمراجعة CI. تتطلب تعليقات الشيفرة ربط مواقع التشغيل بالمستودع؛ لا تُختلق ملفات أو أسطر."
+  },
+  "status_legacy": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "API قديم"
+  },
+  "status_emulated": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS محاكى"
+  },
+  "status_inventorySplit": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS $1 · نماذج $2 · ? $3",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "status_inventoryHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "تسجيلات مرصودة: JS للأدوات الأمرية الملتقطة، والنماذج للتصريحية المكتشفة، و? لغير المصنفة. لا تُستنتج جذور Shadow المغلقة."
+  },
+  "status_grade": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "تقدير $1*",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_copyFlag": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "نسخ رابط العلم"
+  }
+}

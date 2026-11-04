@@ -1,0 +1,802 @@
+@import url('./bridge.css');
+@import url('./field-checks.css');
+@import url('./recipes.css');
+@import url('./security.css');
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --bg-subtle: #f7f7f5;
+  --text: #1b1b19;
+  --text-muted: #6b6b66;
+  --border: #e3e3df;
+  --accent: #185fa5;
+  --accent-bg: #e6f1fb;
+  --ok: #0f6e56;
+  --ok-bg: #e1f5ee;
+  --warn: #854f0b;
+  --warn-bg: #faeeda;
+  --danger: #a32d2d;
+  --danger-bg: #fcebeb;
+  --radius: 8px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1a;
+    --bg-subtle: #252523;
+    --text: #f1efe8;
+    --text-muted: #a8a79f;
+    --border: #3a3a37;
+    --accent: #85b7eb;
+    --accent-bg: #0c447c;
+    --ok: #9fe1cb;
+    --ok-bg: #085041;
+    --warn: #fac775;
+    --warn-bg: #633806;
+    --danger: #f09595;
+    --danger-bg: #501313;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.5 system-ui, -apple-system, sans-serif;
+  min-width: 0;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#statusbar {
+  flex: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 8px 10px;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border);
+}
+
+#origin-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#origin {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+#facts {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+main { padding: 10px; }
+
+h2 { font-size: 15px; font-weight: 500; margin: 0 0 6px; }
+
+p { margin: 0 0 8px; }
+
+.muted { color: var(--text-muted); }
+
+.badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: var(--radius);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.badge-ok { background: var(--ok-bg); color: var(--ok); }
+.badge-warn { background: var(--warn-bg); color: var(--warn); }
+.badge-accent { background: var(--accent-bg); color: var(--accent); }
+.badge-danger { background: var(--danger-bg); color: var(--danger); }
+.grant-error { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.card-name {
+  margin: 0 0 4px;
+  font: 500 13px/1.3 var(--mono);
+  overflow-wrap: anywhere;
+}
+
+.card-desc { margin: 0 0 6px; color: var(--text-muted); }
+.card-title { margin: 0 0 4px; font-size: 12px; }
+
+.card-meta { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+
+.card-origin {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.checks { width: 100%; border-collapse: collapse; margin: 8px 0; }
+.checks th, .checks td {
+  text-align: left;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+  vertical-align: top;
+}
+.checks th { color: var(--text-muted); width: 45%; }
+
+button {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { background: var(--bg-subtle); }
+button:disabled { opacity: 0.6; cursor: default; }
+
+.icon-button {
+  min-height: 24px;
+  width: 24px;
+  padding: 0;
+  line-height: 1;
+  flex: none;
+}
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; scroll-margin: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+.card-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  min-height: 0;
+  padding: 8px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.card-button > span { display: block; }
+.card-button .card-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.card-button .card-meta { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+
+.detail-header { padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.detail-title { display: flex; align-items: center; gap: 8px; }
+.detail-title h2 { margin: 0; }
+.detail-body { padding: 8px 0; }
+
+.detail-footer {
+  position: sticky;
+  bottom: 0;
+  padding: 8px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.tabs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-bottom: 10px; }
+
+.tab {
+  min-height: 26px;
+  padding: 0 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary, var(--text-muted));
+  border-radius: var(--radius);
+}
+
+.tab-active { background: var(--accent-bg); color: var(--accent); }
+
+.link-button {
+  min-height: 24px;
+  padding: 0 6px;
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  margin-left: auto;
+}
+
+.primary { width: 100%; }
+
+.field { margin-bottom: 10px; }
+.field-label { display: block; font-size: 12px; margin-bottom: 2px; }
+.field-desc { margin: 0 0 3px; font-size: 11px; color: var(--text-muted); }
+.field-note { margin: 0 0 4px; font-size: 11px; color: var(--warn); }
+.field-note.error { color: var(--danger); }
+.field-group { margin: 12px 0 6px; font-size: 11px; text-transform: uppercase; color: var(--text-muted); }
+.req { color: var(--danger); }
+
+.field input[type="text"], .field input[type="number"], .field input[type="date"],
+.field input[type="datetime-local"], .field input[type="time"], .field input[type="email"],
+.field input[type="url"], .field input[type="password"], .field select,
+.field textarea, .form-host textarea, .ag-transcript textarea, #view > div > textarea,
+.card > textarea {
+  width: 100%;
+  padding: 5px 7px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.mono, textarea.mono, .form-host textarea.mono { font-family: var(--mono); font-size: 12px; }
+.radio-group { display: flex; flex-wrap: wrap; gap: 10px; }
+.radio { font-size: 12px; }
+
+.result-summary {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 8px; margin-bottom: 8px;
+  background: var(--bg-subtle); border-radius: var(--radius);
+}
+
+.result-banner { padding: 6px 8px; border-radius: var(--radius); font-size: 12px; margin-bottom: 8px; }
+.result-ok { background: var(--ok-bg); color: var(--ok); }
+.result-error { background: var(--danger-bg); color: var(--danger); }
+.result-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; font-size: 12px; }
+
+.result-body {
+  margin: 0;
+  padding: 7px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.tree-row { margin: 2px 0; }
+.tree-head { display: inline-flex; align-items: baseline; gap: 6px; }
+.tree-name { font-size: 12px; }
+.tree-type { font-size: 11px; color: var(--text-muted); }
+.tree-children { margin-left: 12px; padding-left: 8px; border-left: 1px solid var(--border); }
+.tree-detail { margin-left: 12px; }
+.tree-raw { margin-top: 12px; font-size: 12px; }
+summary { cursor: pointer; }
+
+.search {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+
+.chip {
+  min-height: 22px;
+  padding: 0 8px;
+  font-size: 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text-muted);
+}
+
+.chip-active { background: var(--accent-bg); color: var(--accent); border-color: var(--accent-bg); }
+.chip-sort { margin-left: auto; }
+.count { display: block; font-size: 11px; margin-bottom: 8px; }
+
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-bottom: 10px; }
+.stat { background: var(--bg-subtle); border-radius: var(--radius); padding: 6px 8px; }
+.stat-label { display: block; font-size: 10px; color: var(--text-muted); }
+.stat-value { display: block; font-size: 14px; }
+.history-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 12px; }
+.history-row { border-bottom: 1px solid var(--border); padding: 4px 0; }
+.history-head { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; }
+.history-body { padding: 6px 0 8px 12px; }
+
+#shell { display: flex; align-items: stretch; flex: 1; min-height: 0; }
+
+#rail {
+  flex: none;
+  width: auto;
+  min-width: 64px;
+  border-right: 1px solid var(--border);
+  background: var(--bg-subtle);
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.rail-button {
+  width: 58px;
+  margin-inline: 3px;
+  min-height: 48px;
+  flex: none;
+  padding: 4px 1px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.rail-button svg { display: block; }
+/* 10px read as "minuscul" on the owner's screenshot (audit measured every rail label at
+   exactly 10px); 12px stays compact in the 64px rail and clears the small-text bar. */
+.rail-label { font-size: 12px; line-height: 1.25; max-width: 100%; }
+
+.rail-button:hover { background: var(--bg); }
+.rail-active { background: var(--accent-bg); color: var(--accent); }
+#shell #view { flex: 1; min-width: 0; overflow-y: auto; scrollbar-gutter: stable; }
+#view[aria-busy="true"] { opacity: .65; }
+
+.tl-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+
+.tl-time { flex: none; font-variant-numeric: tabular-nums; }
+.tl-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tl-dur { flex: none; font-variant-numeric: tabular-nums; }
+.rail-sep { width: 18px; height: 1px; background: var(--border); margin: 2px 0; }
+.rail-spacer { flex: 1; }
+/* Keep Settings reachable when wrapped diagnostics reduce the rail's available height. */
+@media (min-width: 301px) {
+  #rail .rail-button:last-child { position: sticky; bottom: 0; background: var(--bg-subtle); }
+  #rail .rail-button:last-child.rail-active { background: var(--accent-bg); }
+}
+
+/* Settings rows: a label, what is stored, and the one control that acts on it. */
+.st-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.st-row .st-label { flex: 1 1 55%; min-width: 0; overflow-wrap: break-word; }
+.st-row button { flex: none; min-height: 26px; padding: 0 8px; font-size: 12px; }
+.st-row .muted { flex: 0 1 45%; min-width: 0; text-align: end; font-size: 11px; overflow-wrap: anywhere; }
+.st-row select { flex: 1 1 45%; min-width: 0; max-width: 100%; }
+/* An armed button is one click away from deleting: it says so in colour as well as in words. */
+button.armed { border-color: var(--danger); color: var(--danger); background: var(--danger-bg); }
+.tl-note { color: var(--text-muted); border-bottom: 1px dotted var(--border-strong, var(--border)); cursor: help; }
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.form-actions .primary { flex: 1; }
+
+/* The toolbar drawing on the needs-action screen. It is an illustration, not a control:
+   it must never look clickable. */
+.hint-figure {
+  margin: 12px 0 10px;
+  padding: 0;
+}
+
+.toolbar-hint {
+  display: block;
+  width: 100%;
+  max-width: 264px;
+  height: auto;
+}
+
+.hint-figure figcaption {
+  margin-top: 2px;
+  max-width: 264px;
+  text-align: center;
+}
+
+/* Agent Lab. The transcript is the product here: a tool call must read as an event, not as
+   a paragraph, so each turn is a block with its own role label. */
+.ag-setup { margin-bottom: 10px; }
+.ag-setup > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  text-transform: uppercase; }
+
+/* Conversation sessions: the switcher above the goal field. */
+.ag-sessions-bar { align-items: flex-start; }
+.ag-sessions-bar > details { flex: 1; min-width: 0; }
+.ag-sessions-bar:has(> details[open]) { display: block; }
+.ag-sessions-bar:has(> details[open]) > .ag-new-session { margin-top: 8px; }
+.ag-sessions-list > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  text-transform: uppercase; }
+.ag-sessions-list .ag-session-row { margin: 4px 0 0 0; }
+.ag-session-open { flex: 1; min-width: 0; text-align: left; display: flex;
+  flex-direction: column; gap: 1px; }
+.ag-session-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ag-session-meta { color: var(--text-muted); font-size: 11px; }
+.ag-session-current { outline: 1px solid var(--accent, currentColor); }
+.ag-session-delete { flex: none; }
+.ag-continuing { color: var(--text-muted); }
+
+/* Chat groups: filter chips above the list, a mover per row. */
+.ag-group-chips { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
+
+/* Custom connectors: one row per connector, the add form folded away. Prompt profile rows
+   (.pp-row) sit in the same layout — they used to borrow .cc-row, which made the connector
+   scenario count a profile row as a ghost connector. */
+.cc-list { display: flex; flex-direction: column; gap: 6px; margin: 6px 0; }
+.cc-row, .pp-row { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+/* The product default prompt is shown as written, but a <pre> that does not wrap made the whole
+   panel 9,000 px wide at 320 px (responsive matrix, 2.1.0): wrap it like a result body. */
+.pp-default-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 320px; overflow-y: auto; }
+.cc-row-main { display: flex; flex-direction: column; min-width: 0; }
+.cc-label { font-weight: 600; }
+.cc-meta { color: var(--text-muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cc-add { margin-top: 8px; }
+.ag-group-chip { font-size: 11px; padding: 2px 8px; border-radius: 999px;
+  background: var(--bg-subtle); }
+.ag-group-chip.ag-group-active { background: var(--accent, currentColor); color: var(--bg, #fff); }
+.ag-group-del { margin-left: 4px; font-weight: bold; cursor: pointer; }
+.ag-group-pair { display: inline-flex; align-items: center; }
+.ag-group-pair .ag-group-del { min-width: 28px; min-height: 28px; padding: 2px 6px; margin-left: 2px; }
+.ag-group-add { border-style: dashed; }
+.ag-session-group { flex: none; max-width: 110px; font-size: 11px; }
+
+/* Chat composer: input at the bottom, transcript above — the conversation is the surface. */
+.ag-composer { margin-top: 10px; }
+/* Chat layout (D-116): the composer stays pinned to the bottom of the Agent Lab while the
+   transcript scrolls above it, the way every chat product behaves. Sticky inside the one
+   scroll column, so scrolling back through a long conversation always works. The shadow
+   makes the pin read as layering, not as text clipped mid-line. */
+#shell #view.ag-view .ag-composer { position: sticky; bottom: 0; background: var(--bg);
+  z-index: 2; border-top: 1px solid var(--border); padding-top: 8px; margin-bottom: 0;
+  box-shadow: 0 -6px 12px -6px rgba(0,0,0,.18); }
+/* Expanded history/setup must not sit behind the pinned input. In those states the whole
+   screen scrolls normally; closing the disclosure restores the chat composer. */
+#shell #view.ag-view:has(.ag-sessions-list[open], .ag-setup[open]) .ag-composer { position: relative; }
+#view.ag-view { scroll-padding-bottom: var(--ag-composer-height, 240px); }
+.ag-composer textarea { resize: none; min-height: 44px; }
+/* The "Answer as" bar above the composer: small, inline, always within reach mid-chat. */
+.ag-profile-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.ag-profile-label { color: var(--text-muted); font-size: 11px; }
+.ag-profile-bar select { flex: 1; min-width: 0; max-width: 220px; }
+.ag-composer .form-actions { margin-top: 6px; }
+/* The floating "Jump to latest": owned by the sticky composer (sticky = positioned, so it
+   is the containing block), floating over the transcript edge right above the input — the
+   ChatGPT down-arrow position. In flow it would shove the profile bar down; absolute it
+   only borrows the air. */
+.ag-jump { position: absolute; top: -15px; right: 10px;
+  border-radius: 999px; padding: 4px 12px; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.18);
+  background: var(--bg); z-index: 3; }
+.ag-jump[hidden] { display: none; }
+.ag-retry { white-space: nowrap; }
+
+.row-inline { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0; }
+.row-inline input, .row-inline select { flex: 1; min-width: 90px; }
+.row-inline .field-label { flex: none; margin: 0; }
+
+.ag-transcript { margin-top: 10px; }
+.ag-answer { display: flex; flex-direction: column; gap: 10px; }
+.ag-answer .ag-goal { margin-left: 24px; }
+.ag-answer .ag-model { margin-right: 12px; }
+.ag-tool-count { margin: 4px 0; }
+#view.ag-view .nn-notice { margin: 6px 0; padding: 6px 8px; }
+.ag-execution > summary { overflow-wrap: anywhere; }
+.ag-answer .ag-turn { padding: 10px; background: var(--bg-subtle); border-radius: 6px; }
+.result-readable { font-size: 13px; }
+.rv-fields { margin: 0; }
+.rv-field { padding: 6px 0; border-bottom: 1px solid var(--border); }
+.rv-field > dt { color: var(--text-muted); overflow-wrap: anywhere; }
+.rv-field > dd { margin: 2px 0 0 10px; min-width: 0; }
+.rv-scalar { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+.rv-value { white-space: pre-wrap; overflow-wrap: anywhere; min-width: 0; }
+.rv-kind { color: var(--text-muted); font-size: 11px; }
+.rv-group > button { margin-top: 6px; }
+.rv-nested > summary { overflow-wrap: anywhere; }
+
+.ag-turn {
+  border-left: 2px solid var(--border);
+  padding: 4px 0 4px 8px;
+  margin: 8px 0;
+}
+
+.ag-role {
+  margin: 0 0 2px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.ag-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ag-goal { border-left-color: var(--text-muted); }
+.ag-model { border-left-color: var(--accent); }
+.ag-call { border-left-color: var(--accent); }
+.ag-result { border-left-color: var(--ok); }
+.ag-call .card-name { margin: 0 0 4px; }
+
+.ag-waiting { color: var(--accent); }
+
+/* Evals. A case is an editable card; a result is a read-only one. They must not be mistaken
+   for each other, so the editable ones carry a left edge. */
+.ev-case { border-left: 3px solid var(--border); }
+.ev-case > textarea { margin-bottom: 8px; }
+
+/* A checkbox row is a field like any other and needs the same breathing room, otherwise it
+   reads as a caption of the label that follows it. */
+.ev-case > .radio { display: block; margin-bottom: 8px; }
+
+/* A number input sized for three digits, so it does not crowd the button beside it. */
+.row-inline input[type="number"] { flex: none; width: 72px; min-width: 0; }
+.ev-results { margin-top: 10px; }
+.ev-compare { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+
+/* The status-bar buttons hold a drawn icon, so they need the same centring as the rail. */
+.icon-button { display: inline-flex; align-items: center; justify-content: center; }
+.icon-button svg { display: block; }
+.icon-button:disabled { opacity: 0.4; cursor: default; }
+
+/* Export is a deliberate act, so it sits folded under the thing it exports. */
+.ex-bar { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+.ex-bar > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  text-transform: uppercase; }
+.ex-row { align-items: baseline; }
+.ex-kind { flex: none; width: 62px; margin: 0; }
+.ex-row button { flex: none; }
+.ex-desc { flex: 1; min-width: 90px; margin: 0; }
+.ex-status { display: block; min-height: 14px; color: var(--ok); }
+
+/* Saved calls live under the arguments they belong to. */
+.sc-bar { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+.sc-bar > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  text-transform: uppercase; }
+.sc-bar .row-inline input { flex: 1; min-width: 120px; }
+.sc-row .card-name { font-family: inherit; font-weight: 500; }
+.sc-row .mono { font-family: var(--mono); }
+.cancel-call { flex: none; }
+
+/* Snapshots live under the tool list they describe. */
+.sn-bar { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.sn-bar > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  text-transform: uppercase; }
+.sn-row .card-name { font-family: inherit; font-weight: 500; }
+.sn-diff { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--border); }
+
+/* Contract checks sit under the schema they read. */
+.ck-bar { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+.ck-bar > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  text-transform: uppercase; }
+.ck-item { display: flex; align-items: baseline; gap: 6px; margin: 4px 0; font-size: 12px; }
+.ck-item .badge { flex: none; }
+.ck-text { overflow-wrap: anywhere; }
+
+/* The Audit screen (F7): a score head, then one row per tool, worst first. */
+.au-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+.au-head .badge { font-size: 13px; }
+.au-counts { display: inline-flex; gap: 6px; flex-wrap: wrap; }
+.au-list { margin-top: 10px; }
+.au-tool { border-top: 1px solid var(--border); padding: 6px 0; }
+.au-tool > summary { cursor: pointer; display: flex; align-items: baseline; gap: 8px; }
+.au-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.au-item { display: flex; align-items: baseline; gap: 6px; margin: 4px 0 4px 2px; font-size: 12px; }
+.au-item .badge { flex: none; }
+.au-text { overflow-wrap: anywhere; }
+.au-clean { color: var(--text-muted); font-size: 12px; margin: 4px 0 0 2px; }
+
+/* Source Finder sits under the schema it explains. */
+.src-bar { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+.src-bar > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  text-transform: uppercase; }
+.src-file { overflow-wrap: anywhere; margin: 4px 0; }
+
+/* The network disclosure. Set apart from the help text around it: it is a statement, not a
+   hint, and it sits directly above the button it describes. */
+.nn-host { margin: 10px 0 0; }
+.nn-notice {
+  margin: 0;
+  padding: 8px 10px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-bg);
+  color: var(--text);
+  font-size: 12px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Registrations that never reached getTools() (tool-missing.js). */
+.mr-bar { margin-top: 12px; }
+.mr-bar > summary { cursor: pointer; font-weight: 500; }
+.mr-row { margin-top: 8px; }
+.mr-row .card-name { font-family: var(--mono); font-size: 12px; }
+.mr-all { margin-top: 10px; }
+
+/* Saved checks: verdicts under a saved call, and the page-level box. */
+.sc-verdict { margin: 4px 0 0; }
+.sc-pass { color: var(--ok, #1a7f37); }
+.sc-fail { color: var(--danger, #b42318); }
+.sc-none { color: var(--muted, #6b6b6b); }
+.pc-bar { margin-top: 12px; }
+.pc-bar > summary { cursor: pointer; color: var(--text-muted); font-size: 11px;
+  letter-spacing: 0.04em; text-transform: uppercase; }
+.pc-row { padding: 8px 10px; }
+.sn-changes { margin: 2px 0 6px; padding-left: 18px; }
+.sn-changes li { margin: 0; }
+.sn-broken { margin: 4px 0 0; }
+
+/* Browser zoom reduces the panel's CSS viewport below Chrome's physical minimum.
+   Give the content the full width and keep every section labelled and reachable. */
+@media (max-width: 300px) {
+  #shell { flex-direction: column; }
+  #rail {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    min-width: 0;
+    padding: 3px;
+    gap: 3px;
+    overflow: visible;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  #rail .rail-button { width: auto; min-width: 0; margin: 0; padding: 4px 1px; }
+  #rail .rail-sep, #rail .rail-spacer { display: none; }
+  #shell #view { min-height: 0; }
+  #view { overflow-wrap: anywhere; }
+  #view button, #view input, #view select, #view textarea { min-width: 0; max-width: 100%; }
+  #view button, #view .badge { white-space: normal; overflow-wrap: anywhere; }
+  .detail-title, .result-summary, .result-head, .tree-head { flex-wrap: wrap; }
+}
+
+/* At high zoom on a short screen, nested scrolling leaves too little room for a
+   complete field. Let the whole panel scroll so navigation can move out of the way. */
+@media (max-width: 300px) and (max-height: 360px) {
+  body { height: auto; min-height: 100dvh; overflow-y: auto; }
+  #statusbar { position: static; }
+  #shell { flex: none; }
+  #shell #view { overflow: visible; scrollbar-gutter: auto; }
+}
+
+/* Open-in-window chat (D-120): the same Agent Lab rendered as a real window. The reading
+   column stays capped so a 1000px+ window does not stretch lines to unreadable widths —
+   the chat products all cap the column the same way. */
+.window-mode #rail { display: none; }
+.window-mode #view.ag-view > * { max-width: 920px; margin-inline: auto; width: 100%; }
+
+/* Short windows need the full scroll area: a pinned composer can cover New session. */
+@media (max-height: 600px) {
+  #shell #view.ag-view .ag-composer { position: relative; }
+  #view.ag-view { scroll-padding-bottom: 0; }
+}
+
+/* Tool card input summary (humanize layer) & schema copy bar. */
+.card-button .card-inputs { font-size: 11px; margin: 2px 0 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.schema-copy-bar { margin: 8px 0 4px; }
+
+/* Keep all 4 detail tabs + JSON toggle on one line at 320px panel width. */
+@media (max-width: 360px) {
+  .tabs { gap: 2px; }
+  .tab { padding: 0 5px; font-size: 12px; }
+  .tabs .link-button { padding: 0 4px; font-size: 11px; }
+}
+
+/* Prompt starters in Agent Lab empty transcript. */
+.ag-starters { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 6px; }
+.ag-starter-chip {
+  text-align: start;
+  font-size: 12px;
+  border-style: dashed;
+  background: var(--bg-subtle);
+}
+.ag-starter-chip:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Safe Markdown rendering in Agent Lab model responses (F12). */
+.md-body { display: flex; flex-direction: column; gap: 6px; }
+.md-p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.md-heading { font-weight: 600; margin: 4px 0 0; overflow-wrap: anywhere; }
+.md-h1, .md-h2 { font-size: 14px; }
+.md-h3, .md-h4 { font-size: 13px; }
+.md-list { margin: 0; padding-inline-start: 18px; display: flex; flex-direction: column; gap: 2px; }
+.md-list li { overflow-wrap: anywhere; }
+.md-quote {
+  margin: 0;
+  padding: 2px 0 2px 8px;
+  border-inline-start: 2px solid var(--border);
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+.md-codeblock {
+  padding: 6px 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 11px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  direction: ltr;
+  text-align: left;
+}
+.md-inline-code {
+  padding: 1px 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 11px;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+.md-link, .md-image { color: var(--text-muted); }
+
+/* Right-to-left (RTL) layout support for Hebrew (he) and Arabic (ar). */
+[dir="rtl"] #rail { border-right: 0; border-left: 1px solid var(--border); }
+[dir="rtl"] .link-button { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .ag-turn { border-left: 0; border-right: 2px solid var(--border); padding: 4px 8px 4px 0; }
+[dir="rtl"] .ag-goal { border-right-color: var(--text-muted); }
+[dir="rtl"] .ag-model, [dir="rtl"] .ag-call { border-right-color: var(--accent); }
+[dir="rtl"] .ag-result { border-right-color: var(--ok); }
+[dir="rtl"] .ag-answer .ag-goal { margin-left: 0; margin-right: 24px; }
+[dir="rtl"] .ag-answer .ag-model { margin-right: 0; margin-left: 12px; }
+[dir="rtl"] .ev-case { border-left: 1px solid var(--border); border-right: 3px solid var(--border); }
+[dir="rtl"] .nn-notice {
+  border-left: 0;
+  border-right: 3px solid var(--accent);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+[dir="rtl"] .sn-changes { padding-left: 0; padding-right: 18px; }
+[dir="rtl"] .rv-field > dd { margin: 2px 10px 0 0; }
+[dir="rtl"] .card-desc, [dir="rtl"] .ag-text, [dir="rtl"] .md-p, [dir="rtl"] .md-heading, [dir="rtl"] .md-list li {
+  unicode-bidi: plaintext;
+  text-align: start;
+}
+[dir="rtl"] .mono, [dir="rtl"] pre, [dir="rtl"] code, [dir="rtl"] #origin, [dir="rtl"] .card-name, [dir="rtl"] .card-origin {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Vault actions must remain readable and reachable inside a narrow/RTL setup panel. */
+.vault-controls .form-actions { flex-wrap: wrap; }
+.vault-controls .form-actions > button {
+  flex: 1 1 10rem;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Compact observations, with full explanations available to assistive technology. */
+#facts { gap: 3px 6px; }
+#facts .diagnostic-emulation { display: contents; }
+#facts .diagnostic-emulation .form-actions { margin: 0; padding: 0; border: 0; flex-wrap: wrap; gap: 4px; }
+#facts .diagnostic-emulation .field-note:empty { display: none; }
+#facts button, #facts .badge { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+#facts .diagnostic-inventory { font-size: 11px; }

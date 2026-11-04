@@ -1,0 +1,32 @@
+id: WMP-0047
+title: Chrome 155 keeps consequentialHint in the annotations getTools() returns; 152 and 153 dropped it
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new; 153.0.8010.36 side by side
+  mode: native
+expected: >
+  ToolAnnotations carries readOnlyHint, untrustedContentHint, consequentialHint and debugging,
+  each defaulting to false (spec, 16 October 2026; consequentialHint added by #217 on 2026-09-03).
+observed: >
+  A tool registered with annotations { readOnlyHint true, consequentialHint true,
+  untrustedContentHint false, debugging true } reads back on 155 as { consequentialHint true,
+  readOnlyHint true, untrustedContentHint false }; on 157 debugging is kept too (WMP-0048); on
+  153 only readOnlyHint and untrustedContentHint survive (WMP-0004, WMP-0037).
+reliable_discriminator: >
+  'consequentialHint' in tool.annotations after a registration that set it, on the running build
+impact:
+  - the consequential facet and badge become real data from 155 on, no longer a filter that can never match
+  - a security review can now report a consequential action declared or missing on 155 and later, not before
+workaround: >
+  None. Render whatever annotations the browser returns (D-026); never hard-code the list.
+evidence:
+  fixture: fixtures/basic.html
+  automated_test: tools/probe-platform.mjs (annotations)
+  chrome_e2e: true
+  decision: D-128
+spec_status:
+  documented: yes (#217, 2026-09-03)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

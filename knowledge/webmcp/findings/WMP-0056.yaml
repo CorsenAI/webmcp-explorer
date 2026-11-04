@@ -1,0 +1,29 @@
+id: WMP-0056
+title: Chrome 155 refuses a call to a declarative form that names a parameter the form does not have, while imperative tool arguments are not checked
+date_observed: 2026-10-21
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 (linux64), --headless=new
+  mode: native
+expected: >
+  WMP-0046: Chrome 155 does not check the arguments of an imperative tool against its inputSchema.
+observed: >
+  Agent Lab, simulated provider sending {query, q} to subscribe_newsletter (fields email, plan):
+  the call fails at once with "Input contains a parameter "query" but there is no such parameter
+  for the tool"; the form is never filled and toolactivated does not fire.
+reliable_discriminator: >
+  the error text "Input contains a parameter" from executeTool on a declarative tool
+impact:
+  - a model that invents an argument name gets an immediate, readable error from a form tool
+  - test fixtures must name their fields after the arguments the simulated provider sends
+workaround: >
+  fixtures/declarative-wait.html names its fields query and q, the arguments of fixtures/mock-llm.mjs.
+evidence:
+  fixture: fixtures/declarative.html
+  automated_test: tools/e2e/declarative-wait.mjs (first run, 2026-10-21)
+  chrome_e2e: true
+spec_status:
+  documented: not described in the declarative explainer or Chrome's page
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen Context]
+status: observed

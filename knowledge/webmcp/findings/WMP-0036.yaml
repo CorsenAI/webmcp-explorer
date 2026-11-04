@@ -1,0 +1,31 @@
+id: WMP-0036
+title: A tool that resolves with an object is handed to the caller as its JSON serialisation
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82 and 153.0.8010.36 (linux64)
+  mode: native
+expected: >
+  The result of a tool is a string (vendor docs); what happens to a non-string return value is
+  not stated. A naive conversion would give "[object Object]".
+observed: >
+  A tool whose execute resolves with { answer: 42, list: [1, 2] } comes back from executeTool()
+  as the string '{"answer":42,"list":[1,2]}' in both builds. null still comes back as the string
+  "null" (WMP-0012).
+reliable_discriminator: typeof result === 'string' in every case
+impact:
+  - a page may return structured data without stringifying it and agents still receive JSON
+  - a demo or polyfill that stringifies with String() misrepresents the platform
+workaround: >
+  Treat every result as a string and offer to parse it as JSON when it is; make any polyfill
+  serialise objects with JSON.stringify to match.
+evidence:
+  fixture: tools/probe-platform.mjs (probe_object)
+  automated_test: tools/e2e/demo.mjs
+  chrome_e2e: true
+  decision: D-060
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen Context]
+status: confirmed

@@ -1,0 +1,32 @@
+id: WMP-0028
+title: Chrome reports a history.pushState through tabs.onUpdated exactly like a navigation
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: n/a (extension platform)
+expected: >
+  tabs.onUpdated carries a status of "loading" only when a new document is loading; a
+  same-document navigation (pushState) would at most report a url change.
+observed: >
+  history.pushState({}, '', '/dynamic.html?spa=3') produced two tabs.onUpdated events for the
+  tab: { status: 'loading', url: '…?spa=3' } then { status: 'complete' } — the same sequence as
+  a real navigation, while the document, its scripts and the injected observer all stayed.
+impact:
+  - anything keyed on "status loading means a new document" is wrong for SPAs
+  - Explorer used to purge its timeline baseline on that event and then swallowed the first
+    real registration change after a pushState
+workaround: >
+  Tie per-frame state to the document, not to tab events: each injected observer carries a
+  token generated at injection; a snapshot with a new token is a new document's baseline, a
+  snapshot with the same token is diffed. No purge on tab events.
+evidence:
+  fixture: fixtures/dynamic.html
+  automated_test: tools/e2e/navigation.mjs (J5, pushStateUpdates), test/live-snapshots.test.js
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: partially (tabs.onUpdated docs do not distinguish same-document navigations)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Cross-origin child</title>
+<style>body{font:13px/1.5 system-ui,sans-serif;margin:8px}</style></head>
+<body>
+<p id="state">cross-origin child</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+
+const diag = {
+  from: 'child-cross',
+  origin: location.origin,
+  isSecureContext,
+  hasApi: typeof (document.modelContext ?? null),
+  originAgentCluster: typeof document.originAgentCluster === 'boolean'
+    ? document.originAgentCluster : null,
+  toolsPolicy: (() => {
+    try { return document.featurePolicy.allowsFeature('tools'); } catch { return 'error'; }
+  })(),
+  registered: false,
+  error: null,
+};
+
+if (!mc || typeof mc.registerTool !== 'function') {
+  diag.error = 'no modelContext in this frame';
+  state.textContent = 'WebMCP unavailable in this frame';
+} else {
+  try {
+    mc.registerTool({
+      name: 'child_cross_tool',
+      description: 'A tool inside a cross-origin iframe, exposed to the embedding page.',
+      inputSchema: { type: 'object', properties: {} },
+      annotations: { readOnlyHint: true },
+      exposedTo: ['http://localhost:8777'],
+      execute: async () => JSON.stringify({ child: 'cross' }),
+    });
+    diag.registered = true;
+    state.textContent = 'child_cross_tool registered, exposedTo localhost:8777';
+  } catch (error) {
+    diag.error = String(error && error.message ? error.message : error);
+    state.textContent = 'registerTool threw: ' + diag.error;
+  }
+}
+
+// Report upwards so the embedding page can show what actually happened in here.
+try { parent.postMessage(diag, '*'); } catch { /* no parent */ }
+</script>
+</body>
+</html>

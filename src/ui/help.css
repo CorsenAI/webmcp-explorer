@@ -1,0 +1,39 @@
+.help-dialog {
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0;
+  width: min(580px, calc(100% - 16px));
+  max-width: calc(100% - 16px);
+  max-height: calc(100dvh - 16px);
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+.help-dialog[open] { display: flex; flex-direction: column; }
+.help-dialog::backdrop { background: rgb(0 0 0 / 45%); }
+.help-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px; }
+.help-heading h2 { flex: 1 1 130px; margin: 0; }
+.help-pages { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 12px; border-bottom: 1px solid var(--border); }
+.help-pages button { padding: 5px 8px; }
+.help-pages button[aria-pressed="true"] { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+.help-content { padding: 12px; overflow: auto; min-height: 0; }
+.help-content:focus-visible { outline-offset: -3px; }
+.help-topic { margin-bottom: 14px; }
+.help-topic h3 { font-size: 13px; margin: 0 0 4px; font-weight: 600; }
+.help-topic p { margin: 0; }
+.help-steps { padding-left: 22px; margin: 0; }
+.help-controls { margin: 0; }
+.help-controls dt { font-weight: 600; margin: 10px 0 3px; }
+.help-controls dd { margin: 0 0 10px; color: var(--text-muted); }
+.help-intro { margin-bottom: 10px; padding: 6px 8px; background: var(--bg-subtle); border-radius: var(--radius); }
+.help-intro summary, .help-glossary summary { color: var(--accent); cursor: pointer; }
+.help-intro p { margin: 6px 0; }
+.help-content > .field-desc { margin: 8px 0 14px; }
+.help-glossary .help-topic { margin-top: 12px; }
+/* On a short or highly zoomed panel let the whole guide scroll; its header cannot consume
+   the entire viewport and leave the explanations in a zero-height inner scroller. */
+@media (max-height: 420px) {
+  .help-dialog[open] { display: block; }
+  .help-content { overflow: visible; }
+}

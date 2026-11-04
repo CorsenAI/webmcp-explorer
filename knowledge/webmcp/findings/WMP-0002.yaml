@@ -1,0 +1,33 @@
+id: WMP-0002
+title: getTools() aggregates same-origin frame tools into the top document; tool.window tells them apart
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: each frame's getTools() reports only the tools that frame registered
+observed: >
+  A same-origin iframe's tools appear in the parent document's getTools() without any
+  fromOrigins option. Probing every frame therefore reports the same tool several times.
+reliable_discriminator: tool.window === window (the tool object carries the registering window)
+impact:
+  - duplicate tools in inspectors that probe every frame
+  - wrong frame attribution, hence execution routed to a frame that does not own the tool
+  - inflated tool counts and broken identity keyed on name alone
+  - execution must check ownership too — injecting into the right frame does not select the right object, since the sibling's tool of the same name may come first in that frame's getTools() (found by the independent audit of 2026-09-05, D-056)
+  - two frames loading the same URL each own an instance of the same tool; an inspector that keys live tools on a path-based identity drops one of them (D-056)
+workaround: >
+  In each frame, keep only tools whose window is that frame's own window. Because the tool
+  object is not serialisable (it carries a window), ownership has to be decided inside the
+  page before results cross the extension boundary.
+evidence:
+  fixture: fixtures/iframes.html
+  automated_test: test/registry.test.js
+  chrome_e2e: true
+  decision: D-021
+  commit: 117bf78
+spec_status:
+  documented: unclear
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

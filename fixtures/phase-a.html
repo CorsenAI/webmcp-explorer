@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Phase A local qualification</title></head>
+<body><h1>Local qualification — synthetic data only</h1><p id="state">Loading</p><p>Simulated debits: <output id="debits">0</output></p>
+<form toolname="phase_form" tooldescription="Synthetic form with no external effects" toolautosubmit>
+<label>Query <input name="query" required pattern="[a-z]+" maxlength="40" toolparamdescription="A synthetic query"></label>
+<input type="hidden" name="csrf" value="fixture-value-never-exported"><button type="submit">Submit locally</button>
+</form><div id="shadow-host"></div><script type="module" src="phase-a.js"></script></body></html>

@@ -1,0 +1,34 @@
+id: WMP-0050
+title: Chrome 157 dispatches ToolActivatedEvent and ToolCancelEvent on document.modelContext and not on window; Chrome 152 to 155 dispatch a generic WebMCPEvent on window
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 157.0.8103.6 (Beta) dispatches on the context; 155.0.8059.84 and 153.0.8010.36 on window; linux64, --headless=new
+  mode: native
+expected: >
+  The specification added ToolActivatedEvent and ToolCancelEvent interfaces carrying toolName,
+  with ontoolactivated and ontoolcancel handlers on ModelContext (#245, 2026-09-17).
+observed: >
+  Listening on both targets during an executeTool() and a cancelled call. On 153 and 155 every
+  event arrives on window as a WebMCPEvent with toolName; nothing arrives on the context. On 157
+  every event arrives on document.modelContext as ToolActivatedEvent or ToolCancelEvent with
+  toolName; nothing arrives on window. Object.getOwnPropertyNames(proto) lists ontoolactivated
+  and ontoolcancel on 157 only.
+reliable_discriminator: >
+  'ontoolactivated' in Object.getPrototypeOf(document.modelContext)
+impact:
+  - a live timeline that listens on window alone goes blind to activations and cancellations from 157 on
+  - a listener on both targets sees each event once on every measured build
+workaround: >
+  Listen on window and on the context; report a same event seen twice within milliseconds once
+  (page/watch.js).
+evidence:
+  fixture: fixtures/basic.html
+  automated_test: tools/probe-platform.mjs (events); tools/e2e/live.mjs and tools/e2e/inflight.mjs on 157
+  chrome_e2e: true
+  decision: D-128
+spec_status:
+  documented: yes (#245, 2026-09-17)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: observed

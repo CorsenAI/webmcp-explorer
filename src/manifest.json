@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "version": "2.3.0",
+  "version_name": "2.3.0-rc1",
+  "default_locale": "en",
+  "minimum_chrome_version": "116",
+  "background": {
+    "service_worker": "background/index.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "ui/sidepanel.html"
+  },
+  "action": {
+    "default_title": "__MSG_actionTitle__",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      }
+    }
+  },
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "scripting",
+    "activeTab",
+    "alarms"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  }
+}

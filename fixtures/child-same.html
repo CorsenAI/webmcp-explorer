@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Same-origin child</title>
+<style>body{font:13px/1.5 system-ui,sans-serif;margin:8px}</style></head>
+<body>
+<p id="state">same-origin child</p>
+<script type="module">
+import { registerDemoTool, report } from './register.js';
+const ok = registerDemoTool(
+  'child_same_tool',
+  'A tool inside a same-origin iframe.',
+  { type: 'object', properties: {} },
+  { child: 'same' },
+);
+report(ok ? 'child_same_tool registered' : 'WebMCP unavailable in this frame');
+</script>
+</body>
+</html>

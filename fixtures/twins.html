@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Twin frames</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}iframe{display:block;width:100%;height:56px;border:1px solid #ddd;margin:4px 0 12px}</style></head>
+<body>
+<h1>Two iframes, same URL, same tool names</h1>
+<p>Both frames load <code>/twin.html</code> and each registers <code>get_state</code> and
+<code>bump</code>. They are two live instances of one logical tool: both must stay listed, and
+a call aimed at one frame must never land in the other.</p>
+<h2>Frame A</h2>
+<iframe id="a" src="/twin.html"></iframe>
+<h2>Frame B</h2>
+<iframe id="b" src="/twin.html"></iframe>
+<h2>Frame C — same file, a different query</h2>
+<iframe id="c" src="/twin.html?account=C"></iframe>
+</body>
+</html>

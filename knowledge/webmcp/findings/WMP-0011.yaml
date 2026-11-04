@@ -1,0 +1,32 @@
+id: WMP-0011
+title: When the page navigates under a running injected tool, the executeScript promise never settles
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: >
+  chrome.scripting.executeScript rejects (frame gone) or resolves with no result when the
+  target document is destroyed by a navigation.
+observed: >
+  A tool whose execute() navigates the top-level document (location.assign) and never
+  resolves left the executeScript promise pending: neither resolved nor rejected after 15 s,
+  while the new document was already loaded and discoverable. The same situation with an
+  iframe removed from the DOM (WMP-0013) or the tab reloaded (WMP-0014) does settle.
+impact:
+  - an inspector's "Running…" state never ends; a call is neither recorded nor failed
+  - an agent loop waiting on the tool hangs with the worker kept alive for nothing
+workaround: >
+  Race the injection against the tab's own lifecycle: tabs.onUpdated with status "loading"
+  (after a short grace so a result already on its way can still win) and tabs.onRemoved.
+  Settle the call as failed with a reason ("navigated" / "tab-closed") and record it as such.
+evidence:
+  fixture: fixtures/slow.html (navigate_tool)
+  automated_test: tools/e2e/inflight.mjs (C5), test/tab-watch.test.js
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

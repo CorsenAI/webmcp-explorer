@@ -1,0 +1,43 @@
+id: WMP-0039
+title: A tool registered with an empty or missing description is accepted by registerTool() and never returned by getTools()
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64)
+  mode: native
+expected: >
+  The vendor documentation marks `description` as required; a registration without one would
+  either throw, or register the tool and let getTools() return it with an empty description.
+observed: >
+  registerTool() returns normally for a descriptor whose description is "", missing, or
+  undefined — no exception, no console message read by the page — yet getTools() never lists
+  the tool. A description made of a single space is listed. Everything else about the
+  descriptor being valid, the tool simply does not exist for callers.
+reliable_discriminator: register, then read getTools() back and compare names
+impact:
+  - a developer sees "my tool does not show up" with no error anywhere, and the cause is an empty string
+  - an inspector built on getTools() cannot list the dropped tool, so a "no description" check never fires natively; only a runtime that returns such a tool (a polyfill) exercises it
+  - a page that builds descriptions from data (a CMS field left empty) silently loses tools in production
+workaround: >
+  Never register a tool with an empty description; treat description as required in your own
+  validation. In an inspector, say that a registered tool missing from the list may have an
+  empty description (Instrumentation Mode sees the registration, getTools() does not).
+evidence:
+  fixture: fixtures/sloppy.html (the original no-description case had to be dropped from it)
+  source: tools/probe-platform.mjs style probe, 2026-09-10, five descriptor variants
+  decision: D-069
+  chrome_e2e: true
+spec_status:
+  documented: false (required field; the silent drop is not described)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: superseded
+superseded_by: WMP-0043
+superseded_note: >
+  Corrected 2026-09-11. The 2026-09-10 probe read getTools() back without awaiting the promise
+  registerTool() returned. Awaited (tools/probe-registration.mjs, Chrome for Testing
+  153.0.8010.36), that promise rejects with InvalidStateError "Description is required" for an
+  empty description, and with a TypeError "Required member is undefined" for a missing one; a
+  page that ignores the promise sees "Uncaught (in promise)" in its console and nothing else.
+  The tool is refused, not accepted and hidden; what stands from the original observation is
+  that getTools() never lists it and that a one-space description is accepted.

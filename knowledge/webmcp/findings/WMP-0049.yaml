@@ -1,0 +1,28 @@
+id: WMP-0049
+title: executeTool(tool) with no input is accepted on Chrome 155 and 157 and reaches the tool as an empty object; Chrome 153 throws a TypeError for the missing argument
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64) accept it; 153.0.8010.36 refuses; --headless=new
+  mode: native
+expected: >
+  Since #324 (2026-09-29) the specification treats an omitted executeTool() input as an empty
+  object.
+observed: >
+  mc.executeTool(tool) resolves on 155 and 157 and the tool receives an object. On 153 it throws
+  synchronously, TypeError "Failed to execute 'executeTool' on 'ModelContext': 2 arguments
+  required, but only 1 present.".
+reliable_discriminator: >
+  the binding's length check on the running build
+impact:
+  - a caller that always passes an argument object is correct on every build; Explorer does
+workaround: Always pass an argument object.
+evidence:
+  fixture: fixtures/basic.html
+  automated_test: tools/probe-platform.mjs (executeOmittedInput)
+  chrome_e2e: true
+spec_status:
+  documented: yes (#324, 2026-09-29)
+  implementation_specific: false
+products_affected: [WebMCP Explorer]
+status: confirmed

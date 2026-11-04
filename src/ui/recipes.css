@@ -1,0 +1,23 @@
+.recipe-view { min-width: 0; }
+.recipe-view [hidden] { display: none !important; }
+.recipe-view fieldset { min-width: 0; border: 0; padding: 0; margin: 0; }
+.recipe-view p, .recipe-view summary, .recipe-view li, .recipe-hub p { overflow-wrap: anywhere; }
+.recipe-view pre { max-height: 260px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+.recipe-field { display: grid; gap: 5px; margin: 9px 0; min-width: 0; }
+.recipe-field > input[type=checkbox] { width: auto; justify-self: start; }
+.recipe-view input, .recipe-view select, .recipe-view textarea, .recipe-hub textarea { min-width: 0; max-width: 100%; width: 100%; box-sizing: border-box; }
+.recipe-view textarea, .recipe-hub textarea { resize: vertical; }
+.recipe-view button, .recipe-hub button { white-space: normal; overflow-wrap: anywhere; max-width: 100%; }
+.recipe-step, .recipe-input-row, .recipe-step-result, .recipe-binding { border: 1px solid var(--border); border-radius: var(--radius); padding: 10px; margin: 8px 0; }
+.recipe-step > summary { font-weight: 600; cursor: pointer; }
+.recipe-step-body { padding-top: 8px; }
+.recipe-view details > summary, .recipe-hub summary { cursor: pointer; margin: 6px 0; }
+.recipe-view .field-desc { line-height: 1.5; }
+.recipe-view .recipe-notice { white-space: pre-wrap; }
+.recipe-saved-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.recipe-saved-row span { overflow-wrap: anywhere; min-width: 0; }
+.recipe-review { border-left: 3px solid var(--accent); padding-left: 10px; margin-top: 12px; }
+.recipe-review:empty { display: none; }
+.recipe-hub { border: 1px solid var(--border); border-radius: var(--radius); padding: 10px; margin: 10px 0; }
+.recipe-steps { margin-bottom: 12px; }
+.recipe-arguments input[type=checkbox], .recipe-arguments input[type=radio] { width: auto; }

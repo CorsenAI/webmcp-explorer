@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>A frame that changes origin</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}iframe{display:block;width:100%;height:56px;border:1px solid #ddd}</style></head>
+<body>
+<h1>A frame that changes origin</h1>
+<p>The iframe starts same-origin and can be sent to another origin. The old frame's tools
+must not linger anywhere once it has moved.</p>
+<p id="state">registering…</p>
+<iframe id="child" src="/child-same.html" allow="tools"></iframe>
+<script type="module">
+import { registerDemoTool, report } from './register.js';
+const ok = registerDemoTool(
+  'top_nav_tool',
+  'A tool on the top-level document of the frame-navigation fixture.',
+  { type: 'object', properties: {} },
+  { top: true },
+);
+report(ok ? 'top_nav_tool registered' : 'WebMCP unavailable');
+
+// Sends the child somewhere else and resolves once the new document has loaded.
+window.__navigateChild = (url) => new Promise((resolve) => {
+  const frame = document.getElementById('child');
+  frame.addEventListener('load', () => resolve(frame.src), { once: true });
+  frame.src = url;
+});
+</script>
+</body>
+</html>

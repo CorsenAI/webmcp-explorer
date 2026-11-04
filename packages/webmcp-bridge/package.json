@@ -1,0 +1,20 @@
+{
+  "name": "@corsen/webmcp-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "webmcp-bridge": "cli.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "cli.mjs",
+    "relay.js",
+    "websocket.js",
+    "protocol.js",
+    "README.md"
+  ],
+  "license": "Apache-2.0"
+}

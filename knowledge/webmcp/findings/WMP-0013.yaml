@@ -1,0 +1,26 @@
+id: WMP-0013
+title: Removing the iframe under a running tool settles the injection with no result
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: the injection promise rejects or hangs when its frame is removed from the DOM
+observed: >
+  With a 6 s tool running inside a same-origin iframe, removing the iframe element settled
+  executeScript at once with an injection result carrying no value (result undefined). No
+  rejection, no hang.
+impact:
+  - the call can be reported as failed with a reason immediately
+  - contrast with WMP-0011, where only the top-level navigation case hangs
+workaround: treat an injection result without a value as "the frame is gone", and say so
+evidence:
+  fixture: fixtures/slow.html, fixtures/child-slow.html
+  automated_test: tools/e2e/inflight.mjs (B7)
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

@@ -1,0 +1,39 @@
+id: WMP-0034
+title: executeTool() takes only a JSON string in Chrome 152 and 153, and does not check the arguments against inputSchema
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82 and 153.0.8010.36 (linux64)
+  mode: native
+expected: >
+  The specification changed on 2026-08-17 (webmachinelearning/webmcp #246) so that executeTool()
+  accepts an object instead of a JSON string; the vendor documentation of 2026-09-01 still
+  describes a JSON string. One of the two should hold, and arguments that violate the schema
+  could reasonably be refused by the runtime.
+observed: >
+  Passing an object rejects with UnknownError "Failed to parse input arguments" in both builds;
+  passing a JSON string works and the tool's execute receives the parsed object. A string that is
+  not JSON rejects with the same UnknownError. A JSON string whose values violate the schema
+  (a number where a string is declared) is handed to the tool unchanged.
+reliable_discriminator: >
+  a TypeError starting with "Failed to execute 'executeTool'" would mark a runtime that has moved
+  to the object form (a WebIDL conversion error, raised before the tool runs); none was seen
+impact:
+  - a caller that follows the newest specification text fails on every current Chrome
+  - the only argument validation a developer gets is the one their tooling does client-side
+workaround: >
+  Send the JSON string; treat a binding TypeError on it as the signal to retry once with the
+  object; validate arguments against the schema before calling, because the runtime will not.
+evidence:
+  fixture: tools/probe-platform.mjs (executeWithString, executeWithObject, executeWithSchemaViolation)
+  automated_test: test/execute-page.test.js
+  chrome_e2e: true
+  decision: D-060
+spec_status:
+  documented: contradicted by the current specification text, matched by the vendor docs
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: superseded
+superseded_by: WMP-0046
+superseded_note: >
+  True for Chrome 152 and 153. Measured 2026-10-18, Chrome 155 accepts only an object and refuses a JSON string with a TypeError; the absence of argument validation still holds (WMP-0046).

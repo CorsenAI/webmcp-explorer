@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebMCP Explorer — demo page</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0;
+    padding: 40px 32px 64px;
+    font: 15px/1.6 system-ui, -apple-system, sans-serif;
+    max-width: 760px;
+  }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 28px 0 6px; }
+  p { margin: 0 0 10px; }
+  .note {
+    border-left: 3px solid #d08b1e;
+    background: color-mix(in srgb, #d08b1e 10%, transparent);
+    padding: 10px 14px;
+    margin: 16px 0 24px;
+    border-radius: 0 6px 6px 0;
+  }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
+  #state { font-weight: 600; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 8px 0 0; }
+  dt { font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
+  dd { margin: 0; }
+</style>
+</head>
+<body>
+  <h1>Demo page</h1>
+  <p id="state">…</p>
+
+  <div class="note">
+    <p><strong>This page ships inside WebMCP Explorer.</strong> It exists so you can use the
+    whole extension even on a browser where WebMCP is not enabled.</p>
+    <p id="impl">…</p>
+    <p>Explorer knows the difference and says so on every screen. On a real site it only ever
+    observes what the browser gives it.</p>
+  </div>
+
+  <h2>Tools on this page</h2>
+  <p id="tools"></p>
+  <dl>
+    <dt>search_products</dt><dd>A rich schema: text, an enum, a bounded number, a boolean.</dd>
+    <dt>add_to_cart</dt><dd>Fails when the product is out of stock — try <code>p2</code>.</dd>
+    <dt>estimate_delivery</dt><dd>Takes about a second, so timings are worth looking at.</dd>
+    <dt>clear_cart</dt><dd>Takes no arguments and returns nothing at all.</dd>
+    <dt>apply_promo_code</dt><dd>Appears four seconds after load. Watch the Timeline.</dd>
+  </dl>
+
+  <h2>Cart</h2>
+  <p id="cart">empty</p>
+
+  <h2>What to try</h2>
+  <p>Open the Tools panel and run <code>search_products</code> from the generated form. Then
+  run <code>add_to_cart</code> with <code>p2</code> and see how a failure is reported. Open the
+  Timeline and wait a moment for <code>apply_promo_code</code> to appear.</p>
+
+  <script type="module" src="shop.js"></script>
+</body>
+</html>

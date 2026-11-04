@@ -1,0 +1,38 @@
+id: WMP-0035
+title: An aborted signal settles executeTool() with an AbortError at once; Chrome 153 hands the signal to the tool, Chrome 152 does not
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82 and 153.0.8010.36 (linux64)
+  mode: native
+expected: >
+  The specification formalised AbortSignal integration on 2026-08-19 (#247) and asks that
+  in-flight executions survive unregistration (#248). executeTool(tool, json, { signal }) should
+  reject when the signal aborts, and the tool's execute(input, { signal }) should be able to stop.
+observed: >
+  In both builds, aborting the signal rejects the caller's promise within a millisecond with an
+  AbortError, whether the tool listens to its own signal or ignores it entirely; a signal that is
+  already aborted rejects immediately (message "Execution cancelled." in 152, "signal is aborted
+  without reason" in 153). In Chrome 153 the tool's execute receives an options object carrying a
+  signal; in Chrome 152 it receives no options at all. In neither build had the tool's own abort
+  listener fired by the time the caller's promise settled, so the tool's work continues after the
+  caller has moved on.
+reliable_discriminator: >
+  inside execute, `options && options.signal` is defined on 153 and undefined on 152
+impact:
+  - a caller can stop waiting for any tool, on any current Chrome, without the tool's cooperation
+  - the page's tool may still finish its side effects after the caller was told it was cancelled
+  - a tool written for 152 that reads options.signal without a guard throws
+workaround: >
+  Pass a signal on every call and settle the call as cancelled on abort; tell the user that the
+  page's tool may still complete; write tools that guard `options && options.signal`.
+evidence:
+  fixture: tools/probe-platform.mjs (abortListening, abortDeaf, abortBeforeCall), fixtures/slow.html (cancellable_tool)
+  automated_test: test/execute-page.test.js, test/execute-cancel.test.js, tools/e2e/inflight.mjs (C2)
+  chrome_e2e: true
+  decision: D-060
+spec_status:
+  documented: partially (the signal is specified; the timing of the tool-side abort is not)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

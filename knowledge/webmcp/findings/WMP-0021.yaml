@@ -1,0 +1,26 @@
+id: WMP-0021
+title: A test profile must be created by Chrome itself, or IndexedDB cannot open
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: n/a (tooling)
+expected: writing Local State and Preferences into an empty directory yields a usable profile
+observed: >
+  Such a profile made the extension's IndexedDB fail with "Internal error opening database":
+  Chrome had never built its storage layout. Letting Chrome start once on the empty directory
+  (headless, --dump-dom about:blank), then editing Local State to enable the WebMCP flag, gives
+  a profile that works.
+impact:
+  - flaky "storage broken" failures in automation that have nothing to do with the code
+workaround: two-phase launch — create the profile with Chrome, then enable the flag, then start for real
+evidence:
+  automated_test: tools/launch-test-chrome.mjs
+  chrome_e2e: true
+  decision: D-028
+  commit: 282cf61
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

@@ -1,0 +1,27 @@
+id: WMP-0015
+title: A page's Content-Security-Policy does not apply to extension MAIN-world injections
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+  page_csp: "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'"
+expected: a strict script-src could block scripts an extension runs in the page's main world
+observed: >
+  On a page whose policy blocked its own inline script (verified: the inline marker did not
+  run), discovery, tool execution and the live observer — all injected with
+  chrome.scripting.executeScript in the MAIN world — worked unchanged.
+impact:
+  - an inspector works on hardened sites without asking them to relax their policy
+  - conversely, a page cannot use CSP to keep an extension's injected code out
+workaround: n/a
+evidence:
+  fixture: fixtures/csp.html, fixtures/csp-tools.js (served under /csp/ by fixtures/serve.mjs)
+  automated_test: tools/e2e/csp.mjs
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: true (extension scripts are exempt from page CSP)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

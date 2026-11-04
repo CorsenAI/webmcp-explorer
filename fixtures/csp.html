@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strict CSP page</title>
+<link rel="stylesheet" href="/csp.css">
+</head>
+<body>
+<h1>Strict CSP</h1>
+<p>Served under <code>/csp/</code> with <code>script-src 'self'</code>: no inline script may run
+here, so the tools are registered by an external module. The inline script below must be
+blocked, which is how a test knows the policy was really applied.</p>
+<p id="state">registering…</p>
+<p id="inline">inline script did not run</p>
+<script>document.getElementById('inline').textContent = 'inline script RAN — CSP not applied'; window.__inlineRan = true;</script>
+<script type="module" src="/csp-tools.js"></script>
+</body>
+</html>

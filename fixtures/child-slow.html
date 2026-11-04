@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Slow child</title>
+<style>body{font:13px/1.5 system-ui,sans-serif;margin:8px}</style></head>
+<body>
+<p id="state">slow child</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+if (!mc) {
+  state.textContent = 'WebMCP unavailable in this frame';
+} else {
+  mc.registerTool({
+    name: 'slow_child_tool',
+    description: 'Inside a same-origin iframe: waits for the given milliseconds, then answers.',
+    inputSchema: { type: 'object', properties: { ms: { type: 'integer', minimum: 0, default: 3000 } }, required: ['ms'] },
+    annotations: { readOnlyHint: true },
+    execute: async (input) => {
+      const ms = Number(input?.ms ?? 3000);
+      await new Promise((resolve) => setTimeout(resolve, ms));
+      return JSON.stringify({ child: 'slow', waited: ms });
+    },
+  });
+  state.textContent = 'slow_child_tool registered';
+}
+</script>
+</body>
+</html>

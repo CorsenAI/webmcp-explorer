@@ -1,0 +1,6 @@
+# Fixture shop
+> A small shop used by WebMCP Explorer's tests.
+
+## Tools
+- search_catalogue: search the product catalogue
+- get_cart: return the current shopping cart

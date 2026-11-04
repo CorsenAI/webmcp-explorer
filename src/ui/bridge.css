@@ -1,0 +1,13 @@
+#bridge-approvals { flex: none; max-height: 52vh; overflow: auto; padding: 0 10px; border-bottom: 1px solid var(--border); }
+#bridge-approvals[hidden] { display: none; }
+.bridge-approval { border-color: var(--warn); padding: 10px; overflow-wrap: anywhere; }
+.bridge-exact { font-family: var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; unicode-bidi: isolate; }
+.bridge-arguments { max-height: 140px; overflow: auto; text-align: left; unicode-bidi: isolate; }
+.bridge-field { display: grid; gap: 4px; margin: 8px 0; min-width: 0; }
+.bridge-field input, .bridge-field select { width: 100%; min-width: 0; }
+.bridge-check { display: flex; align-items: start; gap: 8px; }
+.bridge-check input { flex: none; }
+.bridge-shared { margin: 6px 0; overflow-wrap: anywhere; }
+.bridge-shared span { min-width: 0; flex: 1 1 140px; }
+
+#bridge-settings button, #bridge-approvals button { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }

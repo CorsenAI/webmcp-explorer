@@ -1,0 +1,24 @@
+id: WMP-0020
+title: Stable Chrome 152 ignores --load-extension; Chrome for Testing is required for automation
+date_observed: 2026-09-04
+environment:
+  browser: Chrome (stable) 152 vs Chrome for Testing 152.0.7977.82
+  mode: n/a (tooling)
+expected: --load-extension loads an unpacked extension in any Chrome
+observed: >
+  Stable Chrome 152 started without the extension when given --load-extension; Chrome for
+  Testing honoured it. Automated end-to-end runs therefore need the Chrome for Testing build,
+  cached outside the project and treated as a dependency.
+impact:
+  - CI and local automation must fetch a specific Chrome for Testing build
+workaround: cache Chrome for Testing under %LOCALAPPDATA% and resolve it at launch (tools/chrome-cache.mjs)
+evidence:
+  automated_test: tools/launch-test-chrome.mjs, tools/get-test-chrome.mjs
+  chrome_e2e: true
+  decision: D-034
+  commit: 282cf61
+spec_status:
+  documented: true (Chrome removed the switch for branded builds)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

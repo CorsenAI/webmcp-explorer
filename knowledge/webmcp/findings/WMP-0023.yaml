@@ -1,0 +1,32 @@
+id: WMP-0023
+title: http://localhost and http://127.0.0.1 are secure contexts; featurePolicy exposes "tools"; originAgentCluster is undefined
+date_observed: 2026-09-04
+environment:
+  browser: Chrome
+  version: 152.0.7977.66
+  mode: native
+expected: >
+  The API is exposed in secure contexts only, so plain-HTTP fixtures might be rejected;
+  document.originAgentCluster should be a boolean.
+observed: >
+  isSecureContext was true on http://localhost, so loopback HTTP fixtures are valid (a LAN IP
+  over plain HTTP would not be). "tools" appeared in document.featurePolicy.features() and
+  allowsFeature('tools') was true on the top level, so policy detection is observable.
+  document.originAgentCluster was undefined, not a boolean.
+impact:
+  - test fixtures may stay on loopback HTTP
+  - a diagnosis must treat originAgentCluster undefined as "unknown", blocking only on false
+workaround: neutralise undefined to null in the probe; block only on an explicit false
+evidence:
+  fixture: fixtures/probe.html
+  automated_test: test/env.diagnose.test.js
+  chrome_e2e: true
+  decision: D-017
+  commit: b65ebb6
+spec_status:
+  documented: partially
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed
+note_2026_10_18: >
+  The originAgentCluster clause came from reading document.originAgentCluster, which is undefined everywhere; the property lives on window and is true on secure loopback (WMP-0053). The secure-context and featurePolicy clauses hold on 153, 155 and 157.

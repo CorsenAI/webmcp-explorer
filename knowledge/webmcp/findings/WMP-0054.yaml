@@ -1,0 +1,31 @@
+id: WMP-0054
+title: A declarative form added after load is listed by getTools() on Chrome 155 and 157 with an object schema built from its named controls, although the declarative API left the specification on 2026-10-08
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new; 153.0.8010.36 lists it with a string schema
+  mode: native
+expected: >
+  Spec PR #338 (2026-10-08) removed the declarative API from the specification for now; it lives
+  in a separate explainer. Chrome 152 exposed declarative forms through getTools() (WMP-0029).
+observed: >
+  A form with toolname, tooldescription and one required named input carrying
+  toolparamdescription, appended after load, appears in getTools() within 300 ms on 153, 155 and
+  157, with inputSchema { type object, properties { q { type string, description } }, required
+  [q] } (a string on 153, an object on 155 and 157), an empty title and no annotations.
+reliable_discriminator: >
+  getTools() lists the form's toolname after the element is attached
+impact:
+  - the declarative label and execution path stay valid on shipping builds despite the spec change
+  - annotations cannot be declared on a form on any measured build (spec issue #163 remains open)
+workaround: None.
+evidence:
+  fixture: fixtures/basic.html (form created by the probe), fixtures/declarative.html
+  automated_test: tools/probe-platform.mjs (declarative); tools/e2e/declarative.mjs
+  chrome_e2e: true
+spec_status:
+  documented: >
+    removed from the specification on 2026-10-08 (#338), kept in declarative-api-explainer.md
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

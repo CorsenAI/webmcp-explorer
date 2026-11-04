@@ -1,0 +1,13 @@
+.fc-editor:not([hidden]) { display: grid; gap: 8px; padding: 10px 0; }
+.fc-editor [hidden] { display: none !important; }
+.fc-editor .field-label:not([hidden]) { display: grid; gap: 5px; }
+.fc-editor input, .fc-editor select, .fc-editor textarea { width: 100%; min-width: 0; max-width: 100%; box-sizing: border-box; }
+.fc-editor textarea { resize: vertical; }
+.fc-editor .field-desc, .fc-editor .field-note { margin: 0; overflow-wrap: anywhere; }
+.fc-picker { padding: 8px; border: 1px solid var(--border); border-radius: var(--radius); }
+.fc-picker > summary, .fc-verdict > summary { cursor: pointer; }
+.fc-picker .fc-pick { white-space: normal; overflow-wrap: anywhere; text-align: left; max-width: 100%; }
+.fc-rules { display: grid; gap: 6px; }
+.fc-rule { margin: 0; }
+.fc-verdict { margin-top: 6px; color: var(--text); }
+.sc-bar select { min-width: 0; max-width: 100%; }

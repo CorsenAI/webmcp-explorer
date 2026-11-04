@@ -1,0 +1,30 @@
+id: WMP-0052
+title: A failing tool still reaches the caller as UnknownError with the one fixed sentence on Chrome 155 and 157; specific DOMException types (spec #339) are not implemented yet
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new; 153.0.8010.36 identical
+  mode: native
+expected: >
+  The specification replaced UnknownError with specific DOMException types on 2026-10-08 (#339).
+observed: >
+  A tool whose execute throws new Error('boom') and a tool that rejects with a NotAllowedError
+  DOMException both settle executeTool() with DOMException UnknownError "Tool was executed but
+  the invocation failed. For example, the script function threw an error" on 153, 155 and 157.
+  A tool that resolves undefined returns the string "undefined".
+reliable_discriminator: >
+  error.name === 'UnknownError' with that sentence, whatever the tool threw
+impact:
+  - the tool's own error name and message are still lost on every shipping build (L-22 holds)
+  - the recognition of this sentence in the result view stays valid; a later build may change it
+workaround: >
+  Keep recognising the sentence and saying it is Chrome's; re-run the probe on each new build.
+evidence:
+  fixture: fixtures/basic.html
+  automated_test: tools/probe-platform.mjs (toolThrowsError, toolDomExceptionError, undefinedResult)
+  chrome_e2e: true
+spec_status:
+  documented: the text changed on 2026-10-08 (#339); no measured build follows it yet
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

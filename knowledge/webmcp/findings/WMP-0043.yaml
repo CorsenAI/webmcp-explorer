@@ -1,0 +1,54 @@
+id: WMP-0043
+title: registerTool() refuses a descriptor by rejecting the promise it returns, never by throwing — every refusal measured on Chrome 153 (empty description, missing member, non-callable execute, duplicate name, aborted signal) arrives as an asynchronous rejection
+date_observed: 2026-09-11
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64), --headless=new, WebMCP testing flag
+  mode: native
+expected: >
+  A WebIDL binding refuses a dictionary member of the wrong type by throwing a TypeError at the
+  call; the explainer (2026-09-10) types registerTool() as returning Promise<undefined> and says
+  nothing about where a refusal surfaces.
+observed: >
+  Fourteen calls, one per variant (tools/probe-registration.mjs, output in
+  docs/research/2026-09-11-registration-fates.md): every call returns a promise, none throws.
+  Resolved with undefined and listed by getTools(): a sound descriptor, a description of one
+  space, a descriptor without inputSchema. Rejected and never listed: an empty description
+  (InvalidStateError "Description is required"); a missing description, name or execute
+  (TypeError "Failed to execute 'registerTool' on 'ModelContext': Failed to read the '<member>'
+  property from 'ModelContextTool': Required member is undefined."); an execute that is not a
+  function (TypeError "... The given value is not a function."); a string instead of a
+  dictionary (TypeError "The provided value is not of type 'ModelContextTool'."); a second
+  registration under an exposed name (InvalidStateError "Duplicate tool name"; the first stays);
+  an options.signal already aborted, or aborted in the same synchronous run right after the call
+  (AbortError "signal is aborted without reason"). A signal aborted once the promise has settled
+  resolves normally: the tool was listed, getTools() drops it at once, and toolchange fires. The
+  promise settles within a millisecond; getTools() itself returns a promise; the prototype
+  exposes ontoolchange, executeTool, getTools, registerTool and no unregisterTool. A page that
+  does not await the promise sees only "Uncaught (in promise)" in the console, as an
+  unhandledrejection event naming that promise.
+reliable_discriminator: >
+  await the promise registerTool() returns; the error's name and message say which refusal it was
+impact:
+  - a try/catch around registerTool() catches nothing on Chrome 153; only a rejection handler or an unhandledrejection listener sees a refusal
+  - an inspector that wraps registerTool() must trace the promise (a WeakMap keyed by promise, an unhandledrejection listener) rather than the call; a rejection the page handles itself is invisible to it and must be reported as unobserved
+  - the empty-description case of WMP-0039 is a rejection, not a silent drop — the earlier probe never awaited the promise
+  - abort a registration's signal only after the promise has settled; an immediate abort is a refusal, not a removal
+workaround: >
+  Always attach a rejection handler to registerTool()'s promise and log what it says; treat
+  description, name and execute as required in your own validation. Release an AbortSignal only
+  once the registration has settled.
+evidence:
+  fixture: fixtures/sloppy.html?missing=1
+  automated_test: tools/e2e/missing-registration.mjs; tools/probe-registration.mjs
+  chrome_e2e: true
+  decision: D-074
+spec_status:
+  documented: >
+    partially — the specification (index.bs, read 2026-09-11) returns Promise<undefined> and
+    lists the rejection conditions: name or description empty, name already registered, name
+    too long or invalid, inputSchema not serialisable, signal already aborted. The error types
+    and messages, the same-run abort, and the absence of any synchronous throw are Chrome's.
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: observed

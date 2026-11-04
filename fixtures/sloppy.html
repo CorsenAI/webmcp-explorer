@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Sloppy WebMCP contracts</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Sloppy contracts</h1>
+<p>Tools whose declared contract has the gaps a developer wants told about before a model
+tells them: a description that is only a label, two tools that share one, a required argument nobody declared,
+a name a model API will not take as it is. One tool is complete, as the control.</p>
+<p id="state">registering…</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+
+if (!mc) {
+  state.textContent = 'WebMCP unavailable';
+} else {
+  // The control: nothing to flag.
+  mc.registerTool({
+    name: 'search_catalogue',
+    description: 'Search the product catalogue by keyword and return matching products.',
+    inputSchema: { type: 'object', properties: { query: { type: 'string', description: 'Words to search for' } }, required: ['query'] },
+    annotations: { readOnlyHint: true },
+    execute: async () => JSON.stringify({ products: [] }),
+  });
+
+  // A description that is only a label; a required argument that is not declared; no
+  // annotation. (A truly empty description cannot be exercised here: Chrome 153 rejects the
+  // registration promise — InvalidStateError "Description is required", WMP-0039 — and never
+  // lists the tool. ?missing=1 below exercises exactly that.)
+  mc.registerTool({
+    name: 'do_thing',
+    description: 'Do it.',
+    inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id', 'store'] },
+    execute: async () => 'done',
+  });
+
+  // Two tools a model could confuse: different names, the same words.
+  for (const name of ['find_products', 'lookup_products']) {
+    mc.registerTool({
+      name,
+      description: 'Find products in the catalogue.',
+      inputSchema: { type: 'object', properties: { q: { type: 'string', description: 'Query' } } },
+      annotations: { readOnlyHint: true },
+      execute: async () => '[]',
+    });
+  }
+
+  // A name with a dot, which model APIs reject; a schema that is not an object.
+  mc.registerTool({
+    name: 'cart.total',
+    description: 'Return the total of the shopping cart, in the shop currency.',
+    inputSchema: { type: 'string' },
+    annotations: { readOnlyHint: true },
+    execute: async () => '0.00',
+  });
+
+  state.textContent = '5 tools registered';
+
+  // ?missing=1 — four registerTool() calls that never reach getTools(), one per fate an
+  // inspector must tell apart (measured on Chrome 153, WMP-0043):
+  //  - ghost_empty:    an empty description; the registration promise rejects with
+  //                    InvalidStateError "Description is required" and nobody handles it (WMP-0039);
+  //  - ghost_removed:  registered, then its AbortController is released once the registration
+  //                    has settled — a normal removal;
+  //  - ghost_refused:  a descriptor the binding refuses (execute is not a function): the promise
+  //                    rejects with a TypeError, unhandled. A runtime that threw synchronously
+  //                    instead would be reported as such;
+  //  - ghost_handled:  a refused descriptor whose rejection the page handles itself — the one
+  //                    fate Instrumentation Mode cannot see, and must say it cannot.
+  if (new URLSearchParams(location.search).get('missing') === '1') {
+    mc.registerTool({
+      name: 'ghost_empty',
+      description: '',
+      inputSchema: { type: 'object', properties: {} },
+      execute: async () => 'never listed',
+    });
+    const gone = new AbortController();
+    mc.registerTool({
+      name: 'ghost_removed',
+      description: 'Registered, then removed once the registration settled.',
+      inputSchema: { type: 'object', properties: {} },
+      execute: async () => 'removed',
+    }, { signal: gone.signal }).then(() => gone.abort());
+    try {
+      mc.registerTool({
+        name: 'ghost_refused',
+        description: 'A descriptor the binding refuses.',
+        inputSchema: { type: 'object', properties: {} },
+        execute: 'not a function',
+      });
+    } catch (error) {
+      state.textContent += ` — ghost_refused threw: ${error.name}`;
+    }
+    Promise.resolve(mc.registerTool({
+      name: 'ghost_handled',
+      description: 'A descriptor the binding refuses, whose rejection the page handles.',
+      inputSchema: { type: 'object', properties: {} },
+    })).catch((error) => { state.textContent += ` — ghost_handled: ${error.name} handled by the page`; });
+  }
+}
+</script>
+</body>
+</html>

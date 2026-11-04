@@ -1,0 +1,46 @@
+id: WMP-0042
+title: chrome://extensions site access for optional host grants — the master switch revokes every site at once, per-site switches re-grant, and a broad request switches the page to the "choose when" selector
+date_observed: 2026-09-11
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64), production manifest, extension loaded from the command line
+  mode: native
+expected: >
+  chrome://extensions lists each granted site with its own switch, and turning one off revokes
+  that site alone, the way Explorer's Settings screen does with chrome.permissions.remove().
+observed: >
+  The detail page renders the granted sites under "Automatically allow access on the following
+  sites" (extensions-host-permissions-toggle-list). While that master switch is on, the per-site
+  switches are shown disabled. Turning the master off revokes every site at once
+  (permissions.getAll() empty, permissions.onRemoved fired); the per-site switches then become
+  enabled and unchecked, and clicking one grants that site back. "Keep B, drop A" is therefore
+  master off, then B on. Once the extension has requested the broad https://*/* + http://*/*
+  patterns, even if they were revoked since, the page shows extensions-runtime-host-permissions
+  instead — a "Choose when this extension can read and change your site data" selector with
+  "Allow on specific sites" / "Allow on all sites" — and the toggle list is gone. A synthetic
+  element.click() does not flip a cr-toggle; a trusted click (CDP Input.dispatchMouseEvent at
+  its position) does. After a restart of an extension loaded from the command line, a site that
+  had been withheld through this page was granted again (Preferences still listed it under
+  granted_permissions and active_permissions); whether a Store install behaves the same is not
+  measured here.
+reliable_discriminator: >
+  presence of extensions-host-permissions-toggle-list versus extensions-runtime-host-permissions
+  in the detail view's shadow DOM; permissions.getAll() after each switch
+impact:
+  - revoking one site from chrome://extensions is a two-step gesture for the user, and it revokes the others on the way
+  - tests that drive this page must use trusted input, wait for the toggle list, and expect the selector variant after any broad request
+  - the restart persistence of a chrome://extensions revocation cannot be settled with a command-line-loaded extension
+workaround: >
+  Prefer the extension's own Settings screen for per-site revocation (permissions.remove
+  touches one origin); in the journeys, drive the master switch then the site switches, and
+  read the grants back after each step.
+evidence:
+  fixture: tools/production/launch-production-chrome.mjs
+  automated_test: tools/production/journeys.mjs (J10, restart)
+  chrome_e2e: true
+  decision: D-073
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer]
+status: observed

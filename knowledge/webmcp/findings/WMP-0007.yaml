@@ -1,0 +1,32 @@
+id: WMP-0007
+title: WebMCP is unusable on chrome-extension:// pages; getTools() rejects asynchronously
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native (enable-webmcp-testing)
+expected: an extension page with document.modelContext present can use it like any page
+observed: >
+  document.modelContext exists on the extension page, but every call fails with
+  "SecurityError: document.modelContext cannot be used when document.domain is enabled".
+  getTools() rejects a promise; it does not throw synchronously, so a try/catch around the
+  bare call sees nothing and concludes the native API works.
+reliable_discriminator: await getTools() rejects with the SecurityError above
+impact:
+  - a bundled demo page cannot rely on the native API
+  - availability detection must be asynchronous; testing presence is not enough
+workaround: >
+  Detect availability by awaiting a call. For an extension's own demo page, run a polyfill and
+  label it compatibility mode, never "native".
+evidence:
+  fixture: src/demo/ (bundled demo page)
+  automated_test: tools/e2e/demo.mjs
+  chrome_e2e: true
+  decision: D-049
+  commit: 325fa1a
+  source: docs/research/2026-09-04-webmcp-api-facts.md
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen Context]
+status: confirmed

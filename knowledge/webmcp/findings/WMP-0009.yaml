@@ -1,0 +1,33 @@
+id: WMP-0009
+title: An MV3 service worker dies between t+35 s and t+40 s under a pending fetch; a 20 s API pulse keeps it alive
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: n/a (extension platform)
+expected: a pending fetch() keeps the worker alive until it resolves
+observed: >
+  With a fake provider answering after 50 s and no messages sent to the worker meanwhile, the
+  worker was alive at t+35 s and dead at t+40 s with the fetch still in flight. Only extension
+  API activity resets the 30 s idle timer. A chrome.runtime.getPlatformInfo() call every 20 s,
+  held only while an operation runs, let a 45 s call complete. The first measurement was
+  wrong because the polling used to observe the worker was itself resetting the timer.
+impact:
+  - any model call longer than ~30 s silently loses the worker and everything in its memory
+  - a run that was already billed disappears from the UI
+workaround: >
+  Hold a counted keep-alive pulse only for the duration of an operation; persist the
+  operation state in chrome.storage.session after every meaningful transition; on restart mark
+  what was in flight as interrupted rather than resuming it.
+evidence:
+  fixture: fixtures/mock-llm.mjs (?mode=slow&ms=N)
+  automated_test: tools/e2e/worker-lifetime.mjs
+  chrome_e2e: true
+  decision: D-050
+  commit: e6558f9
+  source: docs/research/2026-09-04-live-environment-observations.md
+spec_status:
+  documented: true (Chrome docs describe the idle timeout)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, any MV3 extension calling a model]
+status: confirmed

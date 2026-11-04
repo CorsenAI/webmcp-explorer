@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebMCP Explorer</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <link rel="stylesheet" href="help.css">
+</head>
+<body>
+  <header id="statusbar">
+    <div id="origin-row">
+      <span id="origin" title="The page Explorer is inspecting">—</span>
+      <button id="help" title="Open the guide and explanations for this screen">Help</button>
+      <button id="reset" class="icon-button" aria-label="Stop and reset this panel"></button>
+      <button id="refresh" class="icon-button" title="Run discovery again" aria-label="Run discovery again">↻</button>
+    </div>
+    <div id="facts" role="status" aria-live="polite"></div>
+  </header>
+  <div id="bridge-approvals" hidden aria-live="polite"></div>
+  <div id="shell">
+    <nav id="rail" aria-label="Sections"></nav>
+    <main id="view" tabindex="-1"></main>
+  </div>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+id: WMP-0005
+title: Cross-origin tools never surface to the top document on HTTP loopback; fromOrigins ['*'] throws
+date_observed: 2026-09-04
+environment:
+  browser: Chrome
+  version: 152.0.7977.66
+  mode: native
+  network: http://localhost:8777 embedding http://127.0.0.1:8788
+expected: >
+  With <iframe allow="tools"> and registerTool({ exposedTo: [parentOrigin] }), the parent's
+  getTools({ fromOrigins: [childOrigin] }) lists the child's tools.
+observed: >
+  No variant surfaced the child's tool: no option, fromOrigins with and without trailing
+  slash all returned only the parent's tools. fromOrigins: ['*'] threw
+  "Only secure origins are allowed in the fromOrigins list", which proves the list is
+  validated and the call well-formed.
+impact:
+  - an inspector that relies on the native cross-origin path sees nothing from other origins
+  - a "discovery complete" badge would be a lie on any page embedding another origin
+workaround: >
+  Inject into the child frame itself (needs that origin granted) and present discovery as
+  partial when an origin could not be entered. Never depend on the native cross-origin path.
+open_question: >
+  http://127.0.0.1 is a potentially trustworthy origin but may fail the internal
+  "secure origin" check of the cross-origin path. Re-verify over HTTPS with a local
+  certificate before calling the mechanism broken.
+evidence:
+  fixture: fixtures/iframes.html, fixtures/child-cross.html
+  automated_test: test/frames.test.js
+  chrome_e2e: true
+  decision: D-018
+  commit: b65ebb6
+spec_status:
+  documented: true
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: observed

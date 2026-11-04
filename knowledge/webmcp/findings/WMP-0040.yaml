@@ -1,0 +1,41 @@
+id: WMP-0040
+title: A toolbar click that opens the side panel through openPanelOnActionClick grants no activeTab; a click handled by action.onClicked does
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64), headful under Xvfb, production manifest, fresh profile
+  mode: native
+expected: >
+  The activeTab documentation lists "executing an action" among the gestures that grant the
+  temporary host access, so clicking the extension's toolbar icon should reveal the active tab's
+  URL and allow scripting on it, whatever the click then opens.
+observed: >
+  With chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }) a real click on the
+  pinned icon opened the side panel and granted nothing: chrome.tabs.query() returned the tab
+  with url and title null, and chrome.scripting.executeScript() was refused with "Cannot access
+  contents of the page. Extension manifest must request permission to access the respective
+  host." With the behaviour left at its default and a chrome.action.onClicked listener that
+  calls chrome.sidePanel.open({ tabId }), the same click opens the panel AND grants activeTab:
+  the URL is visible and executeScript() runs. Chrome's position since 2023 (crbug.com/1453437)
+  is that opening the side panel is not a strong enough signal of intent to grant activeTab.
+  A keyboard command (_execute_action) grants it like the click.
+reliable_discriminator: >
+  after the click, chrome.tabs.query({ active: true, currentWindow: true })[0].url is null
+  (no grant) or the page address (grant)
+impact:
+  - an onboarding built on "click the icon, then allow this site" dead-ends when the panel opens on action click, because the panel cannot name the site it would ask for
+  - the pre-granted test build cannot show this; only the shipping manifest in a fresh profile can
+workaround: >
+  Open the side panel from action.onClicked (a user action, so sidePanel.open() is allowed)
+  instead of setPanelBehavior; offer a keyboard command as a second way in.
+evidence:
+  fixture: tools/production/launch-production-chrome.mjs (src/ as shipped, icon pinned)
+  automated_test: tools/production/journeys.mjs (J2d, J3)
+  chrome_e2e: true
+  decision: D-071
+  commit: 1f253a2
+spec_status:
+  documented: partially (activeTab docs name the action click; the side-panel exception is only in the issue tracker)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

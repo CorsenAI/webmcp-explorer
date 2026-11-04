@@ -1,0 +1,8 @@
+{
+  "name": "Fixture shop",
+  "description": "A discovery manifest in the community convention; not part of the W3C CG draft.",
+  "tools": [
+    { "name": "search_catalogue", "description": "Search the product catalogue." },
+    { "name": "get_cart", "description": "Return the current shopping cart." }
+  ]
+}

@@ -1,0 +1,36 @@
+id: WMP-0037
+title: Chrome 153 still returns inputSchema as a string and still drops consequentialHint, three weeks after the specification changed both
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64), the Stable channel build of that day
+  mode: native
+expected: >
+  The specification moved RegisteredTool#inputSchema from DOMString to object on 2026-08-14
+  (#241) and added consequentialHint to ToolAnnotations on 2026-09-03 (#217). A Stable build
+  released after those dates might have followed.
+observed: >
+  getTools() returns inputSchema as a JSON string (WMP-0003 holds), and a tool registered with
+  { readOnlyHint: true, consequentialHint: true, untrustedContentHint: false } comes back with
+  { readOnlyHint: true, untrustedContentHint: false } (WMP-0004 holds). The same probe on
+  152.0.7977.82 gives identical results.
+reliable_discriminator: typeof tool.inputSchema; Object.keys(tool.annotations)
+impact:
+  - the specification text and the shipping browser disagree; code must follow the browser it runs in and accept both forms
+  - a badge for consequentialHint would still never show in 153
+workaround: >
+  Parse the schema at one point accepting string or object (D-025); render the annotations that
+  are present (D-009); re-run tools/probe-platform.mjs on each new Chrome build.
+evidence:
+  fixture: tools/probe-platform.mjs (inputSchemaType, annotations)
+  automated_test: test/schema-parse.test.js
+  chrome_e2e: true
+  decision: D-060
+spec_status:
+  documented: contradicted by the current specification text
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: superseded
+superseded_by: WMP-0046
+superseded_note: >
+  True for Chrome 153. Chrome 155 returns an object schema and keeps consequentialHint (WMP-0046, WMP-0047), measured 2026-10-18.

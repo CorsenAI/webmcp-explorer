@@ -1,0 +1,27 @@
+id: WMP-0024
+title: 1 000 tools are discovered in about 60 ms and rendered in about 9 ms; growth is linear
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+  machine: developer workstation (Windows 11, RTX 6000 class)
+expected: discovery and rendering might need list virtualisation beyond a few hundred tools
+observed: >
+  Measured against budgets of 300 ms (up to 100 tools) and 2 000 ms (500 and 1 000 tools):
+  n=100 discover 7 ms / render 1 ms; n=500 30 ms / 5 ms; n=1000 60 ms / 6 ms (66 / 9 ms in an
+  earlier run). No quadratic behaviour appeared. Virtualisation was therefore not built.
+impact:
+  - the budgets hold with plain DOM rendering; complexity was avoided on evidence
+workaround: n/a
+evidence:
+  fixture: fixtures/many.html (?n=)
+  automated_test: tools/e2e/perf.mjs
+  chrome_e2e: true
+  decision: D-011, D-026
+  commit: b2d79cb
+spec_status:
+  documented: n/a
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: confirmed

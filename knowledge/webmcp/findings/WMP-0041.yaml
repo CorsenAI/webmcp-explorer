@@ -1,0 +1,32 @@
+id: WMP-0041
+title: Revoking the broad http/https patterns also drops every single-site grant they contain
+date_observed: 2026-09-11
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64), production manifest with optional_host_permissions, real dialogs
+  mode: native
+expected: >
+  chrome.permissions.remove({ origins: ['https://*/*', 'http://*/*'] }) takes back the broad
+  opt-in the user made; sites they had allowed one by one before are separate grants and stay.
+observed: >
+  After granting http://localhost:8777/* and http://127.0.0.1:8788/* through Chrome's dialog,
+  then "Allow on all websites" (the two broad patterns) and its revocation from the extension's
+  own Settings, chrome.permissions.getAll().origins was empty: the single-site grants were gone
+  with the broad ones. A later single-site grant through the dialog worked as before.
+reliable_discriminator: chrome.permissions.getAll().origins before and after the broad removal
+impact:
+  - a Settings screen that offers "Revoke" on the all-sites row silently revokes every site the user allowed individually
+  - a test that grants sites, then exercises the broad opt-in, must re-grant them afterwards
+workaround: >
+  Say it next to the control ("also removes the sites you allowed one by one"), and re-grant
+  per site afterwards in tests.
+evidence:
+  fixture: tools/production/launch-production-chrome.mjs
+  automated_test: tools/production/journeys.mjs (J6 records originsAfterBroadRevoke; the restart step re-grants B)
+  chrome_e2e: true
+  decision: D-073
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer]
+status: observed

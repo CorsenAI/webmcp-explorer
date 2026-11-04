@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Frames</title>
+<style>
+  body { font: 14px/1.6 system-ui, sans-serif; margin: 24px; max-width: 760px; }
+  iframe { display: block; width: 100%; height: 64px; margin: 4px 0 16px; border: 1px solid #ddd; }
+  h2 { font-size: 14px; font-weight: 500; margin: 16px 0 0; }
+  code { background: #f4f4f2; padding: 1px 4px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h1>Frames</h1>
+<p id="state">registering…</p>
+
+<h2>1 — same-origin iframe, <code>allow="tools"</code></h2>
+<iframe src="/child-same.html" allow="tools"></iframe>
+
+<h2>2 — cross-origin iframe, <code>allow="tools"</code></h2>
+<iframe src="http://127.0.0.1:8788/child-cross.html" allow="tools"></iframe>
+
+<h2>3 — cross-origin iframe, no <code>allow</code> (negative control)</h2>
+<iframe src="http://127.0.0.1:8788/child-cross.html"></iframe>
+
+<h2>4 — opaque srcdoc frame</h2>
+<iframe srcdoc="<p style='font:13px system-ui'>opaque frame</p>"></iframe>
+
+<h2>What the child frames reported</h2>
+<pre id="reports" style="background:#f4f4f2;padding:12px;border-radius:8px;white-space:pre-wrap"></pre>
+
+<script type="module">
+import { registerDemoTool, report } from './register.js';
+const ok = registerDemoTool(
+  'top_tool',
+  'A tool registered on the top-level document.',
+  { type: 'object', properties: {} },
+  { top: true },
+);
+report(ok ? 'top_tool registered' : 'WebMCP unavailable');
+
+// Children post their own diagnosis; a cross-origin frame cannot be inspected from here.
+const reports = [];
+window.addEventListener('message', (event) => {
+  if (!event.data || event.data.from !== 'child-cross') return;
+  reports.push({ ...event.data, senderOrigin: event.origin });
+  document.getElementById('reports').textContent = JSON.stringify(reports, null, 1);
+});
+</script>
+</body>
+</html>

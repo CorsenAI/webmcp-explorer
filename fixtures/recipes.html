@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Manual recipe lifecycle fixture</title>
+<style>body{font:15px/1.6 system-ui;margin:24px}iframe{display:block;width:100%;height:100px}pre{white-space:pre-wrap}</style>
+<h1>Manual recipe lifecycle</h1><p>Local counters stand in for already-applied page actions. No network or account action occurs.</p>
+<pre id="events"></pre><div id="children"></div>
+<script type="module">
+const mc=document.modelContext||navigator.modelContext;
+const events=window.__recipeEvents=[];
+const record=(name,input)=>{events.push({name,input,at:Date.now()});document.querySelector('#events').textContent=JSON.stringify(events,null,2);};
+if(mc){
+  mc.registerTool({name:'recipe_first',description:'Records a local counter before waiting, then returns a chosen JSON value.',
+    inputSchema:{type:'object',properties:{delay:{type:'integer',minimum:0},fail:{type:'boolean'},text:{type:'string'}},required:['delay']},
+    execute:async input=>{record('first',input);await new Promise(r=>setTimeout(r,input.delay));
+      if(input.fail)throw Error('Controlled first-step failure');return input.text??'{"id":"fixture-id"}';}});
+  let second;
+  const registerSecond=(strict=false)=>{second=new AbortController();mc.registerTool({name:'recipe_second',description:'Records the dependent local counter and echoes its argument.',
+    inputSchema:{type:'object',properties:{id:{type:'string'},...(strict?{requiredNow:{type:'string'}}:{})},required:strict?['id','requiredNow']:['id']},
+    execute:async input=>{record('second',input);return JSON.stringify(input);}},{signal:second.signal});};
+  registerSecond();
+  window.__recipeChange=()=>{second.abort();registerSecond(true);};
+  window.__recipeRemove=()=>second.abort();
+  if(!new URLSearchParams(location.search).has('child')){
+    for(let i=0;i<2;i++){const f=document.createElement('iframe');f.src='/recipes.html?child=1';document.querySelector('#children').append(f);}
+  }
+}
+</script></html>

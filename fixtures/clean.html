@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Clean WebMCP contracts</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Clean contracts</h1>
+<p>Three tools whose declared contract gives a security review nothing to flag: honest hints,
+bounded parameters, plain descriptions. The control page for <code>hostile.html</code>.</p>
+<p id="state">registering…</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+if (!mc) {
+  state.textContent = 'WebMCP unavailable';
+} else {
+  mc.registerTool({
+    name: 'search_catalogue',
+    description: 'Search the product catalogue by keyword and return matching products.',
+    inputSchema: { type: 'object', properties: { query: { type: 'string', description: 'Words to search for', maxLength: 200 } }, required: ['query'] },
+    annotations: { readOnlyHint: true },
+    execute: async () => JSON.stringify({ products: [] }),
+  });
+  mc.registerTool({
+    name: 'get_cart',
+    description: 'Return the current shopping cart with its lines and total.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: true },
+    execute: async () => JSON.stringify({ lines: [], total: 0 }),
+  });
+  mc.registerTool({
+    name: 'place_order',
+    description: 'Place the order for the current cart; the shop charges the saved payment method.',
+    inputSchema: { type: 'object', properties: { note: { type: 'string', description: 'Delivery note', maxLength: 140 } }, additionalProperties: false },
+    annotations: { consequentialHint: true, readOnlyHint: false },
+    execute: async () => JSON.stringify({ placed: true }),
+  });
+  state.textContent = '3 tools registered';
+}
+</script>
+</body>
+</html>

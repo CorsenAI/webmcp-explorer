@@ -1,0 +1,4942 @@
+{
+  "actionTitle": {
+    "message": "WebMCP Explorer を開く"
+  },
+  "agentSessions_allChats": {
+    "message": "すべての会話"
+  },
+  "agentSessions_allChatsHelp": {
+    "message": "このサイトのすべての会話を表示します。"
+  },
+  "agentSessions_allChatsShort": {
+    "message": "すべて"
+  },
+  "agentSessions_continuing": {
+    "message": "この会話を継続中（$1 件の目標を記録）— モデルはこれまでの発言をすべて参照します。"
+  },
+  "agentSessions_continuingOne": {
+    "message": "この会話を継続中 — モデルはこれまでの発言を参照します。"
+  },
+  "agentSessions_delete": {
+    "message": "削除"
+  },
+  "agentSessions_deleteHelp": {
+    "message": "この端末からこの会話を削除します。"
+  },
+  "agentSessions_empty": {
+    "message": "まだ履歴はありません。完了した実行はこの端末内にのみ保存されます。"
+  },
+  "agentSessions_groupDeleteHelp": {
+    "message": "このグループを削除します。会話自体は履歴に残ります。"
+  },
+  "agentSessions_groupEmpty": {
+    "message": "このグループにはまだ会話がありません。"
+  },
+  "agentSessions_groupNew": {
+    "message": "+ グループ"
+  },
+  "agentSessions_groupNewHelp": {
+    "message": "このサイトの会話を整理するためのグループを作成します。"
+  },
+  "agentSessions_groupNewPrompt": {
+    "message": "新しいグループ名："
+  },
+  "agentSessions_historyHelp": {
+    "message": "このサイトで完了した実行履歴（この端末のみに保存）。開くと再読や再開ができます。"
+  },
+  "agentSessions_historyN": {
+    "message": "会話履歴 ($1)"
+  },
+  "agentSessions_historyOne": {
+    "message": "会話履歴 (1)"
+  },
+  "agentSessions_moveToGroup": {
+    "message": "この会話をグループに移動"
+  },
+  "agentSessions_nTurns": {
+    "message": "$1 件の目標"
+  },
+  "agentSessions_new": {
+    "message": "新規セッション"
+  },
+  "agentSessions_newHelp": {
+    "message": "新しい会話を開始します。以前のセッションは履歴に残ります。"
+  },
+  "agentSessions_noGroup": {
+    "message": "グループなし"
+  },
+  "agentSessions_oneTurn": {
+    "message": "1 件の目標"
+  },
+  "agentSetup_aKeyIsStoredType": {
+    "message": "キーが保存されています — 入力すると置き換えます"
+  },
+  "agentSetup_aRunThatHitsA": {
+    "message": "上限に達した実行は停止し、その旨を表示します。黙って切り捨てられることはありません。"
+  },
+  "agentSetup_addKeyFirst": {
+    "message": "送信前にセッションキーを追加するか、暗号化保管庫を解除してください。"
+  },
+  "agentSetup_allowFirst": {
+    "message": "モデル設定でプロバイダーのアドレスへのアクセスを許可してください。"
+  },
+  "agentSetup_allowRequestsTo1": {
+    "message": "$1 へのリクエストを許可"
+  },
+  "agentSetup_apiKey": {
+    "message": "API キー"
+  },
+  "agentSetup_askTheEndpointWhichModels": {
+    "message": "エンドポイントが提供するモデル一覧を取得します"
+  },
+  "agentSetup_askingTheEndpoint": {
+    "message": "エンドポイントに問い合わせ中…"
+  },
+  "agentSetup_budgets": {
+    "message": "実行上限"
+  },
+  "agentSetup_checkingAccessToTheEndpoint": {
+    "message": "エンドポイントへのアクセスを確認中…"
+  },
+  "agentSetup_chooseHelp": {
+    "message": "AI は任意です。独自の API キーでクラウドプロバイダーを使うか、Ollama や LM Studio などのローカルサーバーに接続できます。ツール・チェック・レシピは AI なしで動作します。"
+  },
+  "agentSetup_chooseProvider": {
+    "message": "AI プロバイダーを選択"
+  },
+  "agentSetup_couldNotListModels": {
+    "message": "モデル一覧を取得できませんでした。"
+  },
+  "agentSetup_deleteTheStoredKey": {
+    "message": "保存されたキーを削除"
+  },
+  "agentSetup_endpoint": {
+    "message": "エンドポイント"
+  },
+  "agentSetup_endpointAllowed": {
+    "message": "エンドポイント許可済み"
+  },
+  "agentSetup_endpointHelp": {
+    "message": "OpenAI チャット API 互換である必要があります。パスは自動的に付与されます。"
+  },
+  "agentSetup_explorerMaySendRequestsTo": {
+    "message": "Explorer はこのアドレスへリクエストを送信できます。"
+  },
+  "agentSetup_forget": {
+    "message": "削除"
+  },
+  "agentSetup_howManyTimesTheModel": {
+    "message": "Explorer が停止するまでにモデルを呼び出せる最大回数"
+  },
+  "agentSetup_howManyToolExecutionsA": {
+    "message": "1 回の実行で行えるツール呼び出しの最大回数"
+  },
+  "agentSetup_keptInMemoryOnlyNever": {
+    "message": "Chromeの再起動、または拡張機能の再読み込み・更新・無効化でセッションキーは消去されます。 暗号化キーを端末に保存し、ブラウザーセッションごとに解除します。変更には再入力が必要です。忘れたパスフレーズは復元できません。"
+  },
+  "agentSetup_keptInMemoryUntilChrome": {
+    "message": "Chromeの再起動、または拡張機能の再読み込み・更新・無効化でセッションキーは消去されます。 暗号化キーを端末に保存し、ブラウザーセッションごとに解除します。変更には再入力が必要です。忘れたパスフレーズは復元できません。"
+  },
+  "agentSetup_keyHeldUntilChromeCloses": {
+    "message": "このプロバイダーのキーを利用できます。"
+  },
+  "agentSetup_listModels": {
+    "message": "接続確認 / モデル一覧を取得"
+  },
+  "agentSetup_model": {
+    "message": "モデル"
+  },
+  "agentSetup_modelHelp": {
+    "message": "ツール呼び出しに対応するチャットモデルを選択してください。"
+  },
+  "agentSetup_modelName": {
+    "message": "モデル ID を選択または入力"
+  },
+  "agentSetup_modelTurns": {
+    "message": "モデルターン数"
+  },
+  "agentSetup_modelsFound": {
+    "message": "接続完了。$1 個のモデルが利用可能です。モデル欄で選択してください。"
+  },
+  "agentSetup_noKey": {
+    "message": "キーなし"
+  },
+  "agentSetup_noModelsFound": {
+    "message": "接続できましたがモデルが見つかりません。ローカルサーバーの場合はモデルをロードするか、モデル ID を直接入力してください。"
+  },
+  "agentSetup_onlyHttpAndHttpsEndpoints": {
+    "message": "http または https のエンドポイントのみ使用できます。"
+  },
+  "agentSetup_onlyThisAddressExplorerAsks": {
+    "message": "このアドレスのみを許可します。Explorer が Chrome に要求し、Chrome があなたに確認します。"
+  },
+  "agentSetup_openSetup": {
+    "message": "AI を設定"
+  },
+  "agentSetup_openSetupHelp": {
+    "message": "AI 設定を開きます：クラウドプロバイダーまたはローカルサーバーを選択します（任意）。"
+  },
+  "agentSetup_optionalForThisEndpoint": {
+    "message": "このエンドポイントでは任意です。"
+  },
+  "agentSetup_pasteYourApiKey": {
+    "message": "API キーを貼り付け"
+  },
+  "agentSetup_provider": {
+    "message": "プロバイダー"
+  },
+  "agentSetup_reviewSettings": {
+    "message": "モデル設定でプロバイダー設定を確認してください。"
+  },
+  "agentSetup_saveKey": {
+    "message": "キーを保存"
+  },
+  "agentSetup_selectModel": {
+    "message": "モデル設定でモデルを選択してください。接続確認で一覧を取得するか、モデル ID を入力します。"
+  },
+  "agentSetup_setAnEndpointFirst": {
+    "message": "先にエンドポイントを設定してください。"
+  },
+  "agentSetup_thatIsNotAValid": {
+    "message": "有効な URL ではありません。"
+  },
+  "agentSetup_thisEndpointIsPlainHttp": {
+    "message": "このエンドポイントはローカル外の平文 http のため、キーやプロンプトが暗号化されません。https または localhost を使用してください。"
+  },
+  "agentSetup_thisProviderNeedsAnEndpoint": {
+    "message": "このプロバイダーにはエンドポイント URL が必要です。"
+  },
+  "agentSetup_thisProviderWillRefuseThe": {
+    "message": "このプロバイダーはキーがないとリクエストを拒否します。"
+  },
+  "agentSetup_toolCalls": {
+    "message": "ツール呼び出し回数"
+  },
+  "agentSetup_usageHelp": {
+    "message": "クラウド利用にはプロバイダーの料金とクォータが適用されます。ローカルモデルには実行中のサーバーが必要です。"
+  },
+  "agentSetup_whichModelServiceToTalk": {
+    "message": "接続するモデルサービスを選択"
+  },
+  "agentTranscript_aTraceHoldsTheGoal": {
+    "message": "トレースには目標、モデルが送信した引数、ページのツールが返した結果が含まれます。共有する前に内容を確認してください。"
+  },
+  "agentTranscript_adaptedItem": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_adaptedRootOnly": {
+    "message": "ルート結合子が 1 つのオブジェクトに統合されました"
+  },
+  "agentTranscript_anotherToolAlreadyUsesThat": {
+    "message": "別のツールがすでにその名前を使用しています"
+  },
+  "agentTranscript_answer": {
+    "message": "回答"
+  },
+  "agentTranscript_answered": {
+    "message": "応答完了"
+  },
+  "agentTranscript_askingTheModel": {
+    "message": "モデルに問い合わせ中…"
+  },
+  "agentTranscript_budgetCalls": {
+    "message": "上限: $1。"
+  },
+  "agentTranscript_budgetSteps": {
+    "message": "上限: $1。上限に達すると実行を停止して通知します。"
+  },
+  "agentTranscript_calls": {
+    "message": "呼び出し"
+  },
+  "agentTranscript_cancelled": {
+    "message": "キャンセル済み"
+  },
+  "agentTranscript_chromeStoppedTheExtensionS": {
+    "message": "実行中に Chrome が拡張機能のバックグラウンドワーカーを停止しました。二重課金や再実行を防ぐため自動再開はしません。これまでの記録は保持されています。"
+  },
+  "agentTranscript_chromeStoppedTheExtensionS2": {
+    "message": "実行中に Chrome がバックグラウンドワーカーを停止しました。"
+  },
+  "agentTranscript_errorHelp": {
+    "message": "このエラーはモデルに伝えられ、モデルが対応できるようになっています。"
+  },
+  "agentTranscript_executionDetails": {
+    "message": "実行の詳細"
+  },
+  "agentTranscript_executionDetailsHelp": {
+    "message": "元の目標、モデルのメッセージ、ツールの引数、正確な結果を確認します。このトレースを開いても何も実行されません。"
+  },
+  "agentTranscript_explorer": {
+    "message": "Explorer"
+  },
+  "agentTranscript_explorerWasNotGrantedIts": {
+    "message": "オリジンの権限が付与されていないため実行できませんでした"
+  },
+  "agentTranscript_exportThisRun": {
+    "message": "この実行履歴をエクスポート"
+  },
+  "agentTranscript_failed": {
+    "message": "失敗"
+  },
+  "agentTranscript_goal": {
+    "message": "目標"
+  },
+  "agentTranscript_interruptedByChrome": {
+    "message": "Chrome により中断"
+  },
+  "agentTranscript_itsInputSchemaCouldNot": {
+    "message": "入力スキーマを解析できなかったため、Explorer はこのツールを記述しません"
+  },
+  "agentTranscript_itsInputSchemaIsNot": {
+    "message": "入力スキーマがオブジェクトではありません"
+  },
+  "agentTranscript_measuredInPage": {
+    "message": "ページ内で計測。"
+  },
+  "agentTranscript_mocked": {
+    "message": "モック"
+  },
+  "agentTranscript_mockedHelp": {
+    "message": "オーバーライドが応答し、ページの処理は実行されませんでした。"
+  },
+  "agentTranscript_model": {
+    "message": "モデル"
+  },
+  "agentTranscript_modelUsed": {
+    "message": "使用モデル: $1"
+  },
+  "agentTranscript_nFailed": {
+    "message": "$1 失敗"
+  },
+  "agentTranscript_nFailedHelp": {
+    "message": "エラーを返したツール呼び出し。モデルには通知済みです。"
+  },
+  "agentTranscript_nMocked": {
+    "message": "$1 件モック"
+  },
+  "agentTranscript_nMockedHelp": {
+    "message": "ページではなくオーバーライドが応答しました。実際のツールの動作証明にはなりません。"
+  },
+  "agentTranscript_nModelTurns": {
+    "message": "モデル $1 ターン"
+  },
+  "agentTranscript_nToolCalls": {
+    "message": "ツール呼び出し $1 回"
+  },
+  "agentTranscript_nToolNamesWereChanged": {
+    "message": "モデル向けに $1 個のツール名が変更されました"
+  },
+  "agentTranscript_nToolSchemasWereAdapted": {
+    "message": "モデル向けに $1 個のツールスキーマが適合化されました"
+  },
+  "agentTranscript_nToolsWereNotOffered": {
+    "message": "$1 個のツールは提供されませんでした"
+  },
+  "agentTranscript_nameDashReason": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_noRunYetDescribeWhat": {
+    "message": "ここに会話が表示されます。「モデル設定」で AI を選択し、質問するかこのページのツールを試してください。"
+  },
+  "agentTranscript_oneModelTurn": {
+    "message": "モデル 1 ターン"
+  },
+  "agentTranscript_oneToolCall": {
+    "message": "ツール呼び出し 1 回"
+  },
+  "agentTranscript_oneToolNameWasChanged": {
+    "message": "モデル向けに 1 個のツール名が変更されました"
+  },
+  "agentTranscript_oneToolSchemaWasAdapted": {
+    "message": "モデル向けに 1 個のツールスキーマが適合化されました"
+  },
+  "agentTranscript_oneToolWasNotOffered": {
+    "message": "1 個のツールは提供されませんでした"
+  },
+  "agentTranscript_parenDetail": {
+    "message": " ($1)"
+  },
+  "agentTranscript_renamedItem": {
+    "message": "$1 → $2 ($3)"
+  },
+  "agentTranscript_result1": {
+    "message": "結果 · $1"
+  },
+  "agentTranscript_running": {
+    "message": "実行中"
+  },
+  "agentTranscript_runningTools": {
+    "message": "ページのツールを実行中…"
+  },
+  "agentTranscript_stoppedModelTurnBudgetReached": {
+    "message": "停止：モデルターン数の上限に達しました"
+  },
+  "agentTranscript_stoppedToolCallBudgetReached": {
+    "message": "停止：ツール呼び出し回数の上限に達しました"
+  },
+  "agentTranscript_theApiRejectsTheseCharacters": {
+    "message": "API がこれらの文字を拒否します"
+  },
+  "agentTranscript_tokens": {
+    "message": "入力 $1 / 出力 $2"
+  },
+  "agentTranscript_tokensHelp": {
+    "message": "プロバイダーから報告されたトークン数。"
+  },
+  "agentTranscript_waitingForForm": {
+    "message": "ページ上のフォーム $1 の送信を待っています。ページ側で送信するか「キャンセル」を押してください。"
+  },
+  "agentTranscript_you": {
+    "message": "あなた"
+  },
+  "agentTranscript_youDisabledItWithAn": {
+    "message": "オーバーライドによって無効化されています"
+  },
+  "agent_aRunIsInProgress": {
+    "message": "実行が進行中です。"
+  },
+  "agent_allowTheEndpointFirst": {
+    "message": "先にエンドポイントを許可してください。"
+  },
+  "agent_answerAs": {
+    "message": "応答プロファイル"
+  },
+  "agent_cancel": {
+    "message": "キャンセル"
+  },
+  "agent_copied": {
+    "message": "コピーしました"
+  },
+  "agent_copyItToTheClipboard": {
+    "message": "クリップボードにコピー"
+  },
+  "agent_copyRequest": {
+    "message": "リクエストをコピー"
+  },
+  "agent_explorerSendsNothingCopyThis": {
+    "message": "Explorer は何も送信しません。このリクエストを任意のチャットに貼り付け、返答をここに戻すとページ上でツールが実行されます。"
+  },
+  "agent_feedTheReplyBack": {
+    "message": "応答を反映する"
+  },
+  "agent_fixFirst": {
+    "message": "先に修正してください: $1。"
+  },
+  "agent_goal": {
+    "message": "ゴール"
+  },
+  "agent_jumpToLatest": {
+    "message": "最新へ移動"
+  },
+  "agent_jumpToLatestHelp": {
+    "message": "上方を閲覧中に新しい応答が届きました。クリックすると会話の末尾へ移動します。"
+  },
+  "agent_manualMode": {
+    "message": "手動モード"
+  },
+  "agent_nToolsOnThisPageWillBeOffered": {
+    "message": "このページの $1 個のツールがモデルに提供されます（Explorer が正確に記述できないものを除く）。"
+  },
+  "agent_oneToolOnThisPageWillBeOffered": {
+    "message": "このページの 1 個のツールがモデルに提供されます（Explorer が正確に記述できない場合を除く）。"
+  },
+  "agent_openInWindow": {
+    "message": "このチャットを大きなウィンドウで開く"
+  },
+  "agent_pasteTheModelReplyHere": {
+    "message": "モデルの応答（生 JSON またはテキスト）をここに貼り付けてください"
+  },
+  "agent_send": {
+    "message": "送信"
+  },
+  "agent_sendHelp": {
+    "message": "ページのツールと共にメッセージを送信します。Enter で送信、Shift+Enter で改行します。"
+  },
+  "agent_sendTheGoalAndThis": {
+    "message": "目標とこのページのツールをモデルに送信します。"
+  },
+  "agent_starterHelp": {
+    "message": "この提案プロンプトを入力欄にセットします"
+  },
+  "agent_starterSummarize": {
+    "message": "ページのツールを要約"
+  },
+  "agent_starterSummarizePrompt": {
+    "message": "このページにあるツールを一覧にし、それぞれいつ使うべきか説明してください。"
+  },
+  "agent_starterTryTool": {
+    "message": "$1 を試す"
+  },
+  "agent_starterTryToolPrompt": {
+    "message": "$1 を適切なテスト引数で呼び出し、結果を要約してください。"
+  },
+  "agent_stopAfterTheCurrentStep": {
+    "message": "現在のステップ後に停止"
+  },
+  "agent_toolsAvailable": {
+    "message": "$1 個のページツールが利用可能"
+  },
+  "agent_tryAgain": {
+    "message": "再試行"
+  },
+  "agent_tryAgainHelp": {
+    "message": "このページに同じ質問をもう一度送ります。新しい回答は最初の回答の下に追加され、上書きされません。"
+  },
+  "agent_whatShouldTheAgentTry": {
+    "message": "このページでエージェントに何を試させますか？"
+  },
+  "annotationDeclaredHelp": {
+    "message": "サイトによる自己申告です。Explorer は表示のみ行い、保証はしません。"
+  },
+  "audit_clean": {
+    "message": "契約上の指摘事項はありません。"
+  },
+  "audit_export": {
+    "message": "監査レポートをエクスポート"
+  },
+  "audit_exportJsonHelp": {
+    "message": "スクリプトや Issue 向けにすべての検出結果をデータとして出力します。"
+  },
+  "audit_exportMarkdownHelp": {
+    "message": "スコアの低いツールから順に並べたレビュー用レポート。"
+  },
+  "audit_exportNote": {
+    "message": "エクスポートにはページが宣言したツールの説明とスキーマのみが含まれ、ページ本文は含まれません。"
+  },
+  "audit_failN": {
+    "message": "要修正 $1"
+  },
+  "audit_intro": {
+    "message": "各ツールが宣言している契約（説明文・スキーマ・アノテーション）の品質スコアです。安全性の評価ではありません。"
+  },
+  "audit_noTools": {
+    "message": "このページには監査対象のツールがまだありません。"
+  },
+  "audit_passN": {
+    "message": "合格 $1"
+  },
+  "audit_pointsHelp": {
+    "message": "この指摘によって減点されるポイント数。"
+  },
+  "audit_rule_descDuplicate": {
+    "message": "他の $1 個のツールと同一の説明文を共有しています: モデルが区別できません。"
+  },
+  "audit_rule_descGeneric": {
+    "message": "説明文がツール名を繰り返しているだけで、追加情報がありません。"
+  },
+  "audit_rule_descMissing": {
+    "message": "説明文がありません: モデルがこのツールをいつ使うべきか判断できません。"
+  },
+  "audit_rule_descNoAction": {
+    "message": "先頭行が動作動詞で始まっていません（「Search…」「Add…」「Get…」などを推奨）。"
+  },
+  "audit_rule_descRestatesName": {
+    "message": "説明文がツール名を言い換えただけで、新しい事実が含まれていません。"
+  },
+  "audit_rule_descTooLong": {
+    "message": "説明文が80語を超えています: 長すぎる説明はコンテキストを圧迫します。"
+  },
+  "audit_rule_descTooShort": {
+    "message": "4語未満です: 他のツールと区別するのに十分な情報量がありません。"
+  },
+  "audit_rule_paramMissingDesc": {
+    "message": "$2 個中 $1 個の入力プロパティに説明がありません。"
+  },
+  "audit_rule_paramUntyped": {
+    "message": "$2 個中 $1 個の入力プロパティに解決可能な型がありません。"
+  },
+  "audit_rule_schemaMissing": {
+    "message": "オブジェクト型の入力スキーマがありません: 引数が推測頼みになります。"
+  },
+  "audit_scoreHelp": {
+    "message": "宣言された契約の品質スコアであり、安全性の評価ではありません。"
+  },
+  "audit_scoreN": {
+    "message": "$1/100"
+  },
+  "audit_warnN": {
+    "message": "改善点あり $1"
+  },
+  "baseline_forget": {
+    "message": "ベースラインを削除"
+  },
+  "baseline_forgetHelp": {
+    "message": "このサイトの保存済みベースラインを削除します。"
+  },
+  "baseline_lastCheck": {
+    "message": "最終再チェック $1：新規 $2 件、解決済み $3 件"
+  },
+  "baseline_newChip": {
+    "message": "ベースライン以降の新規"
+  },
+  "baseline_newChipHelp": {
+    "message": "保存されたベースラインになかった検出項目のみを表示します。"
+  },
+  "baseline_noChange": {
+    "message": "ベースライン以降：変更なし。"
+  },
+  "baseline_none": {
+    "message": "このサイトのベースラインはまだ保存されていません。保存すると今後のレビューと比較できます。"
+  },
+  "baseline_save": {
+    "message": "ベースラインを保存"
+  },
+  "baseline_saveHelp": {
+    "message": "現在の検出項目と契約フィンガープリントをこの端末に保存します。"
+  },
+  "baseline_savedAt": {
+    "message": "ベースライン保存日時 $1 — 検出 $2 件、ツール $3 個"
+  },
+  "baseline_since": {
+    "message": "ベースライン以降：新規 $1 ($2)、解決 $3 · ツール追加 $4、削除 $5、契約変更 $6"
+  },
+  "baseline_sinceHelp": {
+    "message": "ベースラインとの差分を表示します。"
+  },
+  "baseline_title": {
+    "message": "保存済みベースライン"
+  },
+  "baseline_titleHelp": {
+    "message": "現在の検出結果と契約をこのサイトの基準として保存します。"
+  },
+  "baseline_toolsAdded": {
+    "message": "追加されたツール: $1"
+  },
+  "baseline_toolsChanged": {
+    "message": "契約が変更されたツール: $1"
+  },
+  "baseline_toolsRemoved": {
+    "message": "削除されたツール: $1"
+  },
+  "baseline_truncated": {
+    "message": "ベースラインは先頭 300 件の検出と 1,000 個のツールまで保持します。"
+  },
+  "baseline_update": {
+    "message": "ベースラインを更新"
+  },
+  "baseline_updateHelp": {
+    "message": "保存済みのベースラインを現在のレビュー結果で置き換えます。"
+  },
+  "checkApiAvailability": {
+    "message": "WebMCP API"
+  },
+  "checkApiAvailabilityRefused": {
+    "message": "拒否"
+  },
+  "checkCapability": {
+    "message": "提供方式"
+  },
+  "checkFrameContext": {
+    "message": "フレームコンテキスト"
+  },
+  "checkOriginIsolation": {
+    "message": "オリジン分離"
+  },
+  "checkSecureContext": {
+    "message": "セキュアコンテキスト"
+  },
+  "checkToolsPermission": {
+    "message": "tools 権限ポリシー"
+  },
+  "checks_duplicateDescription": {
+    "message": "このページの別のツールが同じ説明を持っています: $1。モデルはこの説明だけでは両者を区別できません。"
+  },
+  "checks_duplicateName": {
+    "message": "別のフレームが同名のツールを登録しています。モデルには別々のエイリアスとして提示されます。"
+  },
+  "checks_intro": {
+    "message": "エージェントが誤選択や誤呼び出しを起こしやすい契約上の不足点です。"
+  },
+  "checks_levelNote": {
+    "message": "注記"
+  },
+  "checks_levelWarn": {
+    "message": "警告"
+  },
+  "checks_nOnCard": {
+    "message": "$1 件の指摘"
+  },
+  "checks_nameNeedsAlias": {
+    "message": "モデル API がこの名前をそのまま受け付けないため、Explorer はエイリアスで提供します。"
+  },
+  "checks_noAnnotations": {
+    "message": "アノテーションが未宣言です。readOnlyHint は状態を変更しないことをエージェントに伝えます。"
+  },
+  "checks_noDescription": {
+    "message": "説明がありません。モデルがこのツールを選択するための手がかりがありません。"
+  },
+  "checks_noSchema": {
+    "message": "入力スキーマがありません。ツールが引数を取る場合、モデルはどの引数か知ることができません。"
+  },
+  "checks_none": {
+    "message": "問題なし: 説明、スキーマ、アノテーションがすべて揃っています。"
+  },
+  "checks_oneOnCard": {
+    "message": "1 件の指摘"
+  },
+  "checks_propertyWithoutDescription": {
+    "message": "説明のないプロパティ: $1。"
+  },
+  "checks_requiredNotDeclared": {
+    "message": "必須指定されていますが properties に未定義: $1。"
+  },
+  "checks_schemaError": {
+    "message": "入力スキーマを解析できません: $1"
+  },
+  "checks_schemaNotObject": {
+    "message": "入力スキーマがオブジェクトスキーマではありません（型 $1）。ツールの引数は常にオブジェクトです。"
+  },
+  "checks_shortDescription": {
+    "message": "説明が短すぎます（$1 文字）。ツールの機能、使用タイミング、返り値を記述してください。"
+  },
+  "checks_title": {
+    "message": "契約チェック"
+  },
+  "checks_titleCount": {
+    "message": "契約チェック ($1)"
+  },
+  "common_error": {
+    "message": "エラー"
+  },
+  "common_frameN": {
+    "message": "フレーム #$1"
+  },
+  "common_ms": {
+    "message": "$1 ms"
+  },
+  "common_ok": {
+    "message": "OK"
+  },
+  "connector_add": {
+    "message": "コネクタを追加"
+  },
+  "connector_addHelp": {
+    "message": "エンドポイントの規則を確認し、プロバイダー一覧にこのコネクタを保存します。"
+  },
+  "connector_addOne": {
+    "message": "カスタムコネクタを追加"
+  },
+  "connector_added": {
+    "message": "コネクタを追加しました。上のプロバイダー一覧から選択してください。"
+  },
+  "connector_delete": {
+    "message": "削除"
+  },
+  "connector_deleteHelp": {
+    "message": "このコネクタを削除し、メモリからキーを消去します。"
+  },
+  "connector_dialect": {
+    "message": "リクエスト形式"
+  },
+  "connector_dialectHelp": {
+    "message": "エンドポイントが使用する API 形式。Explorer は 3 種類すべてに対応しています。"
+  },
+  "connector_help": {
+    "message": "カスタムコネクターはユーザー定義のモデル接続先です。アクセス許可はChromeが管理し、リモート接続にはHTTPSが必要です。選択したキー保存モードが適用されます。"
+  },
+  "connector_key": {
+    "message": "API キーが必要"
+  },
+  "connector_keyHelp": {
+    "message": "選択すると、このコネクターにAPIキーが必要になります。選択した保存モードが適用されます。"
+  },
+  "connector_mark": {
+    "message": "カスタム"
+  },
+  "connector_name": {
+    "message": "名前"
+  },
+  "connector_nameHelp": {
+    "message": "プロバイダー一覧に表示されます（最大 60 文字）。"
+  },
+  "connector_none": {
+    "message": "カスタムコネクタはまだありません。"
+  },
+  "connector_section": {
+    "message": "カスタムコネクタ"
+  },
+  "connector_url": {
+    "message": "エンドポイント"
+  },
+  "connector_urlHelp": {
+    "message": "Explorer が呼び出すベース URL（例: https://my-gateway.internal/v1）。平文 http はローカルのみ可。"
+  },
+  "diagnosticExport": {
+    "message": "この診断証跡を確認してエクスポート"
+  },
+  "diagnosticExportNote": {
+    "message": "表示中の観察結果、サイト URL、正確なエラーを含みます。共有前にプレビューを確認してください。"
+  },
+  "diagnosticInvalid": {
+    "message": "コピーまたはダウンロードするには、プレビューが有効な JSON である必要があります。"
+  },
+  "diagnosticPreview": {
+    "message": "診断証跡のプレビュー"
+  },
+  "diagnosticPreviewHelp": {
+    "message": "エクスポート前に証跡を確認・編集できます。開いてもページには影響しません。"
+  },
+  "discoveryComplete": {
+    "message": "検出完了"
+  },
+  "discoveryFailed": {
+    "message": "Discovery 失敗"
+  },
+  "discoveryNextAction": {
+    "message": "ページが正常に読み込まれているか確認し、ツールを再読み込みしてください。"
+  },
+  "discoveryPartial": {
+    "message": "一部のみ検出"
+  },
+  "discoveryRetry": {
+    "message": "ツールを再検出"
+  },
+  "discoveryRetryHelp": {
+    "message": "現在のページでツールを再検出します。ツール自体は実行されません。"
+  },
+  "discovery_check": {
+    "message": "オリジンを検査"
+  },
+  "discovery_checkHelp": {
+    "message": "3 つの慣例パスとページヘッダーをこのオリジンから 1 回だけ取得します。"
+  },
+  "discovery_disclosure": {
+    "message": "実行すると Explorer から $1 の /.well-known/webmcp、/.well-known/webmcp.json、/llms.txt および現在のページヘッダーへ GET リクエストを送信します。"
+  },
+  "discovery_intro": {
+    "message": "3つの検出ファイルは任意の慣習であり、WebMCPの必須要件ではありません。Permissions-Policy、CSP、CORSヘッダーも確認します。認証情報を送らず、リダイレクトを拒否し、本文を64 KiBに制限します。結果は取得した応答の情報であり、認証済みセッションや有効なブラウザーポリシーを示しません。"
+  },
+  "discovery_notGranted": {
+    "message": "このオリジンへのアクセス権限がありません。先にサイトへのアクセスを許可してください。"
+  },
+  "discovery_results": {
+    "message": "$1 — ステータス $2"
+  },
+  "discovery_resultsHelp": {
+    "message": "各パスの応答結果（HTTP ステータス、Content-Type、サイズ、またはエラー）。"
+  },
+  "discovery_title": {
+    "message": "ディスカバリ慣例 — 任意のネットワーク確認"
+  },
+  "discovery_titleHelp": {
+    "message": "ディスカバリファイルとページの Permissions-Policy ヘッダーを確認します。ボタンを押したときだけ実行されます。"
+  },
+  "enableFlagBody": {
+    "message": "ローカル開発向けに Chrome がこのフラグを提供している場合は、Enabled に設定して Chrome を再起動してください。"
+  },
+  "enableFlagTitle": {
+    "message": "実際のサイトを検査するには"
+  },
+  "enableFlagWhy": {
+    "message": "Chrome はローカルテスト用にこのフラグを提供しており、オリジントライアルも用意されています。"
+  },
+  "envUnavailableTitle": {
+    "message": "このページでは WebMCP を利用できません"
+  },
+  "env_apiAvailabilityHelp": {
+    "message": "document.modelContext が Explorer の必要とするメソッドを公開しているかを示します。"
+  },
+  "env_browserSaid": {
+    "message": "ブラウザの応答: $1"
+  },
+  "env_capabilityHelp": {
+    "message": "このタブで WebMCP がどのように提供されているかを示します。"
+  },
+  "env_frameContextHelp": {
+    "message": "クロスオリジン iframe には親ページからの allow=\"tools\" 指定が必要です。"
+  },
+  "env_missingMethods": {
+    "message": "不足しているメソッド"
+  },
+  "env_missingMethodsHelp": {
+    "message": "Explorer が期待していますが見つからなかったメソッド。"
+  },
+  "env_originIsolationHelp": {
+    "message": "WebMCP はオリジン分離されたドキュメントでのみ利用可能です。Origin-Agent-Cluster: ?0 はこれを無効化します。"
+  },
+  "env_secureContextHelp": {
+    "message": "WebMCP はセキュアコンテキスト（HTTPS または localhost）でのみ公開されます。"
+  },
+  "env_toolsPermissionHelp": {
+    "message": "tools 権限ポリシー。\"unobservable\" はブラウザが検査用 API を公開していないことを意味します。"
+  },
+  "evalsEditor_aModelIsNotDeterministic": {
+    "message": "モデルは決定論的ではありません。1回だけの試行は偶然の成功と同じくらいしか証明になりません。"
+  },
+  "evalsEditor_aModelThatGetsThere": {
+    "message": "3回の誤った呼び出しの後にようやく到達するモデルは、説明を理解していません。"
+  },
+  "evalsEditor_addACase": {
+    "message": "ケースを追加"
+  },
+  "evalsEditor_andCallItFirst": {
+    "message": " を最初に呼び出す"
+  },
+  "evalsEditor_asksForAToolTo": {
+    "message": "ツール名を指定せずに最初の呼び出しを要求しています"
+  },
+  "evalsEditor_attempts": {
+    "message": "試行回数"
+  },
+  "evalsEditor_checksNothingSoItWould": {
+    "message": "何も検証しないため、モデルが何をしても合格してしまいます"
+  },
+  "evalsEditor_deleteThisCase": {
+    "message": "このケースを削除"
+  },
+  "evalsEditor_expectsAndForbidsTheSame": {
+    "message": "同じツールを期待しつつ禁止しています"
+  },
+  "evalsEditor_hasNoGoal": {
+    "message": "目標がありません"
+  },
+  "evalsEditor_mustNotCall": {
+    "message": "呼び出し禁止"
+  },
+  "evalsEditor_notOnThisPage": {
+    "message": "$1 はこのページに存在しません"
+  },
+  "evalsEditor_notOnThisPageHelp": {
+    "message": "モデルとは無関係な理由でこのケースは失敗してしまいます。"
+  },
+  "evalsEditor_oneGoalOneExpectation": {
+    "message": "1つの目標、1つの期待結果"
+  },
+  "evalsEditor_remove": {
+    "message": "削除"
+  },
+  "evalsEditor_shouldCall": {
+    "message": "呼び出すべきツール"
+  },
+  "evalsEditor_suiteName": {
+    "message": "スイート名"
+  },
+  "evalsEditor_toolThatShouldBeCalled": {
+    "message": "呼び出されるべきツール"
+  },
+  "evalsEditor_toolsThatMustNotBe": {
+    "message": "呼び出してはならないツール（カンマ区切り）"
+  },
+  "evalsEditor_untitledSuite": {
+    "message": "無題のスイート"
+  },
+  "evalsEditor_whatShouldTheAgentBe": {
+    "message": "エージェントに何を依頼しますか？"
+  },
+  "evalsEditor_writtenAgainst1RunningIt": {
+    "message": "$1 向けに作成されました。別の場所での実行も可能ですが、"
+  },
+  "evalsEditor_writtenAgainstNote": {
+    "message": "$1 向けに作成されました。別の場所での実行も可能ですが、結果の意味は異なります。"
+  },
+  "evalsResults_1NamedByTheSuite": {
+    "message": "$1 — スイートで指定されていますが、このページでは公開されていません: "
+  },
+  "evalsResults_attemptsJudged": {
+    "message": "判定可能だった試行。"
+  },
+  "evalsResults_broken": {
+    "message": "悪化"
+  },
+  "evalsResults_brokenHelp": {
+    "message": "変更前は合格していましたが、現在は失敗しています。"
+  },
+  "evalsResults_calledForbidden": {
+    "message": "禁止されている $1 を呼び出しました"
+  },
+  "evalsResults_cancelled": {
+    "message": "キャンセル済み"
+  },
+  "evalsResults_casePointsHelp": {
+    "message": "不合格のままでも改善することがあります（0/5 から 2/5 への変化は前進です）。"
+  },
+  "evalsResults_compareWithThePreviousRun": {
+    "message": "前回の実行と比較"
+  },
+  "evalsResults_comparedWithThePreviousRun": {
+    "message": "前回の実行との比較"
+  },
+  "evalsResults_couldNotRun": {
+    "message": "実行不可"
+  },
+  "evalsResults_countTimesMiss": {
+    "message": "$1× $2"
+  },
+  "evalsResults_differentFirstChoice": {
+    "message": "最初の選択が変化"
+  },
+  "evalsResults_expectedToolNeverCalled": {
+    "message": "期待されたツールが一度も呼び出されませんでした"
+  },
+  "evalsResults_exportThisResult": {
+    "message": "この結果をエクスポート"
+  },
+  "evalsResults_failed": {
+    "message": "失敗"
+  },
+  "evalsResults_fixed": {
+    "message": "改善"
+  },
+  "evalsResults_fixedHelp": {
+    "message": "変更前は失敗していましたが、現在は合格しています。"
+  },
+  "evalsResults_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "evalsResults_nBroken": {
+    "message": "$1 件悪化"
+  },
+  "evalsResults_nCouldNotRun": {
+    "message": "$1 件実行不可"
+  },
+  "evalsResults_nCouldNotRunHelp": {
+    "message": "成功率から除外：これらはページの品質を示すものではありません。"
+  },
+  "evalsResults_nDisabled": {
+    "message": "$1 件無効化"
+  },
+  "evalsResults_nFailed": {
+    "message": "$1 失敗"
+  },
+  "evalsResults_nFixed": {
+    "message": "$1 件改善"
+  },
+  "evalsResults_nPassed": {
+    "message": "$1/$2 合格"
+  },
+  "evalsResults_nRewritten": {
+    "message": "$1 件書き換え"
+  },
+  "evalsResults_noRate": {
+    "message": "判定率なし"
+  },
+  "evalsResults_noRateHelp": {
+    "message": "判定可能な試行がなかったため、率は算出されません（常に誤っていたことを意味する 0% とは異なります）。"
+  },
+  "evalsResults_noResultYetRunThe": {
+    "message": "まだ結果がありません。スイートを実行して、モデルがどのツールを選択するか確認してください。"
+  },
+  "evalsResults_notComparable": {
+    "message": "比較不可"
+  },
+  "evalsResults_notComparableHelp": {
+    "message": "2回の実行のうち一方を判定できなかったため、このケースからは変更の影響を判断できません。"
+  },
+  "evalsResults_nothing": {
+    "message": "なし"
+  },
+  "evalsResults_nothingCouldBeJudgedSo": {
+    "message": "判定可能な試行がなかったため、率は算出されません（常に誤っていたことを意味する 0% とは異なります）。"
+  },
+  "evalsResults_ofAttempts": {
+    "message": "試行の $1"
+  },
+  "evalsResults_ofAttemptsHelp": {
+    "message": "判定可能だったケース全体の平均です。"
+  },
+  "evalsResults_overridesInForceDuringThis": {
+    "message": "この実行中に有効だったオーバーライド: $1。"
+  },
+  "evalsResults_passed": {
+    "message": "合格"
+  },
+  "evalsResults_points": {
+    "message": "$1 ポイント"
+  },
+  "evalsResults_pointsHelp": {
+    "message": "成功した試行の割合の変化。"
+  },
+  "evalsResults_previousRun": {
+    "message": "前回の実行"
+  },
+  "evalsResults_reachedForFirst": {
+    "message": "最初に選択: $1"
+  },
+  "evalsResults_sameGoalsRunTwiceWhat": {
+    "message": "同じ目標を2回実行 — 変化した点"
+  },
+  "evalsResults_shouldCall1": {
+    "message": "$1 を呼び出すべき"
+  },
+  "evalsResults_staleCase": {
+    "message": "この実行以降に契約が変更されました"
+  },
+  "evalsResults_staleCaseHelp": {
+    "message": "このケースが期待するツールは、結果記録時とは異なる説明またはスキーマでモデルに提供されています。結果はその実行については有効ですが、現在のツールの状態を示すものではありません。"
+  },
+  "evalsResults_staleCount": {
+    "message": "変更された契約に対するケース $1 件"
+  },
+  "evalsResults_staleGone": {
+    "message": "ツールがページ上に存在しません"
+  },
+  "evalsResults_staleGoneHelp": {
+    "message": "このケースが期待するツールは、現在ページに登録されていません。"
+  },
+  "evalsResults_staleHelp": {
+    "message": "これらのケースは、その後変更された説明またはスキーマに対して判定されました。現在のツールを判定するにはスイートを再実行してください。"
+  },
+  "evalsResults_staleOne": {
+    "message": "変更された契約に対するケース 1 件"
+  },
+  "evalsResults_stillFailing": {
+    "message": "依然として失敗"
+  },
+  "evalsResults_stillPassing": {
+    "message": "依然として合格"
+  },
+  "evalsResults_theExpectedToolWasCalled": {
+    "message": "期待されたツールは呼び出されましたが、最初ではありませんでした"
+  },
+  "evalsResults_theExpectedToolWasNever": {
+    "message": "期待されたツールが一度も呼び出されませんでした"
+  },
+  "evalsResults_theReportNamesTheGoals": {
+    "message": "レポートには目標、モデルが選択したツール、有効だったオーバーライドが含まれます。共有前に内容を確認してください。"
+  },
+  "evalsResults_thisRun": {
+    "message": "今回の実行"
+  },
+  "evalsResults_unknownToolsNote": {
+    "message": "$1 — スイートで指定されていますが、このページでは公開されていません。これらのケースはモデル以外の理由で失敗しました。"
+  },
+  "evalsResults_yourLabel": {
+    "message": "この実行に対するラベル。"
+  },
+  "evals_anEmptySuite": {
+    "message": "空の評価スイートを作成し、タスクと期待結果を追加します。"
+  },
+  "evals_attemptGoal": {
+    "message": "試行 $1 — $2"
+  },
+  "evals_chromeStoppedTheExtensionS": {
+    "message": "スイートの実行中に Chrome が拡張機能のバックグラウンドワーカーを停止しました。実行済みのモデル呼び出しには料金が発生しているため、Explorer は自動的に再実行しません。準備ができたら再実行してください。"
+  },
+  "evals_delete": {
+    "message": "削除"
+  },
+  "evals_deleteThisSuiteAndIts": {
+    "message": "このスイートと結果を削除"
+  },
+  "evals_fixModelSetup": {
+    "message": "先にモデル設定を修正してください: $1。"
+  },
+  "evals_fixTheFlaggedCasesFirst": {
+    "message": "先に警告されたケースを修正してください — 何も検証しないケースは常に合格してしまいます。"
+  },
+  "evals_fromThisPage": {
+    "message": "このページから作成"
+  },
+  "evals_interrupted": {
+    "message": "中断"
+  },
+  "evals_interruptedHelp": {
+    "message": "スイートの実行中に Chrome が拡張機能のバックグラウンドワーカーを停止しました。"
+  },
+  "evals_labelThisRunBeforeRewrite": {
+    "message": "この実行にラベルを付ける — 「書き換え前」「書き換え後」"
+  },
+  "evals_labelsAreWhatMakeThe": {
+    "message": "ラベルを付けておくと、後で比較結果が読みやすくなります。"
+  },
+  "evals_manualModeCannotRunA": {
+    "message": "手動モードではスイートを実行できません。呼び出しごとに手動操作が必要になるためです。"
+  },
+  "evals_new": {
+    "message": "新規作成"
+  },
+  "evals_newSuite": {
+    "message": "新規スイート"
+  },
+  "evals_noSuiteYetStartFrom": {
+    "message": "スイートがまだありません。「このページから作成」でツールごとに 1 ケースを生成し、編集してください。"
+  },
+  "evals_oneCasePerToolEach": {
+    "message": "ツールごとに1つのケースを作成し、それぞれのツールを要求します。編集の出発点として使えます。"
+  },
+  "evals_runEveryCaseEveryAttempt": {
+    "message": "すべてのケースと試行を順番に実行します。"
+  },
+  "evals_runLabel": {
+    "message": "実行ラベル"
+  },
+  "evals_runSuite": {
+    "message": "スイートを実行"
+  },
+  "evals_runs": {
+    "message": "$1/$2 回実行"
+  },
+  "evals_runsDone": {
+    "message": "$1/$2 回完了"
+  },
+  "evals_starting": {
+    "message": "開始中…"
+  },
+  "evals_stopNow": {
+    "message": "スイートを今すぐ停止します。実行中の試行とページ上で待機中のツール呼び出しはキャンセルされ、失敗ではなくキャンセルとして集計されます。"
+  },
+  "evals_suite": {
+    "message": "スイート"
+  },
+  "evals_unknownToolsCount": {
+    "message": "不明なツール $1 件"
+  },
+  "evals_waitingForForm": {
+    "message": "ページ上のフォーム $1 の送信待ちです。入力済みで送信を待っています。誰も送信しない場合、$2 秒後に Evals が呼び出しをキャンセルします。"
+  },
+  "evals_whichSuiteToRun": {
+    "message": "実行するスイート"
+  },
+  "exportBar_aReportContainsWhatThe": {
+    "message": "レポートにはページが返した内容が含まれます。共有する前に内容を確認してください。"
+  },
+  "exportBar_console": {
+    "message": "コンソールスニペット"
+  },
+  "exportBar_copied": {
+    "message": "$1 をコピーしました。"
+  },
+  "exportBar_copy": {
+    "message": "コピー"
+  },
+  "exportBar_copyThe1ReportTo": {
+    "message": "$1 レポートをクリップボードにコピー"
+  },
+  "exportBar_downloadThe1ReportAs": {
+    "message": "$1 レポートをファイルとしてダウンロード"
+  },
+  "exportBar_export": {
+    "message": "エクスポート"
+  },
+  "exportBar_forConsole": {
+    "message": "DevTools の対象ツールのフレームに貼り付け"
+  },
+  "exportBar_forPlaywright": {
+    "message": ".spec.tsテスト：@playwright/test、明示的実行ID、CHROME実行ファイル"
+  },
+  "exportBar_forReview": {
+    "message": "レビューや Issue 向け"
+  },
+  "exportBar_forScript": {
+    "message": "スクリプトや差分比較向け"
+  },
+  "exportBar_json": {
+    "message": "JSON"
+  },
+  "exportBar_markdown": {
+    "message": "Markdown"
+  },
+  "exportBar_playwright": {
+    "message": "Playwright スクリプト"
+  },
+  "exportBar_save": {
+    "message": "保存"
+  },
+  "exportBar_savedFile": {
+    "message": "$1 を保存しました。"
+  },
+  "extDescription": {
+    "message": "ウェブサイトが AI エージェントに公開している WebMCP ツールの検査・テスト・デバッグ・セキュリティ監査を行います。"
+  },
+  "extName": {
+    "message": "WebMCP Explorer"
+  },
+  "fieldChecks_addHelp": {
+    "message": "フィールドと比較条件をこのチェックに追加し、名前と引数とともに保存します。"
+  },
+  "fieldChecks_addRule": {
+    "message": "フィールドルールを追加"
+  },
+  "fieldChecks_added": {
+    "message": "ルールを追加しました。これらのルールと引数を保持するには名前付きチェックを保存してください。"
+  },
+  "fieldChecks_cancelEdit": {
+    "message": "ルールの編集を破棄"
+  },
+  "fieldChecks_cancelEditHelp": {
+    "message": "編集中のルールを破棄し、追加済みのルールを保持します。"
+  },
+  "fieldChecks_chooseResult": {
+    "message": "結果からフィールドを選択"
+  },
+  "fieldChecks_chooseResultHelp": {
+    "message": "この実行データを参照してフィールドを選択します。ツールは実行されません。"
+  },
+  "fieldChecks_editRule": {
+    "message": "ルールを編集"
+  },
+  "fieldChecks_editRuleHelp": {
+    "message": "フィールドルール $1 を編集し、更新して変更を適用します。"
+  },
+  "fieldChecks_editSaved": {
+    "message": "チェックを編集"
+  },
+  "fieldChecks_editSavedHelp": {
+    "message": "保存済みの名前・引数・期待結果を読み込んで編集します。保存するとこの項目が更新されます。"
+  },
+  "fieldChecks_emptyKey": {
+    "message": "（空のフィールド名）"
+  },
+  "fieldChecks_expectFields": {
+    "message": "選択した結果フィールド"
+  },
+  "fieldChecks_intro": {
+    "message": "重要なフィールドのみを検証します。他のフィールドが変化してもこのチェックは失敗しません。以下のすべてのルールに合格する必要があります。"
+  },
+  "fieldChecks_jsonValueNote": {
+    "message": "JSON で入力してください: 数値は 1、文字列は \"ready\"、true、null、配列、オブジェクトが使えます。数値比較は正確な桁を保持します。"
+  },
+  "fieldChecks_keepSaved": {
+    "message": "保存済みの期待結果を維持"
+  },
+  "fieldChecks_limit": {
+    "message": "1つのチェックには最大 $1 個のフィールドルールを含められます。"
+  },
+  "fieldChecks_needResult": {
+    "message": "完全な結果からフィールドを選択するには、ツールを正常に実行してください。フィールドパスを直接入力することもできます。"
+  },
+  "fieldChecks_op_equals": {
+    "message": "次の JSON 値に等しい"
+  },
+  "fieldChecks_op_exists": {
+    "message": "フィールドが存在する"
+  },
+  "fieldChecks_op_length_equals": {
+    "message": "配列の長さが次に等しい"
+  },
+  "fieldChecks_op_length_max": {
+    "message": "配列の長さが最大で"
+  },
+  "fieldChecks_op_length_min": {
+    "message": "配列の長さが少なくとも"
+  },
+  "fieldChecks_op_missing": {
+    "message": "フィールドが存在しない"
+  },
+  "fieldChecks_op_number_max": {
+    "message": "数値が最大で"
+  },
+  "fieldChecks_op_number_min": {
+    "message": "数値が少なくとも"
+  },
+  "fieldChecks_op_text_contains": {
+    "message": "テキストが次を含む"
+  },
+  "fieldChecks_operator": {
+    "message": "比較条件"
+  },
+  "fieldChecks_operatorHelp": {
+    "message": "このフィールドで満たすべき条件を選択します。すべてのルールに合格する必要があります。"
+  },
+  "fieldChecks_path": {
+    "message": "フィールドパス"
+  },
+  "fieldChecks_pathHelp": {
+    "message": "結果からフィールドを選択するか、/products/0/id のようにパスを入力します。結果全体を対象にする場合は空欄にします。名前に含まれる ~ は ~0、/ は ~1 と記述します。"
+  },
+  "fieldChecks_pendingRule": {
+    "message": "チェックを保存する前に、編集中のフィールドルールを追加・更新するか、編集を破棄してください。"
+  },
+  "fieldChecks_pickHelp": {
+    "message": "フィールド $1 をチェック対象に選択"
+  },
+  "fieldChecks_removeRule": {
+    "message": "ルールを削除"
+  },
+  "fieldChecks_removeRuleHelp": {
+    "message": "この下書きからフィールドルール $1 を削除します。変更を保持するにはチェックを保存してください。"
+  },
+  "fieldChecks_ruleResults": {
+    "message": "フィールド検証結果 ($1)"
+  },
+  "fieldChecks_ruleResultsHelp": {
+    "message": "各ルール、期待値、およびツールが実際に返した値を表示します。"
+  },
+  "fieldChecks_selectHelp": {
+    "message": "フィールド名を選択します。ネストされたデータを展開するか、さらに項目を表示して他のフィールドを選択できます。"
+  },
+  "fieldChecks_textValueNote": {
+    "message": "JSON の引用符なしで文字列をそのまま入力してください。大文字と小文字は区別されます。"
+  },
+  "fieldChecks_updateRule": {
+    "message": "ルールを更新"
+  },
+  "fieldChecks_value": {
+    "message": "期待値"
+  },
+  "fieldChecks_valueHelp": {
+    "message": "比較する値を入力します。JSON では数値、文字列、null、配列、オブジェクトが区別されます。"
+  },
+  "fieldChecks_wholeResult": {
+    "message": "結果全体を選択"
+  },
+  "fieldChecks_wholeResultHelp": {
+    "message": "空のフィールドパスを使用して JSON 値全体を検証します。"
+  },
+  "grantAction": {
+    "message": "Enable Explorer このサイト"
+  },
+  "grantBody": {
+    "message": "WebMCP Explorer がこのサイトのページで公開されている WebMCP ツールを検出・テストするには、サイトへのアクセス権限が必要です。「すべてのサイトで許可」を選択しない限り、このサイトにのみ権限が付与されます。"
+  },
+  "grantDenied": {
+    "message": "アクセス権限が付与されませんでした。Explorer はまだこのサイトを検査できません。"
+  },
+  "grantMoreOrigins": {
+    "message": "ツールを検査するためにアクセスを許可"
+  },
+  "grantTitle": {
+    "message": "このサイトの検査を許可"
+  },
+  "help_adaptedTools": {
+    "message": "一部のプロバイダーはツールスキーマのルートにある oneOf、anyOf、allOf を拒否します。Explorer は通常のオブジェクトを送信し、ルールを説明文に記載しました。ページ自体のスキーマは変更されていません。"
+  },
+  "help_annotationsBody": {
+    "message": "アノテーションは「読み取り専用」や「信頼できないコンテンツ」など、ツール側が宣言する属性です。Explorer はブラウザが報告する内容を表示しますが、ツールの実際の動作を独自に保証するものではありません。"
+  },
+  "help_annotationsTitle": {
+    "message": "読み取り専用とその他のバッジ"
+  },
+  "help_applyOverride": {
+    "message": "Explorer 向けにこれらの変更を保存します。設定されたモックは有効な間、実際のツール呼び出しを置き換えます。"
+  },
+  "help_auditBody": {
+    "message": "監査は各ツールが宣言する契約（説明、スキーマ、アノテーション）を採点し、モデルが適切に選択・呼び出しできるようにします。サイトが公開した契約の品質評価であり、安全性の判定ではありません。"
+  },
+  "help_auditTitle": {
+    "message": "監査"
+  },
+  "help_automateBody": {
+    "message": "手動レシピはモデルなしで最大 20 件の確認済み呼び出しを再利用します。名前付き入力と前の結果から選択したフィールドが後続の引数になります。ページ、フレーム、ローカルモックを確認し、1 ステップまたは残りを実行します。一時停止と停止は明示的で、中断された実行が自動再開することはありません。エージェントラボと評価は任意で、手動モードでは Explorer から何も送信せず独自のモデルでループを進められます。"
+  },
+  "help_automateTitle": {
+    "message": "エージェントと評価を試す"
+  },
+  "help_budgets": {
+    "message": "1回のエージェント実行で許可するモデルターン数とツール呼び出し回数の上限を設定します。"
+  },
+  "help_button": {
+    "message": "ヘルプ"
+  },
+  "help_buttonHelp": {
+    "message": "この画面の説明、初めての使い方、開発ワークフローを開きます。"
+  },
+  "help_callers": {
+    "message": "このツールについて記録された追加の登録箇所を表示します。"
+  },
+  "help_chooseBody": {
+    "message": "「ツール」でカードを開いて説明を読みます。カードを開くだけでは実行されません。実際のサイトではツールの実行により状態が変わる場合があります。目的を理解している操作を選んでください。内蔵デモで練習できます。"
+  },
+  "help_chooseTitle": {
+    "message": "ツールを選択する"
+  },
+  "help_close": {
+    "message": "閉じる"
+  },
+  "help_closeHelp": {
+    "message": "フォームの変更やツールの実行を行わずに画面へ戻ります。"
+  },
+  "help_contractChecks": {
+    "message": "不足または矛盾しているツールメタデータのチェックを展開します。これらは契約の診断であり、セキュリティ評価ではありません。"
+  },
+  "help_debugBody": {
+    "message": "履歴は個々の呼び出しを表示します。タイムラインは検出と実行を追跡します。ソースは、サイトの計測モードを有効にしてページを再読み込みした際に登録箇所を記録します（有効化前の登録は取得できません）。オーバーライドは Explorer のローカル表示を変更し、結果をシミュレートできます（有効時は明示されます）。"
+  },
+  "help_debugTitle": {
+    "message": "失敗の原因を調べる"
+  },
+  "help_demoBody": {
+    "message": "デモで search_products を開き、query に MacBook と入力して「実行」を押します。拡張機能内の模擬ショップを検索するだけで、実際の注文は行われません。"
+  },
+  "help_detail_history": {
+    "message": "このツールの過去の呼び出しを確認し、結果の検査や入力の再実行を行います。"
+  },
+  "help_detail_override": {
+    "message": "Explorer 内のこのツールのローカル表示を変更するか、テスト用の応答をシミュレートします。"
+  },
+  "help_detail_run": {
+    "message": "入力を準備してこのツールを実行します。「実行」タブを開いただけでは実行されません。"
+  },
+  "help_detail_schema": {
+    "message": "ツールの入力スキーマ、必須フィールド、契約チェックを確認します。"
+  },
+  "help_developer": {
+    "message": "開発者ガイド"
+  },
+  "help_developerHelp": {
+    "message": "デバッグ、回帰チェック、エージェント、再現可能なレポートのワークフローを確認できます。"
+  },
+  "help_disabled": {
+    "message": "現在利用できません。コントロール横のステータスやメッセージを確認してください。"
+  },
+  "help_excludedTools": {
+    "message": "モデルへのリクエストから除外されたツールと、それぞれの除外理由を表示します。"
+  },
+  "help_explanations": {
+    "message": "ガイドの解説"
+  },
+  "help_export": {
+    "message": "利用可能なコピー・ダウンロード形式を展開します。自動的に外部へ共有されることはありません。"
+  },
+  "help_fillBody": {
+    "message": "「実行」のフォームを使用します。* が付いたフィールドは必須です。入力は引数とも呼ばれます。「スキーマ」で型とルールを確認でき、JSON モードで直接編集もできます。値を確認して「実行」を押してください。"
+  },
+  "help_fillTitle": {
+    "message": "入力を埋める"
+  },
+  "help_frameBody": {
+    "message": "オリジンとはプロトコルとポートを含むサイトのアドレスです。フレームは埋め込まれたページです。2つのフレームが同じ名前のツールを公開していても、Explorer は実行対象を区別して管理します。"
+  },
+  "help_frameTitle": {
+    "message": "オリジンとフレーム"
+  },
+  "help_glossary": {
+    "message": "WebMCP 用語集"
+  },
+  "help_glossaryHelp": {
+    "message": "ツール、スキーマ、フレーム、アノテーション、ネイティブ対応の定義を展開します。"
+  },
+  "help_hintsBody": {
+    "message": "readOnlyHint、consequentialHint、untrustedContentHint、debugging はページがツールについて行う宣言です。エージェントはこれらを基に実行前の確認要否を判断します。これらは参考情報であり、Explorer はツール名や説明と照合します。"
+  },
+  "help_hintsTitle": {
+    "message": "ヒント（アノテーション）"
+  },
+  "help_historyEntry": {
+    "message": "この記録された呼び出しを展開し、入力、結果、再実行オプションを確認します。"
+  },
+  "help_inlineBody": {
+    "message": "ツールとはこのページが提供する操作です。カードを開いて機能の説明を読み、入力を確認してから実行してください。"
+  },
+  "help_inspectBody": {
+    "message": "「ツール」は現在のページを名前、説明、オリジン、アノテーションで絞り込みます。ツールを開き、「スキーマ」で入力契約とチェックを確認します。「実行」はフォームと生 JSON に対応しています。名前の下に表示されるフレームに注意してください。"
+  },
+  "help_inspectTitle": {
+    "message": "契約を検査する"
+  },
+  "help_instrumentOff": {
+    "message": "このサイトでの新規登録箇所の記録を停止します。計測ラッパーを解除するにはページを再読み込みしてください。"
+  },
+  "help_introBody": {
+    "message": "WebMCP を使うと、ウェブサイトは「ツール」と呼ばれる名前付きアクションを公開できます。Explorer はそれらのツールを表示し、直接試せるようにします。ツールの検査や実行に AI アカウントは不要です。"
+  },
+  "help_introTitle": {
+    "message": "ウェブサイトでできることを探る"
+  },
+  "help_manualReply": {
+    "message": "貼り付けたモデルの応答を解析し、手動エージェント実行を続行します。応答内のツール呼び出しが実行される場合があります。"
+  },
+  "help_missingRegistrations": {
+    "message": "計測モードで検出されたものの、ブラウザが公開しているツール一覧に存在しない登録を検査します。"
+  },
+  "help_modelSetup": {
+    "message": "プロバイダーとモデルを選択し、接続管理と実行バジェットの設定を行います。"
+  },
+  "help_nativeBody": {
+    "message": "ネイティブとはブラウザ自身が WebMCP API を提供している状態です。ポリフィルは JavaScript による実装を提供し、同梱のデモでも使用されています。デモが動作しても、すべてのサイトが WebMCP に対応しているとは限りません。"
+  },
+  "help_nativeTitle": {
+    "message": "ネイティブとポリフィル"
+  },
+  "help_nav_agent": {
+    "message": "Agent Lab: AI モデルがページのツールをどのように選択・実行するかをテスト。"
+  },
+  "help_nav_audit": {
+    "message": "監査 (Audit): 宣言された説明文とスキーマの品質スコアを算出。"
+  },
+  "help_nav_evals": {
+    "message": "評価 (Evals): ツール選択と実行を検証する反復可能な評価スイート。"
+  },
+  "help_nav_security": {
+    "message": "可視のツール宣言を証拠と出典付きで受動的に評価します。指標は攻撃の証明ではありません。評価と修正案生成はツールを実行しません。オリジン検査と能動テストには以下での明示操作が必要です。 公開された宣言のヒューリスティック評価であり、安全性の認証ではありません。確認できない項目は以下に表示します。高評価でも操作は許可されません。"
+  },
+  "help_nav_settings": {
+    "message": "設定: サイトアクセス権、ローカル保存データ、表示言語、バックアップ。"
+  },
+  "help_nav_timeline": {
+    "message": "タイムライン: ツールの登録・解除・呼び出しのリアルタイム履歴。"
+  },
+  "help_nav_tools": {
+    "message": "ツール: このページが公開している WebMCP ツールの一覧、スキーマ検査、手動実行。"
+  },
+  "help_new": {
+    "message": "WebMCP は初めてですか？"
+  },
+  "help_newHelp": {
+    "message": "簡単な紹介とステップバイステップガイドを表示します。これを開いてもツールは実行されません。"
+  },
+  "help_originalOverride": {
+    "message": "ページが宣言した元の値を展開し、ローカルのオーバーライドと比較します。"
+  },
+  "help_poisoningBody": {
+    "message": "エージェントがユーザーからの指示であるかのように従うよう、ツールの名前・説明・スキーマに埋め込まれた命令文です。Explorer は該当表現を正確な抜粋とともに指標として表示します。"
+  },
+  "help_poisoningTitle": {
+    "message": "ツールポイズニング"
+  },
+  "help_provenanceBody": {
+    "message": "どのスクリプトがツールを登録したかを計測モード（設定からサイトごとに有効化し再読み込み）で記録します。別オリジンのスクリプトがページ上のツールを追加・置換することもあります。"
+  },
+  "help_provenanceTitle": {
+    "message": "来歴（プロベナンス）"
+  },
+  "help_rawSchema": {
+    "message": "元の入力スキーマを JSON として展開し、直接確認します。"
+  },
+  "help_readBody": {
+    "message": "結果にはツールが返した内容、または呼び出しが失敗した理由を示すエラーが表示されます。履歴には過去の呼び出しが記録されます。「再実行」は操作を繰り返すため、その副作用も繰り返される可能性があります。"
+  },
+  "help_readTitle": {
+    "message": "結果を読む"
+  },
+  "help_regressionsBody": {
+    "message": "結果全体または選択したフィールドの厳密なチェック付きで呼び出しを保存します。空でない商品リストなど重要なフィールドを選び、失敗した比較を確認できます。期待値のみを編集した場合、保存済みチェックは元の引数を保持します。再生前にスナップショットを比較し、契約のドリフトを確認してください。"
+  },
+  "help_regressionsTitle": {
+    "message": "回帰（リグレッション）を検出する"
+  },
+  "help_renamedTools": {
+    "message": "モデルに送信されたツールの別名（エイリアス）と、元の名前を変更する必要があった理由を表示します。"
+  },
+  "help_resumeTimeline": {
+    "message": "このタブの新しいタイムラインイベントの記録を再開します。"
+  },
+  "help_saveKey": {
+    "message": "現在の Chrome セッションでこのプロバイダーキーを保持します。Chrome を閉じると消去されます。"
+  },
+  "help_savedCalls": {
+    "message": "このツールの入力を保存し、フォームへの読み込みや保存済みの呼び出し・チェックの実行を行います。"
+  },
+  "help_savedChecks": {
+    "message": "保存済みの期待結果を確認し、チェックの再実行や結果のエクスポートを行います。"
+  },
+  "help_schemaBody": {
+    "message": "スキーマは受け入れ可能な入力（名前、型、必須フィールド、制約）を記述します。JSON はそれらの値を表すテキスト形式です。スキーマをフィールドとして表現できる場合、Explorer はフォームを生成します。"
+  },
+  "help_schemaProperty": {
+    "message": "このスキーマプロパティを展開して、説明、制約、ネストされたフィールドを確認します。"
+  },
+  "help_schemaTitle": {
+    "message": "スキーマと JSON"
+  },
+  "help_screen": {
+    "message": "この画面"
+  },
+  "help_screenHelp": {
+    "message": "現在 Explorer に表示されているコントロールの説明を確認します。"
+  },
+  "help_screenIntro": {
+    "message": "これらはヘルプを開いた元の画面に関する説明です。ガイドを閉じると元のコントロールを操作できます。"
+  },
+  "help_securityBody": {
+    "message": "可視のツール宣言を証拠と出典付きで受動的に評価します。指標は攻撃の証明ではありません。評価と修正案生成はツールを実行しません。オリジン検査と能動テストには以下での明示操作が必要です。 公開された宣言のヒューリスティック評価であり、安全性の認証ではありません。確認できない項目は以下に表示します。高評価でも操作は許可されません。"
+  },
+  "help_securityTitle": {
+    "message": "セキュリティとガバナンスを監査する"
+  },
+  "help_sharingBody": {
+    "message": "実行後、「この呼び出しを再現」から Markdown、JSON、コンソールスニペット、Playwright スクリプトを利用できます。エクスポートには呼び出しデータとオーバーライド情報が含まれます。共有前に内容を確認してください。スニペットやスクリプトを実行するとアクションが再度実行されます。"
+  },
+  "help_sharingTitle": {
+    "message": "再現可能な呼び出しを共有する"
+  },
+  "help_snapshots": {
+    "message": "現在のツール契約を保存し、過去のキャプチャや別環境と比較します。"
+  },
+  "help_source": {
+    "message": "記録された登録箇所を表示するか、ソースが記録されなかった理由を説明します。"
+  },
+  "help_start": {
+    "message": "はじめに"
+  },
+  "help_startAction": {
+    "message": "最初のステップを見る"
+  },
+  "help_startHelp": {
+    "message": "ツールの選択、入力の記入、結果の読み方を学ぶか、同梱のデモで練習できます。"
+  },
+  "help_title": {
+    "message": "Explorer ガイド"
+  },
+  "help_toolBody": {
+    "message": "ツールとはページが提供する名前付きのアクションです。引数とは検索クエリなど、ツールに渡す値のことです。"
+  },
+  "help_toolCardsBody": {
+    "message": "ツールを開くと、完全な説明の閲覧、入力スキーマの確認、呼び出しの準備ができます。カードには説明が最大 3 行までプレビュー表示されます。カードを開いてもツールは実行されません。"
+  },
+  "help_toolCardsTitle": {
+    "message": "ツールカード"
+  },
+  "help_toolTitle": {
+    "message": "ツールと引数"
+  },
+  "help_topics": {
+    "message": "ガイドのトピック"
+  },
+  "history_probeBadge": {
+    "message": "プローブ"
+  },
+  "history_probeBadgeHelp": {
+    "message": "この呼び出しは人間による入力ではなく、アクティブセキュリティプローブ ($1) によって実行されました。"
+  },
+  "missingReg_abortedBeforeSettled": {
+    "message": "登録が完了する前にページ側で登録用のシグナルが中断されたため、Chrome はツールを一覧に載せず拒否しました。"
+  },
+  "missingReg_allExposed": {
+    "message": "インストルメンテーションモードはこのページで $1 件の registerTool() 呼び出しを確認し、そのすべてが getTools() で公開されています。"
+  },
+  "missingReg_badgeNoDescription": {
+    "message": "説明なし"
+  },
+  "missingReg_detailNoRecord": {
+    "message": "この呼び出しについてこれ以上の記録はありません。"
+  },
+  "missingReg_detailNotExposed": {
+    "message": "registerTool() は正常に完了し削除も確認されていませんが、getTools() にこのツールが含まれていません。"
+  },
+  "missingReg_detailPromiseRejected": {
+    "message": "登録プロミスが拒否され、処理されませんでした: $1"
+  },
+  "missingReg_detailRemoved": {
+    "message": "ページが登録時に指定した AbortSignal を解除しました。通常の削除であり、不具合ではありません。"
+  },
+  "missingReg_detailThrew": {
+    "message": "registerTool() が例外をスローしました: $1"
+  },
+  "missingReg_detailUnobserved": {
+    "message": "registerTool() は Explorer が結果を観測できないプロミスを返しました。ページ自身が処理した拒否はイベントを残しません。getTools() にはツールが含まれていません。"
+  },
+  "missingReg_emptyDescription": {
+    "message": "記述子の description が空でした。Chrome 153 はこのような登録を InvalidStateError “Description is required” で拒否します（実測、WMP-0039）。"
+  },
+  "missingReg_frame": {
+    "message": "フレーム #$1"
+  },
+  "missingReg_intro": {
+    "message": "計測モードはこのサイトのフレーム内でこれらの registerTool() 呼び出しを検出しましたが、getTools() には含まれていません。"
+  },
+  "missingReg_limits": {
+    "message": "計測モードが有効なサイトで再読み込み後に実行された registerTool() 呼び出しのみが対象です（宣言型フォームは対象外）。"
+  },
+  "missingReg_promiseUnobserved": {
+    "message": "ページ自身が処理した登録プロミスの拒否は、Explorer が観測できるイベントを残しません。"
+  },
+  "missingReg_registeredTimes": {
+    "message": "$1 回登録"
+  },
+  "missingReg_stateNotExposed": {
+    "message": "未公開"
+  },
+  "missingReg_stateRejected": {
+    "message": "拒否"
+  },
+  "missingReg_stateRemoved": {
+    "message": "登録後に削除"
+  },
+  "missingReg_stateUnknown": {
+    "message": "未観測"
+  },
+  "missingReg_title": {
+    "message": "ツール一覧に現れない registerTool() 呼び出し ($1)"
+  },
+  "needActionAlt": {
+    "message": "またはすべてのウェブサイトで Explorer を許可"
+  },
+  "needActionAltHelp": {
+    "message": "すべての http および https サイトへのアクセスを一括で許可します。毎回ツールバーアイコンをクリックしたくない場合に使用してください。"
+  },
+  "needActionBody": {
+    "message": "Chrome は、拡張機能ボタンから Explorer を開いたときにのみ現在のページアドレスを通知します。サイドパネル自身のリストから開いても権限は付与されません。Explorer がバックグラウンドでタブを読み取ることは一切ありません。"
+  },
+  "needActionHintAlt": {
+    "message": "Chrome ツールバーの右上。パズルピース型の拡張機能ボタンはサイドパネルボタンの左側にあります。"
+  },
+  "needActionHintCaption": {
+    "message": "パズルピースをクリックし、WebMCP Explorer を選択します。"
+  },
+  "needActionPin": {
+    "message": "新しい拡張機能は固定されていないため、最初はアイコンが表示されません。メニュー内で WebMCP Explorer の横にあるピンをクリックすると、ツールバーにボタンを常時表示できます。"
+  },
+  "needActionTitle": {
+    "message": "このページを検査するには 1 回クリックが必要です"
+  },
+  "networkNotice_1SendsYourGoalThis": {
+    "message": "$1 はあなたの目標、このページの WebMCP ツール名・説明・スキーマ、"
+  },
+  "networkNotice_chatDisclosure": {
+    "message": "「送信」を押すと、メッセージ、ツールスキーマ、引数、結果（ページのデータを含む場合があります）が $1 に送信されます。"
+  },
+  "networkNotice_chooseProvider": {
+    "message": "チャットを始めるには AI を選択してください。プロバイダーへ自動的に通信することはありません。"
+  },
+  "networkNotice_disclosure": {
+    "message": "$1 の実行時、あなたの目標、このページの WebMCP ツール名・説明・スキーマ、ツール呼び出しの引数と結果が $2 に送信されます。結果にはこのページのデータが含まれる場合があります。Corsen AI には何も送信されません。"
+  },
+  "networkNotice_localWhere": {
+    "message": "このマシンの $1 ($2)"
+  },
+  "networkNotice_manualModeSendsNothingAnywhere": {
+    "message": "手動モードはどこにも何も送信しません。Explorer がリクエストを組み立て、あなた自身が受け渡します。"
+  },
+  "networkNotice_remoteWhere": {
+    "message": "$2 の $1"
+  },
+  "networkNotice_running": {
+    "message": "実行時"
+  },
+  "networkNotice_theConfiguredEndpoint": {
+    "message": "設定されたエンドポイント"
+  },
+  "noTabBody": {
+    "message": "http または https のページを開いてから Explorer を再度開いてください。"
+  },
+  "noTabTitle": {
+    "message": "検査可能なタブがありません"
+  },
+  "noToolsBody": {
+    "message": "公開されているツールが見つかりません。ページを再読み込みしてコンソールを確認してください。"
+  },
+  "noToolsTitle": {
+    "message": "このページには WebMCP ツールがありません"
+  },
+  "noTools_instrumentButton": {
+    "message": "計測モードを有効にして再読み込み"
+  },
+  "noTools_instrumentButtonHelp": {
+    "message": "ページのコードが実行される前にこのサイトの WebMCP 登録をラップするスクリプトを登録し、ページを再読み込みします。「設定」からいつでもオフに戻せます。"
+  },
+  "noTools_instrumentHint": {
+    "message": "このページが registerTool() を呼び出している場合、インストルメンテーションモードで各呼び出しの結果（拒否、削除、または受理されたが未公開）を確認できます。"
+  },
+  "noTools_instrumentOn": {
+    "message": "このサイトで計測モードが有効ですが、registerTool() の呼び出しは検出されませんでした。"
+  },
+  "notInjected": {
+    "message": "未注入"
+  },
+  "notInjectedHelp": {
+    "message": "このツールは Explorer に権限が付与されていないオリジンに由来するため、フレームを特定できません。"
+  },
+  "openDemo": {
+    "message": "デモページを開く"
+  },
+  "openDemoHelp": {
+    "message": "拡張機能に同梱されている WebMCP デモページを開きます。"
+  },
+  "probes_busy": {
+    "message": "このタブではすでにプローブ実行が進行中です。"
+  },
+  "probes_cancelled": {
+    "message": "$2 件中 $1 件の呼び出し後に停止 · 検出 $3 件"
+  },
+  "probes_consent": {
+    "message": "私はこのサイト ($1) を管理しており、プローブが自分のセッション内でツールを呼び出すことに同意します"
+  },
+  "probes_consentHelp": {
+    "message": "プローブを実行する前に必要です。このデバイス上のこのサイトに対して記憶され、ここまたは「設定 → 保存データ」からいつでも取り消せます。"
+  },
+  "probes_consentRequired": {
+    "message": "プローブは実行されませんでした。先にこのサイトを管理していることを確認してください。"
+  },
+  "probes_consequential": {
+    "message": "影響ありと宣言"
+  },
+  "probes_disclosure": {
+    "message": "プローブを実行すると、$2 上の選択された $1 個のツールを、生成された引数と不正な形式で最大 5 回ずつ現在のブラウザセッション内で呼び出します。外部には一切送信されず、結果と検出事項はこの端末に残ります。"
+  },
+  "probes_done": {
+    "message": "$1 件の呼び出しを実行 · 検出 $2 件"
+  },
+  "probes_history": {
+    "message": "各呼び出しはこのツールの履歴に「プローブ」として記録されます。"
+  },
+  "probes_intro": {
+    "message": "受動レビューは契約を読み取るだけですが、プローブはこのページと現在のセッション内で選択したツールを、スキーマから生成した引数およびスキーマが禁止する引数（型違い、必須欠落、未知のプロパティ、10,000 文字の文字列）で実際に呼び出します。ツールごとに最大 5 回、1 件ずつ順番に実行され、キャンセル可能で、すべて履歴にプローブとして記録されます。状態を変更するツールは実際に状態を変更します。"
+  },
+  "probes_none": {
+    "message": "プローブによる検出事項はありませんでした。実行した呼び出し: $1 件。"
+  },
+  "probes_notPreselected": {
+    "message": "未選択: このツールは読み取り専用と宣言されていないため、プローブによって状態が変化する可能性があります"
+  },
+  "probes_progress": {
+    "message": "$2 件中 $1 件の呼び出し · $3 · $4"
+  },
+  "probes_run": {
+    "message": "プローブを実行"
+  },
+  "probes_runHelp": {
+    "message": "選択したツールに対してプローブを実行します。サイトの管理権限を確認し、少なくとも1つのツールを選択するまで無効です。"
+  },
+  "probes_stop": {
+    "message": "停止"
+  },
+  "probes_stopHelp": {
+    "message": "実行中の呼び出しをキャンセルして終了します。すでに完了した呼び出しは元に戻せません。"
+  },
+  "probes_title": {
+    "message": "アクティブプローブ — 自サイト検証用"
+  },
+  "probes_titleHelp": {
+    "message": "選択したツールに対して定型の呼び出しを実行し、スキーマが禁止している入力に対してコードがどう動作し何を返すかを確認します。自分が管理するサイトでのみ使用してください。"
+  },
+  "probes_toolHelp": {
+    "message": "このツールをプローブ実行に含めます。"
+  },
+  "probes_tools": {
+    "message": "プローブ対象のツール"
+  },
+  "prompt_cancel": {
+    "message": "フォームをクリア"
+  },
+  "prompt_cancelHelp": {
+    "message": "編集を中止し、新規プロンプトの作成フォームに戻ります。"
+  },
+  "prompt_choose": {
+    "message": "応答ロール（システムプロンプト）"
+  },
+  "prompt_chooseHelp": {
+    "message": "各目標の前にモデルが受け取る指示です。既定値は製品標準のもので、作成したカスタムプロファイルもここに表示されます。"
+  },
+  "prompt_defaultLabel": {
+    "message": "Explorer の既定"
+  },
+  "prompt_delete": {
+    "message": "削除"
+  },
+  "prompt_deleteHelp": {
+    "message": "このプロンプトを削除します。選択されていた場合は製品の既定値に戻ります。"
+  },
+  "prompt_edit": {
+    "message": "編集"
+  },
+  "prompt_editHelp": {
+    "message": "このプロンプトを下のフォームに読み込んで変更します。"
+  },
+  "prompt_help": {
+    "message": "プロンプトはモデルの振る舞いを決めますが、制限を解除することはできません。ツールスキーマ、呼び出しルール、安全上の拒否条件はプロンプトの外にあり、変更できません。"
+  },
+  "prompt_manage": {
+    "message": "プロンプトを管理"
+  },
+  "prompt_manageHelp": {
+    "message": "上に一覧表示されている名前付きプロンプトの作成・編集・削除を行います。"
+  },
+  "prompt_name": {
+    "message": "名前"
+  },
+  "prompt_nameHelp": {
+    "message": "上のリストに表示されます。最大40文字。"
+  },
+  "prompt_none": {
+    "message": "カスタムプロンプトはまだありません。"
+  },
+  "prompt_save": {
+    "message": "プロンプトを保存"
+  },
+  "prompt_saveHelp": {
+    "message": "このプロンプトを作成します。名前と指示を入力してください。"
+  },
+  "prompt_saved": {
+    "message": "プロンプトを保存しました。"
+  },
+  "prompt_showDefault": {
+    "message": "製品の既定プロンプトを表示"
+  },
+  "prompt_showDefaultHelp": {
+    "message": "プロファイル未指定の実行時にシステムプロンプトとして送信される正確な内容です。"
+  },
+  "prompt_text": {
+    "message": "指示内容"
+  },
+  "prompt_textHelp": {
+    "message": "このプロンプトが選択されている間、毎回の実行でシステムプロンプトとしてモデルに送信されます。"
+  },
+  "prompt_textPlaceholder": {
+    "message": "例: あなたは慎重なショッピングエージェントです。読み取り専用ツールのみを呼び出し、購入に関わるツールの前には必ず確認してください。"
+  },
+  "prompt_update": {
+    "message": "プロンプトを更新"
+  },
+  "readable_boolean": {
+    "message": "真偽値"
+  },
+  "readable_emptyList": {
+    "message": "空のリスト（0 項目）"
+  },
+  "readable_emptyObject": {
+    "message": "空のオブジェクト（0 フィールド）"
+  },
+  "readable_emptyText": {
+    "message": "空のテキスト"
+  },
+  "readable_expandHelp": {
+    "message": "このネストされた値を展開してフィールドや項目を確認します。結果自体は変更されません。"
+  },
+  "readable_fields": {
+    "message": "$1 フィールド"
+  },
+  "readable_item": {
+    "message": "項目 $1"
+  },
+  "readable_items": {
+    "message": "$1 項目"
+  },
+  "readable_more": {
+    "message": "次の $1 件を表示（残り $2 件）"
+  },
+  "readable_moreHelp": {
+    "message": "このデバイス上で結果の続きを表示します。ツールは実行されません。"
+  },
+  "readable_noValue": {
+    "message": "値なし"
+  },
+  "readable_null": {
+    "message": "null"
+  },
+  "readable_number": {
+    "message": "数値"
+  },
+  "readable_rawJson": {
+    "message": "元の JSON"
+  },
+  "readable_rawJsonHelp": {
+    "message": "元の数値表現や空白を含め、ツールが返した正確な JSON 文字列を確認します。開いてもツールは実行されません。"
+  },
+  "readable_string": {
+    "message": "テキスト"
+  },
+  "reasonApiAbsent": {
+    "message": "このページでは WebMCP ランタイムが公開されていません。以下のチェックは Explorer が観測できた事実を示しますが、API が存在しない理由を特定するものではありません。"
+  },
+  "reasonApiCallRejected": {
+    "message": "ブラウザがこのドキュメントでの WebMCP 呼び出しを拒否しました: $1"
+  },
+  "reasonApiPartial": {
+    "message": "WebMCP オブジェクトは存在しますが、Explorer が期待するメソッドを公開していません。異なるバージョンの API が動作している可能性があります。"
+  },
+  "reasonInsecureContext": {
+    "message": "このページは保護されたコンテキスト（Secure Context）ではないため、WebMCP は公開されません。https で配信するか localhost を使用してください。"
+  },
+  "reasonOriginNotIsolated": {
+    "message": "このドキュメントはオリジン単位で分離されていません（Origin-Agent-Cluster: ?0 で配信されたか、document.domain が使用されています）。このブラウザバージョンでは WebMCP にオリジン分離が必須であり、すべての呼び出しが拒否されます（以下にブラウザのメッセージを引用）。新しいバージョンでは不要になりました。"
+  },
+  "reasonPolyfillActive": {
+    "message": "ポリフィルが WebMCP を提供しています。ネイティブ実装ではないため、動作が異なる場合があります。"
+  },
+  "reasonToolsPolicyBlocked": {
+    "message": "このフレームでは tools 権限がブロックされています。クロスオリジン iframe には埋め込み元ページで allow=\"tools\" の指定が必要です。"
+  },
+  "recipes_acceptContract": {
+    "message": "この現在の契約を使用"
+  },
+  "recipes_acceptContractHelp": {
+    "message": "このツールの現在のページ/フレームおよびスキーマのフィンガープリントを記録します。新しいスキーマに対して引数とチェックを確認してください。"
+  },
+  "recipes_activeRunEdit": {
+    "message": "定義を編集したり別のレビューを開始する前に、この実行を停止または完了してください。"
+  },
+  "recipes_addBinding": {
+    "message": "バインディングを追加"
+  },
+  "recipes_addBindingHelp": {
+    "message": "この明示的な参照をステップに追加します。構造、対象パス、順序は実行前に検証されます。"
+  },
+  "recipes_addInput": {
+    "message": "名前付き入力を追加"
+  },
+  "recipes_addInputHelp": {
+    "message": "再利用可能な値を追加し、わかりやすい名前と既定値を設定します。"
+  },
+  "recipes_addStep": {
+    "message": "ステップを追加"
+  },
+  "recipes_addStepHelp": {
+    "message": "確認済みの呼び出しを追加し、ツール・フレーム・引数を選択します。最大 20 ステップです。"
+  },
+  "recipes_argumentPath": {
+    "message": "引数フィールドのパス"
+  },
+  "recipes_argumentPathHelp": {
+    "message": "このバインディングが置き換える引数プレースホルダーへの JSON Pointer です。空のパスは引数オブジェクト全体を置き換えます。"
+  },
+  "recipes_arguments": {
+    "message": "リテラル引数"
+  },
+  "recipes_argumentsHelp": {
+    "message": "名前付き入力や前のステップの結果バインディングによって特定フィールドが置き換えられる前の、確認済みリテラル値です。"
+  },
+  "recipes_back": {
+    "message": "ツール一覧に戻る"
+  },
+  "recipes_backHelp": {
+    "message": "この下書きを保持してツール一覧に戻ります。実行中のレシピは一時停止または停止するまで継続します。"
+  },
+  "recipes_bindingDescription": {
+    "message": "$1 ← $2"
+  },
+  "recipes_bindingLimit": {
+    "message": "1ステップあたり最大50個の明示的バインディングを使用できます。"
+  },
+  "recipes_bindingResult": {
+    "message": "ステップ $1、結果 $2"
+  },
+  "recipes_bindingSource": {
+    "message": "値の取得元"
+  },
+  "recipes_bindingSourceHelp": {
+    "message": "名前付き入力または前のステップを選択します。自動推測は行われません。"
+  },
+  "recipes_bindings": {
+    "message": "入力または前の結果を使用"
+  },
+  "recipes_bindingsHelp": {
+    "message": "名前付き入力または前のステップの結果フィールドを、既存の引数フィールドに接続します。"
+  },
+  "recipes_bindingsIntro": {
+    "message": "先にリテラル引数内にプレースホルダーを追加してください。バインディングはその特定フィールドのみを置き換えます。JSON Pointer は /name や /items/0 の形式を使い、スラッシュは ~1、チルダは ~0 とエスケープします。前のステップのみ参照可能です。"
+  },
+  "recipes_check": {
+    "message": "結果のチェック"
+  },
+  "recipes_checkFailed": {
+    "message": "チェック失敗"
+  },
+  "recipes_checkHelp": {
+    "message": "任意で成功結果または特定フィールドの値を必須にします。ツールが失敗した場合、以前のエラー期待チェックが通ってもレシピは停止します。"
+  },
+  "recipes_check_fields": {
+    "message": "結果のフィールドを選択"
+  },
+  "recipes_check_keep": {
+    "message": "保存済みの期待結果を維持"
+  },
+  "recipes_check_none": {
+    "message": "追加チェックなし"
+  },
+  "recipes_check_ok": {
+    "message": "呼び出しが成功すること"
+  },
+  "recipes_chooseSource": {
+    "message": "名前付き入力または前の結果を選択"
+  },
+  "recipes_chooseTool": {
+    "message": "ツールを選択"
+  },
+  "recipes_confirmDelete": {
+    "message": "削除を確認"
+  },
+  "recipes_confirmDiscard": {
+    "message": "未保存の変更を破棄するには、もう一度「この下書きを破棄」をクリックしてください。"
+  },
+  "recipes_continueDraft": {
+    "message": "下書きを続ける"
+  },
+  "recipes_continueDraftHelp": {
+    "message": "編集中の内容を失わずに現在のレシピを再度開きます。"
+  },
+  "recipes_copied": {
+    "message": "プレビューをコピーしました。"
+  },
+  "recipes_copyExport": {
+    "message": "プレビューをコピー"
+  },
+  "recipes_copyExportHelp": {
+    "message": "確認したプレビューをそのままコピーします。レシピ JSON はコピー前に検証されます。"
+  },
+  "recipes_deleteRecipe": {
+    "message": "保存済みレシピを削除"
+  },
+  "recipes_deleteRecipeHelp": {
+    "message": "この保存済み定義を削除します。保持されている実行記録は別に残ります。"
+  },
+  "recipes_discard": {
+    "message": "この下書きを破棄"
+  },
+  "recipes_discardHelp": {
+    "message": "未完了の編集を破棄して「ツール」に戻ります。保存済みの定義はそのまま残ります。"
+  },
+  "recipes_down": {
+    "message": "下へ移動"
+  },
+  "recipes_downHelp": {
+    "message": "このステップを後ろへ移動します。実行前に依存する参照を確認してください。"
+  },
+  "recipes_downloadExport": {
+    "message": "プレビューをダウンロード"
+  },
+  "recipes_downloadExportHelp": {
+    "message": "確認したレシピ JSON または実行レポート Markdown をローカルファイルとして保存します。"
+  },
+  "recipes_exportNotice": {
+    "message": "共有前にこのプレビューを確認・編集してください。引数、結果、チェック、URL、ローカルモックの値が含まれている場合があります。Explorer は任意のページデータ内のすべての機密情報を自動判別することはできません。レシピのエクスポートに認証情報やサイトアクセス権限は含まれません。"
+  },
+  "recipes_exportPreview": {
+    "message": "エクスポートのプレビュー"
+  },
+  "recipes_exportPreviewHelp": {
+    "message": "ここで選択したデータを確認または削除できます。変更はこのエクスポートにのみ反映されます。レシピ JSON は有効な定義のままでなければなりません。"
+  },
+  "recipes_exportRecipe": {
+    "message": "レシピ定義をエクスポート"
+  },
+  "recipes_exportRecipeHelp": {
+    "message": "実行結果を含まない、再利用可能な定義のバージョン付き JSON を準備します。"
+  },
+  "recipes_exportRun": {
+    "message": "実行レポートをエクスポート"
+  },
+  "recipes_exportRunHelp": {
+    "message": "この観測された実行に関する編集可能な Markdown レポートを準備します。"
+  },
+  "recipes_failure": {
+    "message": "エラー"
+  },
+  "recipes_format_json": {
+    "message": "JSON 値"
+  },
+  "recipes_format_text": {
+    "message": "テキスト"
+  },
+  "recipes_guide": {
+    "message": "レシピの使い方"
+  },
+  "recipes_guideBody": {
+    "message": "ツールの結果から「レシピで使用」を選ぶか、ステップを追加してツールを選択します。フォームまたは厳密な JSON で引数を入力します。実行ごとに変更したい値に名前を付け、引数に明示的に接続します。後続のステップでは前の結果の JSON Pointer を参照できます。実行前に呼び出し順序とローカルオーバーライドを確認してください。停止してもページがすでに適用した操作は元に戻せません。"
+  },
+  "recipes_guideHelp": {
+    "message": "ステップ、名前付き入力、チェック、実行に関する短いガイドを表示します。"
+  },
+  "recipes_identity": {
+    "message": "サイト: $1 · フレームパス: $2 · 記録された契約: $3"
+  },
+  "recipes_importNotice": {
+    "message": "インポートは下書きを開くだけです。実行するには、現在のページが記録されたオリジン・フレーム位置・契約と一致している必要があります。"
+  },
+  "recipes_importRecipe": {
+    "message": "レシピ JSON をインポート"
+  },
+  "recipes_importRecipeHelp": {
+    "message": "レシピ定義を検証し、編集可能な下書きとして開きます。インポートによってツールが実行されることはありません。"
+  },
+  "recipes_importText": {
+    "message": "レシピ JSON"
+  },
+  "recipes_importTextHelp": {
+    "message": "バージョン 1 の WebMCP Explorer レシピを貼り付けます。テキストはデータとして検証され、コードとして実行されることはありません。"
+  },
+  "recipes_includeArguments": {
+    "message": "入力と引数を含める"
+  },
+  "recipes_includeArgumentsHelp": {
+    "message": "不要な場合はレポートから引数セクションを除外します（結果、エラー、チェック内に値が含まれる場合もあります）。"
+  },
+  "recipes_includeResults": {
+    "message": "生の結果データを含める"
+  },
+  "recipes_includeResultsHelp": {
+    "message": "レポートから生の結果セクションを除外します。チェックの説明やオーバーライドには観測データが残る場合があります。"
+  },
+  "recipes_inputDefault": {
+    "message": "既定値"
+  },
+  "recipes_inputDefaultHelp": {
+    "message": "保存される初期値です。下の実行時の値で定義自体を変えずに上書きできます。"
+  },
+  "recipes_inputFormat": {
+    "message": "値の形式"
+  },
+  "recipes_inputFormatHelp": {
+    "message": "テキストは文字列として保持されます。JSON は数値、真偽値、null、配列、オブジェクトを受け付けます。"
+  },
+  "recipes_inputLimit": {
+    "message": "1つのレシピには最大20個の名前付き入力を設定できます。"
+  },
+  "recipes_inputName": {
+    "message": "入力名"
+  },
+  "recipes_inputNameHelp": {
+    "message": "英字で始まる一意の名前を使用してください（英数字、アンダースコア、ハイフンが使用可能）。"
+  },
+  "recipes_inputSource": {
+    "message": "入力: $1"
+  },
+  "recipes_inputs": {
+    "message": "名前付き入力"
+  },
+  "recipes_inputsHelp": {
+    "message": "検索クエリなど再利用可能な値を定義し、ステップの引数に明示的にバインドします。"
+  },
+  "recipes_intro": {
+    "message": "AI モデルを使わずに、確認済みの複数のツール呼び出しを再利用します。前の結果から次の呼び出しへ値を渡し、何が起きたかを正確に表示します。"
+  },
+  "recipes_jsonOnly": {
+    "message": "このスキーマには JSON エディターが必要です。正確な引数は引き続き指定できます。"
+  },
+  "recipes_keepDraft": {
+    "message": "下書きに未保存の変更があります。別の定義を開く前に、下書きを再開して保存するか破棄してください。"
+  },
+  "recipes_mocked": {
+    "message": "ローカルモック"
+  },
+  "recipes_mockedHelp": {
+    "message": "Explorer は確認済みのローカルオーバーライドからこの結果を返しました。ページ上の実際のツールは呼び出されていません。"
+  },
+  "recipes_name": {
+    "message": "レシピ名"
+  },
+  "recipes_nameHelp": {
+    "message": "この手順で繰り返し実行したいタスクに名前を付けます。"
+  },
+  "recipes_newRecipe": {
+    "message": "新規レシピ"
+  },
+  "recipes_newRecipeHelp": {
+    "message": "このページで最大 20 件の手動呼び出しからなる空のシーケンスを開始します。"
+  },
+  "recipes_next": {
+    "message": "次のステップを実行"
+  },
+  "recipes_nextHelp": {
+    "message": "次の1ステップだけを実行し、それ以降の呼び出しの前に一時停止します。"
+  },
+  "recipes_noCompleteResult": {
+    "message": "このステップの完全な成功結果がまだありません。確認済みの JSON Pointer を入力してください（ステップ実行時に検証されます）。"
+  },
+  "recipes_openImport": {
+    "message": "検証して下書きを開く"
+  },
+  "recipes_openImportHelp": {
+    "message": "バージョン、サイズ、ツール、後方参照を検証します。ツールの呼び出しは実行されません。"
+  },
+  "recipes_openRun": {
+    "message": "実行記録を読む"
+  },
+  "recipes_openRunHelp": {
+    "message": "保持されている結果と中断の詳細を確認します。開いても実行は再開されません。"
+  },
+  "recipes_openSaved": {
+    "message": "レシピを開く"
+  },
+  "recipes_openSavedHelp": {
+    "message": "この保存済み定義を開き、実行前に編集・確認します。"
+  },
+  "recipes_pause": {
+    "message": "このステップの後に一時停止"
+  },
+  "recipes_pauseHelp": {
+    "message": "現在実行中のツールの完了を待ってから、次のステップの前に一時停止します。"
+  },
+  "recipes_pending": {
+    "message": "ステップ $1 は保留中または結果不明です（呼び出し $2）。ページ上のアクションはすでに実行された可能性があります。"
+  },
+  "recipes_pendingRule": {
+    "message": "このレシピを保存または確認する前に、編集中のフィールドルールを追加するか破棄してください。"
+  },
+  "recipes_pickBinding": {
+    "message": "観測された結果からフィールドを選択"
+  },
+  "recipes_pickBindingHelp": {
+    "message": "選択した前のステップの保持結果を参照します。切り詰められた結果からはフィールドのプレビューを取得できません。"
+  },
+  "recipes_recentRun": {
+    "message": "$1 · $2"
+  },
+  "recipes_recipesCount": {
+    "message": "定義 $1 件 · 実行 $2 回"
+  },
+  "recipes_recipesData": {
+    "message": "レシピと実行記録"
+  },
+  "recipes_refreshExport": {
+    "message": "プレビューを再生成"
+  },
+  "recipes_refreshExportHelp": {
+    "message": "プレビューへの編集を破棄し、現在選択されている定義またはレポートセクションで再生成します。"
+  },
+  "recipes_remaining": {
+    "message": "残りを実行"
+  },
+  "recipes_remainingHelp": {
+    "message": "残りの確認済みステップを順番に実行します。失敗、値の欠落、またはページの変更があると停止します。"
+  },
+  "recipes_removeBinding": {
+    "message": "バインディングを削除"
+  },
+  "recipes_removeBindingHelp": {
+    "message": "リテラル引数の値を残し、この入力・結果の参照を削除します。"
+  },
+  "recipes_removeInput": {
+    "message": "入力を削除"
+  },
+  "recipes_removeInputHelp": {
+    "message": "この名前付き入力を削除します。レシピを実行するには、これを参照しているバインディングを更新する必要があります。"
+  },
+  "recipes_removeStep": {
+    "message": "ステップを削除"
+  },
+  "recipes_removeStepHelp": {
+    "message": "この呼び出しを下書きから削除します。後続ステップからの参照がある場合は見直しが必要です。"
+  },
+  "recipes_resultExcerpt": {
+    "message": "保存された抜粋: $2 文字中 $1 文字。元の完全な結果はこのジャーナルには残っていません。"
+  },
+  "recipes_resultHeading": {
+    "message": "$1. $2 · $3"
+  },
+  "recipes_resultHeadingHelp": {
+    "message": "実際の結果、正確な引数、および選択されたフィールドのチェック結果を展開します。"
+  },
+  "recipes_resultPath": {
+    "message": "前の結果のフィールドパス"
+  },
+  "recipes_resultPathHelp": {
+    "message": "そのステップの完全な成功 JSON 結果内の JSON Pointer です。フィールドが存在しない場合は実行が停止します。"
+  },
+  "recipes_retention": {
+    "message": "定義はローカルに保存されます（最大30レシピ、各20ステップ、合計 2 MB まで）。実行ジャーナルは 3 MB 以内で最大8回分を保持し、完了済みの古い記録から順に削除されます。保存される結果は各20,000文字までです。Explorer やブラウザの再起動後に実行が自動再開されることはありません。"
+  },
+  "recipes_review": {
+    "message": "実行前にレビュー"
+  },
+  "recipes_reviewHeading": {
+    "message": "この実行をレビュー"
+  },
+  "recipes_reviewHelp": {
+    "message": "現在のページを再検出し、記録されたすべてのツール、フレーム、契約、入力、ローカルオーバーライドを検証します。"
+  },
+  "recipes_reviewNotice": {
+    "message": "呼び出しは $1 と現在のフレームドキュメントに紐付けられます。下のローカルモックを確認してください。後続の結果バインディングは元の結果が生成された時点で検証されます。このレビューは2分後に失効します。"
+  },
+  "recipes_reviewOverrides": {
+    "message": "ローカルオーバーライドとモック"
+  },
+  "recipes_reviewOverridesHelp": {
+    "message": "実行前に確認されたローカルオーバーライドの一覧です。空の場合はこれらのステップに対するオーバーライドはありません。"
+  },
+  "recipes_reviewStep": {
+    "message": "$2 · $3 · フレームパス $4"
+  },
+  "recipes_root": {
+    "message": "（ルート）"
+  },
+  "recipes_runHeading": {
+    "message": "実行: $1"
+  },
+  "recipes_runInputValue": {
+    "message": "実行時の値"
+  },
+  "recipes_runInputValueHelp": {
+    "message": "テキスト入力はそのまま文字列になります。それ以外の入力は JSON 構文を使用し、型が保持されます。"
+  },
+  "recipes_runInputs": {
+    "message": "この実行で使用する値"
+  },
+  "recipes_runInputsHelp": {
+    "message": "保存済みの既定値を変更せずに、今回の実行でのみ使う名前付き値を変更します。編集後は再度レビューを行ってください。"
+  },
+  "recipes_runStatus": {
+    "message": "$1 · $3 ステップ中 $2 ステップ記録済み"
+  },
+  "recipes_save": {
+    "message": "レシピを保存"
+  },
+  "recipes_saveHelp": {
+    "message": "観測された実行結果とは別に、定義をローカルに保存します。無効な箇所がある定義も引き続き編集できます。"
+  },
+  "recipes_saved": {
+    "message": "レシピをローカルに保存しました。"
+  },
+  "recipes_schema": {
+    "message": "現在のツールスキーマ"
+  },
+  "recipes_schemaHelp": {
+    "message": "現在の契約を確認します。記録された契約の更新には明示的な操作が必要です。"
+  },
+  "recipes_site": {
+    "message": "記録されたサイト: $1"
+  },
+  "recipes_siteRecipes": {
+    "message": "このサイトのレシピ"
+  },
+  "recipes_siteRecipesHelp": {
+    "message": "このページのオリジン向けに保存された手動シーケンスと最近の実行履歴を開きます。"
+  },
+  "recipes_stepHeading": {
+    "message": "$1. $2"
+  },
+  "recipes_stepHeadingHelp": {
+    "message": "このステップを展開して、対象ツール、引数、バインディング、任意のチェック条件を確認します。"
+  },
+  "recipes_stepLimit": {
+    "message": "1つのレシピには最大20ステップまで設定できます。より小さなレシピに分割してください。"
+  },
+  "recipes_stepSource": {
+    "message": "ステップ $1: $2"
+  },
+  "recipes_stop": {
+    "message": "停止"
+  },
+  "recipes_stopHelp": {
+    "message": "可能であれば現在の呼び出しをキャンセルし、シーケンスを停止します。完了したページ操作は元に戻せません。"
+  },
+  "recipes_success": {
+    "message": "成功"
+  },
+  "recipes_title": {
+    "message": "手動レシピ"
+  },
+  "recipes_toggleArguments": {
+    "message": "フォーム / JSON を切り替え"
+  },
+  "recipes_toggleArgumentsHelp": {
+    "message": "リテラル引数の編集方法を切り替えます。フォームを開く前に無効な JSON を修正する必要があります。"
+  },
+  "recipes_tool": {
+    "message": "ツールとフレーム"
+  },
+  "recipes_toolHelp": {
+    "message": "このステップが呼び出す対象のライブツールとフレームを正確に選択します。"
+  },
+  "recipes_toolMissing": {
+    "message": "互換性のあるライブツールが見つかりません。「ツール」に戻ってサイト権限を確認するか記録されたページを開き、更新してください。下書きと結果はここに保持されます。"
+  },
+  "recipes_toolOption": {
+    "message": "$1 · $2 · フレーム $3"
+  },
+  "recipes_unavailableRunControl": {
+    "message": "現在の実行状態ではこのコントロールを使用できません。中断または完了した実行には新しいレビューが必要です。"
+  },
+  "recipes_up": {
+    "message": "上へ移動"
+  },
+  "recipes_upHelp": {
+    "message": "このステップを前へ移動します。バインディングは引き続き前のステップのみを参照している必要があります。"
+  },
+  "recipes_use": {
+    "message": "レシピで使用"
+  },
+  "recipes_useHelp": {
+    "message": "この呼び出しのみを現在のタブのレシピ下書きに追加します。実行前に引数と依存関係を確認してください。"
+  },
+  "recipes_usedArguments": {
+    "message": "実際に送信された引数"
+  },
+  "recipes_usedArgumentsHelp": {
+    "message": "名前付き入力と前の結果のバインディング適用後に解決された引数を確認します。"
+  },
+  "registrationHelp": {
+    "message": "DOM から観測された登録タイプ。"
+  },
+  "retry": {
+    "message": "再試行"
+  },
+  "savedCalls_checkBadge": {
+    "message": "チェック"
+  },
+  "savedCalls_checkEqualsHelp": {
+    "message": "次のテキストと完全一致することを期待します: $1"
+  },
+  "savedCalls_checkErrorHelp": {
+    "message": "呼び出しが失敗することを期待します。"
+  },
+  "savedCalls_checkJsonHelp": {
+    "message": "次の JSON を期待します（キーの順序や空白は除外）: $1"
+  },
+  "savedCalls_checkOkHelp": {
+    "message": "呼び出しが成功することを期待します。"
+  },
+  "savedCalls_contractChanged": {
+    "message": "契約が変更されました"
+  },
+  "savedCalls_contractChangedHelp": {
+    "message": "この呼び出しの保存後にツールの説明・スキーマ・アノテーションが変更されましたが、引数は引き続き有効です。"
+  },
+  "savedCalls_delete": {
+    "message": "削除"
+  },
+  "savedCalls_deleteHelp": {
+    "message": "この保存済み呼び出しを削除します。"
+  },
+  "savedCalls_expectError": {
+    "message": "呼び出しが失敗する"
+  },
+  "savedCalls_expectHelp": {
+    "message": "この保存済み呼び出しをチェックとして扱うための期待結果です。期待結果がない場合は単なるブックマークになります。"
+  },
+  "savedCalls_expectLabel": {
+    "message": "期待結果"
+  },
+  "savedCalls_expectLastResult": {
+    "message": "前回の実行と同じ結果"
+  },
+  "savedCalls_expectNone": {
+    "message": "なし（ブックマーク）"
+  },
+  "savedCalls_expectOk": {
+    "message": "呼び出しが成功する"
+  },
+  "savedCalls_fail": {
+    "message": "✕ 失敗 — $1"
+  },
+  "savedCalls_load": {
+    "message": "読み込む"
+  },
+  "savedCalls_loadHelp": {
+    "message": "これらの引数をエディターに読み込みます。"
+  },
+  "savedCalls_namePlaceholder": {
+    "message": "この引数セットに名前を付ける"
+  },
+  "savedCalls_needsReview": {
+    "message": "要確認"
+  },
+  "savedCalls_needsReviewHelp": {
+    "message": "この呼び出しの保存後にツールのスキーマが変更され、引数が適合しなくなりました。読み込んで修正し、再保存してください。"
+  },
+  "savedCalls_noVerdict": {
+    "message": "判定なし — $1"
+  },
+  "savedCalls_none": {
+    "message": "このツールの保存済み呼び出しはまだありません。よく使う引数を保存しておくと、再読み込み後も保持され、スキーマ変更時に再検証されます。"
+  },
+  "savedCalls_notValid": {
+    "message": "エディター内の引数が無効です。保存する前に修正してください。"
+  },
+  "savedCalls_pass": {
+    "message": "✓ 合格 — $1"
+  },
+  "savedCalls_run": {
+    "message": "実行"
+  },
+  "savedCalls_runAll": {
+    "message": "すべてのチェックを実行"
+  },
+  "savedCalls_runAllHelp": {
+    "message": "期待結果が設定されたすべての保存済み呼び出しを順番に実行し、結果を判定します。確認が必要な呼び出しはスキップされ、その旨が表示されます。"
+  },
+  "savedCalls_runAllSummary": {
+    "message": "$1 件成功、$2 件失敗、$3 件スキップ（要確認）、$4 件は判定なしのブックマーク。"
+  },
+  "savedCalls_runBlocked": {
+    "message": "この呼び出しは実行前に確認が必要です: $1"
+  },
+  "savedCalls_runHelp": {
+    "message": "これらの引数で今すぐツールを実行します。"
+  },
+  "savedCalls_save": {
+    "message": "現在の引数を保存"
+  },
+  "savedCalls_saveHelp": {
+    "message": "エディター内の引数をこの名前で保存し、再読み込みやデプロイの後でも再実行できるようにします。"
+  },
+  "savedCalls_saved": {
+    "message": "保存しました。このツール用に $1 件保持されています。"
+  },
+  "savedCalls_savedAt": {
+    "message": "$1 に保存"
+  },
+  "savedCalls_skippedNeedsReview": {
+    "message": "スキップ — 要確認: $1"
+  },
+  "savedCalls_title": {
+    "message": "保存済みの呼び出しとチェック"
+  },
+  "savedCalls_titleCount": {
+    "message": "保存済みの呼び出し ($1)"
+  },
+  "schemaForm_anArrayOfObjectsIs": {
+    "message": "オブジェクトの配列は、データが意図せず失われないよう JSON として編集します。"
+  },
+  "schemaForm_editThisPropertyAsJson": {
+    "message": "このプロパティは JSON として編集してください。"
+  },
+  "schemaForm_explorerCannotTellWhatThis": {
+    "message": "この配列の要素型を判別できません。JSON として編集してください。"
+  },
+  "schemaForm_isRequired": {
+    "message": "$1 は必須です"
+  },
+  "schemaForm_mustBeNumber": {
+    "message": "$1 は数値でなければなりません"
+  },
+  "schemaForm_notSpecified": {
+    "message": "未指定"
+  },
+  "schemaForm_notValidJson": {
+    "message": "$1 は有効な JSON ではありません"
+  },
+  "schemaForm_oneValuePerLine": {
+    "message": "1行につき1つの値"
+  },
+  "schemaForm_required": {
+    "message": "必須"
+  },
+  "schemaForm_thisPropertyAllowsSeveralTypes": {
+    "message": "このプロパティは複数の型を許可しています。JSON として編集してください。"
+  },
+  "schemaForm_thisPropertyIsNestedToo": {
+    "message": "このプロパティはネストが深すぎるためフォームとして表示できません。"
+  },
+  "schemaForm_thisPropertyUsesAllofEdit": {
+    "message": "このプロパティは allOf を使用しています。JSON として編集してください。"
+  },
+  "schemaForm_thisPropertyUsesAnyofExplorer": {
+    "message": "このプロパティは anyOf を使用しています。Explorer はどの分岐を使うか推測しません。"
+  },
+  "schemaForm_thisPropertyUsesOneofExplorer": {
+    "message": "このプロパティは oneOf を使用しています。Explorer はどの分岐を使うか推測しません。"
+  },
+  "schemaForm_thisPropertyUsesRefWhich": {
+    "message": "このプロパティは Explorer が解決しない $$ref を使用しています。JSON として編集してください。"
+  },
+  "schemaForm_thisToolTakesNoArguments": {
+    "message": "このツールは引数を取りません。"
+  },
+  "schemaForm_tupleArraysAreEditedAs": {
+    "message": "タプル配列は JSON として編集します。"
+  },
+  "schemaTree_nestedTooDeeplyToExpand": {
+    "message": "ネストが深すぎるため展開できません。"
+  },
+  "schemaTree_rawJsonSchema": {
+    "message": "生の JSON Schema"
+  },
+  "schemaTree_theSchemaDeclaresNoProperties": {
+    "message": "スキーマにプロパティが宣言されていません。"
+  },
+  "schemaTree_thisToolDeclaresNoInput": {
+    "message": "このツールは入力スキーマを宣言していません。"
+  },
+  "sec_accepts_missing_required_fix": {
+    "message": "ツールのコード内で必須引数を検証し、不足している引数名を示すエラーを返してください。"
+  },
+  "sec_accepts_missing_required_title": {
+    "message": "必須引数なしの呼び出しをツールが受け入れました"
+  },
+  "sec_accepts_missing_required_why": {
+    "message": "必須プロパティを省略したにもかかわらず、ツールが正常応答しました。宣言された契約がコードで強制されていません。"
+  },
+  "sec_accepts_out_of_schema_input_fix": {
+    "message": "ツールのコード内で各引数を検証し、型が誤っている場合はわかりやすいエラーを返してください。"
+  },
+  "sec_accepts_out_of_schema_input_title": {
+    "message": "誤った型の引数をツールが受け入れました"
+  },
+  "sec_accepts_out_of_schema_input_why": {
+    "message": "スキーマが宣言する型とは異なる型の値を送信しましたが、ツールは有効な入力として応答しました。ブラウザは引数を検証しないため（実測、WMP-0046）、ツールのコードが唯一の検証層となります（仕様 §6.3.1.3）。"
+  },
+  "sec_accepts_unbounded_input_fix": {
+    "message": "スキーマで maxLength によりパラメーターを制限し、コード内でも強制してください。"
+  },
+  "sec_accepts_unbounded_input_title": {
+    "message": "10,000文字の文字列をツールが受け入れました"
+  },
+  "sec_accepts_unbounded_input_why": {
+    "message": "maxLength のない自由入力パラメーターが非常に長い値を受け入れました。長さ制限を設けることで、注入された指示が利用できる余地を減らせます（仕様 §6.4.2）。"
+  },
+  "sec_accepts_unknown_property_fix": {
+    "message": "未知のプロパティはコード内で意図的に無視または拒否してください。"
+  },
+  "sec_accepts_unknown_property_title": {
+    "message": "未知のプロパティをツールが受け入れました"
+  },
+  "sec_accepts_unknown_property_why": {
+    "message": "宣言されていない追加プロパティが受け入れられました。Chrome のガイダンスでは緩やかなスキーマと厳格なコードの組み合わせも認められていますが、実装意図の確認に役立ちます。"
+  },
+  "sec_consequential_without_hint_fix": {
+    "message": "annotations.consequentialHint を true に設定するか、ユーザーが最後に確定するプロセスの開始のみを行う場合はツール名を変更してください。"
+  },
+  "sec_consequential_without_hint_title": {
+    "message": "consequentialHint のない重大なアクション"
+  },
+  "sec_consequential_without_hint_why": {
+    "message": "名前や説明に支払い・送信・予約・削除などユーザーに重大な結果をもたらす動詞が含まれています。consequentialHint がないと、エージェントが確認なしに実行する恐れがあります（仕様 §6.4.5、§6.3.2）。"
+  },
+  "sec_convention_llms_txt_present_fix": {
+    "message": "配信する場合は内容を正確に保ってください（このファイルは任意です）。"
+  },
+  "sec_convention_llms_txt_present_title": {
+    "message": "llms.txt ファイルが配信されています"
+  },
+  "sec_convention_llms_txt_present_why": {
+    "message": "llms.txt は機械可読なサイト概要のための非公式な慣例で、Lighthouse のエージェント監査などで確認されます。WebMCP のブラウザ API とは無関係です。"
+  },
+  "sec_convention_manifest_invalid_fix": {
+    "message": "有効な JSON を配信するか、ファイルを削除してください。"
+  },
+  "sec_convention_manifest_invalid_title": {
+    "message": "/.well-known/webmcp ファイルが配信されていますが JSON ではありません"
+  },
+  "sec_convention_manifest_invalid_why": {
+    "message": "パスは応答を返しますが、本文を JSON として解析できません。この慣例を期待するリーダーは何も利用できません。"
+  },
+  "sec_convention_manifest_present_fix": {
+    "message": "ページが実際に登録するツールと整合性を保つか、削除してください（標準規格ではありません）。"
+  },
+  "sec_convention_manifest_present_title": {
+    "message": "/.well-known/webmcp マニフェストが配信されています"
+  },
+  "sec_convention_manifest_present_why": {
+    "message": "コミュニティ慣例のディスカバリーマニフェストが見つかりました。W3C CG ドラフトの一部ではありませんが、一部の監査ツールやディレクトリが参照します。ブラウザ API を使うエージェントには不要です。"
+  },
+  "sec_convention_permissions_policy_absent_fix": {
+    "message": "WebMCP を使用しないページでは Permissions-Policy: tools=() を送信してください。使用している場合は対応不要です。"
+  },
+  "sec_convention_permissions_policy_absent_title": {
+    "message": "ページ応答に tools の Permissions-Policy がありません"
+  },
+  "sec_convention_permissions_policy_absent_why": {
+    "message": "ヘッダーがない場合は既定値が適用され、ページおよび同一オリジンのフレームで WebMCP が許可されます。WebMCP を使わないページで Permissions-Policy: tools=() を送信すると、注入されたスクリプトによるツール登録を防げます（仕様 §6.4.1）。"
+  },
+  "sec_convention_permissions_policy_fix": {
+    "message": "許可リストが意図どおりか確認してください。"
+  },
+  "sec_convention_permissions_policy_title": {
+    "message": "ページの Permissions-Policy に tools 機能が指定されています"
+  },
+  "sec_convention_permissions_policy_why": {
+    "message": "応答ヘッダーが WebMCP を明示的に制限または委譲しています（仕様 §6.4.1）。これは WebMCP を使用しない場所で無効化するために仕様が推奨する仕組みです。"
+  },
+  "sec_cross_origin_frame_tools_fix": {
+    "message": "埋め込みが意図したものか確認し、フレームのオリジンへのアクセスを Explorer に許可してツールを監査してください。"
+  },
+  "sec_cross_origin_frame_tools_title": {
+    "message": "別オリジンのフレームに由来するツール"
+  },
+  "sec_cross_origin_frame_tools_why": {
+    "message": "別オリジンのフレームがこのページ上でツールを公開しています。エージェントにはあなたのツールと並んで見えます。"
+  },
+  "sec_debugging_tool_exposed_fix": {
+    "message": "デバッグ用ツールは開発ビルドのみ、または開発者向け設定の背後でのみ登録してください。"
+  },
+  "sec_debugging_tool_exposed_title": {
+    "message": "このページでデバッグ用ツールが公開されています"
+  },
+  "sec_debugging_tool_exposed_why": {
+    "message": "annotations.debugging は開発者向けツールであることを示しますが、公開ページ上ではどのエージェントからも呼び出し可能です。"
+  },
+  "sec_delegated_tools_policy_fix": {
+    "message": "訪問者に代わって操作を行うことを信頼できる埋め込みにのみ allow=\"tools\" を維持してください。"
+  },
+  "sec_delegated_tools_policy_title": {
+    "message": "ページが別のオリジンに tools ポリシーを委譲しています"
+  },
+  "sec_delegated_tools_policy_why": {
+    "message": "iframe に allow=\"tools\" が指定されています。埋め込まれたオリジンがこのページでツールを登録できます（仕様 §6.4.1 で規定。Chrome は信頼できるオリジンにのみ許可することを推奨しています）。"
+  },
+  "sec_high_risk_read_without_hint_fix": {
+    "message": "機密データを開示する読み取りツールには consequentialHint の設定を検討し、返却データを最小限に抑えてください。"
+  },
+  "sec_high_risk_read_without_hint_title": {
+    "message": "consequentialHint のない機密データの読み取り"
+  },
+  "sec_high_risk_read_without_hint_why": {
+    "message": "このツールは住所、残高、認証情報、健康データなどを読み取ります。読み取り専用のデータ開示に確認を求めるべきかは仕様上の未決課題（#331）ですが、解決するまではヒントを宣言しておくのが安全な選択です。"
+  },
+  "sec_legacy_host_fix": {
+    "message": "document.modelContext を使用してください。"
+  },
+  "sec_legacy_host_title": {
+    "message": "旧来の navigator.modelContext ホストが使用されています"
+  },
+  "sec_legacy_host_why": {
+    "message": "API は document.modelContext に移行しました。navigator エイリアスに依存するページは互換パスに頼っています。"
+  },
+  "sec_no_tools_policy_open_fix": {
+    "message": "WebMCP を使用しないページからは Permissions-Policy: tools=() を送信してください。"
+  },
+  "sec_no_tools_policy_open_title": {
+    "message": "ツールはありませんが、このページで WebMCP が開放されたままです"
+  },
+  "sec_no_tools_policy_open_why": {
+    "message": "ツールを公開していないページでも、注入されたスクリプトによってツールを登録される可能性があります。Permissions-Policy: tools=() はスクリプト実行前にドキュメントとフレームの API を閉じます（仕様 §6.4.1）。"
+  },
+  "sec_opaque_origin_tool_fix": {
+    "message": "フレームに正規のオリジンを与えるか、ツールを削除してください。"
+  },
+  "sec_opaque_origin_tool_title": {
+    "message": "不透明なオリジン（opaque origin）からのツール"
+  },
+  "sec_opaque_origin_tool_why": {
+    "message": "サンドボックス化されたフレームや about:blank フレームは不透明なオリジンを持つため、ツールを特定のサイトに帰属させられません。"
+  },
+  "sec_output_directive_fix": {
+    "message": "エージェントへの指示文ではなくデータを返してください。他者が作成したテキストを含む結果には untrustedContentHint を設定してください。"
+  },
+  "sec_output_directive_title": {
+    "message": "結果がエージェントへの指示のように読めます"
+  },
+  "sec_output_directive_why": {
+    "message": "ツールの出力にエージェントへ向けた文言が含まれています。出力インジェクション（仕様 §6.3.1.2）は、呼び出し後にページやユーザーがエージェントを誘導する手法です。"
+  },
+  "sec_output_markup_fix": {
+    "message": "プレーンなデータを返し、整形はエージェントに任せてください。"
+  },
+  "sec_output_markup_title": {
+    "message": "結果内のマークアップまたはテンプレートトークン"
+  },
+  "sec_output_markup_why": {
+    "message": "結果に含まれる HTML タグ、コードフェンス、プロンプトテンプレートのトークンは、注入された指示の媒介になります。"
+  },
+  "sec_output_over_budget_fix": {
+    "message": "返却量を減らすか、ページネーションを行うか、エージェントが辿れる参照を返してください。"
+  },
+  "sec_output_over_budget_title": {
+    "message": "結果が 1.5K 文字の出力バジェットを超えています"
+  },
+  "sec_output_over_budget_why": {
+    "message": "Chrome のガイダンスではツール出力の目安を約1,500文字としています。大きすぎる結果はコンテキストを消費し、出力インジェクションの表面積を広げます。"
+  },
+  "sec_output_personal_data_fix": {
+    "message": "タスクに必要な最小限のデータのみを返し、個人情報やユーザー作成データを含む結果には untrustedContentHint を設定してください。"
+  },
+  "sec_output_personal_data_title": {
+    "message": "結果に個人データが含まれている可能性があります"
+  },
+  "sec_output_personal_data_why": {
+    "message": "untrustedContentHint のない有効な呼び出しから、メールアドレス・電話番号・カード番号らしき値が返されました。この結果はツールを呼び出したエージェントに送信されます（仕様 §6.3.3、OWASP MCP10）。"
+  },
+  "sec_probe_call_failed_fix": {
+    "message": "スキーマが示唆する入力例で動作するようにするか、スキーマ（enum、format、examples）を厳密にしてください。"
+  },
+  "sec_probe_call_failed_title": {
+    "message": "生成された有効な引数でツールが失敗しました"
+  },
+  "sec_probe_call_failed_why": {
+    "message": "自身のスキーマ（必須フィールドとデフォルト値）から生成された引数で呼び出したところ、ツールがエラーを返しました。エージェントも最初の呼び出しで同じエラーに遭遇します。"
+  },
+  "sec_re_registered_in_session_fix": {
+    "message": "以前に取得したスナップショットと現在の契約を比較し（ツール → スナップショット）、可能な限りドキュメントごとに1回だけ登録してください。"
+  },
+  "sec_re_registered_in_session_title": {
+    "message": "このセッション中に削除され再登録されました"
+  },
+  "sec_re_registered_in_session_why": {
+    "message": "消えてから再び現れたツールは、同じコンポーネントの再マウントである場合もあれば、同じ名前で異なる契約に差し替えられた場合もあります（arXiv 2606.06387、仕様 Issue #92）。タイムラインは変化を検出しましたが、契約内容の自動比較は行っていません。"
+  },
+  "sec_readonly_claim_on_mutating_verb_fix": {
+    "message": "readOnlyHint を削除するか、実際の動作に合わせてツール名を変更し、変更ごとにヒントを見直してください。"
+  },
+  "sec_readonly_claim_on_mutating_verb_title": {
+    "message": "状態変更を示す名前のツールに readOnlyHint が付いています"
+  },
+  "sec_readonly_claim_on_mutating_verb_why": {
+    "message": "エージェントは読み取り専用ツールに対して確認を省略することがあります。delete、pay、update などの動詞に読み取り専用ラベルが付いている場合、古い記述か誤りであり、仕様でも宣言された意図は検証不可能とされています（§6.3.2）。"
+  },
+  "sec_registered_more_than_once_fix": {
+    "message": "ドキュメントごとに1回だけ登録するか、再登録の前に AbortSignal で明示的に登録解除してください。"
+  },
+  "sec_registered_more_than_once_title": {
+    "message": "この名前に対する複数の registerTool() 呼び出し"
+  },
+  "sec_registered_more_than_once_why": {
+    "message": "計測モードがこのドキュメント内でこのツールの登録呼び出しを複数回検出しました。重複登録は置き換え攻撃で使われる仕組みであると同時に、再描画される UI コンポーネントでも発生します。"
+  },
+  "sec_sensitive_parameter_fix": {
+    "message": "パラメーターを削除し、ユーザー自身の操作でページ UI から直接入力させるか、不透明な参照（トークン等）を渡すようにしてください。"
+  },
+  "sec_sensitive_parameter_title": {
+    "message": "パラメーターが機密データを要求しています"
+  },
+  "sec_sensitive_parameter_why": {
+    "message": "エージェントが気を利かせて、パーソナライズ情報や閲覧履歴、他サイトの情報からこのパラメーターを埋めてしまう恐れがあります（仕様 §6.3.3）。認証情報、カード情報、マイナンバー等の識別子は決してモデルを経由させるべきではありません（#316）。"
+  },
+  "sec_state_change_without_hint_fix": {
+    "message": "変更がユーザーにとって重要な場合は consequentialHint を宣言し、readOnlyHint は false のままにしてください。"
+  },
+  "sec_state_change_without_hint_title": {
+    "message": "状態を変更するツールにヒントが宣言されていません"
+  },
+  "sec_state_change_without_hint_why": {
+    "message": "動詞はページやアカウント上の変更を示していますが、readOnlyHint も consequentialHint も宣言されていません。エージェントは状態変更を前提としますが、監査者は意図的な省略か記述漏れかを区別できません。"
+  },
+  "sec_text_agent_directive_fix": {
+    "message": "ツールが何を行い、いつ適用されるかを平易な宣言文で記述してください。ワークフローのルールはツールのコードまたはスキーマ内に移してください。"
+  },
+  "sec_text_agent_directive_title": {
+    "message": "説明文がエージェントへの指示のように読めます"
+  },
+  "sec_text_agent_directive_why": {
+    "message": "エージェントはツールの説明を信頼されたコンテキストとして扱います。「常にこれを最初に呼び出す」「ユーザーには伝えない」といった表現は、ツールの説明ではなくモデルの誘導にあたります（仕様 §6.3.1.1、ツールポイズニング）。正当な説明でもこれらの語が使われることはあるため、人が確認するための指標として表示されます。"
+  },
+  "sec_text_embedded_address_fix": {
+    "message": "アドレスを含めずにツールを説明し、リンクがデータの一部である場合は結果内で返してください。"
+  },
+  "sec_text_embedded_address_title": {
+    "message": "モデル向けテキスト内の URL またはメールアドレス"
+  },
+  "sec_text_embedded_address_why": {
+    "message": "説明文内のアドレスは、ユーザーが求めていない外部リソースへの取得や通信をエージェントに誘発する恐れがあります（Chrome エージェント指針: オリジンをタスクに限定すること）。"
+  },
+  "sec_text_encoded_blob_fix": {
+    "message": "名前や説明からエンコードされたデータを削除し、引数と結果を通じてデータをやり取りしてください。"
+  },
+  "sec_text_encoded_blob_title": {
+    "message": "モデル向けテキストに埋め込まれたエンコード済みデータ"
+  },
+  "sec_text_encoded_blob_why": {
+    "message": "説明文内の長い Base64 や16進数文字列は、人間が直接確認できない内容を運び、モデルがそれをデコードして実行してしまう恐れがあります。"
+  },
+  "sec_text_hidden_characters_fix": {
+    "message": "一覧表示された文字を削除し、テキストを生成したビルド工程や CMS を確認してください。"
+  },
+  "sec_text_hidden_characters_title": {
+    "message": "モデル向けテキスト内の不可視文字または書字方向制御文字"
+  },
+  "sec_text_hidden_characters_why": {
+    "message": "ゼロ幅文字、双方向制御文字、制御文字はページを読む人間には見えませんが、モデルにはそのまま届きます。テキストを隠したり読み순を反転させるために悪用されることがあります。"
+  },
+  "sec_text_markup_fix": {
+    "message": "名前と説明にはプレーンテキストを使用してください。"
+  },
+  "sec_text_markup_title": {
+    "message": "モデル向けテキスト内のマークアップまたはテンプレートトークン"
+  },
+  "sec_text_markup_why": {
+    "message": "説明文内の HTML タグ、コードフェンス、プロンプトテンプレートのトークンは命令インジェクションによく使われる媒体であり、ツールの説明には本来不要です。"
+  },
+  "sec_text_mixed_scripts_fix": {
+    "message": "単語を単一の文字体系で書き直してください。多言語テキストであっても、1つの単語内では単一の文字体系を保つようにしてください。"
+  },
+  "sec_text_mixed_scripts_title": {
+    "message": "単語内にラテン文字と酷似したキリル文字またはギリシャ文字が混在しています"
+  },
+  "sec_text_mixed_scripts_why": {
+    "message": "見た目が酷似した文字（ホモグラフ）を使うと、人間には同じ単語に見えてもモデルや検証器には別の文字列として認識されます（Unicode TR36）。"
+  },
+  "sec_text_over_budget_fix": {
+    "message": "バジェット内に収まるよう短縮し、詳細はスキーマのパラメーター説明に記述してください。"
+  },
+  "sec_text_over_budget_title": {
+    "message": "エージェントが適用する文字数バジェットを超えるテキスト"
+  },
+  "sec_text_over_budget_why": {
+    "message": "Chrome のガイダンスでは説明を500文字、パラメーター説明を150文字、名前を30文字までとしています。長すぎるテキストは切り詰められたり、余白に指示を隠されるリスクが高まります（仕様 §6.4.2）。"
+  },
+  "sec_third_party_registration_fix": {
+    "message": "スクリプトを監査し、バージョンを固定するか自サイトオリジンから配信してください。また本番環境での登録をログに記録してください。"
+  },
+  "sec_third_party_registration_title": {
+    "message": "別オリジンのスクリプトによって登録されました"
+  },
+  "sec_third_party_registration_why": {
+    "message": "このツールはページとは異なるオリジン（CDN、エッジブリッジ、プラグインなど）から配信されたコードによって登録されました。ページ上のどのスクリプトもツールを追加・置換できます（セッション中ツール注入、arXiv 2606.06387）。"
+  },
+  "sec_ugc_without_untrusted_hint_fix": {
+    "message": "他者が作成したテキストを返すツールでは annotations.untrustedContentHint を true に設定してください。"
+  },
+  "sec_ugc_without_untrusted_hint_title": {
+    "message": "untrustedContentHint のない第三者作成コンテンツ"
+  },
+  "sec_ugc_without_untrusted_hint_why": {
+    "message": "レビュー、コメント、メッセージ、取得したページ本文などには、エージェントを狙った指示が含まれる場合があります（出力インジェクション、仕様 §6.3.1.2）。untrustedContentHint は結果を純粋なデータとして扱うようエージェントに伝えます。"
+  },
+  "sec_unbounded_string_fix": {
+    "message": "該当する場合は maxLength、enum、または format を追加し、いずれの場合もツールのコード内で検証を行ってください。"
+  },
+  "sec_unbounded_string_title": {
+    "message": "長さ制限のない自由入力パラメーター"
+  },
+  "sec_unbounded_string_why": {
+    "message": "制限のない文字列は、注入された指示が運べる情報量を広げてしまいます（仕様 §6.4.2）。Chrome はコード内での厳格な検証を推奨しており、スキーマ内の maxLength や enum はエージェントに適切な入力形式を伝えます。"
+  },
+  "security_axis_environment": {
+    "message": "環境"
+  },
+  "security_axis_governance": {
+    "message": "ガバナンス"
+  },
+  "security_axis_injection": {
+    "message": "インジェクション表面"
+  },
+  "security_axis_lifecycle": {
+    "message": "ライフサイクル"
+  },
+  "security_axis_privacy": {
+    "message": "プライバシー"
+  },
+  "security_axis_surface": {
+    "message": "公開面"
+  },
+  "security_cardBadgeHelp": {
+    "message": "このツールのセキュリティ検出結果の中で最も高い重要度です。根拠を確認するには「セキュリティ」セクションを開いてください。"
+  },
+  "security_clean": {
+    "message": "検出事項はありません。以下のルールが評価され、観測できなかった項目も一覧表示されています。"
+  },
+  "security_coverage": {
+    "message": "ツール $1 件 · ルール $2 件 · 検出 $3 件（観測 $4、指標 $5）"
+  },
+  "security_coverageHelp": {
+    "message": "監査範囲: ページ上のツール数、各ツールに評価されたルール数、および性質別の検出数です。"
+  },
+  "security_detailIntro": {
+    "message": "このツールのテキスト、ヒント、スキーマ、来歴に関する検出結果です。指標（インジケーター）は確認すべきパターンであり、確定的な証拠ではありません。"
+  },
+  "security_detailNone": {
+    "message": "このツールに関する検出事項はありません。"
+  },
+  "security_detailTitle": {
+    "message": "セキュリティ監査"
+  },
+  "security_detailTitleCount": {
+    "message": "セキュリティ監査 ($1)"
+  },
+  "security_evidence": {
+    "message": "根拠"
+  },
+  "security_exportLabel": {
+    "message": "このセキュリティレビューをエクスポート"
+  },
+  "security_exportNote": {
+    "message": "ページ由来の証拠、修正案、未確認項目、暫定スコアを含みます。共有前に確認してください。"
+  },
+  "security_filterAxis": {
+    "message": "この種類の検出項目のみを表示します。"
+  },
+  "security_filterSeverity": {
+    "message": "この重要度の検出項目のみを表示します。"
+  },
+  "security_fix": {
+    "message": "対処方法"
+  },
+  "security_frame": {
+    "message": "フレーム #$1"
+  },
+  "security_hideReviewed": {
+    "message": "確認済みを隠す"
+  },
+  "security_hideReviewedHelp": {
+    "message": "確認済みにした検出項目を非表示にします。ツールの契約が変更されると再表示されます。"
+  },
+  "security_intro": {
+    "message": "可視のツール宣言を証拠と出典付きで受動的に評価します。指標は攻撃の証明ではありません。評価と修正案生成はツールを実行しません。オリジン検査と能動テストには以下での明示操作が必要です。"
+  },
+  "security_itemHelp": {
+    "message": "開いて根拠、重要性の理由、対処法、出典を確認します。"
+  },
+  "security_markReviewed": {
+    "message": "確認済みにする"
+  },
+  "security_markReviewedHelp": {
+    "message": "このツールと契約に対するこの検出項目を確認済みとして記憶します。契約が変更されると再表示されます（このデバイスにのみ保存）。"
+  },
+  "security_natureHelp": {
+    "message": "観測: Explorer が事実を直接確認しました。指標: 問題を示すことが多いパターンです（根拠を読んで判断してください）。"
+  },
+  "security_natureIndicator": {
+    "message": "指標"
+  },
+  "security_natureObserved": {
+    "message": "観測"
+  },
+  "security_noMatch": {
+    "message": "これらのフィルターに一致する検出項目はありません。"
+  },
+  "security_noTools": {
+    "message": "このページにはレビュー対象のツールがありません。"
+  },
+  "security_no_lifecycle": {
+    "message": "ライフサイクル: このタブのライブタイムラインにはまだイベントがありません。「タイムライン」を開くか、ページが変化する間このセクションを開いたままにしてください。"
+  },
+  "security_no_refused_frames": {
+    "message": "ブラウザが WebMCP 呼び出しを拒否したフレーム: $1。"
+  },
+  "security_no_registration_provenance": {
+    "message": "登録の来歴: このサイトでは計測モードが無効なため、どのスクリプトが各ツールを登録したか判別できません。「設定」で有効にしてページを再読み込みしてください。"
+  },
+  "security_no_ungranted_origins": {
+    "message": "Explorer が検査できないオリジンのフレーム: $1。ツールを監査するにはステータスバーからアクセスを許可してください。"
+  },
+  "security_notObservable": {
+    "message": "ここでは観測不可"
+  },
+  "security_openTool": {
+    "message": "ツールを開く"
+  },
+  "security_openToolHelp": {
+    "message": "このツールの詳細（スキーマ、チェック、実行）を開きます。"
+  },
+  "security_pageFinding": {
+    "message": "このページ"
+  },
+  "security_reviewedBadge": {
+    "message": "確認済み"
+  },
+  "security_sevHelp": {
+    "message": "指標が正しい場合の潜在的な影響です。証明や総合スコアとは異なります。"
+  },
+  "security_sev_critical": {
+    "message": "重大"
+  },
+  "security_sev_high": {
+    "message": "高"
+  },
+  "security_sev_info": {
+    "message": "情報"
+  },
+  "security_sev_low": {
+    "message": "低"
+  },
+  "security_sev_medium": {
+    "message": "中"
+  },
+  "security_sources": {
+    "message": "出典"
+  },
+  "security_title": {
+    "message": "セキュリティ"
+  },
+  "security_unmarkReviewed": {
+    "message": "未確認に戻す"
+  },
+  "security_unmarkReviewedHelp": {
+    "message": "この検出項目を未確認に戻します。"
+  },
+  "security_why": {
+    "message": "重要な理由"
+  },
+  "settings_about": {
+    "message": "情報"
+  },
+  "settings_agentAccess": {
+    "message": "外部エージェント連携"
+  },
+  "settings_agentAccessAllowed": {
+    "message": "許可済み"
+  },
+  "settings_agentAccessBody": {
+    "message": "どのウェブサイトが現在のページについて Explorer に問い合わせできるかを設定します。マニフェストで宣言され、かつここでオンにしたオリジンにのみ応答します。"
+  },
+  "settings_agentAccessLast": {
+    "message": "最後に確認されたリクエスト: $1 が「$2」を要求しました。"
+  },
+  "settings_agentAccessNeedPermission": {
+    "message": "エージェントアクセスを有効にするには、そのサイトに対する Chrome の権限が必要です。もう一度試して確認ダイアログを許可してください。"
+  },
+  "settings_agentAccessNone": {
+    "message": "このビルドでは Explorer と通信可能なウェブサイトは宣言されていません。"
+  },
+  "settings_agentAccessOff": {
+    "message": "取り消す"
+  },
+  "settings_agentAccessOffHelp": {
+    "message": "$1 への応答を即座に停止します。次回からのリクエストは拒否されます。"
+  },
+  "settings_agentAccessOn": {
+    "message": "許可する"
+  },
+  "settings_agentAccessOnHelp": {
+    "message": "$1 が自身のページで宣言されたツールの一覧取得と呼び出しを Explorer に要求できるようにします。それ以外の情報は公開されません。"
+  },
+  "settings_agentConfigured": {
+    "message": "設定済み: $1"
+  },
+  "settings_agentLab": {
+    "message": "エージェントラボ"
+  },
+  "settings_agentLabBody": {
+    "message": "プロバイダー、接続先、モデル、予算は端末に保存されます。キーにはセッションメモリーまたは任意の暗号化保管庫を使用します。"
+  },
+  "settings_agentNotConfigured": {
+    "message": "AI が選択されていません。ツール、チェック、レシピは AI なしで動作します。"
+  },
+  "settings_agentSessions": {
+    "message": "エージェント会話履歴"
+  },
+  "settings_agentSessionsCount": {
+    "message": "$2 サイトで $1 件の会話"
+  },
+  "settings_allHttp": {
+    "message": "すべての http ウェブサイト"
+  },
+  "settings_allHttps": {
+    "message": "すべての https ウェブサイト"
+  },
+  "settings_allSites": {
+    "message": "すべてのウェブサイト（http および https）"
+  },
+  "settings_allowAll": {
+    "message": "すべてのサイトで許可"
+  },
+  "settings_allowAllHelp": {
+    "message": "サイトごとに個別に有効化せず、すべての http および https サイトを検査できるようにします（Chrome の確認が表示されます）。"
+  },
+  "settings_auditedLastCheck": {
+    "message": "最終再チェック $1: 新規 $2 件"
+  },
+  "settings_auditedSite": {
+    "message": "$1 — ベースライン $2、検出 $3 件"
+  },
+  "settings_auditedSites": {
+    "message": "監査済みサイト"
+  },
+  "settings_bundle": {
+    "message": "設定のバックアップと移行"
+  },
+  "settings_bundleApplied": {
+    "message": "適用完了: コネクター $1 件、プロンプト $2 件。安全チェックにより除外されたコネクター: $3 件（$3 = 0 は除外なし）。"
+  },
+  "settings_bundleBody": {
+    "message": "プロバイダー設定、コネクター、プロンプトをエクスポートします。キー、パスフレーズ、暗号化保管庫は含まれません。認証情報はインポート後に別途設定してください。"
+  },
+  "settings_bundleExport": {
+    "message": "設定ファイルをダウンロード"
+  },
+  "settings_bundleExportHelp": {
+    "message": "現在の設定を1つの JSON ファイルとして保存します。設計上、キーは一切含まれません。"
+  },
+  "settings_bundleImport": {
+    "message": "設定を適用"
+  },
+  "settings_bundleImportButtonHelp": {
+    "message": "現在のコネクターとプロンプトをファイルの内容で置き換え、プロバイダー選択を適用します。すべての項目は適用前に検証されます。"
+  },
+  "settings_bundleImportHelp": {
+    "message": "ファイルは1項目ずつ検証されます。キーを平文で送信してしまうエンドポイントを持つコネクターは除外され、残りが適用されます。"
+  },
+  "settings_bundleImportPlaceholder": {
+    "message": "webmcp-explorer-settings ファイルの JSON 全体をここに貼り付けてください"
+  },
+  "settings_bundleImportTitle": {
+    "message": "設定ファイルを貼り付けて適用"
+  },
+  "settings_bundleIntro": {
+    "message": "1つのファイルでプロバイダー選択、バジェット、カスタムコネクター、プロンプトを別のブラウザや PC へ移行できます。"
+  },
+  "settings_bundleNotJson": {
+    "message": "有効な JSON ではありません。最初の { から最後の } までファイル全体を貼り付けてください。"
+  },
+  "settings_calls": {
+    "message": "$1 回の呼び出し"
+  },
+  "settings_clear": {
+    "message": "消去"
+  },
+  "settings_clearAll": {
+    "message": "保存データとキーを消去"
+  },
+  "settings_clearAllHelp": {
+    "message": "保存した作業、設定、セッションキー、暗号化保管庫を消去します。再実行を防ぐため呼び出し記録は保持します。"
+  },
+  "settings_clearHelp": {
+    "message": "$1 を削除します。実行前にもう一度確認を求めます。"
+  },
+  "settings_cleared": {
+    "message": "消去しました。"
+  },
+  "settings_confirm": {
+    "message": "確認: 消去する"
+  },
+  "settings_confirmAll": {
+    "message": "確認: すべて消去する"
+  },
+  "settings_confirmForget": {
+    "message": "確認: 削除する"
+  },
+  "settings_confirmHelp": {
+    "message": "削除するには数秒以内にもう一度クリックしてください。クリックしなければ何も削除されません。"
+  },
+  "settings_connectors": {
+    "message": "カスタムコネクタ"
+  },
+  "settings_connectorsCount": {
+    "message": "コネクター $1 件"
+  },
+  "settings_data": {
+    "message": "保存データ"
+  },
+  "settings_dataBody": {
+    "message": "このChromeプロファイルの保存データを管理します。拡張機能をアンインストールすると、そのローカルデータが削除されます。"
+  },
+  "settings_endpoints": {
+    "message": "モデルエンドポイント"
+  },
+  "settings_endpointsBody": {
+    "message": "Agent Lab がプロバイダーに接続するために許可されたオリジン。取り消すと再許可するまで実行できなくなります。"
+  },
+  "settings_evals": {
+    "message": "評価スイートと結果"
+  },
+  "settings_evalsCount": {
+    "message": "スイート $1 件、結果 $2 件"
+  },
+  "settings_forgetAgent": {
+    "message": "エージェントラボの設定とキーを消去"
+  },
+  "settings_forgetAgentHelp": {
+    "message": "手動モードに戻します（すべてのプロバイダーのエンドポイント、モデル、キーを消去します）。"
+  },
+  "settings_forgetBaseline": {
+    "message": "削除"
+  },
+  "settings_forgetBaselineHelp": {
+    "message": "このサイトのベースラインを削除します。定期再チェックの対象から外れます。"
+  },
+  "settings_history": {
+    "message": "実行履歴"
+  },
+  "settings_instrumented": {
+    "message": "計測中"
+  },
+  "settings_items": {
+    "message": "$1 項目"
+  },
+  "settings_keyInMemory": {
+    "message": "メモリ内にキーあり"
+  },
+  "settings_keyInMemoryHelp": {
+    "message": "このプロバイダーのキーを利用できます。 Chromeの再起動、または拡張機能の再読み込み・更新・無効化でセッションキーは消去されます。"
+  },
+  "settings_languageAuto": {
+    "message": "ブラウザのデフォルト (Auto)"
+  },
+  "settings_languageDesc": {
+    "message": "WebMCP Explorer の表示言語を選択するか、ブラウザの言語設定に従います。"
+  },
+  "settings_languageHeading": {
+    "message": "言語 (Language)"
+  },
+  "settings_languageHelp": {
+    "message": "WebMCP Explorer の表示言語を即座に切り替えます"
+  },
+  "settings_languageLabel": {
+    "message": "インターフェース言語"
+  },
+  "settings_noAuditedSites": {
+    "message": "ベースラインが保存されたサイトはまだありません。「セキュリティ」セクションから保存してください。"
+  },
+  "settings_noBackend": {
+    "message": "Explorer にはバックエンドサーバーがなく、Corsen AI にデータが送信されることは一切ありません。外部に送信されるのは、「実行」を押した際にあなたが設定した AI モデルへ送るデータのみです。プライバシーポリシーの全文は Chrome ウェブストアの掲載ページにあります。"
+  },
+  "settings_noInstrumented": {
+    "message": "すべてのサイトで計測モードはオフです。"
+  },
+  "settings_noSites": {
+    "message": "Explorer がアクセスできるサイトはまだありません。ページを開いて「このサイトで Explorer を有効にする」を使用してください。"
+  },
+  "settings_notRemoved": {
+    "message": "権限は削除されませんでした。"
+  },
+  "settings_oneCall": {
+    "message": "1 回の呼び出し"
+  },
+  "settings_oneItem": {
+    "message": "1 項目"
+  },
+  "settings_overrides": {
+    "message": "オーバーライドとモック"
+  },
+  "settings_permissionError": {
+    "message": "Chrome が拒否しました: $1"
+  },
+  "settings_recheck": {
+    "message": "開いているタブを再チェック"
+  },
+  "settings_recheckAlarm": {
+    "message": "$1 分ごとにスケジュール設定済み。"
+  },
+  "settings_recheckEvery": {
+    "message": "間隔"
+  },
+  "settings_recheckEveryHelp": {
+    "message": "開いているタブを再監査する頻度です。"
+  },
+  "settings_recheckHelp": {
+    "message": "一定間隔ごとに、ベースラインがあり Explorer に権限がある開いているタブを再監査し、新規検出数をツールバーバッジに表示します（既定ではオフ）。"
+  },
+  "settings_recheckMinutes": {
+    "message": "$1 分"
+  },
+  "settings_recheckNow": {
+    "message": "今すぐ再チェック"
+  },
+  "settings_recheckNowHelp": {
+    "message": "ベースラインのある開いているタブを今すぐ監査し、結果をここに表示します。"
+  },
+  "settings_recheckOff": {
+    "message": "スケジュールなし。"
+  },
+  "settings_recheckResult": {
+    "message": "$1 サイトをチェックしました（ベースライン以降の新規検出: $2 件）。"
+  },
+  "settings_revoke": {
+    "message": "取り消す"
+  },
+  "settings_revokeHelp": {
+    "message": "$1 に対する Explorer のアクセス権を取り消します。Chrome は即座に権限を削除します。"
+  },
+  "settings_savedCalls": {
+    "message": "保存済み呼び出し"
+  },
+  "settings_security": {
+    "message": "セキュリティ"
+  },
+  "settings_securityBody": {
+    "message": "ベースラインが保存されたサイトと、開いているタブの定期再チェックを管理します。再チェックはすでに開いている許可済みタブに対して通常のパッシブ監査を行うだけで、ページを開いたりプローブを実行したり外部送信したりすることは一切ありません。"
+  },
+  "settings_securityReviewed": {
+    "message": "セキュリティ確認データ"
+  },
+  "settings_securityReviewedHelp": {
+    "message": "確認済みにした検出項目、プローブ用に管理権限を確認したサイト、保存したベースライン、および定期再チェック設定です。消去するとこれらすべてが削除されます。"
+  },
+  "settings_siteAccess": {
+    "message": "サイトアクセス権"
+  },
+  "settings_siteAccessBody": {
+    "message": "Chrome が Explorer に検査を許可しているサイトの一覧です。"
+  },
+  "settings_snapshots": {
+    "message": "契約スナップショット"
+  },
+  "settings_snapshotsCount": {
+    "message": "$2 サイトで $1 件"
+  },
+  "settings_sourceFinder": {
+    "message": "ソースファインダー"
+  },
+  "settings_sourceFinderBody": {
+    "message": "計測モードがオンになっているサイトです。ページに変更を加える唯一の機能であり、ページ自身のコードが実行される前にスクリプトが WebMCP の登録処理をラップすることで、各ツールがどこで登録されたかを記録します。オフにした場合は次回のページ再読み込みから反映されます。"
+  },
+  "settings_storageUse": {
+    "message": "使用中のストレージ: 約 $1 KB（拡張機能全体に対する Chrome の報告値）。"
+  },
+  "settings_title": {
+    "message": "設定"
+  },
+  "settings_turnOff": {
+    "message": "オフにする"
+  },
+  "settings_turnOffHelp": {
+    "message": "$1 の計測を停止します。その後ページを再読み込みしてください。"
+  },
+  "settings_version": {
+    "message": "WebMCP Explorer $1 · Corsen AI"
+  },
+  "sidepanel_agentLab": {
+    "message": "エージェントラボ"
+  },
+  "sidepanel_audit": {
+    "message": "監査"
+  },
+  "sidepanel_clearWhatThePanelRemembers": {
+    "message": "このタブについてパネルが記憶している一時状態を消去します。スイート、結果、オーバーライド、履歴は保持されます。"
+  },
+  "sidepanel_demoPage": {
+    "message": "デモページ"
+  },
+  "sidepanel_evals": {
+    "message": "評価"
+  },
+  "sidepanel_noResponseFromTheService": {
+    "message": "サービスワーカーからの応答がありません。"
+  },
+  "sidepanel_nothingToStopThisPanel": {
+    "message": "停止する処理はありません — すでに初期状態です。"
+  },
+  "sidepanel_originHelp": {
+    "message": "Explorer が検査中のページ"
+  },
+  "sidepanel_railLabel": {
+    "message": "セクション"
+  },
+  "sidepanel_refreshLabel": {
+    "message": "再検出を実行"
+  },
+  "sidepanel_resetLabel": {
+    "message": "停止してパネルをリセット"
+  },
+  "sidepanel_stopTheAgentRunAnd": {
+    "message": "このタブでのエージェント実行と評価スイートを停止し、パネルの一時記憶を消去します。スイート、結果、オーバーライド、履歴は保持されます。"
+  },
+  "sidepanel_timeline": {
+    "message": "タイムライン"
+  },
+  "snapshots_1ThePageRightNow": {
+    "message": "$1 → 現在のページ"
+  },
+  "snapshots_aToolListIsA": {
+    "message": "ツール一覧は訪れるすべてのエージェントとの契約です。今スナップショットを保存しておけば、次回どこが変化したかを正確に比較できます。"
+  },
+  "snapshots_added": {
+    "message": "追加"
+  },
+  "snapshots_addedHelp": {
+    "message": "このツールは以前は存在しませんでした。"
+  },
+  "snapshots_annotations": {
+    "message": "アノテーション"
+  },
+  "snapshots_compareCross": {
+    "message": "比較"
+  },
+  "snapshots_compareCrossHelp": {
+    "message": "そのサイトのスナップショットとこのページの差分をツールごとに表示します。"
+  },
+  "snapshots_compareWithNow": {
+    "message": "現在の状態と比較"
+  },
+  "snapshots_contractChanged": {
+    "message": "契約の変更"
+  },
+  "snapshots_crossHeader": {
+    "message": "$1（$2 で取得）→ このページ ($3)"
+  },
+  "snapshots_crossNote": {
+    "message": "2つのサイトはオリジンが異なるため、ツールは名前とフレームで照合されます（オリジンの違い自体は変更として報告されません）。"
+  },
+  "snapshots_deleteThisSnapshot": {
+    "message": "このスナップショットを削除"
+  },
+  "snapshots_description": {
+    "message": "説明"
+  },
+  "snapshots_empty": {
+    "message": "（空）"
+  },
+  "snapshots_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "snapshots_inputSchema": {
+    "message": "入力スキーマ"
+  },
+  "snapshots_labelThisSnapshotBeforeDeploy": {
+    "message": "スナップショットにラベルを付ける — 「デプロイ前」"
+  },
+  "snapshots_movedFrame": {
+    "message": "フレーム移動"
+  },
+  "snapshots_movedFrameHelp": {
+    "message": "同じツール・同じ名前で、フレームだけが異なります。削除して再作成されたわけではありません。"
+  },
+  "snapshots_nToolsUnchanged": {
+    "message": "$1 個のツールは変更なし。"
+  },
+  "snapshots_noSnapshotOfThisSite": {
+    "message": "このサイトのスナップショットはまだありません。"
+  },
+  "snapshots_nothingChanged": {
+    "message": "変更なし"
+  },
+  "snapshots_now": {
+    "message": "現在"
+  },
+  "snapshots_oneOfTheTwoCaptures": {
+    "message": "2つのキャプチャのうち一方が部分的だったため、「削除」と表示されたツールは単に観測されなかっただけの可能性があります。確実に比較するには不足しているオリジンを許可して再比較してください。"
+  },
+  "snapshots_oneToolUnchanged": {
+    "message": "1 個のツールは変更なし。"
+  },
+  "snapshots_otherSites": {
+    "message": "別のサイトと比較"
+  },
+  "snapshots_otherSitesHelp": {
+    "message": "別のサイト（ステージング環境や本番環境など）で取得したスナップショットを選び、このページと比較します。2 つのサイトはオリジンが異なるため、ツールは名前とフレームで照合されます。"
+  },
+  "snapshots_partialCapture": {
+    "message": "部分キャプチャ"
+  },
+  "snapshots_pickSite": {
+    "message": "サイト"
+  },
+  "snapshots_pickSnapshot": {
+    "message": "スナップショット"
+  },
+  "snapshots_prefixColonText": {
+    "message": "$1: $2"
+  },
+  "snapshots_recordTheToolsThisPage": {
+    "message": "後で比較できるように、このページが現在宣言しているツールを記録します"
+  },
+  "snapshots_removed": {
+    "message": "削除"
+  },
+  "snapshots_removedHelp": {
+    "message": "このツールはなくなりました。"
+  },
+  "snapshots_saveASnapshot": {
+    "message": "スナップショットを保存"
+  },
+  "snapshots_saved": {
+    "message": "保存しました。このサイト用に $1 件保持されています。"
+  },
+  "snapshots_savedCallsAffected": {
+    "message": "保存済みの呼び出し $1 件に確認が必要です: $2"
+  },
+  "snapshots_savedCallsFine": {
+    "message": "保存済みの呼び出し $1 件は新しいスキーマにも適合しています。"
+  },
+  "snapshots_schemaChanges": {
+    "message": "スキーマの変更点:"
+  },
+  "snapshots_schemaMoved": {
+    "message": "スキーマがこの要約では書き表せない形で変更されました（フィンガープリントが変化しました）。"
+  },
+  "snapshots_sinceThatSnapshot": {
+    "message": "そのスナップショット以降の変化"
+  },
+  "snapshots_snapshots": {
+    "message": "スナップショット"
+  },
+  "snapshots_someFramesWereNotObserved": {
+    "message": "一部のフレームが観測されていないため、このスナップショットに存在しないことは未登録の証明にはなりません。"
+  },
+  "snapshots_title": {
+    "message": "タイトル"
+  },
+  "snapshots_unchanged": {
+    "message": "変更なし"
+  },
+  "snapshots_unknownFrame": {
+    "message": "不明なフレーム"
+  },
+  "snapshots_unknownTime": {
+    "message": "日時不明"
+  },
+  "snapshots_was": {
+    "message": "以前:"
+  },
+  "snapshots_whatChanged": {
+    "message": "契約内の変更点です。"
+  },
+  "snapshots_whatChangedBetweenThisSnapshot": {
+    "message": "このスナップショットと現在のページとの間の変更点"
+  },
+  "snapshots_whetherItsSchemaCanBe": {
+    "message": "スキーマの読み取り可否"
+  },
+  "status_1Frame": {
+    "message": "1 フレーム"
+  },
+  "status_1Tool": {
+    "message": "1 ツール"
+  },
+  "status_apiMismatch": {
+    "message": "API 不一致"
+  },
+  "status_compatibility": {
+    "message": "互換モード"
+  },
+  "status_devFlag": {
+    "message": "開発フラグ"
+  },
+  "status_everyOriginExposingToolsIs": {
+    "message": "ツールを公開しているすべてのオリジンに権限が付与されています"
+  },
+  "status_missingApiMethods": {
+    "message": "不足している API メソッド: $1"
+  },
+  "status_nFrames": {
+    "message": "$1 フレーム"
+  },
+  "status_nTools": {
+    "message": "$1 ツール"
+  },
+  "status_native": {
+    "message": "ネイティブ"
+  },
+  "status_originTrial": {
+    "message": "オリジントライアル"
+  },
+  "status_partialMany": {
+    "message": "部分検出 — $1 個のオリジンが未許可"
+  },
+  "status_partialOne": {
+    "message": "部分検出 — 1 個のオリジンが未許可"
+  },
+  "status_partialRefusedHelp": {
+    "message": "これらのフレームには WebMCP オブジェクトが存在しますが、ツール一覧を取得する呼び出しをブラウザが拒否しました: $1"
+  },
+  "status_partialRefusedMany": {
+    "message": "部分検出 — ブラウザが $1 個のフレームを拒否"
+  },
+  "status_partialRefusedOne": {
+    "message": "部分検出 — ブラウザが 1 個のフレームを拒否"
+  },
+  "status_refused": {
+    "message": "拒否"
+  },
+  "status_securityNew": {
+    "message": "セキュリティ: 新規 $1 件"
+  },
+  "status_securityNewHelp": {
+    "message": "このサイトの保存済みベースラインにない検出項目です（最大重要度: $1）。詳細は「セキュリティ」を開いてください。"
+  },
+  "status_toolsDiscoveredAndFramesExplorer": {
+    "message": "検出されたツール数と Explorer がアクセスできたフレーム数"
+  },
+  "status_unavailable": {
+    "message": "利用不可"
+  },
+  "status_webmcpRuntimeDetectedForThis": {
+    "message": "このタブで検出された WebMCP ランタイム"
+  },
+  "timeline_1Ms": {
+    "message": "$1 ms"
+  },
+  "timeline_agent": {
+    "message": "エージェント"
+  },
+  "timeline_clear": {
+    "message": "クリア"
+  },
+  "timeline_discardTheRecordedEvents": {
+    "message": "記録されたイベントを破棄"
+  },
+  "timeline_explorerObservesToolChangesWithout": {
+    "message": "Explorer はページを改変せずにツールの変化を観測します。2回のサンプリングの間に登録されすぐ削除されたツールはここには表示されません。検出結果とツール一覧は常に正確ですが、非常に高速な登録・削除サイクルの順序のみ省略される場合があります。"
+  },
+  "timeline_exportNote": {
+    "message": "記録されたすべてのイベント（ツール、フレーム、所要時間、エラー）を古い順に出力します。サンプリング方式のため、2回のスナップショット間に登録・削除されたツールは含まれません。"
+  },
+  "timeline_exportThisTimeline": {
+    "message": "このタイムラインをエクスポート"
+  },
+  "timeline_kindActivated": {
+    "message": "有効化"
+  },
+  "timeline_kindCancelled": {
+    "message": "キャンセル"
+  },
+  "timeline_kindExecuted": {
+    "message": "実行完了"
+  },
+  "timeline_kindFailed": {
+    "message": "失敗"
+  },
+  "timeline_kindRegistered": {
+    "message": "登録"
+  },
+  "timeline_kindUnregistered": {
+    "message": "解除"
+  },
+  "timeline_lifecycle": {
+    "message": "ライフサイクル"
+  },
+  "timeline_nDropped": {
+    "message": "$1 件破棄（バッファ上限）"
+  },
+  "timeline_nMissedPaused": {
+    "message": "一時停止中に $1 件スキップ"
+  },
+  "timeline_nRecorded": {
+    "message": "$1 件記録"
+  },
+  "timeline_nShown": {
+    "message": "$1 件表示"
+  },
+  "timeline_nothingRecordedYetRegistrationsAnd": {
+    "message": "まだ記録はありません。ツールの登録や呼び出しが発生するとここに表示されます。"
+  },
+  "timeline_pause": {
+    "message": "一時停止"
+  },
+  "timeline_recordingIsPaused": {
+    "message": "記録は一時停止中です。"
+  },
+  "timeline_resume": {
+    "message": "再開"
+  },
+  "timeline_sampled": {
+    "message": " · サンプリング"
+  },
+  "timeline_showOnly1Events": {
+    "message": "$1 イベントのみを表示"
+  },
+  "timeline_stopRecordingNewEvents": {
+    "message": "新しいイベントの記録を一時停止"
+  },
+  "toolDetails_1Params": {
+    "message": "$1 個の引数"
+  },
+  "toolDetails_argsSentAsObject": {
+    "message": "このブラウザは引数を JSON 文字列ではなくオブジェクトとして受け取るため、Explorer はオブジェクトとして送信しました。"
+  },
+  "toolDetails_autoSubmit": {
+    "message": "自動送信"
+  },
+  "toolDetails_backToTheToolList": {
+    "message": "ツール一覧に戻る"
+  },
+  "toolDetails_cancel": {
+    "message": "キャンセル"
+  },
+  "toolDetails_cancelHelp": {
+    "message": "この呼び出しの待機を中止します。Chrome 153 以降ではページ側のツールにも停止シグナルが送られ、その後の応答は破棄されます。"
+  },
+  "toolDetails_cancelled": {
+    "message": "Explorer からキャンセルされました。ページ側のツールは処理を完了した可能性がありますが、応答は破棄されました。"
+  },
+  "toolDetails_cancelling": {
+    "message": "キャンセル中…"
+  },
+  "toolDetails_changeTheArgumentsAndRun": {
+    "message": "引数を変更して再実行"
+  },
+  "toolDetails_chars": {
+    "message": "$1 文字"
+  },
+  "toolDetails_code1": {
+    "message": "コード: $1"
+  },
+  "toolDetails_consequential": {
+    "message": "重要操作"
+  },
+  "toolDetails_copyRegisterTool": {
+    "message": "registerTool(…) をコピー"
+  },
+  "toolDetails_copyRegisterToolHelp": {
+    "message": "そのまま貼り付けられる navigator.modelContext.registerTool(…) スニペットをコピーします"
+  },
+  "toolDetails_copyScriptToolConfig": {
+    "message": "ScriptToolConfig をコピー"
+  },
+  "toolDetails_copyScriptToolConfigHelp": {
+    "message": "このツールの宣言型 ScriptToolConfig JSON オブジェクトをクリップボードにコピーします"
+  },
+  "toolDetails_debugging": {
+    "message": "デバッグ"
+  },
+  "toolDetails_declarativeWaits": {
+    "message": "宣言型フォームツール: 自動送信でない限り、フォームに入力された後、手動で送信ボタンが押されるのを待ちます。"
+  },
+  "toolDetails_disabled": {
+    "message": "無効化"
+  },
+  "toolDetails_disabledHelp": {
+    "message": "オーバーライドによってこのツールへの呼び出しは拒否されています。"
+  },
+  "toolDetails_edit": {
+    "message": "編集"
+  },
+  "toolDetails_editTheArgumentsAsRaw": {
+    "message": "引数を生の JSON として編集"
+  },
+  "toolDetails_executeThisToolInIts": {
+    "message": "このツールを属するフレーム内で実行"
+  },
+  "toolDetails_form": {
+    "message": "フォーム"
+  },
+  "toolDetails_genericError": {
+    "message": "これはツールではなく Chrome 自身の定型文です。Chrome 153 では、ツールがスローしたすべてのエラーがこの文言の UnknownError として呼び出し元に届きます（実測済み、WMP-0044）。ツールが出力したメッセージがある場合はページのコンソールに表示されます。"
+  },
+  "toolDetails_goBackToTheGenerated": {
+    "message": "生成されたフォームに戻る"
+  },
+  "toolDetails_json": {
+    "message": "</> JSON"
+  },
+  "toolDetails_loading": {
+    "message": "読み込み中…"
+  },
+  "toolDetails_msInPage": {
+    "message": "ページ内 $1 ms"
+  },
+  "toolDetails_msRoundTrip": {
+    "message": "往復 $1 ms"
+  },
+  "toolDetails_overridden": {
+    "message": "上書き中"
+  },
+  "toolDetails_overriddenHelp": {
+    "message": "Explorer がこのツールの定義または返却値をローカルで変更しています。"
+  },
+  "toolDetails_ranInFrame": {
+    "message": "フレーム #$1 で実行"
+  },
+  "toolDetails_rawJsonHelp": {
+    "message": "生の JSON 形式の引数です。ここで編集してフォーム表示に戻ると同じ値が反映されます。"
+  },
+  "toolDetails_rawJsonLabel": {
+    "message": "生 JSON の引数"
+  },
+  "toolDetails_readOnly": {
+    "message": "読み取り専用"
+  },
+  "toolDetails_reproduce": {
+    "message": "この呼び出しを再現"
+  },
+  "toolDetails_reproduceNote": {
+    "message": "レポートとスクリプトには引数とページの返り値が含まれます。フレームを指定し、登録を待機し、同名別ツールを拒否し、記録された結果がページではなくローカルのオーバーライドによるものである場合はその旨を明記します。"
+  },
+  "toolDetails_result": {
+    "message": "結果"
+  },
+  "toolDetails_runAgain": {
+    "message": "再実行"
+  },
+  "toolDetails_runTool": {
+    "message": "ツールを実行"
+  },
+  "toolDetails_running": {
+    "message": "実行中…"
+  },
+  "toolDetails_schemaNotRenderable": {
+    "message": "このスキーマはフォームとして表示できません。JSON エディター内の注記を確認してください。"
+  },
+  "toolDetails_string": {
+    "message": "文字列"
+  },
+  "toolDetails_stringParsedAsJson": {
+    "message": "文字列 · JSON として解析"
+  },
+  "toolDetails_tabHistory": {
+    "message": "履歴"
+  },
+  "toolDetails_tabOverride": {
+    "message": "オーバーライド"
+  },
+  "toolDetails_tabRun": {
+    "message": "実行"
+  },
+  "toolDetails_tabSchema": {
+    "message": "スキーマ"
+  },
+  "toolDetails_theJsonIsNotValid": {
+    "message": "JSON が無効です。"
+  },
+  "toolDetails_theToolFailed": {
+    "message": "ツールが失敗しました。"
+  },
+  "toolDetails_theToolReturnedNoValue": {
+    "message": "ツールが値を返しませんでした。通常、これは呼び出しによってページ遷移が発生したことを意味します。"
+  },
+  "toolDetails_theToolReturnedNull": {
+    "message": "ツールは null を返しました。Chrome はこれを文字列 \"null\" として渡すため、null を返すツールと文字列 \"null\" を返すツールはここでは同じに見えます。"
+  },
+  "toolDetails_thisSchemaUsesConstructsExplorer": {
+    "message": "このスキーマには Explorer が推測を行わない構造が含まれているため、引数は JSON で編集します。"
+  },
+  "toolDetails_untrustedContent": {
+    "message": "非信頼コンテンツ"
+  },
+  "toolHistory_1Calls": {
+    "message": "$1 回の呼び出し"
+  },
+  "toolHistory_arguments": {
+    "message": "引数"
+  },
+  "toolHistory_calls": {
+    "message": "呼び出し回数"
+  },
+  "toolHistory_callsHelp": {
+    "message": "記録された実行回数"
+  },
+  "toolHistory_clearHistory": {
+    "message": "履歴を消去"
+  },
+  "toolHistory_deleteEveryRecordedCallFor": {
+    "message": "すべてのツールの記録された呼び出しをすべて削除"
+  },
+  "toolHistory_max": {
+    "message": "最大"
+  },
+  "toolHistory_maxHelp": {
+    "message": "最も遅かった呼び出し時間"
+  },
+  "toolHistory_msIncludingHop": {
+    "message": "拡張機能経由を含め $1 ms"
+  },
+  "toolHistory_noRecordedCallForThis": {
+    "message": "このツールの呼び出し履歴はまだありません。"
+  },
+  "toolHistory_p50": {
+    "message": "P50"
+  },
+  "toolHistory_p50Help": {
+    "message": "ページ内実行時間の中央値"
+  },
+  "toolHistory_p95": {
+    "message": "P95"
+  },
+  "toolHistory_p95Help": {
+    "message": "ページ内実行時間の95パーセンタイル"
+  },
+  "toolHistory_replay": {
+    "message": "再実行"
+  },
+  "toolHistory_replayInFrame1": {
+    "message": "フレーム #$1 で再実行"
+  },
+  "toolHistory_resultTruncatedForStorageOriginal": {
+    "message": "保存のため結果が切り詰められました。元の長さ: $1 文字。"
+  },
+  "toolHistory_runThisToolAgainWith": {
+    "message": "まったく同じ引数でこのツールを再実行します"
+  },
+  "toolHistory_success": {
+    "message": "成功率"
+  },
+  "toolHistory_successHelp": {
+    "message": "エラーなしで完了した呼び出しの割合"
+  },
+  "toolHistory_thisCallWasMadeInFrame1": {
+    "message": "この呼び出しはフレーム #$1 で行われ、現在もそのフレームがツールを保持しています。この画面を開いたフレームではなく、そのフレームで再実行されます。"
+  },
+  "toolHistory_untimed": {
+    "message": "未計測"
+  },
+  "toolHistory_untimedHelp": {
+    "message": "ツールに到達しなかったため所要時間が計測されなかった呼び出し"
+  },
+  "toolOverride_applyOnceThenUseThe": {
+    "message": " 1回だけ適用し、その後は実際のツールを使用"
+  },
+  "toolOverride_applyOverride": {
+    "message": "オーバーライドを適用"
+  },
+  "toolOverride_callsReachTheRealTool": {
+    "message": "呼び出しは実際のツールに届きます。"
+  },
+  "toolOverride_deleteThisOverrideEntirely": {
+    "message": "このオーバーライドを完全に削除"
+  },
+  "toolOverride_descriptionDeclared": {
+    "message": "サイトが宣言している説明"
+  },
+  "toolOverride_descriptionOverride": {
+    "message": "説明のオーバーライド"
+  },
+  "toolOverride_disableThisTool": {
+    "message": " このツールを無効化"
+  },
+  "toolOverride_emptyResult": {
+    "message": "空の結果"
+  },
+  "toolOverride_error": {
+    "message": "エラー"
+  },
+  "toolOverride_errorMessage": {
+    "message": "エラーメッセージ"
+  },
+  "toolOverride_explorerIsChangingWhatThis": {
+    "message": "Explorer がこのツールの定義または返却値を変更しています。"
+  },
+  "toolOverride_failAsATimeoutAfter": {
+    "message": "下で指定した遅延時間の後にタイムアウトエラーとして失敗させます。"
+  },
+  "toolOverride_failWithTheMessageBelow": {
+    "message": "ツールを呼び出さず、下のメッセージでエラー終了させます。"
+  },
+  "toolOverride_latencyHelp": {
+    "message": "すべてのモックモードで、応答を返す前に適用される遅延時間です。"
+  },
+  "toolOverride_latencyMs": {
+    "message": "遅延 (ms)"
+  },
+  "toolOverride_leaveEmptyToKeepThe": {
+    "message": "サイトが宣言した説明をそのまま使う場合は空欄にしてください"
+  },
+  "toolOverride_leaveEmptyToKeepThe2": {
+    "message": "サイトが宣言したスキーマをそのまま使う場合は空欄にしてください"
+  },
+  "toolOverride_malformed": {
+    "message": "不正な形式"
+  },
+  "toolOverride_mockResponse": {
+    "message": "モック応答"
+  },
+  "toolOverride_noOverrideOnThisTool": {
+    "message": "このツールにはオーバーライドが設定されていません。"
+  },
+  "toolOverride_none": {
+    "message": "（なし）"
+  },
+  "toolOverride_off": {
+    "message": "オフ"
+  },
+  "toolOverride_overrideActive": {
+    "message": "オーバーライド有効"
+  },
+  "toolOverride_response": {
+    "message": "応答データ"
+  },
+  "toolOverride_returnAnEmptyStringThe": {
+    "message": "空の文字列を返します（多くのエージェントが処理し忘れるケースです）。"
+  },
+  "toolOverride_returnDeliberatelyInvalidJsonTo": {
+    "message": "エージェントのパース処理を試すため、意図的に無効な JSON を返します。"
+  },
+  "toolOverride_returnThePayloadBelowInstead": {
+    "message": "ツールを呼び出さず、下のペイロードを返します。"
+  },
+  "toolOverride_schemaDeclared": {
+    "message": "サイトが宣言しているスキーマ"
+  },
+  "toolOverride_schemaNotJson": {
+    "message": "スキーマのオーバーライドが有効な JSON ではありません: $1"
+  },
+  "toolOverride_schemaOverride": {
+    "message": "スキーマのオーバーライド"
+  },
+  "toolOverride_simulatedFailure": {
+    "message": "シミュレートされた失敗"
+  },
+  "toolOverride_success": {
+    "message": "成功"
+  },
+  "toolOverride_theToolStaysListedAnd": {
+    "message": "ツールは一覧に残りフラグが表示されますが、呼び出しは拒否されます。"
+  },
+  "toolOverride_timeout": {
+    "message": "タイムアウト"
+  },
+  "toolResult_reproUnavailable": {
+    "message": "有効なオーバーライドを読み取れませんでした。正確な再現データをエクスポートするにはこの結果をもう一度開いてください。"
+  },
+  "toolResult_reproduceHelp": {
+    "message": "この呼び出しを Markdown、JSON、コンソールスニペット、または Playwright スクリプトとしてコピー・ダウンロードします。"
+  },
+  "toolResult_saveCheck": {
+    "message": "チェックとして保存"
+  },
+  "toolResult_saveCheckHelp": {
+    "message": "この引数と結果を、今後の実行で検証するための期待結果として保存します。"
+  },
+  "toolResult_showAll": {
+    "message": "全 $1 文字を表示"
+  },
+  "toolResult_showAllHelp": {
+    "message": "結果全体をパネルに描画します。非常に長いテキストは表示に少し時間がかかる場合があります。"
+  },
+  "toolResult_shownPartial": {
+    "message": "$2 文字中、先頭の $1 文字を表示しています。パネルの応答性を保つためで、1クリックで全文を表示できます。"
+  },
+  "toolResult_shownWhole": {
+    "message": "全 $1 文字を表示中。"
+  },
+  "toolSource_calledFrom1More": {
+    "message": "他 $1 箇所からの呼び出し履歴"
+  },
+  "toolSource_capturedAtRegistration": {
+    "message": "登録時に記録"
+  },
+  "toolSource_explorerCanRecordWhereEach": {
+    "message": "Explorer は各ツールがどこで登録されたかを記録できますが、監視開始後の登録に限られます。ページの実行前に配置される必要がありページを変更するため、求められない限りオフのままであり、このサイトでのみ有効になります。"
+  },
+  "toolSource_explorerWillWrapRegistertoolOn": {
+    "message": "Explorer はこのサイトで registerTool をラップし、各ツールの登録元を記録します。ページを変更するため、要求されるまではオフのままです。"
+  },
+  "toolSource_in1": {
+    "message": "$1() 内"
+  },
+  "toolSource_offForThisSiteReload": {
+    "message": "このサイトではオフになりました。ラッパーなしで実行するにはページを再読み込みしてください。"
+  },
+  "toolSource_onForThisSiteBut": {
+    "message": "このサイトでオンになっていますが、このツールは計測開始前に登録されました。ページを再読み込みしてください。"
+  },
+  "toolSource_onForThisSiteReload": {
+    "message": "このサイトでオンにしました。ページを再読み込みしてください（すでに登録済みのツールを後から追跡することはできません）。"
+  },
+  "toolSource_recordedByInstrumentationModeWhen": {
+    "message": "ページが registerTool を呼び出した際に計測モードが記録した情報です（推測ではありません）。"
+  },
+  "toolSource_registeredTimes": {
+    "message": "$1 回登録"
+  },
+  "toolSource_registeredTimesHelp": {
+    "message": "ページはこの名前を複数回登録しています。表示されているのは最初の登録箇所です。"
+  },
+  "toolSource_source": {
+    "message": "ソース"
+  },
+  "toolSource_sourceDotLocation": {
+    "message": "ソース · $1"
+  },
+  "toolSource_theSourceIsNotKnown": {
+    "message": "ソースは不明です。"
+  },
+  "toolSource_turnOffInstrumentationMode": {
+    "message": "計測モードを無効化"
+  },
+  "toolSource_turnOnInstrumentationMode": {
+    "message": "計測モードを有効化"
+  },
+  "toolsHeading": {
+    "message": "ツール"
+  },
+  "tools_changeTheSortOrder": {
+    "message": "並び順を変更"
+  },
+  "tools_checksExportNote": {
+    "message": "レポートには各チェックの引数と結果（ページが返したデータ）が含まれます。"
+  },
+  "tools_checksIntro": {
+    "message": "デプロイ後に保存済みチェックを実行します。フレーム内のものを含め、見つからないツールもレポートに残ります。"
+  },
+  "tools_checksLegacyScope": {
+    "message": "古いチェック項目にはサイトコンテキストがありません。別オリジンのフレームの欠落ツールを追跡するには、ツールが存在する状態で再保存してください。"
+  },
+  "tools_checksReadiness": {
+    "message": "実行前の確認: $1 件のチェックが現在一覧にあるツールを使用できません。"
+  },
+  "tools_checksReadinessHelp": {
+    "message": "チェックはまだ実行されていません。ページとフレームを確認するか、保存済みチェックを現在のツールに合わせて更新してください。ページ変更後はツールを更新してください。"
+  },
+  "tools_checksReviewReason": {
+    "message": "要確認: $1"
+  },
+  "tools_checksRun": {
+    "message": "このサイトの全チェックを実行"
+  },
+  "tools_checksRunHelp": {
+    "message": "このページ上のすべてのツールの保存済みチェックを、各ツールが存在するフレーム内で順番に実行します。消えたツールは黙ってスキップされず報告されます。"
+  },
+  "tools_checksRunning": {
+    "message": "$2 件中 $1 件を実行中…"
+  },
+  "tools_checksSummary": {
+    "message": "$1 件成功、$2 件失敗、$3 件要確認、$4 件欠落。"
+  },
+  "tools_checksTitle": {
+    "message": "このサイトの保存済みチェック ($1)"
+  },
+  "tools_checksToolGone": {
+    "message": "ツール消失 — このページ上に $1 の有効なインスタンスがありません"
+  },
+  "tools_countAll": {
+    "message": "$1 個のツール"
+  },
+  "tools_countShown": {
+    "message": "$2 個中 $1 個のツール"
+  },
+  "tools_exportThisPageSTools": {
+    "message": "このページのツールをエクスポート"
+  },
+  "tools_filterByNameDescriptionOr": {
+    "message": "名前、説明、オリジンで絞り込み"
+  },
+  "tools_frame": {
+    "message": "フレーム"
+  },
+  "tools_inputsNone": {
+    "message": "引数なし"
+  },
+  "tools_inputsOptional": {
+    "message": "任意: $1"
+  },
+  "tools_inputsRequired": {
+    "message": "必須: $1"
+  },
+  "tools_name": {
+    "message": "名前"
+  },
+  "tools_noToolMatchesTheseFilters": {
+    "message": "条件に一致するツールがありません。"
+  },
+  "tools_open1ToInspectIts": {
+    "message": "$1 を開いてスキーマの検査と実行を行う"
+  },
+  "tools_origin": {
+    "message": "オリジン"
+  },
+  "tools_schemaError": {
+    "message": "スキーマエラー"
+  },
+  "tools_searchTools": {
+    "message": "ツールを検索"
+  },
+  "tools_searchToolsByNameDescription": {
+    "message": "名前、説明、オリジンでツールを検索"
+  },
+  "tools_sort1": {
+    "message": "並び替え: $1"
+  },
+  "tools_theReportListsTheTools": {
+    "message": "レポートには、このページが宣言しているツール、その説明、スキーマに加え、Explorer が観測できなかった項目がすべて記載されます。"
+  },
+  "tools_titleHelp": {
+    "message": "ページがこのツールに付与したタイトル（名前の横に表示）。"
+  },
+  "vault_passphrase": {
+    "message": "マスターパスフレーズ"
+  },
+  "vault_passphraseHelp": {
+    "message": "12文字以上。暗号化されたキーの解除・変更に必要です。保存されません。"
+  },
+  "vault_error": {
+    "message": "操作に失敗しました。パスフレーズと空き容量を確認してください。"
+  },
+  "vault_create": {
+    "message": "暗号化ストレージを有効にする"
+  },
+  "vault_unlock": {
+    "message": "保管庫のロックを解除"
+  },
+  "vault_lock": {
+    "message": "ロックしてセッションキーを消去"
+  },
+  "vault_session": {
+    "message": "キーをこのセッションだけ保持"
+  },
+  "vault_delete": {
+    "message": "保管庫とすべてのキーを削除"
+  },
+  "vault_deleteHelp": {
+    "message": "全プロバイダーの暗号化データとセッションキーを消去します。2回クリックして確定してください。"
+  },
+  "vault_confirmDelete": {
+    "message": "確認：すべてのキーを削除"
+  },
+  "vault_locked": {
+    "message": "暗号化保管庫 — ロック中"
+  },
+  "vault_unlocked": {
+    "message": "暗号化保管庫 — このセッションで解除済み"
+  },
+  "vault_optional": {
+    "message": "暗号化保管庫（任意）"
+  },
+  "vault_help": {
+    "message": "暗号化キーを端末に保存し、ブラウザーセッションごとに解除します。変更には再入力が必要です。忘れたパスフレーズは復元できません。"
+  },
+  "vault_keyAvailable": {
+    "message": "このプロバイダーのキーを利用できます。"
+  },
+  "vault_sessionHelp": {
+    "message": "Chromeの再起動、または拡張機能の再読み込み・更新・無効化でセッションキーは消去されます。"
+  },
+  "emulation_enable": {
+    "message": "このサイトでJSエミュレーションを有効化"
+  },
+  "emulation_disable": {
+    "message": "JSエミュレーションを無効化"
+  },
+  "emulation_active": {
+    "message": "このセッションでJSエミュレーションが有効"
+  },
+  "emulation_help": {
+    "message": "このブラウザーセッション中の任意のJSエミュレーションです。サイトへのアクセス許可と再読み込みが必要です。HTMLフォームは一覧表示のみで、ブラウザーのネイティブ保証は再現しません。"
+  },
+  "emulation_reload": {
+    "message": "変更を適用するにはページを再読み込みしてください。未保存の編集は失われる場合があります。"
+  },
+  "emulation_reloadButton": {
+    "message": "ページを再読み込み"
+  },
+  "emulation_inventoryOnly": {
+    "message": "一覧表示のみ"
+  },
+  "emulation_inventoryHelp": {
+    "message": "このHTMLフォームの実行にはネイティブWebMCPが必要です。スキーマは推定であり、送信処理の検証内容は推測できません。"
+  },
+  "emulation_inferred": {
+    "message": "HTMLから推定したスキーマ"
+  },
+  "execution_unknown": {
+    "message": "操作が実行済みの可能性があります。Explorerは再試行しません。新しい要求の前にページを確認してください。"
+  },
+  "execution_trace": {
+    "message": "エンジン: $1 · 引数: $2 · 呼び出し回数: $3"
+  },
+  "vault_lockHelp": {
+    "message": "復号済みのセッションキャッシュを消去し、暗号化保管庫は端末に保持します。"
+  },
+  "vault_sessionModeHelp": {
+    "message": "パスフレーズで復号し、永続保管庫を削除してセッションメモリーだけにキーを保持します。"
+  },
+  "invocation_receiptsHelp": {
+    "message": "呼び出し記録: $1。識別子のハッシュと状態により履歴消去後の再実行を防ぎます。引数・結果・キーは含まず、拡張機能のアンインストール時に削除されます。"
+  },
+  "security_scoreValue": {
+    "description": "Phase B security review.",
+    "message": "$1/100 · 評価 $2 · 暫定",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "security_scoreUnavailable": {
+    "description": "Phase B security review.",
+    "message": "スコアなし：ツール未検出"
+  },
+  "security_scoreCaution": {
+    "description": "Phase B security review.",
+    "message": "公開された宣言のヒューリスティック評価であり、安全性の認証ではありません。確認できない項目は以下に表示します。高評価でも操作は許可されません。"
+  },
+  "security_scoreMethod": {
+    "description": "Phase B security review.",
+    "message": "スコアの計算方法"
+  },
+  "security_scoreFormula": {
+    "description": "Phase B security review.",
+    "message": "計算式 v1：100点から開始。ルールとツールごとに最大重大度を1回減点：致命的40、高20、中10、低5、情報0。致命的な場合の上限49、下限0。A ≥90、B ≥80、C ≥70、D ≥60、E ≥50、F <50。非表示や確認済みへの変更は点数に影響しません。"
+  },
+  "security_showFix": {
+    "description": "Phase B security review.",
+    "message": "修正案を表示"
+  },
+  "security_copyFix": {
+    "description": "Phase B security review.",
+    "message": "修正案をコピー"
+  },
+  "security_copyFixHelp": {
+    "description": "Phase B security review.",
+    "message": "適用・実行せずにテンプレートをコピーします。"
+  },
+  "security_fixCopied": {
+    "description": "Phase B security review.",
+    "message": "修正案をコピーしました"
+  },
+  "security_fixCopyError": {
+    "description": "Phase B security review.",
+    "message": "コピーできませんでした。コードを選択して手動でコピーしてください。"
+  },
+  "security_fixReview": {
+    "description": "Phase B security review.",
+    "message": "開発者が確認するテンプレートです。自動適用されません。名前、制限、検証、サーバー認可を確認してください。仮実装は実行を拒否します。"
+  },
+  "security_no_authenticationConsent": {
+    "description": "Phase B security review.",
+    "message": "この契約から認証、サーバー認可、人の承認は確認できません：$1。セッション認証情報は調査していません。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_schemaLimits": {
+    "description": "Phase B security review.",
+    "message": "スキーマ評価は不完全です：$1。外部参照は取得しません。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_similarityLimit": {
+    "description": "Phase B security review.",
+    "message": "説明の比較が上限に達しました：$1。未確認の組み合わせにも曖昧さがある可能性があります。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_originScan": {
+    "description": "Phase B security review.",
+    "message": "オリジンのヘッダーと検出ファイルは未取得です。以下の「オリジンを検査」で確認できます。"
+  },
+  "security_no_originScanIncomplete": {
+    "description": "Phase B security review.",
+    "message": "オリジン検査は不完全です。応答の取得失敗、リダイレクト、上限到達がありました。再試行はしていません。"
+  },
+  "sec_text_active_payload_title": {
+    "description": "Phase B security review.",
+    "message": "ツール文中の能動的ペイロード指標"
+  },
+  "sec_text_active_payload_why": {
+    "description": "Phase B security review.",
+    "message": "スクリプトタグ、指示の上書き、外部Markdown画像はエージェントを誘導する可能性があります。実行や情報流出の証明ではありません。"
+  },
+  "sec_text_active_payload_fix": {
+    "description": "Phase B security review.",
+    "message": "エージェントへの指示を事実に基づく説明に置き換えてください。スキーマの全説明を確認し、信頼できない文を信頼済み指示から分離します。"
+  },
+  "sec_mutation_hints_incomplete_title": {
+    "description": "Phase B security review.",
+    "message": "変更の意図が十分に宣言されていません"
+  },
+  "sec_mutation_hints_incomplete_why": {
+    "description": "Phase B security review.",
+    "message": "動詞が状態変更を示唆しています。WebMCPのヒントは助言であり、承認や認可を強制しません。"
+  },
+  "sec_mutation_hints_incomplete_fix": {
+    "description": "Phase B security review.",
+    "message": "確認済みの変更操作にはreadOnlyHint:falseとconsequentialHint:trueを設定し、確認とサーバー認可を別途実装してください。"
+  },
+  "sec_permissive_object_title": {
+    "description": "Phase B security review.",
+    "message": "オブジェクトに未宣言の入力を許可"
+  },
+  "sec_permissive_object_why": {
+    "description": "Phase B security review.",
+    "message": "追加プロパティが許可されているか、機密性のあるツールでオブジェクト境界が閉じていません。スキーマの所見であり、サーバー検証の判断ではありません。"
+  },
+  "sec_permissive_object_fix": {
+    "description": "Phase B security review.",
+    "message": "additionalProperties:falseと入れ子の制約を検討してください。複合スキーマと互換性を確認してから閉じ、サーバーでも検証します。"
+  },
+  "sec_mutating_auto_submit_title": {
+    "description": "Phase B security review.",
+    "message": "変更フォームが自動送信可能"
+  },
+  "sec_mutating_auto_submit_why": {
+    "description": "Phase B security review.",
+    "message": "toolautosubmitはネイティブの手動送信手順を省略します。認証と独自確認処理は不明です。agentInvokedは呼出元を示すだけで、人の同意を示しません。"
+  },
+  "sec_mutating_auto_submit_fix": {
+    "description": "Phase B security review.",
+    "message": "機密性のある操作ではtoolautosubmitの削除を検討してください。サーバーで認可と承認を正確なアカウント、引数、操作に結び付けます。"
+  },
+  "sec_legacy_registration_title": {
+    "description": "Phase B security review.",
+    "message": "旧式の登録を検出"
+  },
+  "sec_legacy_registration_why": {
+    "description": "Phase B security review.",
+    "message": "この登録はnavigatorまたはprovideContextを使用しています。互換性は実行環境に依存し、存在だけでは脆弱性を証明しません。"
+  },
+  "sec_legacy_registration_fix": {
+    "description": "Phase B security review.",
+    "message": "対象ブラウザーを検証後、document.modelContext.registerToolとAbortSignalによる解除へ移行してください。同じコールバックを重複登録しないでください。"
+  },
+  "sec_token_estimate_over_budget_title": {
+    "description": "Phase B security review.",
+    "message": "説明の推定トークン予算を超過"
+  },
+  "sec_token_estimate_over_budget_why": {
+    "description": "Phase B security review.",
+    "message": "UTF-8バイト数を4で割り切り上げた推定値が800トークンを超えています。正確な数はモデルのトークナイザーに依存します。"
+  },
+  "sec_token_estimate_over_budget_fix": {
+    "description": "Phase B security review.",
+    "message": "必要な制約を残して操作と引数の説明を短くしてください。正確な予算が必要なら対象モデルのトークナイザーで測定します。"
+  },
+  "sec_ambiguous_description_title": {
+    "description": "Phase B security review.",
+    "message": "類似した説明による選択の曖昧さ"
+  },
+  "sec_ambiguous_description_why": {
+    "description": "Phase B security review.",
+    "message": "異なるツール名の説明で単語集合のJaccard類似度が0.80以上です。語彙の重複は同一動作の証明ではありません。"
+  },
+  "sec_ambiguous_description_fix": {
+    "description": "Phase B security review.",
+    "message": "各操作固有の範囲、入力、結果を記述してください。特定ツールの優先や別ツールの先行実行を指示しないでください。"
+  },
+  "sec_convention_csp_title": {
+    "description": "Phase B security review.",
+    "message": "CSP応答ヘッダーの観測"
+  },
+  "sec_convention_csp_why": {
+    "description": "Phase B security review.",
+    "message": "認証情報なしの応答ヘッダーを記録したもので、有効なポリシーではありません。ヘッダーがなくてもmetaポリシーが存在する場合があります。"
+  },
+  "sec_convention_csp_fix": {
+    "description": "Phase B security review.",
+    "message": "実際のスクリプトと接続に合わせてCSPを確認し、Report-Onlyとアプリケーションテストで変更を検証してください。"
+  },
+  "sec_convention_cors_title": {
+    "description": "Phase B security review.",
+    "message": "CORS応答ヘッダーの観測"
+  },
+  "sec_convention_cors_why": {
+    "description": "Phase B security review.",
+    "message": "ヘッダーのみの証拠です。ブラウザーのクロスオリジン要求は検証していません。認証情報付きCORSではワイルドカードを使えませんが、情報漏えいの証明ではありません。"
+  },
+  "sec_convention_cors_fix": {
+    "description": "Phase B security review.",
+    "message": "必要な場合のみ意図したオリジンを許可してください。診断を消すためにワイルドカードCORSを有効にせず、認証済み動作を別途検証します。"
+  },
+  "sec_convention_unavailable_title": {
+    "description": "Phase B security review.",
+    "message": "検出応答なし、または不完全"
+  },
+  "sec_convention_unavailable_why": {
+    "description": "Phase B security review.",
+    "message": "応答が失敗、リダイレクト、上限超過、または非成功ステータスでした。任意の検出ファイルはWebMCPの必須エンドポイントではありません。"
+  },
+  "sec_convention_unavailable_fix": {
+    "description": "Phase B security review.",
+    "message": "この慣習に対応する意図がある場合は応答を確認してください。不在だけでセキュリティ修正は必要ありません。自動再試行は行っていません。"
+  },
+  "bridge_title": {
+    "message": "ローカルMCPブリッジ",
+    "description": "Phase C local bridge."
+  },
+  "bridge_intro": {
+    "message": "信頼するローカルMCPクライアントに明示的に共有したタブを接続します。サイト権限だけでは共有されません。移動、権限取消、再接続で関連付けを解除します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pairingNote": {
+    "message": "コピーした設定にはこのブラウザーセッション用の秘密情報が含まれます。信頼するMCPクライアントだけで保管してください。ブラウザー再起動や拡張機能再読み込み後は再ペアリングが必要です。コンパニオンは依存関係なしでNode.js上でローカル実行します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_port": {
+    "message": "ブリッジのポート",
+    "description": "Phase C local bridge."
+  },
+  "bridge_portHelp": {
+    "message": "ポート1024～65535。接続先は常に127.0.0.1で、外部アドレスは拒否されます。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeout": {
+    "message": "承認の制限時間（秒）",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeoutHelp": {
+    "message": "5～60秒。応答なし、切断、承認期限切れの場合は呼び出しを拒否します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_path": {
+    "message": "ローカルコンパニオンのスクリプト（任意）",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathPlaceholder": {
+    "message": "既定ではインストール済みwebmcp-bridgeコマンド",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathHelp": {
+    "message": "未インストールのローカルコピーではpackages/webmcp-bridge/cli.mjsの絶対パスを入力してください。Explorerは設定をコピーし、コマンドを起動しません。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_auto": {
+    "message": "条件を満たす読み取り専用呼び出しを自動許可",
+    "description": "Phase C local bridge."
+  },
+  "bridge_autoHelp": {
+    "message": "ヒントが誤っている場合があります。重大・高リスク所見、変更の兆候、重要操作、未検証の引数には承認が必要です。スコアだけで許可されません。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enable": {
+    "message": "このセッションで有効化",
+    "description": "Phase C local bridge."
+  },
+  "bridge_disable": {
+    "message": "切断",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enableHelp": {
+    "message": "ローカルブリッジを有効化または切断します。切断すると共有と承認を解除します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_save": {
+    "message": "ブリッジ設定を保存",
+    "description": "Phase C local bridge."
+  },
+  "bridge_saveHelp": {
+    "message": "このセッションにポート、制限時間、読み取り設定を適用します。ポート変更で再接続し、共有タブを解除します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyConfig": {
+    "message": "MCPクライアント設定をコピー",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyHelp": {
+    "message": "信頼するMCPクライアント用にローカルコマンド、ポート、拡張機能ID、セッション秘密情報をコピーします。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copied": {
+    "message": "セッション設定をコピーしました",
+    "description": "Phase C local bridge."
+  },
+  "bridge_tab": {
+    "message": "共有するタブ",
+    "description": "Phase C local bridge."
+  },
+  "bridge_share": {
+    "message": "選択タブを共有",
+    "description": "Phase C local bridge."
+  },
+  "bridge_shareHelp": {
+    "message": "選択した許可済みタブのツールだけを公開します。共有前にオリジンを確認してください。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshare": {
+    "message": "共有を停止",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshareHelp": {
+    "message": "このタブのツールを無効にし、保留中の承認を直ちに拒否します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reset": {
+    "message": "ペアリングを解除",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resetHelp": {
+    "message": "切断し、共有をすべて解除してこのセッションの秘密情報を破棄します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resume": {
+    "message": "不明な影響を確認済み — 再開",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resumeHelp": {
+    "message": "不確かな操作の確認を表明します。再実行はせず、新しい要求の前にタブの再共有が必要です。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unknown": {
+    "message": "影響不明のため一時停止中です。再開前にページを確認してください。呼び出しは再実行していません。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status": {
+    "message": "ブリッジ：$1",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_status_disabled": {
+    "message": "無効",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connecting": {
+    "message": "ローカルコンパニオンを認証中",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connected": {
+    "message": "認証済み・接続済み",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_reconnecting": {
+    "message": "認証済みコンパニオンを待機中",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_authentication_failed": {
+    "message": "認証を拒否",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_error": {
+    "message": "接続不可",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approvalTitle": {
+    "message": "Corsen Guard — 承認が必要",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reasons": {
+    "message": "確認理由：$1。以下は正確なJSONです。不可視制御文字はエスケープしています。",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_deadline": {
+    "message": "承認がなければ$1秒後に自動拒否します。",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_approve": {
+    "message": "一度だけ承認",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approveHelp": {
+    "message": "この要求だけを承認します。オリジン、文書、契約の変更や期限切れの場合は拒否します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_deny": {
+    "message": "拒否",
+    "description": "Phase C local bridge."
+  },
+  "bridge_denyHelp": {
+    "message": "ページのツールを呼び出さずに要求を拒否します。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_expired": {
+    "message": "承認が期限切れまたは無効です。新しい操作は送信していません。",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_manual_mode": {
+    "message": "すべての呼び出しを承認",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_not_read_only": {
+    "message": "読み取り専用の宣言なし",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_consequential": {
+    "message": "重要または破壊的操作",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_mutating": {
+    "message": "状態変更の可能性",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_critical": {
+    "message": "フェーズBの重大所見",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_high": {
+    "message": "フェーズBの高リスク所見",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_incomplete_schema": {
+    "message": "不完全なスキーマ",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_unchecked_arguments": {
+    "message": "引数の検証が不完全",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_uncaptured_annotations": {
+    "message": "登録時のアノテーションは未取得"
+  },
+  "export_copySpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Playwrightテストをコピー"
+  },
+  "export_saveSpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Playwrightテストを保存"
+  },
+  "export_playwrightHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "契約と出力を検証する自己完結型.spec.tsテストを出力します。データを確認し、明示的な実行IDを選んでください。自動再試行はありません。"
+  },
+  "export_specNeedsData": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "実行可能な出力には完全な引数と結果が必要です。該当セクションを復元してください。"
+  },
+  "export_sarifHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "CIレビュー用SARIF 2.1.0。ソース注釈には実行時の位置とリポジトリの対応付けが必要です。ファイルや行番号は捏造しません。"
+  },
+  "status_legacy": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "旧API"
+  },
+  "status_emulated": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JSエミュレーション"
+  },
+  "status_inventorySplit": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS $1 · フォーム $2 · ? $3",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "status_inventoryHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "観測した登録です。JSは取得済み命令型ツール、フォームは検出済み宣言型、?は未分類です。閉じたShadowルートは推測しません。"
+  },
+  "status_grade": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "評価 $1*",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_copyFlag": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "フラグURLをコピー"
+  }
+}

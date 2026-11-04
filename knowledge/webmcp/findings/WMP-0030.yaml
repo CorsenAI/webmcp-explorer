@@ -1,0 +1,31 @@
+id: WMP-0030
+title: Ollama rejects tool-bearing requests for models without the "tools" capability; Gemma 3 is one of them
+date_observed: 2026-09-05
+environment:
+  browser: n/a (local model server on the developer workstation)
+  server: Ollama for Windows, OpenAI-compatible endpoint http://localhost:11434/v1
+  model: gemma3:27b (Q4_K_M), capabilities reported by /api/show as [completion, vision]
+expected: >
+  An OpenAI-compatible endpoint accepts a request carrying a tools array and either uses the
+  tools or ignores them.
+observed: >
+  POST /v1/chat/completions with a tools array answered HTTP 400 with the body
+  {"error":{"message":"registry.ollama.ai/library/gemma3:27b does not support tools","type":"invalid_request_error"}}.
+  The same request without tools answered normally in about 10 s (first load). /api/show lists
+  a "tools" capability only for models whose template supports tool calling; gemma3 has none.
+impact:
+  - an agent loop that declares tools cannot run at all against such a model, whatever the goal
+  - the refusal arrives as a provider error, so an inspector must show it verbatim and not blame the page
+  - a local-model demonstration needs a model that lists the tools capability (checkable before running)
+workaround: >
+  Pick a model whose /api/show capabilities include "tools"; Explorer surfaces the provider's own
+  message so the user can see why the run could not start.
+evidence:
+  source: direct probe of http://localhost:11434 on 2026-09-05 (PowerShell, Invoke-RestMethod); tools/e2e/agent.mjs covers the provider-error path against the mock
+  decision: D-056
+  chrome_e2e: false
+spec_status:
+  documented: true (Ollama documents per-model tool support)
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen Context]
+status: confirmed

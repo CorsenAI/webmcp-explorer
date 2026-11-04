@@ -1,0 +1,31 @@
+id: WMP-0001
+title: The API lives on document.modelContext; navigator.modelContext is legacy
+date_observed: 2026-09-04
+environment:
+  browser: Chrome
+  version: 152.0.7977.66 (stable, flag on) and 152.0.7977.82 (Chrome for Testing)
+  mode: native
+expected: >
+  Early material and third-party polyfills expose navigator.modelContext.
+observed: >
+  Chrome 152 exposes document.modelContext only; navigator.modelContext is undefined. The
+  probe reports apiHost "document".
+reliable_discriminator: typeof document.modelContext !== 'undefined'
+impact:
+  - an inspector that reads navigator.modelContext only sees nothing on current Chrome
+  - sites and polyfills written against the old host still exist, so both must be read
+workaround: >
+  Read document.modelContext first and fall back to navigator.modelContext; report which
+  host answered.
+evidence:
+  fixture: fixtures/probe.html
+  automated_test: test/env.test.js
+  chrome_e2e: true
+  decision: D-017
+  commit: b65ebb6
+  source: docs/research/2026-09-04-webmcp-api-facts.md
+spec_status:
+  documented: true
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen Context, Corsen WebMCP Security]
+status: confirmed

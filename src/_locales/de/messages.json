@@ -1,0 +1,4942 @@
+{
+  "actionTitle": {
+    "message": "WebMCP Explorer öffnen"
+  },
+  "agentSessions_allChats": {
+    "message": "Alle Gespräche"
+  },
+  "agentSessions_allChatsHelp": {
+    "message": "Alle Unterhaltungen auf dieser Website anzeigen."
+  },
+  "agentSessions_allChatsShort": {
+    "message": "Alle"
+  },
+  "agentSessions_continuing": {
+    "message": "Fortsetzung dieser Konversation ($1 Ziele gespeichert) — das Modell sieht den gesamten bisherigen Verlauf."
+  },
+  "agentSessions_continuingOne": {
+    "message": "Fortsetzung dieser Konversation — das Modell sieht, was zuvor gesagt wurde."
+  },
+  "agentSessions_delete": {
+    "message": "Löschen"
+  },
+  "agentSessions_deleteHelp": {
+    "message": "Diese Konversation von diesem Gerät löschen."
+  },
+  "agentSessions_empty": {
+    "message": "Noch keine Einträge. Abgeschlossene Läufe werden nur auf diesem Gerät gespeichert."
+  },
+  "agentSessions_groupDeleteHelp": {
+    "message": "Diese Gruppe löschen. Ihre Konversationen bleiben im Verlauf erhalten."
+  },
+  "agentSessions_groupEmpty": {
+    "message": "Noch keine Konversation in dieser Gruppe."
+  },
+  "agentSessions_groupNew": {
+    "message": "+ Gruppe"
+  },
+  "agentSessions_groupNewHelp": {
+    "message": "Eine Gruppe erstellen, um die Konversationen dieser Website zu ordnen."
+  },
+  "agentSessions_groupNewPrompt": {
+    "message": "Name der neuen Gruppe:"
+  },
+  "agentSessions_historyHelp": {
+    "message": "Abgeschlossene Läufe auf dieser Website, nur auf diesem Gerät gespeichert. Öffnen Sie einen Lauf, um ihn erneut zu lesen oder fortzusetzen."
+  },
+  "agentSessions_historyN": {
+    "message": "Konversationsverlauf ($1)"
+  },
+  "agentSessions_historyOne": {
+    "message": "Konversationsverlauf (1)"
+  },
+  "agentSessions_moveToGroup": {
+    "message": "Diese Konversation in eine Gruppe verschieben"
+  },
+  "agentSessions_nTurns": {
+    "message": "$1 Ziele"
+  },
+  "agentSessions_new": {
+    "message": "Neue Sitzung"
+  },
+  "agentSessions_newHelp": {
+    "message": "Eine neue Konversation starten. Frühere Sitzungen bleiben im Verlauf."
+  },
+  "agentSessions_noGroup": {
+    "message": "Keine Gruppe"
+  },
+  "agentSessions_oneTurn": {
+    "message": "1 Ziel"
+  },
+  "agentSetup_aKeyIsStoredType": {
+    "message": "Ein Schlüssel ist gespeichert — tippen Sie, um ihn zu ersetzen"
+  },
+  "agentSetup_aRunThatHitsA": {
+    "message": "Ein Lauf, der ein Budget erreicht, stoppt und meldet dies. Er wird nie stillschweigend abgeschnitten."
+  },
+  "agentSetup_addKeyFirst": {
+    "message": "Vor dem Senden einen Sitzungsschlüssel hinzufügen oder den verschlüsselten Tresor entsperren."
+  },
+  "agentSetup_allowFirst": {
+    "message": "Erlauben Sie zuerst den Zugriff auf die Anbieteradresse in der Modelleinrichtung."
+  },
+  "agentSetup_allowRequestsTo1": {
+    "message": "Anfragen an $1 erlauben"
+  },
+  "agentSetup_apiKey": {
+    "message": "API-Schlüssel"
+  },
+  "agentSetup_askTheEndpointWhichModels": {
+    "message": "Den Endpunkt abfragen, welche Modelle er bereitstellt"
+  },
+  "agentSetup_askingTheEndpoint": {
+    "message": "Endpunkt wird abgefragt…"
+  },
+  "agentSetup_budgets": {
+    "message": "Budgets"
+  },
+  "agentSetup_checkingAccessToTheEndpoint": {
+    "message": "Zugriff auf den Endpunkt wird geprüft…"
+  },
+  "agentSetup_chooseHelp": {
+    "message": "KI ist optional. Nutzen Sie einen Cloud-Anbieter mit eigenem API-Schlüssel oder verbinden Sie einen lokalen Server wie Ollama oder LM Studio. Tools, Prüfungen und Rezepte funktionieren ohne KI."
+  },
+  "agentSetup_chooseProvider": {
+    "message": "KI auswählen"
+  },
+  "agentSetup_couldNotListModels": {
+    "message": "Modelle konnten nicht aufgelistet werden."
+  },
+  "agentSetup_deleteTheStoredKey": {
+    "message": "Gespeicherten Schlüssel löschen"
+  },
+  "agentSetup_endpoint": {
+    "message": "Endpunkt"
+  },
+  "agentSetup_endpointAllowed": {
+    "message": "Endpunkt erlaubt"
+  },
+  "agentSetup_endpointHelp": {
+    "message": "Muss die OpenAI-Chat-API unterstützen. Der Pfad wird automatisch ergänzt."
+  },
+  "agentSetup_explorerMaySendRequestsTo": {
+    "message": "Explorer darf Anfragen an diese Adresse senden."
+  },
+  "agentSetup_forget": {
+    "message": "Vergessen"
+  },
+  "agentSetup_howManyTimesTheModel": {
+    "message": "Wie oft das Modell maximal aufgerufen werden darf, bevor Explorer stoppt"
+  },
+  "agentSetup_howManyToolExecutionsA": {
+    "message": "Wie viele Tool-Ausführungen ein einzelner Lauf maximal durchführen darf"
+  },
+  "agentSetup_keptInMemoryOnlyNever": {
+    "message": "Sitzungsschlüssel werden bei einem Chrome-Neustart sowie beim Neuladen, Aktualisieren oder Deaktivieren der Erweiterung gelöscht. Schlüssel verschlüsselt auf diesem Gerät behalten und pro Browsersitzung einmal entsperren. Änderungen erfordern erneut die Passphrase. Vergessene Passphrasen sind nicht wiederherstellbar."
+  },
+  "agentSetup_keptInMemoryUntilChrome": {
+    "message": "Sitzungsschlüssel werden bei einem Chrome-Neustart sowie beim Neuladen, Aktualisieren oder Deaktivieren der Erweiterung gelöscht. Schlüssel verschlüsselt auf diesem Gerät behalten und pro Browsersitzung einmal entsperren. Änderungen erfordern erneut die Passphrase. Vergessene Passphrasen sind nicht wiederherstellbar."
+  },
+  "agentSetup_keyHeldUntilChromeCloses": {
+    "message": "Für diesen Anbieter ist ein Schlüssel verfügbar."
+  },
+  "agentSetup_listModels": {
+    "message": "Verbindung prüfen / Modelle auflisten"
+  },
+  "agentSetup_model": {
+    "message": "Modell"
+  },
+  "agentSetup_modelHelp": {
+    "message": "Wählen Sie ein Chat-Modell, das Tool-Aufrufe unterstützt."
+  },
+  "agentSetup_modelName": {
+    "message": "Modell-ID auswählen oder eingeben"
+  },
+  "agentSetup_modelTurns": {
+    "message": "Modell-Schritte"
+  },
+  "agentSetup_modelsFound": {
+    "message": "Verbunden. $1 Modelle verfügbar; wählen Sie eines im Feld Modell."
+  },
+  "agentSetup_noKey": {
+    "message": "kein Schlüssel"
+  },
+  "agentSetup_noModelsFound": {
+    "message": "Verbunden, aber keine Modelle gelistet. Laden Sie auf einem lokalen Server zuerst ein Modell oder geben Sie dessen ID ein."
+  },
+  "agentSetup_onlyHttpAndHttpsEndpoints": {
+    "message": "Es können nur http- und https-Endpunkte verwendet werden."
+  },
+  "agentSetup_onlyThisAddressExplorerAsks": {
+    "message": "Nur diese Adresse. Explorer fragt Chrome, und Chrome fragt Sie."
+  },
+  "agentSetup_openSetup": {
+    "message": "KI einrichten"
+  },
+  "agentSetup_openSetupHelp": {
+    "message": "KI-Einrichtung öffnen: Cloud-Anbieter oder lokalen Modellserver wählen. Optional."
+  },
+  "agentSetup_optionalForThisEndpoint": {
+    "message": "Optional für diesen Endpunkt."
+  },
+  "agentSetup_pasteYourApiKey": {
+    "message": "API-Schlüssel einfügen"
+  },
+  "agentSetup_provider": {
+    "message": "Anbieter"
+  },
+  "agentSetup_reviewSettings": {
+    "message": "Überprüfen Sie Ihre Anbietereinstellungen in der Modelleinrichtung."
+  },
+  "agentSetup_saveKey": {
+    "message": "Schlüssel speichern"
+  },
+  "agentSetup_selectModel": {
+    "message": "Wählen Sie ein Modell in der Modelleinrichtung oder geben Sie eine Modell-ID ein."
+  },
+  "agentSetup_setAnEndpointFirst": {
+    "message": "Legen Sie zuerst einen Endpunkt fest."
+  },
+  "agentSetup_thatIsNotAValid": {
+    "message": "Das ist keine gültige URL."
+  },
+  "agentSetup_thisEndpointIsPlainHttp": {
+    "message": "Dieser Endpunkt nutzt unverschlüsseltes http außerhalb Ihres Geräts. Explorer sendet keine Daten dorthin. Nutzen Sie https oder localhost."
+  },
+  "agentSetup_thisProviderNeedsAnEndpoint": {
+    "message": "Dieser Anbieter benötigt eine Endpunkt-Adresse."
+  },
+  "agentSetup_thisProviderWillRefuseThe": {
+    "message": "Dieser Anbieter lehnt Anfragen ohne Schlüssel ab."
+  },
+  "agentSetup_toolCalls": {
+    "message": "Tool-Aufrufe"
+  },
+  "agentSetup_usageHelp": {
+    "message": "Die Cloud-Nutzung unterliegt den Preisen und Kontingenten Ihres Anbieters."
+  },
+  "agentSetup_whichModelServiceToTalk": {
+    "message": "Mit welchem Modelldienst gesprochen werden soll"
+  },
+  "agentTranscript_aTraceHoldsTheGoal": {
+    "message": "Ein Trace enthält das Ziel, die vom Modell gesendeten Argumente und die Rückgaben der Seiten-Tools. Lesen Sie ihn vor dem Teilen durch."
+  },
+  "agentTranscript_adaptedItem": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_adaptedRootOnly": {
+    "message": "sein Wurzel-Kombinator wurde zu einem Objekt zusammengeführt"
+  },
+  "agentTranscript_anotherToolAlreadyUsesThat": {
+    "message": "ein anderes Tool verwendet diesen Namen bereits"
+  },
+  "agentTranscript_answer": {
+    "message": "Antwort"
+  },
+  "agentTranscript_answered": {
+    "message": "Beantwortet"
+  },
+  "agentTranscript_askingTheModel": {
+    "message": "Modell wird abgefragt…"
+  },
+  "agentTranscript_budgetCalls": {
+    "message": "Budget: $1."
+  },
+  "agentTranscript_budgetSteps": {
+    "message": "Budget: $1. Ein Lauf, der es erreicht, stoppt und meldet dies."
+  },
+  "agentTranscript_calls": {
+    "message": "Aufrufe"
+  },
+  "agentTranscript_cancelled": {
+    "message": "Abgebrochen"
+  },
+  "agentTranscript_chromeStoppedTheExtensionS": {
+    "message": "Chrome hat den Hintergrund-Worker während dieses Laufs gestoppt. Explorer startet ihn nicht automatisch neu, da Modellaufrufe oder Tools bereits ausgeführt worden sein können."
+  },
+  "agentTranscript_chromeStoppedTheExtensionS2": {
+    "message": "Chrome hat den Hintergrund-Worker während dieses Laufs gestoppt."
+  },
+  "agentTranscript_errorHelp": {
+    "message": "Dieser Fehler wurde dem Modell gemeldet, sodass es reagieren konnte."
+  },
+  "agentTranscript_executionDetails": {
+    "message": "Ausführungsdetails"
+  },
+  "agentTranscript_executionDetailsHelp": {
+    "message": "Ursprüngliches Ziel, Modellnachrichten, Tool-Argumente und genaue Ergebnisse prüfen. Das Öffnen dieses Traces führt nichts aus."
+  },
+  "agentTranscript_explorer": {
+    "message": "Explorer"
+  },
+  "agentTranscript_explorerWasNotGrantedIts": {
+    "message": "Explorer hatte keine Berechtigung für diesen Ursprung und konnte es nicht ausführen"
+  },
+  "agentTranscript_exportThisRun": {
+    "message": "Diesen Lauf exportieren"
+  },
+  "agentTranscript_failed": {
+    "message": "Fehlgeschlagen"
+  },
+  "agentTranscript_goal": {
+    "message": "Ziel"
+  },
+  "agentTranscript_interruptedByChrome": {
+    "message": "Von Chrome unterbrochen"
+  },
+  "agentTranscript_itsInputSchemaCouldNot": {
+    "message": "das Eingabeschema konnte nicht geparst werden, daher beschreibt Explorer es nicht"
+  },
+  "agentTranscript_itsInputSchemaIsNot": {
+    "message": "das Eingabeschema ist kein Objekt"
+  },
+  "agentTranscript_measuredInPage": {
+    "message": "In der Seite gemessen."
+  },
+  "agentTranscript_mocked": {
+    "message": "simuliert"
+  },
+  "agentTranscript_mockedHelp": {
+    "message": "Ihre Überschreibung hat geantwortet; die Seite wurde nicht ausgeführt."
+  },
+  "agentTranscript_model": {
+    "message": "Modell"
+  },
+  "agentTranscript_modelUsed": {
+    "message": "Verwendetes Modell: $1"
+  },
+  "agentTranscript_nFailed": {
+    "message": "$1 fehlgeschlagen"
+  },
+  "agentTranscript_nFailedHelp": {
+    "message": "Tool-Aufrufe, die einen Fehler zurückgaben. Das Modell wurde informiert."
+  },
+  "agentTranscript_nMocked": {
+    "message": "$1 simuliert"
+  },
+  "agentTranscript_nMockedHelp": {
+    "message": "Von Ihrer Überschreibung beantwortet, nicht von der Seite."
+  },
+  "agentTranscript_nModelTurns": {
+    "message": "$1 Modellrunden"
+  },
+  "agentTranscript_nToolCalls": {
+    "message": "$1 Tool calls"
+  },
+  "agentTranscript_nToolNamesWereChanged": {
+    "message": "$1 Tool-Namen wurden für das Modell angepasst"
+  },
+  "agentTranscript_nToolSchemasWereAdapted": {
+    "message": "$1 Tool-Schemata wurden für das Modell angepasst"
+  },
+  "agentTranscript_nToolsWereNotOffered": {
+    "message": "$1 Tools wurden nicht angeboten"
+  },
+  "agentTranscript_nameDashReason": {
+    "message": "$1 — $2"
+  },
+  "agentTranscript_noRunYetDescribeWhat": {
+    "message": "Ihre Unterhaltung erscheint hier. Wählen Sie Ihre KI unter Modelleinrichtung und stellen Sie dann eine Frage oder testen Sie die Tools dieser Seite."
+  },
+  "agentTranscript_oneModelTurn": {
+    "message": "1 Modellrunde"
+  },
+  "agentTranscript_oneToolCall": {
+    "message": "1 Tool call"
+  },
+  "agentTranscript_oneToolNameWasChanged": {
+    "message": "1 Tool-Name wurde für das Modell angepasst"
+  },
+  "agentTranscript_oneToolSchemaWasAdapted": {
+    "message": "1 Tool-Schema wurde für das Modell angepasst"
+  },
+  "agentTranscript_oneToolWasNotOffered": {
+    "message": "1 Tool wurde nicht angeboten"
+  },
+  "agentTranscript_parenDetail": {
+    "message": " ($1)"
+  },
+  "agentTranscript_renamedItem": {
+    "message": "$1 → $2 ($3)"
+  },
+  "agentTranscript_result1": {
+    "message": "Ergebnis · $1"
+  },
+  "agentTranscript_running": {
+    "message": "läuft"
+  },
+  "agentTranscript_runningTools": {
+    "message": "Tools auf der Seite werden ausgeführt…"
+  },
+  "agentTranscript_stoppedModelTurnBudgetReached": {
+    "message": "Gestoppt: Budget für Modell-Schritte erreicht"
+  },
+  "agentTranscript_stoppedToolCallBudgetReached": {
+    "message": "Gestoppt: Budget für Tool-Aufrufe erreicht"
+  },
+  "agentTranscript_theApiRejectsTheseCharacters": {
+    "message": "die API lehnt diese Zeichen ab"
+  },
+  "agentTranscript_tokens": {
+    "message": "$1 ein / $2 aus"
+  },
+  "agentTranscript_tokensHelp": {
+    "message": "Vom Anbieter gemeldete Tokens."
+  },
+  "agentTranscript_waitingForForm": {
+    "message": "Wartet auf das Formular $1 auf der Seite. Senden Sie es dort ab oder klicken Sie auf Abbrechen."
+  },
+  "agentTranscript_you": {
+    "message": "Sie"
+  },
+  "agentTranscript_youDisabledItWithAn": {
+    "message": "Sie haben es mit einer Überschreibung deaktiviert"
+  },
+  "agent_aRunIsInProgress": {
+    "message": "Ein Lauf ist im Gange."
+  },
+  "agent_allowTheEndpointFirst": {
+    "message": "Erlauben Sie zuerst den Endpunkt."
+  },
+  "agent_answerAs": {
+    "message": "Antworten als"
+  },
+  "agent_cancel": {
+    "message": "Abbrechen"
+  },
+  "agent_copied": {
+    "message": "Kopiert"
+  },
+  "agent_copyItToTheClipboard": {
+    "message": "In die Zwischenablage kopieren"
+  },
+  "agent_copyRequest": {
+    "message": "Anfrage kopieren"
+  },
+  "agent_explorerSendsNothingCopyThis": {
+    "message": "Explorer sendet nichts. Kopieren Sie diese Anfrage in einen Chat, fügen Sie die Antwort wieder ein, und die Tool-Aufrufe laufen auf der Seite."
+  },
+  "agent_feedTheReplyBack": {
+    "message": "Antwort zurückgeben"
+  },
+  "agent_fixFirst": {
+    "message": "Zuerst beheben: $1."
+  },
+  "agent_goal": {
+    "message": "Ziel"
+  },
+  "agent_jumpToLatest": {
+    "message": "Zum neuesten springen"
+  },
+  "agent_jumpToLatestHelp": {
+    "message": "Während Sie weiter oben gelesen haben, ist eine Antwort eingetroffen. Ein Klick springt ans Ende."
+  },
+  "agent_manualMode": {
+    "message": "Manueller Modus"
+  },
+  "agent_nToolsOnThisPageWillBeOffered": {
+    "message": "$1 Tools auf dieser Seite werden dem Modell angeboten, außer solchen, die Explorer nicht wahrheitsgemäß beschreiben kann."
+  },
+  "agent_oneToolOnThisPageWillBeOffered": {
+    "message": "1 Tool auf dieser Seite wird dem Modell angeboten, sofern Explorer es wahrheitsgemäß beschreiben kann."
+  },
+  "agent_openInWindow": {
+    "message": "Diesen Chat in einem großen Fenster öffnen"
+  },
+  "agent_pasteTheModelReplyHere": {
+    "message": "Modell-Antwort hier einfügen — die rohe JSON-Antwort oder nur den Text"
+  },
+  "agent_send": {
+    "message": "Senden"
+  },
+  "agent_sendHelp": {
+    "message": "Diese Nachricht mit den Seiten-Tools an das Modell senden. Eingabe sendet; Umschalt+Eingabe fügt einen Zeilenumbruch ein."
+  },
+  "agent_sendTheGoalAndThis": {
+    "message": "Ziel und Tools dieser Seite an das Modell senden."
+  },
+  "agent_starterHelp": {
+    "message": "Das Eingabefeld mit diesem vorgeschlagenen Prompt füllen"
+  },
+  "agent_starterSummarize": {
+    "message": "Seiten-Tools zusammenfassen"
+  },
+  "agent_starterSummarizePrompt": {
+    "message": "Liste die Tools auf dieser Seite auf und erkläre, wann jedes verwendet wird."
+  },
+  "agent_starterTryTool": {
+    "message": "$1 ausprobieren"
+  },
+  "agent_starterTryToolPrompt": {
+    "message": "Rufe $1 mit sinnvollen Testdaten auf und fasse das Ergebnis zusammen."
+  },
+  "agent_stopAfterTheCurrentStep": {
+    "message": "Nach dem aktuellen Schritt stoppen"
+  },
+  "agent_toolsAvailable": {
+    "message": "$1 Seiten-Tools verfügbar"
+  },
+  "agent_tryAgain": {
+    "message": "Erneut versuchen"
+  },
+  "agent_tryAgainHelp": {
+    "message": "Dieselbe Frage auf dieser Seite erneut stellen. Die neue Antwort wird unter der ersten angehängt — nichts wird überschrieben."
+  },
+  "agent_whatShouldTheAgentTry": {
+    "message": "Was soll der Agent auf dieser Seite versuchen?"
+  },
+  "annotationDeclaredHelp": {
+    "message": "Von der Website deklariert. Explorer zeigt es an, überprüft es aber nicht."
+  },
+  "audit_clean": {
+    "message": "Keine Vertragsbeanstandungen."
+  },
+  "audit_export": {
+    "message": "Audit exportieren"
+  },
+  "audit_exportJsonHelp": {
+    "message": "Jeder Befund als Daten, für ein Skript oder ein Ticket."
+  },
+  "audit_exportMarkdownHelp": {
+    "message": "Ein prüffertiger Bericht, das schwächste Tool zuerst."
+  },
+  "audit_exportNote": {
+    "message": "Der Export enthält, was die Seite über ihre Tools deklariert — Beschreibungen und Schemata, niemals Seiteninhalt."
+  },
+  "audit_failN": {
+    "message": "$1 fehlerhaft"
+  },
+  "audit_intro": {
+    "message": "Qualitätsbewertung der deklarierten Tool-Verträge (Beschreibungen, Schemata, Annotationen) — niemals ein Sicherheitsurteil."
+  },
+  "audit_noTools": {
+    "message": "Auf dieser Seite gibt es noch keine Tools zum Prüfen."
+  },
+  "audit_passN": {
+    "message": "$1 bestanden"
+  },
+  "audit_pointsHelp": {
+    "message": "Punkteabzug für dieses Tool durch diesen Befund."
+  },
+  "audit_rule_descDuplicate": {
+    "message": "Identische Beschreibung mit $1 anderen Tool(s) geteilt: Ein Modell muss raten."
+  },
+  "audit_rule_descGeneric": {
+    "message": "Die Beschreibung wiederholt nur den Namen und liefert keine Zusatzinformation."
+  },
+  "audit_rule_descMissing": {
+    "message": "Keine Beschreibung: Ein Modell kann nicht entscheiden, wann dieses Tool verwendet werden soll."
+  },
+  "audit_rule_descNoAction": {
+    "message": "Die erste Zeile beginnt nicht mit einem Aktionsverb — besser „Search…“, „Add…“, „Get…“."
+  },
+  "audit_rule_descRestatesName": {
+    "message": "Die Beschreibung formuliert nur den Tool-Namen um, ohne neue Fakten zu nennen."
+  },
+  "audit_rule_descTooLong": {
+    "message": "Über 80 Wörter in der Beschreibung: Lange Texte belasten das Kontextfenster."
+  },
+  "audit_rule_descTooShort": {
+    "message": "Weniger als vier Wörter: Zu kurz, um dieses Tool von anderen zu unterscheiden."
+  },
+  "audit_rule_paramMissingDesc": {
+    "message": "$1 von $2 Eingabeeigenschaften haben keine Beschreibung."
+  },
+  "audit_rule_paramUntyped": {
+    "message": "$1 von $2 Eingabeeigenschaften haben keinen auflösbaren Typ."
+  },
+  "audit_rule_schemaMissing": {
+    "message": "Kein Objekt-Eingabeschema: Argumente müssen geraten werden."
+  },
+  "audit_scoreHelp": {
+    "message": "Deklarierte Vertragsqualität — keine Sicherheitsbewertung."
+  },
+  "audit_scoreN": {
+    "message": "$1/100"
+  },
+  "audit_warnN": {
+    "message": "$1 mit Hinweisen"
+  },
+  "baseline_forget": {
+    "message": "Baseline vergessen"
+  },
+  "baseline_forgetHelp": {
+    "message": "Gespeicherte Baseline für diese Website löschen."
+  },
+  "baseline_lastCheck": {
+    "message": "Letzte Prüfung $1: $2 neu, $3 behoben"
+  },
+  "baseline_newChip": {
+    "message": "Neu seit Baseline"
+  },
+  "baseline_newChipHelp": {
+    "message": "Nur Befunde anzeigen, die nicht in der gespeicherten Baseline enthalten waren."
+  },
+  "baseline_noChange": {
+    "message": "Seit der Baseline: nichts Neues."
+  },
+  "baseline_none": {
+    "message": "Noch keine Baseline für diese Website gespeichert. Speichern Sie eine als Vergleichsreferenz."
+  },
+  "baseline_save": {
+    "message": "Baseline speichern"
+  },
+  "baseline_saveHelp": {
+    "message": "Aktuelle Befunde und Vertrags-Fingerabdrücke auf diesem Gerät speichern."
+  },
+  "baseline_savedAt": {
+    "message": "Baseline gespeichert am $1 — $2 Befunde, $3 Tools"
+  },
+  "baseline_since": {
+    "message": "Seit Baseline: $1 neu ($2), $3 behoben · Tools +$4, −$5, Verträge geändert $6"
+  },
+  "baseline_sinceHelp": {
+    "message": "Was diese Prüfung im Vergleich zur Baseline zeigt."
+  },
+  "baseline_title": {
+    "message": "Gespeicherte Baseline"
+  },
+  "baseline_titleHelp": {
+    "message": "Heutige Befunde und Verträge als Referenz für diese Website speichern."
+  },
+  "baseline_toolsAdded": {
+    "message": "Tools hinzugefügt: $1"
+  },
+  "baseline_toolsChanged": {
+    "message": "Verträge geändert: $1"
+  },
+  "baseline_toolsRemoved": {
+    "message": "Tools entfernt: $1"
+  },
+  "baseline_truncated": {
+    "message": "Die Baseline speichert die ersten 300 Befunde und 1.000 Tools."
+  },
+  "baseline_update": {
+    "message": "Baseline aktualisieren"
+  },
+  "baseline_updateHelp": {
+    "message": "Die gespeicherte Baseline durch die heutige Prüfung ersetzen."
+  },
+  "checkApiAvailability": {
+    "message": "WebMCP API"
+  },
+  "checkApiAvailabilityRefused": {
+    "message": "abgelehnt"
+  },
+  "checkCapability": {
+    "message": "Fähigkeit"
+  },
+  "checkFrameContext": {
+    "message": "Frame-Kontext"
+  },
+  "checkOriginIsolation": {
+    "message": "Ursprungsisolierung"
+  },
+  "checkSecureContext": {
+    "message": "Sicherer Kontext"
+  },
+  "checkToolsPermission": {
+    "message": "Tools-Berechtigung"
+  },
+  "checks_duplicateDescription": {
+    "message": "Ein anderes Tool auf dieser Seite hat dieselbe Beschreibung: $1. Ein Modell kann sie anhand der Beschreibung nicht unterscheiden."
+  },
+  "checks_duplicateName": {
+    "message": "Ein anderer Frame registriert ein Tool desselben Namens; Modelle sehen beide unter eigenen Aliasen."
+  },
+  "checks_intro": {
+    "message": "Lücken im deklarierten Vertrag dieses Tools, die Agenten häufig zu Fehlern verleiten."
+  },
+  "checks_levelNote": {
+    "message": "Hinweis"
+  },
+  "checks_levelWarn": {
+    "message": "Warnung"
+  },
+  "checks_nOnCard": {
+    "message": "$1 Hinweise"
+  },
+  "checks_nameNeedsAlias": {
+    "message": "Modell-APIs akzeptieren diesen Namen nicht direkt; Explorer bietet ihn unter einem Alias an."
+  },
+  "checks_noAnnotations": {
+    "message": "Keine Annotation deklariert. readOnlyHint teilt dem Agenten mit, ob der Aufruf etwas ändert."
+  },
+  "checks_noDescription": {
+    "message": "Keine Beschreibung. Ein Modell hat keinen Anhaltspunkt, um dieses Tool auszuwählen."
+  },
+  "checks_noSchema": {
+    "message": "Kein Eingabeschema. Falls das Tool Argumente erwartet, kann ein Modell nicht wissen, welche."
+  },
+  "checks_none": {
+    "message": "Nichts zu beanstanden: Beschreibung, Schema und Annotationen sind vollständig vorhanden."
+  },
+  "checks_oneOnCard": {
+    "message": "1 Hinweis"
+  },
+  "checks_propertyWithoutDescription": {
+    "message": "Eigenschaften ohne Beschreibung: $1."
+  },
+  "checks_requiredNotDeclared": {
+    "message": "Erforderlich, aber nicht als Eigenschaften deklariert: $1."
+  },
+  "checks_schemaError": {
+    "message": "Das Eingabeschema lässt sich nicht parsen: $1"
+  },
+  "checks_schemaNotObject": {
+    "message": "Das Eingabeschema ist kein Objektschema (Typ $1). Tool-Argumente sind immer ein Objekt."
+  },
+  "checks_shortDescription": {
+    "message": "Kurze Beschreibung ($1 Zeichen). Geben Sie an, was das Tool tut, wann es zu verwenden ist und was es zurückgibt."
+  },
+  "checks_title": {
+    "message": "Vertragsprüfungen"
+  },
+  "checks_titleCount": {
+    "message": "Vertragsprüfungen ($1)"
+  },
+  "common_error": {
+    "message": "Fehler"
+  },
+  "common_frameN": {
+    "message": "Frame #$1"
+  },
+  "common_ms": {
+    "message": "$1 ms"
+  },
+  "common_ok": {
+    "message": "OK"
+  },
+  "connector_add": {
+    "message": "Konnektor hinzufügen"
+  },
+  "connector_addHelp": {
+    "message": "Prüft die Endpunktregeln und speichert diesen Konnektor in der Anbieterliste."
+  },
+  "connector_addOne": {
+    "message": "Eigenen Konnektor hinzufügen"
+  },
+  "connector_added": {
+    "message": "Konnektor hinzugefügt. Wählen Sie ihn oben in der Anbieterliste aus."
+  },
+  "connector_delete": {
+    "message": "Löschen"
+  },
+  "connector_deleteHelp": {
+    "message": "Entfernt diesen Konnektor und löscht seinen Schlüssel aus dem Speicher."
+  },
+  "connector_dialect": {
+    "message": "Anfrage-Dialekt"
+  },
+  "connector_dialectHelp": {
+    "message": "Welche API der Endpunkt spricht. Explorer unterstützt alle drei."
+  },
+  "connector_help": {
+    "message": "Eigene Konnektoren sind von Ihnen definierte Modell-Endpunkte. Chrome verwaltet den Zugriff; entfernte Endpunkte benötigen HTTPS. Der gewählte Schlüsselspeichermodus gilt."
+  },
+  "connector_key": {
+    "message": "Benötigt API-Schlüssel"
+  },
+  "connector_keyHelp": {
+    "message": "Wenn ausgewählt, benötigt dieser Konnektor einen API-Schlüssel. Der gewählte Speichermodus gilt."
+  },
+  "connector_mark": {
+    "message": "benutzerdefiniert"
+  },
+  "connector_name": {
+    "message": "Name"
+  },
+  "connector_nameHelp": {
+    "message": "Wird in der Anbieterliste angezeigt. Bis zu 60 Zeichen."
+  },
+  "connector_none": {
+    "message": "Noch keine eigenen Konnektoren."
+  },
+  "connector_section": {
+    "message": "Eigene Konnektoren"
+  },
+  "connector_url": {
+    "message": "Endpunkt"
+  },
+  "connector_urlHelp": {
+    "message": "Die Basis-URL, die Explorer aufruft, z. B. https://my-gateway.internal/v1."
+  },
+  "diagnosticExport": {
+    "message": "Diesen Nachweis prüfen und exportieren"
+  },
+  "diagnosticExportNote": {
+    "message": "Enthält die angezeigten Beobachtungen, Website-Adressen und genauen Fehler. Prüfen Sie die Vorschau vor dem Teilen."
+  },
+  "diagnosticInvalid": {
+    "message": "Die Vorschau muss gültiges JSON sein, bevor sie kopiert oder heruntergeladen werden kann."
+  },
+  "diagnosticPreview": {
+    "message": "Vorschau der Diagnose-Nachweise"
+  },
+  "diagnosticPreviewHelp": {
+    "message": "Nachweise vor dem Export lesen oder bearbeiten. Das Öffnen ändert nichts an der Seite."
+  },
+  "discoveryComplete": {
+    "message": "Erkennung vollständig"
+  },
+  "discoveryFailed": {
+    "message": "Discovery fehlgeschlagen"
+  },
+  "discoveryNextAction": {
+    "message": "Prüfen Sie, ob die Seite vollständig geladen wurde, und aktualisieren Sie dann die Tools."
+  },
+  "discoveryPartial": {
+    "message": "Erkennung unvollständig"
+  },
+  "discoveryRetry": {
+    "message": "Tools aktualisieren"
+  },
+  "discoveryRetryHelp": {
+    "message": "Tool-Erkennung auf der aktuellen Seite erneut starten. Dabei wird kein Tool ausgeführt."
+  },
+  "discovery_check": {
+    "message": "Ursprung prüfen"
+  },
+  "discovery_checkHelp": {
+    "message": "Die drei Konventionspfade und Seiten-Header dieses Ursprungs einmalig abrufen."
+  },
+  "discovery_disclosure": {
+    "message": "Sendet GET-Anfragen von Explorer an $1 für /.well-known/webmcp, /.well-known/webmcp.json und /llms.txt sowie ein GET zum Lesen der Seiten-Header."
+  },
+  "discovery_intro": {
+    "message": "Die drei Dateien sind optionale Konventionen, keine WebMCP-Pflicht. Zusätzlich werden Permissions-Policy-, CSP- und CORS-Header gelesen. Ohne Zugangsdaten und Weiterleitungen, höchstens 64 KiB je Antworttext. Die Ergebnisse beschreiben diese Antworten, keine angemeldeten Sitzungen oder wirksamen Browserrichtlinien."
+  },
+  "discovery_notGranted": {
+    "message": "Explorer darf von diesem Ursprung nichts abrufen: Gewähren Sie zuerst Zugriff auf die Website."
+  },
+  "discovery_results": {
+    "message": "$1 — Status $2"
+  },
+  "discovery_resultsHelp": {
+    "message": "Antwort jedes Pfads: HTTP-Status, Inhaltstyp und Größe oder der Fehler."
+  },
+  "discovery_title": {
+    "message": "Erkennungskonventionen — optionale Netzwerkprüfungen"
+  },
+  "discovery_titleHelp": {
+    "message": "Erkennungsdateien abrufen und den Permissions-Policy-Header der Seite lesen."
+  },
+  "enableFlagBody": {
+    "message": "Für die lokale Entwicklung: Wenn Ihre Chrome-Version dieses Flag anbietet, setzen Sie es auf Enabled und starten Sie Chrome neu."
+  },
+  "enableFlagTitle": {
+    "message": "Echte Websites inspizieren"
+  },
+  "enableFlagWhy": {
+    "message": "Chrome dokumentiert dieses Flag für lokale Tests und bietet zudem ein Origin-Trial an."
+  },
+  "envUnavailableTitle": {
+    "message": "WebMCP ist hier nicht verfügbar"
+  },
+  "env_apiAvailabilityHelp": {
+    "message": "Gibt an, ob document.modelContext die von Explorer benötigten Methoden bereitstellt."
+  },
+  "env_browserSaid": {
+    "message": "Der Browser meldete: $1"
+  },
+  "env_capabilityHelp": {
+    "message": "Wie WebMCP in diesem Tab bereitgestellt wird."
+  },
+  "env_frameContextHelp": {
+    "message": "Cross-Origin-Iframes benötigen allow=\"tools\" von der einbettenden Seite."
+  },
+  "env_missingMethods": {
+    "message": "Fehlende Methoden"
+  },
+  "env_missingMethodsHelp": {
+    "message": "Methoden, die Explorer erwartet, aber nicht gefunden hat."
+  },
+  "env_originIsolationHelp": {
+    "message": "WebMCP ist nur in ursprungsisolierten Dokumenten verfügbar. Origin-Agent-Cluster: ?0 deaktiviert es."
+  },
+  "env_secureContextHelp": {
+    "message": "WebMCP wird nur in einem sicheren Kontext bereitgestellt."
+  },
+  "env_toolsPermissionHelp": {
+    "message": "Die Permissions-Policy für tools. „unobservable“ bedeutet, dass der Browser sie nicht zur Prüfung offenlegt."
+  },
+  "evalsEditor_aModelIsNotDeterministic": {
+    "message": "Ein Modell ist nicht deterministisch. Ein einzelner Versuch beweist genauso wenig wie ein Zufallstreffer."
+  },
+  "evalsEditor_aModelThatGetsThere": {
+    "message": "Ein Modell, das erst nach drei Fehlaufrufen ans Ziel kommt, hat die Beschreibungen nicht verstanden."
+  },
+  "evalsEditor_addACase": {
+    "message": "Fall hinzufügen"
+  },
+  "evalsEditor_andCallItFirst": {
+    "message": " und zuerst aufrufen"
+  },
+  "evalsEditor_asksForAToolTo": {
+    "message": "verlangt, ein Werkzeug zuerst aufzurufen, ohne eines zu benennen"
+  },
+  "evalsEditor_attempts": {
+    "message": "Versuche"
+  },
+  "evalsEditor_checksNothingSoItWould": {
+    "message": "prüft nichts und würde daher unabhängig vom Verhalten des Modells bestehen"
+  },
+  "evalsEditor_deleteThisCase": {
+    "message": "Diesen Fall löschen"
+  },
+  "evalsEditor_expectsAndForbidsTheSame": {
+    "message": "erwartet und verbietet dasselbe Werkzeug"
+  },
+  "evalsEditor_hasNoGoal": {
+    "message": "hat kein Ziel"
+  },
+  "evalsEditor_mustNotCall": {
+    "message": "Darf nicht aufrufen"
+  },
+  "evalsEditor_notOnThisPage": {
+    "message": "$1 ist auf dieser Seite nicht vorhanden"
+  },
+  "evalsEditor_notOnThisPageHelp": {
+    "message": "Der Fall würde aus einem Grund fehlschlagen, der nichts mit dem Modell zu tun hat."
+  },
+  "evalsEditor_oneGoalOneExpectation": {
+    "message": "Ein Ziel, eine Erwartung"
+  },
+  "evalsEditor_remove": {
+    "message": "Entfernen"
+  },
+  "evalsEditor_shouldCall": {
+    "message": "Soll aufrufen"
+  },
+  "evalsEditor_suiteName": {
+    "message": "Name der Suite"
+  },
+  "evalsEditor_toolThatShouldBeCalled": {
+    "message": "Werkzeug, das aufgerufen werden soll"
+  },
+  "evalsEditor_toolsThatMustNotBe": {
+    "message": "Werkzeuge, die nicht aufgerufen werden dürfen (kommagetrennt)"
+  },
+  "evalsEditor_untitledSuite": {
+    "message": "Unbenannte Suite"
+  },
+  "evalsEditor_whatShouldTheAgentBe": {
+    "message": "Was soll der Agent tun?"
+  },
+  "evalsEditor_writtenAgainst1RunningIt": {
+    "message": "Geschrieben für $1. Das Ausführen anderswo ist erlaubt, aber das "
+  },
+  "evalsEditor_writtenAgainstNote": {
+    "message": "Geschrieben für $1. Das Ausführen anderswo ist erlaubt, aber das Ergebnis hat eine andere Bedeutung."
+  },
+  "evalsResults_1NamedByTheSuite": {
+    "message": "$1 — in der Suite benannt, aber nicht bereitgestellt von "
+  },
+  "evalsResults_attemptsJudged": {
+    "message": "Versuche, die bewertet werden konnten."
+  },
+  "evalsResults_broken": {
+    "message": "defekt"
+  },
+  "evalsResults_brokenHelp": {
+    "message": "Vor dieser Änderung bestanden, schlägt jetzt fehl."
+  },
+  "evalsResults_calledForbidden": {
+    "message": "hat $1 aufgerufen, was verboten ist"
+  },
+  "evalsResults_cancelled": {
+    "message": "abgebrochen"
+  },
+  "evalsResults_casePointsHelp": {
+    "message": "Ein Fall kann weiterhin fehlschlagen und sich dennoch verbessern — von 0/5 auf 2/5 ist ein Fortschritt."
+  },
+  "evalsResults_compareWithThePreviousRun": {
+    "message": "Mit dem vorherigen Durchlauf vergleichen"
+  },
+  "evalsResults_comparedWithThePreviousRun": {
+    "message": "Verglichen mit dem vorherigen Durchlauf"
+  },
+  "evalsResults_couldNotRun": {
+    "message": "konnte nicht ausgeführt werden"
+  },
+  "evalsResults_countTimesMiss": {
+    "message": "$1× $2"
+  },
+  "evalsResults_differentFirstChoice": {
+    "message": "andere erste Wahl"
+  },
+  "evalsResults_expectedToolNeverCalled": {
+    "message": "das erwartete Werkzeug wurde nie aufgerufen"
+  },
+  "evalsResults_exportThisResult": {
+    "message": "Dieses Ergebnis exportieren"
+  },
+  "evalsResults_failed": {
+    "message": "fehlgeschlagen"
+  },
+  "evalsResults_fixed": {
+    "message": "behoben"
+  },
+  "evalsResults_fixedHelp": {
+    "message": "Vor dieser Änderung fehlgeschlagen, besteht jetzt."
+  },
+  "evalsResults_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "evalsResults_nBroken": {
+    "message": "$1 defekt"
+  },
+  "evalsResults_nCouldNotRun": {
+    "message": "$1 nicht ausführbar"
+  },
+  "evalsResults_nCouldNotRunHelp": {
+    "message": "Von der Quote ausgenommen: Diese Fälle sagen nichts über die Seite aus."
+  },
+  "evalsResults_nDisabled": {
+    "message": "$1 deaktiviert"
+  },
+  "evalsResults_nFailed": {
+    "message": "$1 fehlgeschlagen"
+  },
+  "evalsResults_nFixed": {
+    "message": "$1 behoben"
+  },
+  "evalsResults_nPassed": {
+    "message": "$1/$2 bestanden"
+  },
+  "evalsResults_nRewritten": {
+    "message": "$1 umgeschrieben"
+  },
+  "evalsResults_noRate": {
+    "message": "keine Quote"
+  },
+  "evalsResults_noRateHelp": {
+    "message": "Nichts konnte bewertet werden, daher gibt es keine Quote — nicht null, was hieße, das Modell lag immer falsch."
+  },
+  "evalsResults_noResultYetRunThe": {
+    "message": "Noch kein Ergebnis. Führen Sie die Suite aus, um zu sehen, welche Werkzeuge das Modell wählt."
+  },
+  "evalsResults_notComparable": {
+    "message": "nicht vergleichbar"
+  },
+  "evalsResults_notComparableHelp": {
+    "message": "Einer der beiden Durchläufe konnte nicht bewertet werden, daher sagt dieser Fall nichts über die Änderung aus."
+  },
+  "evalsResults_nothing": {
+    "message": "nichts"
+  },
+  "evalsResults_nothingCouldBeJudgedSo": {
+    "message": "Nichts konnte bewertet werden, daher gibt es keine Quote — nicht null, was hieße, das Modell lag immer falsch."
+  },
+  "evalsResults_ofAttempts": {
+    "message": "$1 der Versuche"
+  },
+  "evalsResults_ofAttemptsHelp": {
+    "message": "Durchschnitt über alle Fälle, die überhaupt bewertet werden konnten."
+  },
+  "evalsResults_overridesInForceDuringThis": {
+    "message": "Aktive Überschreibungen während dieses Durchlaufs: $1."
+  },
+  "evalsResults_passed": {
+    "message": "bestanden"
+  },
+  "evalsResults_points": {
+    "message": "$1 Punkte"
+  },
+  "evalsResults_pointsHelp": {
+    "message": "Veränderung des Anteils bestandener Versuche."
+  },
+  "evalsResults_previousRun": {
+    "message": "vorheriger Durchlauf"
+  },
+  "evalsResults_reachedForFirst": {
+    "message": "Zuerst gewählt: $1"
+  },
+  "evalsResults_sameGoalsRunTwiceWhat": {
+    "message": "Gleiche Ziele, zweimal ausgeführt — was sich geändert hat"
+  },
+  "evalsResults_shouldCall1": {
+    "message": "Soll $1 aufrufen"
+  },
+  "evalsResults_staleCase": {
+    "message": "Vertrag seit diesem Durchlauf geändert"
+  },
+  "evalsResults_staleCaseHelp": {
+    "message": "Das von diesem Fall erwartete Tool wird Modellen mit einer anderen Beschreibung oder einem anderen Schema angeboten als bei der Aufzeichnung dieses Ergebnisses. Das Ergebnis gilt weiterhin für diesen Lauf, sagt aber nichts über das aktuelle Tool aus."
+  },
+  "evalsResults_staleCount": {
+    "message": "$1 Fälle mit geändertem Vertrag"
+  },
+  "evalsResults_staleGone": {
+    "message": "Werkzeug nicht mehr auf der Seite"
+  },
+  "evalsResults_staleGoneHelp": {
+    "message": "Das von diesem Fall erwartete Werkzeug ist auf der Seite nicht mehr registriert."
+  },
+  "evalsResults_staleHelp": {
+    "message": "Diese Fälle wurden gegen eine Beschreibung oder ein Schema geprüft, das sich seitdem geändert hat. Führen Sie die Suite erneut aus, um die aktuellen Tools zu bewerten."
+  },
+  "evalsResults_staleOne": {
+    "message": "1 Fall mit geändertem Vertrag"
+  },
+  "evalsResults_stillFailing": {
+    "message": "schlägt weiterhin fehl"
+  },
+  "evalsResults_stillPassing": {
+    "message": "besteht weiterhin"
+  },
+  "evalsResults_theExpectedToolWasCalled": {
+    "message": "das erwartete Werkzeug wurde aufgerufen, aber nicht zuerst"
+  },
+  "evalsResults_theExpectedToolWasNever": {
+    "message": "das erwartete Werkzeug wurde nie aufgerufen"
+  },
+  "evalsResults_theReportNamesTheGoals": {
+    "message": "Der Bericht nennt die Ziele, die vom Modell gewählten Werkzeuge sowie aktive Überschreibungen. Prüfen Sie ihn vor dem Teilen."
+  },
+  "evalsResults_thisRun": {
+    "message": "dieser Durchlauf"
+  },
+  "evalsResults_unknownToolsNote": {
+    "message": "$1 — von der Suite genannt, aber von dieser Seite nicht bereitgestellt. Diese Fälle sind aus einem Grund fehlgeschlagen, der nicht am Modell liegt."
+  },
+  "evalsResults_yourLabel": {
+    "message": "Ihre Bezeichnung für diesen Durchlauf."
+  },
+  "evals_anEmptySuite": {
+    "message": "Erstellen Sie eine leere Evaluierungssuite und fügen Sie dann Aufgaben und Erwartungen hinzu."
+  },
+  "evals_attemptGoal": {
+    "message": "Versuch $1 — $2"
+  },
+  "evals_chromeStoppedTheExtensionS": {
+    "message": "Chrome hat den Hintergrund-Worker der Erweiterung gestoppt, während diese Suite lief. Explorer startet sie nicht von selbst neu, da bereits erfolgte Modellaufrufe berechnet wurden. Starten Sie sie erneut, wenn Sie bereit sind."
+  },
+  "evals_delete": {
+    "message": "Löschen"
+  },
+  "evals_deleteThisSuiteAndIts": {
+    "message": "Diese Suite und ihre Ergebnisse löschen"
+  },
+  "evals_fixModelSetup": {
+    "message": "Korrigieren Sie zuerst die Modelleinrichtung: $1."
+  },
+  "evals_fixTheFlaggedCasesFirst": {
+    "message": "Korrigieren Sie zuerst die markierten Fälle — ein Fall, der nichts prüft, besteht immer."
+  },
+  "evals_fromThisPage": {
+    "message": "Von dieser Seite"
+  },
+  "evals_interrupted": {
+    "message": "unterbrochen"
+  },
+  "evals_interruptedHelp": {
+    "message": "Chrome hat den Hintergrund-Worker der Erweiterung gestoppt, während diese Suite lief."
+  },
+  "evals_labelThisRunBeforeRewrite": {
+    "message": "Diesen Durchlauf benennen — „vor Überarbeitung“, „nach Überarbeitung“"
+  },
+  "evals_labelsAreWhatMakeThe": {
+    "message": "Bezeichnungen machen den späteren Vergleich erst verständlich."
+  },
+  "evals_manualModeCannotRunA": {
+    "message": "Der manuelle Modus kann keine Suite ausführen: Er erfordert Ihre Mitwirkung bei jedem Aufruf."
+  },
+  "evals_new": {
+    "message": "Neu"
+  },
+  "evals_newSuite": {
+    "message": "Neue Suite"
+  },
+  "evals_noSuiteYetStartFrom": {
+    "message": "Noch keine Suite vorhanden. Starten Sie von dieser Seite, um einen Fall pro Tool zu erhalten, und passen Sie ihn dann an."
+  },
+  "evals_oneCasePerToolEach": {
+    "message": "Ein Fall pro Werkzeug, der jeweils dieses Werkzeug anfordert. Ein Ausgangspunkt zum Bearbeiten."
+  },
+  "evals_runEveryCaseEveryAttempt": {
+    "message": "Jeden Fall und jeden Versuch nacheinander ausführen."
+  },
+  "evals_runLabel": {
+    "message": "Durchlauf-Bezeichnung"
+  },
+  "evals_runSuite": {
+    "message": "Suite ausführen"
+  },
+  "evals_runs": {
+    "message": "$1/$2 Durchläufe"
+  },
+  "evals_runsDone": {
+    "message": "$1/$2 Durchläufe abgeschlossen"
+  },
+  "evals_starting": {
+    "message": "Wird gestartet…"
+  },
+  "evals_stopNow": {
+    "message": "Suite jetzt stoppen. Der laufende Versuch wird samt wartender Tool-Aufrufe auf der Seite abgebrochen und als abgebrochen statt als Fehler gezählt."
+  },
+  "evals_suite": {
+    "message": "Suite"
+  },
+  "evals_unknownToolsCount": {
+    "message": "$1 unbekannte Werkzeuge"
+  },
+  "evals_waitingForForm": {
+    "message": "Warten auf das Formular $1 auf der Seite: Es wurde ausgefüllt und wartet auf das Absenden. Evals bricht diesen Aufruf nach $2 s ab, wenn niemand absendet."
+  },
+  "evals_whichSuiteToRun": {
+    "message": "Welche Suite ausgeführt werden soll"
+  },
+  "exportBar_aReportContainsWhatThe": {
+    "message": "Ein Bericht enthält die Rückgabe der Seite. Prüfen Sie ihn vor dem Teilen."
+  },
+  "exportBar_console": {
+    "message": "Konsolen-Snippet"
+  },
+  "exportBar_copied": {
+    "message": "$1 kopiert."
+  },
+  "exportBar_copy": {
+    "message": "Kopieren"
+  },
+  "exportBar_copyThe1ReportTo": {
+    "message": "$1-Bericht in die Zwischenablage kopieren"
+  },
+  "exportBar_downloadThe1ReportAs": {
+    "message": "$1-Bericht als Datei herunterladen"
+  },
+  "exportBar_export": {
+    "message": "Exportieren"
+  },
+  "exportBar_forConsole": {
+    "message": "in DevTools im Frame des Werkzeugs einfügen"
+  },
+  "exportBar_forPlaywright": {
+    "message": ".spec.ts-Test: @playwright/test, ausdrückliche Lauf-ID und CHROME-Binärdatei"
+  },
+  "exportBar_forReview": {
+    "message": "für ein Review oder ein Ticket"
+  },
+  "exportBar_forScript": {
+    "message": "für ein Skript oder ein Diff"
+  },
+  "exportBar_json": {
+    "message": "JSON"
+  },
+  "exportBar_markdown": {
+    "message": "Markdown"
+  },
+  "exportBar_playwright": {
+    "message": "Playwright-Skript"
+  },
+  "exportBar_save": {
+    "message": "Speichern"
+  },
+  "exportBar_savedFile": {
+    "message": "$1 gespeichert."
+  },
+  "extDescription": {
+    "message": "Untersuchen, testen, debuggen und prüfen Sie die Sicherheit der WebMCP-Werkzeuge, die eine Website KI-Agenten bereitstellt."
+  },
+  "extName": {
+    "message": "WebMCP Explorer"
+  },
+  "fieldChecks_addHelp": {
+    "message": "Fügen Sie das Feld und den Vergleich zu dieser Prüfung hinzu und speichern Sie anschließend die benannte Prüfung samt Argumenten."
+  },
+  "fieldChecks_addRule": {
+    "message": "Feldregel hinzufügen"
+  },
+  "fieldChecks_added": {
+    "message": "Regel hinzugefügt. Speichern Sie die benannte Prüfung, um diese Regeln und Argumente zu behalten."
+  },
+  "fieldChecks_cancelEdit": {
+    "message": "Regelbearbeitung verwerfen"
+  },
+  "fieldChecks_cancelEditHelp": {
+    "message": "Verwirft die unvollendete Bearbeitung und behält die bereits hinzugefügten Regeln bei."
+  },
+  "fieldChecks_chooseResult": {
+    "message": "Feld aus dem Ergebnis wählen"
+  },
+  "fieldChecks_chooseResultHelp": {
+    "message": "Durchsuchen Sie die Daten dieses Durchlaufs und wählen Sie ein Feld aus. Das Werkzeug wird dabei nicht ausgeführt."
+  },
+  "fieldChecks_editRule": {
+    "message": "Regel bearbeiten"
+  },
+  "fieldChecks_editRuleHelp": {
+    "message": "Bearbeiten Sie die Feldregel $1 und aktualisieren Sie sie, um Ihre Änderungen anzuwenden."
+  },
+  "fieldChecks_editSaved": {
+    "message": "Prüfung bearbeiten"
+  },
+  "fieldChecks_editSavedHelp": {
+    "message": "Laden Sie den gespeicherten Namen, die Argumente und die Erwartung zur Bearbeitung. Durch Speichern wird dieser Eintrag aktualisiert."
+  },
+  "fieldChecks_emptyKey": {
+    "message": "(leerer Feldname)"
+  },
+  "fieldChecks_expectFields": {
+    "message": "ausgewählte Ergebnisfelder"
+  },
+  "fieldChecks_intro": {
+    "message": "Prüfen Sie nur die relevanten Felder. Änderungen an anderen Feldern lassen diese Prüfung nicht fehlschlagen. Alle untenstehenden Regeln müssen erfüllt sein."
+  },
+  "fieldChecks_jsonValueNote": {
+    "message": "Geben Sie JSON ein: 1 für eine Zahl, \"ready\" für Text, true, null, eine Liste oder ein Objekt. Zahlenvergleiche bewahren die exakten Ziffern."
+  },
+  "fieldChecks_keepSaved": {
+    "message": "gespeicherte Erwartung beibehalten"
+  },
+  "fieldChecks_limit": {
+    "message": "Eine Prüfung kann höchstens $1 Feldregeln enthalten."
+  },
+  "fieldChecks_needResult": {
+    "message": "Führen Sie das Werkzeug erfolgreich aus, um Felder aus einem vollständigen Ergebnis auszuwählen. Sie können einen Feldpfad auch selbst eingeben."
+  },
+  "fieldChecks_op_equals": {
+    "message": "Entspricht diesem JSON-Wert"
+  },
+  "fieldChecks_op_exists": {
+    "message": "Feld existiert"
+  },
+  "fieldChecks_op_length_equals": {
+    "message": "Listenlänge ist gleich"
+  },
+  "fieldChecks_op_length_max": {
+    "message": "Listenlänge beträgt höchstens"
+  },
+  "fieldChecks_op_length_min": {
+    "message": "Listenlänge beträgt mindestens"
+  },
+  "fieldChecks_op_missing": {
+    "message": "Feld fehlt"
+  },
+  "fieldChecks_op_number_max": {
+    "message": "Zahl beträgt höchstens"
+  },
+  "fieldChecks_op_number_min": {
+    "message": "Zahl beträgt mindestens"
+  },
+  "fieldChecks_op_text_contains": {
+    "message": "Text enthält"
+  },
+  "fieldChecks_operator": {
+    "message": "Vergleich"
+  },
+  "fieldChecks_operatorHelp": {
+    "message": "Wählen Sie die Bedingung für dieses Feld. Jede Regel muss erfüllt sein."
+  },
+  "fieldChecks_path": {
+    "message": "Feldpfad"
+  },
+  "fieldChecks_pathHelp": {
+    "message": "Wählen Sie ein Feld aus dem Ergebnis oder geben Sie dessen Pfad ein, z. B. /products/0/id. Leer lassen für das gesamte Ergebnis. Schreiben Sie in Namen ~ als ~0 und / als ~1."
+  },
+  "fieldChecks_pendingRule": {
+    "message": "Fügen Sie die angefangene Feldregel hinzu, aktualisieren Sie sie oder verwerfen Sie die Bearbeitung, bevor Sie die Prüfung speichern."
+  },
+  "fieldChecks_pickHelp": {
+    "message": "Feld $1 für eine Prüfung auswählen"
+  },
+  "fieldChecks_removeRule": {
+    "message": "Regel entfernen"
+  },
+  "fieldChecks_removeRuleHelp": {
+    "message": "Entfernt die Feldregel $1 aus diesem Entwurf. Speichern Sie die Prüfung, um die Änderung zu übernehmen."
+  },
+  "fieldChecks_ruleResults": {
+    "message": "Feldergebnisse ($1)"
+  },
+  "fieldChecks_ruleResultsHelp": {
+    "message": "Zeigt jede Regel, ihren erwarteten Wert und die tatsächliche Rückgabe des Werkzeugs."
+  },
+  "fieldChecks_selectHelp": {
+    "message": "Wählen Sie einen Feldnamen. Klappen Sie verschachtelte Daten auf oder zeigen Sie weitere Einträge an, um andere Felder zu erreichen."
+  },
+  "fieldChecks_textValueNote": {
+    "message": "Geben Sie den Text direkt ohne JSON-Anführungszeichen ein. Groß-/Kleinschreibung wird beachtet."
+  },
+  "fieldChecks_updateRule": {
+    "message": "Regel aktualisieren"
+  },
+  "fieldChecks_value": {
+    "message": "Erwarteter Wert"
+  },
+  "fieldChecks_valueHelp": {
+    "message": "Geben Sie den Vergleichswert ein. JSON unterscheidet zwischen Zahlen, Text, null, Listen und Objekten."
+  },
+  "fieldChecks_wholeResult": {
+    "message": "Gesamtes Ergebnis wählen"
+  },
+  "fieldChecks_wholeResultHelp": {
+    "message": "Verwenden Sie einen leeren Feldpfad, um den gesamten JSON-Wert zu prüfen."
+  },
+  "grantAction": {
+    "message": "Enable Explorer auf dieser Website"
+  },
+  "grantBody": {
+    "message": "WebMCP Explorer benötigt Zugriff auf diese Website, um die von ihren Seiten bereitgestellten WebMCP-Werkzeuge zu erkennen und zu testen. Der Zugriff gilt nur für diese Website, sofern Sie nicht „Auf allen Websites zulassen“ wählen."
+  },
+  "grantDenied": {
+    "message": "Der Zugriff wurde nicht gewährt. Explorer kann diese Website noch nicht untersuchen."
+  },
+  "grantMoreOrigins": {
+    "message": "Zugriff gewähren, um deren Werkzeuge zu untersuchen"
+  },
+  "grantTitle": {
+    "message": "Zugriff auf diese Website erlauben"
+  },
+  "help_adaptedTools": {
+    "message": "Einige Anbieter lehnen oneOf, anyOf oder allOf an der Wurzel eines Tool-Schemas ab. Explorer hat ein einfaches Objekt gesendet und die Regel in der Beschreibung vermerkt; das Schema der Seite selbst bleibt unverändert."
+  },
+  "help_annotationsBody": {
+    "message": "Annotationen sind Selbstauskünfte eines Werkzeugs, etwa „schreibgeschützt“ oder „nicht vertrauenswürdiger Inhalt“. Explorer zeigt an, was der Browser meldet. Es sind keine unabhängigen Garantien über das tatsächliche Verhalten des Werkzeugs."
+  },
+  "help_annotationsTitle": {
+    "message": "Schreibgeschützt und andere Abzeichen"
+  },
+  "help_applyOverride": {
+    "message": "Speichert diese Änderungen für Explorer. Ein konfigurierter Mock ersetzt den echten Werkzeugaufruf, solange er aktiv ist."
+  },
+  "help_auditBody": {
+    "message": "Das Audit bewertet den Vertrag jedes Tools — Beschreibung, Schema, Annotationen —, damit ein Modell es richtig auswählen und aufrufen kann. Es misst die Vertragsqualität, kein Sicherheitsurteil; was Sie beheben, entscheiden Sie selbst."
+  },
+  "help_auditTitle": {
+    "message": "Audit"
+  },
+  "help_automateBody": {
+    "message": "Manuelle Rezepte verwenden bis zu 20 geprüfte Aufrufe ohne Modell wieder: benannte Eingaben und ausgewählte Ergebnisfelder früherer Schritte liefern spätere Argumente. Prüfen Sie Seite, Frames und lokale Mocks und führen Sie einen oder alle übrigen Schritte aus. Pause und Stopp sind explizit; unterbrochene Läufe setzen nie von selbst fort. Agenten-Labor und Evals bleiben optional; im manuellen Modus steuern Sie die Schleife selbst, ohne dass Explorer Daten sendet."
+  },
+  "help_automateTitle": {
+    "message": "Agenten und Evaluierungen ausprobieren"
+  },
+  "help_budgets": {
+    "message": "Legen Sie die maximale Anzahl von Modellrunden und Werkzeugaufrufen pro Agentenlauf fest."
+  },
+  "help_button": {
+    "message": "Hilfe"
+  },
+  "help_buttonHelp": {
+    "message": "Erklärungen zu dieser Ansicht, erste Schritte und Entwickler-Workflows öffnen."
+  },
+  "help_callers": {
+    "message": "Zeigt weitere erfasste Registrierungsorte für dieses Werkzeug an."
+  },
+  "help_chooseBody": {
+    "message": "Öffnen Sie eine Karte unter Tools und lesen Sie ihre Beschreibung. Das Öffnen dient nur der Inspektion. Auf einer echten Website kann das Ausführen eines Tools Änderungen bewirken; wählen Sie nur Aktionen, deren Zweck Sie verstehen. Die integrierte Demo dient zum Üben."
+  },
+  "help_chooseTitle": {
+    "message": "Ein Werkzeug auswählen"
+  },
+  "help_close": {
+    "message": "Schließen"
+  },
+  "help_closeHelp": {
+    "message": "Zur Ansicht zurückkehren, ohne das Formular zu ändern oder ein Tool auszuführen."
+  },
+  "help_contractChecks": {
+    "message": "Klappen Sie Prüfungen auf fehlende oder widersprüchliche Werkzeug-Metadaten auf. Dies sind Vertragsdiagnosen, keine Sicherheitsbewertung."
+  },
+  "help_debugBody": {
+    "message": "Verlauf zeigt einzelne Aufrufe. Zeitleiste verfolgt Erkennung und Ausführungen. Quelle erfasst Registrierungsorte, wenn der Instrumentierungsmodus für eine Website aktiviert und die Seite neu geladen wurde. Überschreibung ändert die lokale Ansicht von Explorer und kann Ergebnisse simulieren; ihr aktiver Status wird deutlich angezeigt."
+  },
+  "help_debugTitle": {
+    "message": "Einen Fehler verstehen"
+  },
+  "help_demoBody": {
+    "message": "Öffnen Sie in der Demo search_products, geben Sie MacBook in query ein und klicken Sie auf Ausführen. Durchsucht wird ein simulierter Shop innerhalb der Erweiterung; es wird keine echte Bestellung ausgelöst."
+  },
+  "help_detail_history": {
+    "message": "Frühere Aufrufe dieses Werkzeugs prüfen, Ergebnisse einsehen oder Eingaben erneut abspielen."
+  },
+  "help_detail_override": {
+    "message": "Ändern Sie die lokale Ansicht dieses Werkzeugs in Explorer oder simulieren Sie eine Antwort zu Testzwecken."
+  },
+  "help_detail_run": {
+    "message": "Bereiten Sie Eingaben vor und führen Sie dieses Werkzeug aus. Das Öffnen des Reiters „Ausführen“ startet es noch nicht."
+  },
+  "help_detail_schema": {
+    "message": "Eingabeschema des Tools, Pflichtfelder und Vertragsprüfungen inspizieren."
+  },
+  "help_developer": {
+    "message": "Entwicklerhandbuch"
+  },
+  "help_developerHelp": {
+    "message": "Arbeitsabläufe für Debugging, Regressionsprüfungen, Agenten und reproduzierbare Berichte."
+  },
+  "help_disabled": {
+    "message": "Derzeit nicht verfügbar; prüfen Sie den Status oder Hinweis neben dem Steuerelement."
+  },
+  "help_excludedTools": {
+    "message": "Zeigt an, welche Werkzeuge von der Modellanfrage ausgeschlossen wurden und warum."
+  },
+  "help_explanations": {
+    "message": "Erläuterungen im Leitfaden"
+  },
+  "help_export": {
+    "message": "Verfügbare Kopier- und Download-Formate aufklappen. Es wird nichts automatisch geteilt."
+  },
+  "help_fillBody": {
+    "message": "Nutzen Sie das Formular unter Ausführen. Mit * markierte Felder sind Pflichtfelder. Eingaben heißen auch Argumente. Schema erklärt Typen und Regeln; der JSON-Modus erlaubt die direkte Bearbeitung. Prüfen Sie die Werte und klicken Sie auf Ausführen."
+  },
+  "help_fillTitle": {
+    "message": "Eingaben ausfüllen"
+  },
+  "help_frameBody": {
+    "message": "Ein Origin ist die Website-Adresse samt Protokoll und Port. Ein Frame ist eine eingebettete Seite. Zwei Frames können Werkzeuge mit demselben Namen bereitstellen; Explorer hält deren Ausführungsziele getrennt."
+  },
+  "help_frameTitle": {
+    "message": "Origin und Frame"
+  },
+  "help_glossary": {
+    "message": "WebMCP-Begriffe erklärt"
+  },
+  "help_glossaryHelp": {
+    "message": "Definitionen zu Werkzeugen, Schemata, Frames, Annotationen und nativer Unterstützung aufklappen."
+  },
+  "help_hintsBody": {
+    "message": "readOnlyHint, consequentialHint, untrustedContentHint und debugging sind Angaben der Seite über ein Tool. Agenten entscheiden anhand dieser Hinweise, ob sie vor der Ausführung nachfragen. Sie sind unverbindlich: Explorer vergleicht sie mit Name und Beschreibung des Tools."
+  },
+  "help_hintsTitle": {
+    "message": "Hinweise (Annotationen)"
+  },
+  "help_historyEntry": {
+    "message": "Klappen Sie diesen aufgezeichneten Aufruf auf, um Eingaben, Ergebnis und Wiederholungsoptionen zu prüfen."
+  },
+  "help_inlineBody": {
+    "message": "Ein Tool ist eine Aktion, die diese Seite bereitstellt. Öffnen Sie eine Karte, um zu lesen, was es tut, und prüfen Sie die Eingaben vor dem Ausführen."
+  },
+  "help_inspectBody": {
+    "message": "Tools filtert die aktuelle Seite nach Name, Beschreibung, Herkunft und Annotationen. Öffnen Sie ein Tool und dann Schema für den Eingabevertrag und seine Prüfungen. Ausführen unterstützt ein Formular oder rohes JSON. Beachten Sie den unter dem Namen angezeigten Frame."
+  },
+  "help_inspectTitle": {
+    "message": "Einen Vertrag prüfen"
+  },
+  "help_instrumentOff": {
+    "message": "Erfassung neuer Registrierungsorte für diese Website beenden. Laden Sie die Seite neu, um die Instrumentierungs-Wrapper zu entfernen."
+  },
+  "help_introBody": {
+    "message": "Mit WebMCP kann eine Website benannte Aktionen — sogenannte Werkzeuge — bereitstellen. Explorer zeigt diese Werkzeuge an und lässt Sie sie selbst ausprobieren. Sie benötigen kein KI-Konto, um ein Werkzeug zu prüfen oder auszuführen."
+  },
+  "help_introTitle": {
+    "message": "Entdecken, was eine Website kann"
+  },
+  "help_manualReply": {
+    "message": "Eingefügte Modellantwort analysieren und den manuellen Agentenlauf fortsetzen. Darin enthaltene Werkzeugaufrufe können ausgeführt werden."
+  },
+  "help_missingRegistrations": {
+    "message": "Registrierungen prüfen, die vom Instrumentierungsmodus gesehen wurden, aber in den vom Browser bereitgestellten Werkzeugen fehlen."
+  },
+  "help_modelSetup": {
+    "message": "Anbieter und Modell wählen, Verbindung verwalten und Ausführungsbudgets festlegen."
+  },
+  "help_nativeBody": {
+    "message": "Nativ bedeutet, dass der Browser die WebMCP-API bereitstellt. Ein Polyfill liefert eine JavaScript-Implementierung; die mitgelieferte Demo nutzt eines. Eine funktionierende Demo beweist nicht, dass jede Website WebMCP unterstützt."
+  },
+  "help_nativeTitle": {
+    "message": "Nativ und Polyfill"
+  },
+  "help_nav_agent": {
+    "message": "Agent Lab: Testen, wie ein Modell die Tools der Seite entdeckt und aufruft."
+  },
+  "help_nav_audit": {
+    "message": "Audit: Faktenbasierte Qualitätsbewertung der deklarierten Beschreibungen und Schemata."
+  },
+  "help_nav_evals": {
+    "message": "Evals: Wiederholbare Testsuiten zur Überprüfung der Tool-Auswahl und -Ausführung."
+  },
+  "help_nav_security": {
+    "message": "Passive Befunde zu sichtbaren Tool-Angaben mit Belegen und Quellen. Indikatoren beweisen keinen Angriff. Prüfung und Korrekturvorschläge rufen kein Tool auf. Ursprungsprüfung und aktive Proben erfordern eigene Aktionen unten. Heuristische Prüfung sichtbarer Angaben, keine Sicherheitszertifizierung. Ungeprüfte Aspekte stehen unten. Eine gute Note erlaubt keine Aktion."
+  },
+  "help_nav_settings": {
+    "message": "Einstellungen: Seitenzugriff, lokale Daten, Sprache und Sicherung."
+  },
+  "help_nav_timeline": {
+    "message": "Zeitachse: Live-Stream der Tool-Registrierungen, Entfernungen und Aufrufe."
+  },
+  "help_nav_tools": {
+    "message": "Tools: Liste der WebMCP-Tools dieser Seite, ihre Schemata und manuelle Ausführung."
+  },
+  "help_new": {
+    "message": "Neu bei WebMCP?"
+  },
+  "help_newHelp": {
+    "message": "Kurze Einführung und Schritt-für-Schritt-Anleitung anzeigen. Dadurch wird kein Werkzeug ausgeführt."
+  },
+  "help_originalOverride": {
+    "message": "Den von der Seite deklarierten Originalwert zum Vergleich mit Ihrer lokalen Überschreibung aufklappen."
+  },
+  "help_poisoningBody": {
+    "message": "Anweisungen in Name, Beschreibung oder Schema eines Tools, damit ein Agent sie befolgt, als kämen sie vom Nutzer. Explorer markiert solche Formulierungen als Indikatoren samt genauem Textausschnitt."
+  },
+  "help_poisoningTitle": {
+    "message": "Tool-Poisoning"
+  },
+  "help_provenanceBody": {
+    "message": "Welches Skript ein Werkzeug registriert hat, erfasst vom Instrumentierungsmodus (Einstellungen, pro Website, nach Neuladen). Ein Skript einer fremden Herkunft kann Werkzeuge auf der Seite hinzufügen oder ersetzen."
+  },
+  "help_provenanceTitle": {
+    "message": "Herkunft"
+  },
+  "help_rawSchema": {
+    "message": "Ursprüngliches Eingabeschema zur direkten Prüfung als JSON aufklappen."
+  },
+  "help_readBody": {
+    "message": "Das Ergebnis ist der Rückgabewert des Tools oder ein Fehler, der erklärt, warum der Aufruf fehlschlug. Der Verlauf speichert frühere Aufrufe. Erneut ausführen wiederholt die Aktion und damit möglicherweise auch ihre Auswirkungen."
+  },
+  "help_readTitle": {
+    "message": "Ergebnis lesen"
+  },
+  "help_regressionsBody": {
+    "message": "Speichern Sie Aufrufe mit exakter Prüfung des Gesamtergebnisses oder ausgewählter Felder. Wählen Sie relevante Felder wie eine nicht leere Produktliste und prüfen Sie jede fehlgeschlagene Abweichung. Gespeicherte Prüfungen behalten die ursprünglichen Argumente, wenn Sie nur die Erwartungen ändern. Vergleichen Sie Snapshots und prüfen Sie Vertragsabweichungen vor dem erneuten Abspielen."
+  },
+  "help_regressionsTitle": {
+    "message": "Regressionen erkennen"
+  },
+  "help_renamedTools": {
+    "message": "Zeigt die an das Modell gesendeten Werkzeug-Aliasse und warum die ursprünglichen Namen angepasst werden mussten."
+  },
+  "help_resumeTimeline": {
+    "message": "Aufzeichnung neuer Zeitleisten-Ereignisse für diesen Tab fortsetzen."
+  },
+  "help_saveKey": {
+    "message": "Diesen Anbieterschlüssel in der aktuellen Chrome-Sitzung behalten. Er wird beim Schließen von Chrome gelöscht."
+  },
+  "help_savedCalls": {
+    "message": "Speichern Sie Eingaben für dieses Werkzeug, laden Sie sie ins Formular oder führen Sie gespeicherte Aufrufe und Prüfungen aus."
+  },
+  "help_savedChecks": {
+    "message": "Gespeicherte Erwartungen prüfen, Prüfungen erneut ausführen und Ergebnisse exportieren."
+  },
+  "help_schemaBody": {
+    "message": "Ein Schema beschreibt akzeptierte Eingaben: Namen, Typen, Pflichtfelder und Einschränkungen. JSON ist ein Textformat für diese Werte. Explorer erstellt ein Formular, wenn sich das Schema als Felder darstellen lässt."
+  },
+  "help_schemaProperty": {
+    "message": "Diese Schema-Eigenschaft aufklappen, um Beschreibung, Einschränkungen und verschachtelte Felder zu prüfen."
+  },
+  "help_schemaTitle": {
+    "message": "Schema und JSON"
+  },
+  "help_screen": {
+    "message": "Dieser Bildschirm"
+  },
+  "help_screenHelp": {
+    "message": "Erläuterungen zu den aktuell in Explorer angezeigten Steuerelementen lesen."
+  },
+  "help_screenIntro": {
+    "message": "Diese Erläuterungen beschreiben die Ansicht, aus der Sie die Hilfe geöffnet haben. Schließen Sie den Leitfaden, um die Steuerelemente zu nutzen."
+  },
+  "help_securityBody": {
+    "message": "Passive Befunde zu sichtbaren Tool-Angaben mit Belegen und Quellen. Indikatoren beweisen keinen Angriff. Prüfung und Korrekturvorschläge rufen kein Tool auf. Ursprungsprüfung und aktive Proben erfordern eigene Aktionen unten. Heuristische Prüfung sichtbarer Angaben, keine Sicherheitszertifizierung. Ungeprüfte Aspekte stehen unten. Eine gute Note erlaubt keine Aktion."
+  },
+  "help_securityTitle": {
+    "message": "Sicherheit und Governance prüfen"
+  },
+  "help_sharingBody": {
+    "message": "Nach einem Durchlauf bietet „Diesen Aufruf reproduzieren“ Markdown, JSON, ein Konsolen-Snippet und ein Playwright-Skript. Exporte enthalten Aufrufdaten und weisen auf Überschreibungen hin. Prüfen Sie den Inhalt vor dem Teilen. Das Ausführen eines Snippets oder Skripts führt die Aktion erneut aus."
+  },
+  "help_sharingTitle": {
+    "message": "Einen reproduzierbaren Aufruf teilen"
+  },
+  "help_snapshots": {
+    "message": "Aktuelle Werkzeugverträge speichern und mit einer früheren Aufnahme oder einer anderen Umgebung vergleichen."
+  },
+  "help_source": {
+    "message": "Zeigt den erfassten Registrierungsort an oder erklärt, warum keine Quelle erfasst wurde."
+  },
+  "help_start": {
+    "message": "Hier starten"
+  },
+  "help_startAction": {
+    "message": "Erste Schritte zeigen"
+  },
+  "help_startHelp": {
+    "message": "Lernen Sie, wie Sie ein Werkzeug auswählen, Eingaben ausfüllen und das Ergebnis lesen, oder üben Sie in der mitgelieferten Demo."
+  },
+  "help_title": {
+    "message": "Explorer-Leitfaden"
+  },
+  "help_toolBody": {
+    "message": "Ein Werkzeug ist eine von der Seite angebotene benannte Aktion. Argumente sind die Werte, die Sie übergeben, etwa eine Suchanfrage."
+  },
+  "help_toolCardsBody": {
+    "message": "Öffnen Sie ein Tool, um die vollständige Beschreibung zu lesen, das Eingabeschema zu prüfen und einen Aufruf vorzubereiten. Karten zeigen bis zu drei Zeilen der Beschreibung. Das Öffnen einer Karte führt das Tool nicht aus."
+  },
+  "help_toolCardsTitle": {
+    "message": "Werkzeugkarten"
+  },
+  "help_toolTitle": {
+    "message": "Werkzeug und Argumente"
+  },
+  "help_topics": {
+    "message": "Themen im Leitfaden"
+  },
+  "history_probeBadge": {
+    "message": "Sonde"
+  },
+  "history_probeBadgeHelp": {
+    "message": "Dieser Aufruf wurde von einer aktiven Sicherheitssonde ($1) ausgeführt, nicht von einer Person eingegeben."
+  },
+  "missingReg_abortedBeforeSettled": {
+    "message": "Die Seite hat das zur Registrierung übergebene Signal abgebrochen, bevor die Registrierung abgeschlossen war; Chrome hat sie daher abgelehnt, statt das Werkzeug aufzulisten."
+  },
+  "missingReg_allExposed": {
+    "message": "Der Instrumentierungsmodus hat $1 registerTool()-Aufrufe auf dieser Seite gesehen; jeder davon wird von getTools() bereitgestellt."
+  },
+  "missingReg_badgeNoDescription": {
+    "message": "Keine Beschreibung"
+  },
+  "missingReg_detailNoRecord": {
+    "message": "Für diesen Aufruf wurde nichts weiter aufgezeichnet."
+  },
+  "missingReg_detailNotExposed": {
+    "message": "registerTool() kehrte normal zurück und es wurde keine Entfernung beobachtet, dennoch listet getTools() das Werkzeug nicht auf."
+  },
+  "missingReg_detailPromiseRejected": {
+    "message": "Das Registrierungs-Promise wurde unbehandelt abgelehnt: $1"
+  },
+  "missingReg_detailRemoved": {
+    "message": "Die Seite hat das zur Registrierung verwendete AbortSignal ausgelöst. Eine normale Entfernung, kein Fehler."
+  },
+  "missingReg_detailThrew": {
+    "message": "registerTool() hat einen Fehler geworfen: $1"
+  },
+  "missingReg_detailUnobserved": {
+    "message": "registerTool() gab ein Promise zurück, dessen Ausgang Explorer nicht beobachten konnte: Eine von der Seite selbst abgefangene Ablehnung hinterlässt kein Ereignis. getTools() listet das Werkzeug nicht auf."
+  },
+  "missingReg_emptyDescription": {
+    "message": "Die Beschreibung des Deskriptors war leer. Chrome 153 lehnt eine solche Registrierung mit InvalidStateError „Description is required“ ab (gemessen, WMP-0039)."
+  },
+  "missingReg_frame": {
+    "message": "Frame #$1"
+  },
+  "missingReg_intro": {
+    "message": "Der Instrumentierungsmodus hat diese registerTool()-Aufrufe in den Frames dieser Website gesehen; getTools() listet sie nicht auf."
+  },
+  "missingReg_limits": {
+    "message": "Nur sichtbar, wo der Instrumentierungsmodus aktiv ist, nach einem Neuladen, für registerTool()-Aufrufe — niemals für deklarative Formulare."
+  },
+  "missingReg_promiseUnobserved": {
+    "message": "Ein abgelehntes Registrierungs-Promise, das die Seite selbst behandelt hat, hinterlässt kein für Explorer sichtbares Ereignis."
+  },
+  "missingReg_registeredTimes": {
+    "message": "$1-mal registriert"
+  },
+  "missingReg_stateNotExposed": {
+    "message": "nicht exponiert"
+  },
+  "missingReg_stateRejected": {
+    "message": "abgelehnt"
+  },
+  "missingReg_stateRemoved": {
+    "message": "registriert, dann entfernt"
+  },
+  "missingReg_stateUnknown": {
+    "message": "nicht beobachtet"
+  },
+  "missingReg_title": {
+    "message": "registerTool()-Aufrufe ohne gelistetes Werkzeug ($1)"
+  },
+  "needActionAlt": {
+    "message": "Oder Explorer auf allen Websites zulassen"
+  },
+  "needActionAltHelp": {
+    "message": "Gewährt einmalig Zugriff auf alle http- und https-Websites. Nutzen Sie dies, wenn Sie nicht jedes Mal über das Symbolleistensymbol gehen möchten."
+  },
+  "needActionBody": {
+    "message": "Chrome gibt die aktuelle Seitenadresse nur frei, wenn Sie Explorer über die Erweiterungsschaltfläche öffnen. Das Öffnen der Seitenleiste über deren eigene Liste gewährt diesen Zugriff nicht. Explorer liest Ihre Tabs niemals im Hintergrund."
+  },
+  "needActionHintAlt": {
+    "message": "Oben rechts in der Chrome-Symbolleiste. Die Erweiterungsschaltfläche in Form eines Puzzleteils befindet sich links neben der Seitenleistenschaltfläche."
+  },
+  "needActionHintCaption": {
+    "message": "Klicken Sie auf das Puzzleteil und dann auf WebMCP Explorer."
+  },
+  "needActionPin": {
+    "message": "Eine neue Erweiterung ist nicht angeheftet, daher gibt es noch kein Explorer-Symbol. Klicken Sie in diesem Menü auf die Pinnnadel neben WebMCP Explorer, um die Schaltfläche dauerhaft in der Symbolleiste zu behalten."
+  },
+  "needActionTitle": {
+    "message": "Explorer benötigt einen Klick, um diese Seite zu sehen"
+  },
+  "networkNotice_1SendsYourGoalThis": {
+    "message": "$1 sendet Ihr Ziel sowie Namen, Beschreibungen und Schemas der WebMCP-Tools dieser Seite, "
+  },
+  "networkNotice_chatDisclosure": {
+    "message": "Senden teilt Ihre Nachrichten, Tool-Schemas, Argumente und Ergebnisse (die Seitendaten enthalten können) mit $1."
+  },
+  "networkNotice_chooseProvider": {
+    "message": "Wählen Sie eine KI aus, um den Chat zu starten. Kein Anbieter wird automatisch kontaktiert."
+  },
+  "networkNotice_disclosure": {
+    "message": "Wenn $1 läuft, werden Ihr Ziel, die Namen, Beschreibungen und Schemas der WebMCP-Tools dieser Seite sowie Aufrufargumente und Ergebnisse an $2 gesendet. Ergebnisse können Daten dieser Seite enthalten. Es wird nichts an Corsen AI gesendet."
+  },
+  "networkNotice_localWhere": {
+    "message": "$1 auf diesem Gerät ($2)"
+  },
+  "networkNotice_manualModeSendsNothingAnywhere": {
+    "message": "Der manuelle Modus sendet nichts nach außen. Explorer erstellt die Anfrage; Sie übertragen sie selbst."
+  },
+  "networkNotice_remoteWhere": {
+    "message": "$1 unter $2"
+  },
+  "networkNotice_running": {
+    "message": "Ausführung"
+  },
+  "networkNotice_theConfiguredEndpoint": {
+    "message": "den konfigurierten Endpunkt"
+  },
+  "noTabBody": {
+    "message": "Öffnen Sie eine http- oder https-Seite und starten Sie Explorer erneut."
+  },
+  "noTabTitle": {
+    "message": "Kein untersuchbarer Tab"
+  },
+  "noToolsBody": {
+    "message": "Auf dieser Seite werden keine Tools bereitgestellt. Laden Sie die Seite neu und prüfen Sie die Konsole."
+  },
+  "noToolsTitle": {
+    "message": "Keine WebMCP-Tools auf dieser Seite"
+  },
+  "noTools_instrumentButton": {
+    "message": "Instrumentierungsmodus aktivieren und neu laden"
+  },
+  "noTools_instrumentButtonHelp": {
+    "message": "Registriert ein Skript, das die WebMCP-Registrierung auf dieser Website umschließt, bevor deren eigener Code läuft, und lädt die Seite neu. Deaktivieren Sie es wieder unter Einstellungen."
+  },
+  "noTools_instrumentHint": {
+    "message": "Wenn diese Seite registerTool() aufruft, kann der Instrumentierungsmodus zeigen, was aus jedem Aufruf wurde — abgelehnt, entfernt oder akzeptiert und dennoch nicht sichtbar."
+  },
+  "noTools_instrumentOn": {
+    "message": "Der Instrumentierungsmodus ist für diese Website aktiv und hat keinen registerTool()-Aufruf gesehen."
+  },
+  "notInjected": {
+    "message": "nicht injiziert"
+  },
+  "notInjectedHelp": {
+    "message": "Dieses Werkzeug stammt von einer Herkunft, für die Explorer keine Berechtigung hat; sein Frame ist daher unbekannt."
+  },
+  "openDemo": {
+    "message": "Demo-Seite öffnen"
+  },
+  "openDemoHelp": {
+    "message": "Öffnet die integrierte Demo-Seite mit sofort ausführbaren WebMCP-Tools."
+  },
+  "probes_busy": {
+    "message": "Für diesen Tab läuft bereits ein Sondendurchlauf."
+  },
+  "probes_cancelled": {
+    "message": "Gestoppt nach $1 von $2 Aufrufen · $3 Befund(e)"
+  },
+  "probes_consent": {
+    "message": "Ich kontrolliere diese Website ($1) und stimme zu, dass Sonden deren Werkzeuge in meiner Sitzung aufrufen"
+  },
+  "probes_consentHelp": {
+    "message": "Erforderlich vor jedem Sondendurchlauf. Wird für diese Website auf diesem Gerät gespeichert; widerrufbar hier und unter Einstellungen → Gespeicherte Daten."
+  },
+  "probes_consentRequired": {
+    "message": "Sonden wurden nicht ausgeführt: Bestätigen Sie zuerst, dass Sie diese Website kontrollieren."
+  },
+  "probes_consequential": {
+    "message": "als folgenreich deklariert"
+  },
+  "probes_disclosure": {
+    "message": "Sonden ausführen ruft die $1 ausgewählten Tools auf $2 bis zu fünfmal je Tool mit generierten und fehlerhaften Argumenten in Ihrer Browsersitzung auf. Nichts wird nach außen gesendet. Ergebnisse und Befunde bleiben auf diesem Gerät."
+  },
+  "probes_done": {
+    "message": "$1 Aufrufe durchgeführt · $2 Befund(e)"
+  },
+  "probes_history": {
+    "message": "Jeder Aufruf ist im Verlauf dieses Werkzeugs als Sonde markiert."
+  },
+  "probes_intro": {
+    "message": "Eine passive Prüfung liest den Vertrag; Sonden rufen die gewählten Tools in dieser Seite und Ihrer Sitzung mit aus dem Schema erzeugten sowie vom Schema verbotenen Argumenten auf (falscher Typ, fehlendes Pflichtfeld, unbekannte Eigenschaft, Zeichenkette mit 10.000 Zeichen). Höchstens fünf Aufrufe pro Tool, einzeln nacheinander, abbrechbar, im Verlauf als Sonden protokolliert. Ein Tool, das den Zustand ändert, ändert ihn auch hierbei."
+  },
+  "probes_none": {
+    "message": "Keine Befunde durch die Sonden. Durchgeführte Aufrufe: $1."
+  },
+  "probes_notPreselected": {
+    "message": "nicht vorausgewählt: Dieses Werkzeug ist nicht als schreibgeschützt deklariert, das Sondieren kann daher den Zustand ändern"
+  },
+  "probes_progress": {
+    "message": "$1 von $2 Aufrufen · $3 · $4"
+  },
+  "probes_run": {
+    "message": "Sonden starten"
+  },
+  "probes_runHelp": {
+    "message": "Startet den Sondendurchlauf für die ausgewählten Werkzeuge. Deaktiviert, bis Sie bestätigen, dass Sie diese Website kontrollieren, und mindestens ein Werkzeug auswählen."
+  },
+  "probes_stop": {
+    "message": "Stopp"
+  },
+  "probes_stopHelp": {
+    "message": "Bricht den laufenden Aufruf ab und beendet den Durchlauf. Ein bereits ausgeführter Aufruf kann nicht rückgängig gemacht werden."
+  },
+  "probes_title": {
+    "message": "Aktive Sonden — eigene Website"
+  },
+  "probes_titleHelp": {
+    "message": "Führt eine feste Reihe von Aufrufen gegen ausgewählte Werkzeuge aus, um zu prüfen, wie deren Code auf laut Schema verbotene Eingaben reagiert. Nur auf Websites verwenden, die Sie kontrollieren."
+  },
+  "probes_toolHelp": {
+    "message": "Dieses Werkzeug in den Sondendurchlauf einbeziehen."
+  },
+  "probes_tools": {
+    "message": "Zu sondierende Werkzeuge"
+  },
+  "prompt_cancel": {
+    "message": "Formular leeren"
+  },
+  "prompt_cancelHelp": {
+    "message": "Bearbeitung beenden; das Formular wechselt zurück zum Erstellen eines neuen Prompts."
+  },
+  "prompt_choose": {
+    "message": "Antworten als (System-Prompt)"
+  },
+  "prompt_chooseHelp": {
+    "message": "Welche Anweisungen das Modell vor jedem Ziel erhält. Standard ist die mitgelieferte Vorgabe; Ihre eigenen Profile erscheinen hier."
+  },
+  "prompt_defaultLabel": {
+    "message": "Explorer-Standard"
+  },
+  "prompt_delete": {
+    "message": "Löschen"
+  },
+  "prompt_deleteHelp": {
+    "message": "Entfernt diesen Prompt. Das Agenten-Labor fällt auf den Produktstandard zurück, falls er ausgewählt war."
+  },
+  "prompt_edit": {
+    "message": "Bearbeiten"
+  },
+  "prompt_editHelp": {
+    "message": "Diesen Prompt zur Bearbeitung in das Formular unten laden."
+  },
+  "prompt_help": {
+    "message": "Ein Prompt bestimmt das Verhalten des Modells. Er kann keine Schutzmechanismen aufheben: Werkzeugschemata, Aufrufregeln und Sicherheitsablehnungen liegen außerhalb des Prompts und sind nicht änderbar."
+  },
+  "prompt_manage": {
+    "message": "Prompts verwalten"
+  },
+  "prompt_manageHelp": {
+    "message": "Die oben aufgeführten benannten Prompts schreiben, bearbeiten und löschen."
+  },
+  "prompt_name": {
+    "message": "Name"
+  },
+  "prompt_nameHelp": {
+    "message": "Wird in der Liste oben angezeigt. Bis zu 40 Zeichen."
+  },
+  "prompt_none": {
+    "message": "Noch keine benutzerdefinierten Prompts."
+  },
+  "prompt_save": {
+    "message": "Prompt speichern"
+  },
+  "prompt_saveHelp": {
+    "message": "Erstellt diesen Prompt. Geben Sie Namen und Anweisungen ein."
+  },
+  "prompt_saved": {
+    "message": "Prompt gespeichert."
+  },
+  "prompt_showDefault": {
+    "message": "Standard-Prompt des Produkts anzeigen"
+  },
+  "prompt_showDefaultHelp": {
+    "message": "Genau das, was ein Durchlauf ohne Profil als System-Prompt sendet."
+  },
+  "prompt_text": {
+    "message": "Anweisungen"
+  },
+  "prompt_textHelp": {
+    "message": "Wird bei jedem Durchlauf als System-Prompt an das Modell gesendet, solange dieser Prompt ausgewählt ist."
+  },
+  "prompt_textPlaceholder": {
+    "message": "Beispiel: Du bist ein vorsichtiger Einkaufsagent. Rufe nur Lese-Werkzeuge auf; frage vor jedem kaufähnlichen Werkzeug nach."
+  },
+  "prompt_update": {
+    "message": "Prompt aktualisieren"
+  },
+  "readable_boolean": {
+    "message": "Boolesch"
+  },
+  "readable_emptyList": {
+    "message": "Leere Liste (0 Einträge)"
+  },
+  "readable_emptyObject": {
+    "message": "Leeres Objekt (0 Felder)"
+  },
+  "readable_emptyText": {
+    "message": "Leerer Text"
+  },
+  "readable_expandHelp": {
+    "message": "Klappen Sie diesen verschachtelten Wert auf, um seine Felder oder Elemente zu prüfen. Das Ergebnis bleibt unverändert."
+  },
+  "readable_fields": {
+    "message": "$1 Felder"
+  },
+  "readable_item": {
+    "message": "Eintrag $1"
+  },
+  "readable_items": {
+    "message": "$1 Einträge"
+  },
+  "readable_more": {
+    "message": "Nächste $1 anzeigen ($2 verbleibend)"
+  },
+  "readable_moreHelp": {
+    "message": "Mehr von diesem Ergebnis auf diesem Gerät einblenden. Es wird kein Werkzeug ausgeführt."
+  },
+  "readable_noValue": {
+    "message": "Kein Wert"
+  },
+  "readable_null": {
+    "message": "null"
+  },
+  "readable_number": {
+    "message": "Zahl"
+  },
+  "readable_rawJson": {
+    "message": "Original-JSON"
+  },
+  "readable_rawJsonHelp": {
+    "message": "Prüfen Sie den exakten vom Werkzeug zurückgegebenen JSON-Text einschließlich Originalzahlen und Leerzeichen. Das Öffnen führt das Werkzeug nicht aus."
+  },
+  "readable_string": {
+    "message": "Text"
+  },
+  "reasonApiAbsent": {
+    "message": "Die WebMCP-Laufzeitumgebung ist auf dieser Seite nicht verfügbar. Die Prüfungen unten zeigen, was Explorer beobachten konnte; sie begründen nicht, warum die API fehlt."
+  },
+  "reasonApiCallRejected": {
+    "message": "Der Browser hat den WebMCP-Aufruf in diesem Dokument abgelehnt: $1"
+  },
+  "reasonApiPartial": {
+    "message": "Ein WebMCP-Objekt ist vorhanden, stellt aber nicht die von Explorer erwarteten Methoden bereit. Dieser Browser verwendet möglicherweise eine andere API-Version."
+  },
+  "reasonInsecureContext": {
+    "message": "Diese Seite ist kein sicherer Kontext, daher wird WebMCP hier nie bereitgestellt. Nutzen Sie https oder localhost."
+  },
+  "reasonOriginNotIsolated": {
+    "message": "Dieses Dokument ist nicht Origin-isoliert: Es wurde mit Origin-Agent-Cluster: ?0 ausgeliefert oder verwendet document.domain. Diese Browserversion verlangt für WebMCP ein Origin-isoliertes Dokument und lehnt hier jeden Aufruf ab; die Meldung des Browsers ist unten zitiert. Neuere Versionen verlangen dies nicht mehr."
+  },
+  "reasonPolyfillActive": {
+    "message": "Ein Polyfill stellt WebMCP bereit. Dies ist nicht die native Implementierung; das Verhalten kann abweichen."
+  },
+  "reasonToolsPolicyBlocked": {
+    "message": "Die Berechtigung „tools“ ist in diesem Frame blockiert. Ein Cross-Origin-iframe benötigt allow=\"tools\" von der einbettenden Seite."
+  },
+  "recipes_acceptContract": {
+    "message": "Diesen aktuellen Vertrag verwenden"
+  },
+  "recipes_acceptContractHelp": {
+    "message": "Aktuelle Seiten-/Frame- und Schema-Fingerabdrücke dieses Tools übernehmen. Prüfen Sie Argumente und Prüfregeln gegen das neue Schema."
+  },
+  "recipes_activeRunEdit": {
+    "message": "Stoppen oder beenden Sie diesen Durchlauf, bevor Sie seine Definition bearbeiten oder eine neue Prüfung starten."
+  },
+  "recipes_addBinding": {
+    "message": "Bindung hinzufügen"
+  },
+  "recipes_addBindingHelp": {
+    "message": "Fügt diese explizite Referenz zum Schritt hinzu. Struktur, Zielpfad und Reihenfolge werden vor der Ausführung geprüft."
+  },
+  "recipes_addInput": {
+    "message": "Benannte Eingabe hinzufügen"
+  },
+  "recipes_addInputHelp": {
+    "message": "Fügen Sie einen wiederverwendbaren Wert hinzu und vergeben Sie einen aussagekräftigen Namen sowie einen Standardwert."
+  },
+  "recipes_addStep": {
+    "message": "Schritt hinzufügen"
+  },
+  "recipes_addStepHelp": {
+    "message": "Geprüften Aufruf anhängen und anschließend Tool, Frame und Argumente wählen. Maximal 20 Schritte."
+  },
+  "recipes_argumentPath": {
+    "message": "Argument-Feldpfad"
+  },
+  "recipes_argumentPathHelp": {
+    "message": "JSON-Pointer auf den geprüften Argument-Platzhalter, den diese Bindung ersetzt. Ein leerer Pfad ersetzt das gesamte Argumentobjekt."
+  },
+  "recipes_arguments": {
+    "message": "Literale Argumente"
+  },
+  "recipes_argumentsHelp": {
+    "message": "Dies sind die geprüften Literalwerte, bevor Bindungen aus benannten Eingaben oder früheren Ergebnissen ausgewählte Felder ersetzen."
+  },
+  "recipes_back": {
+    "message": "Zurück zu den Tools"
+  },
+  "recipes_backHelp": {
+    "message": "Diesen Entwurf behalten und zur Werkzeugliste zurückkehren. Ein aktives Rezept läuft weiter, bis es pausiert oder gestoppt wird."
+  },
+  "recipes_bindingDescription": {
+    "message": "$1 ← $2"
+  },
+  "recipes_bindingLimit": {
+    "message": "Verwenden Sie höchstens 50 explizite Bindungen pro Schritt."
+  },
+  "recipes_bindingResult": {
+    "message": "Schritt $1, Ergebnis $2"
+  },
+  "recipes_bindingSource": {
+    "message": "Wert stammt aus"
+  },
+  "recipes_bindingSourceHelp": {
+    "message": "Wählen Sie eine benannte Eingabe oder einen früheren Schritt. Es wird nichts automatisch abgeleitet."
+  },
+  "recipes_bindings": {
+    "message": "Eingabe oder früheres Ergebnis verwenden"
+  },
+  "recipes_bindingsHelp": {
+    "message": "Verbinden Sie eine benannte Eingabe oder ein Ergebnisfeld eines früheren Schritts mit einem vorhandenen Argumentfeld."
+  },
+  "recipes_bindingsIntro": {
+    "message": "Fügen Sie zuerst einen Platzhalter in den literalen Argumenten hinzu. Eine Bindung ersetzt genau dieses Feld. JSON-Pointer verwendet /name und /items/0; maskieren Sie / als ~1 und ~ als ~0. Referenzen zeigen nur auf frühere Schritte."
+  },
+  "recipes_check": {
+    "message": "Ergebnisprüfung"
+  },
+  "recipes_checkFailed": {
+    "message": "Prüfung fehlgeschlagen"
+  },
+  "recipes_checkHelp": {
+    "message": "Optional ein erfolgreiches Ergebnis oder bestimmte Feldwerte verlangen. Ein fehlgeschlagenes Tool stoppt das Rezept auch dann, wenn eine ältere Fehlerprüfung besteht."
+  },
+  "recipes_check_fields": {
+    "message": "Ergebnisfelder auswählen"
+  },
+  "recipes_check_keep": {
+    "message": "Gespeicherte Erwartung beibehalten"
+  },
+  "recipes_check_none": {
+    "message": "Keine zusätzliche Prüfung"
+  },
+  "recipes_check_ok": {
+    "message": "Aufruf erfolgreich"
+  },
+  "recipes_chooseSource": {
+    "message": "Benannte Eingabe oder früheres Ergebnis wählen"
+  },
+  "recipes_chooseTool": {
+    "message": "Ein Werkzeug auswählen"
+  },
+  "recipes_confirmDelete": {
+    "message": "Löschen bestätigen"
+  },
+  "recipes_confirmDiscard": {
+    "message": "Klicken Sie erneut auf „Diesen Entwurf verwerfen“, um ungespeicherte Änderungen zu verwerfen."
+  },
+  "recipes_continueDraft": {
+    "message": "Entwurf fortsetzen"
+  },
+  "recipes_continueDraftHelp": {
+    "message": "Öffnet Ihr aktuelles Rezept erneut, ohne unvollendete Änderungen zu verlieren."
+  },
+  "recipes_copied": {
+    "message": "Vorschau kopiert."
+  },
+  "recipes_copyExport": {
+    "message": "Vorschau kopieren"
+  },
+  "recipes_copyExportHelp": {
+    "message": "Kopiert die genau geprüfte Vorschau. Rezept-JSON wird vor dem Kopieren validiert."
+  },
+  "recipes_deleteRecipe": {
+    "message": "Gespeichertes Rezept löschen"
+  },
+  "recipes_deleteRecipeHelp": {
+    "message": "Entfernt diese gespeicherte Definition. Aufbewahrte Durchlaufnachweise bleiben separat erhalten."
+  },
+  "recipes_discard": {
+    "message": "Diesen Entwurf verwerfen"
+  },
+  "recipes_discardHelp": {
+    "message": "Unvollendete Rezeptänderungen verwerfen und zu „Werkzeuge“ zurückkehren. Eine gespeicherte Definition bleibt erhalten."
+  },
+  "recipes_down": {
+    "message": "Nach unten"
+  },
+  "recipes_downHelp": {
+    "message": "Diesen Schritt nach hinten verschieben. Prüfen Sie abhängige Referenzen vor der Ausführung."
+  },
+  "recipes_downloadExport": {
+    "message": "Vorschau herunterladen"
+  },
+  "recipes_downloadExportHelp": {
+    "message": "Das geprüfte Rezept-JSON oder Durchlauf-Markdown als lokale Datei speichern."
+  },
+  "recipes_exportNotice": {
+    "message": "Prüfen und bearbeiten Sie diese Vorschau vor dem Teilen. Sie kann Werte aus Argumenten, Ergebnissen, Prüfungen, URLs oder lokalen Mocks enthalten. Explorer kann nicht jedes Geheimnis in beliebigen Seitendaten erkennen. Rezeptexporte übertragen weder Authentifizierung noch Website-Zugriff."
+  },
+  "recipes_exportPreview": {
+    "message": "Exportvorschau"
+  },
+  "recipes_exportPreviewHelp": {
+    "message": "Prüfen oder entfernen Sie hier ausgewählte Daten. Änderungen betreffen nur diesen Export. Rezept-JSON muss eine gültige Definition bleiben."
+  },
+  "recipes_exportRecipe": {
+    "message": "Rezeptdefinition exportieren"
+  },
+  "recipes_exportRecipeHelp": {
+    "message": "Versioniertes JSON mit der wiederverwendbaren Definition ohne Durchlaufergebnisse vorbereiten."
+  },
+  "recipes_exportRun": {
+    "message": "Durchlaufbericht exportieren"
+  },
+  "recipes_exportRunHelp": {
+    "message": "Einen bearbeitbaren Markdown-Bericht dieses beobachteten Durchlaufs vorbereiten."
+  },
+  "recipes_failure": {
+    "message": "Fehler"
+  },
+  "recipes_format_json": {
+    "message": "JSON-Wert"
+  },
+  "recipes_format_text": {
+    "message": "Text"
+  },
+  "recipes_guide": {
+    "message": "Wie Rezepte funktionieren"
+  },
+  "recipes_guideBody": {
+    "message": "Starten Sie aus einem Tool-Ergebnis mit „Im Rezept verwenden“ oder fügen Sie einen Schritt hinzu und wählen Sie das Tool. Füllen Sie die Argumente per Formular oder exaktem JSON aus. Benennen Sie einen Wert, den Sie zwischen Läufen ändern möchten, und verbinden Sie ihn explizit mit einem Argument. Ein späterer Schritt kann einen JSON Pointer aus einem früheren Ergebnis nutzen. Prüfen Sie Reihenfolge und lokale Mocks vor dem Start. Ein Stopp macht bereits ausgeführte Seitenaktionen nicht rückgängig."
+  },
+  "recipes_guideHelp": {
+    "message": "Kurzanleitung zu Schritten, benannten Eingaben, Prüfungen und Ausführung lesen."
+  },
+  "recipes_identity": {
+    "message": "Website: $1 · Frame-Pfad: $2 · aufgezeichneter Vertrag: $3"
+  },
+  "recipes_importNotice": {
+    "message": "Der Import öffnet nur einen Entwurf. Die aktive Seite muss vor einem Durchlauf mit der aufgezeichneten Herkunft, den Frame-Positionen und Verträgen übereinstimmen."
+  },
+  "recipes_importRecipe": {
+    "message": "Rezept-JSON importieren"
+  },
+  "recipes_importRecipeHelp": {
+    "message": "Eine Rezeptdefinition prüfen und als bearbeitbaren Entwurf öffnen. Der Import führt niemals ein Werkzeug aus."
+  },
+  "recipes_importText": {
+    "message": "Rezept-JSON"
+  },
+  "recipes_importTextHelp": {
+    "message": "Fügen Sie ein WebMCP-Explorer-Rezept der Version 1 ein. Der Text wird als Daten validiert, niemals als Code ausgeführt."
+  },
+  "recipes_includeArguments": {
+    "message": "Eingaben und Argumente einbeziehen"
+  },
+  "recipes_includeArgumentsHelp": {
+    "message": "Argumentabschnitte aus dem Bericht entfernen, falls nicht benötigt. Werte können weiterhin in Ergebnissen, Fehlern oder Prüfungen vorkommen."
+  },
+  "recipes_includeResults": {
+    "message": "Rohergebnisse einbeziehen"
+  },
+  "recipes_includeResultsHelp": {
+    "message": "Rohergebnisabschnitte aus dem Bericht entfernen. Prüferläuterungen und Überschreibungen können weiterhin beobachtete Daten enthalten."
+  },
+  "recipes_inputDefault": {
+    "message": "Standardwert"
+  },
+  "recipes_inputDefaultHelp": {
+    "message": "Der gespeicherte Startwert. Durchlaufwerte unten können ihn überschreiben, ohne die Definition zu ändern."
+  },
+  "recipes_inputFormat": {
+    "message": "Wertformat"
+  },
+  "recipes_inputFormatHelp": {
+    "message": "Text behält eine Zeichenkette bei. JSON akzeptiert typisierte Zahlen, Boolesche Werte, null, Listen oder Objekte."
+  },
+  "recipes_inputLimit": {
+    "message": "Ein Rezept unterstützt höchstens 20 benannte Eingaben."
+  },
+  "recipes_inputName": {
+    "message": "Eingabename"
+  },
+  "recipes_inputNameHelp": {
+    "message": "Verwenden Sie einen eindeutigen Namen, der mit einem Buchstaben beginnt; Buchstaben, Ziffern, Unterstriche und Bindestriche sind erlaubt."
+  },
+  "recipes_inputSource": {
+    "message": "Eingabe: $1"
+  },
+  "recipes_inputs": {
+    "message": "Benannte Eingaben"
+  },
+  "recipes_inputsHelp": {
+    "message": "Definieren Sie wiederverwendbare Werte wie eine Suchanfrage und binden Sie diese explizit an ein Schrittargument."
+  },
+  "recipes_intro": {
+    "message": "Wiederholen Sie geprüfte Werkzeugaufrufe ganz ohne KI-Modell. Ein Rezept übergibt einen Wert aus einem früheren Ergebnis an einen späteren Aufruf und zeigt genau, was passiert ist."
+  },
+  "recipes_jsonOnly": {
+    "message": "Dieses Schema erfordert den JSON-Editor. Exakte Argumente bleiben verfügbar."
+  },
+  "recipes_keepDraft": {
+    "message": "Ein Entwurf enthält ungespeicherte Änderungen. Setzen Sie ihn fort und speichern oder verwerfen Sie ihn, bevor Sie eine andere Definition öffnen."
+  },
+  "recipes_mocked": {
+    "message": "Lokaler Mock"
+  },
+  "recipes_mockedHelp": {
+    "message": "Explorer hat dieses Ergebnis aus einer geprüften lokalen Überschreibung geliefert; das echte Seitenwerkzeug wurde nicht aufgerufen."
+  },
+  "recipes_name": {
+    "message": "Rezeptname"
+  },
+  "recipes_nameHelp": {
+    "message": "Benennen Sie die Aufgabe, die Sie mit dieser Abfolge wiederholen möchten."
+  },
+  "recipes_newRecipe": {
+    "message": "Neues Rezept"
+  },
+  "recipes_newRecipeHelp": {
+    "message": "Leere Sequenz von bis zu 20 manuellen Aufrufen auf dieser Seite starten."
+  },
+  "recipes_next": {
+    "message": "Nächsten Schritt ausführen"
+  },
+  "recipes_nextHelp": {
+    "message": "Genau einen nächsten Schritt ausführen und danach vor jedem weiteren Aufruf pausieren."
+  },
+  "recipes_noCompleteResult": {
+    "message": "Für diesen Schritt liegt noch kein vollständiges erfolgreiches Ergebnis vor. Geben Sie den geprüften JSON-Pointer ein; er wird bei Ausführung des Schritts geprüft."
+  },
+  "recipes_openImport": {
+    "message": "Validieren und Entwurf öffnen"
+  },
+  "recipes_openImportHelp": {
+    "message": "Version, Größe, Werkzeuge und Rückwärtsreferenzen prüfen. Es wird kein Aufruf ausgeführt."
+  },
+  "recipes_openRun": {
+    "message": "Durchlauf lesen"
+  },
+  "recipes_openRunHelp": {
+    "message": "Aufbewahrte Ergebnisse und Unterbrechungsdetails lesen. Das Öffnen eines Durchlaufs setzt ihn nicht fort."
+  },
+  "recipes_openSaved": {
+    "message": "Rezept öffnen"
+  },
+  "recipes_openSavedHelp": {
+    "message": "Diese gespeicherte Definition zur Bearbeitung und Prüfung vor der Ausführung öffnen."
+  },
+  "recipes_pause": {
+    "message": "Nach diesem Schritt pausieren"
+  },
+  "recipes_pauseHelp": {
+    "message": "Das aktuelle Werkzeug abschließen lassen und vor dem nächsten Schritt warten."
+  },
+  "recipes_pending": {
+    "message": "Schritt $1 ist ausstehend oder ungewiss (Aufruf $2). Seine Seitenaktion wurde möglicherweise bereits ausgeführt."
+  },
+  "recipes_pendingRule": {
+    "message": "Fügen Sie die unvollendete Feldregel hinzu oder verwerfen Sie sie, bevor Sie dieses Rezept speichern oder prüfen."
+  },
+  "recipes_pickBinding": {
+    "message": "Feld aus einem beobachteten Ergebnis wählen"
+  },
+  "recipes_pickBindingHelp": {
+    "message": "Durchsuchen Sie das gespeicherte Ergebnis des gewählten früheren Schritts. Ein gekürztes Ergebnis bietet keine Feldvorschau."
+  },
+  "recipes_recentRun": {
+    "message": "$1 · $2"
+  },
+  "recipes_recipesCount": {
+    "message": "$1 Definitionen · $2 Durchläufe"
+  },
+  "recipes_recipesData": {
+    "message": "Rezepte und Nachweise"
+  },
+  "recipes_refreshExport": {
+    "message": "Vorschau neu erstellen"
+  },
+  "recipes_refreshExportHelp": {
+    "message": "Änderungen in der Vorschau durch die aktuell ausgewählten Definitions- oder Berichtsabschnitte ersetzen."
+  },
+  "recipes_remaining": {
+    "message": "Restliche ausführen"
+  },
+  "recipes_remainingHelp": {
+    "message": "Führt die verbleibenden geprüften Schritte der Reihe nach aus. Stoppt bei Fehlern, fehlenden Werten oder Seitenänderungen."
+  },
+  "recipes_removeBinding": {
+    "message": "Bindung entfernen"
+  },
+  "recipes_removeBindingHelp": {
+    "message": "Den literalen Argumentwert behalten und diese Eingabe-/Ergebnisreferenz entfernen."
+  },
+  "recipes_removeInput": {
+    "message": "Eingabe entfernen"
+  },
+  "recipes_removeInputHelp": {
+    "message": "Entfernt diese benannte Eingabe. Jede Bindung darauf muss aktualisiert werden, bevor das Rezept ausgeführt werden kann."
+  },
+  "recipes_removeStep": {
+    "message": "Schritt entfernen"
+  },
+  "recipes_removeStepHelp": {
+    "message": "Diesen Aufruf aus dem Entwurf entfernen. Spätere Referenzen darauf müssen überprüft werden."
+  },
+  "recipes_resultExcerpt": {
+    "message": "Gespeicherter Auszug: $1 von $2 Zeichen. Das vollständige Originalergebnis ist in diesem Protokoll nicht verfügbar."
+  },
+  "recipes_resultHeading": {
+    "message": "$1. $2 · $3"
+  },
+  "recipes_resultHeadingHelp": {
+    "message": "Tatsächliches Ergebnis, exakte Argumente und ausgewählte Feldprüfungen aufklappen."
+  },
+  "recipes_resultPath": {
+    "message": "Feldpfad des früheren Ergebnisses"
+  },
+  "recipes_resultPathHelp": {
+    "message": "JSON-Pointer in das vollständige erfolgreiche JSON-Ergebnis dieses Schritts. Ein fehlendes Feld stoppt die Ausführung."
+  },
+  "recipes_retention": {
+    "message": "Definitionen bleiben lokal: bis zu 30 Rezepte mit je 20 Schritten, insgesamt 2 MB. Durchlaufprotokolle speichern bis zu 8 Durchläufe innerhalb von 3 MB; nur alte abgeschlossene Nachweise werden verdrängt. Gespeicherte Ergebnisse zeigen jeweils bis zu 20.000 Zeichen. Ein Durchlauf wird nach einem Neustart von Explorer oder Browser niemals automatisch fortgesetzt."
+  },
+  "recipes_review": {
+    "message": "Vor dem Ausführen prüfen"
+  },
+  "recipes_reviewHeading": {
+    "message": "Diesen Durchlauf prüfen"
+  },
+  "recipes_reviewHelp": {
+    "message": "Aktuelle Seite neu erfassen und jedes aufgezeichnete Werkzeug, jeden Frame, Vertrag, jede Eingabe und lokale Überschreibung prüfen."
+  },
+  "recipes_reviewNotice": {
+    "message": "Aufrufe sind an $1 und die aktuellen Frame-Dokumente gebunden. Prüfen Sie unten die lokalen Mocks. Eine spätere Ergebnisbindung wird geprüft, sobald das Quellergebnis vorliegt. Diese Prüfung läuft nach zwei Minuten ab."
+  },
+  "recipes_reviewOverrides": {
+    "message": "Lokale Überschreibungen und Mocks"
+  },
+  "recipes_reviewOverridesHelp": {
+    "message": "Dies sind die vor der Ausführung geprüften lokalen Überschreibungen. Eine leere Liste bedeutet, dass für diese Schritte keine aktiv sind."
+  },
+  "recipes_reviewStep": {
+    "message": "$2 · $3 · Frame-Pfad $4"
+  },
+  "recipes_root": {
+    "message": "(Wurzel)"
+  },
+  "recipes_runHeading": {
+    "message": "Durchlauf: $1"
+  },
+  "recipes_runInputValue": {
+    "message": "Durchlaufwert"
+  },
+  "recipes_runInputValueHelp": {
+    "message": "Texteingaben bleiben Text. Andere Standardwerte verwenden JSON-Syntax und behalten ihren Typ."
+  },
+  "recipes_runInputs": {
+    "message": "Werte für diesen Durchlauf"
+  },
+  "recipes_runInputsHelp": {
+    "message": "Benannte Werte für diesen Durchlauf ändern, ohne die gespeicherten Standardwerte zu verändern. Nach dem Bearbeiten erneut prüfen."
+  },
+  "recipes_runStatus": {
+    "message": "$1 · $2 von $3 Schritten aufgezeichnet"
+  },
+  "recipes_save": {
+    "message": "Rezept speichern"
+  },
+  "recipes_saveHelp": {
+    "message": "Definition lokal und getrennt von beobachteten Durchlaufergebnissen speichern. Ungültige Definitionen bleiben bearbeitbar."
+  },
+  "recipes_saved": {
+    "message": "Rezept lokal gespeichert."
+  },
+  "recipes_schema": {
+    "message": "Aktuelles Werkzeugschema"
+  },
+  "recipes_schemaHelp": {
+    "message": "Aktuellen Vertrag lesen. Das Aktualisieren des aufgezeichneten Vertrags erfordert eine explizite Aktion."
+  },
+  "recipes_site": {
+    "message": "Aufgezeichnete Website: $1"
+  },
+  "recipes_siteRecipes": {
+    "message": "Rezepte für diese Website"
+  },
+  "recipes_siteRecipesHelp": {
+    "message": "Gespeicherte manuelle Sequenzen und letzte Läufe für die Herkunft dieser Seite öffnen."
+  },
+  "recipes_stepHeading": {
+    "message": "$1. $2"
+  },
+  "recipes_stepHeadingHelp": {
+    "message": "Diesen Schritt aufklappen, um Ziel, Argumente, Bindungen und optionale Prüfung zu kontrollieren."
+  },
+  "recipes_stepLimit": {
+    "message": "Ein Rezept unterstützt höchstens 20 Schritte. Teilen Sie diese Aufgabe in kleinere Rezepte auf."
+  },
+  "recipes_stepSource": {
+    "message": "Schritt $1: $2"
+  },
+  "recipes_stop": {
+    "message": "Stopp"
+  },
+  "recipes_stopHelp": {
+    "message": "Aktuellen Aufruf wenn möglich abbrechen und die Sequenz stoppen. Abgeschlossene Seitenaktionen können nicht rückgängig gemacht werden."
+  },
+  "recipes_success": {
+    "message": "Erfolg"
+  },
+  "recipes_title": {
+    "message": "Manuelles Rezept"
+  },
+  "recipes_toggleArguments": {
+    "message": "Formular / JSON umschalten"
+  },
+  "recipes_toggleArgumentsHelp": {
+    "message": "Bearbeitungsansicht für literale Argumente wechseln. Ungültiges JSON muss vor dem Öffnen des Formulars korrigiert werden."
+  },
+  "recipes_tool": {
+    "message": "Werkzeug und Frame"
+  },
+  "recipes_toolHelp": {
+    "message": "Wählen Sie das genaue aktive Werkzeug und den Frame aus, den dieser Schritt aufrufen soll."
+  },
+  "recipes_toolMissing": {
+    "message": "Kein kompatibles aktives Werkzeug verfügbar. Kehren Sie zu „Werkzeuge“ zurück, um den Website-Zugriff zu prüfen oder die aufgezeichnete Seite zu öffnen, und aktualisieren Sie anschließend. Entwurf und Ergebnisse bleiben hier erhalten."
+  },
+  "recipes_toolOption": {
+    "message": "$1 · $2 · Frame $3"
+  },
+  "recipes_unavailableRunControl": {
+    "message": "Dieses Steuerelement ist im aktuellen Durchlaufstatus nicht verfügbar. Unterbrochene oder beendete Durchläufe erfordern eine neue Prüfung."
+  },
+  "recipes_up": {
+    "message": "Nach oben"
+  },
+  "recipes_upHelp": {
+    "message": "Diesen Schritt nach vorne verschieben. Bindungen dürfen weiterhin nur auf frühere Schritte verweisen."
+  },
+  "recipes_use": {
+    "message": "In Rezept verwenden"
+  },
+  "recipes_useHelp": {
+    "message": "Nur diesen Aufruf zum aktuellen Rezeptentwurf dieses Tabs hinzufügen. Prüfen Sie Argumente und Abhängigkeiten vor dem Ausführen."
+  },
+  "recipes_usedArguments": {
+    "message": "Tatsächlich gesendete Argumente"
+  },
+  "recipes_usedArgumentsHelp": {
+    "message": "Die aufgelösten Argumente nach Anwendung von Eingabe- und Ergebnisbindungen lesen."
+  },
+  "registrationHelp": {
+    "message": "Aus dem DOM beobachteter Registrierungstyp."
+  },
+  "retry": {
+    "message": "Erneut versuchen"
+  },
+  "savedCalls_checkBadge": {
+    "message": "Prüfung"
+  },
+  "savedCalls_checkEqualsHelp": {
+    "message": "Erwartet genau diesen Text: $1"
+  },
+  "savedCalls_checkErrorHelp": {
+    "message": "Erwartet, dass der Aufruf fehlschlägt."
+  },
+  "savedCalls_checkJsonHelp": {
+    "message": "Erwartet dieses JSON (Schlüsselreihenfolge und Leerzeichen ignoriert): $1"
+  },
+  "savedCalls_checkOkHelp": {
+    "message": "Erwartet, dass der Aufruf erfolgreich ist."
+  },
+  "savedCalls_contractChanged": {
+    "message": "Vertrag geändert"
+  },
+  "savedCalls_contractChangedHelp": {
+    "message": "Beschreibung, Schema oder Annotationen des Tools haben sich seit dem Speichern geändert; die Argumente sind weiterhin gültig."
+  },
+  "savedCalls_delete": {
+    "message": "Löschen"
+  },
+  "savedCalls_deleteHelp": {
+    "message": "Diesen gespeicherten Aufruf löschen."
+  },
+  "savedCalls_expectError": {
+    "message": "der Aufruf schlägt fehl"
+  },
+  "savedCalls_expectHelp": {
+    "message": "Welches Ergebnis vorliegen muss, damit dieser gespeicherte Aufruf als Prüfung zählt. Ohne Erwartung ist er nur ein Lesezeichen."
+  },
+  "savedCalls_expectLabel": {
+    "message": "Erwartung"
+  },
+  "savedCalls_expectLastResult": {
+    "message": "dasselbe Ergebnis wie beim letzten Durchlauf"
+  },
+  "savedCalls_expectNone": {
+    "message": "nichts (Lesezeichen)"
+  },
+  "savedCalls_expectOk": {
+    "message": "der Aufruf ist erfolgreich"
+  },
+  "savedCalls_fail": {
+    "message": "✕ fehlgeschlagen — $1"
+  },
+  "savedCalls_load": {
+    "message": "Laden"
+  },
+  "savedCalls_loadHelp": {
+    "message": "Diese Argumente in den Editor laden."
+  },
+  "savedCalls_namePlaceholder": {
+    "message": "Diese Argumente benennen"
+  },
+  "savedCalls_needsReview": {
+    "message": "Prüfung nötig"
+  },
+  "savedCalls_needsReviewHelp": {
+    "message": "Das Schema des Tools hat sich seit dem Speichern geändert und die Argumente passen nicht mehr dazu. Laden, korrigieren und erneut speichern."
+  },
+  "savedCalls_noVerdict": {
+    "message": "kein Urteil — $1"
+  },
+  "savedCalls_none": {
+    "message": "Noch kein gespeicherter Aufruf für dieses Tool. Speichern Sie häufig genutzte Argumente: Sie bleiben beim Neuladen erhalten und werden bei Schemaänderungen erneut geprüft."
+  },
+  "savedCalls_notValid": {
+    "message": "Die Argumente im Editor sind ungültig; korrigieren Sie sie vor dem Speichern."
+  },
+  "savedCalls_pass": {
+    "message": "✓ bestanden — $1"
+  },
+  "savedCalls_run": {
+    "message": "Ausführen"
+  },
+  "savedCalls_runAll": {
+    "message": "Alle Prüfungen ausführen"
+  },
+  "savedCalls_runAllHelp": {
+    "message": "Jeden gespeicherten Aufruf mit Erwartung nacheinander ausführen und bewerten. Prüfungsbedürftige Aufrufe werden übersprungen und ausgewiesen."
+  },
+  "savedCalls_runAllSummary": {
+    "message": "$1 bestanden, $2 fehlgeschlagen, $3 übersprungen (Prüfung nötig), $4 Lesezeichen ohne Wertung."
+  },
+  "savedCalls_runBlocked": {
+    "message": "Dieser Aufruf muss vor der Ausführung geprüft werden: $1"
+  },
+  "savedCalls_runHelp": {
+    "message": "Tool jetzt mit diesen Argumenten ausführen."
+  },
+  "savedCalls_save": {
+    "message": "Aktuelle Argumente speichern"
+  },
+  "savedCalls_saveHelp": {
+    "message": "Argumente im Editor unter diesem Namen speichern, um sie später erneut auszuführen — auch nach einem Neuladen oder Deployment."
+  },
+  "savedCalls_saved": {
+    "message": "Gespeichert. $1 für dieses Werkzeug aufbewahrt."
+  },
+  "savedCalls_savedAt": {
+    "message": "gespeichert $1"
+  },
+  "savedCalls_skippedNeedsReview": {
+    "message": "übersprungen — Prüfung nötig: $1"
+  },
+  "savedCalls_title": {
+    "message": "Gespeicherte Aufrufe und Prüfungen"
+  },
+  "savedCalls_titleCount": {
+    "message": "Gespeicherte Aufrufe ($1)"
+  },
+  "schemaForm_anArrayOfObjectsIs": {
+    "message": "Ein Array von Objekten wird als JSON bearbeitet, damit nichts stillschweigend verloren geht."
+  },
+  "schemaForm_editThisPropertyAsJson": {
+    "message": "Bearbeiten Sie diese Eigenschaft als JSON."
+  },
+  "schemaForm_explorerCannotTellWhatThis": {
+    "message": "Explorer kann nicht erkennen, was dieses Array enthält. Bearbeiten Sie es als JSON."
+  },
+  "schemaForm_isRequired": {
+    "message": "$1 ist erforderlich"
+  },
+  "schemaForm_mustBeNumber": {
+    "message": "$1 muss eine Zahl sein"
+  },
+  "schemaForm_notSpecified": {
+    "message": "Nicht angegeben"
+  },
+  "schemaForm_notValidJson": {
+    "message": "$1 ist kein gültiges JSON"
+  },
+  "schemaForm_oneValuePerLine": {
+    "message": "ein Wert pro Zeile"
+  },
+  "schemaForm_required": {
+    "message": "Erforderlich"
+  },
+  "schemaForm_thisPropertyAllowsSeveralTypes": {
+    "message": "Diese Eigenschaft erlaubt mehrere Typen. Bearbeiten Sie sie als JSON."
+  },
+  "schemaForm_thisPropertyIsNestedToo": {
+    "message": "Diese Eigenschaft ist zu tief verschachtelt, um als Formular dargestellt zu werden."
+  },
+  "schemaForm_thisPropertyUsesAllofEdit": {
+    "message": "Diese Eigenschaft verwendet allOf. Bearbeiten Sie sie als JSON."
+  },
+  "schemaForm_thisPropertyUsesAnyofExplorer": {
+    "message": "Diese Eigenschaft verwendet anyOf. Explorer rät nicht, welchen Zweig Sie meinen."
+  },
+  "schemaForm_thisPropertyUsesOneofExplorer": {
+    "message": "Diese Eigenschaft verwendet oneOf. Explorer rät nicht, welchen Zweig Sie meinen."
+  },
+  "schemaForm_thisPropertyUsesRefWhich": {
+    "message": "Diese Eigenschaft verwendet $$ref, was Explorer nicht auflöst. Bearbeiten Sie sie als JSON."
+  },
+  "schemaForm_thisToolTakesNoArguments": {
+    "message": "Dieses Tool erwartet keine Argumente."
+  },
+  "schemaForm_tupleArraysAreEditedAs": {
+    "message": "Tupel-Arrays werden als JSON bearbeitet."
+  },
+  "schemaTree_nestedTooDeeplyToExpand": {
+    "message": "Zu tief verschachtelt zum Aufklappen."
+  },
+  "schemaTree_rawJsonSchema": {
+    "message": "Rohes JSON-Schema"
+  },
+  "schemaTree_theSchemaDeclaresNoProperties": {
+    "message": "Das Schema deklariert keine Eigenschaften."
+  },
+  "schemaTree_thisToolDeclaresNoInput": {
+    "message": "Dieses Tool deklariert kein Eingabeschema."
+  },
+  "sec_accepts_missing_required_fix": {
+    "message": "Prüfen Sie Pflichtargumente im Code des Tools und geben Sie einen Fehler zurück, der das fehlende Feld benennt."
+  },
+  "sec_accepts_missing_required_title": {
+    "message": "Das Werkzeug hat einen Aufruf ohne Pflichtargument akzeptiert"
+  },
+  "sec_accepts_missing_required_why": {
+    "message": "Eine Pflichteigenschaft wurde weggelassen und das Werkzeug antwortete, als wäre der Aufruf gültig: Der deklarierte Vertrag entspricht nicht dem, was der Code durchsetzt."
+  },
+  "sec_accepts_out_of_schema_input_fix": {
+    "message": "Validieren Sie jedes Argument im Code des Werkzeugs und geben Sie bei falschem Typ einen aussagekräftigen Fehler zurück."
+  },
+  "sec_accepts_out_of_schema_input_title": {
+    "message": "Das Werkzeug hat ein Argument mit falschem Typ akzeptiert"
+  },
+  "sec_accepts_out_of_schema_input_why": {
+    "message": "Es wurde ein Wert eines anderen Typs als im Schema deklariert gesendet, und das Tool antwortete, als wäre er gültig. Der Browser validiert Argumente nicht (gemessen, WMP-0046); der Tool-Code ist die einzige Validierungsschicht (Spez. §6.3.1.3)."
+  },
+  "sec_accepts_unbounded_input_fix": {
+    "message": "Begrenzen Sie den Parameter mit maxLength im Schema und setzen Sie dies im Code durch."
+  },
+  "sec_accepts_unbounded_input_title": {
+    "message": "Das Werkzeug hat eine Zeichenkette mit 10.000 Zeichen akzeptiert"
+  },
+  "sec_accepts_unbounded_input_why": {
+    "message": "Ein Freitextparameter ohne maxLength hat einen sehr langen Wert angenommen. Längenbegrenzungen verkleinern den Platz für eingeschleuste Anweisungen (Spez. §6.4.2)."
+  },
+  "sec_accepts_unknown_property_fix": {
+    "message": "Ignorieren oder verwerfen Sie unbekannte Eigenschaften gezielt im Code."
+  },
+  "sec_accepts_unknown_property_title": {
+    "message": "Das Werkzeug hat eine unbekannte Eigenschaft akzeptiert"
+  },
+  "sec_accepts_unknown_property_why": {
+    "message": "Eine zusätzliche, nicht deklarierte Eigenschaft wurde akzeptiert. Chromes Leitfaden erlaubt lockere Schemata bei striktem Code; dies ist ein Hinweis für Entwickler, die die Implementierung kennen."
+  },
+  "sec_consequential_without_hint_fix": {
+    "message": "Setzen Sie annotations.consequentialHint auf true oder benennen Sie das Werkzeug um, falls es nur einen Vorgang startet, den der Nutzer selbst abschließt."
+  },
+  "sec_consequential_without_hint_title": {
+    "message": "Folgenreiche Aktion ohne consequentialHint"
+  },
+  "sec_consequential_without_hint_why": {
+    "message": "Name oder Beschreibung enthält ein Verb für Bezahlen, Senden, Buchen, Löschen oder andere verbindliche Aktionen; ohne consequentialHint könnte ein Agent das Werkzeug ungefragt ausführen (Spez. §6.4.5, §6.3.2)."
+  },
+  "sec_convention_llms_txt_present_fix": {
+    "message": "Halten Sie die Datei aktuell, falls Sie sie bereitstellen; sie ist optional."
+  },
+  "sec_convention_llms_txt_present_title": {
+    "message": "Eine llms.txt-Datei wird bereitgestellt"
+  },
+  "sec_convention_llms_txt_present_why": {
+    "message": "llms.txt ist eine informelle Konvention für eine maschinenlesbare Website-Zusammenfassung, die von den Agenten-Audits in Lighthouse geprüft wird. Sie hat nichts mit der WebMCP-Browser-API zu tun."
+  },
+  "sec_convention_manifest_invalid_fix": {
+    "message": "Liefern Sie gültiges JSON aus oder entfernen Sie die Datei."
+  },
+  "sec_convention_manifest_invalid_title": {
+    "message": "Eine Datei /.well-known/webmcp wird ausgeliefert, ist aber kein JSON"
+  },
+  "sec_convention_manifest_invalid_why": {
+    "message": "Der Pfad antwortet, aber der Inhalt lässt sich nicht als JSON parsen; ein Leser, der diese Konvention erwartet, erhält nichts Brauchbares."
+  },
+  "sec_convention_manifest_present_fix": {
+    "message": "Halten Sie es konsistent mit den tatsächlich auf der Seite registrierten Werkzeugen oder entfernen Sie es; es ist kein Standard."
+  },
+  "sec_convention_manifest_present_title": {
+    "message": "Ein Manifest /.well-known/webmcp wird bereitgestellt"
+  },
+  "sec_convention_manifest_present_why": {
+    "message": "Ein Discovery-Manifest nach Community-Konvention wurde gefunden. Es ist nicht Teil des W3C-CG-Entwurfs; manche Auditoren und Verzeichnisse lesen es. Agenten, die die Browser-API nutzen, benötigen es nicht."
+  },
+  "sec_convention_permissions_policy_absent_fix": {
+    "message": "Senden Sie Permissions-Policy: tools=() auf Seiten, die WebMCP nicht nutzen; andernfalls ist nichts zu tun."
+  },
+  "sec_convention_permissions_policy_absent_title": {
+    "message": "Keine Permissions-Policy für tools in der Seitenantwort"
+  },
+  "sec_convention_permissions_policy_absent_why": {
+    "message": "Ohne den Header gilt der Standard: WebMCP ist für die Seite und Same-Origin-Frames erlaubt. Eine Seite ohne WebMCP kann Permissions-Policy: tools=() senden, damit kein eingeschleustes Skript Werkzeuge registrieren kann (Spez. §6.4.1)."
+  },
+  "sec_convention_permissions_policy_fix": {
+    "message": "Prüfen Sie, ob die Positivliste Ihrer Absicht entspricht."
+  },
+  "sec_convention_permissions_policy_title": {
+    "message": "Die Permissions-Policy der Seite nennt die Funktion tools"
+  },
+  "sec_convention_permissions_policy_why": {
+    "message": "Der Antwort-Header beschränkt oder delegiert WebMCP explizit (Spez. §6.4.1). Dies ist der von der Spezifikation empfohlene Mechanismus, um WebMCP dort zu deaktivieren, wo es nicht genutzt wird."
+  },
+  "sec_cross_origin_frame_tools_fix": {
+    "message": "Bestätigen Sie, dass die Einbettung beabsichtigt ist; gewähren Sie Explorer Zugriff auf die Herkunft des Frames, um dessen Werkzeuge zu prüfen."
+  },
+  "sec_cross_origin_frame_tools_title": {
+    "message": "Werkzeuge aus einem Frame einer anderen Herkunft"
+  },
+  "sec_cross_origin_frame_tools_why": {
+    "message": "Ein Frame einer anderen Herkunft stellt auf dieser Seite Tools bereit. Agenten sehen sie neben Ihren eigenen."
+  },
+  "sec_debugging_tool_exposed_fix": {
+    "message": "Registrieren Sie Debugging-Werkzeuge nur in Entwicklungs-Builds oder hinter einer Entwicklereinstellung."
+  },
+  "sec_debugging_tool_exposed_title": {
+    "message": "Ein Debugging-Tool ist auf dieser Seite sichtbar"
+  },
+  "sec_debugging_tool_exposed_why": {
+    "message": "annotations.debugging kennzeichnet ein Werkzeug für Entwicklerwerkzeuge. Auf einer öffentlich besuchten Seite kann es von jedem Agenten aufgerufen werden."
+  },
+  "sec_delegated_tools_policy_fix": {
+    "message": "Behalten Sie allow=\"tools\" nur bei Einbettungen bei, denen Sie vertrauen, im Namen Ihrer Besucher zu handeln."
+  },
+  "sec_delegated_tools_policy_title": {
+    "message": "Die Seite delegiert die tools-Richtlinie an eine andere Herkunft"
+  },
+  "sec_delegated_tools_policy_why": {
+    "message": "Ein iframe trägt allow=\"tools\": Die eingebettete Herkunft darf auf dieser Seite Tools registrieren (Spez. §6.4.1 beschreibt die Richtlinie; Chrome empfiehlt die Freigabe nur für vertrauenswürdige Ursprünge)."
+  },
+  "sec_high_risk_read_without_hint_fix": {
+    "message": "Erwägen Sie consequentialHint bei Lesezugriffen auf sensible Daten und minimieren Sie die Rückgabedaten des Werkzeugs."
+  },
+  "sec_high_risk_read_without_hint_title": {
+    "message": "Lesen sensibler Daten ohne consequentialHint"
+  },
+  "sec_high_risk_read_without_hint_why": {
+    "message": "Das Werkzeug liest Adressen, Kontostände, Zugangsdaten oder Gesundheitsdaten. Ob schreibgeschützte Offenlegung eine Bestätigung erfordern soll, ist eine offene Spezifikationsfrage (#331); bis zur Klärung ist das Setzen des Hinweises die vorsichtige Wahl."
+  },
+  "sec_legacy_host_fix": {
+    "message": "Verwenden Sie document.modelContext."
+  },
+  "sec_legacy_host_title": {
+    "message": "Der veraltete Host navigator.modelContext wird verwendet"
+  },
+  "sec_legacy_host_why": {
+    "message": "Die API ist nach document.modelContext umgezogen; eine Seite, die den navigator-Alias nutzt, verlässt sich auf einen Kompatibilitätspfad."
+  },
+  "sec_no_tools_policy_open_fix": {
+    "message": "Senden Sie Permissions-Policy: tools=() auf Seiten, die WebMCP nicht nutzen."
+  },
+  "sec_no_tools_policy_open_title": {
+    "message": "Keine Tools, aber WebMCP bleibt auf dieser Seite offen"
+  },
+  "sec_no_tools_policy_open_why": {
+    "message": "Eine Seite ohne eigene Werkzeuge kann dennoch Werkzeuge durch eingeschleuste Skripte erhalten. Permissions-Policy: tools=() sperrt die API für das Dokument und seine Frames, bevor Skripte ausgeführt werden (Spez. §6.4.1)."
+  },
+  "sec_opaque_origin_tool_fix": {
+    "message": "Geben Sie dem Frame eine echte Herkunft oder entfernen Sie seine Werkzeuge."
+  },
+  "sec_opaque_origin_tool_title": {
+    "message": "Ein Werkzeug aus einer opaken Herkunft"
+  },
+  "sec_opaque_origin_tool_why": {
+    "message": "Frames mit Sandbox oder about:blank haben eine opake Herkunft; ihre Werkzeuge lassen sich keiner Website zuordnen."
+  },
+  "sec_output_directive_fix": {
+    "message": "Geben Sie Daten statt Anweisungen an den Agenten zurück; kennzeichnen Sie Ergebnisse mit Fremdtext durch untrustedContentHint."
+  },
+  "sec_output_directive_title": {
+    "message": "Das Ergebnis liest sich wie eine Anweisung an den Agenten"
+  },
+  "sec_output_directive_why": {
+    "message": "Die Ausgabe des Werkzeugs enthält an den Agenten gerichtete Formulierungen. Output-Injection (Spez. §6.3.1.2) ist der Weg, über den eine Seite oder ihre Nutzer einen Agenten nach dem Aufruf steuern."
+  },
+  "sec_output_markup_fix": {
+    "message": "Geben Sie reine Daten zurück und überlassen Sie die Formatierung dem Agenten."
+  },
+  "sec_output_markup_title": {
+    "message": "Markup oder Template-Tokens im Ergebnis"
+  },
+  "sec_output_markup_why": {
+    "message": "HTML-Tags, Codeblöcke oder Prompt-Template-Tokens in einem Ergebnis können eingeschleuste Anweisungen transportieren."
+  },
+  "sec_output_over_budget_fix": {
+    "message": "Geben Sie weniger zurück, paginieren Sie das Ergebnis oder liefern Sie eine Referenz, der der Agent folgen kann."
+  },
+  "sec_output_over_budget_title": {
+    "message": "Das Ergebnis überschreitet das Ausgabebudget von 1,5K Zeichen"
+  },
+  "sec_output_over_budget_why": {
+    "message": "Chromes Leitfaden sieht etwa 1.500 Zeichen für eine Werkzeugausgabe vor; größere Ergebnisse kosten Kontext und vergrößern die Angriffsfläche für Output-Injection."
+  },
+  "sec_output_personal_data_fix": {
+    "message": "Geben Sie nur zurück, was für die Aufgabe nötig ist; kennzeichnen Sie Ergebnisse mit personenbezogenen oder nutzergenerierten Daten durch untrustedContentHint."
+  },
+  "sec_output_personal_data_title": {
+    "message": "Das Ergebnis scheint personenbezogene Daten zu enthalten"
+  },
+  "sec_output_personal_data_why": {
+    "message": "Eine E-Mail-Adresse, Telefonnummer oder kartenähnliche Nummer wurde bei einem gültigen Aufruf ohne untrustedContentHint zurückgegeben. Das Ergebnis geht an den aufrufenden Agenten (Spez. §6.3.3, OWASP MCP10)."
+  },
+  "sec_probe_call_failed_fix": {
+    "message": "Sorgen Sie dafür, dass das vom Schema implizierte Beispiel funktioniert, oder präzisieren Sie das Schema (enum, format, examples)."
+  },
+  "sec_probe_call_failed_title": {
+    "message": "Das Tool schlug bei generierten gültigen Argumenten fehl"
+  },
+  "sec_probe_call_failed_why": {
+    "message": "Beim Aufruf mit aus dem eigenen Schema erzeugten Argumenten (Pflichtfelder und Standardwerte) gab das Tool einen Fehler zurück. Ein Agent würde beim ersten Aufruf auf denselben Fehler stoßen."
+  },
+  "sec_re_registered_in_session_fix": {
+    "message": "Vergleichen Sie einen früheren Schnappschuss mit dem aktuellen Vertrag (Werkzeuge → Schnappschüsse); registrieren Sie Werkzeuge möglichst nur einmal pro Dokument."
+  },
+  "sec_re_registered_in_session_title": {
+    "message": "In dieser Sitzung entfernt und erneut registriert"
+  },
+  "sec_re_registered_in_session_why": {
+    "message": "Ein Werkzeug, das verschwindet und wiederkehrt, kann dasselbe neu eingebundene Werkzeug sein oder ein anderer Vertrag unter gleichem Namen (arXiv 2606.06387, Spec-Issue #92). Die Zeitleiste hat den Wechsel gesehen; Explorer hat die Verträge nicht verglichen."
+  },
+  "sec_readonly_claim_on_mutating_verb_fix": {
+    "message": "Entfernen Sie readOnlyHint oder benennen Sie das Werkzeug passend zu seiner Funktion um; prüfen Sie Hinweise nach jeder Änderung erneut."
+  },
+  "sec_readonly_claim_on_mutating_verb_title": {
+    "message": "readOnlyHint bei einem Werkzeug, dessen Name eine Zustandsänderung besagt"
+  },
+  "sec_readonly_claim_on_mutating_verb_why": {
+    "message": "Agenten überspringen bei schreibgeschützten Werkzeugen möglicherweise die Bestätigung. Ein Schreibschutz-Hinweis bei Verben wie delete, pay oder update ist entweder veraltet oder falsch, und laut Spezifikation lässt sich die deklarierte Absicht nicht verifizieren (§6.3.2)."
+  },
+  "sec_registered_more_than_once_fix": {
+    "message": "Registrieren Sie einmal pro Dokument oder heben Sie die Registrierung vor einer Neuregistrierung explizit per AbortSignal auf."
+  },
+  "sec_registered_more_than_once_title": {
+    "message": "Mehrere registerTool()-Aufrufe für diesen Namen"
+  },
+  "sec_registered_more_than_once_why": {
+    "message": "Der Instrumentierungsmodus hat mehr als einen Registrierungsaufruf für dieses Werkzeug in diesem Dokument gesehen. Wiederholte Registrierung wird bei Ersetzungsangriffen genutzt, tritt aber auch bei neu rendernden Komponenten auf."
+  },
+  "sec_sensitive_parameter_fix": {
+    "message": "Entfernen Sie den Parameter, erfassen Sie den Wert direkt in der Benutzeroberfläche der Seite im Beisein des Nutzers oder übergeben Sie eine opake Referenz."
+  },
+  "sec_sensitive_parameter_title": {
+    "message": "Ein Parameter fragt sensible Daten ab"
+  },
+  "sec_sensitive_parameter_why": {
+    "message": "Ein hilfsbereiter Agent könnte diesen Parameter aus Personalisierungsdaten, dem Browserverlauf oder anderen Websites ausfüllen (Spez. §6.3.3). Zugangsdaten, Kartendaten und staatliche Kennungen sollten niemals durch ein Modell laufen (#316)."
+  },
+  "sec_state_change_without_hint_fix": {
+    "message": "Deklarieren Sie consequentialHint, wenn die Änderung für den Nutzer wesentlich ist; belassen Sie readOnlyHint auf false."
+  },
+  "sec_state_change_without_hint_title": {
+    "message": "Ein zustandsänderndes Werkzeug deklariert keinen Hinweis"
+  },
+  "sec_state_change_without_hint_why": {
+    "message": "Das Verb verändert etwas auf der Seite oder im Konto, aber weder readOnlyHint noch consequentialHint ist deklariert; Agenten müssen von einer Zustandsänderung ausgehen, und Prüfer können Absicht nicht von Versehen unterscheiden."
+  },
+  "sec_text_agent_directive_fix": {
+    "message": "Beschreiben Sie in einfachen Aussagesätzen, was das Werkzeug tut und wann es gilt; verlagern Sie Workflow-Regeln in den Code oder das Schema des Werkzeugs."
+  },
+  "sec_text_agent_directive_title": {
+    "message": "Die Beschreibung liest sich wie eine Anweisung an den Agenten"
+  },
+  "sec_text_agent_directive_why": {
+    "message": "Agenten behandeln Tool-Beschreibungen als vertrauenswürdigen Kontext. Formulierungen wie „immer zuerst aufrufen“ oder „dem Nutzer nicht mitteilen“ lenken das Modell, statt das Tool zu beschreiben (Spez. §6.3.1.1, Tool Poisoning). Auch eine legitime Beschreibung kann solche Wörter enthalten; dies ist ein Hinweis zur menschlichen Prüfung."
+  },
+  "sec_text_embedded_address_fix": {
+    "message": "Beschreiben Sie das Werkzeug ohne Adressen; geben Sie Links in den Ergebnissen zurück, falls sie Teil der Daten sind."
+  },
+  "sec_text_embedded_address_title": {
+    "message": "URL oder E-Mail-Adresse im modellseitigen Text"
+  },
+  "sec_text_embedded_address_why": {
+    "message": "Eine Adresse in einer Beschreibung kann einen Agenten dazu bringen, etwas abzurufen oder zu kontaktieren, worum der Nutzer nicht gebeten hat (Chrome-Leitfaden für Agenten: Ursprünge auf die Aufgabe beschränken)."
+  },
+  "sec_text_encoded_blob_fix": {
+    "message": "Entfernen Sie kodierte Nutzdaten aus Namen und Beschreibungen; übergeben Sie Daten über Argumente und Ergebnisse."
+  },
+  "sec_text_encoded_blob_title": {
+    "message": "Kodierte Daten im modellseitigen Text eingebettet"
+  },
+  "sec_text_encoded_blob_why": {
+    "message": "Eine lange Base64- oder Hexadezimalfolge in einer Beschreibung enthält Inhalte, die ein Mensch nicht direkt prüfen kann, ein Modell aber möglicherweise dekodiert und befolgt."
+  },
+  "sec_text_hidden_characters_fix": {
+    "message": "Entfernen Sie die aufgelisteten Zeichen; prüfen Sie den Build-Schritt oder das CMS, das den Text erzeugt hat."
+  },
+  "sec_text_hidden_characters_title": {
+    "message": "Unsichtbare oder richtungsändernde Zeichen im modellseitigen Text"
+  },
+  "sec_text_hidden_characters_why": {
+    "message": "Nullbreiten-, bidirektionale und Steuerzeichen sind für menschliche Leser unsichtbar, erreichen das Modell jedoch unverändert: Sie können Text verbergen oder die Leserichtung umkehren."
+  },
+  "sec_text_markup_fix": {
+    "message": "Verwenden Sie reinen Text in Namen und Beschreibungen."
+  },
+  "sec_text_markup_title": {
+    "message": "Markup oder Template-Tokens im modellseitigen Text"
+  },
+  "sec_text_markup_why": {
+    "message": "HTML-Tags, Codeblöcke oder Prompt-Template-Tokens in einer Beschreibung sind häufige Träger eingeschleuster Anweisungen und zur Beschreibung eines Tools niemals erforderlich."
+  },
+  "sec_text_mixed_scripts_fix": {
+    "message": "Schreiben Sie das Wort in einer einzigen Schrift; bei mehrsprachigem Text sollte jedes einzelne Wort in einer Schrift bleiben."
+  },
+  "sec_text_mixed_scripts_title": {
+    "message": "Ein Wort mischt lateinische Buchstaben mit kyrillischen oder griechischen Doppelgängern"
+  },
+  "sec_text_mixed_scripts_why": {
+    "message": "Optisch gleiche Buchstaben lassen zwei verschiedene Zeichenketten für Menschen identisch aussehen, während Modell und Validator zwei unterschiedliche Wörter sehen (Unicode TR36)."
+  },
+  "sec_text_over_budget_fix": {
+    "message": "Kürzen Sie den Text auf die Budgetgrenzen; legen Sie Details in die Parameterbeschreibungen des Schemas."
+  },
+  "sec_text_over_budget_title": {
+    "message": "Text überschreitet die von Agenten angewandten Budgets"
+  },
+  "sec_text_over_budget_why": {
+    "message": "Chromes Leitfaden sieht 500 Zeichen für eine Beschreibung, 150 für eine Parameterbeschreibung und 30 für einen Namen vor; längerer Text wird eher abgeschnitten oder kann Anweisungen im Fülltext verbergen (Spez. §6.4.2)."
+  },
+  "sec_third_party_registration_fix": {
+    "message": "Prüfen Sie das Skript, fixieren Sie seine Version oder liefern Sie es von Ihrer eigenen Herkunft aus; protokollieren Sie Registrierungen in der Produktion."
+  },
+  "sec_third_party_registration_title": {
+    "message": "Registriert durch ein Skript einer anderen Herkunft"
+  },
+  "sec_third_party_registration_why": {
+    "message": "Dieses Werkzeug wurde von Code registriert, der von einer anderen Herkunft als der Seite stammt: einem CDN, einer Edge-Bridge oder einem Plugin. Jedes Skript auf der Seite kann Werkzeuge hinzufügen oder ersetzen (Mid-Session Tool Injection, arXiv 2606.06387)."
+  },
+  "sec_ugc_without_untrusted_hint_fix": {
+    "message": "Setzen Sie annotations.untrustedContentHint auf true bei Werkzeugen, die von Dritten verfassten Text zurückgeben."
+  },
+  "sec_ugc_without_untrusted_hint_title": {
+    "message": "Inhalte Dritter ohne untrustedContentHint"
+  },
+  "sec_ugc_without_untrusted_hint_why": {
+    "message": "Bewertungen, Kommentare, Nachrichten oder abgerufene Seitentexte können Anweisungen an den Agenten enthalten (Output-Injection, Spez. §6.3.1.2). untrustedContentHint weist Agenten an, das Ergebnis als reine Daten zu behandeln."
+  },
+  "sec_unbounded_string_fix": {
+    "message": "Fügen Sie maxLength, ein enum oder ein format hinzu, wo sinnvoll; validieren Sie unabhängig davon immer im Code des Werkzeugs."
+  },
+  "sec_unbounded_string_title": {
+    "message": "Freitextparameter ohne Längenbegrenzung"
+  },
+  "sec_unbounded_string_why": {
+    "message": "Unbegrenzte Zeichenketten vergrößern den Spielraum für eingeschleuste Anweisungen (Spez. §6.4.2). Chrome empfiehlt strikte Validierung im Code; ein maxLength oder enum im Schema zeigt zudem Agenten, was erlaubt ist."
+  },
+  "security_axis_environment": {
+    "message": "Umgebung"
+  },
+  "security_axis_governance": {
+    "message": "Governance"
+  },
+  "security_axis_injection": {
+    "message": "Injektionsfläche"
+  },
+  "security_axis_lifecycle": {
+    "message": "Lebenszyklus"
+  },
+  "security_axis_privacy": {
+    "message": "Datenschutz"
+  },
+  "security_axis_surface": {
+    "message": "Oberfläche"
+  },
+  "security_cardBadgeHelp": {
+    "message": "Höchster Schweregrad unter den Sicherheitsbefunden dieses Werkzeugs. Öffnen Sie den Bereich Sicherheit für die Belege."
+  },
+  "security_clean": {
+    "message": "Keine Befunde. Die untenstehenden Regeln wurden ausgewertet; was nicht beobachtet werden konnte, ist aufgeführt."
+  },
+  "security_coverage": {
+    "message": "$1 Werkzeuge · $2 Regeln · $3 Befunde ($4 beobachtet, $5 Indikatoren)"
+  },
+  "security_coverageHelp": {
+    "message": "Umfang der Prüfung: Werkzeuge auf der Seite, jeweils ausgewertete Regeln und Befunde nach Art."
+  },
+  "security_detailIntro": {
+    "message": "Befunde zu Text, Hinweisen, Schema und Herkunft dieses Werkzeugs. Indikatoren sind zu prüfende Muster, keine Beweise."
+  },
+  "security_detailNone": {
+    "message": "Keine Befunde für dieses Werkzeug."
+  },
+  "security_detailTitle": {
+    "message": "Sicherheitsprüfung"
+  },
+  "security_detailTitleCount": {
+    "message": "Sicherheitsprüfung ($1)"
+  },
+  "security_evidence": {
+    "message": "Beleg"
+  },
+  "security_exportLabel": {
+    "message": "Diesen Sicherheitsbericht exportieren"
+  },
+  "security_exportNote": {
+    "message": "Enthält Seitenbelege, Korrekturvorschläge, ungeprüfte Aspekte und die vorläufige Note. Vor dem Teilen prüfen."
+  },
+  "security_filterAxis": {
+    "message": "Nur Befunde dieser Art anzeigen."
+  },
+  "security_filterSeverity": {
+    "message": "Nur Befunde dieses Schweregrads anzeigen."
+  },
+  "security_fix": {
+    "message": "Empfohlene Maßnahme"
+  },
+  "security_frame": {
+    "message": "Frame #$1"
+  },
+  "security_hideReviewed": {
+    "message": "Geprüfte ausblenden"
+  },
+  "security_hideReviewedHelp": {
+    "message": "Als geprüft markierte Befunde ausblenden. Sie erscheinen erneut, wenn sich der Vertrag des Werkzeugs ändert."
+  },
+  "security_intro": {
+    "message": "Passive Befunde zu sichtbaren Tool-Angaben mit Belegen und Quellen. Indikatoren beweisen keinen Angriff. Prüfung und Korrekturvorschläge rufen kein Tool auf. Ursprungsprüfung und aktive Proben erfordern eigene Aktionen unten."
+  },
+  "security_itemHelp": {
+    "message": "Öffnen, um Beleg, Bedeutung, Empfehlung und Quellen zu lesen."
+  },
+  "security_markReviewed": {
+    "message": "Als geprüft markieren"
+  },
+  "security_markReviewedHelp": {
+    "message": "Merken, dass Sie diesen Befund für dieses Werkzeug und diesen Vertrag geprüft haben. Erscheint erneut bei Vertragsänderung. Nur auf diesem Gerät gespeichert."
+  },
+  "security_natureHelp": {
+    "message": "Beobachtet: Explorer hat den Sachverhalt selbst festgestellt. Indikator: ein Muster, das oft auf ein Problem hindeutet; prüfen Sie den Beleg und entscheiden Sie."
+  },
+  "security_natureIndicator": {
+    "message": "Indikator"
+  },
+  "security_natureObserved": {
+    "message": "beobachtet"
+  },
+  "security_noMatch": {
+    "message": "Kein Befund entspricht diesen Filtern."
+  },
+  "security_noTools": {
+    "message": "Keine Tools zur Prüfung auf dieser Seite."
+  },
+  "security_no_lifecycle": {
+    "message": "Lebenszyklus: Die Live-Zeitleiste hat noch keine Ereignisse für diesen Tab. Öffnen Sie die Zeitleiste oder lassen Sie diesen Bereich geöffnet, während sich die Seite ändert."
+  },
+  "security_no_refused_frames": {
+    "message": "Frames, deren WebMCP-Aufrufe der Browser abgelehnt hat: $1."
+  },
+  "security_no_registration_provenance": {
+    "message": "Registrierungsherkunft: Der Instrumentierungsmodus ist für diese Website deaktiviert, daher kann Explorer nicht feststellen, welches Skript welches Werkzeug registriert hat. Aktivieren Sie ihn in den Einstellungen und laden Sie die Seite neu."
+  },
+  "security_no_ungranted_origins": {
+    "message": "Frames von Herkünften, die Explorer nicht prüfen darf: $1. Gewähren Sie über die Statusleiste Zugriff, um deren Werkzeuge zu prüfen."
+  },
+  "security_notObservable": {
+    "message": "Hier nicht beobachtbar"
+  },
+  "security_openTool": {
+    "message": "Tool öffnen"
+  },
+  "security_openToolHelp": {
+    "message": "Details dieses Tools öffnen: Schema, Prüfungen, Ausführung."
+  },
+  "security_pageFinding": {
+    "message": "diese Seite"
+  },
+  "security_reviewedBadge": {
+    "message": "geprüft"
+  },
+  "security_sevHelp": {
+    "message": "Mögliche Auswirkung bei zutreffendem Indikator; getrennt von Beweis und Gesamtnote."
+  },
+  "security_sev_critical": {
+    "message": "kritisch"
+  },
+  "security_sev_high": {
+    "message": "hoch"
+  },
+  "security_sev_info": {
+    "message": "Info"
+  },
+  "security_sev_low": {
+    "message": "niedrig"
+  },
+  "security_sev_medium": {
+    "message": "mittel"
+  },
+  "security_sources": {
+    "message": "Quellen"
+  },
+  "security_title": {
+    "message": "Schutz"
+  },
+  "security_unmarkReviewed": {
+    "message": "Markierung aufheben"
+  },
+  "security_unmarkReviewedHelp": {
+    "message": "Diesen Befund wieder als neu anzeigen."
+  },
+  "security_why": {
+    "message": "Warum das wichtig ist"
+  },
+  "settings_about": {
+    "message": "Über"
+  },
+  "settings_agentAccess": {
+    "message": "Externer Agenten-Zugriff"
+  },
+  "settings_agentAccessAllowed": {
+    "message": "erlaubt"
+  },
+  "settings_agentAccessBody": {
+    "message": "Welche Websites Explorer über die aktuelle Seite befragen dürfen. Explorer antwortet nur im Manifest deklarierten Herkünften und erst, nachdem Sie diese hier eingeschaltet haben."
+  },
+  "settings_agentAccessLast": {
+    "message": "Letzte gesehene Anfrage: $1 fragte nach „$2“."
+  },
+  "settings_agentAccessNeedPermission": {
+    "message": "Chrome benötigt Ihre Berechtigung für diese Website, bevor der Agentenzugriff aktiviert werden kann. Versuchen Sie es erneut und bestätigen Sie die Abfrage."
+  },
+  "settings_agentAccessNone": {
+    "message": "In diesem Build ist keine Website für die Kommunikation mit Explorer deklariert."
+  },
+  "settings_agentAccessOff": {
+    "message": "Widerrufen"
+  },
+  "settings_agentAccessOffHelp": {
+    "message": "Sofort nicht mehr auf $1 antworten. Die nächste Anfrage wird abgelehnt."
+  },
+  "settings_agentAccessOn": {
+    "message": "Zulassen"
+  },
+  "settings_agentAccessOnHelp": {
+    "message": "Erlaubt $1, über Explorer die auf seiner eigenen Seite deklarierten Werkzeuge aufzulisten und aufzurufen. Nichts anderes wird sichtbar."
+  },
+  "settings_agentConfigured": {
+    "message": "Konfiguriert: $1"
+  },
+  "settings_agentLab": {
+    "message": "Agenten-Labor"
+  },
+  "settings_agentLabBody": {
+    "message": "Anbieter, Endpunkt, Modell und Budgets werden auf diesem Gerät gespeichert. Schlüssel nutzen Sitzungsspeicher oder den optionalen verschlüsselten Tresor."
+  },
+  "settings_agentNotConfigured": {
+    "message": "Keine KI ausgewählt. Werkzeuge, Prüfungen und Rezepte funktionieren auch ohne KI."
+  },
+  "settings_agentSessions": {
+    "message": "Agenten-Konversationen"
+  },
+  "settings_agentSessionsCount": {
+    "message": "$1 Unterhaltungen auf $2 Websites"
+  },
+  "settings_allHttp": {
+    "message": "Alle http-Websites"
+  },
+  "settings_allHttps": {
+    "message": "Alle https-Websites"
+  },
+  "settings_allSites": {
+    "message": "Alle Websites (http und https)"
+  },
+  "settings_allowAll": {
+    "message": "Auf allen Websites erlauben"
+  },
+  "settings_allowAllHelp": {
+    "message": "Untersuchen aller http- und https-Websites aktivieren, ohne jede einzeln freizugeben. Chrome bittet um Bestätigung."
+  },
+  "settings_auditedLastCheck": {
+    "message": "letzte Nachprüfung $1: $2 neu"
+  },
+  "settings_auditedSite": {
+    "message": "$1 — Referenz $2, $3 Befund(e)"
+  },
+  "settings_auditedSites": {
+    "message": "Geprüfte Websites"
+  },
+  "settings_bundle": {
+    "message": "Einstellungen sichern und übertragen"
+  },
+  "settings_bundleApplied": {
+    "message": "Angewendet: $1 Konnektor(en), $2 Prompt(s). $3 Konnektor(en) wurden durch die Sicherheitsprüfung verworfen ($3 = 0 bedeutet keine)."
+  },
+  "settings_bundleBody": {
+    "message": "Anbietereinstellungen, Konnektoren und Prompts exportieren. Schlüssel, Passphrasen und Tresor sind ausgeschlossen; Zugangsdaten nach dem Import separat einrichten."
+  },
+  "settings_bundleExport": {
+    "message": "Einstellungsdatei herunterladen"
+  },
+  "settings_bundleExportHelp": {
+    "message": "Speichert eine JSON-Datei mit Ihrer Konfiguration. Konstruktionsbedingt ohne Schlüssel."
+  },
+  "settings_bundleImport": {
+    "message": "Einstellungen anwenden"
+  },
+  "settings_bundleImportButtonHelp": {
+    "message": "Ersetzt die aktuellen Konnektoren und Prompts durch die aus der Datei und übernimmt die Anbieterauswahl. Jeder Eintrag wird vorab geprüft."
+  },
+  "settings_bundleImportHelp": {
+    "message": "Die Datei wird Eintrag für Eintrag geprüft: Ein Konnektor, dessen Endpunkt einen Schlüssel im Klartext übertragen würde, wird verworfen; der Rest wird übernommen."
+  },
+  "settings_bundleImportPlaceholder": {
+    "message": "Fügen Sie hier das gesamte JSON einer webmcp-explorer-settings-Datei ein"
+  },
+  "settings_bundleImportTitle": {
+    "message": "Einstellungsdatei einfügen, um sie hier anzuwenden"
+  },
+  "settings_bundleIntro": {
+    "message": "Eine einzige Datei überträgt Ihre Anbieterauswahl, Budgets, eigenen Konnektoren und Prompts auf einen anderen Browser oder Computer."
+  },
+  "settings_bundleNotJson": {
+    "message": "Das ist kein gültiges JSON — fügen Sie die gesamte Datei vom ersten { bis zum letzten } ein."
+  },
+  "settings_calls": {
+    "message": "$1 Aufrufe"
+  },
+  "settings_clear": {
+    "message": "Löschen"
+  },
+  "settings_clearAll": {
+    "message": "Gespeicherte Daten und Schlüssel löschen"
+  },
+  "settings_clearAllHelp": {
+    "message": "Gespeicherte Arbeit, Einstellungen, Sitzungsschlüssel und den verschlüsselten Tresor löschen. Aufrufbelege verhindern weiterhin Wiederholungen."
+  },
+  "settings_clearHelp": {
+    "message": "$1 löschen. Fragt vor dem Ausführen noch einmal nach."
+  },
+  "settings_cleared": {
+    "message": "Gelöscht."
+  },
+  "settings_confirm": {
+    "message": "Bestätigen: löschen"
+  },
+  "settings_confirmAll": {
+    "message": "Bestätigen: alles löschen"
+  },
+  "settings_confirmForget": {
+    "message": "Bestätigen: vergessen"
+  },
+  "settings_confirmHelp": {
+    "message": "Innerhalb weniger Sekunden erneut klicken, um zu löschen. Andernfalls wird nichts gelöscht."
+  },
+  "settings_connectors": {
+    "message": "Eigene Konnektoren"
+  },
+  "settings_connectorsCount": {
+    "message": "$1 Konnektoren"
+  },
+  "settings_data": {
+    "message": "Gespeicherte Daten"
+  },
+  "settings_dataBody": {
+    "message": "In diesem Chrome-Profil gespeicherte Daten verwalten. Eine Deinstallation entfernt die lokalen Daten der Erweiterung."
+  },
+  "settings_endpoints": {
+    "message": "Modell-Endpunkte"
+  },
+  "settings_endpointsBody": {
+    "message": "Freigegebene Ursprünge, damit das Agent Lab einen Anbieter erreichen kann. Durch Widerrufen werden Läufe dagegen deaktiviert, bis Sie ihn erneut zulassen."
+  },
+  "settings_evals": {
+    "message": "Eval-Suiten und Ergebnisse"
+  },
+  "settings_evalsCount": {
+    "message": "$1 Suiten, $2 Ergebnisse"
+  },
+  "settings_forgetAgent": {
+    "message": "Einstellungen und Schlüssel des Agenten-Labors vergessen"
+  },
+  "settings_forgetAgentHelp": {
+    "message": "Zurück zum manuellen Modus: kein Endpunkt, kein Modell, kein Schlüssel für irgendeinen Anbieter."
+  },
+  "settings_forgetBaseline": {
+    "message": "Vergessen"
+  },
+  "settings_forgetBaselineHelp": {
+    "message": "Referenz dieser Website löschen. Die Nachprüfung vergleicht sie nicht mehr."
+  },
+  "settings_history": {
+    "message": "Ausführungsverlauf"
+  },
+  "settings_instrumented": {
+    "message": "instrumentiert"
+  },
+  "settings_items": {
+    "message": "$1 Einträge"
+  },
+  "settings_keyInMemory": {
+    "message": "Schlüssel im Speicher"
+  },
+  "settings_keyInMemoryHelp": {
+    "message": "Für diesen Anbieter ist ein Schlüssel verfügbar. Sitzungsschlüssel werden bei einem Chrome-Neustart sowie beim Neuladen, Aktualisieren oder Deaktivieren der Erweiterung gelöscht."
+  },
+  "settings_languageAuto": {
+    "message": "Browser-Standard (Auto)"
+  },
+  "settings_languageDesc": {
+    "message": "Wählen Sie die Oberflächensprache für WebMCP Explorer oder folgen Sie der Browsersprache."
+  },
+  "settings_languageHeading": {
+    "message": "Sprache"
+  },
+  "settings_languageHelp": {
+    "message": "Die Oberflächensprache von WebMCP Explorer sofort umschalten"
+  },
+  "settings_languageLabel": {
+    "message": "Oberflächensprache"
+  },
+  "settings_noAuditedSites": {
+    "message": "Noch keine Website hat eine Referenz. Speichern Sie eine im Bereich Sicherheit."
+  },
+  "settings_noBackend": {
+    "message": "Explorer hat kein Backend: Es werden niemals Daten an Corsen AI gesendet. Ihr Gerät verlassen nur die Daten, die Sie beim Klicken auf „Ausführen“ an das von Ihnen konfigurierte Modell senden. Die vollständige Datenschutzerklärung finden Sie im Chrome Web Store."
+  },
+  "settings_noInstrumented": {
+    "message": "Der Instrumentierungsmodus ist überall deaktiviert."
+  },
+  "settings_noSites": {
+    "message": "Explorer hat noch auf keine Website Zugriff. Öffnen Sie eine Seite und nutzen Sie „Explorer auf dieser Website aktivieren“."
+  },
+  "settings_notRemoved": {
+    "message": "die Berechtigung wurde nicht entfernt."
+  },
+  "settings_oneCall": {
+    "message": "1 Aufruf"
+  },
+  "settings_oneItem": {
+    "message": "1 Eintrag"
+  },
+  "settings_overrides": {
+    "message": "Überschreibungen und Mocks"
+  },
+  "settings_permissionError": {
+    "message": "Chrome hat abgelehnt: $1"
+  },
+  "settings_recheck": {
+    "message": "Offene Tabs erneut prüfen"
+  },
+  "settings_recheckAlarm": {
+    "message": "Alle $1 Minuten geplant."
+  },
+  "settings_recheckEvery": {
+    "message": "Alle"
+  },
+  "settings_recheckEveryHelp": {
+    "message": "Wie oft die offenen Tabs erneut geprüft werden."
+  },
+  "settings_recheckHelp": {
+    "message": "Prüft in jedem Intervall alle offenen Tabs, deren Website eine Referenz hat und die Explorer untersuchen darf, und zeigt die Anzahl neuer Befunde am Symbolleisten-Badge an. Standardmäßig deaktiviert."
+  },
+  "settings_recheckMinutes": {
+    "message": "$1 Minuten"
+  },
+  "settings_recheckNow": {
+    "message": "Jetzt prüfen"
+  },
+  "settings_recheckNowHelp": {
+    "message": "Offene Tabs mit Referenz sofort prüfen und das Ergebnis hier anzeigen."
+  },
+  "settings_recheckOff": {
+    "message": "Nicht geplant."
+  },
+  "settings_recheckResult": {
+    "message": "$1 Website(s) geprüft; $2 neue(r) Befund(e) seit deren Referenz."
+  },
+  "settings_revoke": {
+    "message": "Entziehen"
+  },
+  "settings_revokeHelp": {
+    "message": "Zugriff von Explorer auf $1 entziehen. Chrome entfernt die Berechtigung sofort."
+  },
+  "settings_savedCalls": {
+    "message": "Gespeicherte Aufrufe"
+  },
+  "settings_security": {
+    "message": "Sicherheit"
+  },
+  "settings_securityBody": {
+    "message": "Websites mit gespeicherter Sicherheitsreferenz und periodische Nachprüfung offener Tabs. Eine Nachprüfung führt die normale passive Prüfung auf bereits geöffneten, freigegebenen Tabs aus; sie öffnet niemals Seiten, startet keine Sonden und sendet nichts."
+  },
+  "settings_securityReviewed": {
+    "message": "Sicherheitsprüfdaten"
+  },
+  "settings_securityReviewedHelp": {
+    "message": "Als geprüft markierte Befunde, für Sonden bestätigte eigene Websites, gespeicherte Referenzen und die Nachprüfungseinstellung. Beim Löschen wird alles entfernt."
+  },
+  "settings_siteAccess": {
+    "message": "Website-Zugriff"
+  },
+  "settings_siteAccessBody": {
+    "message": "Websites, deren Untersuchung Chrome für Explorer erlaubt."
+  },
+  "settings_snapshots": {
+    "message": "Vertrags-Schnappschüsse"
+  },
+  "settings_snapshotsCount": {
+    "message": "$1 auf $2 Websites"
+  },
+  "settings_sourceFinder": {
+    "message": "Quellenfinder"
+  },
+  "settings_sourceFinderBody": {
+    "message": "Websites, auf denen der Instrumentierungsmodus aktiv ist. Dies ist die einzige Funktion, die eine Seite verändert: Ein Skript umschließt die WebMCP-Registrierung vor dem Seitencode, damit Explorer anzeigen kann, wo jedes Tool registriert wurde. Das Ausschalten wirkt beim nächsten Neuladen."
+  },
+  "settings_storageUse": {
+    "message": "Belegter Speicher: ca. $1 KB laut Chrome für die gesamte Erweiterung."
+  },
+  "settings_title": {
+    "message": "Optionen"
+  },
+  "settings_turnOff": {
+    "message": "Ausschalten"
+  },
+  "settings_turnOffHelp": {
+    "message": "Instrumentierung für $1 beenden. Laden Sie die Seite anschließend neu."
+  },
+  "settings_version": {
+    "message": "WebMCP Explorer $1 · Corsen AI"
+  },
+  "sidepanel_agentLab": {
+    "message": "Agenten-Labor"
+  },
+  "sidepanel_audit": {
+    "message": "Audit"
+  },
+  "sidepanel_clearWhatThePanelRemembers": {
+    "message": "Löschen, was sich das Seitenpanel für diesen Tab merkt. Ihre Suiten, Ergebnisse, Overrides und Ihr Verlauf bleiben erhalten."
+  },
+  "sidepanel_demoPage": {
+    "message": "Demo-Seite"
+  },
+  "sidepanel_evals": {
+    "message": "Evaluierungen"
+  },
+  "sidepanel_noResponseFromTheService": {
+    "message": "Keine Antwort vom Service Worker."
+  },
+  "sidepanel_nothingToStopThisPanel": {
+    "message": "Nichts zu stoppen — dieses Panel befindet sich bereits im Ausgangszustand."
+  },
+  "sidepanel_originHelp": {
+    "message": "Die von Explorer untersuchte Seite"
+  },
+  "sidepanel_railLabel": {
+    "message": "Bereiche"
+  },
+  "sidepanel_refreshLabel": {
+    "message": "Erkennung erneut ausführen"
+  },
+  "sidepanel_resetLabel": {
+    "message": "Stoppen und Seitenleiste zurücksetzen"
+  },
+  "sidepanel_stopTheAgentRunAnd": {
+    "message": "Agentenlauf und Evaluierungssuite in diesem Tab stoppen und den Zwischenspeicher des Panels leeren. Ihre Suiten, Ergebnisse, Überschreibungen und der Verlauf bleiben erhalten."
+  },
+  "sidepanel_timeline": {
+    "message": "Verlauf"
+  },
+  "snapshots_1ThePageRightNow": {
+    "message": "$1 → die Seite jetzt gerade"
+  },
+  "snapshots_aToolListIsA": {
+    "message": "Eine Werkzeugliste ist ein Vertrag mit jedem besuchenden Agenten. Speichern Sie jetzt eine Aufnahme, damit Explorer Ihnen beim nächsten Mal jede Änderung genau zeigen kann."
+  },
+  "snapshots_added": {
+    "message": "hinzugefügt"
+  },
+  "snapshots_addedHelp": {
+    "message": "Dieses Werkzeug war vorher nicht vorhanden."
+  },
+  "snapshots_annotations": {
+    "message": "Annotationen"
+  },
+  "snapshots_compareCross": {
+    "message": "Vergleichen"
+  },
+  "snapshots_compareCrossHelp": {
+    "message": "Unterschiede zwischen dem Snapshot jener Website und dieser Seite, Tool für Tool."
+  },
+  "snapshots_compareWithNow": {
+    "message": "Mit jetzt vergleichen"
+  },
+  "snapshots_contractChanged": {
+    "message": "Vertrag geändert"
+  },
+  "snapshots_crossHeader": {
+    "message": "$1, aufgenommen auf $2 → diese Seite ($3)"
+  },
+  "snapshots_crossNote": {
+    "message": "Die beiden Websites unterscheiden sich in ihrer Herkunft; Werkzeuge werden daher nach Name und Frame zugeordnet, ohne den Herkunftsunterschied selbst als Änderung zu melden."
+  },
+  "snapshots_deleteThisSnapshot": {
+    "message": "Diesen Schnappschuss löschen"
+  },
+  "snapshots_description": {
+    "message": "Beschreibung"
+  },
+  "snapshots_empty": {
+    "message": "(leer)"
+  },
+  "snapshots_fromArrowTo": {
+    "message": "$1 → $2"
+  },
+  "snapshots_inputSchema": {
+    "message": "input Schema"
+  },
+  "snapshots_labelThisSnapshotBeforeDeploy": {
+    "message": "Diesen Schnappschuss benennen — „vor Deployment“"
+  },
+  "snapshots_movedFrame": {
+    "message": "Frame verschoben"
+  },
+  "snapshots_movedFrameHelp": {
+    "message": "Gleiches Werkzeug, gleicher Name, anderer Frame. Die Website hat es nicht gelöscht und neu erstellt."
+  },
+  "snapshots_nToolsUnchanged": {
+    "message": "$1 Werkzeuge unverändert."
+  },
+  "snapshots_noSnapshotOfThisSite": {
+    "message": "Noch kein Snapshot dieser Website vorhanden."
+  },
+  "snapshots_nothingChanged": {
+    "message": "keine Änderungen"
+  },
+  "snapshots_now": {
+    "message": "jetzt"
+  },
+  "snapshots_oneOfTheTwoCaptures": {
+    "message": "Eine der beiden Aufnahmen war unvollständig; ein als entfernt angezeigtes Werkzeug wurde eventuell nur nicht beobachtet. Gewähren Sie Zugriff auf die fehlenden Herkünfte und vergleichen Sie erneut."
+  },
+  "snapshots_oneToolUnchanged": {
+    "message": "1 Werkzeug unverändert."
+  },
+  "snapshots_otherSites": {
+    "message": "Mit anderer Website vergleichen"
+  },
+  "snapshots_otherSitesHelp": {
+    "message": "Wählen Sie einen auf einer anderen Website (Staging oder Produktion) aufgenommenen Snapshot und vergleichen Sie diese Seite damit. Tools werden nach Name und Frame zugeordnet, da sich die Ursprünge unterscheiden."
+  },
+  "snapshots_partialCapture": {
+    "message": "Teilaufnahme"
+  },
+  "snapshots_pickSite": {
+    "message": "Website"
+  },
+  "snapshots_pickSnapshot": {
+    "message": "Schnappschuss"
+  },
+  "snapshots_prefixColonText": {
+    "message": "$1: $2"
+  },
+  "snapshots_recordTheToolsThisPage": {
+    "message": "Die von dieser Seite aktuell deklarierten Tools für spätere Vergleiche aufzeichnen"
+  },
+  "snapshots_removed": {
+    "message": "entfernt"
+  },
+  "snapshots_removedHelp": {
+    "message": "Dieses Werkzeug ist nicht mehr vorhanden."
+  },
+  "snapshots_saveASnapshot": {
+    "message": "Speichern a snapshot"
+  },
+  "snapshots_saved": {
+    "message": "Gespeichert. $1 für diese Website aufbewahrt."
+  },
+  "snapshots_savedCallsAffected": {
+    "message": "$1 gespeicherte(r) Aufruf(e) erfordern Prüfung: $2"
+  },
+  "snapshots_savedCallsFine": {
+    "message": "$1 gespeicherte(r) Aufruf(e) passen weiterhin zum neuen Schema."
+  },
+  "snapshots_schemaChanges": {
+    "message": "Was sich im Schema geändert hat:"
+  },
+  "snapshots_schemaMoved": {
+    "message": "Das Schema hat sich auf eine Weise geändert, die hier nicht einzeln aufgeschlüsselt werden kann; der Fingerabdruck hat sich geändert."
+  },
+  "snapshots_sinceThatSnapshot": {
+    "message": "Seit diesem Schnappschuss"
+  },
+  "snapshots_snapshots": {
+    "message": "Schnappschüsse"
+  },
+  "snapshots_someFramesWereNotObserved": {
+    "message": "Einige Frames wurden nicht beobachtet; das Fehlen in diesem Schnappschuss beweist daher nichts."
+  },
+  "snapshots_title": {
+    "message": "Titel"
+  },
+  "snapshots_unchanged": {
+    "message": "unverändert"
+  },
+  "snapshots_unknownFrame": {
+    "message": "unbekannter Frame"
+  },
+  "snapshots_unknownTime": {
+    "message": "unbekannte Zeit"
+  },
+  "snapshots_was": {
+    "message": "war"
+  },
+  "snapshots_whatChanged": {
+    "message": "Was sich im Vertrag geändert hat."
+  },
+  "snapshots_whatChangedBetweenThisSnapshot": {
+    "message": "Was sich zwischen diesem Schnappschuss und der aktuellen Seite geändert hat"
+  },
+  "snapshots_whetherItsSchemaCanBe": {
+    "message": "ob das Schema lesbar ist"
+  },
+  "status_1Frame": {
+    "message": "1 Frame"
+  },
+  "status_1Tool": {
+    "message": "1 Tool"
+  },
+  "status_apiMismatch": {
+    "message": "API-Inkompatibilität"
+  },
+  "status_compatibility": {
+    "message": "Kompatibilität"
+  },
+  "status_devFlag": {
+    "message": "Dev-Flag"
+  },
+  "status_everyOriginExposingToolsIs": {
+    "message": "Jede Herkunft, die Werkzeuge bereitstellt, ist freigegeben"
+  },
+  "status_missingApiMethods": {
+    "message": "Fehlende API-Methoden: $1"
+  },
+  "status_nFrames": {
+    "message": "$1 Frames"
+  },
+  "status_nTools": {
+    "message": "$1 Tools"
+  },
+  "status_native": {
+    "message": "Nativ"
+  },
+  "status_originTrial": {
+    "message": "Origin-Trial"
+  },
+  "status_partialMany": {
+    "message": "Erkennung unvollständig — $1 Herkünfte nicht freigegeben"
+  },
+  "status_partialOne": {
+    "message": "Erkennung unvollständig — 1 Herkunft nicht freigegeben"
+  },
+  "status_partialRefusedHelp": {
+    "message": "Das WebMCP-Objekt existiert in diesen Frames, aber der Browser hat den Aufruf zum Auflisten der Werkzeuge abgelehnt: $1"
+  },
+  "status_partialRefusedMany": {
+    "message": "Erkennung unvollständig — der Browser hat $1 Frames abgelehnt"
+  },
+  "status_partialRefusedOne": {
+    "message": "Erkennung unvollständig — der Browser hat 1 Frame abgelehnt"
+  },
+  "status_refused": {
+    "message": "Abgelehnt"
+  },
+  "status_securityNew": {
+    "message": "Sicherheit: $1 neu"
+  },
+  "status_securityNewHelp": {
+    "message": "Befunde, die nicht in der gespeicherten Referenz dieser Website enthalten sind; höchster Schweregrad $1. Öffnen Sie Sicherheit für Details."
+  },
+  "status_toolsDiscoveredAndFramesExplorer": {
+    "message": "Erkannte Werkzeuge und Frames, die Explorer betreten konnte"
+  },
+  "status_unavailable": {
+    "message": "Nicht verfügbar"
+  },
+  "status_webmcpRuntimeDetectedForThis": {
+    "message": "Erkannte WebMCP-Laufzeitumgebung für diesen Tab"
+  },
+  "timeline_1Ms": {
+    "message": "$1 ms"
+  },
+  "timeline_agent": {
+    "message": "Agent"
+  },
+  "timeline_clear": {
+    "message": "Leeren"
+  },
+  "timeline_discardTheRecordedEvents": {
+    "message": "Aufgezeichnete Ereignisse verwerfen"
+  },
+  "timeline_explorerObservesToolChangesWithout": {
+    "message": "Explorer beobachtet Werkzeugänderungen, ohne die Seite zu patchen. Ein zwischen zwei Abtastungen registriertes und wieder entferntes Werkzeug erscheint hier nicht. Erkennung und Werkzeugliste sind stets exakt; nur die Reihenfolge sehr schneller Zyklen kann unvollständig sein."
+  },
+  "timeline_exportNote": {
+    "message": "Das Protokoll listet jedes aufgezeichnete Ereignis mit Werkzeug, Frame, Dauer und Fehler auf (älteste zuerst). Da es abgetastet wird, fehlt ein zwischen zwei Aufnahmen registriertes und entferntes Werkzeug."
+  },
+  "timeline_exportThisTimeline": {
+    "message": "Diese Zeitachse exportieren"
+  },
+  "timeline_kindActivated": {
+    "message": "aktiviert"
+  },
+  "timeline_kindCancelled": {
+    "message": "abgebrochen"
+  },
+  "timeline_kindExecuted": {
+    "message": "ausgeführt"
+  },
+  "timeline_kindFailed": {
+    "message": "fehlgeschlagen"
+  },
+  "timeline_kindRegistered": {
+    "message": "registriert"
+  },
+  "timeline_kindUnregistered": {
+    "message": "entfernt"
+  },
+  "timeline_lifecycle": {
+    "message": "Lebenszyklus"
+  },
+  "timeline_nDropped": {
+    "message": "$1 verworfen (Puffer voll)"
+  },
+  "timeline_nMissedPaused": {
+    "message": "$1 während der Pause verpasst"
+  },
+  "timeline_nRecorded": {
+    "message": "$1 aufgezeichnet"
+  },
+  "timeline_nShown": {
+    "message": "$1 angezeigt"
+  },
+  "timeline_nothingRecordedYetRegistrationsAnd": {
+    "message": "Noch nichts aufgezeichnet. Registrierungen und Aufrufe erscheinen hier live."
+  },
+  "timeline_pause": {
+    "message": "Pause"
+  },
+  "timeline_recordingIsPaused": {
+    "message": "Aufzeichnung ist pausiert."
+  },
+  "timeline_resume": {
+    "message": "Fortsetzen"
+  },
+  "timeline_sampled": {
+    "message": " · abgetastet"
+  },
+  "timeline_showOnly1Events": {
+    "message": "Nur $1-Ereignisse anzeigen"
+  },
+  "timeline_stopRecordingNewEvents": {
+    "message": "Aufzeichnung neuer Ereignisse anhalten"
+  },
+  "toolDetails_1Params": {
+    "message": "$1 Parameter"
+  },
+  "toolDetails_argsSentAsObject": {
+    "message": "Dieser Browser erwartet die Argumente als Objekt statt als JSON-Zeichenkette; Explorer hat sie entsprechend übergeben."
+  },
+  "toolDetails_autoSubmit": {
+    "message": "Auto-Senden"
+  },
+  "toolDetails_backToTheToolList": {
+    "message": "Zurück zur Tool-Liste"
+  },
+  "toolDetails_cancel": {
+    "message": "Abbrechen"
+  },
+  "toolDetails_cancelHelp": {
+    "message": "Warten auf diesen Aufruf beenden. Ab Chrome 153 wird auch das Werkzeug der Seite zum Abbruch aufgefordert; spätere Antworten werden verworfen."
+  },
+  "toolDetails_cancelled": {
+    "message": "In Explorer abgebrochen. Das Werkzeug der Seite hat seine Arbeit möglicherweise dennoch beendet; seine Antwort wurde verworfen."
+  },
+  "toolDetails_cancelling": {
+    "message": "Wird abgebrochen…"
+  },
+  "toolDetails_changeTheArgumentsAndRun": {
+    "message": "Argumente ändern und erneut ausführen"
+  },
+  "toolDetails_chars": {
+    "message": "$1 Zeichen"
+  },
+  "toolDetails_code1": {
+    "message": "Code: $1"
+  },
+  "toolDetails_consequential": {
+    "message": "folgenreich"
+  },
+  "toolDetails_copyRegisterTool": {
+    "message": "registerTool(…) kopieren"
+  },
+  "toolDetails_copyRegisterToolHelp": {
+    "message": "Einen einfügefertigen navigator.modelContext.registerTool(…)-Ausschnitt kopieren"
+  },
+  "toolDetails_copyScriptToolConfig": {
+    "message": "ScriptToolConfig kopieren"
+  },
+  "toolDetails_copyScriptToolConfigHelp": {
+    "message": "Das deklarative ScriptToolConfig-JSON-Objekt für dieses Tool in die Zwischenablage kopieren"
+  },
+  "toolDetails_debugging": {
+    "message": "Debugging"
+  },
+  "toolDetails_declarativeWaits": {
+    "message": "Deklaratives Formular-Tool: Ohne Auto-Senden füllt die Seite das Formular aus und wartet auf das manuelle Absenden."
+  },
+  "toolDetails_disabled": {
+    "message": "deaktiviert"
+  },
+  "toolDetails_disabledHelp": {
+    "message": "Aufrufe dieses Werkzeugs werden durch eine Überschreibung abgelehnt."
+  },
+  "toolDetails_edit": {
+    "message": "Bearbeiten"
+  },
+  "toolDetails_editTheArgumentsAsRaw": {
+    "message": "Argumente als rohes JSON bearbeiten"
+  },
+  "toolDetails_executeThisToolInIts": {
+    "message": "Dieses Werkzeug in seinem eigenen Frame ausführen"
+  },
+  "toolDetails_form": {
+    "message": "Formular"
+  },
+  "toolDetails_genericError": {
+    "message": "Dies ist die Meldung von Chrome selbst, nicht die des Werkzeugs: Unter Chrome 153 erreicht jeder vom Werkzeug geworfene Fehler den Aufrufer als UnknownError mit diesem Text (gemessen, WMP-0044). Falls das Werkzeug eine eigene Meldung protokolliert hat, steht sie in der Seitenkonsole."
+  },
+  "toolDetails_goBackToTheGenerated": {
+    "message": "Zurück zum generierten Formular"
+  },
+  "toolDetails_json": {
+    "message": "</> JSON"
+  },
+  "toolDetails_loading": {
+    "message": "Wird geladen…"
+  },
+  "toolDetails_msInPage": {
+    "message": "$1 ms in der Seite"
+  },
+  "toolDetails_msRoundTrip": {
+    "message": "$1 ms Gesamtzeit"
+  },
+  "toolDetails_overridden": {
+    "message": "überschrieben"
+  },
+  "toolDetails_overriddenHelp": {
+    "message": "Explorer ändert lokal das Aussehen oder die Rückgabe dieses Werkzeugs."
+  },
+  "toolDetails_ranInFrame": {
+    "message": "ausgeführt in Frame #$1"
+  },
+  "toolDetails_rawJsonHelp": {
+    "message": "Die Argumente als rohes JSON. Bearbeiten Sie sie hier; beim Zurückwechseln zum Formular werden dieselben Werte angezeigt."
+  },
+  "toolDetails_rawJsonLabel": {
+    "message": "Argumente als rohes JSON"
+  },
+  "toolDetails_readOnly": {
+    "message": "schreibgeschützt"
+  },
+  "toolDetails_reproduce": {
+    "message": "Diesen Aufruf reproduzieren"
+  },
+  "toolDetails_reproduceNote": {
+    "message": "Bericht und Skripte enthalten die Argumente und die Rückgabe der Seite. Sie benennen den Frame, warten auf die Registrierung, lehnen Homonyme ab und geben an, wenn das aufgezeichnete Ergebnis aus einem lokalen Override statt von der Seite stammt."
+  },
+  "toolDetails_result": {
+    "message": "Ergebnis"
+  },
+  "toolDetails_runAgain": {
+    "message": "Erneut ausführen"
+  },
+  "toolDetails_runTool": {
+    "message": "Tool ausführen"
+  },
+  "toolDetails_running": {
+    "message": "Wird ausgeführt…"
+  },
+  "toolDetails_schemaNotRenderable": {
+    "message": "Dieses Schema kann nicht als Formular dargestellt werden. Siehe Hinweis im JSON-Editor."
+  },
+  "toolDetails_string": {
+    "message": "Zeichenkette"
+  },
+  "toolDetails_stringParsedAsJson": {
+    "message": "Zeichenkette · als JSON geparst"
+  },
+  "toolDetails_tabHistory": {
+    "message": "Verlauf"
+  },
+  "toolDetails_tabOverride": {
+    "message": "Überschreibung"
+  },
+  "toolDetails_tabRun": {
+    "message": "Ausführen"
+  },
+  "toolDetails_tabSchema": {
+    "message": "Schema"
+  },
+  "toolDetails_theJsonIsNotValid": {
+    "message": "Das JSON ist ungültig."
+  },
+  "toolDetails_theToolFailed": {
+    "message": "Das Tool ist fehlgeschlagen."
+  },
+  "toolDetails_theToolReturnedNoValue": {
+    "message": "Das Werkzeug hat keinen Wert zurückgegeben. Dies bedeutet normalerweise, dass der Aufruf eine Seitennavigation ausgelöst hat."
+  },
+  "toolDetails_theToolReturnedNull": {
+    "message": "Das Werkzeug hat null zurückgegeben. Chrome übergibt dies als Text „null“, sodass ein Rückgabewert null und die Zeichenkette „null“ hier identisch aussehen."
+  },
+  "toolDetails_thisSchemaUsesConstructsExplorer": {
+    "message": "Dieses Schema verwendet Konstrukte, über die Explorer keine Annahmen trifft; Argumente werden daher als JSON bearbeitet."
+  },
+  "toolDetails_untrustedContent": {
+    "message": "nicht vertrauenswürdiger Inhalt"
+  },
+  "toolHistory_1Calls": {
+    "message": "$1 Aufrufe"
+  },
+  "toolHistory_arguments": {
+    "message": "Argumente"
+  },
+  "toolHistory_calls": {
+    "message": "Aufrufe"
+  },
+  "toolHistory_callsHelp": {
+    "message": "Anzahl der aufgezeichneten Ausführungen"
+  },
+  "toolHistory_clearHistory": {
+    "message": "Verlauf löschen"
+  },
+  "toolHistory_deleteEveryRecordedCallFor": {
+    "message": "Alle aufgezeichneten Aufrufe für sämtliche Werkzeuge löschen"
+  },
+  "toolHistory_max": {
+    "message": "Max"
+  },
+  "toolHistory_maxHelp": {
+    "message": "Langsamster aufgezeichneter Aufruf"
+  },
+  "toolHistory_msIncludingHop": {
+    "message": "$1 ms einschließlich Erweiterungs-Weiterleitung"
+  },
+  "toolHistory_noRecordedCallForThis": {
+    "message": "Noch kein aufgezeichneter Aufruf für dieses Tool."
+  },
+  "toolHistory_p50": {
+    "message": "P50"
+  },
+  "toolHistory_p50Help": {
+    "message": "Mediane Dauer in der Seite"
+  },
+  "toolHistory_p95": {
+    "message": "P95"
+  },
+  "toolHistory_p95Help": {
+    "message": "95. Perzentil der Dauer in der Seite"
+  },
+  "toolHistory_replay": {
+    "message": "Wiederholen"
+  },
+  "toolHistory_replayInFrame1": {
+    "message": "In Frame #$1 erneut abspielen"
+  },
+  "toolHistory_resultTruncatedForStorageOriginal": {
+    "message": "Ergebnis für die Speicherung gekürzt. Ursprüngliche Länge: $1 Zeichen."
+  },
+  "toolHistory_runThisToolAgainWith": {
+    "message": "Dieses Tool erneut mit genau diesen Argumenten ausführen"
+  },
+  "toolHistory_success": {
+    "message": "Erfolg"
+  },
+  "toolHistory_successHelp": {
+    "message": "Anteil der Aufrufe, die ohne Fehler zurückkehrten"
+  },
+  "toolHistory_thisCallWasMadeInFrame1": {
+    "message": "Dieser Aufruf erfolgte in Frame #$1, zu dem das Werkzeug weiterhin gehört. Er wird dort erneut ausgeführt, nicht in dem Frame, auf dem diese Ansicht geöffnet wurde."
+  },
+  "toolHistory_untimed": {
+    "message": "Ohne Zeitmessung"
+  },
+  "toolHistory_untimedHelp": {
+    "message": "Aufrufe, die das Werkzeug nie erreicht haben, sodass keine Dauer gemessen wurde"
+  },
+  "toolOverride_applyOnceThenUseThe": {
+    "message": " Einmal anwenden, danach das echte Werkzeug verwenden"
+  },
+  "toolOverride_applyOverride": {
+    "message": "Überschreibung anwenden"
+  },
+  "toolOverride_callsReachTheRealTool": {
+    "message": "Aufrufe erreichen das echte Werkzeug."
+  },
+  "toolOverride_deleteThisOverrideEntirely": {
+    "message": "Diese Überschreibung vollständig löschen"
+  },
+  "toolOverride_descriptionDeclared": {
+    "message": "Von der Website deklarierte Beschreibung"
+  },
+  "toolOverride_descriptionOverride": {
+    "message": "Beschreibung überschreiben"
+  },
+  "toolOverride_disableThisTool": {
+    "message": " Dieses Tool deaktivieren"
+  },
+  "toolOverride_emptyResult": {
+    "message": "Leeres Ergebnis"
+  },
+  "toolOverride_error": {
+    "message": "Fehler"
+  },
+  "toolOverride_errorMessage": {
+    "message": "Fehlermeldung"
+  },
+  "toolOverride_explorerIsChangingWhatThis": {
+    "message": "Explorer ändert, wie dieses Werkzeug aussieht oder was es zurückgibt."
+  },
+  "toolOverride_failAsATimeoutAfter": {
+    "message": "Nach der unten angegebenen Latenz mit einer Zeitüberschreitung fehlschlagen."
+  },
+  "toolOverride_failWithTheMessageBelow": {
+    "message": "Mit der untenstehenden Meldung fehlschlagen, ohne das Werkzeug aufzurufen."
+  },
+  "toolOverride_latencyHelp": {
+    "message": "Wird in jedem Mock-Modus vor der Antwort abgewartet."
+  },
+  "toolOverride_latencyMs": {
+    "message": "Latenz (ms)"
+  },
+  "toolOverride_leaveEmptyToKeepThe": {
+    "message": "Leer lassen, um die von der Website deklarierte Beschreibung beizubehalten"
+  },
+  "toolOverride_leaveEmptyToKeepThe2": {
+    "message": "Leer lassen, um das von der Website deklarierte Schema beizubehalten"
+  },
+  "toolOverride_malformed": {
+    "message": "Fehlerhaftes JSON"
+  },
+  "toolOverride_mockResponse": {
+    "message": "Simulierte Antwort (Mock)"
+  },
+  "toolOverride_noOverrideOnThisTool": {
+    "message": "Noch keine Überschreibung für dieses Tool."
+  },
+  "toolOverride_none": {
+    "message": "(keine)"
+  },
+  "toolOverride_off": {
+    "message": "Aus"
+  },
+  "toolOverride_overrideActive": {
+    "message": "Überschreibung aktiv"
+  },
+  "toolOverride_response": {
+    "message": "Antwort"
+  },
+  "toolOverride_returnAnEmptyStringThe": {
+    "message": "Eine leere Zeichenkette zurückgeben — der Fall, den die meisten Agenten vergessen zu behandeln."
+  },
+  "toolOverride_returnDeliberatelyInvalidJsonTo": {
+    "message": "Absichtlich ungültiges JSON zurückgeben, um die Fehlerbehandlung des Agenten beim Parsen zu testen."
+  },
+  "toolOverride_returnThePayloadBelowInstead": {
+    "message": "Die untenstehende Nutzlast zurückgeben, statt das Werkzeug aufzurufen."
+  },
+  "toolOverride_schemaDeclared": {
+    "message": "Von der Website deklariertes Schema"
+  },
+  "toolOverride_schemaNotJson": {
+    "message": "Die Schema-Überschreibung ist kein gültiges JSON: $1"
+  },
+  "toolOverride_schemaOverride": {
+    "message": "Schema überschreiben"
+  },
+  "toolOverride_simulatedFailure": {
+    "message": "Simulierter Fehler"
+  },
+  "toolOverride_success": {
+    "message": "Erfolg"
+  },
+  "toolOverride_theToolStaysListedAnd": {
+    "message": "Das Werkzeug bleibt aufgelistet und markiert; Aufrufe werden abgelehnt."
+  },
+  "toolOverride_timeout": {
+    "message": "Zeitüberschreitung"
+  },
+  "toolResult_reproUnavailable": {
+    "message": "Aktive Überschreibungen konnten nicht gelesen werden. Öffnen Sie dieses Ergebnis erneut, um eine exakte Reproduktion zu exportieren."
+  },
+  "toolResult_reproduceHelp": {
+    "message": "Diesen Aufruf als Markdown, JSON, Konsolen-Snippet oder Playwright-Skript kopieren oder herunterladen."
+  },
+  "toolResult_saveCheck": {
+    "message": "Als Prüfung speichern"
+  },
+  "toolResult_saveCheckHelp": {
+    "message": "Diese Argumente und dieses Ergebnis als Erwartungswert für künftige Durchläufe speichern."
+  },
+  "toolResult_showAll": {
+    "message": "Alle $1 Zeichen anzeigen"
+  },
+  "toolResult_showAllHelp": {
+    "message": "Das gesamte Ergebnis im Panel rendern. Bei sehr langem Text kann dies einen Moment dauern."
+  },
+  "toolResult_shownPartial": {
+    "message": "Zeigt die ersten $1 von $2 Zeichen. Das Panel bleibt reaktionsschnell; die gesamte Antwort ist nur einen Klick entfernt."
+  },
+  "toolResult_shownWhole": {
+    "message": "Alle $1 Zeichen werden angezeigt."
+  },
+  "toolSource_calledFrom1More": {
+    "message": "Von $1 weiteren Stelle(n) aufgerufen"
+  },
+  "toolSource_capturedAtRegistration": {
+    "message": "bei der Registrierung erfasst"
+  },
+  "toolSource_explorerCanRecordWhereEach": {
+    "message": "Explorer kann aufzeichnen, wo jedes Tool registriert wird, aber erst ab dem Moment der Überwachung. Da es vor dem Seitencode aktiv sein muss, verändert es die Seite und bleibt ausgeschaltet, bis Sie es anfordern — nur auf dieser Website."
+  },
+  "toolSource_explorerWillWrapRegistertoolOn": {
+    "message": "Explorer umschließt registerTool auf dieser Website, um festzuhalten, woher jedes Tool stammt. Da dies die Seite verändert, bleibt es bis zu Ihrer Aufforderung deaktiviert."
+  },
+  "toolSource_in1": {
+    "message": "in $1()"
+  },
+  "toolSource_offForThisSiteReload": {
+    "message": "Für diese Website deaktiviert. Laden Sie die Seite neu, um sie wieder ohne Wrapper auszuführen."
+  },
+  "toolSource_onForThisSiteBut": {
+    "message": "Für diese Website aktiv, aber dieses Werkzeug wurde vor dem Start registriert. Laden Sie die Seite neu."
+  },
+  "toolSource_onForThisSiteReload": {
+    "message": "Für diese Website aktiviert. Laden Sie die Seite neu — ein bereits registriertes Werkzeug kann nicht nachträglich zurückverfolgt werden."
+  },
+  "toolSource_recordedByInstrumentationModeWhen": {
+    "message": "Vom Instrumentierungsmodus aufgezeichnet, als die Seite registerTool aufrief. Nicht abgeleitet."
+  },
+  "toolSource_registeredTimes": {
+    "message": "$1× registriert"
+  },
+  "toolSource_registeredTimesHelp": {
+    "message": "Die Seite hat diesen Namen mehrfach registriert. Angezeigt wird der erste Ort."
+  },
+  "toolSource_source": {
+    "message": "Quelle"
+  },
+  "toolSource_sourceDotLocation": {
+    "message": "Quelle · $1"
+  },
+  "toolSource_theSourceIsNotKnown": {
+    "message": "Die Quelle ist nicht bekannt."
+  },
+  "toolSource_turnOffInstrumentationMode": {
+    "message": "Instrumentierungsmodus ausschalten"
+  },
+  "toolSource_turnOnInstrumentationMode": {
+    "message": "Instrumentierungsmodus einschalten"
+  },
+  "toolsHeading": {
+    "message": "Werkzeuge"
+  },
+  "tools_changeTheSortOrder": {
+    "message": "Sortierreihenfolge ändern"
+  },
+  "tools_checksExportNote": {
+    "message": "Der Bericht enthält die Argumente und Ergebnisse jeder Prüfung; das sind von der Seite zurückgegebene Daten."
+  },
+  "tools_checksIntro": {
+    "message": "Gespeicherte Prüfungen nach einem Deployment ausführen. Fehlende Werkzeuge, auch aus Frames, bleiben im Bericht erhalten."
+  },
+  "tools_checksLegacyScope": {
+    "message": "Älteren Prüfungen fehlt der Website-Kontext. Speichern Sie sie erneut, solange ihre Werkzeuge vorhanden sind, um fehlende Werkzeuge aus fremden Frames zu verfolgen."
+  },
+  "tools_checksReadiness": {
+    "message": "Vor dem Ausführen: $1 Prüfung(en) können die aktuell aufgelisteten Werkzeuge nicht nutzen."
+  },
+  "tools_checksReadinessHelp": {
+    "message": "Es wurde noch keine Prüfung ausgeführt. Prüfen Sie die Seite und ihre Frames oder passen Sie die gespeicherte Prüfung an das aktuelle Werkzeug an. Aktualisieren Sie die Werkzeuge nach Seitenänderungen."
+  },
+  "tools_checksReviewReason": {
+    "message": "Prüfung nötig: $1"
+  },
+  "tools_checksRun": {
+    "message": "Alle Prüfungen für diese Website ausführen"
+  },
+  "tools_checksRunHelp": {
+    "message": "Führt jede gespeicherte Prüfung jedes Tools auf dieser Seite nacheinander in dem Frame aus, in dem das Tool lebt. Ein verschwundenes Tool wird gemeldet und nicht stillschweigend übergangen."
+  },
+  "tools_checksRunning": {
+    "message": "Ausführung $1 von $2…"
+  },
+  "tools_checksSummary": {
+    "message": "$1 bestanden, $2 fehlgeschlagen, $3 Prüfung nötig, $4 fehlend."
+  },
+  "tools_checksTitle": {
+    "message": "Gespeicherte Prüfungen für diese Website ($1)"
+  },
+  "tools_checksToolGone": {
+    "message": "Tool verschwunden — keine aktive Instanz von $1 auf dieser Seite"
+  },
+  "tools_countAll": {
+    "message": "$1 Tools"
+  },
+  "tools_countShown": {
+    "message": "$1 von $2 Tools"
+  },
+  "tools_exportThisPageSTools": {
+    "message": "Tools dieser Seite exportieren"
+  },
+  "tools_filterByNameDescriptionOr": {
+    "message": "Nach Name, Beschreibung oder Ursprung filtern"
+  },
+  "tools_frame": {
+    "message": "Frame"
+  },
+  "tools_inputsNone": {
+    "message": "Keine Parameter"
+  },
+  "tools_inputsOptional": {
+    "message": "Optional: $1"
+  },
+  "tools_inputsRequired": {
+    "message": "Erforderlich: $1"
+  },
+  "tools_name": {
+    "message": "Name"
+  },
+  "tools_noToolMatchesTheseFilters": {
+    "message": "Kein Tool entspricht diesen Filtern."
+  },
+  "tools_open1ToInspectIts": {
+    "message": "$1 öffnen, um das Schema zu prüfen und es auszuführen"
+  },
+  "tools_origin": {
+    "message": "Ursprung"
+  },
+  "tools_schemaError": {
+    "message": "Schemafehler"
+  },
+  "tools_searchTools": {
+    "message": "Tools suchen"
+  },
+  "tools_searchToolsByNameDescription": {
+    "message": "Tools nach Name, Beschreibung oder Ursprung suchen"
+  },
+  "tools_sort1": {
+    "message": "Sortierung: $1"
+  },
+  "tools_theReportListsTheTools": {
+    "message": "Der Bericht listet die Tools, ihre Beschreibungen und Schemas so auf, wie diese Seite sie deklariert, ergänzt um alles, was Explorer nicht beobachten konnte."
+  },
+  "tools_titleHelp": {
+    "message": "Der von der Seite vergebene Titel dieses Werkzeugs neben seinem Namen."
+  },
+  "vault_passphrase": {
+    "message": "Master-Passphrase"
+  },
+  "vault_passphraseHelp": {
+    "message": "Mindestens 12 Zeichen. Zum Entsperren oder Ändern verschlüsselter Schlüssel erforderlich. Wird nie gespeichert."
+  },
+  "vault_error": {
+    "message": "Vorgang fehlgeschlagen. Passphrase und verfügbaren Speicher prüfen."
+  },
+  "vault_create": {
+    "message": "Verschlüsselte Speicherung aktivieren"
+  },
+  "vault_unlock": {
+    "message": "Tresor entsperren"
+  },
+  "vault_lock": {
+    "message": "Sperren und Sitzungsschlüssel löschen"
+  },
+  "vault_session": {
+    "message": "Schlüssel nur für diese Sitzung behalten"
+  },
+  "vault_delete": {
+    "message": "Tresor und alle Schlüssel löschen"
+  },
+  "vault_deleteHelp": {
+    "message": "Verschlüsselten Speicher und Sitzungsschlüssel aller Anbieter entfernen. Zum Bestätigen zweimal klicken."
+  },
+  "vault_confirmDelete": {
+    "message": "Bestätigen: alle Schlüssel löschen"
+  },
+  "vault_locked": {
+    "message": "Verschlüsselter Tresor — gesperrt"
+  },
+  "vault_unlocked": {
+    "message": "Verschlüsselter Tresor — für diese Sitzung entsperrt"
+  },
+  "vault_optional": {
+    "message": "Optionaler verschlüsselter Tresor"
+  },
+  "vault_help": {
+    "message": "Schlüssel verschlüsselt auf diesem Gerät behalten und pro Browsersitzung einmal entsperren. Änderungen erfordern erneut die Passphrase. Vergessene Passphrasen sind nicht wiederherstellbar."
+  },
+  "vault_keyAvailable": {
+    "message": "Für diesen Anbieter ist ein Schlüssel verfügbar."
+  },
+  "vault_sessionHelp": {
+    "message": "Sitzungsschlüssel werden bei einem Chrome-Neustart sowie beim Neuladen, Aktualisieren oder Deaktivieren der Erweiterung gelöscht."
+  },
+  "emulation_enable": {
+    "message": "JS-Emulation für diese Website aktivieren"
+  },
+  "emulation_disable": {
+    "message": "JS-Emulation deaktivieren"
+  },
+  "emulation_active": {
+    "message": "JS-Emulation für diese Sitzung aktiviert"
+  },
+  "emulation_help": {
+    "message": "Optionale JS-Emulation für diese Website während der Browsersitzung. Websitezugriff und Neuladen erforderlich. HTML-Formulare werden nur erfasst; native Browsergarantien werden nicht emuliert."
+  },
+  "emulation_reload": {
+    "message": "Seite neu laden, um die Änderung anzuwenden. Ungespeicherte Änderungen können verloren gehen."
+  },
+  "emulation_reloadButton": {
+    "message": "Seite neu laden"
+  },
+  "emulation_inventoryOnly": {
+    "message": "Nur Bestandsaufnahme"
+  },
+  "emulation_inventoryHelp": {
+    "message": "Dieses HTML-Formular benötigt natives WebMCP zur Ausführung. Das Schema ist geschätzt; Prüfungen im Submit-Handler sind nicht ableitbar."
+  },
+  "emulation_inferred": {
+    "message": "Aus HTML abgeleitetes Schema"
+  },
+  "execution_unknown": {
+    "message": "Die Aktion könnte erfolgt sein. Explorer wiederholt sie nicht. Prüfen Sie die Seite vor einer neuen Anfrage."
+  },
+  "execution_trace": {
+    "message": "Engine: $1 · Argumente: $2 · Aufrufe: $3"
+  },
+  "vault_lockHelp": {
+    "message": "Entschlüsselten Sitzungscache jetzt löschen; den verschlüsselten Tresor auf dem Gerät behalten."
+  },
+  "vault_sessionModeHelp": {
+    "message": "Mit der Passphrase entschlüsseln, den dauerhaften Tresor entfernen und Schlüssel nur im Sitzungsspeicher behalten."
+  },
+  "invocation_receiptsHelp": {
+    "message": "Aufrufbelege: $1. Identitäts-Hashes und Status verhindern Wiederholungen nach dem Löschen des Verlaufs. Keine Argumente, Ergebnisse oder Schlüssel; Entfernung bei Deinstallation."
+  },
+  "security_scoreValue": {
+    "description": "Phase B security review.",
+    "message": "$1/100 · Note $2 · vorläufig",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "security_scoreUnavailable": {
+    "description": "Phase B security review.",
+    "message": "Keine Bewertung: keine Tools beobachtet"
+  },
+  "security_scoreCaution": {
+    "description": "Phase B security review.",
+    "message": "Heuristische Prüfung sichtbarer Angaben, keine Sicherheitszertifizierung. Ungeprüfte Aspekte stehen unten. Eine gute Note erlaubt keine Aktion."
+  },
+  "security_scoreMethod": {
+    "description": "Phase B security review.",
+    "message": "Berechnung dieser Note"
+  },
+  "security_scoreFormula": {
+    "description": "Phase B security review.",
+    "message": "Formel v1: Start bei 100. Höchsten Schweregrad je Regel/Tool einmal abziehen: kritisch 40, hoch 20, mittel 10, niedrig 5, Info 0. Bei kritisch höchstens 49; Minimum 0. A ≥90, B ≥80, C ≥70, D ≥60, E ≥50, F <50. Ausblenden oder Prüfen ändert die Note nicht."
+  },
+  "security_showFix": {
+    "description": "Phase B security review.",
+    "message": "Korrekturvorschlag anzeigen"
+  },
+  "security_copyFix": {
+    "description": "Phase B security review.",
+    "message": "Vorschlag kopieren"
+  },
+  "security_copyFixHelp": {
+    "description": "Phase B security review.",
+    "message": "Vorlage kopieren, ohne sie anzuwenden oder auszuführen."
+  },
+  "security_fixCopied": {
+    "description": "Phase B security review.",
+    "message": "Korrekturvorschlag kopiert"
+  },
+  "security_fixCopyError": {
+    "description": "Phase B security review.",
+    "message": "Kopieren fehlgeschlagen. Code auswählen und manuell kopieren."
+  },
+  "security_fixReview": {
+    "description": "Phase B security review.",
+    "message": "Vorlage zur Entwicklerprüfung, niemals automatisch angewendet. Namen, Grenzen, Validierung und Serverberechtigungen prüfen. Der Platzhalter verweigert die Ausführung."
+  },
+  "security_no_authenticationConsent": {
+    "description": "Phase B security review.",
+    "message": "Anmeldung, Serverberechtigung und menschliche Zustimmung sind aus diesem Vertrag nicht prüfbar: $1. Keine Sitzungszugangsdaten wurden gelesen.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_schemaLimits": {
+    "description": "Phase B security review.",
+    "message": "Schemaprüfung unvollständig: $1. Entfernte Referenzen werden nicht abgerufen.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_similarityLimit": {
+    "description": "Phase B security review.",
+    "message": "Beschreibungsvergleich hat eine Grenze erreicht: $1. Ungeprüfte Paare können weitere Mehrdeutigkeiten enthalten.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "security_no_originScan": {
+    "description": "Phase B security review.",
+    "message": "Header und Erkennungsdateien wurden nicht angefordert. Mit Ursprung prüfen können Sie sie abrufen."
+  },
+  "security_no_originScanIncomplete": {
+    "description": "Phase B security review.",
+    "message": "Ursprungsprüfung unvollständig: Antwort fehlte, wurde umgeleitet oder begrenzt. Kein erneuter Versuch."
+  },
+  "sec_text_active_payload_title": {
+    "description": "Phase B security review.",
+    "message": "Aktiver Nutzlastmarker im Tool-Text"
+  },
+  "sec_text_active_payload_why": {
+    "description": "Phase B security review.",
+    "message": "Script-Tags, überschreibende Anweisungen oder externe Markdown-Bilder können Agenten umlenken. Ein Indikator, kein Beweis für Ausführung oder Datenabfluss."
+  },
+  "sec_text_active_payload_fix": {
+    "description": "Phase B security review.",
+    "message": "Agentenanweisungen durch eine sachliche Aktionsbeschreibung ersetzen. Alle Schemabeschreibungen prüfen; unvertrauenswürdige Texte von vertrauenswürdigen Anweisungen trennen."
+  },
+  "sec_mutation_hints_incomplete_title": {
+    "description": "Phase B security review.",
+    "message": "Änderungsabsicht unvollständig angegeben"
+  },
+  "sec_mutation_hints_incomplete_why": {
+    "description": "Phase B security review.",
+    "message": "Das Verb deutet auf eine Zustandsänderung. WebMCP-Hinweise erzwingen weder Zustimmung noch Berechtigung."
+  },
+  "sec_mutation_hints_incomplete_fix": {
+    "description": "Phase B security review.",
+    "message": "Für die geprüfte Änderung readOnlyHint:false und consequentialHint:true setzen. Bestätigung und Serverberechtigung separat implementieren."
+  },
+  "sec_permissive_object_title": {
+    "description": "Phase B security review.",
+    "message": "Objektschema erlaubt nicht deklarierte Eingaben"
+  },
+  "sec_permissive_object_why": {
+    "description": "Phase B security review.",
+    "message": "Zusätzliche Eigenschaften sind erlaubt oder beim sensiblen Tool fehlt eine geschlossene Objektgrenze. Dies beschreibt das Schema, nicht die Servervalidierung."
+  },
+  "sec_permissive_object_fix": {
+    "description": "Phase B security review.",
+    "message": "additionalProperties:false und verschachtelte Grenzen prüfen. Zusammengesetzte Schemas und Kompatibilität vor dem Schließen prüfen; serverseitig erneut validieren."
+  },
+  "sec_mutating_auto_submit_title": {
+    "description": "Phase B security review.",
+    "message": "Änderndes Formular mit automatischem Absenden"
+  },
+  "sec_mutating_auto_submit_why": {
+    "description": "Phase B security review.",
+    "message": "toolautosubmit entfernt den nativen manuellen Sendeschritt. Anmeldung und eigene Bestätigungslogik bleiben unbekannt. agentInvoked zeigt Herkunft, keine menschliche Zustimmung."
+  },
+  "sec_mutating_auto_submit_fix": {
+    "description": "Phase B security review.",
+    "message": "toolautosubmit bei sensiblen Aktionen gegebenenfalls entfernen. Berechtigung und Zustimmung serverseitig an Konto, Argumente und konkrete Aktion binden."
+  },
+  "sec_legacy_registration_title": {
+    "description": "Phase B security review.",
+    "message": "Veraltete Registrierung beobachtet"
+  },
+  "sec_legacy_registration_why": {
+    "description": "Phase B security review.",
+    "message": "Die beobachtete Registrierung nutzt navigator oder provideContext. Kompatibilität hängt von der Laufzeit ab; das Vorhandensein beweist keinen Angriff."
+  },
+  "sec_legacy_registration_fix": {
+    "description": "Phase B security review.",
+    "message": "Nach Prüfung des Zielbrowsers auf document.modelContext.registerTool mit AbortSignal-Aufräumen umstellen. Callback nicht doppelt registrieren."
+  },
+  "sec_token_estimate_over_budget_title": {
+    "description": "Phase B security review.",
+    "message": "Geschätztes Beschreibungsbudget überschritten"
+  },
+  "sec_token_estimate_over_budget_why": {
+    "description": "Phase B security review.",
+    "message": "Die Schätzung überschreitet 800 Tokens: UTF-8-Bytes durch vier, aufgerundet. Die genaue Zahl hängt vom Tokenizer ab."
+  },
+  "sec_token_estimate_over_budget_fix": {
+    "description": "Phase B security review.",
+    "message": "Beschreibungen kürzen, notwendige Einschränkungen beibehalten. Für ein genaues Budget den Tokenizer des Zielmodells verwenden."
+  },
+  "sec_ambiguous_description_title": {
+    "description": "Phase B security review.",
+    "message": "Ähnliche Beschreibungen können die Auswahl verwirren"
+  },
+  "sec_ambiguous_description_why": {
+    "description": "Phase B security review.",
+    "message": "Verschiedene Tool-Namen haben mindestens 0,80 Jaccard-Wortähnlichkeit. Wortüberschneidung beweist kein identisches Verhalten."
+  },
+  "sec_ambiguous_description_fix": {
+    "description": "Phase B security review.",
+    "message": "Eigenen Umfang, Eingaben und Ergebnis jeder Aktion beschreiben. Keine Anweisungen geben, ein Tool zu bevorzugen oder ein anderes zuerst aufzurufen."
+  },
+  "sec_convention_csp_title": {
+    "description": "Phase B security review.",
+    "message": "CSP-Antwortheader beobachtet"
+  },
+  "sec_convention_csp_why": {
+    "description": "Phase B security review.",
+    "message": "Erfasst wird ein Header ohne Zugangsdaten, nicht die wirksame Richtlinie. Ein fehlender Header schließt eine Meta-Richtlinie nicht aus."
+  },
+  "sec_convention_csp_fix": {
+    "description": "Phase B security review.",
+    "message": "CSP anhand tatsächlicher Skripte und Verbindungen prüfen; Änderungen mit Report-Only und Anwendungstests erproben."
+  },
+  "sec_convention_cors_title": {
+    "description": "Phase B security review.",
+    "message": "CORS-Antwortheader beobachtet"
+  },
+  "sec_convention_cors_why": {
+    "description": "Phase B security review.",
+    "message": "Nur Headerbelege; keine Browseranfrage über Ursprungsgrenzen wurde getestet. Platzhalter-Ursprung mit Zugangsdaten ist mit authentifiziertem CORS unvereinbar, kein Beweis für Datenabfluss."
+  },
+  "sec_convention_cors_fix": {
+    "description": "Phase B security review.",
+    "message": "Bei Bedarf nur vorgesehene Ursprünge erlauben. Kein Platzhalter-CORS zum Beseitigen einer Meldung aktivieren; angemeldetes Verhalten separat testen."
+  },
+  "sec_convention_unavailable_title": {
+    "description": "Phase B security review.",
+    "message": "Erkennungsantwort fehlt oder ist unvollständig"
+  },
+  "sec_convention_unavailable_why": {
+    "description": "Phase B security review.",
+    "message": "Die Antwort schlug fehl, leitete um, überschritt das Limit oder lieferte einen Fehlerstatus. Optionale Erkennungsdateien sind keine verpflichtenden WebMCP-Endpunkte."
+  },
+  "sec_convention_unavailable_fix": {
+    "description": "Phase B security review.",
+    "message": "Antwort prüfen, falls diese Konvention veröffentlicht werden sollte. Das Fehlen allein erfordert keine Sicherheitskorrektur; kein automatischer Wiederholungsversuch."
+  },
+  "bridge_title": {
+    "message": "Lokale MCP-Brücke",
+    "description": "Phase C local bridge."
+  },
+  "bridge_intro": {
+    "message": "Einen vertrauenswürdigen lokalen MCP-Client mit ausdrücklich freigegebenen Tabs verbinden. Website-Berechtigung allein reicht nicht. Navigation, Entzug und Neuverbindung löschen Bindungen.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pairingNote": {
+    "message": "Die kopierte Konfiguration enthält ein Geheimnis für diese Browsersitzung. Nur dem vertrauenswürdigen MCP-Client geben. Browserneustart oder Erweiterungsneuladen erfordert neue Kopplung. Der Begleiter läuft lokal mit Node.js, ohne Abhängigkeiten.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_port": {
+    "message": "Brückenport",
+    "description": "Phase C local bridge."
+  },
+  "bridge_portHelp": {
+    "message": "Port 1024–65535. Verbindung nur zu 127.0.0.1; entfernte Adressen werden abgelehnt.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeout": {
+    "message": "Genehmigungsfrist (Sekunden)",
+    "description": "Phase C local bridge."
+  },
+  "bridge_timeoutHelp": {
+    "message": "Zwischen 5 und 60 Sekunden. Keine Antwort, Verbindungsabbruch oder Fristablauf verweigert den Aufruf.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_path": {
+    "message": "Lokales Begleitskript (optional)",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathPlaceholder": {
+    "message": "Standard: installierter Befehl webmcp-bridge",
+    "description": "Phase C local bridge."
+  },
+  "bridge_pathHelp": {
+    "message": "Für einen nicht installierten lokalen Stand den absoluten Pfad zu packages/webmcp-bridge/cli.mjs angeben. Explorer kopiert Konfiguration, führt keine Befehle aus.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_auto": {
+    "message": "Geeignete Leseaufrufe automatisch erlauben",
+    "description": "Phase C local bridge."
+  },
+  "bridge_autoHelp": {
+    "message": "Hinweise können falsch sein. Kritische/hohe Befunde, Änderungen, folgenreiche Tools und ungeprüfte Argumente erfordern weiterhin Zustimmung. Eine Note allein erlaubt nichts.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enable": {
+    "message": "Für diese Sitzung aktivieren",
+    "description": "Phase C local bridge."
+  },
+  "bridge_disable": {
+    "message": "Trennen",
+    "description": "Phase C local bridge."
+  },
+  "bridge_enableHelp": {
+    "message": "Lokale Brücke aktivieren oder trennen. Beim Trennen werden Freigaben und Genehmigungen gelöscht.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_save": {
+    "message": "Brückeneinstellungen speichern",
+    "description": "Phase C local bridge."
+  },
+  "bridge_saveHelp": {
+    "message": "Port, Frist und Lesepräferenz für diese Sitzung übernehmen. Ein Portwechsel verbindet neu und löscht Tab-Freigaben.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyConfig": {
+    "message": "MCP-Client-Konfiguration kopieren",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copyHelp": {
+    "message": "Lokalen Befehl, Port, Erweiterungsidentität und Sitzungsgeheimnis für den vertrauenswürdigen MCP-Client kopieren.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_copied": {
+    "message": "Sitzungskonfiguration kopiert",
+    "description": "Phase C local bridge."
+  },
+  "bridge_tab": {
+    "message": "Freizugebender Tab",
+    "description": "Phase C local bridge."
+  },
+  "bridge_share": {
+    "message": "Ausgewählten Tab freigeben",
+    "description": "Phase C local bridge."
+  },
+  "bridge_shareHelp": {
+    "message": "Nur Tools des ausgewählten, bereits erlaubten Tabs freigeben. Ursprung vor der Freigabe prüfen.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshare": {
+    "message": "Freigabe beenden",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unshareHelp": {
+    "message": "Tools dieses Tabs ungültig machen und ausstehende Genehmigungen sofort verweigern.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reset": {
+    "message": "Kopplung vergessen",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resetHelp": {
+    "message": "Trennen, alle Freigaben löschen und das Kopplungsgeheimnis dieser Sitzung verwerfen.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resume": {
+    "message": "Unbekannte Wirkung geprüft — fortsetzen",
+    "description": "Phase C local bridge."
+  },
+  "bridge_resumeHelp": {
+    "message": "Prüfung der ungewissen Aktion bestätigen. Nichts wird wiederholt; Tabs vor neuen Anfragen ausdrücklich erneut freigeben.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_unknown": {
+    "message": "Nach unbekannter Wirkung pausiert. Seite vor dem Fortsetzen prüfen; kein Aufruf wurde wiederholt.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status": {
+    "message": "Brücke: $1",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_status_disabled": {
+    "message": "deaktiviert",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connecting": {
+    "message": "lokaler Begleiter wird authentifiziert",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_connected": {
+    "message": "authentifiziert und verbunden",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_reconnecting": {
+    "message": "wartet auf authentifizierten Begleiter",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_authentication_failed": {
+    "message": "Authentifizierung abgelehnt",
+    "description": "Phase C local bridge."
+  },
+  "bridge_status_error": {
+    "message": "Verbindung nicht verfügbar",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approvalTitle": {
+    "message": "Corsen Guard — Genehmigung erforderlich",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reasons": {
+    "message": "Prüfgründe: $1. JSON unten ist exakt; unsichtbare Steuerzeichen sind maskiert.",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_deadline": {
+    "message": "Ohne Zustimmung automatische Ablehnung in $1 Sekunden.",
+    "description": "Phase C local bridge.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "bridge_approve": {
+    "message": "Einmal genehmigen",
+    "description": "Phase C local bridge."
+  },
+  "bridge_approveHelp": {
+    "message": "Nur diese genaue Anfrage erlauben. Geänderte Ursprünge, Dokumente, Verträge oder abgelaufene Anfragen werden abgelehnt.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_deny": {
+    "message": "Ablehnen",
+    "description": "Phase C local bridge."
+  },
+  "bridge_denyHelp": {
+    "message": "Anfrage ablehnen, ohne das Seitentool aufzurufen.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_expired": {
+    "message": "Genehmigung abgelaufen oder ungültig. Keine neue Aktion ausgelöst.",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_manual_mode": {
+    "message": "Zustimmung für jeden Aufruf",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_not_read_only": {
+    "message": "nicht als nur lesend deklariert",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_consequential": {
+    "message": "folgenreich oder destruktiv",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_mutating": {
+    "message": "mögliche Zustandsänderung",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_critical": {
+    "message": "kritischer Phase-B-Befund",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_high": {
+    "message": "hoher Phase-B-Befund",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_incomplete_schema": {
+    "message": "unvollständiges Schema",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_unchecked_arguments": {
+    "message": "Argumente nicht vollständig geprüft",
+    "description": "Phase C local bridge."
+  },
+  "bridge_reason_uncaptured_annotations": {
+    "message": "Registrierungsangaben nicht erfasst"
+  },
+  "export_copySpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Playwright-Test kopieren"
+  },
+  "export_saveSpec": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Playwright-Test speichern"
+  },
+  "export_playwrightHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Eigenständigen .spec.ts-Test mit Vertrags- und Ergebnisprüfungen exportieren. Daten prüfen und vor der Ausführung eine ausdrückliche Lauf-ID wählen. Keine automatischen Wiederholungen."
+  },
+  "export_specNeedsData": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Ausführbarer Export benötigt vollständige Argumente und Ergebnisse. Diese Abschnitte zuerst wieder einschließen."
+  },
+  "export_sarifHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "SARIF 2.1.0 für CI-Prüfungen. Laufzeitorte müssen für Quellcode-Anmerkungen auf Projektdateien abgebildet werden; keine erfundenen Dateien oder Zeilen."
+  },
+  "status_legacy": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Alte API"
+  },
+  "status_emulated": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Emuliertes JS"
+  },
+  "status_inventorySplit": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "JS $1 · Form. $2 · ? $3",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "status_inventoryHelp": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Beobachtete Registrierungen: JS steht für erfasste imperative Tools, Formulare für erkannte deklarative Tools, ? für unklassifizierte. Geschlossene Shadow-Wurzeln werden nicht erschlossen."
+  },
+  "status_grade": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Sicherheit $1*",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_copyFlag": {
+    "description": "Phase D exports and compact diagnostics.",
+    "message": "Flag-URL kopieren"
+  }
+}

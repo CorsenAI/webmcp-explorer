@@ -1,0 +1,41 @@
+id: WMP-0045
+title: Chrome for Testing 153 exposes document.modelContext in every secure context without the testing flag and without an origin-trial token; insecure pages get nothing
+date_observed: 2026-09-11
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64), --headless=new, fresh profile with an empty enabled_labs_experiments list, no extension loaded
+  mode: native
+expected: >
+  The vendor documentation (developer.chrome.com/docs/ai/webmcp, dated 2026-08-07) offers two
+  ways in: the origin trial from Chrome 149, and chrome://flags/#enable-webmcp-testing for local
+  development. A page with neither should see no API.
+observed: >
+  With no flag in Local State and no extension, `typeof document.modelContext` is "object" and
+  the API works (registerTool/getTools) on http://localhost:8777 and http://127.0.0.1:8788
+  pages, and `Document.prototype` carries the accessor on https://example.com and
+  https://render.com, neither of which serves an origin-trial meta tag. On http://neverssl.com,
+  an insecure context, the accessor is absent. The state of branded Chrome 153 was not measured
+  (no such build on the machines at hand); Chrome for Testing is the same binary as the release
+  it mirrors, so the behaviour is expected to match, and a Store visitor on 153 would find the
+  API without the flag — which the product's onboarding text still presents as required.
+reliable_discriminator: >
+  Object.getOwnPropertyNames(Document.prototype).includes('modelContext') in a fresh profile
+  whose Local State has no enabled_labs_experiments
+impact:
+  - the flag-off onboarding state cannot be produced on this build — the unavailable-API screen is exercised by removing the accessor from the page (tools/e2e/no-flag.mjs), and it is still what an insecure page or an older browser shows
+  - the calendar constraint of the origin trial (ends 2026-11-16) may no longer gate end users on 153; the listing's wording "a Chrome build with WebMCP available" stays true either way
+  - a tool a page registers is now visible to every agent on 153, with no opt-in step — the contract checks matter more, not less
+workaround: >
+  None needed. Keep the flag text in the diagnosis for browsers that still need it; check the
+  vendor documentation and chromestatus when 154 reaches Stable.
+evidence:
+  fixture: fixtures/basic.html, fixtures/child-cross.html, https://example.com
+  automated_test: tools/bench/launch.mjs --no-flag (a profile without the flag), probe of 2026-09-11 recorded in docs/research/2026-09-11-registration-fates.md
+  chrome_e2e: true
+spec_status:
+  documented: >
+    the vendor page of 2026-08-07 describes the origin trial and the flag only; no "available
+    by default" statement was found
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: observed

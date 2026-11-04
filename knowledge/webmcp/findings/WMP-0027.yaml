@@ -1,0 +1,30 @@
+id: WMP-0027
+title: Since August 2026 the Chrome Web Store requires disclosure of every data collection, functional ones included
+date_observed: 2026-09-05
+environment:
+  browser: n/a (Chrome Web Store policy)
+expected: n/a
+observed: >
+  Stated by the independent audit of 2026-09-05, then read at the source on 2026-09-10 — the
+  Chrome for Developers post "Chrome Web Store policy updates: Enhancing user privacy and platform
+  integrity" (developer.chrome.com/blog/cws-policy-updates-2026), enforced from 2026-08-01. Three
+  changes: Limited Use — data collected must be strictly necessary to the disclosed single purpose;
+  Disclosure — all data collection must be prominently disclosed to the user, whether or not it is
+  closely related to the single purpose, and any later change of data handling must be disclosed
+  proactively; and a new rule against extensions built to circumvent the safety guardrails or
+  usage restrictions of AI-powered services. Explorer's listing therefore declares authentication
+  data (API keys), the current tab's address, tool calls as user activity, and tool results as
+  website content; its overrides and mocks act on the user's own page under test, not on an AI
+  service's guardrails.
+impact:
+  - the data-practices form must be filled conservatively and re-read at every release
+workaround: n/a
+evidence:
+  source: developer.chrome.com/blog/cws-policy-updates-2026 (read 2026-09-10); independent audit message, 2026-09-05; store/LISTING.md (Data practices); docs/PRIVACY.md
+  decision: D-052
+  chrome_e2e: false
+spec_status:
+  documented: true (Store developer programme policies)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, every Corsen extension]
+status: confirmed

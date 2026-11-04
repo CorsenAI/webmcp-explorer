@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Dynamic tools</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}button{margin-right:6px}</style></head>
+<body>
+<h1>Dynamic registration</h1>
+<p>Exercises the live timeline: register, unregister and re-register at will.</p>
+<p>
+  <button id="add">Register one</button>
+  <button id="remove">Unregister last</button>
+  <button id="churn">Churn 20</button>
+</p>
+<p id="state">no tools</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+const controllers = [];
+
+function report() {
+  state.textContent = `${controllers.length} tools registered`;
+}
+
+function addTool() {
+  if (!mc) return;
+  const index = controllers.length;
+  const controller = new AbortController();
+  mc.registerTool({
+    name: `dynamic_tool_${index}`,
+    description: `Dynamically registered tool ${index}.`,
+    inputSchema: { type: 'object', properties: { q: { type: 'string' } } },
+    annotations: { readOnlyHint: true },
+    execute: async () => JSON.stringify({ index }),
+  }, { signal: controller.signal });
+  controllers.push(controller);
+  report();
+}
+
+function removeTool() {
+  const controller = controllers.pop();
+  // AbortController is the documented way to unregister a tool.
+  if (controller) controller.abort();
+  report();
+}
+
+document.getElementById('add').addEventListener('click', addTool);
+document.getElementById('remove').addEventListener('click', removeTool);
+document.getElementById('churn').addEventListener('click', () => {
+  for (let i = 0; i < 20; i += 1) addTool();
+  for (let i = 0; i < 20; i += 1) removeTool();
+});
+
+if (!mc) state.textContent = 'WebMCP unavailable';
+else report();
+</script>
+</body>
+</html>

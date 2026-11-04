@@ -1,0 +1,26 @@
+id: WMP-0019
+title: devtools-webmcp-support enables the DevTools panel, not the page API
+date_observed: 2026-09-04
+environment:
+  browser: Chrome
+  version: 152.0.7977.66
+  mode: n/a
+expected: a WebMCP-related flag present in the profile means pages can use the API
+observed: >
+  The profile carried devtools-webmcp-support@1 and pages still had no API. That flag turns on
+  the WebMCP panel of DevTools; enable-webmcp-testing is the one that exposes
+  document.modelContext to pages. Two different switches.
+impact:
+  - onboarding text must name the right flag
+  - a developer with the DevTools panel visible may still have a page with no API
+workaround: name enable-webmcp-testing explicitly and offer it as copyable text
+evidence:
+  fixture: fixtures/probe.html
+  chrome_e2e: true
+  decision: D-049
+  source: docs/research/2026-09-04-live-environment-observations.md
+spec_status:
+  documented: partially
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen Context]
+status: confirmed

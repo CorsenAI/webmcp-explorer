@@ -1,0 +1,30 @@
+id: WMP-0016
+title: toolactivated fires on window for imperative executeTool calls too
+date_observed: 2026-09-05
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: native
+expected: >
+  The vendor documentation presents toolactivated / toolcancel as events of the declarative
+  (form) surface.
+observed: >
+  Executing an imperative tool (registerTool + executeTool) dispatched a toolactivated event
+  on the page's window, recorded by the timeline as "activated <toolName>" alongside the
+  "executed" entry.
+impact:
+  - a timeline that listens to toolactivated sees every execution start, declarative or not
+  - counts of "activated" must not be read as declarative-only activity
+workaround: n/a
+evidence:
+  fixture: fixtures/dynamic.html, fixtures/slow.html
+  automated_test: tools/e2e/inflight.mjs (timeline rows), store/screenshots/3-timeline.png
+  chrome_e2e: true
+  decision: D-055
+spec_status:
+  documented: partially
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: observed
+note_2026_10_18: >
+  Chrome 157 dispatches typed ToolActivatedEvent and ToolCancelEvent on document.modelContext instead of a WebMCPEvent on window (WMP-0050).

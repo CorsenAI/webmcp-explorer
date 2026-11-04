@@ -1,0 +1,29 @@
+id: WMP-0048
+title: The debugging annotation is kept by Chrome 157 and dropped by Chrome 155
+date_observed: 2026-10-18
+environment:
+  browser: Chrome for Testing
+  version: 157.0.8103.6 (Beta) keeps it; 155.0.8059.84 (Stable) and 153.0.8010.36 drop it; linux64, --headless=new
+  mode: native
+expected: >
+  ToolAnnotations.debugging, added to the specification on 2026-09-17 (#253), marks a tool meant
+  for developer tooling rather than end users.
+observed: >
+  Registering with annotations.debugging true reads back as debugging true on 157 only. On 155
+  and 153 the member is absent from tool.annotations.
+reliable_discriminator: >
+  'debugging' in tool.annotations after a registration that set it
+impact:
+  - a debugging tool exposed on a public page is observable to a reviewer from 157 on, invisible before
+  - a hard-coded annotation list would hide it; the UI renders what is present and labels this key
+workaround: None.
+evidence:
+  fixture: fixtures/basic.html
+  automated_test: tools/probe-platform.mjs (annotations)
+  chrome_e2e: true
+  decision: D-128
+spec_status:
+  documented: yes (#253, 2026-09-17)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: observed

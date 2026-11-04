@@ -1,0 +1,24 @@
+<!doctype html>
+<html><body>
+<h1>External ping probe</h1>
+<p id="result">pending</p>
+<script>
+// A real page script — not a CDP evaluation — asks Explorer over the documented
+// externally_connectable path and writes the answer into the DOM.
+function ping() {
+  if (typeof chrome === 'undefined' || !chrome.runtime || !chrome.runtime.sendMessage) {
+    document.getElementById('result').textContent = 'NO_API';
+    return;
+  }
+  const extId = new URLSearchParams(location.search).get('ext');
+  chrome.runtime.sendMessage(extId, { api: 'wmp-explorer/1', command: 'ping' },
+    (reply) => {
+      document.getElementById('result').textContent = 'REPLY ' + JSON.stringify({
+        lastError: chrome.runtime.lastError?.message ?? null,
+        reply: reply ?? null,
+      });
+    });
+}
+window.addEventListener('load', () => setTimeout(ping, 300));
+</script>
+</body></html>

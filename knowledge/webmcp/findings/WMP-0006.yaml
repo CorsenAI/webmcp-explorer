@@ -1,0 +1,30 @@
+id: WMP-0006
+title: A cross-origin iframe without allow="tools" still gets document.modelContext and can register
+date_observed: 2026-09-04
+environment:
+  browser: Chrome
+  version: 152.0.7977.66
+  mode: native
+expected: >
+  The vendor documentation announces the "tools" permissions policy defaulting to self, so a
+  cross-origin iframe embedded without allow="tools" should have no API.
+observed: >
+  The negative-control iframe (cross-origin, no allow attribute) reported document.modelContext
+  present and registerTool succeeded. featurePolicy.allowsFeature('tools') was readable.
+impact:
+  - the presence of the API inside a frame proves nothing about the embedder's policy
+  - a security product cannot infer "this frame was allowed to expose tools" from the API alone
+workaround: >
+  Read the embed's allow attribute from the parent document and report it as a diagnosis, not
+  as a permission fact.
+evidence:
+  fixture: fixtures/iframes.html (iframe 3), fixtures/child-cross.html
+  automated_test: test/frames.test.js
+  chrome_e2e: true
+  decision: D-018
+  commit: b65ebb6
+spec_status:
+  documented: contradicted by observation
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security]
+status: observed

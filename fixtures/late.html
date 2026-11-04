@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Late registration</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Late registration</h1>
+<p>Open Explorer only <strong>after</strong> the countdown ends. The tool must still appear.</p>
+<p id="state">registering in 3s…</p>
+<script type="module">
+import { registerDemoTool, report } from './register.js';
+
+let left = 3;
+const timer = setInterval(() => {
+  left -= 1;
+  if (left > 0) {
+    report(`registering in ${left}s…`);
+    return;
+  }
+  clearInterval(timer);
+  const ok = registerDemoTool(
+    'late_tool',
+    'Registered three seconds after page load, to prove discovery reads existing state.',
+    { type: 'object', properties: { q: { type: 'string' } } },
+    { late: true },
+  );
+  report(ok ? 'late_tool registered' : 'WebMCP unavailable');
+}, 1000);
+</script>
+</body>
+</html>

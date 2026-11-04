@@ -1,0 +1,29 @@
+id: WMP-0026
+title: Chrome Web Store listing images are 1280x800 or 640x400, up to five, full bleed, showing the actual experience
+date_observed: 2026-09-05
+environment:
+  browser: n/a (Chrome Web Store listing requirements, read from the official documentation)
+expected: n/a
+observed: >
+  Read on developer.chrome.com/docs/webstore/images on 2026-09-05. Screenshots are
+  "1280x800 or 640x400 pixels", the larger being "preferrable, as larger screenshots look
+  better on high-resolution displays"; "at least 1 — and preferably the maximum allowed 5";
+  "square corners, no padding (full bleed)"; they "should demonstrate the actual user
+  experience, focusing on the core features and content". The best-listing page adds: not
+  "blurry, distorted, or pixelated", not "overwhelming amounts of text", and "use visual aids
+  in the screenshots to help explain how it works". Promotional tiles are 440x280 (required)
+  and 1400x560 (marquee, optional).
+impact:
+  - the five composites in store/screenshots are 1280x800, full bleed, with a caption band as the permitted visual aid
+  - the panel, being the product, takes the larger share of the stage and is captured at a higher device scale so it stays legible
+  - the shipped Agent Lab and Evals shots were taken with a real local model (Ollama, qwen2.5:3b); when the generator falls back to the simulated provider, the caption names it
+workaround: n/a
+evidence:
+  source: https://developer.chrome.com/docs/webstore/images/ and https://developer.chrome.com/docs/webstore/best-listing (read 2026-09-05); store/screenshots/, tools/make-store-screenshots.mjs, store/shot.html
+  decision: D-054, D-056
+  chrome_e2e: false
+spec_status:
+  documented: true (Store documentation)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, every Corsen extension]
+status: confirmed

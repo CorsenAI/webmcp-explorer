@@ -1,0 +1,45 @@
+id: WMP-0044
+title: A tool that fails reaches the caller as UnknownError with one fixed message on Chrome 153 — the tool's own error name and message are dropped, whatever it threw
+date_observed: 2026-09-11
+environment:
+  browser: Chrome for Testing
+  version: 153.0.8010.36 (linux64), --headless=new, WebMCP testing flag
+  mode: native
+expected: >
+  executeTool() rejects with the error the tool's execute threw or rejected with, or at least
+  carries its name and message, so a caller can tell "No product with id nope" from a crash.
+observed: >
+  Seven variants, one tool each (tools/probe-execute-errors.mjs): an Error with a message, a
+  DOMException (QuotaExceededError), a thrown string, a promise rejected with a plain object, a
+  synchronous throw, a rejected promise with a RangeError. Every one settles executeTool() with
+  the same DOMException: name "UnknownError", code 0, message "Tool was executed but the
+  invocation failed. For example, the script function threw an error". Nothing of the original
+  — name, message, own properties — survives. A tool that succeeds with a string is unaffected.
+  The same generic text is what the page's own console snippet gets, so it is the browser's
+  doing, not the extension's.
+reliable_discriminator: >
+  catch the rejection of executeTool() for a tool whose execute throws new Error('x'): the
+  message is the fixed sentence, never 'x'
+impact:
+  - an inspector cannot show a developer their tool's own error; the failure reads the same whatever the cause
+  - a saved check that expects a failure can only assert that the call failed, never why
+  - a reproduction records the generic text as the expected error, and the developer must read the real one in the page's console (the throw is still logged there by the page if it logs it)
+  - an agent that reads tool errors to recover gets no information from a WebMCP failure on this Chrome
+workaround: >
+  Have the tool return its errors as data (a result object with an error field) when a caller
+  must act on them; keep console logging in the tool for the developer. In an inspector, say
+  beside the generic text that Chrome replaced the tool's own error.
+evidence:
+  fixture: fixtures/shop.html (get_product with an unknown id)
+  automated_test: tools/probe-execute-errors.mjs; tools/e2e/repro.mjs (error case)
+  chrome_e2e: true
+  decision: D-076
+spec_status:
+  documented: >
+    not stated — the specification's executeTool() algorithm rejects with the tool's own
+    rejection reason as far as it says anything; the replacement is Chrome's.
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: observed
+note_2026_10_18: >
+  Re-measured on Chrome 155 and 157 on 2026-10-18 with a throwing tool and a rejecting tool; unchanged (WMP-0052).

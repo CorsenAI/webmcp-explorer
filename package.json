@@ -1,0 +1,9 @@
+{
+  "name": "webmcp-explorer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "Apache-2.0"
+}

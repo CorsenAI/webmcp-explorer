@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Mutating WebMCP contract</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Mutating contract</h1>
+<p>Registers a small tool set, and exposes <code>window.__mutate()</code> so a test can change
+the contract for real — reword a description, drop a tool, add one — the way a deploy would.</p>
+<p id="state">…</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+
+// One controller per registration round: aborting it removes the previous tools, which is how
+// a page actually replaces its contract.
+let round = null;
+
+const SCHEMA = {
+  type: 'object',
+  properties: { query: { type: 'string', description: 'What to look for' } },
+  required: ['query'],
+};
+
+// A stricter contract for the same tool: a second required field, and fewer accepted values.
+// What a saved call written against SCHEMA runs into after a deploy.
+const SCHEMA_STRICT = {
+  type: 'object',
+  properties: {
+    query: { type: 'string', description: 'What to look for', enum: ['jackets', 'boots'] },
+    limit: { type: 'integer', minimum: 1, description: 'How many results' },
+  },
+  required: ['query', 'limit'],
+};
+
+function register({ reword = false, drop = null, add = null, strict = false } = {}) {
+  if (!mc) {
+    state.textContent = 'WebMCP unavailable';
+    return 0;
+  }
+  round?.abort();
+  round = new AbortController();
+  const { signal } = round;
+
+  const tools = [
+    {
+      name: 'reword_me',
+      description: reword
+        ? 'Search the catalogue by keyword, category and maximum price.'
+        : 'Search things.',
+      inputSchema: strict ? SCHEMA_STRICT : SCHEMA,
+      annotations: { readOnlyHint: true },
+      execute: async () => JSON.stringify({ ok: true, reworded: reword }),
+    },
+    {
+      name: 'legacy_lookup',
+      description: 'An older tool, removed in a later round.',
+      inputSchema: SCHEMA,
+      annotations: { readOnlyHint: true },
+      execute: async () => JSON.stringify({ ok: true }),
+    },
+    {
+      name: 'brand_new',
+      description: 'A tool added in a later round.',
+      inputSchema: SCHEMA,
+      annotations: { readOnlyHint: true },
+      execute: async () => JSON.stringify({ ok: true }),
+    },
+  ].filter((tool) => tool.name !== drop && (tool.name !== 'brand_new' || add === 'brand_new'));
+
+  for (const tool of tools) mc.registerTool(tool, { signal });
+  state.textContent = `${tools.length} tools registered`;
+  return tools.length;
+}
+
+window.__mutate = (options) => register(options);
+register();
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Slow and awkward tools</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}iframe{display:block;width:100%;height:56px;border:1px solid #ddd}</style></head>
+<body>
+<h1>Slow and awkward tools</h1>
+<p>Tools that take their time, return nothing, or navigate away — the cases an inspector must
+report honestly rather than hang on.</p>
+<p id="state">registering…</p>
+<h2>Same-origin child with its own slow tool</h2>
+<iframe id="child" src="/child-slow.html"></iframe>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+
+if (!mc) {
+  state.textContent = 'WebMCP unavailable';
+} else {
+  // Resolves after the number of milliseconds it is asked for.
+  mc.registerTool({
+    name: 'slow_tool',
+    description: 'Waits for the given number of milliseconds, then answers.',
+    inputSchema: { type: 'object', properties: { ms: { type: 'integer', minimum: 0, default: 3000 } }, required: ['ms'] },
+    annotations: { readOnlyHint: true },
+    execute: async (input) => {
+      const ms = Number(input?.ms ?? 3000);
+      await new Promise((resolve) => setTimeout(resolve, ms));
+      return JSON.stringify({ waited: ms });
+    },
+  });
+
+  // Waits like slow_tool, but listens to the signal the runtime hands it (Chrome 153 does,
+  // Chrome 152 does not) and records what it saw, so a test can tell whether the page's tool
+  // was told to stop or merely abandoned.
+  window.__cancellable = { calls: 0, signalGiven: null, aborted: false, finished: false };
+  mc.registerTool({
+    name: 'cancellable_tool',
+    description: 'Waits for the given number of milliseconds, stopping early if it is told to.',
+    inputSchema: { type: 'object', properties: { ms: { type: 'integer', minimum: 0, default: 6000 } }, required: ['ms'] },
+    annotations: { readOnlyHint: true },
+    execute: (input, options) => new Promise((resolve, reject) => {
+      const state = window.__cancellable;
+      state.calls += 1;
+      const signal = options && options.signal;
+      state.signalGiven = Boolean(signal);
+      const ms = Number(input?.ms ?? 6000);
+      const timer = setTimeout(() => { state.finished = true; resolve(JSON.stringify({ waited: ms })); }, ms);
+      if (signal) {
+        signal.addEventListener('abort', () => {
+          clearTimeout(timer);
+          state.aborted = true;
+          reject(new DOMException('stopped by the caller', 'AbortError'));
+        }, { once: true });
+      }
+    }),
+  });
+
+  // Returns null, which is what the platform does when a call ends in a navigation.
+  mc.registerTool({
+    name: 'null_tool',
+    description: 'Returns null, as a tool does when its call ends in a navigation.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: true },
+    execute: async () => null,
+  });
+
+  // Navigates the top-level document and never settles: the document that made the promise
+  // is gone before it could.
+  mc.registerTool({
+    name: 'navigate_tool',
+    description: 'Navigates this page to basic.html and never answers.',
+    inputSchema: { type: 'object', properties: {} },
+    annotations: { readOnlyHint: false },
+    execute: () => {
+      location.assign('/basic.html?after-navigate-tool');
+      return new Promise(() => {});
+    },
+  });
+
+  // Answers with as many characters as it is asked for: a JSON document whose one array holds
+  // that much text. What an inspector must show without freezing, and cut only out loud (C7).
+  mc.registerTool({
+    name: 'big_tool',
+    description: 'Returns a JSON document of about the given number of characters.',
+    inputSchema: { type: 'object', properties: { chars: { type: 'integer', minimum: 1, default: 300000 } }, required: ['chars'] },
+    annotations: { readOnlyHint: true },
+    execute: async (input) => {
+      const chars = Number(input?.chars ?? 300000);
+      const head = '{"items":["';
+      const tail = '"]}';
+      return head + 'x'.repeat(Math.max(0, chars - head.length - tail.length)) + tail;
+    },
+  });
+
+  state.textContent = '5 tools registered';
+}
+
+// Lets a test remove the child frame while one of its tools is running.
+window.__removeChild = () => {
+  const frame = document.getElementById('child');
+  if (frame) frame.remove();
+  return !document.getElementById('child');
+};
+</script>
+</body>
+</html>

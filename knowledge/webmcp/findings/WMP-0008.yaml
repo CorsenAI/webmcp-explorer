@@ -1,0 +1,30 @@
+id: WMP-0008
+title: An extension cannot see its own pages' tab URL without "tabs", nor inject scripts into them
+date_observed: 2026-09-04
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82
+  mode: n/a (extension platform)
+expected: an extension has access to its own chrome-extension:// origin
+observed: >
+  chrome.tabs.query hides tab.url for the extension's own pages when the extension lacks the
+  "tabs" permission. chrome.scripting.executeScript refuses those pages: "Extension manifest
+  must request permission to access the respective host", and a chrome-extension:// URL cannot
+  be listed as a host permission.
+impact:
+  - a side panel opened as a tab cannot identify itself as the active tab
+  - a bundled page cannot be instrumented through executeScript; it needs its own transport
+workaround: >
+  Reach the extension's own pages through a runtime port (chrome.runtime.connect) instead of
+  injection; treat a hidden tab.url as "needs a grant or a click", never as "no tab".
+evidence:
+  fixture: src/demo/
+  automated_test: tools/e2e/demo.mjs, tools/e2e/panel-state.mjs
+  chrome_e2e: true
+  decision: D-049, D-024
+  commit: 325fa1a
+spec_status:
+  documented: partially (tabs permission docs)
+  implementation_specific: true
+products_affected: [WebMCP Explorer]
+status: confirmed

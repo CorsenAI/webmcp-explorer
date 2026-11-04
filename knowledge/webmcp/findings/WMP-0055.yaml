@@ -1,0 +1,37 @@
+id: WMP-0055
+title: A call to a declarative form without toolautosubmit stays pending until a person submits it; aborting it settles the call at once with an AbortError, fires toolcancel and releases the form
+date_observed: 2026-10-21
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new
+  mode: native
+expected: >
+  Chrome's declarative API page: without toolautosubmit "The user must manually click Submit"; the
+  explainer keeps the tool "running" until submit, respondWith, reset, removal or an agent cancel,
+  which fires toolcancel. Neither names a timeout; webmcp#307 asks how a caller should tell this
+  wait from a stuck call (open).
+observed: >
+  executeTool(subscribe_newsletter, {email, plan}, {signal}) fills the form, focuses its submit
+  button, marks :tool-form-active and :tool-submit-active, and does not settle. Aborting the signal
+  2 s later settles it 1 ms after the abort with AbortError "signal is aborted without reason";
+  toolcancel fires (window on 155, document.modelContext on 157); the form is no longer active and
+  its fields stay filled. A later click on its submit button is a plain submit (agentInvoked false).
+reliable_discriminator: >
+  the executeTool promise is pending and document.querySelector(':tool-form-active') is the form
+impact:
+  - an unattended caller (Evals) waits forever unless it bounds the call or cancels it
+  - cancelling through the AbortSignal is clean (the page is told and the form released)
+workaround: >
+  WebMCP Explorer 2.1.1 (D-132): the run names the waiting form, Cancel aborts the call, and an eval
+  cancels a declarative call still pending after 30 s and tells the model why.
+evidence:
+  fixture: fixtures/declarative.html, fixtures/declarative-wait.html
+  automated_test: tools/e2e/declarative-wait.mjs; test/evals-form-wait.test.js
+  chrome_e2e: true
+spec_status:
+  documented: >
+    developer.chrome.com/docs/ai/webmcp/declarative-api (2026-09-25); declarative-api-explainer.md;
+    webmachinelearning/webmcp#307 (open)
+  implementation_specific: false
+products_affected: [WebMCP Explorer, Corsen WebMCP Security, Corsen Context]
+status: confirmed

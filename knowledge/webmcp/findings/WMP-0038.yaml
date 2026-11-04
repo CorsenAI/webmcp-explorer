@@ -1,0 +1,30 @@
+id: WMP-0038
+title: Releasing one AbortController that registered several tools fires toolchange once per tool
+date_observed: 2026-09-10
+environment:
+  browser: Chrome for Testing
+  version: 152.0.7977.82 and 153.0.8010.36 (linux64)
+  mode: native
+expected: >
+  toolchange says the tool set changed; one abort that removes four tools could fire once or
+  four times, and a timeline built on it must cope with either.
+observed: >
+  Four tools registered with the same signal, then the controller aborted: four toolchange
+  events, and getTools() lists none of the four afterwards. Each event arrives with the set
+  already reduced by one tool when re-read.
+reliable_discriminator: count toolchange events per abort
+impact:
+  - a listener that re-reads getTools() on every event does redundant work during a burst
+  - a listener that assumes one event per change misses nothing, but one that assumes one event per abort would over-count
+workaround: >
+  Diff snapshots of names rather than counting events, and debounce the re-read (D-029, D-054).
+evidence:
+  fixture: tools/probe-platform.mjs (toolchangeAfterUnregister)
+  automated_test: test/live-notify.test.js
+  chrome_e2e: true
+  decision: D-029
+spec_status:
+  documented: false
+  implementation_specific: true
+products_affected: [WebMCP Explorer, Corsen Context]
+status: confirmed
