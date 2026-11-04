@@ -2,7 +2,7 @@
 
 A Chrome extension by Corsen AI for discovering, inspecting and exercising WebMCP tools.
 
-**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/webmcp-explorer/pccddgfopjiggjhhlgndlghimbdndjef)**
+**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/webmcp-explorer/pccddgfopjiggjhhlgndlghimbdndjef)** · **[Website & online scanner](https://webmcp.corsen.ai/)**
 
 - Discover JavaScript tools and declarative form inventories, including frame provenance.
 - Run tools manually, save recipes and inspect results and unknown effects.
@@ -41,7 +41,8 @@ are local files and do not coordinate separate machines or survive deliberate de
 
 Exports can contain arguments and page results. Review them before sharing. SARIF locations
 are observed runtime locations; repository annotations require an explicit source mapping.
-Report security concerns privately to security@corsen.ai.
+Read the [extension privacy policy](PRIVACY.md). The website's online scanner is a separate,
+optional service with its own privacy policy. Report security concerns privately to security@corsen.ai.
 
 ## License
 
