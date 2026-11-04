@@ -55,6 +55,6 @@ Linux Chrome 155 headful campaign passed 70/70. Native UI and MCP flows passed o
 Chrome 155 and Windows Chrome 157 ARM64. See [QUALIFICATION.md](QUALIFICATION.md) for the exact
 scope and [SOURCE-SHA256.json](SOURCE-SHA256.json) for the qualified product-file hashes.
 
-The Chrome Web Store currently distributes version **2.2.0**. This repository contains the
-qualified **2.3.0-rc1** source. The **2.3.0 update was submitted to Google for review on
-4 November 2026**, with automatic publication after approval.
+The **Chrome Web Store now distributes version 2.3.0**, displayed as **2.3.0-rc1**, with eight
+interface languages (verified on 4 November 2026). This repository contains the corresponding
+qualified source. The `rc1` display label comes from the submitted package's `version_name`.
