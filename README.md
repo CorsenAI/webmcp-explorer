@@ -1,16 +1,54 @@
 # WebMCP Explorer
 
-A Chrome extension by Corsen AI for discovering, inspecting and exercising WebMCP tools.
+A Chrome extension by Corsen AI to discover, inspect, test and review the security of the WebMCP
+tools a website exposes to AI agents.
 
-**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/webmcp-explorer/pccddgfopjiggjhhlgndlghimbdndjef)** · **[Website & online scanner](https://webmcp.corsen.ai/)**
+**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/webmcp-explorer/pccddgfopjiggjhhlgndlghimbdndjef)** · **[Online scanner](https://webmcp.corsen.ai/)** · **[Video: WebMCP explained (7 min)](https://youtu.be/AZ7_LgeVLjs)**
 
-- Discover JavaScript tools and declarative form inventories, including frame provenance.
-- Run tools manually, save recipes and inspect results and unknown effects.
-- Review security indicators, proposed fixes and a provisional heuristic grade.
-- Connect a local MCP client through the optional zero-dependency Node companion and Corsen Guard.
-- Use your own model provider in Agent Lab, with session keys or an optional encrypted vault.
-- Export reviewed Playwright tests and Markdown/SARIF security reports.
+Free, no account, no telemetry. Apache-2.0.
+
+![WebMCP Explorer's side panel next to a demo shop, listing the six WebMCP tools the page registers with their descriptions, annotations and frames](docs/images/tools.png)
+
+## What it does
+
+- **Inspect** every tool a page registers: JavaScript tools and declarative forms, in iframes and
+  open shadow roots, with schema, annotations and the frame that registered it. A live timeline
+  tracks registrations and removals.
+- **Run** a tool from a generated form or JSON arguments, read the result, save checks and combine
+  calls into multi-step recipes. Unknown effects stop automatic continuation.
+- **Review security with evidence**: prompt-injection indicators, hidden or look-alike characters,
+  consequential actions, inconsistent read-only claims, sensitive parameters, loose schemas and
+  changes in registered contracts. A provisional grade shows its calculation and what could not be
+  observed.
+- **Export** reviewed Playwright tests and Markdown or SARIF security reports.
+- **Agent Lab**: let your own model provider call the page's tools and inspect every call. Keys stay
+  in session memory, or in an optional encrypted vault.
+- **Local MCP bridge** (optional): connect a trusted MCP client through the zero-dependency Node
+  companion; Corsen Guard asks for approval before calls by default.
 - Eight interface languages, including Hebrew and Arabic RTL.
+
+| Run a tool, read the result, reproduce the call | Review security findings with their evidence |
+| --- | --- |
+| ![Result of a tool call shown as readable fields, with buttons to save it as a check, reproduce the call or use it in a recipe](docs/images/run.png) | ![Critical finding: a tool description that reads like an instruction to the agent, with the exact excerpt as evidence and why it matters](docs/images/security.png) |
+
+## Try it in a minute
+
+1. Install Explorer from the [Chrome Web Store](https://chromewebstore.google.com/detail/webmcp-explorer/pccddgfopjiggjhhlgndlghimbdndjef).
+   It has no site access at install.
+2. Open it from the toolbar, then **Help → Open the demo page**. The demo page ships its own
+   JavaScript implementation of WebMCP, so it works without any browser flag; Explorer marks it as
+   Compatibility, never Native. Open `search_products`, enter `MacBook` and press **Run**.
+3. For real sites, the browser must support WebMCP: enable `chrome://flags/#enable-webmcp-testing`
+   and relaunch Chrome, or visit a site enrolled in Chrome's WebMCP origin trial. Then allow that
+   site in Explorer. For example, [webmcp.corsen.ai](https://webmcp.corsen.ai/) registers three tools.
+
+## Watch
+
+[![WebMCP Explained, a 7-minute video: what WebMCP is, the risks its specification lists, and a demo of WebMCP Explorer](docs/images/video.jpg)](https://youtu.be/AZ7_LgeVLjs)
+
+[WebMCP Explained](https://youtu.be/AZ7_LgeVLjs) (7 min) covers what WebMCP is, the risks its own
+specification lists and a demo of Explorer. A [62-minute deep dive](https://youtu.be/cQ2WHsnlD04)
+goes through the tool lifecycle, scenarios and best practices.
 
 ## Development
 
@@ -48,7 +86,8 @@ optional service with its own privacy policy. Report security concerns privately
 
 Copyright 2026 Corsen AI. Licensed under [Apache 2.0](LICENSE). See [NOTICE](NOTICE) for attribution
 and the trademark boundary. Chrome and WebMCP are referenced descriptively; this project is not
-an official Google product.
+an official Google product. It is also unrelated to the experimental `webmcp-explorer` sample in
+Microsoft Edge's `webmcp-labs` repository.
 
 The 2.3.0-rc1 source passed 735 distinct unit cases on Linux, macOS and Windows. The complete
 Linux Chrome 155 headful campaign passed 70/70. Native UI and MCP flows passed on macOS
