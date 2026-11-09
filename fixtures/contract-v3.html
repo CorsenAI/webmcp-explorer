@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Contract v3 calibration</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}form{margin:12px 0;padding:12px;border:1px solid #ddd;border-radius:8px}label{display:block;margin:4px 0}</style></head>
+<body>
+<h1>Contract v3 calibration</h1>
+<p>Declarative forms whose native schema is read by <code>tools/probe-contract-v3.mjs</code>.
+Nothing on this page submits, fetches or registers anything by itself; the probe registers its own
+imperative tools and removes them before it closes the tab.</p>
+
+<h2>1 — hidden, password, file, disabled and unnamed controls</h2>
+<form id="probe-hidden" toolname="probe_hidden_fields" method="post" action="#"
+      tooldescription="Calibration form with hidden, password, file, disabled and unnamed controls.">
+  <input type="hidden" name="amount" value="1000">
+  <input type="hidden" name="csrf_token" value="calibration-only">
+  <label>Visible <input type="text" name="visible_text" toolparamdescription="Visible text field."></label>
+  <label>Password <input type="password" name="secret_pw"></label>
+  <label>Upload <input type="file" name="upload"></label>
+  <label>Disabled <input type="text" name="disabled_field" disabled></label>
+  <label>Unnamed <input type="text" toolparamdescription="Described control without a name attribute."></label>
+  <label>Choice <select name="choice"><option value="a">A</option><option value="b">B</option></select></label>
+  <label>Agree <input type="checkbox" name="agree"></label>
+  <label>Mail <input type="email" name="mail" maxlength="80" required></label>
+  <fieldset disabled><label>In disabled fieldset <input type="text" name="fieldset_disabled"></label></fieldset>
+  <button type="submit">Send</button>
+</form>
+<label>Outside, owned by form= <input type="text" name="outside_control" form="probe-hidden"></label>
+
+<h2>2 — toolname without tooldescription</h2>
+<form id="probe-nodesc" toolname="probe_no_description" method="get" action="#">
+  <label>Query <input name="q"></label>
+</form>
+
+<h2>3 — toolautosubmit on a POST form</h2>
+<form id="probe-post" toolname="probe_autosubmit_post" method="post" action="#" toolautosubmit
+      tooldescription="Calibration form submitted with POST and toolautosubmit.">
+  <label>Message <input name="message"></label>
+</form>
+</body>
+</html>

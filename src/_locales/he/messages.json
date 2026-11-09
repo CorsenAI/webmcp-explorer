@@ -1838,11 +1838,67 @@
   "probes_consentRequired": {
     "message": "הבדיקות לא הורצו: אשרו תחילה שאתם שולטים באתר זה."
   },
+  "secrets_title": {
+    "message": "מפתחות ספקים בסקריפטים של הדף (WMCP-SEC-013)",
+    "description": "Key search heading in the own-site checks box."
+  },
+  "secrets_intro": {
+    "message": "קורא פעם אחת, בזיכרון, את הסקריפטים המוטמעים בדף זה ואת קובצי הסקריפט שלו מאותו מקור, ומחפש תבניות של מפתחות סודיים של ספקים (Stripe, GitHub, Slack; OpenAI ו-Anthropic לפי היוריסטיקת זיהוי). נשמרים רק הספק, סוג המפתח והאורך, אף פעם לא הערך. סקריפטים ממקורות אחרים אינם נטענים, ושום כלי אינו מופעל.",
+    "description": "Key search explanation."
+  },
+  "secrets_run": {
+    "message": "חיפוש מפתחות ספקים",
+    "description": "Button."
+  },
+  "secrets_runHelp": {
+    "message": "קריאת הסקריפטים של דף זה ודיווח על תבניות מפתחות לפי סוג ואורך. מושבת עד שתאשרו שאתם שולטים באתר זה.",
+    "description": "Button tooltip."
+  },
+  "secrets_done": {
+    "message": "נקראו $1 סקריפטים מוטמעים ו-$2 קובצי סקריפט · $3 ממצאים (הערכים אינם מוצגים)",
+    "description": "Result summary; $1 inline scripts, $2 script files, $3 findings.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "secrets_none": {
+    "message": "לא נמצאה תבנית של מפתח ספק ב-$1 סקריפטים מוטמעים וב-$2 קובצי סקריפט.",
+    "description": "Clean result; $1 inline scripts, $2 script files.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "secrets_failed": {
+    "message": "לא ניתן היה לקרוא את הסקריפטים: $1",
+    "description": "Error; $1 reason.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "secrets_consentRequired": {
+    "message": "החיפוש לא הורץ: אשרו תחילה שאתם שולטים באתר זה.",
+    "description": "Error."
+  },
   "probes_consequential": {
     "message": "מוצהר כבעל השפעה"
   },
   "probes_disclosure": {
-    "message": "הרצת בדיקות גישוש קוראת ל-$1 הכלים הנבחרים ב-$2, עד חמש פעמים לכל כלי, עם ארגומנטים מחוללים ופגומים, בסשן הדפדפן שלך. דבר אינו נשלח לשום מקום אחר. התוצאות והממצאים נשארים במכשיר זה."
+    "message": "הרצת בדיקות גישוש קוראת ל-$1 הכלים הנבחרים ב-$2, עד שמונה פעמים לכל כלי, עם ארגומנטים מחוללים ופגומים, בסשן הדפדפן שלך. דבר אינו נשלח לשום מקום אחר. התוצאות והממצאים נשארים במכשיר זה."
   },
   "probes_done": {
     "message": "$1 קריאות בוצעו · $2 ממצאים"
@@ -1851,7 +1907,7 @@
     "message": "כל קריאה מופיעה בהיסטוריה של כלי זה, מסומנת כבדיקת חדירה."
   },
   "probes_intro": {
-    "message": "סקירה פסיבית קוראת את החוזה; בדיקות גישוש קוראות לכלים הנבחרים, בדף זה ובסשן שלך, עם ארגומנטים שחוללו מהסכמה שלהם ועם ארגומנטים שהסכמה אוסרת (סוג שגוי, שדה חובה חסר, מאפיין לא מוכר, מחרוזת בת 10,000 תווים). לכל היותר חמש קריאות לכלי, בזו אחר זו, ניתנות לביטול, וכולן נרשמות בהיסטוריה כבדיקות גישוש. כלי שמשנה מצב ישנה אותו."
+    "message": "סקירה פסיבית קוראת את החוזה; בדיקות גישוש קוראות לכלים הנבחרים, בדף זה ובסשן שלך, עם ארגומנטים שחוללו מהסכמה שלהם ועם ארגומנטים שהסכמה אוסרת (סוג שגוי, שדה חובה חסר, מאפיין לא מוכר, מחרוזת בת 10,000 תווים, מחרוזת חובה ריקה, מספר מחוץ לגבולותיו), וכן עם סמן לא פעיל שמראה אם הכלי מחזיר את הקלט שלו. לכל היותר שמונה קריאות לכלי, בזו אחר זו, ניתנות לביטול, וכולן נרשמות בהיסטוריה כבדיקות גישוש. כלי שמשנה מצב ישנה אותו."
   },
   "probes_none": {
     "message": "אין ממצאים מבדיקות החדירה. קריאות שבוצעו: $1."
@@ -4648,6 +4704,144 @@
   "sec_convention_unavailable_fix": {
     "description": "Phase B security review.",
     "message": "יש לבדוק את התגובה אם הייתה כוונה לפרסם את המוסכמה. העדר לבדו אינו מחייב תיקון אבטחה; לא נעשה ניסיון חוזר אוטומטי."
+  },
+  "sec_declarative_hidden_parameter_title": {
+    "message": "ערכי טופס מוסתרים שהסוכן לא רואה"
+  },
+  "sec_declarative_hidden_parameter_why": {
+    "message": "Chrome משמיט שדות מוסתרים מהסכמה של כלי הצהרתי, אך הטופס עדיין שולח אותם. הסוכן ממלא את השדות הגלויים ואינו יכול לראות או לערער על ערכים כמו סכום, נמען או תפקיד."
+  },
+  "sec_declarative_hidden_parameter_fix": {
+    "message": "שמרו ערכים עסקיים בשרת וגזרו אותם מההפעלה, או חשפו אותם כפרמטרים שנבדקו. שדות מוסתרים צריכים לשאת רק אסימוני הגנה מפני זיוף."
+  },
+  "sec_declarative_credential_field_title": {
+    "message": "כלי הצהרתי שמבקש סיסמה או פרטי כרטיס"
+  },
+  "sec_declarative_credential_field_why": {
+    "message": "ב-Chrome שדות סיסמה הם חלק מהסכמה של כלי הצהרתי, כך שהסוכן יתבקש למסור פרטי התחברות או נתוני כרטיס דרך המודל. שדות כאלה נועדו למילוי בידי האדם עצמו (issue #316 במפרט)."
+  },
+  "sec_declarative_credential_field_fix": {
+    "message": "הוציאו שדות התחברות, קוד חד־פעמי וכרטיס מטפסים שנחשפים לסוכנים; תנו לאדם למלא אותם בעצמו."
+  },
+  "sec_declarative_param_orphan_title": {
+    "message": "תיאור פרמטר שהסוכן לעולם לא מקבל"
+  },
+  "sec_declarative_param_orphan_why": {
+    "message": "toolparamdescription מוגדר על פקד ללא שם או על פקד מושבת. הדפדפן משמיט פקדים כאלה מהסכמה, ולכן התיאור אינו מתאר דבר שהסוכן יכול למלא."
+  },
+  "sec_declarative_param_orphan_fix": {
+    "message": "הוסיפו לפקד מאפיין name והפעילו אותו, או מחקו את התיאור."
+  },
+  "sec_declarative_post_auto_submit_title": {
+    "message": "טופס POST שנשלח ללא בדיקה"
+  },
+  "sec_declarative_post_auto_submit_why": {
+    "message": "toolautosubmit מאפשר לסוכן לשלוח את הטופס בלי שהאדם יבדוק אותו. הטופס משתמש ב-POST, שיטה שאינה בטוחה (RFC 9110), ו-Chrome ממליץ להשמיט את toolautosubmit בפעולות שיש להן השלכות."
+  },
+  "sec_declarative_post_auto_submit_fix": {
+    "message": "הסירו את toolautosubmit כדי שהאדם יבדוק וישלח את הטופס המלא, אלא אם הפעולה היא קריאה בלבד ללא השפעה."
+  },
+  "sec_readonly_callback_mutation_title": {
+    "message": "הצהרת קריאה בלבד שקוד הכלי סותר"
+  },
+  "sec_readonly_callback_mutation_why": {
+    "message": "הכלי מצהיר על readOnlyHint: true, אך קוד המקור של ה-callback שלו מכיל בקשה בשיטה שאינה קריאה בטוחה, או שליחת טופס. סוכנים עשויים להפעיל כלי לקריאה בלבד בלי לשאול. זהו דפוס בטקסט, לא התנהגות שנצפתה."
+  },
+  "sec_readonly_callback_mutation_fix": {
+    "message": "הצהירו על readOnlyHint: false (ועל consequentialHint: true לפעולות בעלות השלכות), או הוציאו את הכתיבה מהכלי. בדקו את ה-callback כדי לאשר."
+  },
+  "sec_exposed_to_cross_origin_title": {
+    "message": "כלי שנחשף למקורות אחרים"
+  },
+  "sec_exposed_to_cross_origin_why": {
+    "message": "exposedTo מאפשר למסמכים מהמקורות שברשימה לגלות את הכלי ולהפעיל אותו. Chrome ממליץ לחשוף כלים שקוראים וכותבים רק למקורות שאפשר לסמוך עליהם שיפעלו בשם המשתמש."
+  },
+  "sec_exposed_to_cross_origin_fix": {
+    "message": "השאירו את exposedTo ריק אלא אם שותף שנבדק זקוק לכלי; לעולם אל תחשפו כלים שמשנים מצב למקורות שאינם בשליטתכם."
+  },
+  "sec_text_far_over_budget_title": {
+    "message": "טקסט למודל שחורג בהרבה מהתקציב"
+  },
+  "sec_text_far_over_budget_why": {
+    "message": "שדה ארוך יותר מפי שניים מתקציב התווים של Chrome. טקסט ארוך יכול להסתיר הוראות במקום שאיש אינו בודק (גלישת תיאור ארוך, arXiv 2606.06387); תווים בלתי נראים או גוש מקודד בתוכו מעידים על הסתרה."
+  },
+  "sec_text_far_over_budget_fix": {
+    "message": "קצרו את השדה אל מתחת לתקציב והסירו תוכן בלתי נראה או מקודד; העבירו פרטים לתיעוד."
+  },
+  "sec_client_secret_exposed_title": {
+    "message": "מפתח סודי שנשלח בסקריפט של הדף"
+  },
+  "sec_client_secret_exposed_why": {
+    "message": "פרט גישה בתבנית של מפתח סודי של ספק מופיע בסקריפט שכל מבקר מוריד. כל אחד יכול להעתיק אותו; רק מפתחות שמיועדים לפרסום מתאימים לקוד בצד הלקוח. הערך אינו מוצג ואינו נשמר."
+  },
+  "sec_client_secret_exposed_fix": {
+    "message": "בטלו והחליפו את המפתח אצל הספק כבר עכשיו, ואז העבירו את הקריאה לשרת שלכם."
+  },
+  "sec_output_reflects_input_title": {
+    "message": "פלט הכלי מחזיר את קלט המפעיל"
+  },
+  "sec_output_reflects_input_why": {
+    "message": "בדיקה שלחה סמן ייחודי והכלי החזיר אותו בתוצאה. טקסט שמגיע לפלט ללא שינוי יכול לשאת הוראות לשלב הבא של הסוכן (הזרקה דרך הפלט, מפרט §6.3.1.2)."
+  },
+  "sec_output_reflects_input_fix": {
+    "message": "אל תעתיקו ארגומנטים לתוצאה; החזירו נתונים מובנים ועובדתיים, והגדירו untrustedContentHint כשהתוצאה כוללת תוכן של משתמשים."
+  },
+  "security_no_callbackSource": {
+    "message": "קוד המקור של ה-callback לא נקרא עבור הכלים האלה שהוצהרו לקריאה בלבד: $1. הפעילו מצב מדידה לאתר זה כדי לקרוא אותו; הם אינם מוצגים כתקינים."
+  },
+  "security_overridesActive": {
+    "message": "ל-$1 כלים יש מעקף מקומי. סקירה זו קוראת את החוזים שהדף מצהיר עליהם, לא את המעקפים."
+  },
+  "security_beforeAfter": {
+    "message": "לפני / אחרי"
+  },
+  "security_beforeAfterHelp": {
+    "message": "החוזה שהדף מצהיר עליו והחוזה שהתיקון המוצע היה רושם, כ-JSON קנוני עם השוואה שורה אחר שורה. דבר אינו מוחל על הדף."
+  },
+  "security_copyDiff": {
+    "message": "העתקת ההשוואה"
+  },
+  "security_copyDiffHelp": {
+    "message": "העתקת ההשוואה לפני ואחרי ללוח."
+  },
+  "security_tryFix": {
+    "message": "בדיקת התיקון באופן מקומי"
+  },
+  "security_tryFixHelp": {
+    "message": "שומר את התיאור, הסכמה והרמזים המוצעים כמעקף מקומי של כלי זה. Agent Lab ו-Evals משתמשים בהם אז; הדף אינו משתנה, וסקירה זו ממשיכה לקרוא את החוזה שלו."
+  },
+  "security_tryFixDone": {
+    "message": "המעקף המקומי נשמר. Agent Lab ו-Evals מציעים כעת את החוזה המוצע; אפשר להסיר אותו בלשונית המעקף של הכלי."
+  },
+  "security_tryFixError": {
+    "message": "לא ניתן היה לשמור את המעקף. דבר לא שונה."
+  },
+  "toolOverride_annotationsActive": {
+    "message": "רמזים שהוחלפו באופן מקומי בבדיקת התיקון: $1"
+  },
+  "env_legacyTestingApi": {
+    "message": "דף זה חושף אובייקט modelContextTesting. ‏Chrome הסיר את ממשק הבדיקה הזה בגרסה 152, ולכן מקורו בסקריפט של הדף או ב-polyfill; ‏Explorer אינו משתמש בו ואינו סומך עליו."
+  },
+  "baseline_newRules": {
+    "message": "$1 ממצאים נובעים מכללים שנוספו אחרי שמירת קו הבסיס הזה: בדיקות חדשות, לא שינויים באתר."
+  },
+  "security_startersTitle": {
+    "message": "חוזי פתיחה מתוך הטפסים של דף זה"
+  },
+  "security_startersIntro": {
+    "message": "דף זה אינו חושף כלים. כל הצעה נוצרת מטופס בדף: מאפיינים הצהרתיים ללא toolautosubmit, ורישום document.modelContext עם סכמה סגורה, אימות ושלב אישור. לא פעיל: יש לבדוק ולהתאים לפני שימוש."
+  },
+  "security_startersSkipped": {
+    "message": "$1 טפסים לא הוצעו: שדות סיסמה, קוד חד־פעמי, כרטיס או קובץ שייכים לאדם, לא לסוכן."
+  },
+  "security_copyRegistration": {
+    "message": "העתקת הרישום"
+  },
+  "security_copyMarkup": {
+    "message": "העתקת מאפייני הטופס"
+  },
+  "security_copyStarterHelp": {
+    "message": "העתקת חוזה הפתיחה הלא פעיל ללוח."
   },
   "bridge_title": {
     "message": "גשר MCP מקומי",

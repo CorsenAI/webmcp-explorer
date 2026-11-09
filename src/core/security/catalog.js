@@ -38,7 +38,7 @@ export const REFS = {
   'spec-issue-316': { label: 'WebMCP issue #316 — sensitive form fields (credentials, card data, national IDs)', url: 'https://github.com/webmachinelearning/webmcp/issues/316' },
   'spec-issue-92': { label: 'WebMCP issue #92 — re-registration race on the validation layer', url: 'https://github.com/webmachinelearning/webmcp/issues/92' },
   'spec-issue-328': { label: 'WebMCP issue #328 — signaling tool stability to agents', url: 'https://github.com/webmachinelearning/webmcp/issues/328' },
-  'chrome-secure-tools': { label: 'Chrome — WebMCP tool security (character budgets, exposeTo, hints), 2026-09-01', url: 'https://developer.chrome.com/docs/ai/webmcp/secure-tools' },
+  'chrome-secure-tools': { label: 'Chrome — WebMCP tool security (character budgets, exposedTo, hints), 2026-09-01', url: 'https://developer.chrome.com/docs/ai/webmcp/secure-tools' },
   'chrome-agent-security': { label: 'Chrome — agent security considerations for WebMCP, 2026-06-09', url: 'https://developer.chrome.com/docs/agents/security' },
   'chrome-best-practices': { label: 'Chrome — WebMCP best practices, 2026-05-18', url: 'https://developer.chrome.com/docs/ai/webmcp/best-practices' },
   'owasp-mcp03': { label: 'OWASP MCP Top 10 — MCP03 Tool Poisoning', url: 'https://owasp.org/projects/mcp-top-10' },
@@ -50,6 +50,16 @@ export const REFS = {
   'arxiv-msti': { label: 'arXiv 2606.06387 — WebMCP tool surface poisoning (mid-session tool injection), 2026-06', url: 'https://arxiv.org/abs/2606.06387' },
   'lighthouse-agentic': { label: 'Lighthouse — Agentic browsing audits (llms.txt, registered WebMCP tools), 2026-05-05', url: 'https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring' },
   'unicode-tr36': { label: 'Unicode TR36 — security considerations (invisible and bidi characters, mixed scripts)', url: 'https://www.unicode.org/reports/tr36/' },
+  // Engine v3 (2026-11-08): sources read on that date, see docs/research/2026-11-08-engine-v3-sources.md.
+  'spec-exposed-to': { label: 'WebMCP spec — registerTool exposedTo (cross-origin opt-in), 2026-11-02', url: 'https://webmachinelearning.github.io/webmcp/#dom-modelcontextregistertooloptions-exposedto' },
+  'spec-declarative-explainer': { label: 'WebMCP declarative API explainer — input schema synthesis', url: 'https://github.com/webmachinelearning/webmcp/blob/main/declarative-api-explainer.md' },
+  'chrome-declarative': { label: 'Chrome — declarative WebMCP API, 2026-09-25', url: 'https://developer.chrome.com/docs/ai/webmcp/declarative-api' },
+  'chrome-agentic-forms': { label: 'Chrome — agentic forms: when to omit toolautosubmit', url: 'https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/agentic-forms' },
+  'html-hidden-input': { label: 'HTML — hidden inputs are submitted with their form', url: 'https://html.spec.whatwg.org/multipage/input.html#hidden-state-(type=hidden)' },
+  'rfc9110-safe-methods': { label: 'RFC 9110 §9.2.1 — safe methods (POST is not safe)', url: 'https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.1' },
+  'github-token-prefixes': { label: 'GitHub — token prefixes', url: 'https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github' },
+  'stripe-keys': { label: 'Stripe — API key types (only publishable keys may be exposed)', url: 'https://docs.stripe.com/keys' },
+  'slack-tokens': { label: 'Slack — token types', url: 'https://docs.slack.dev/authentication/tokens' },
 };
 
 const entry = (axis, severity, nature, refs) => ({ axis, severity, nature, refs });
@@ -113,6 +123,18 @@ export const CATALOG = {
   // Environment: the page's own policy.
   'no-tools-policy-open': entry(AXIS.environment, 'info', NATURE.observed, ['spec-6.4.1']),
   'legacy-host': entry(AXIS.environment, 'info', NATURE.observed, ['chrome-secure-tools']),
+  // Engine v3: families WMCP-SEC-008…013 are assigned by rules.js. Severity set per evidence where
+  // the finding says so (readonly-callback-mutation, exposed-to-cross-origin, text-far-over-budget,
+  // client-secret-exposed, output-reflects-input); the catalogue value is the default.
+  'declarative-hidden-parameter': entry(AXIS.governance, 'medium', NATURE.indicator, ['chrome-declarative', 'html-hidden-input', 'spec-6.3.2']),
+  'declarative-credential-field': entry(AXIS.privacy, 'high', NATURE.observed, ['spec-issue-316', 'chrome-agentic-forms', 'spec-6.3.3']),
+  'declarative-param-orphan': entry(AXIS.governance, 'low', NATURE.observed, ['spec-declarative-explainer', 'chrome-declarative']),
+  'declarative-post-auto-submit': entry(AXIS.governance, 'medium', NATURE.indicator, ['chrome-agentic-forms', 'rfc9110-safe-methods']),
+  'readonly-callback-mutation': entry(AXIS.governance, 'high', NATURE.indicator, ['spec-6.3.2', 'chrome-agent-security', 'rfc9110-safe-methods']),
+  'exposed-to-cross-origin': entry(AXIS.surface, 'medium', NATURE.observed, ['spec-exposed-to', 'chrome-secure-tools']),
+  'text-far-over-budget': entry(AXIS.injection, 'medium', NATURE.observed, ['chrome-secure-tools', 'arxiv-msti', 'spec-6.3.1.1']),
+  'client-secret-exposed': entry(AXIS.privacy, 'critical', NATURE.observed, ['owasp-mcp01', 'github-token-prefixes', 'stripe-keys', 'slack-tokens']),
+  'output-reflects-input': entry(AXIS.injection, 'medium', NATURE.observed, ['spec-6.3.1.2', 'spec-6.4.4', 'chrome-secure-tools']),
 };
 
 export const CODES = Object.keys(CATALOG);

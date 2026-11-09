@@ -3,6 +3,10 @@
 (() => {
   'use strict';
   if (window.__webmcpExplorerInstrumented) return;
+  // Captured before any page script runs: callback text is read with the intrinsic, never a page override.
+  const functionSource = Function.prototype.toString;
+  // The second registerTool argument: only exposedTo origins are kept, as bounded strings.
+  const exposedOf = options => { try { return Array.isArray(options?.exposedTo) ? options.exposedTo.slice(0, 20).map(String) : null; } catch { return null; } };
   let contexts;
   try {
     const doc = document.modelContext, nav = navigator.modelContext;
@@ -42,7 +46,8 @@
               : runtimeId === 'document' ? 'imperative-document' : 'imperative-navigator-legacy';
             const metadata = structuredClone({name:descriptor.name,description:descriptor.description ?? '',
               title:descriptor.title ?? '',inputSchema:descriptor.inputSchema ?? {type:'object'},annotations:descriptor.annotations ?? {}});
-            captures.push({key,value:{runtimeId,descriptor,metadata,callback:descriptor.execute,entry,source}});
+            captures.push({key,value:{runtimeId,descriptor,metadata,callback:descriptor.execute,entry,source,
+              exposedTo:method === 'registerTool' ? exposedOf(args[1]) : null}});
             // Compatibility snapshot for the existing Source / registration diagnosis views.
             sources.set(runtimeId === 'document' || !sources.has(descriptor.name) ? descriptor.name : key, entry);
             entries.push(entry);
@@ -103,8 +108,24 @@
     getTools: runtimeId => snapshots(runtimeId).map(metadata),
     source: (runtimeId, name) => {
       const x = captured.get(`${runtimeId}:${name}`);
-      return x ? { ...x.entry, registrationSource: x.source, annotationsObserved: !!x.metadata,
+      return x ? { ...x.entry, registrationSource: x.source, annotationsObserved: !!x.metadata, exposedTo: x.exposedTo ?? null,
         ...(x.metadata?.annotations?.destructiveHint === true ? { destructiveHint: true } : {}) } : null;
+    },
+    // Engine v3 (WMCP-SEC-009): labels of the captured callback's own source text, from patterns
+    // the extension passes as data. Only labels leave this closure, never the source.
+    callbackLabels: (runtimeId, name, patterns, limit) => {
+      const x = captured.get(`${runtimeId}:${name}`);
+      if (!x) return null;
+      try {
+        if (typeof x.callback !== 'function') return { status: 'unavailable', labels: [] };
+        const text = Reflect.apply(functionSource, x.callback, []);
+        if (/\[native code\]/.test(text)) return { status: 'native-or-bound', labels: [] };
+        const max = Number.isInteger(limit) && limit > 0 ? limit : 16384, head = text.slice(0, max), labels = [];
+        for (const p of Array.isArray(patterns) ? patterns : []) {
+          try { if (new RegExp(String(p.source), String(p.flags ?? '')).test(head)) labels.push(String(p.label)); } catch { /* skip a bad pattern */ }
+        }
+        return { status: text.length > max ? 'partial-source' : 'source-text-inspected', labels };
+      } catch { return { status: 'unavailable', labels: [] }; }
     },
     execute(runtimeId, name, args, options) {
       const x = snapshots(runtimeId).find(x => x.metadata.name === name);

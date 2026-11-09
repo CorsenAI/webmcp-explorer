@@ -105,6 +105,7 @@ export function renderToolOverride(root, { tool, existing, onSaved, onRemoved })
       ? JSON.stringify(tool.originalInputSchema ?? tool.inputSchema, null, 2)
       : t('toolOverride_none')),
     field(t('toolOverride_schemaOverride'), schema),
+    ...(state.annotations ? [el('p', { class: 'field-note', text: t('toolOverride_annotationsActive', [JSON.stringify(state.annotations)]) })] : []),
     el('p', { class: 'field-group', text: t('toolOverride_mockResponse') }),
     modes,
     modeHelp,
@@ -168,6 +169,8 @@ export function renderToolOverride(root, { tool, existing, onSaved, onRemoved })
       disabled: disable.checked,
       description: description.value.trim() ? description.value : null,
       inputSchema: parsedSchema,
+      // Hints set by "Test this fix" (engine v3) survive an edit of the other fields.
+      annotations: state.annotations ?? null,
       mock: {
         mode: state.mock.mode ?? 'off',
         result: payload.value,

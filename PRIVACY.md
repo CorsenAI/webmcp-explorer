@@ -1,6 +1,6 @@
 # WebMCP Explorer — Privacy Policy
 
-Last reviewed: 2026-11-04. Applies to WebMCP Explorer 2.3.0.
+Last reviewed: 2026-11-09. Applies to WebMCP Explorer 2.4.0.
 Earlier Store versions may offer fewer features; optional features described below act only
 when you enable or request them.
 
@@ -48,9 +48,28 @@ On a site you have allowed, Explorer reads, and processes on your device only:
   hidden/password/file contents and closed shadow roots are not read. Submit-handler
   consent checks cannot be inferred from this inventory.
 - The `src` and `allow` attributes of iframes, to explain which frames could be inspected.
+- For the declarative tool forms above, the names, types and `autocomplete` tokens of every
+  control, hidden ones included, so the review can say that a hidden business value is submitted
+  without the agent seeing it. Names only: no value is read.
+- When a page exposes no tool, the attributes of its ordinary forms on the top document (field
+  names, types, constraints, labels, option values, the form's method and the path of its action),
+  to propose a starter contract. The starter is text to copy; no value you typed is read and
+  nothing is registered or submitted.
+- In Instrumentation Mode, the `exposedTo` origins a registration call passes, and the source
+  text of the tool's own `execute` callback, read in the page with the browser's intrinsic
+  function-to-string, at most 16,384 characters, in memory only. Only fixed labels such as
+  "request-method-write" leave the page; the source text, its constants and any secret it
+  might contain are never copied, stored or displayed.
+- Only when you ask for it, on a site you declared you control: the text of the top document's
+  inline scripts and of its same-origin script files (at most twenty files, one million characters
+  each), read once in memory, without cookies, to look for provider secret key formats. A finding
+  keeps the provider, the key type, the count and the length; the text and any key value are
+  discarded at once and never stored, displayed or exported. Scripts from other origins are not
+  fetched.
 
 Explorer does **not** scrape the full page HTML or unrelated visible text. Declared tool
-metadata and static form choices are the limited surface described above. It does not read
+metadata, static form choices and, on request, the page's own scripts are the limited surface
+described above. It does not read
 cookies or form values you type.
 
 ## Does Explorer modify the page?

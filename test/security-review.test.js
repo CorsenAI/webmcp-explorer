@@ -170,7 +170,9 @@ test('the review sorts by severity, counts per severity and per tool, and report
   assert.equal(r.byTool.get('p@0').length, 3);
   assert.equal(r.coverage.tools, 2);
   assert.equal(r.coverage.rules, CODES.length);
-  assert.deepEqual(r.coverage.notObservable.map((n) => n.code), ['registration-provenance', 'lifecycle', 'authentication-consent', 'origin-scan-not-run']);
+  assert.deepEqual(r.coverage.notObservable.map((n) => n.code), ['registration-provenance', 'lifecycle', 'authentication-consent', 'origin-scan-not-run', 'callback-source']);
+  // A declared read-only tool whose callback text was not read is unknown, never clean (engine v3).
+  assert.deepEqual(r.coverage.notObservable.at(-1).detail, ['search_catalogue: not-observed']);
   assert.equal(maxSeverity(r.byTool.get('p@0')), 'critical');
   assert.equal(maxSeverity([]), null);
 });

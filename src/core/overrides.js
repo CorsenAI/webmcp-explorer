@@ -21,6 +21,8 @@ export function createOverride(logicalId) {
     disabled: false,
     description: null,
     inputSchema: null,
+    // Engine v3: the WebMCP hints of a proposed fix, tried locally ("Test this fix").
+    annotations: null,
     mock: { mode: 'off', result: '', error: '', latencyMs: 0, once: false },
   };
 }
@@ -41,17 +43,20 @@ export function applyOverrides(tools, overrides = []) {
 
     const changedDescription = typeof override.description === 'string';
     const changedSchema = override.inputSchema !== null && override.inputSchema !== undefined;
+    const changedAnnotations = Boolean(override.annotations) && typeof override.annotations === 'object' && !Array.isArray(override.annotations);
     const mocked = override.mock?.mode && override.mock.mode !== 'off' && !override.mock.spent;
-    const overridden = changedDescription || changedSchema || override.disabled || mocked;
+    const overridden = changedDescription || changedSchema || changedAnnotations || override.disabled || mocked;
 
     return {
       ...tool,
       description: changedDescription ? override.description : tool.description,
       inputSchema: changedSchema ? override.inputSchema : tool.inputSchema,
+      annotations: changedAnnotations ? override.annotations : tool.annotations,
       // The originals travel with the tool so the UI can show a before/after rather than
       // asking the user to remember what the site actually declared.
       originalDescription: tool.description,
       originalInputSchema: tool.inputSchema,
+      originalAnnotations: tool.annotations,
       disabled: Boolean(override.disabled),
       mockMode: mocked ? override.mock.mode : 'off',
       overridden: Boolean(overridden),

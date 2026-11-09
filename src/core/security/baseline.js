@@ -3,7 +3,16 @@
 // meaningful: not the whole list again, but what appeared, what went away, which contracts
 // moved. Pure JavaScript; bounded so a hostile page cannot grow the record without limit.
 
-import { SEVERITY_RANK } from './catalog.js';
+import { SEVERITY_RANK, CODES } from './catalog.js';
+
+// Engine v3 (2026-11-08) added finding codes. A baseline records the engine that made it, so a
+// finding whose code did not exist then is shown as a new rule, never as a regression of the site.
+export const ENGINE_VERSION = 3;
+export const ENGINE_V3_CODES = Object.freeze(['declarative-hidden-parameter', 'declarative-credential-field',
+  'declarative-param-orphan', 'declarative-post-auto-submit', 'readonly-callback-mutation', 'exposed-to-cross-origin',
+  'text-far-over-budget', 'client-secret-exposed', 'output-reflects-input']);
+const CODES_BEFORE = { 2: new Set(CODES.filter((code) => !ENGINE_V3_CODES.includes(code))) };
+const knownAt = (baseline) => (baseline?.engine === ENGINE_VERSION ? null : CODES_BEFORE[baseline?.engine ?? 2] ?? CODES_BEFORE[2]);
 
 export const MAX_BASELINE_FINDINGS = 300;
 export const MAX_BASELINE_TOOLS = 1000;
@@ -20,6 +29,7 @@ export function makeBaseline(review, discovery, { at = Date.now() } = {}) {
   return {
     origin: discovery?.topOrigin ?? null,
     at,
+    engine: ENGINE_VERSION,
     tools,
     findings,
     truncated: (review?.findings?.length ?? 0) > MAX_BASELINE_FINDINGS || (discovery?.tools?.length ?? 0) > MAX_BASELINE_TOOLS,
@@ -33,7 +43,10 @@ export function diffBaseline(baseline, review, discovery) {
   if (!baseline) return null;
   const nowKeys = new Set((review?.findings ?? []).map(findingKey));
   const baseKeys = new Set(baseline.findings.map((f) => f.key));
-  const added = (review?.findings ?? []).filter((f) => !baseKeys.has(findingKey(f)));
+  const known = knownAt(baseline);
+  const fresh = (review?.findings ?? []).filter((f) => !baseKeys.has(findingKey(f)));
+  const added = known ? fresh.filter((f) => known.has(f.code)) : fresh;
+  const newRules = known ? fresh.filter((f) => !known.has(f.code)) : [];
 
   const nowTools = new Map((discovery?.tools ?? []).map((t) => [t.name, t]));
   const baseTools = new Map(baseline.tools.map((t) => [t.name, t]));
@@ -53,6 +66,7 @@ export function diffBaseline(baseline, review, discovery) {
   return {
     baselineAt: baseline.at,
     added,
+    newRules,
     resolved,
     toolsAdded,
     toolsRemoved,
@@ -69,6 +83,7 @@ export function summarizeDiff(diff, { at = Date.now() } = {}) {
   return {
     at,
     added: diff.added.length,
+    newRules: diff.newRules?.length ?? 0,
     maxAdded: diff.maxAdded,
     resolved: diff.resolved.length,
     toolsAdded: diff.toolsAdded.length,

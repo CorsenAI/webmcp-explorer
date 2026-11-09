@@ -113,5 +113,8 @@ still run in its suite.
 | WMP-0054 | A declarative form is still listed by `getTools()` on 155 and 157 (object schema) after the spec removed the declarative API | confirmed | declarative |
 | WMP-0055 | A declarative form without `toolautosubmit` keeps its call pending until a person submits it; an abort settles it at once, fires `toolcancel` and releases the form (155, 157) | confirmed | declarative |
 | WMP-0056 | Chrome 155 refuses a declarative call that names a parameter the form does not have; imperative arguments stay unchecked | observed | declarative |
+| WMP-0057 | Native declarative schema (155, 157) omits hidden, file and disabled controls, includes password fields and `form=` controls, carries no `maxLength`/`format` | confirmed | declarative |
+| WMP-0058 | A form with `toolname` but no `tooldescription` is not registered (155, 157) | confirmed | declarative |
+| WMP-0059 | `exposedTo` with `*`, plain http or an unparsable entry rejects the whole registration with `SecurityError`; `getTools()` never reports `exposedTo` (155, 157) | confirmed | platform |
 
 Add new findings at the end; never renumber.

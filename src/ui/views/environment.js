@@ -61,6 +61,7 @@ export function renderEnvironment(root, result, { onDemo = null, tabId = null, e
   }
 
   if (reason === 'api-absent'&&!emulationInStatus) nodes.push(emulationControl(result.url,tabId));
+  if (result.env.legacyTestingApi) nodes.push(el('p', { class: 'field-note', text: t('env_legacyTestingApi') }));
   nodes.push(table,diagnosticEvidence({state:reason,pageUrl:result.url??null,origin:result.topOrigin??null,frameId:0,checks,missingMethods:missing??[]}));
   root.replaceChildren(...nodes);
 }

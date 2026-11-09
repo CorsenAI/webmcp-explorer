@@ -16,11 +16,20 @@ Free, no account, no telemetry. Apache-2.0.
   tracks registrations and removals.
 - **Run** a tool from a generated form or JSON arguments, read the result, save checks and combine
   calls into multi-step recipes. Unknown effects stop automatic continuation.
-- **Review security with evidence**: prompt-injection indicators, hidden or look-alike characters,
-  consequential actions, inconsistent read-only claims, sensitive parameters, loose schemas and
-  changes in registered contracts. A provisional grade shows its calculation and what could not be
-  observed.
-- **Export** reviewed Playwright tests and Markdown or SARIF security reports.
+- **Review security with evidence**: thirteen rule families (WMCP-SEC-001 to 013) cover
+  prompt-injection indicators, hidden or look-alike characters, consequential actions without hints,
+  read-only claims contradicted by the callback's own source, declarative forms that submit hidden
+  business fields, untrusted content, `exposedTo` lists and frames, text far beyond Chrome's
+  budgets and changes in registered contracts. A provisional grade shows its calculation and what
+  could not be observed.
+- **Fix with a diff**: each fix shows the observed contract and the proposed one. *Test this fix
+  locally* applies the proposed description, schema and hints on Explorer's side only. A page with
+  forms and no tool gets starter contracts, without auto-submit and without sensitive fields.
+- **Check a site you control**: bounded probes (at most eight calls per tool) and, on request, a
+  search of the page's own scripts for provider secret keys, reported by type and length, never by
+  value.
+- **Export** reviewed Playwright tests and Markdown or SARIF security reports. For GitHub code
+  scanning of a public page, [webmcp.corsen.ai/ci/](https://webmcp.corsen.ai/ci/) generates the workflow.
 - **Agent Lab**: let your own model provider call the page's tools and inspect every call. Keys stay
   in session memory, or in an optional encrypted vault.
 - **Local MCP bridge** (optional): connect a trusted MCP client through the zero-dependency Node
@@ -89,11 +98,5 @@ and the trademark boundary. Chrome and WebMCP are referenced descriptively; this
 an official Google product. It is also unrelated to the experimental `webmcp-explorer` sample in
 Microsoft Edge's `webmcp-labs` repository.
 
-The 2.3.0-rc1 source passed 735 distinct unit cases on Linux, macOS and Windows. The complete
-Linux Chrome 155 headful campaign passed 70/70. Native UI and MCP flows passed on macOS
-Chrome 155 and Windows Chrome 157 ARM64. See [QUALIFICATION.md](QUALIFICATION.md) for the exact
-scope and [SOURCE-SHA256.json](SOURCE-SHA256.json) for the qualified product-file hashes.
-
-The **Chrome Web Store now distributes version 2.3.0**, displayed as **2.3.0-rc1**, with eight
-interface languages (verified on 4 November 2026). This repository contains the corresponding
-qualified source. The `rc1` display label comes from the submitted package's `version_name`.
+See [QUALIFICATION.md](QUALIFICATION.md) for the qualification of this source (2.4.0) and
+[SOURCE-SHA256.json](SOURCE-SHA256.json) for the hashes of its product files.

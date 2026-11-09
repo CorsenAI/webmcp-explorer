@@ -309,6 +309,7 @@ async function render() {
       const live = await chrome.runtime.sendMessage({ type: 'live-list', tabId: tab.id, limit: 500 }).catch(() => null);
       await renderSecurity(viewEl, {
         result, tabId: tab.id, events: live?.events ?? [],
+        onOverrideChanged: () => render(),
         onOpenTool: (finding) => {
           const tool = result.tools.find((item) => (item.instanceId ?? item.logicalId) === finding.instanceId);
           if (!tool) return;

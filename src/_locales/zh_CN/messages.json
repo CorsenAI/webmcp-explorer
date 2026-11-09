@@ -1838,11 +1838,67 @@
   "probes_consentRequired": {
     "message": "探测未运行：请先确认您控制此网站。"
   },
+  "secrets_title": {
+    "message": "页面脚本中的服务商密钥 (WMCP-SEC-013)",
+    "description": "Key search heading in the own-site checks box."
+  },
+  "secrets_intro": {
+    "message": "在内存中一次性读取此页面的内联脚本及同源脚本文件，查找服务商密钥格式（Stripe、GitHub、Slack；OpenAI 和 Anthropic 采用检测启发式规则）。仅保留服务商、密钥类型和长度，从不保留密钥值。不获取其他来源的脚本，也不调用任何工具。",
+    "description": "Key search explanation."
+  },
+  "secrets_run": {
+    "message": "查找服务商密钥",
+    "description": "Button."
+  },
+  "secrets_runHelp": {
+    "message": "读取此页面的脚本，并按类型和长度报告密钥格式。确认您控制此网站之前不可用。",
+    "description": "Button tooltip."
+  },
+  "secrets_done": {
+    "message": "已读取 $1 个内联脚本和 $2 个脚本文件 · $3 个发现（不显示密钥值）",
+    "description": "Result summary; $1 inline scripts, $2 script files, $3 findings.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "secrets_none": {
+    "message": "在 $1 个内联脚本和 $2 个脚本文件中未发现服务商密钥格式。",
+    "description": "Clean result; $1 inline scripts, $2 script files.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "secrets_failed": {
+    "message": "无法读取脚本：$1",
+    "description": "Error; $1 reason.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "secrets_consentRequired": {
+    "message": "未执行查找：请先确认您控制此网站。",
+    "description": "Error."
+  },
   "probes_consequential": {
     "message": "声明为有副作用"
   },
   "probes_disclosure": {
-    "message": "运行探测会在您的浏览器会话中对 $2 上选定的 $1 个工具各发起最多五次调用（使用自动生成的参数与畸形参数）。不会向任何外部地址发送数据，结果与发现项均保留在当前设备上。"
+    "message": "运行探测会在您的浏览器会话中对 $2 上选定的 $1 个工具各发起最多八次调用（使用自动生成的参数与畸形参数）。不会向任何外部地址发送数据，结果与发现项均保留在当前设备上。"
   },
   "probes_done": {
     "message": "已发起 $1 次调用 · $2 项发现"
@@ -1851,7 +1907,7 @@
     "message": "每次调用都会记录在该工具的“历史”中，并标记为“探测”。"
   },
   "probes_intro": {
-    "message": "被动审查仅读取契约；主动探测则会在当前页面与会话中实际调用所选工具，依次传入由 Schema 生成的合规参数以及 Schema 禁止的参数（类型错误、缺少必填项、未知属性、10,000 字符长字符串）。每个工具最多调用五次，逐个串行执行、可随时取消，并全部作为探测记录在历史中。会改变状态的工具将实际产生状态变更。"
+    "message": "被动审查仅读取契约；主动探测则会在当前页面与会话中实际调用所选工具，依次传入由 Schema 生成的合规参数以及 Schema 禁止的参数（类型错误、缺少必填项、未知属性、10,000 字符长字符串、空的必填字符串、超出范围的数字），并发送一个惰性标记以显示工具是否回显其输入。每个工具最多调用八次，逐个串行执行、可随时取消，并全部作为探测记录在历史中。会改变状态的工具将实际产生状态变更。"
   },
   "probes_none": {
     "message": "探测未发现问题。已执行调用：$1 次。"
@@ -4648,6 +4704,144 @@
   "sec_convention_unavailable_fix": {
     "description": "Phase B security review.",
     "message": "若本应发布此约定，请检查所列响应。仅因缺失无需安全修复；未进行自动重试。"
+  },
+  "sec_declarative_hidden_parameter_title": {
+    "message": "代理看不到的隐藏表单值"
+  },
+  "sec_declarative_hidden_parameter_why": {
+    "message": "Chrome 会把隐藏输入排除在声明式工具的架构之外，但表单仍会提交这些值。代理只填写可见字段，无法看到或质疑金额、收款人或角色等值。"
+  },
+  "sec_declarative_hidden_parameter_fix": {
+    "message": "将业务值保留在服务器上并由会话推导，或将其作为经过审查的参数公开。隐藏字段只应携带防伪令牌。"
+  },
+  "sec_declarative_credential_field_title": {
+    "message": "声明式工具要求提供密码或银行卡数据"
+  },
+  "sec_declarative_credential_field_why": {
+    "message": "在 Chrome 中，密码字段属于声明式工具的架构，因此代理会被要求通过模型提供凭据或银行卡数据。这类字段应由本人填写（规范 issue #316）。"
+  },
+  "sec_declarative_credential_field_fix": {
+    "message": "从向代理公开的表单中移除登录、一次性验证码和银行卡字段，让本人直接填写。"
+  },
+  "sec_declarative_param_orphan_title": {
+    "message": "代理永远收不到的参数说明"
+  },
+  "sec_declarative_param_orphan_why": {
+    "message": "toolparamdescription 设置在没有名称或已禁用的控件上。浏览器会把这些控件排除在架构之外，因此该说明描述的内容代理无法填写。"
+  },
+  "sec_declarative_param_orphan_fix": {
+    "message": "为控件添加 name 属性并启用它，或删除该说明。"
+  },
+  "sec_declarative_post_auto_submit_title": {
+    "message": "未经审核即提交的 POST 表单"
+  },
+  "sec_declarative_post_auto_submit_why": {
+    "message": "toolautosubmit 让代理在本人检查之前就提交表单。该表单使用 POST，这是不安全的方法（RFC 9110），Chrome 建议对有后果的操作省略 toolautosubmit。"
+  },
+  "sec_declarative_post_auto_submit_fix": {
+    "message": "除非该操作只是无害的读取，否则请移除 toolautosubmit，让本人检查并提交已填写的表单。"
+  },
+  "sec_readonly_callback_mutation_title": {
+    "message": "只读声明与工具代码相矛盾"
+  },
+  "sec_readonly_callback_mutation_why": {
+    "message": "该工具声明了 readOnlyHint: true，但其回调源代码包含方法并非安全读取的请求，或表单提交。代理可能会在不询问的情况下运行只读工具。这是文本中的模式，并非观察到的行为。"
+  },
+  "sec_readonly_callback_mutation_fix": {
+    "message": "声明 readOnlyHint: false（有后果的操作还需 consequentialHint: true），或将写入操作移出该工具。请检查回调以确认。"
+  },
+  "sec_exposed_to_cross_origin_title": {
+    "message": "向其他源公开的工具"
+  },
+  "sec_exposed_to_cross_origin_why": {
+    "message": "exposedTo 允许所列源的文档发现并调用此工具。Chrome 建议仅向可信、可代表用户执行操作的源公开读写工具。"
+  },
+  "sec_exposed_to_cross_origin_fix": {
+    "message": "除非经过审查的合作方需要该工具，否则请保持 exposedTo 为空；切勿向您无法控制的源公开会改变状态的工具。"
+  },
+  "sec_text_far_over_budget_title": {
+    "message": "远超预算的面向模型文本"
+  },
+  "sec_text_far_over_budget_why": {
+    "message": "某个字段超过 Chrome 字符预算的两倍。长文本可以把指令藏在无人审阅的地方（长描述溢出，arXiv 2606.06387）；其中的不可见字符或编码块表明存在隐藏。"
+  },
+  "sec_text_far_over_budget_fix": {
+    "message": "将该字段缩短到预算以内，删除不可见或编码的内容，并把细节移到文档中。"
+  },
+  "sec_client_secret_exposed_title": {
+    "message": "页面脚本中包含密钥"
+  },
+  "sec_client_secret_exposed_why": {
+    "message": "一个符合服务商密钥格式的凭据出现在每位访问者都会下载的脚本中。任何人都能复制它；只有可公开的密钥才适合放在客户端代码中。不会显示或存储该值。"
+  },
+  "sec_client_secret_exposed_fix": {
+    "message": "立即在服务商处吊销并轮换该密钥，然后将调用移到您的服务器上。"
+  },
+  "sec_output_reflects_input_title": {
+    "message": "工具输出回显了调用方的输入"
+  },
+  "sec_output_reflects_input_why": {
+    "message": "探测发送了一个唯一标记，而工具在结果中原样返回了它。原样进入输出的文本可能携带给代理下一步的指令（输出注入，规范 §6.3.1.2）。"
+  },
+  "sec_output_reflects_input_fix": {
+    "message": "不要把参数复制到结果中；返回结构化的事实数据，并在结果包含用户内容时设置 untrustedContentHint。"
+  },
+  "security_no_callbackSource": {
+    "message": "未能读取这些声明为只读的工具的回调源代码：$1。为此网站启用插桩模式即可读取；这些工具不会被报告为无问题。"
+  },
+  "security_overridesActive": {
+    "message": "$1 个工具设有本地覆盖。此审查读取的是页面声明的契约，而非覆盖内容。"
+  },
+  "security_beforeAfter": {
+    "message": "修改前 / 修改后"
+  },
+  "security_beforeAfterHelp": {
+    "message": "页面声明的契约与建议修复将注册的契约，以规范化 JSON 和逐行差异展示。不会对页面做任何修改。"
+  },
+  "security_copyDiff": {
+    "message": "复制差异"
+  },
+  "security_copyDiffHelp": {
+    "message": "将修改前后的差异复制到剪贴板。"
+  },
+  "security_tryFix": {
+    "message": "在本地测试此修复"
+  },
+  "security_tryFixHelp": {
+    "message": "将建议的描述、Schema 和提示保存为此工具的本地覆盖。Agent Lab 和 Evals 随后会使用它们；页面不会被修改，此审查仍读取页面自身的契约。"
+  },
+  "security_tryFixDone": {
+    "message": "已保存本地覆盖。Agent Lab 和 Evals 现在提供建议的契约；可在工具的“覆盖”选项卡中移除。"
+  },
+  "security_tryFixError": {
+    "message": "无法保存覆盖。未做任何更改。"
+  },
+  "toolOverride_annotationsActive": {
+    "message": "已通过“在本地测试此修复”替换的提示：$1"
+  },
+  "env_legacyTestingApi": {
+    "message": "此页面暴露了 modelContextTesting 对象。Chrome 已在 152 版移除该测试 API，因此它来自页面脚本或 polyfill；Explorer 既不使用也不信任它。"
+  },
+  "baseline_newRules": {
+    "message": "$1 个发现项来自保存此基线之后新增的规则：这是新的检查，而非网站的变化。"
+  },
+  "security_startersTitle": {
+    "message": "基于此页面表单的起步契约"
+  },
+  "security_startersIntro": {
+    "message": "此页面未暴露任何工具。每个建议都来自此页面上的一个表单：不含 toolautosubmit 的声明式属性，以及带封闭 Schema、校验和确认步骤的 document.modelContext 注册。均为惰性示例：使用前请审阅并调整。"
+  },
+  "security_startersSkipped": {
+    "message": "$1 个表单未提供建议：密码、一次性验证码、银行卡或文件字段应由本人处理，而非交给代理。"
+  },
+  "security_copyRegistration": {
+    "message": "复制注册代码"
+  },
+  "security_copyMarkup": {
+    "message": "复制表单属性"
+  },
+  "security_copyStarterHelp": {
+    "message": "将此惰性起步契约复制到剪贴板。"
   },
   "bridge_title": {
     "message": "本地MCP桥接",

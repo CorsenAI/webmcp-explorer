@@ -5,6 +5,7 @@
 // the demo look good.
 
 import { probeMainWorld } from '../page/probe.js';
+import { CALLBACK_PATTERNS, TRACE_PATTERN } from '../core/security/callback-source.js';
 import { executeToolInPage, cancelToolInPage } from '../page/execute.js';
 
 let port = null;
@@ -42,7 +43,7 @@ async function answer(connected, msg) {
 
   try {
     if (msg.type === 'probe') {
-      const payload = await probeMainWorld(null);
+      const payload = await probeMainWorld(null, [...CALLBACK_PATTERNS, TRACE_PATTERN].map(({ label, source, flags }) => ({ label, source, flags })));
       connected.postMessage({ id: msg.id, payload });
       return;
     }

@@ -9,6 +9,7 @@ import { countReviewed, clearSecurityData, listControlled, setControlled, getBas
 import { recheckOpenTabs, applyRecheckSetting, recheckSetting, installRecheckAlarm } from './security-watch.js';
 import { fetchDiscovery } from './security-discovery.js';
 import { runProbes, stopProbes, probesRunning } from './security-probes.js';
+import { scanSecrets } from './security-secrets.js';
 import { runTool, cancelTool } from './execute.js';
 import { listCalls, clearCalls, stats } from '../storage/db.js';
 import { listOverrides, saveOverride, deleteOverride, clearOverrides } from '../storage/overrides.js';
@@ -143,6 +144,8 @@ const HANDLERS = {
   'security-probe-run': (msg) => runProbes({ tabId: msg.tabId, topOrigin: msg.topOrigin, tools: msg.tools ?? [] }),
   'security-probe-stop': (msg) => stopProbes(msg.tabId),
   'security-probe-state': (msg) => Promise.resolve({ running: probesRunning(msg.tabId) }),
+  // WMCP-SEC-013, on request and only for a declared controlled site: provider key formats in scripts.
+  'security-secrets-scan': (msg) => scanSecrets({ tabId: msg.tabId, topOrigin: msg.topOrigin }),
   // Security (S3): baselines per origin and the re-check of open tabs.
   'security-baseline-get': async (msg) => ({ baseline: await getBaseline(msg.origin) }),
   'security-baseline-save': async (msg) => ({ baseline: await saveBaseline(msg.baseline) }),

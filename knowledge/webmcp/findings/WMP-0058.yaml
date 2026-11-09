@@ -1,0 +1,28 @@
+id: WMP-0058
+title: A form with toolname but no tooldescription is not registered on Chrome 155 and 157
+date_observed: 2026-11-08
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new
+  mode: testing-flag
+expected: >
+  The declarative explainer pairs toolname with tooldescription; an early Chromium prototype only
+  registered a form carrying both attributes.
+observed: >
+  The fixture form probe_no_description (toolname, method get, one named input, no tooldescription)
+  is absent from getTools() while the two other fixture forms of the same page are listed.
+reliable_discriminator: >
+  getTools() names on fixtures/contract-v3.html
+impact:
+  - a missing tooldescription is a registration failure, not an exposed tool with a weak contract
+  - scanners must not score such a form as a tool; they report it as a registration diagnostic
+workaround: None.
+evidence:
+  fixture: fixtures/contract-v3.html
+  automated_test: tools/probe-contract-v3.mjs
+  chrome_e2e: true
+spec_status:
+  documented: not stated in Chrome's declarative page; implied by the explainer
+  implementation_specific: true
+products_affected: [WebMCP Explorer, WebMCP Scanner]
+status: confirmed

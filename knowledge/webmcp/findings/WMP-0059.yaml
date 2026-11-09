@@ -1,0 +1,35 @@
+id: WMP-0059
+title: registerTool() rejects the whole registration with SecurityError when one exposedTo entry is not a potentially trustworthy origin, and getTools() never reports exposedTo (155, 157)
+date_observed: 2026-11-08
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new
+  mode: testing-flag
+expected: >
+  Spec 2026-11-02, registerTool steps 845-857 of index.bs: each exposedTo entry is URL-parsed; a
+  failure or an origin that is not potentially trustworthy rejects with a SecurityError DOMException.
+  RegisteredTool has name, title, description, inputSchema, outputSchema, annotations, origin, window.
+observed: >
+  exposedTo ["*"], ["http://partner.example"], ["not a url"] and ["https://partner.example", "*"]
+  reject with "SecurityError: Only secure origins are allowed in the exposedTo list." and register
+  nothing. [], [own origin], ["https://partner.example"], ["https://partner.example/path?q=1"] and
+  ["http://localhost:9999"] resolve. The listed RegisteredTool objects own name, title, description,
+  inputSchema, origin and window; exposedTo is absent, and annotations are absent when none were
+  declared. Aborting each signal removed every probe tool.
+reliable_discriminator: >
+  the SecurityError message "Only secure origins are allowed in the exposedTo list."
+impact:
+  - a wildcard or plain-http exposure is a refused registration, not an exposed tool
+  - exposedTo is only observable at registration time (instrumentation or a recording stand-in)
+  - a recording stand-in must apply the same rejection or it would report tools Chrome refuses
+workaround: >
+  Scanner stand-in applies the spec check; Explorer instrumentation records options.exposedTo.
+evidence:
+  fixture: fixtures/contract-v3.html
+  automated_test: tools/probe-contract-v3.mjs
+  chrome_e2e: true
+spec_status:
+  documented: webmcp index.bs 2026-11-02, registerTool algorithm and ModelContextRegisterToolOptions
+  implementation_specific: false
+products_affected: [WebMCP Explorer, WebMCP Scanner]
+status: confirmed

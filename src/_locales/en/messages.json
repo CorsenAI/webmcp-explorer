@@ -1981,12 +1981,68 @@
     "message": "Probes did not run: confirm that you control this site first.",
     "description": "Error."
   },
+  "secrets_title": {
+    "message": "Provider keys in page scripts (WMCP-SEC-013)",
+    "description": "Key search heading in the own-site checks box."
+  },
+  "secrets_intro": {
+    "message": "Reads this page's inline scripts and its same-origin script files once, in memory, and looks for provider secret key formats (Stripe, GitHub, Slack; OpenAI and Anthropic by detector heuristic). Only the provider, key type and length are kept, never the value. Scripts from other origins are not fetched, and no tool is called.",
+    "description": "Key search explanation."
+  },
+  "secrets_run": {
+    "message": "Look for provider keys",
+    "description": "Button."
+  },
+  "secrets_runHelp": {
+    "message": "Read this page's scripts and report provider key formats by type and length. Disabled until you confirm you control this site.",
+    "description": "Button tooltip."
+  },
+  "secrets_done": {
+    "message": "$1 inline scripts and $2 script files read · $3 findings (values not shown)",
+    "description": "Result summary; $1 inline scripts, $2 script files, $3 findings.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "secrets_none": {
+    "message": "No provider key format found in $1 inline scripts and $2 script files.",
+    "description": "Clean result; $1 inline scripts, $2 script files.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "secrets_failed": {
+    "message": "The scripts could not be read: $1",
+    "description": "Error; $1 reason.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "secrets_consentRequired": {
+    "message": "The search did not run: confirm that you control this site first.",
+    "description": "Error."
+  },
   "probes_consequential": {
     "message": "declared consequential",
     "description": "Tool note."
   },
   "probes_disclosure": {
-    "message": "Run probes calls the $1 selected tool(s) on $2, up to five times each, with generated and malformed arguments, in your browser session. Nothing is sent anywhere else. Results and findings stay on this device.",
+    "message": "Run probes calls the $1 selected tool(s) on $2, up to eight times each, with generated and malformed arguments, in your browser session. Nothing is sent anywhere else. Results and findings stay on this device.",
     "description": "Disclosure before the Run button; $1 count, $2 origin.",
     "placeholders": {
       "1": {
@@ -2014,7 +2070,7 @@
     "description": "Note."
   },
   "probes_intro": {
-    "message": "A passive review reads the contract; probes call the selected tools, in this page and your session, with arguments generated from their schema and with arguments the schema forbids (wrong type, missing required, unknown property, a 10,000-character string). At most five calls per tool, one at a time, cancellable, all recorded in History as probes. A tool that changes state will change it.",
+    "message": "A passive review reads the contract; probes call the selected tools, in this page and your session, with arguments generated from their schema and with arguments the schema forbids (wrong type, missing required, unknown property, a 10,000-character string, an empty required string, a number outside its bounds), plus an inert marker that shows whether the tool echoes its input. At most eight calls per tool, one at a time, cancellable, all recorded in History as probes. A tool that changes state will change it.",
     "description": "Probes box intro."
   },
   "probes_none": {
@@ -5139,6 +5195,190 @@
   "sec_convention_unavailable_fix": {
     "description": "Phase B security review.",
     "message": "Inspect the listed response if you intended to publish this convention. Absence alone requires no security fix; no automatic retry was made."
+  },
+  "sec_declarative_hidden_parameter_title": {
+    "description": "Engine v3 security review.",
+    "message": "Hidden form values the agent cannot see"
+  },
+  "sec_declarative_hidden_parameter_why": {
+    "description": "Engine v3 security review.",
+    "message": "Chrome leaves hidden inputs out of a declarative tool's schema, yet the form still submits them. The agent fills the visible fields and cannot see or question values such as an amount, a recipient or a role."
+  },
+  "sec_declarative_hidden_parameter_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Keep business values on the server and derive them from the session, or expose them as reviewed parameters. Hidden fields should only carry anti-forgery tokens."
+  },
+  "sec_declarative_credential_field_title": {
+    "description": "Engine v3 security review.",
+    "message": "Declarative tool asks for a password or card data"
+  },
+  "sec_declarative_credential_field_why": {
+    "description": "Engine v3 security review.",
+    "message": "Password fields are part of a declarative tool's schema in Chrome, so an agent would be asked to supply credentials or card data through the model. Such fields are meant to be filled by the person (spec issue #316)."
+  },
+  "sec_declarative_credential_field_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Leave login, one-time code and card fields out of forms exposed to agents; let the person complete them directly."
+  },
+  "sec_declarative_param_orphan_title": {
+    "description": "Engine v3 security review.",
+    "message": "Parameter description the agent never receives"
+  },
+  "sec_declarative_param_orphan_why": {
+    "description": "Engine v3 security review.",
+    "message": "toolparamdescription is set on a control without a name or on a disabled control. The browser leaves such controls out of the schema, so the description describes nothing the agent can fill."
+  },
+  "sec_declarative_param_orphan_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Give the control a name attribute and enable it, or remove the description."
+  },
+  "sec_declarative_post_auto_submit_title": {
+    "description": "Engine v3 security review.",
+    "message": "POST form submitted without review"
+  },
+  "sec_declarative_post_auto_submit_why": {
+    "description": "Engine v3 security review.",
+    "message": "toolautosubmit lets the agent submit the form without the person checking it. The form uses POST, a method that is not safe (RFC 9110), and Chrome advises omitting toolautosubmit for actions with consequences."
+  },
+  "sec_declarative_post_auto_submit_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Remove toolautosubmit so the person reviews and submits the filled form, unless the action is a harmless read."
+  },
+  "sec_readonly_callback_mutation_title": {
+    "description": "Engine v3 security review.",
+    "message": "Read-only claim contradicted by the tool's code"
+  },
+  "sec_readonly_callback_mutation_why": {
+    "description": "Engine v3 security review.",
+    "message": "The tool declares readOnlyHint: true, yet its callback source contains a request whose method is not a safe read, or a form submission. Agents may run read-only tools without asking. This is a text pattern, not observed behaviour."
+  },
+  "sec_readonly_callback_mutation_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Declare readOnlyHint: false (and consequentialHint: true for consequential actions), or move the write out of this tool. Review the callback to confirm."
+  },
+  "sec_exposed_to_cross_origin_title": {
+    "description": "Engine v3 security review.",
+    "message": "Tool exposed to other origins"
+  },
+  "sec_exposed_to_cross_origin_why": {
+    "description": "Engine v3 security review.",
+    "message": "exposedTo lets documents of the listed origins discover and call this tool. Chrome advises exposing read-write tools only to origins trusted to act on the user's behalf."
+  },
+  "sec_exposed_to_cross_origin_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Keep exposedTo empty unless a reviewed partner needs the tool; never expose state-changing tools to origins you do not control."
+  },
+  "sec_text_far_over_budget_title": {
+    "description": "Engine v3 security review.",
+    "message": "Model-facing text far beyond its budget"
+  },
+  "sec_text_far_over_budget_why": {
+    "description": "Engine v3 security review.",
+    "message": "A field is more than twice Chrome's character budget. Long text can bury instructions where reviewers do not look (long-description overflow, arXiv 2606.06387); invisible characters or encoded blobs in it point to concealment."
+  },
+  "sec_text_far_over_budget_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Shorten the field below its budget and remove invisible or encoded content; move details to the documentation."
+  },
+  "sec_client_secret_exposed_title": {
+    "description": "Engine v3 security review.",
+    "message": "Secret key shipped in page script"
+  },
+  "sec_client_secret_exposed_why": {
+    "description": "Engine v3 security review.",
+    "message": "A credential in a provider's secret-key format appears in script that every visitor downloads. Anyone can copy it; publishable keys are the only keys meant for client code. The value is not displayed or stored."
+  },
+  "sec_client_secret_exposed_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Revoke and rotate the key with its provider now, then move the call to your server."
+  },
+  "sec_output_reflects_input_title": {
+    "description": "Engine v3 security review.",
+    "message": "Tool output echoes caller input"
+  },
+  "sec_output_reflects_input_why": {
+    "description": "Engine v3 security review.",
+    "message": "A probe sent a unique marker and the tool returned it in its result. Text that reaches the output unchanged can carry instructions to the next agent step (output injection, spec §6.3.1.2)."
+  },
+  "sec_output_reflects_input_fix": {
+    "description": "Engine v3 security review.",
+    "message": "Do not echo arguments into the result; return structured, factual data, and set untrustedContentHint when the result includes user content."
+  },
+  "security_no_callbackSource": {
+    "description": "Engine v3 interface.",
+    "message": "Callback source text was not read for these tools declared read-only: $1. Turn on Instrumentation Mode for this site to read it; they are not reported as clean."
+  },
+  "security_overridesActive": {
+    "description": "Engine v3 interface.",
+    "message": "$1 tool(s) have a local override. This review reads the contracts the page declares, not the overrides."
+  },
+  "security_beforeAfter": {
+    "description": "Engine v3 interface.",
+    "message": "Before / after"
+  },
+  "security_beforeAfterHelp": {
+    "description": "Engine v3 interface.",
+    "message": "The contract the page declares and the one the proposed fix would register, as canonical JSON with a line diff. Nothing is applied to the page."
+  },
+  "security_copyDiff": {
+    "description": "Engine v3 interface.",
+    "message": "Copy diff"
+  },
+  "security_copyDiffHelp": {
+    "description": "Engine v3 interface.",
+    "message": "Copy the before/after diff to the clipboard."
+  },
+  "security_tryFix": {
+    "description": "Engine v3 interface.",
+    "message": "Test this fix locally"
+  },
+  "security_tryFixHelp": {
+    "description": "Engine v3 interface.",
+    "message": "Save the proposed description, schema and hints as a local override of this tool. Agent Lab and Evals then use them; the page is not changed and this review keeps reading its own contract."
+  },
+  "security_tryFixDone": {
+    "description": "Engine v3 interface.",
+    "message": "Local override saved. Agent Lab and Evals now offer the proposed contract; remove it from the tool's Override tab."
+  },
+  "security_tryFixError": {
+    "description": "Engine v3 interface.",
+    "message": "The override could not be saved. Nothing was changed."
+  },
+  "toolOverride_annotationsActive": {
+    "description": "Engine v3 interface.",
+    "message": "Hints replaced locally by Test this fix: $1"
+  },
+  "env_legacyTestingApi": {
+    "description": "Engine v3 interface.",
+    "message": "This page exposes a modelContextTesting object. Chrome removed that testing API in version 152, so it comes from a page script or a polyfill; Explorer neither uses nor trusts it."
+  },
+  "baseline_newRules": {
+    "description": "Engine v3 interface.",
+    "message": "$1 finding(s) come from rules added after this baseline was saved: new checks, not changes on the site."
+  },
+  "security_startersTitle": {
+    "description": "Engine v3 interface.",
+    "message": "Starter contracts from this page's forms"
+  },
+  "security_startersIntro": {
+    "description": "Engine v3 interface.",
+    "message": "No tool is exposed here. Each proposal comes from a form on this page: declarative attributes without toolautosubmit, and a document.modelContext registration with a closed schema, validation and a confirmation step. Inert: review and adapt before use."
+  },
+  "security_startersSkipped": {
+    "description": "Engine v3 interface.",
+    "message": "$1 form(s) not proposed: password, one-time code, card or file fields belong to the person, not to an agent."
+  },
+  "security_copyRegistration": {
+    "description": "Engine v3 interface.",
+    "message": "Copy registration"
+  },
+  "security_copyMarkup": {
+    "description": "Engine v3 interface.",
+    "message": "Copy form attributes"
+  },
+  "security_copyStarterHelp": {
+    "description": "Engine v3 interface.",
+    "message": "Copy this inert starter to the clipboard."
   },
   "bridge_title": {
     "message": "Local MCP Bridge",

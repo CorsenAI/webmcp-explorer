@@ -10,7 +10,8 @@ const tool = (over = {}) => ({
 
 test('a plan is deterministic, bounded, and generated from the schema', () => {
   const steps = planProbes(tool());
-  assert.deepEqual(steps.map((s) => s.id), ['output-check', 'schema-wrong-type', 'schema-missing-required', 'schema-extra-property']);
+  // A required string without minLength may be empty: no empty-string probe for it.
+  assert.deepEqual(steps.map((s) => s.id), ['output-check', 'schema-wrong-type', 'schema-missing-required', 'schema-extra-property', 'echo-canary']);
   assert.ok(steps.length <= MAX_PROBES_PER_TOOL);
   assert.equal(typeof steps[0].args.query, 'string');
   assert.equal(steps[1].path, 'query');
@@ -70,4 +71,22 @@ test('an Explorer-side refusal on the output probe is not a finding about the si
   for (const code of ['tool-not-found', 'ambiguous-tool', 'navigated', 'tab-closed']) {
     assert.deepEqual(judgeProbe(t, output, { ok: false, code }), [], code);
   }
+});
+
+test('engine v3 probes: empty string and out-of-range number must be refused; an echoed canary is observed', async () => {
+  const { ECHO_CANARY } = await import('../src/core/security/probes.js');
+  const t = tool({ inputSchema: { type: 'object', properties: { query: { type: 'string', minLength: 1, maxLength: 100 }, limit: { type: 'integer', minimum: 1, maximum: 50 } }, required: ['query'] } });
+  const steps = planProbes(t);
+  const byId = Object.fromEntries(steps.map((s) => [s.id, s]));
+  assert.equal(byId['empty-string'].args.query, '');
+  assert.equal(byId['out-of-range-number'].args.limit, 1050);
+  assert.equal(byId['echo-canary'].args.query, ECHO_CANARY);
+  assert.ok(steps.length <= 8);
+  assert.deepEqual(judgeProbe(t, byId['empty-string'], { ok: true, result: '[]' }).map((f) => f.code), ['accepts-out-of-schema-input']);
+  assert.deepEqual(judgeProbe(t, byId['out-of-range-number'], { ok: false, code: 'tool-error', error: 'limit too big' }), []);
+  const [echo] = judgeProbe(t, byId['echo-canary'], { ok: true, result: `No result for ${ECHO_CANARY}.` });
+  assert.deepEqual([echo.code, echo.severity, echo.ruleId ?? null], ['output-reflects-input', 'medium', null]);
+  assert.equal(judgeProbe(tool({ ...t, annotations: { readOnlyHint: true, untrustedContentHint: true } }), byId['echo-canary'], { ok: true, result: ECHO_CANARY })[0].severity, 'info');
+  assert.deepEqual(judgeProbe(t, byId['echo-canary'], { ok: true, result: 'nothing echoed' }), []);
+  assert.equal(planProbes(tool({ inputSchema: { type: 'object', properties: { code: { type: 'string', maxLength: 6 } } } })).some((s) => s.id === 'echo-canary'), false, 'the canary must fit the declared bound');
 });

@@ -14,9 +14,9 @@ test('Markdown escapes metadata and uses structured, fenced proposed fixes',()=>
  assert.equal(safeLink('https://example.test/a(b)'), 'https://example.test/a%28b%29');
  assert.equal(safeLink('javascript:alert(1)'),null);
 });
-test('SARIF maps all seven rule IDs, evidence and logical locations without invented source lines',()=>{
+test('SARIF maps every rule ID (001–013), evidence and logical locations without invented source lines',()=>{
  const review=reviewSecurity({discovery});const s=securitySarif(review,discovery);const run=s.runs[0];
- assert.equal(s.version,'2.1.0');assert.equal(run.tool.driver.rules.filter(r=>r.id.startsWith('WMCP-SEC-')).length,7);
+ assert.equal(s.version,'2.1.0');assert.equal(run.tool.driver.rules.filter(r=>r.id.startsWith('WMCP-SEC-')).length,13);
  assert.ok(run.results.some(r=>r.ruleId==='WMCP-SEC-001'&&r.level==='error'));
  assert.ok(run.results.every(r=>!r.locations[0].physicalLocation));
  assert.ok(run.results.every(r=>r.properties.locationKind==='logical-only'));

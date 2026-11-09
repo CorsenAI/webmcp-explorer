@@ -15,6 +15,7 @@ import { diagnoseRegistrations } from '../core/registrations.js';
 import { isDemoTabId, demoProbe } from './demo-bridge.js';
 import { listOverrides } from '../storage/overrides.js';
 import { declarativeSchema } from '../core/declarative-schema.js';
+import { CALLBACK_PATTERN_DATA, formFactsOf } from '../core/discovery-facts.js';
 
 export async function discover(tabId, topUrl) {
   const topOrigin = new URL(topUrl).origin;
@@ -29,7 +30,7 @@ export async function discover(tabId, topUrl) {
       world: 'MAIN',
       injectImmediately: true,
       func: probeMainWorld,
-      args: [null],
+      args: [null, CALLBACK_PATTERN_DATA],
     });
 
   if (!results) return { error: 'The demo page stopped answering. Reload it.' };
@@ -55,6 +56,8 @@ export async function discover(tabId, topUrl) {
             registrationSource: 'declarative-html', annotations: {}, origin: r.result.origin };
         })],
       declarativeToolNames: r.result.declarativeToolNames,
+      formFacts: formFactsOf(r.result.declarativeForms),
+      plainForms: Array.isArray(r.result.plainForms) ? r.result.plainForms : [],
       declarativeAutoSubmitNames: r.result.declarativeAutoSubmitNames,
       // Whether Instrumentation Mode was in place in this frame. The list above is explicit on
       // purpose, which also means a new probe field is invisible until it is added here.
@@ -97,7 +100,9 @@ export async function discover(tabId, topUrl) {
     // a URL, and re-deriving one from an origin would lose the path.
     url: topUrl,
     env: top?.env ?? diagnoseEnvironment({}),
-    frames: frames.map(({ childFrames, registrations: seen, ...rest }) => rest),
+    frames: frames.map(({ childFrames, registrations: seen, formFacts, plainForms, ...rest }) => rest),
+    // Forms of the top document, for starter contracts when no tool is exposed (engine v3).
+    plainForms: top?.plainForms ?? [],
     registrations,
     unreachableFrames,
     ...registry,

@@ -86,6 +86,11 @@ function shape(raw, frame, key, { owned }) {
     registrationType: isDeclarative || raw.inventoryOnly ? 'declarative' : raw.registrationSource?.startsWith('imperative') || raw.registrationSource === 'provideContext-legacy' ? 'imperative' : 'unknown',
     registrationConfidence: isDeclarative ? 'high' : 'none',
     autoSubmit: isDeclarative && hasAutoSubmitList ? autoSubmit.has(raw.name) : null,
+    // Engine v3 facts, present only when observed: form controls for a declarative tool (names and
+    // markers, never values), exposedTo and callback-source labels from Instrumentation Mode.
+    form: (isDeclarative || raw.inventoryOnly) && owned ? frame.formFacts?.[raw.name] ?? null : null,
+    exposedTo: Array.isArray(raw.exposedTo) ? raw.exposedTo.slice(0, 20).map(String) : null,
+    callbackObservation: raw.callbackObservation && typeof raw.callbackObservation === 'object' ? raw.callbackObservation : null,
     // Only a tool this frame actually registered can have a source: a tool aggregated from
     // another same-origin frame was not registered here (D-021).
     source: owned ? sourceOf(raw, frame) : { known: false, unknownReason: 'not-instrumented' },

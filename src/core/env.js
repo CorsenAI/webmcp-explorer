@@ -118,6 +118,8 @@ export function diagnoseEnvironment(signals = {}) {
     reason,
     missing: capability.missing,
     legacyHost: capability.legacyHost,
+    // An object named modelContextTesting: Chrome removed that API in 152 (engine v3 note).
+    legacyTestingApi: signals.testingApiPresent === true,
     checks,
     // The browser's own refusal, when there was one, so the screen can quote it.
     refusal,

@@ -15,6 +15,26 @@ import { renderBaseline } from './security-baseline.js';
 import { renderDiscovery } from './security-discovery.js';
 import { findingKey } from '../../core/security/baseline.js';
 import { renderSecurityScore } from '../components/security-score.js';
+import { proposedContract } from '../../core/security/quick-fix.js';
+import { fixDiff } from '../../core/security/fix-diff.js';
+import { createOverride } from '../../core/overrides.js';
+import { starterContracts } from '../../core/security/starter-contract.js';
+
+// The review always reads what the page declares, never Explorer's local overrides of it.
+export const declaredTool = (tool) => (tool?.overridden ? { ...tool, description: tool.originalDescription ?? tool.description,
+  inputSchema: tool.originalInputSchema ?? tool.inputSchema, annotations: tool.originalAnnotations ?? tool.annotations } : tool);
+// Fixes a person can try in Agent Lab and Evals without editing the page: hints and schema bounds.
+const TRYABLE = new Set(['WMCP-SEC-002', 'WMCP-SEC-003', 'WMCP-SEC-008', 'WMCP-SEC-009', 'WMCP-SEC-010']);
+
+export function fixOverride(f, tool, existing = null) {
+  if (!TRYABLE.has(f?.ruleId) || !tool?.logicalId) return null;
+  const proposal = proposedContract(f, declaredTool(tool));
+  if (!proposal || proposal.failure) return null;
+  const contract = proposal.kind === 'declarative' ? proposal.declarative : proposal.descriptor;
+  const base = existing ?? createOverride(tool.logicalId);
+  return { ...base, enabled: true, disabled: false, description: contract.description, inputSchema: contract.inputSchema,
+    annotations: proposal.kind === 'imperative' ? contract.annotations : (base.annotations ?? null) };
+}
 
 export const SEVERITY_KIND = { critical: 'critical', high: 'danger', medium: 'warn', low: 'accent', info: 'muted' };
 export const severityLabel = (s) => t(`security_sev_${s}`);
@@ -37,9 +57,10 @@ const NOT_OBSERVABLE_KEY = {
   'similarity-limit': 'security_no_similarityLimit',
   'origin-scan-not-run': 'security_no_originScan',
   'origin-scan-incomplete': 'security_no_originScanIncomplete',
+  'callback-source': 'security_no_callbackSource',
 };
 
-export function renderFinding(f, { onOpenTool = null, reviewed = false, onReviewed = null, isNew = false } = {}) {
+export function renderFinding(f, { onOpenTool = null, reviewed = false, onReviewed = null, isNew = false, tool = null, onTryFix = null } = {}) {
   const title = findingText(f.code, 'title') ?? f.code;
   const where = f.toolName
     ? `${f.toolName}${f.frameId !== null && f.frameId !== undefined ? ` · ${t('security_frame', [String(f.frameId)])}` : ''}`
@@ -77,6 +98,7 @@ export function renderFinding(f, { onOpenTool = null, reviewed = false, onReview
       el('p', { class: 'field-desc', text: t('security_fixReview') }),
       el('pre', { class: 'sec-evidence sec-fix-code', dir: 'ltr', text: f.remediationCodeSnippet }),
       el('div', { class: 'row-inline' }, [copy, status]),
+      ...fixExtras(f, tool, onTryFix, status),
     ]));
   }
   if (f.refs?.length) {
@@ -102,8 +124,18 @@ export function renderFinding(f, { onOpenTool = null, reviewed = false, onReview
   return el('details', { class: `card sec-item${reviewed ? ' sec-reviewed' : ''}`, 'data-code': f.code, 'data-severity': f.severity, 'data-new': isNew ? 'true' : null }, [summary, body]);
 }
 
-export async function renderSecurity(root, { result, tabId = null, events = [], onOpenTool = null }) {
-  const origin = result?.topOrigin ?? null;
+export async function renderSecurity(root, { result: observed, tabId = null, events = [], onOpenTool = null, onOverrideChanged = null }) {
+  const origin = observed?.topOrigin ?? null;
+  const overriddenCount = (observed?.tools ?? []).filter((tool) => tool.overridden).length;
+  const result = observed ? { ...observed, tools: (observed.tools ?? []).map(declaredTool) } : observed;
+  const toolFor = (f) => (result?.tools ?? []).find((tool) => (tool.instanceId ?? null) === (f.instanceId ?? null) && tool.name === f.toolName) ?? null;
+  const tryFix = onOverrideChanged ? async (f, tool) => {
+    const all = await chrome.runtime.sendMessage({ type: 'overrides-list' }).catch(() => []);
+    const override = fixOverride(f, tool, (Array.isArray(all) ? all : []).find((o) => o.logicalId === tool.logicalId) ?? null);
+    if (!override) return false;
+    await chrome.runtime.sendMessage({ type: 'override-save', override });
+    return true;
+  } : null;
   const review = reviewSecurity({ discovery: result, events });
   let probeFindings = [], originScan = null, combined = review;
   let reviewed = origin ? await listReviewed(origin) : new Set();
@@ -113,6 +145,8 @@ export async function renderSecurity(root, { result, tabId = null, events = [], 
   const state = { severities: [], axes: [], hideReviewed: false, onlyNew: false };
 
   root.replaceChildren(helpIntro(), el('p', { class: 'field-desc', text: t('security_intro') }));
+  if (overriddenCount) root.append(el('p', { class: 'field-note', text: t('security_overridesActive', [String(overriddenCount)]) }));
+  if (observed?.env?.legacyTestingApi) root.append(el('p', { class: 'field-note', text: t('env_legacyTestingApi') }));
   const scoreHost = el('div', {});
   const coverageHost = el('div', {});
   root.append(scoreHost);
@@ -132,8 +166,11 @@ export async function renderSecurity(root, { result, tabId = null, events = [], 
   updateCombined();
   if (!result?.tools?.length) {
     root.append(el('p', { class: 'muted', text: t('security_noTools') }));
+    renderStarters(root, result?.plainForms ?? []);
     root.append(coverageHost);
     appendFindings(root, review.findings.filter((f) => !f.toolName));
+    // Without tools there is nothing to probe, but scripts can still ship a provider key (013).
+    renderProbes(root, { result, tabId, onFindings: (found) => { probeFindings = found; updateCombined(); } });
     // The Permissions-Policy check matters most on a page that uses no tools (spec §6.4.1).
     renderDiscovery(root, { result, onFindings: (_found, scan) => { originScan = scan; updateCombined(); } });
     root.append(exports());
@@ -212,6 +249,8 @@ export async function renderSecurity(root, { result, tabId = null, events = [], 
     }
     list.replaceChildren(...shown.map((f) => renderFinding(f, {
       onOpenTool,
+      tool: toolFor(f),
+      onTryFix: tryFix ? async (finding, tool) => { const done = await tryFix(finding, tool); if (done) setTimeout(() => onOverrideChanged(), 1200); return done; } : null,
       isNew: Boolean(baseline) && !keys.has(findingKey(f)),
       reviewed: reviewed.has(reviewedKey(f)),
       onReviewed: origin ? async (finding, on) => {
@@ -225,6 +264,65 @@ export async function renderSecurity(root, { result, tabId = null, events = [], 
   function appendFindings(host, findings) {
     for (const f of findings) host.append(renderFinding(f, { onOpenTool: null, onReviewed: null }));
   }
+}
+
+// Before/after view and the local trial of a proposed fix (engine v3). Display only: nothing is
+// applied to the page; a trial is a local override that Agent Lab and Evals read.
+function fixExtras(f, tool, onTryFix, status) {
+  const out = [];
+  const diff = tool ? fixDiff(f, tool) : null;
+  if (diff) {
+    const copyDiff = el('button', { text: t('security_copyDiff'), title: t('security_copyDiffHelp') });
+    copyDiff.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(diff.unified); status.textContent = t('security_fixCopied'); }
+      catch { status.textContent = t('security_fixCopyError'); }
+    });
+    out.push(el('details', { class: 'sec-fix-diff' }, [
+      el('summary', { text: t('security_beforeAfter'), title: t('security_beforeAfterHelp') }),
+      el('pre', { class: 'sec-evidence sec-fix-code', dir: 'ltr', text: diff.unified }),
+      el('div', { class: 'row-inline' }, [copyDiff]),
+    ]));
+  }
+  if (onTryFix && tool && fixOverride(f, tool)) {
+    const trial = el('button', { text: t('security_tryFix'), title: t('security_tryFixHelp') });
+    trial.addEventListener('click', async () => {
+      trial.disabled = true;
+      const done = await onTryFix(f, tool).catch(() => false);
+      status.textContent = done ? t('security_tryFixDone') : t('security_tryFixError');
+      trial.disabled = false;
+    });
+    out.push(el('div', { class: 'row-inline' }, [trial]));
+  }
+  return out;
+}
+
+// Starter hardened contracts from the page's own forms (engine v3): inert text to copy.
+function renderStarters(root, forms) {
+  const { contracts, skipped } = starterContracts(forms);
+  if (!contracts.length && !skipped.length) return;
+  const box = el('details', { class: 'ck-bar sec-starters', open: '' }, [
+    el('summary', { text: t('security_startersTitle'), title: t('security_startersIntro') }),
+    el('p', { class: 'field-desc', text: t('security_startersIntro') }),
+  ]);
+  for (const c of contracts) {
+    const status = el('span', { class: 'field-note', role: 'status', 'aria-live': 'polite' });
+    const copyButton = (label, text) => {
+      const button = el('button', { text: label, title: t('security_copyStarterHelp') });
+      button.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(text); status.textContent = t('security_fixCopied'); }
+        catch { status.textContent = t('security_fixCopyError'); }
+      });
+      return button;
+    };
+    box.append(el('div', { class: 'card sec-starter', 'data-tool': c.toolName }, [
+      el('p', { class: 'sec-path', text: c.toolName }),
+      el('pre', { class: 'sec-evidence sec-fix-code', dir: 'ltr', text: c.imperative }),
+      el('pre', { class: 'sec-evidence sec-fix-code', dir: 'ltr', text: c.declarative }),
+      el('div', { class: 'row-inline' }, [copyButton(t('security_copyRegistration'), c.imperative), copyButton(t('security_copyMarkup'), c.declarative), status]),
+    ]));
+  }
+  if (skipped.length) box.append(el('p', { class: 'field-note', text: t('security_startersSkipped', [String(skipped.length)]) }));
+  root.append(box);
 }
 
 function appendNotObservable(root, review) {

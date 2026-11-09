@@ -11,7 +11,9 @@ import { sampleArguments } from '../schema/sample.js';
 
 export const OUTPUT_BUDGET = 1500;
 export const LONG_INPUT = 10000;
-export const MAX_PROBES_PER_TOOL = 5;
+export const MAX_PROBES_PER_TOOL = 8;
+// Engine v3: an inert, fixed marker; a result that contains it echoes caller input (WMCP-SEC-010).
+export const ECHO_CANARY = 'explorer-canary-3e9d1c';
 
 const PERSONAL = /\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b|\b(?:\+?\d[\d\s().-]{8,}\d)\b|\b(?:\d[ -]?){13,19}\b/;
 
@@ -45,6 +47,19 @@ export function planProbes(tool) {
   if (free) {
     steps.push({ id: 'long-string', args: { ...base, [free.name]: 'A'.repeat(LONG_INPUT) }, expects: 'rejection', path: free.name, length: LONG_INPUT });
   }
+  // Engine v3: an empty string where the schema forbids it (minLength >= 1; `required` alone allows
+  // an empty string), a number outside its declared bounds, and the echo canary.
+  const plainString = (p) => typeOf(p) === 'string' && !p.property.enum && !Object.hasOwn(p.property, 'const');
+  const emptyTarget = properties.find((p) => plainString(p) && Number(p.property.minLength) >= 1);
+  if (emptyTarget) steps.push({ id: 'empty-string', args: { ...base, [emptyTarget.name]: '' }, expects: 'rejection', path: emptyTarget.name, sent: 'empty string' });
+  const bounded = properties.find((p) => ['number', 'integer'].includes(typeOf(p)) && (Number.isFinite(p.property.maximum) || Number.isFinite(p.property.minimum)));
+  if (bounded) {
+    const value = Number.isFinite(bounded.property.maximum) ? bounded.property.maximum + 1000 : bounded.property.minimum - 1000;
+    steps.push({ id: 'out-of-range-number', args: { ...base, [bounded.name]: value }, expects: 'rejection', path: bounded.name, sent: value });
+  }
+  const echo = properties.find((p) => plainString(p) && !p.property.format && p.property.pattern === undefined
+    && (p.property.maxLength === undefined || p.property.maxLength >= ECHO_CANARY.length));
+  if (echo) steps.push({ id: 'echo-canary', args: { ...base, [echo.name]: ECHO_CANARY }, expects: 'any', path: echo.name });
   return steps.slice(0, MAX_PROBES_PER_TOOL);
 }
 
@@ -94,6 +109,14 @@ export function judgeProbe(tool, step, outcome) {
     out.push(finding('accepts-missing-required', { tool, evidence: { ...evidenceBase, excerpt: `${step.path} omitted; the tool answered: ${excerptOf(outcome.result)}` }, detail: { path: step.path } }));
   } else if (step.id === 'schema-extra-property' && accepted) {
     out.push(finding('accepts-unknown-property', { tool, evidence: { ...evidenceBase, excerpt: `${step.path} accepted` }, detail: { path: step.path } }));
+  } else if ((step.id === 'empty-string' || step.id === 'out-of-range-number') && accepted) {
+    const sent = step.id === 'empty-string' ? 'an empty string' : `${step.sent}, outside the declared bounds`;
+    out.push(finding('accepts-out-of-schema-input', { tool, evidence: { ...evidenceBase, excerpt: `${step.path} sent as ${sent}; the tool answered: ${excerptOf(outcome.result)}` }, detail: { path: step.path, sent: step.sent } }));
+  } else if (step.id === 'echo-canary' && accepted && String(outcome.result ?? '').includes(ECHO_CANARY)) {
+    const text = String(outcome.result), at = text.indexOf(ECHO_CANARY);
+    out.push(finding('output-reflects-input', { tool, severity: tool.annotations?.untrustedContentHint === true ? 'info' : 'medium',
+      evidence: { ...evidenceBase, excerpt: text.slice(Math.max(0, at - 40), at + ECHO_CANARY.length + 40) },
+      detail: { path: step.path, untrustedContentHint: tool.annotations?.untrustedContentHint === true } }));
   } else if (step.id === 'long-string' && accepted) {
     out.push(finding('accepts-unbounded-input', { tool, evidence: { ...evidenceBase, excerpt: `${step.length} characters accepted in ${step.path}` }, detail: { path: step.path, length: step.length } }));
   }

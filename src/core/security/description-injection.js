@@ -11,6 +11,8 @@ import { finding } from './catalog.js';
 import { modelFacingText, excerptAround, walkProperties } from './text.js';
 
 export const BUDGET = { description: 500, parameterDescription: 150, name: 30 };
+// WMCP-SEC-012: a field longer than this multiple of its budget (engine v3).
+export const FAR_OVER_FACTOR = 2;
 
 // Phrases that address the agent rather than describe the tool.
 const DIRECTIVES = [
@@ -144,21 +146,35 @@ export function reviewText(tool) {
   }
 
   // Budgets: facts about length, reported once per tool with every field over its budget.
-  const over = [];
+  const fieldsOver = [];
   const description = String(tool.description ?? '');
-  if (description.length > BUDGET.description) over.push({ path: 'description', length: description.length, budget: BUDGET.description });
-  if (String(tool.name ?? '').length > BUDGET.name) over.push({ path: 'name', length: String(tool.name).length, budget: BUDGET.name });
+  if (description.length > BUDGET.description) fieldsOver.push({ path: 'description', length: description.length, budget: BUDGET.description, text: description });
+  if (String(tool.name ?? '').length > BUDGET.name) fieldsOver.push({ path: 'name', length: String(tool.name).length, budget: BUDGET.name, text: String(tool.name) });
   const schema = tool.inputSchema && typeof tool.inputSchema === 'object' ? tool.inputSchema : null;
   for (const { path, name, property } of walkProperties(schema)) {
-    if (name.length > BUDGET.name) over.push({ path, length: name.length, budget: BUDGET.name });
+    if (name.length > BUDGET.name) fieldsOver.push({ path, length: name.length, budget: BUDGET.name, text: name });
     const d = property && typeof property === 'object' && typeof property.description === 'string' ? property.description : '';
-    if (d.length > BUDGET.parameterDescription) over.push({ path: `${path}.description`, length: d.length, budget: BUDGET.parameterDescription });
+    if (d.length > BUDGET.parameterDescription) fieldsOver.push({ path: `${path}.description`, length: d.length, budget: BUDGET.parameterDescription, text: d });
   }
+  const over = fieldsOver.map(({ text, ...rest }) => rest);
   if (over.length) {
     out.push(finding('text-over-budget', {
       tool,
       evidence: { field: 'contract', path: over.map((o) => o.path).join(', '), excerpt: over.map((o) => `${o.path}: ${o.length} > ${o.budget}`).join('; ') },
       detail: { over },
+    }));
+  }
+
+  // More than twice a budget leaves room to bury an instruction (arXiv 2606.06387, long-description
+  // overflow). Invisible characters or an encoded blob in the same field read as concealment.
+  const far = fieldsOver.filter((o) => o.length > o.budget * FAR_OVER_FACTOR);
+  if (far.length) {
+    const concealment = far.filter((o) => new RegExp(HIDDEN.source).test(o.text) || BASE64.test(o.text) || LONG_HEX.test(o.text)).map((o) => o.path);
+    out.push(finding('text-far-over-budget', {
+      tool,
+      severity: concealment.length ? 'high' : 'medium',
+      evidence: { field: 'contract', path: far.map((o) => o.path).join(', '), excerpt: far.map((o) => `${o.path}: ${o.length} > ${FAR_OVER_FACTOR} × ${o.budget}`).join('; ') },
+      detail: { fields: far.map(({ text, ...rest }) => rest), factor: FAR_OVER_FACTOR, concealment },
     }));
   }
 

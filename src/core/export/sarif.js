@@ -3,6 +3,19 @@ import { CATALOG } from '../security/catalog.js';
 import { visible } from './safe.js';
 const byCode=new Map(Object.entries(RULES).flatMap(([id,r])=>r.codes.map(code=>[code,id])));
 const level=s=>s==='critical'||s==='high'?'error':s==='medium'?'warning':'note';
+// GitHub code scanning: > 9.0 critical, 7.0–8.9 high, 4.0–6.9 medium, 0.1–3.9 low; none for info.
+const SECURITY_SEVERITY={critical:'9.5',high:'8.0',medium:'5.5',low:'3.0'};
+// Rule metadata GitHub requires before it displays a result (fullDescription, help), engine v3.
+function ruleDescriptor(id){
+  const r=RULES[id],code=r?null:id.replace(/^EXPLORER-/,''),def=r?null:CATALOG[code];
+  const severity=r?.severity??def?.severity??null;
+  const properties={tags:['security','webmcp'],scope:'runtime metadata review; not exploit verification',precision:r?.precision??(def?.nature==='observed'?'high':'medium')};
+  if(SECURITY_SEVERITY[severity])properties['security-severity']=SECURITY_SEVERITY[severity];
+  return {id,name:id,shortDescription:{text:r?.title??id},
+    fullDescription:{text:r?.description??`Explorer finding ${code} (${def?.axis??'unclassified'}, ${def?.nature??'indicator'}).`},
+    help:{text:r?.help??'Review the evidence and the cited sources; an indicator is not proof of exploitation.'},
+    helpUri:AGENTIC_SOURCE,properties};
+}
 function observedLocation(tool) {
   if(!tool?.source?.known||!tool.source.file)return null;
   try {
@@ -18,8 +31,7 @@ export function securitySarif(review,discovery) {
   const findings=(review?.findings??[]).filter(f=>Object.hasOwn(CATALOG,f.code));
   const idOf=f=>byCode.get(f.code)??`EXPLORER-${f.code}`;
   const ids=[...new Set([...Object.keys(RULES),...findings.map(idOf)])].sort();
-  const rules=ids.map(id=>({id,name:id,shortDescription:{text:RULES[id]?.title??id},
-    helpUri:AGENTIC_SOURCE,properties:{tags:['security','webmcp'],scope:'runtime metadata review; not exploit verification'}}));
+  const rules=ids.map(ruleDescriptor);
   const results=findings.map(f=>{
     const tool=discovery?.tools?.find(t=>t.instanceId===f.instanceId&&t.name===f.toolName);
     const physical=observedLocation(tool);

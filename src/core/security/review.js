@@ -13,13 +13,19 @@ import { withRule, RULES } from './rules.js';
 import { securityScore } from './score.js';
 import { quickFix } from './quick-fix.js';
 import { reviewEnvironment } from './environment.js';
+import { reviewDeclarative } from './declarative-integrity.js';
+import { reviewCallbackSource, callbackCoverage } from './callback-source.js';
+import { reviewExposure } from './exposure.js';
 
 export function reviewSecurity({ discovery, events = [], originScan = null, extraFindings = [] } = {}) {
   const tools = discovery?.tools ?? [];
   let findings = [];
   for (const tool of tools) {
-    findings.push(...reviewText(tool), ...reviewGovernance(tool), ...reviewSchema(tool).filter(f => f.code !== 'unbounded-string'), ...reviewSurface(tool, discovery));
+    findings.push(...reviewText(tool), ...reviewGovernance(tool), ...reviewSchema(tool).filter(f => f.code !== 'unbounded-string'), ...reviewSurface(tool, discovery),
+      ...reviewExposure(tool), ...reviewCallbackSource(tool));
   }
+  // Declarative integrity reads the findings above, so a credential field is never reported twice.
+  for (const tool of tools) findings.push(...reviewDeclarative(tool, { prior: findings }));
   findings.push(...reviewSurfacePage(discovery), ...reviewLifecycle(tools, events), ...reviewEnvironment(discovery));
 
   const phaseB = reviewPhaseB(tools, { prior: findings, originScan });
@@ -48,7 +54,7 @@ export function reviewSecurity({ discovery, events = [], originScan = null, extr
     byTool.get(key).push(f);
   }
 
-  const notObservable = [...surfaceCoverage(discovery), ...lifecycleCoverage(events), ...phaseB.notObservable];
+  const notObservable = [...surfaceCoverage(discovery), ...lifecycleCoverage(events), ...phaseB.notObservable, ...callbackCoverage(tools)];
   const review = {
     findings,
     bySeverity,

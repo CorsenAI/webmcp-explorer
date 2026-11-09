@@ -1838,11 +1838,67 @@
   "probes_consentRequired": {
     "message": "プローブは実行されませんでした。先にこのサイトを管理していることを確認してください。"
   },
+  "secrets_title": {
+    "message": "ページスクリプト内のプロバイダーキー (WMCP-SEC-013)",
+    "description": "Key search heading in the own-site checks box."
+  },
+  "secrets_intro": {
+    "message": "このページのインラインスクリプトと同一オリジンのスクリプトファイルをメモリ上で一度だけ読み取り、プロバイダーのシークレットキー形式（Stripe、GitHub、Slack。OpenAI と Anthropic は検出ヒューリスティック）を探します。保持するのはプロバイダー、キーの種類、長さのみで、値は保持しません。他オリジンのスクリプトは取得せず、ツールも呼び出しません。",
+    "description": "Key search explanation."
+  },
+  "secrets_run": {
+    "message": "プロバイダーキーを探す",
+    "description": "Button."
+  },
+  "secrets_runHelp": {
+    "message": "このページのスクリプトを読み取り、キー形式を種類と長さで報告します。このサイトを管理していることを確認するまで無効です。",
+    "description": "Button tooltip."
+  },
+  "secrets_done": {
+    "message": "インラインスクリプト $1 件とスクリプトファイル $2 件を読み取り · 検出事項 $3 件（値は表示しません）",
+    "description": "Result summary; $1 inline scripts, $2 script files, $3 findings.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "secrets_none": {
+    "message": "インラインスクリプト $1 件とスクリプトファイル $2 件にプロバイダーキー形式は見つかりませんでした。",
+    "description": "Clean result; $1 inline scripts, $2 script files.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "secrets_failed": {
+    "message": "スクリプトを読み取れませんでした: $1",
+    "description": "Error; $1 reason.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "secrets_consentRequired": {
+    "message": "検索は実行されませんでした。先にこのサイトを管理していることを確認してください。",
+    "description": "Error."
+  },
   "probes_consequential": {
     "message": "影響ありと宣言"
   },
   "probes_disclosure": {
-    "message": "プローブを実行すると、$2 上の選択された $1 個のツールを、生成された引数と不正な形式で最大 5 回ずつ現在のブラウザセッション内で呼び出します。外部には一切送信されず、結果と検出事項はこの端末に残ります。"
+    "message": "プローブを実行すると、$2 上の選択された $1 個のツールを、生成された引数と不正な形式で最大 8 回ずつ現在のブラウザセッション内で呼び出します。外部には一切送信されず、結果と検出事項はこの端末に残ります。"
   },
   "probes_done": {
     "message": "$1 件の呼び出しを実行 · 検出 $2 件"
@@ -1851,7 +1907,7 @@
     "message": "各呼び出しはこのツールの履歴に「プローブ」として記録されます。"
   },
   "probes_intro": {
-    "message": "受動レビューは契約を読み取るだけですが、プローブはこのページと現在のセッション内で選択したツールを、スキーマから生成した引数およびスキーマが禁止する引数（型違い、必須欠落、未知のプロパティ、10,000 文字の文字列）で実際に呼び出します。ツールごとに最大 5 回、1 件ずつ順番に実行され、キャンセル可能で、すべて履歴にプローブとして記録されます。状態を変更するツールは実際に状態を変更します。"
+    "message": "受動レビューは契約を読み取るだけですが、プローブはこのページと現在のセッション内で選択したツールを、スキーマから生成した引数およびスキーマが禁止する引数（型違い、必須欠落、未知のプロパティ、10,000 文字の文字列、空の必須文字列、範囲外の数値）で実際に呼び出し、ツールが入力をそのまま返すかを示す無害なマーカーも送ります。ツールごとに最大 8 回、1 件ずつ順番に実行され、キャンセル可能で、すべて履歴にプローブとして記録されます。状態を変更するツールは実際に状態を変更します。"
   },
   "probes_none": {
     "message": "プローブによる検出事項はありませんでした。実行した呼び出し: $1 件。"
@@ -4648,6 +4704,144 @@
   "sec_convention_unavailable_fix": {
     "description": "Phase B security review.",
     "message": "この慣習に対応する意図がある場合は応答を確認してください。不在だけでセキュリティ修正は必要ありません。自動再試行は行っていません。"
+  },
+  "sec_declarative_hidden_parameter_title": {
+    "message": "エージェントに見えない隠しフォーム値"
+  },
+  "sec_declarative_hidden_parameter_why": {
+    "message": "Chrome は宣言型ツールのスキーマから hidden 入力を除外しますが、フォームはそれらも送信します。エージェントは表示された項目だけを入力し、金額・受取人・ロールなどの値を確認も指摘もできません。"
+  },
+  "sec_declarative_hidden_parameter_fix": {
+    "message": "業務上の値はサーバー側に置いてセッションから導くか、レビュー済みのパラメーターとして公開してください。hidden 項目には偽造対策トークンだけを入れます。"
+  },
+  "sec_declarative_credential_field_title": {
+    "message": "宣言型ツールがパスワードやカード情報を求める"
+  },
+  "sec_declarative_credential_field_why": {
+    "message": "Chrome ではパスワード項目が宣言型ツールのスキーマに含まれるため、エージェントがモデル経由で認証情報やカード情報を渡すことになります。こうした項目は本人が入力するものです（仕様 issue #316）。"
+  },
+  "sec_declarative_credential_field_fix": {
+    "message": "ログイン、ワンタイムコード、カードの項目はエージェントに公開するフォームから外し、本人が直接入力できるようにしてください。"
+  },
+  "sec_declarative_param_orphan_title": {
+    "message": "エージェントに届かないパラメーター説明"
+  },
+  "sec_declarative_param_orphan_why": {
+    "message": "toolparamdescription が name のないコントロール、または無効なコントロールに付いています。ブラウザーはそれらをスキーマから除外するため、この説明はエージェントが入力できるものを何も説明しません。"
+  },
+  "sec_declarative_param_orphan_fix": {
+    "message": "コントロールに name 属性を付けて有効にするか、説明を削除してください。"
+  },
+  "sec_declarative_post_auto_submit_title": {
+    "message": "確認なしで送信される POST フォーム"
+  },
+  "sec_declarative_post_auto_submit_why": {
+    "message": "toolautosubmit があると、本人が確認しないままエージェントがフォームを送信できます。このフォームは安全でないメソッドの POST（RFC 9110）を使っており、Chrome は影響のある操作では toolautosubmit を省くよう勧めています。"
+  },
+  "sec_declarative_post_auto_submit_fix": {
+    "message": "無害な読み取りでない限り toolautosubmit を外し、入力済みのフォームを本人が確認して送信するようにしてください。"
+  },
+  "sec_readonly_callback_mutation_title": {
+    "message": "読み取り専用の宣言とツールのコードが矛盾"
+  },
+  "sec_readonly_callback_mutation_why": {
+    "message": "ツールは readOnlyHint: true を宣言していますが、コールバックのソースに安全な読み取りではないメソッドのリクエスト、またはフォーム送信が含まれています。エージェントは読み取り専用ツールを確認なしに実行することがあります。これはテキスト上のパターンであり、観測された動作ではありません。"
+  },
+  "sec_readonly_callback_mutation_fix": {
+    "message": "readOnlyHint: false を宣言する（影響のある操作なら consequentialHint: true も）か、書き込みをこのツールから外してください。コールバックを確認してください。"
+  },
+  "sec_exposed_to_cross_origin_title": {
+    "message": "他のオリジンに公開されたツール"
+  },
+  "sec_exposed_to_cross_origin_why": {
+    "message": "exposedTo により、列挙されたオリジンのドキュメントがこのツールを発見して呼び出せます。Chrome は、読み書きするツールはユーザーの代わりに操作を任せられるオリジンにだけ公開するよう勧めています。"
+  },
+  "sec_exposed_to_cross_origin_fix": {
+    "message": "レビュー済みの提携先が必要とする場合を除き exposedTo は空にし、状態を変更するツールを自分で管理していないオリジンに公開しないでください。"
+  },
+  "sec_text_far_over_budget_title": {
+    "message": "予算を大きく超えるモデル向けテキスト"
+  },
+  "sec_text_far_over_budget_why": {
+    "message": "ある項目が Chrome の文字数予算の 2 倍を超えています。長いテキストは確認されにくい場所に指示を埋め込めます（長い説明によるオーバーフロー、arXiv 2606.06387）。不可視文字やエンコードされた塊は隠蔽を示します。"
+  },
+  "sec_text_far_over_budget_fix": {
+    "message": "項目を予算内に短縮し、不可視またはエンコードされた内容を削除して、詳細はドキュメントに移してください。"
+  },
+  "sec_client_secret_exposed_title": {
+    "message": "ページのスクリプトに含まれた秘密鍵"
+  },
+  "sec_client_secret_exposed_why": {
+    "message": "プロバイダーの秘密鍵形式の認証情報が、すべての訪問者がダウンロードするスクリプトに含まれています。誰でもコピーできます。クライアントのコードに置いてよいのは公開可能キーだけです。値は表示も保存もしません。"
+  },
+  "sec_client_secret_exposed_fix": {
+    "message": "直ちにプロバイダーでキーを失効・再発行し、その後呼び出しをサーバー側に移してください。"
+  },
+  "sec_output_reflects_input_title": {
+    "message": "ツールの出力が呼び出し元の入力をそのまま返す"
+  },
+  "sec_output_reflects_input_why": {
+    "message": "プローブが一意のマーカーを送ったところ、ツールが結果の中でそれを返しました。そのまま出力に届くテキストは、エージェントの次の手順への指示を運び得ます（出力インジェクション、仕様 §6.3.1.2）。"
+  },
+  "sec_output_reflects_input_fix": {
+    "message": "引数を結果にコピーせず、構造化された事実データを返してください。結果にユーザーのコンテンツが含まれる場合は untrustedContentHint を設定します。"
+  },
+  "security_no_callbackSource": {
+    "message": "読み取り専用と宣言されたこれらのツールについて、コールバックのソースを読み取れませんでした: $1。このサイトで計測モードを有効にすると読み取れます。問題なしとは表示しません。"
+  },
+  "security_overridesActive": {
+    "message": "$1 個のツールにローカルのオーバーライドがあります。このレビューはオーバーライドではなく、ページが宣言する契約を読み取ります。"
+  },
+  "security_beforeAfter": {
+    "message": "変更前 / 変更後"
+  },
+  "security_beforeAfterHelp": {
+    "message": "ページが宣言する契約と、提案された修正が登録する契約を、行単位の差分付きの正規化 JSON で示します。ページには何も適用しません。"
+  },
+  "security_copyDiff": {
+    "message": "差分をコピー"
+  },
+  "security_copyDiffHelp": {
+    "message": "変更前と変更後の差分をクリップボードにコピーします。"
+  },
+  "security_tryFix": {
+    "message": "この修正をローカルで試す"
+  },
+  "security_tryFixHelp": {
+    "message": "提案された説明・スキーマ・ヒントを、このツールのローカルなオーバーライドとして保存します。Agent Lab と Evals はそれを使いますが、ページは変更されず、このレビューは引き続きページ自身の契約を読み取ります。"
+  },
+  "security_tryFixDone": {
+    "message": "ローカルのオーバーライドを保存しました。Agent Lab と Evals は提案された契約を使います。ツールのオーバーライドタブから削除できます。"
+  },
+  "security_tryFixError": {
+    "message": "オーバーライドを保存できませんでした。何も変更されていません。"
+  },
+  "toolOverride_annotationsActive": {
+    "message": "「この修正をローカルで試す」で置き換えたヒント: $1"
+  },
+  "env_legacyTestingApi": {
+    "message": "このページは modelContextTesting オブジェクトを公開しています。Chrome はこのテスト用 API をバージョン 152 で削除したため、ページのスクリプトまたはポリフィルによるものです。Explorer はこれを使用せず、信頼もしません。"
+  },
+  "baseline_newRules": {
+    "message": "$1 件の検出事項は、このベースラインの保存後に追加されたルールによるものです。サイトの変更ではなく、新しいチェックです。"
+  },
+  "security_startersTitle": {
+    "message": "このページのフォームから作るスターター契約"
+  },
+  "security_startersIntro": {
+    "message": "このページはツールを公開していません。各提案はこのページのフォームから作られます: toolautosubmit を付けない宣言型の属性と、閉じたスキーマ・検証・確認ステップを備えた document.modelContext の登録です。動作しない雛形なので、使う前に確認して調整してください。"
+  },
+  "security_startersSkipped": {
+    "message": "$1 件のフォームは提案していません: パスワード、ワンタイムコード、カード、ファイルの項目は本人が扱うもので、エージェントに任せるものではありません。"
+  },
+  "security_copyRegistration": {
+    "message": "登録コードをコピー"
+  },
+  "security_copyMarkup": {
+    "message": "フォーム属性をコピー"
+  },
+  "security_copyStarterHelp": {
+    "message": "この動作しないスターター契約をクリップボードにコピーします。"
   },
   "bridge_title": {
     "message": "ローカルMCPブリッジ",

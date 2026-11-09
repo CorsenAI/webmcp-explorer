@@ -1,0 +1,37 @@
+id: WMP-0057
+title: A native declarative schema on Chrome 155 and 157 omits hidden, file and disabled controls but includes password fields and controls owned through form=, and carries neither maxlength nor format
+date_observed: 2026-11-08
+environment:
+  browser: Chrome for Testing
+  version: 155.0.8059.84 and 157.0.8103.6 (linux64), --headless=new
+  mode: testing-flag
+expected: >
+  declarative-api-explainer.md leaves input schema synthesis TBD, and Chrome's declarative page
+  does not say which controls are reduced to properties.
+observed: >
+  A form with toolname and tooldescription is listed with properties only for its named, enabled,
+  non-hidden, non-file controls. Hidden inputs (amount, csrf_token), a file input, a disabled input,
+  an input inside a disabled fieldset and an unnamed input carrying toolparamdescription are absent.
+  A password input is present (type string, description from its label). An input outside the form
+  with form="<form id>" is present. A select gives type string with anyOf const/title entries and an
+  enum; a checkbox gives boolean. An email input with maxlength="80" and required gives type string
+  and a required entry, with no maxLength and no format.
+reliable_discriminator: >
+  getTools() inputSchema of the fixture form probe_hidden_fields
+impact:
+  - hidden fields are submitted with an agent-filled form although the agent never sees them in the schema
+  - a declarative tool can ask the agent for a password; the schema does not mark it as a credential
+  - an HTML-inferred schema with maxLength or format is richer than the native one and stays indicative
+  - toolparamdescription on an unnamed control describes nothing the agent receives
+workaround: >
+  WMCP-SEC-008 reports business-named hidden fields, credential-type fields and orphan parameter
+  descriptions as labelled indicators; values are never read.
+evidence:
+  fixture: fixtures/contract-v3.html
+  automated_test: tools/probe-contract-v3.mjs
+  chrome_e2e: true
+spec_status:
+  documented: input schema synthesis is TBD in declarative-api-explainer.md
+  implementation_specific: true
+products_affected: [WebMCP Explorer, WebMCP Scanner]
+status: confirmed

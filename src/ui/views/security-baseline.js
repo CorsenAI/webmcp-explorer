@@ -41,6 +41,7 @@ export function renderBaseline(root, { result, review, baseline, onChanged = () 
     el('span', { text: t('baseline_since', [String(diff.added.length), diff.maxAdded ? severityLabel(diff.maxAdded) : 'none', String(diff.resolved.length),
       String(diff.toolsAdded.length), String(diff.toolsRemoved.length), String(diff.contractsChanged.length)]) }),
   ].filter(Boolean) : [el('span', { text: t('baseline_noChange') })]));
+  if (diff.newRules?.length) box.append(el('p', { class: 'field-note', text: t('baseline_newRules', [String(diff.newRules.length)]) }));
   if (diff.contractsChanged.length) box.append(el('p', { class: 'field-note', text: t('baseline_toolsChanged', [names(diff.contractsChanged.map((c) => c.name))]) }));
   if (diff.toolsAdded.length) box.append(el('p', { class: 'field-note', text: t('baseline_toolsAdded', [names(diff.toolsAdded)]) }));
   if (diff.toolsRemoved.length) box.append(el('p', { class: 'field-note', text: t('baseline_toolsRemoved', [names(diff.toolsRemoved)]) }));

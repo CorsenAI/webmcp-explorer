@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Forms without tools</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}form{margin:12px 0;padding:12px;border:1px solid #ddd;border-radius:8px}label{display:block;margin:4px 0}</style></head>
+<body>
+<h1>Forms without tools</h1>
+<p>Ordinary forms and no WebMCP tool, for the starter contracts the Security section proposes. The
+page also defines a <code>navigator.modelContextTesting</code> object, as a leftover polyfill would:
+Chrome removed that API in version 152, and the environment screen has to say so.</p>
+<form id="site-search" method="get" action="/search?session=FIXTURE-QUERY-TOKEN">
+  <label for="q">Search the catalogue</label><input id="q" name="q" type="search" maxlength="80" required>
+  <select name="category"><option value="books">Books</option><option value="games">Games</option></select>
+  <button type="submit">Search</button>
+</form>
+<form name="contact" method="post" action="/contact.php">
+  <label>Email <input name="email" type="email" required></label>
+  <label>Message <textarea name="message" maxlength="1000"></textarea></label>
+  <input type="hidden" name="csrf_token" value="FIXTURE-CSRF-VALUE">
+  <button type="submit">Send</button>
+</form>
+<form id="login" method="post" action="/login"><input name="user"><input name="pw" type="password"><button>Sign in</button></form>
+<script>
+  // A leftover of the pre-152 testing API, as a stale polyfill would leave it. Explorer must
+  // neither use it nor mistake it for WebMCP.
+  if (!('modelContextTesting' in navigator)) navigator.modelContextTesting = { listTools() { return []; } };
+</script>
+</body>
+</html>

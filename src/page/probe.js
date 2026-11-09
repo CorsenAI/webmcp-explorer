@@ -9,7 +9,7 @@
 // It observes. It never registers, patches or wraps anything: native WebMCP is the source
 // of truth (D-004 rule 2).
 
-export function probeMainWorld(fromOrigins) {
+export function probeMainWorld(fromOrigins, callbackPatterns = null) {
   // One shape for a browser error, serialisable across executeScript.
   const describeError = (error) => ({
     name: error && error.name ? String(error.name) : 'Error',
@@ -88,11 +88,13 @@ export function probeMainWorld(fromOrigins) {
   const declarativeForms = declarativeElements.slice(0, 500).map((form, index) => ({
     name: form.getAttribute('toolname') ?? '', description: form.getAttribute('tooldescription') ?? '',
     autoSubmit: form.hasAttribute('toolautosubmit'), index, submitHandler: 'unobservable',
+    method: (form.getAttribute('method') ?? 'get').toLowerCase(),
     fields: Array.from(form.elements ?? []).slice(0, 1000).map(field => ({
       tag: field.tagName?.toLowerCase(), type: field.getAttribute('type') ?? 'text',
       name: field.getAttribute('name') ?? '', disabled: field.matches(':disabled'),
       required: field.hasAttribute('required'), multiple: field.hasAttribute('multiple'),
       title: field.getAttribute('toolparamtitle') ?? '', description: field.getAttribute('toolparamdescription') ?? '',
+      hasParamDescription: field.hasAttribute('toolparamdescription'), autocomplete: field.getAttribute('autocomplete'),
       pattern: field.getAttribute('pattern'), min: field.getAttribute('min'), max: field.getAttribute('max'),
       minlength: field.getAttribute('minlength'), maxlength: field.getAttribute('maxlength'),
       choice: ['radio','checkbox'].includes(field.getAttribute('type')) ? field.getAttribute('value') ?? 'on' : undefined,
@@ -109,8 +111,28 @@ export function probeMainWorld(fromOrigins) {
     allowsTools: (el.getAttribute('allow') || '').split(';').some((t) => t.trim() === 'tools'),
   }));
 
+  // Chrome removed modelContextTesting in 152: an object of that name now comes from page code.
+  let testingApiPresent = false;
+  try { testingApiPresent = typeof document.modelContextTesting !== 'undefined' || typeof navigator.modelContextTesting !== 'undefined'; } catch { /* unobservable */ }
+  // Ordinary forms of the top document, for starter contracts when no tool is exposed (engine v3).
+  // Attributes only, never a value.
+  const plainForms = window !== window.top ? [] : Array.from(document.forms).filter((form) => !form.hasAttribute('toolname')).slice(0, 20).map((form) => ({
+    id: form.getAttribute('id'), name: form.getAttribute('name'), method: (form.getAttribute('method') ?? 'get').toLowerCase(),
+    action: form.getAttribute('action'), toolname: null,
+    fields: Array.from(form.elements ?? []).filter((x) => ['INPUT', 'SELECT', 'TEXTAREA'].includes(x.tagName)).slice(0, 100).map((x) => ({
+      tag: x.tagName.toLowerCase(), type: x.tagName === 'INPUT' ? (x.getAttribute('type') ?? 'text').toLowerCase() : x.tagName === 'SELECT' && x.multiple ? 'select-multiple' : x.tagName.toLowerCase(),
+      name: x.getAttribute('name'), required: x.hasAttribute('required'), disabled: x.matches(':disabled'),
+      maxlength: x.getAttribute('maxlength'), minlength: x.getAttribute('minlength'), min: x.getAttribute('min'), max: x.getAttribute('max'),
+      autocomplete: x.getAttribute('autocomplete'), toolparamdescription: x.getAttribute('toolparamdescription'),
+      label: Array.from(x.labels ?? []).map((l) => l.textContent).join(' ').trim().slice(0, 150) || x.getAttribute('aria-label'),
+      options: x.tagName === 'SELECT' ? Array.from(x.options).filter((o) => o.hasAttribute('value')).slice(0, 50).map((o) => o.getAttribute('value')) : undefined,
+    })),
+  }));
+
   const base = {
     apiHost: host,
+    testingApiPresent,
+    plainForms,
     methods,
     polyfillActive: Boolean(mc && mc.__explorerPolyfill),
     originTrialToken: Boolean(document.querySelector('meta[http-equiv="origin-trial" i]')),
@@ -207,6 +229,7 @@ export function probeMainWorld(fromOrigins) {
       : !nativeExecute ? window.__webmcpExplorerHook?.getTools(runtimeId) ?? [] : [];
     return Array.from(tools ?? []).map(t => {
       const captured = window.__webmcpExplorerHook?.source(runtimeId, t.name);
+      const labels = captured && Array.isArray(callbackPatterns) ? window.__webmcpExplorerHook?.callbackLabels?.(runtimeId, t.name, callbackPatterns, 16384) ?? null : null;
       return {
         name: t.name, description: t.description ?? '', inputSchema: t.inputSchema ?? null,
         annotations: { ...(t.annotations ?? {}), ...(captured?.destructiveHint === true ? { destructiveHint: true } : {}) },
@@ -215,6 +238,7 @@ export function probeMainWorld(fromOrigins) {
         runtimeId, schemaEncoding: t.inputSchema == null ? 'missing' : typeof t.inputSchema, executeArity: context.executeTool?.length ?? null,
         hasExecute: nativeExecute, captured: Boolean(captured), emulated: Boolean(context.__explorerPolyfill),
         registrationSource: captured?.registrationSource ?? null,
+        exposedTo: captured?.exposedTo ?? null, callbackObservation: labels,
         registrationStack: captured ? { stack: captured.stack, at: captured.at, registrations: captured.registrations } : sourceOf(t.name),
       };
     });

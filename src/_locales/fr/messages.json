@@ -1838,11 +1838,67 @@
   "probes_consentRequired": {
     "message": "Les sondes n’ont pas été lancées : confirmez d’abord que vous contrôlez ce site."
   },
+  "secrets_title": {
+    "message": "Clés de fournisseurs dans les scripts de la page (WMCP-SEC-013)",
+    "description": "Key search heading in the own-site checks box."
+  },
+  "secrets_intro": {
+    "message": "Lit une fois, en mémoire, les scripts intégrés de cette page et ses fichiers de script de même origine, et y cherche des formats de clés secrètes de fournisseurs (Stripe, GitHub, Slack ; OpenAI et Anthropic par heuristique de détection). Seuls le fournisseur, le type de clé et la longueur sont conservés, jamais la valeur. Les scripts d’autres origines ne sont pas téléchargés et aucun outil n’est appelé.",
+    "description": "Key search explanation."
+  },
+  "secrets_run": {
+    "message": "Chercher des clés de fournisseurs",
+    "description": "Button."
+  },
+  "secrets_runHelp": {
+    "message": "Lire les scripts de cette page et signaler les formats de clés par type et longueur. Désactivé tant que vous n’avez pas confirmé contrôler ce site.",
+    "description": "Button tooltip."
+  },
+  "secrets_done": {
+    "message": "$1 scripts intégrés et $2 fichiers de script lus · $3 constats (valeurs non affichées)",
+    "description": "Result summary; $1 inline scripts, $2 script files, $3 findings.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    }
+  },
+  "secrets_none": {
+    "message": "Aucun format de clé de fournisseur dans $1 scripts intégrés et $2 fichiers de script.",
+    "description": "Clean result; $1 inline scripts, $2 script files.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "secrets_failed": {
+    "message": "Les scripts n’ont pas pu être lus : $1",
+    "description": "Error; $1 reason.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "secrets_consentRequired": {
+    "message": "La recherche n’a pas été lancée : confirmez d’abord que vous contrôlez ce site.",
+    "description": "Error."
+  },
   "probes_consequential": {
     "message": "déclaré à impact"
   },
   "probes_disclosure": {
-    "message": "Lancer les sondes appelle les $1 outil(s) sélectionné(s) sur $2, jusqu’à cinq fois chacun, avec des arguments générés et mal formés, dans votre session de navigateur. Rien n’est envoyé ailleurs. Les résultats et constats restent sur cet appareil."
+    "message": "Lancer les sondes appelle les $1 outil(s) sélectionné(s) sur $2, jusqu’à huit fois chacun, avec des arguments générés et mal formés, dans votre session de navigateur. Rien n’est envoyé ailleurs. Les résultats et constats restent sur cet appareil."
   },
   "probes_done": {
     "message": "$1 appels effectués · $2 constat(s)"
@@ -1851,7 +1907,7 @@
     "message": "Chaque appel figure dans l’Historique de cet outil, marqué comme sonde."
   },
   "probes_intro": {
-    "message": "Une revue passive lit le contrat ; les sondes appellent les outils sélectionnés, dans cette page et votre session, avec des arguments générés depuis leur schéma et des arguments interdits par le schéma (mauvais type, champ requis manquant, propriété inconnue, chaîne de 10 000 caractères). Au plus cinq appels par outil, un par un, annulables, tous enregistrés dans l’Historique comme sondes. Un outil qui modifie l’état le modifiera."
+    "message": "Une revue passive lit le contrat ; les sondes appellent les outils sélectionnés, dans cette page et votre session, avec des arguments générés depuis leur schéma et des arguments interdits par le schéma (mauvais type, champ requis manquant, propriété inconnue, chaîne de 10 000 caractères, chaîne requise vide, nombre hors de ses bornes), ainsi qu’un marqueur inerte qui montre si l’outil renvoie son entrée. Au plus huit appels par outil, un par un, annulables, tous enregistrés dans l’Historique comme sondes. Un outil qui modifie l’état le modifiera."
   },
   "probes_none": {
     "message": "Aucun constat issu des sondes. Appels effectués : $1."
@@ -4648,6 +4704,144 @@
   "sec_convention_unavailable_fix": {
     "description": "Phase B security review.",
     "message": "Vérifiez la réponse si vous souhaitiez publier cette convention. Son absence seule n’impose aucun correctif de sécurité ; aucun nouvel essai automatique."
+  },
+  "sec_declarative_hidden_parameter_title": {
+    "message": "Valeurs de formulaire masquées que l’agent ne voit pas"
+  },
+  "sec_declarative_hidden_parameter_why": {
+    "message": "Chrome exclut les champs masqués du schéma d’un outil déclaratif, mais le formulaire les envoie quand même. L’agent remplit les champs visibles sans voir ni contester des valeurs comme un montant, un destinataire ou un rôle."
+  },
+  "sec_declarative_hidden_parameter_fix": {
+    "message": "Gardez les valeurs métier côté serveur, déduites de la session, ou exposez-les comme paramètres examinés. Les champs masqués ne devraient porter que des jetons anti-falsification."
+  },
+  "sec_declarative_credential_field_title": {
+    "message": "Outil déclaratif qui demande un mot de passe ou une carte"
+  },
+  "sec_declarative_credential_field_why": {
+    "message": "Dans Chrome, les champs mot de passe font partie du schéma d’un outil déclaratif : l’agent devrait fournir des identifiants ou des données de carte via le modèle. Ces champs doivent être remplis par la personne (issue #316 de la spécification)."
+  },
+  "sec_declarative_credential_field_fix": {
+    "message": "Retirez les champs de connexion, de code à usage unique et de carte des formulaires exposés aux agents ; laissez la personne les remplir elle-même."
+  },
+  "sec_declarative_param_orphan_title": {
+    "message": "Description de paramètre jamais transmise à l’agent"
+  },
+  "sec_declarative_param_orphan_why": {
+    "message": "toolparamdescription est posé sur un contrôle sans nom ou désactivé. Le navigateur exclut ces contrôles du schéma : la description ne décrit rien que l’agent puisse remplir."
+  },
+  "sec_declarative_param_orphan_fix": {
+    "message": "Donnez un attribut name au contrôle et activez-le, ou supprimez la description."
+  },
+  "sec_declarative_post_auto_submit_title": {
+    "message": "Formulaire POST envoyé sans relecture"
+  },
+  "sec_declarative_post_auto_submit_why": {
+    "message": "toolautosubmit permet à l’agent d’envoyer le formulaire sans que la personne le vérifie. Le formulaire utilise POST, une méthode non sûre (RFC 9110), et Chrome conseille d’omettre toolautosubmit pour les actions qui ont des conséquences."
+  },
+  "sec_declarative_post_auto_submit_fix": {
+    "message": "Retirez toolautosubmit pour que la personne relise et envoie le formulaire rempli, sauf s’il s’agit d’une simple lecture sans effet."
+  },
+  "sec_readonly_callback_mutation_title": {
+    "message": "Déclaration de lecture seule contredite par le code de l’outil"
+  },
+  "sec_readonly_callback_mutation_why": {
+    "message": "L’outil déclare readOnlyHint: true, mais le code source de son callback contient une requête dont la méthode n’est pas une lecture sûre, ou un envoi de formulaire. Les agents peuvent lancer un outil en lecture seule sans demander. Il s’agit d’un motif dans le texte, pas d’un comportement observé."
+  },
+  "sec_readonly_callback_mutation_fix": {
+    "message": "Déclarez readOnlyHint: false (et consequentialHint: true pour une action conséquente), ou sortez l’écriture de cet outil. Relisez le callback pour confirmer."
+  },
+  "sec_exposed_to_cross_origin_title": {
+    "message": "Outil exposé à d’autres origines"
+  },
+  "sec_exposed_to_cross_origin_why": {
+    "message": "exposedTo permet aux documents des origines listées de découvrir et d’appeler cet outil. Chrome conseille de n’exposer les outils en lecture-écriture qu’aux origines de confiance pour agir au nom de l’utilisateur."
+  },
+  "sec_exposed_to_cross_origin_fix": {
+    "message": "Laissez exposedTo vide sauf si un partenaire examiné a besoin de l’outil ; n’exposez jamais un outil qui modifie l’état à une origine que vous ne contrôlez pas."
+  },
+  "sec_text_far_over_budget_title": {
+    "message": "Texte lu par le modèle bien au-delà de son budget"
+  },
+  "sec_text_far_over_budget_why": {
+    "message": "Un champ dépasse plus de deux fois le budget de caractères de Chrome. Un texte long peut enfouir des instructions là où personne ne relit (débordement de description, arXiv 2606.06387) ; des caractères invisibles ou un bloc encodé y signalent une dissimulation."
+  },
+  "sec_text_far_over_budget_fix": {
+    "message": "Raccourcissez le champ sous son budget et retirez tout contenu invisible ou encodé ; placez les détails dans la documentation."
+  },
+  "sec_client_secret_exposed_title": {
+    "message": "Clé secrète livrée dans un script de la page"
+  },
+  "sec_client_secret_exposed_why": {
+    "message": "Un identifiant au format de clé secrète d’un fournisseur figure dans un script que chaque visiteur télécharge. N’importe qui peut le copier ; seules les clés publiables sont prévues pour le code client. La valeur n’est ni affichée ni conservée."
+  },
+  "sec_client_secret_exposed_fix": {
+    "message": "Révoquez et renouvelez la clé auprès du fournisseur dès maintenant, puis déplacez l’appel sur votre serveur."
+  },
+  "sec_output_reflects_input_title": {
+    "message": "La sortie de l’outil renvoie l’entrée de l’appelant"
+  },
+  "sec_output_reflects_input_why": {
+    "message": "Une sonde a envoyé un marqueur unique et l’outil l’a renvoyé dans son résultat. Un texte qui atteint la sortie sans changement peut porter des instructions pour l’étape suivante de l’agent (injection par la sortie, spéc. §6.3.1.2)."
+  },
+  "sec_output_reflects_input_fix": {
+    "message": "Ne recopiez pas les arguments dans le résultat ; renvoyez des données structurées et factuelles, et déclarez untrustedContentHint quand le résultat contient du contenu d’utilisateurs."
+  },
+  "security_no_callbackSource": {
+    "message": "Le code source du callback n’a pas été lu pour ces outils déclarés en lecture seule : $1. Activez le mode Instrumentation pour ce site afin de le lire ; ils ne sont pas présentés comme sains."
+  },
+  "security_overridesActive": {
+    "message": "$1 outil(s) ont une surcharge locale. Cette revue lit les contrats déclarés par la page, pas les surcharges."
+  },
+  "security_beforeAfter": {
+    "message": "Avant / après"
+  },
+  "security_beforeAfterHelp": {
+    "message": "Le contrat déclaré par la page et celui que le correctif proposé enregistrerait, en JSON canonique avec un diff ligne par ligne. Rien n’est appliqué à la page."
+  },
+  "security_copyDiff": {
+    "message": "Copier le diff"
+  },
+  "security_copyDiffHelp": {
+    "message": "Copier le diff avant/après dans le presse-papiers."
+  },
+  "security_tryFix": {
+    "message": "Tester ce correctif localement"
+  },
+  "security_tryFixHelp": {
+    "message": "Enregistre la description, le schéma et les annotations proposés comme surcharge locale de cet outil. Agent Lab et Evals les utilisent alors ; la page n’est pas modifiée et cette revue continue de lire son propre contrat."
+  },
+  "security_tryFixDone": {
+    "message": "Surcharge locale enregistrée. Agent Lab et Evals proposent désormais le contrat corrigé ; retirez-la depuis l’onglet de surcharge de l’outil."
+  },
+  "security_tryFixError": {
+    "message": "La surcharge n’a pas pu être enregistrée. Rien n’a été modifié."
+  },
+  "toolOverride_annotationsActive": {
+    "message": "Annotations remplacées localement par « Tester ce correctif » : $1"
+  },
+  "env_legacyTestingApi": {
+    "message": "Cette page expose un objet modelContextTesting. Chrome a retiré cette API de test en version 152 : il provient donc d’un script de la page ou d’un polyfill ; Explorer ne l’utilise pas et ne s’y fie pas."
+  },
+  "baseline_newRules": {
+    "message": "$1 constat(s) proviennent de règles ajoutées après l’enregistrement de cette référence : de nouveaux contrôles, pas des changements du site."
+  },
+  "security_startersTitle": {
+    "message": "Contrats de départ issus des formulaires de cette page"
+  },
+  "security_startersIntro": {
+    "message": "Aucun outil n’est exposé ici. Chaque proposition vient d’un formulaire de cette page : attributs déclaratifs sans toolautosubmit, et un enregistrement document.modelContext avec un schéma fermé, une validation et une étape de confirmation. Inerte : relisez et adaptez avant usage."
+  },
+  "security_startersSkipped": {
+    "message": "$1 formulaire(s) non proposé(s) : les champs mot de passe, code à usage unique, carte ou fichier relèvent de la personne, pas d’un agent."
+  },
+  "security_copyRegistration": {
+    "message": "Copier l’enregistrement"
+  },
+  "security_copyMarkup": {
+    "message": "Copier les attributs du formulaire"
+  },
+  "security_copyStarterHelp": {
+    "message": "Copier ce contrat de départ inerte dans le presse-papiers."
   },
   "bridge_title": {
     "message": "Pont MCP local",

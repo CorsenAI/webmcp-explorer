@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { join, extname, normalize, sep, resolve } from 'node:path';
 import { isMockPath, handleMock } from './mock-llm.mjs';
+import { secretsPage, secretsScript } from './secret-keys.mjs';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)));
 const TYPES = {
@@ -28,6 +29,13 @@ async function handler(req, res) {
 
   // A fake OpenAI-compatible endpoint, so the agent loop is testable without a key.
   if (isMockPath(path)) return handleMock(req, res, url);
+
+  // WMCP-SEC-013: a page whose scripts carry provider-key formats, assembled at request time.
+  if (path === '/secrets.html' || path === '/secrets.js') {
+    const html = path.endsWith('.html');
+    res.writeHead(200, { 'content-type': html ? TYPES['.html'] : TYPES['.js'], 'cache-control': 'no-store' }).end(html ? secretsPage() : secretsScript());
+    return;
+  }
 
   const strict = path === '/csp' || path.startsWith('/csp/');
   if (strict) path = path.slice('/csp'.length) || '/';
