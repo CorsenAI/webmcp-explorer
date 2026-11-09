@@ -8,6 +8,7 @@
 import { probeMainWorld } from '../page/probe.js';
 import { buildRegistry } from '../core/registry.js';
 import { diagnoseEnvironment } from '../core/env.js';
+import { reviewTrialTokens } from '../core/origin-trial.js';
 import { findUnreachableFrames, computeCompleteness } from '../core/frames.js';
 import { applyOverrides } from '../core/overrides.js';
 import { contractFingerprint } from '../core/identity.js';
@@ -68,7 +69,19 @@ export async function discover(tabId, topUrl) {
       accessError: r.result.accessError ?? null,
       callError: r.result.callError ?? null,
       env: diagnoseEnvironment(r.result),
+      probe: r.result,
     }));
+
+  // Origin-trial tokens of each document, decoded and checked against Chrome's key: the
+  // environment then says whether a WebMCP token is honoured here, expired or for another origin.
+  for (const frame of frames) {
+    const tokens = Array.isArray(frame.probe.originTrialTokens) ? frame.probe.originTrialTokens : [];
+    if (tokens.length) {
+      const originTrials = await reviewTrialTokens(tokens.map((token) => ({ source: 'meta', token })), { pageOrigin: frame.origin });
+      frame.env = diagnoseEnvironment({ ...frame.probe, originTrials });
+    }
+    delete frame.probe;
+  }
 
   const top = frames.find((f) => f.isTopLevel) ?? frames[0] ?? null;
   const registry = await buildRegistry({ topOrigin, frames });

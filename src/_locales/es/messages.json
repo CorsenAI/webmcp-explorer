@@ -1794,7 +1794,7 @@
     "message": "Sin pestaña inspeccionable"
   },
   "noToolsBody": {
-    "message": "No se exponen herramientas en esta página. Si esperabas alguna, recarga la página y revisa la consola."
+    "message": "Esta página aún no expone herramientas. Algunos sitios cargan sus scripts solo tras el primer movimiento del puntero o desplazamiento: mueve el puntero sobre la página y las herramientas que se registren aparecerán aquí. Si no, recarga la página y revisa la consola."
   },
   "noToolsTitle": {
     "message": "No hay herramientas WebMCP en esta página"
@@ -3500,7 +3500,7 @@
     "message": "Con qué frecuencia se vuelven a revisar las pestañas abiertas."
   },
   "settings_recheckHelp": {
-    "message": "En cada intervalo, vuelve a revisar cada pestaña abierta cuyo sitio tenga una línea base y que Explorer pueda inspeccionar, y muestra en el icono de la barra el número de hallazgos nuevos. Desactivado por defecto."
+    "message": "En cada intervalo, vuelve a revisar cada pestaña abierta cuyo sitio tenga una línea base y que Explorer pueda inspeccionar, y muestra en el icono de la barra el número de hallazgos nuevos y de herramientas cuyo contrato cambió. Desactivado por defecto."
   },
   "settings_recheckMinutes": {
     "message": "$1 minutos"
@@ -3515,7 +3515,19 @@
     "message": "No programado."
   },
   "settings_recheckResult": {
-    "message": "Se comprobaron $1 sitio(s); $2 hallazgo(s) nuevo(s) desde sus líneas base."
+    "message": "Se comprobaron $1 sitio(s); $2 hallazgo(s) nuevo(s) y $3 contrato(s) modificado(s) desde sus líneas base.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    },
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts."
   },
   "settings_revoke": {
     "message": "Revocar"
@@ -4824,6 +4836,108 @@
   },
   "baseline_newRules": {
     "message": "$1 hallazgo(s) provienen de reglas añadidas después de guardar esta referencia: comprobaciones nuevas, no cambios en el sitio."
+  },
+  "env_otValid": {
+    "message": "Esta página lleva un token de Origin Trial de WebMCP que Chrome acepta aquí: válido hasta el $1 (quedan $2 días).",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "El token de Origin Trial de WebMCP de esta página caducó el $1. Chrome ignora los tokens caducados: renuévalo en la consola de Origin Trials de Chrome y sustitúyelo en la página.",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "El token de Origin Trial de WebMCP de esta página está registrado para $1, no para este origen. Chrome lo ignora aquí.",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "Esta página lleva un token de Origin Trial de WebMCP de terceros, destinado a scripts servidos desde $1 y válido hasta el $2. Solo se aplica cuando uno de esos scripts lo inyecta.",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "Un token de Origin Trial de WebMCP de esta página no está firmado con la clave de Chrome. Chrome lo ignora.",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "Token de prueba caducado",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "Token de prueba: quedan $1 días",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "Token de prueba ignorado",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "descripción",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "esquema de entrada",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "anotaciones",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "Descripción modificada desde esta línea base: $1. Un agente lee la descripción para decidir cuándo llamar a una herramienta. Lee el texto nuevo en Útiles antes de actualizar la línea base.",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "Contratos modificados: $1",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "El contrato de estas herramientas ya no es el de tu línea base guardada: $1. Abre Seguridad para ver qué parte cambió.",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "message": "Contratos iniciales a partir de los formularios de esta página"

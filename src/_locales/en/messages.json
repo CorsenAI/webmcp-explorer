@@ -1916,7 +1916,7 @@
     "message": "No inspectable tab"
   },
   "noToolsBody": {
-    "message": "No tools are exposed on this page. If you expect some, reload the page and check the console."
+    "message": "No tools are exposed on this page yet. Some sites load their scripts only after the first pointer movement or scroll: move the pointer over the page and tools registered then appear here. Otherwise, reload the page and check the console."
   },
   "noToolsTitle": {
     "message": "No WebMCP tools on this page"
@@ -3934,7 +3934,7 @@
     "description": "Select tooltip."
   },
   "settings_recheckHelp": {
-    "message": "Every interval, review again each open tab whose site has a baseline and that Explorer may inspect, and paint the toolbar badge with the number of new findings. Off by default.",
+    "message": "Every interval, review again each open tab whose site has a baseline and that Explorer may inspect, and paint the toolbar badge with the number of new findings and of tools whose contract changed. Off by default.",
     "description": "Checkbox tooltip."
   },
   "settings_recheckMinutes": {
@@ -3959,14 +3959,17 @@
     "description": "Alarm line when off."
   },
   "settings_recheckResult": {
-    "message": "Checked $1 site(s); $2 new finding(s) since their baselines.",
-    "description": "Result; $1 count, $2 count.",
+    "message": "Checked $1 site(s); $2 new finding(s) and $3 changed contract(s) since their baselines.",
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts.",
     "placeholders": {
       "1": {
         "content": "$1"
       },
       "2": {
         "content": "$2"
+      },
+      "3": {
+        "content": "$3"
       }
     }
   },
@@ -5355,6 +5358,108 @@
   "baseline_newRules": {
     "description": "Engine v3 interface.",
     "message": "$1 finding(s) come from rules added after this baseline was saved: new checks, not changes on the site."
+  },
+  "env_otValid": {
+    "message": "This page carries a WebMCP origin-trial token that Chrome honours here: valid until $1 ($2 days left).",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "This page's WebMCP origin-trial token expired on $1. Chrome ignores expired tokens: renew it in the Chrome origin trials console and replace it on the page.",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "This page's WebMCP origin-trial token is registered for $1, not for this origin. Chrome ignores it here.",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "This page carries a third-party WebMCP origin-trial token for scripts served from $1, valid until $2. It applies only when such a script injects it.",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "A WebMCP origin-trial token on this page is not signed with Chrome's key. Chrome ignores it.",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "Trial token expired",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "Trial token: $1 days left",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "Trial token ignored",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "description",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "input schema",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "annotations",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "Description changed since this baseline: $1. An agent reads the description to decide when to call a tool. Read the new text in Tools before you update the baseline.",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "Contracts changed: $1",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "The contract of these tools is no longer the one in your saved baseline: $1. Open Security to see which part changed.",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "description": "Engine v3 interface.",

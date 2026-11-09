@@ -8,6 +8,9 @@ import { severityLabel } from './security.js';
 
 const when = (ms) => new Date(ms).toLocaleString();
 const names = (list) => (list.length ? list.slice(0, 6).join(', ') + (list.length > 6 ? '…' : '') : '—');
+const PART_KEY = { description: 'baseline_partDescription', schema: 'baseline_partSchema', annotations: 'baseline_partAnnotations' };
+// "name (description, input schema)" when the baseline recorded the parts, else the name alone.
+const changedLabel = (c) => (c.parts?.length ? `${c.name} (${c.parts.map((p) => t(PART_KEY[p])).join(', ')})` : c.name);
 
 export function renderBaseline(root, { result, review, baseline, onChanged = () => {} }) {
   const origin = result?.topOrigin ?? null;
@@ -42,7 +45,9 @@ export function renderBaseline(root, { result, review, baseline, onChanged = () 
       String(diff.toolsAdded.length), String(diff.toolsRemoved.length), String(diff.contractsChanged.length)]) }),
   ].filter(Boolean) : [el('span', { text: t('baseline_noChange') })]));
   if (diff.newRules?.length) box.append(el('p', { class: 'field-note', text: t('baseline_newRules', [String(diff.newRules.length)]) }));
-  if (diff.contractsChanged.length) box.append(el('p', { class: 'field-note', text: t('baseline_toolsChanged', [names(diff.contractsChanged.map((c) => c.name))]) }));
+  if (diff.contractsChanged.length) box.append(el('p', { class: 'field-note sec-contracts-changed', text: t('baseline_toolsChanged', [names(diff.contractsChanged.map(changedLabel))]) }));
+  const rewritten = diff.contractsChanged.filter((c) => c.parts?.includes('description')).map((c) => c.name);
+  if (rewritten.length) box.append(el('p', { class: 'field-note nn-notice sec-description-changed', text: t('baseline_descriptionChanged', [names(rewritten)]) }));
   if (diff.toolsAdded.length) box.append(el('p', { class: 'field-note', text: t('baseline_toolsAdded', [names(diff.toolsAdded)]) }));
   if (diff.toolsRemoved.length) box.append(el('p', { class: 'field-note', text: t('baseline_toolsRemoved', [names(diff.toolsRemoved)]) }));
   if (baseline.lastDiff) {

@@ -136,6 +136,10 @@ export function probeMainWorld(fromOrigins, callbackPatterns = null) {
     methods,
     polyfillActive: Boolean(mc && mc.__explorerPolyfill),
     originTrialToken: Boolean(document.querySelector('meta[http-equiv="origin-trial" i]')),
+    // The tokens themselves (public by nature: every visitor receives them), bounded, so the
+    // extension can say which trial each one is for and whether Chrome still honours it.
+    originTrialTokens: Array.from(document.querySelectorAll('meta[http-equiv="origin-trial" i]')).slice(0, 20)
+      .map((m) => String(m.getAttribute('content') ?? '').slice(0, 6144)).filter(Boolean),
     devFlag: false,
     secureContext: window.isSecureContext === true,
     crossOriginIsolated: window.crossOriginIsolated === true,

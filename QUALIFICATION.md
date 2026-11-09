@@ -1,29 +1,33 @@
-# 2.4.0 qualification
+# 2.5.0 qualification
 
-Qualified on 2026-11-09. Source: 215 files under `src/`. The [source manifest](SOURCE-SHA256.json)
+Qualified on 2026-11-09. Source: 218 files under `src/`. The [source manifest](SOURCE-SHA256.json)
 contains each relative path and SHA-256 digest; its own SHA-256 is
-`cdaf52393e356e7e12c6c1e16f597706f76ecf3501b0c6f9d619ca390bdc538a`.
+`24cfc8823201810961331f30d776b994126d052461f4bda935ef7c4a7867591b`.
 
-Store package: `webmcp-explorer-2.4.0.zip`, 840042 bytes, SHA-256
-`cd39847f66667e6fc213c3d4bfeb0a312f877c4884967d788a3b42945193b9c7`, reproducible (`node
+Store package: `webmcp-explorer-2.5.0.zip`, 855059 bytes, SHA-256
+`6eba13233cfda3bce1904fecbc24de4acdb3cbb181d0cae120078e90a7480367`, reproducible (`node
 tools/pack-store.mjs` twice gives identical bytes; `node tools/verify-store-zip.mjs` matches every
 entry with `src/`).
 
 | Platform | Browser | Results |
 | --- | --- | --- |
-| Linux | Chrome for Testing 155.0.8059.84 | 758 units; 71/71 functional scenarios on the shipping build (production manifest, permissions granted through Chrome's own dialog); 12/12 permission journeys with real input |
-| macOS 27.2 ARM64 | Chrome for Testing 155.0.8059.84 | 758 units; 71/71 functional scenarios |
-| Windows 11 ARM64 | — | 758 units; package read back entry by entry |
+| Linux | Chrome for Testing 155.0.8059.84 | 774 units; 74/74 functional scenarios on the shipping build (production manifest, permissions granted through Chrome's own dialog); 12/12 permission journeys |
+| macOS 27.2 ARM64 | Chrome for Testing 155.0.8059.84 | 774 units; 74/74 functional scenarios |
+| Windows 11 ARM64 | — | 774 units; package read back entry by entry |
 
-These are the same 758 distinct unit cases repeated on each OS. On the Windows ARM64 machine, Chrome
+These are the same 774 distinct unit cases repeated on each OS. On the Windows ARM64 machine, Chrome
 for Testing runs as x64 under emulation and does not give usable functional runs; no Windows
-functional result is claimed for 2.4.0. Store gate (`node tools/check-store-build.mjs`): 215 files,
-1646 messages, no finding. No new permission.
+functional result is claimed for 2.5.0. The first full Linux run on this build gave 72/74 because of
+two timing faults in the test scripts (a cleanup that sent two requests at once, and a click on Send
+while it was briefly disabled); both were corrected and the next full run gave 74/74. Store gate
+(`node tools/check-store-build.mjs`): 218 files, 1660 messages, no finding. No new permission.
 
-What 2.4.0 adds: rule families WMCP-SEC-008 to 013 in the security review, before/after views of each
-fix, local test of a fix on Explorer's side, starter contracts from a page's forms, bounded probes
-(eight calls per tool at most) and, on request for a site you declare you control, a search of the
-page's own scripts for provider key formats that keeps the provider, type and length only.
+What 2.5.0 adds: the page's WebMCP origin-trial token (meta tags) decoded and checked with Chrome's
+public key, with a status-bar warning when Chrome ignores it, when it has expired and during its last
+14 days (with several tokens, the valid one that lasts longest counts, as in Chrome); per-part contract fingerprints in security baselines, so a later review names the tool and
+the part that changed (description, input schema, annotations) and warns separately about a rewritten
+description; the optional re-check counts changed contracts on the toolbar badge; the empty tool list
+explains that some sites register tools only after the first pointer movement or scroll.
 
 Grades remain heuristics; metadata cannot attest callbacks or backend authorization. SARIF carries
 observed runtime locations.

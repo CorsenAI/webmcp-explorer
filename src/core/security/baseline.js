@@ -4,6 +4,7 @@
 // moved. Pure JavaScript; bounded so a hostile page cannot grow the record without limit.
 
 import { SEVERITY_RANK, CODES } from './catalog.js';
+import { CONTRACT_PARTS } from './contract-lock.js';
 
 // Engine v3 (2026-11-08) added finding codes. A baseline records the engine that made it, so a
 // finding whose code did not exist then is shown as a new rule, never as a regression of the site.
@@ -19,9 +20,18 @@ export const MAX_BASELINE_TOOLS = 1000;
 
 export const findingKey = (f) => `${f.code}|${f.toolName ?? ''}|${f.contractFp ?? ''}`;
 
+// Per-part fingerprints (description, schema, annotations), when the discovery carries them.
+const HASH = /^[0-9a-f]{64}$/;
+const partsOf = (source) => {
+  if (!source || typeof source !== 'object') return null;
+  const parts = Object.fromEntries(CONTRACT_PARTS.filter((p) => HASH.test(String(source[p] ?? ''))).map((p) => [p, source[p]]));
+  return Object.keys(parts).length ? parts : null;
+};
+
 export function makeBaseline(review, discovery, { at = Date.now() } = {}) {
   const tools = (discovery?.tools ?? []).slice(0, MAX_BASELINE_TOOLS).map((t) => ({
     logicalId: t.logicalId ?? null, name: t.name, contractFp: t.contractFp ?? null, origin: t.origin ?? null,
+    ...(partsOf(t.contractParts) ? { parts: partsOf(t.contractParts) } : {}),
   }));
   const findings = (review?.findings ?? []).slice(0, MAX_BASELINE_FINDINGS).map((f) => ({
     key: findingKey(f), code: f.code, severity: f.severity, toolName: f.toolName ?? null, contractFp: f.contractFp ?? null,
@@ -54,7 +64,12 @@ export function diffBaseline(baseline, review, discovery) {
   const toolsRemoved = [...baseTools.keys()].filter((n) => !nowTools.has(n)).sort();
   const contractsChanged = [...nowTools.values()]
     .filter((t) => baseTools.has(t.name) && baseTools.get(t.name).contractFp !== (t.contractFp ?? null))
-    .map((t) => ({ name: t.name, from: baseTools.get(t.name).contractFp, to: t.contractFp ?? null }));
+    .map((t) => {
+      // Which parts moved; null when the baseline was saved before parts were recorded.
+      const before = partsOf(baseTools.get(t.name).parts), after = partsOf(t.contractParts);
+      return { name: t.name, from: baseTools.get(t.name).contractFp, to: t.contractFp ?? null,
+        parts: before && after ? CONTRACT_PARTS.filter((p) => before[p] && after[p] && before[p] !== after[p]) : null };
+    });
 
   // A baseline finding is resolved only when its tool is still there with the same contract
   // and the finding is gone; a changed contract or a removed tool is reported as such instead.
@@ -74,6 +89,8 @@ export function diffBaseline(baseline, review, discovery) {
     maxAdded,
     // A regression is something new a person should look at; informational facts are not one.
     regressed: added.some((f) => f.severity !== 'info'),
+    // A reviewed tool whose contract is no longer the one that was reviewed.
+    drifted: contractsChanged.length > 0,
   };
 }
 
@@ -89,6 +106,8 @@ export function summarizeDiff(diff, { at = Date.now() } = {}) {
     toolsAdded: diff.toolsAdded.length,
     toolsRemoved: diff.toolsRemoved.length,
     contractsChanged: diff.contractsChanged.length,
+    descriptionsChanged: diff.contractsChanged.filter((c) => c.parts?.includes('description')).length,
     regressed: diff.regressed,
+    drifted: diff.drifted === true,
   };
 }

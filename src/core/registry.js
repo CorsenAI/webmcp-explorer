@@ -15,7 +15,7 @@
 // the tool. Two iframes loading the same URL each own a tool of the same name and share a
 // logicalId; both instances are kept, because dropping one would make it unreachable.
 
-import { frameKey, logicalId, contractFingerprint } from './identity.js';
+import { frameKey, logicalId, contractParts } from './identity.js';
 import { toSchemaObject } from './schema/parse.js';
 import { parseStack } from './source.js';
 import { selectRuntimeContract } from './runtime-contract.js';
@@ -23,12 +23,14 @@ import { selectRuntimeContract } from './runtime-contract.js';
 // The fingerprint must describe the CONTRACT, not the wire format it arrived in. Hashing
 // the raw value would change every fingerprint the day Chrome stops stringifying schemas,
 // silently invalidating history, snapshots and saved calls (D-025).
-function fingerprintOf(raw) {
-  return contractFingerprint({
+// contractFp is the whole contract; contractParts says which part a later change touched.
+async function fingerprintOf(raw) {
+  const { contract, ...parts } = await contractParts({
     inputSchema: toSchemaObject(raw.inputSchema).schema,
     annotations: raw.annotations,
     description: raw.description,
   });
+  return { contractFp: contract, contractParts: parts };
 }
 
 // Where the tool was registered, when Instrumentation Mode captured it. Three distinct
@@ -129,7 +131,7 @@ export async function buildRegistry({ topOrigin, frames = [] }) {
             ...shape(raw, frame, key, { owned: true }),
             logicalId: id,
             instanceId,
-            contractFp: await fingerprintOf(raw),
+            ...(await fingerprintOf(raw)),
           });
         }
         continue;
@@ -142,7 +144,7 @@ export async function buildRegistry({ topOrigin, frames = [] }) {
             ...shape(raw, frame, key, { owned: false }),
             logicalId: id,
             instanceId: `${id}@unreachable`,
-            contractFp: await fingerprintOf(raw),
+            ...(await fingerprintOf(raw)),
           },
           origin: toolOrigin,
         });

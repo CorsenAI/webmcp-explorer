@@ -13,7 +13,9 @@ Free, no account, no telemetry. Apache-2.0.
 
 - **Inspect** every tool a page registers: JavaScript tools and declarative forms, in iframes and
   open shadow roots, with schema, annotations and the frame that registered it. A live timeline
-  tracks registrations and removals.
+  tracks registrations and removals; tools a page registers only after the first pointer movement
+  or scroll appear as soon as you move the pointer over it. The environment check decodes the page's
+  WebMCP origin-trial token and says whether Chrome honours it, ignores it or stops within 14 days.
 - **Run** a tool from a generated form or JSON arguments, read the result, save checks and combine
   calls into multi-step recipes. Unknown effects stop automatic continuation.
 - **Review security with evidence**: thirteen rule families (WMCP-SEC-001 to 013) cover
@@ -22,6 +24,10 @@ Free, no account, no telemetry. Apache-2.0.
   business fields, untrusted content, `exposedTo` lists and frames, text far beyond Chrome's
   budgets and changes in registered contracts. A provisional grade shows its calculation and what
   could not be observed.
+- **Catch a changed contract**: save a security baseline; a later review names each tool whose
+  contract changed and the part that changed (description, input schema, annotations), with its own
+  warning for a rewritten description. The optional re-check of open tabs counts changed contracts
+  on the toolbar badge.
 - **Fix with a diff**: each fix shows the observed contract and the proposed one. *Test this fix
   locally* applies the proposed description, schema and hints on Explorer's side only. A page with
   forms and no tool gets starter contracts, without auto-submit and without sensitive fields.
@@ -98,5 +104,5 @@ and the trademark boundary. Chrome and WebMCP are referenced descriptively; this
 an official Google product. It is also unrelated to the experimental `webmcp-explorer` sample in
 Microsoft Edge's `webmcp-labs` repository.
 
-See [QUALIFICATION.md](QUALIFICATION.md) for the qualification of this source (2.4.0) and
+See [QUALIFICATION.md](QUALIFICATION.md) for the qualification of this source (2.5.0) and
 [SOURCE-SHA256.json](SOURCE-SHA256.json) for the hashes of its product files.

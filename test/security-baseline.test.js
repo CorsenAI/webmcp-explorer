@@ -33,7 +33,7 @@ test('the same page later shows nothing new; a new tool with a directive is a re
   assert.deepEqual(diff.toolsAdded, ['helper']);
   assert.deepEqual(diff.contractsChanged.map((c) => c.name), ['search']);
   const s = summarizeDiff(diff, { at: 5 });
-  assert.deepEqual(s, { at: 5, added: diff.added.length, newRules: 0, maxAdded: 'critical', resolved: 0, toolsAdded: 1, toolsRemoved: 0, contractsChanged: 1, regressed: true });
+  assert.deepEqual(s, { at: 5, added: diff.added.length, newRules: 0, maxAdded: 'critical', resolved: 0, toolsAdded: 1, toolsRemoved: 0, contractsChanged: 1, descriptionsChanged: 0, regressed: true, drifted: true });
 });
 
 test('a removed tool is reported removed, not as resolved findings; an informational novelty is not a regression', () => {

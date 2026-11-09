@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Origin-trial token</title>
+<!-- A WebMCP origin-trial token for this origin, signed with a throwaway key (not Chrome's):
+     Chrome ignores it, and Explorer must say so. The private key was discarded after signing. -->
+<meta http-equiv="origin-trial" content="A+HQHgvZXuOxwIIWvaRvUPDsL5zHyn6H3MByyelyzQ3XIf1lCUuyUVYvLlGrPMCounupKIF5mapQl/ipMDIuuA0AAABJeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0Ojg3NzciLCJmZWF0dXJlIjoiV2ViTUNQIiwiZXhwaXJ5IjoxOTI0OTkyMDAwfQ==">
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Origin-trial token</h1>
+<p>One WebMCP origin-trial token for <code>http://localhost:8777</code>, not signed by Chrome, and one tool.</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+mc?.registerTool({
+  name: 'get_status',
+  description: 'Get the current service status.',
+  inputSchema: { type: 'object', additionalProperties: false, properties: {} },
+  annotations: { readOnlyHint: true },
+  execute: async () => 'ok',
+});
+</script>
+</body></html>

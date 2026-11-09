@@ -1,6 +1,6 @@
 # WebMCP Explorer — Privacy Policy
 
-Last reviewed: 2026-11-09. Applies to WebMCP Explorer 2.4.0.
+Last reviewed: 2026-11-09. Applies to WebMCP Explorer 2.5.0.
 Earlier Store versions may offer fewer features; optional features described below act only
 when you enable or request them.
 
@@ -129,9 +129,18 @@ You can save the current review of a site as its **baseline**; later reviews sho
 since. If you turn on **Re-check open tabs** in Settings (off by default), Explorer uses the
 `alarms` permission to run, at the interval you choose, the same passive review on tabs that
 are already open and whose site has a baseline and is allowed, and paints the toolbar badge with
-the number of new findings. It never opens a page, never runs a probe and sends nothing. The
-baselines, the re-check setting and the last re-check's counts are stored on your device with
-the other security review data and cleared with it.
+the number of new findings and of tools whose contract changed. It never opens a page, never runs a
+probe and sends nothing. A baseline keeps, for each tool, SHA-256 fingerprints of its whole contract
+and of its description, input schema and annotations, so a later review can say which part changed;
+fingerprints are one-way hashes, not the texts. The baselines, the re-check setting and the last
+re-check's counts are stored on your device with the other security review data and cleared with it.
+
+### Origin-trial tokens
+
+When it inspects a page, Explorer reads the page's `<meta http-equiv="origin-trial">` tokens, at most
+twenty, decodes them in memory and checks them with Chrome's public key, to say whether Chrome would
+honour a WebMCP token on that page. The token text is not stored or sent anywhere; the panel keeps
+the decoded facts (trial name, origin, expiry date, status) only while it shows them.
 
 ### Discovery conventions, only when you press the button
 
@@ -199,7 +208,7 @@ access feature described below shares only the requesting page's tool contracts 
 | Manual recipe runs: definition, input values, reviewed overrides, resolved arguments, outcomes and interruption status | `chrome.storage.local` | Up to 8 runs within 3 MB; old completed evidence is evicted; up to 20,000 characters of each result retained | Clear Recipes and run evidence in Settings after stopping active recipes |
 | Eval suites and the last two results of each | `chrome.storage.local` | Until you delete them | Delete, per suite, or Clear in Settings |
 | Contract snapshots, per site | `chrome.storage.local` | Until you delete them | Delete, per snapshot, or Clear in Settings |
-| Security review data: the findings you marked as reviewed (code, tool name, contract fingerprint; per site, at most 50 sites and 400 marks each), the sites you declared you control for active probes, the saved baselines (tool names, contract fingerprints and finding keys; at most 300 findings and 1,000 tools per site, 50 sites) with the counts of the last re-check, and the re-check setting | `chrome.storage.local` | Until you clear them | Clear, in Settings → Stored data (one entry for all of it) |
+| Security review data: the findings you marked as reviewed (code, tool name, contract fingerprint; per site, at most 50 sites and 400 marks each), the sites you declared you control for active probes, the saved baselines (tool names, contract fingerprints with one fingerprint per part, and finding keys; at most 300 findings and 1,000 tools per site, 50 sites) with the counts of the last re-check, and the re-check setting | `chrome.storage.local` | Until you clear them | Clear, in Settings → Stored data (one entry for all of it) |
 | Where the panel was, and what you had typed in it | `chrome.storage.session` (memory) | Browser session | Closing Chrome, or the Stop button |
 | An agent run or eval suite in progress | `chrome.storage.session` (memory) | Browser session | Closing Chrome, or the Stop button |
 | **API keys, decrypted cache** | `chrome.storage.session`, trusted extension contexts only | Browser session; also cleared on extension reload, update or disable | Forget per provider, Lock vault, delete vault, clear saved data and keys, or Forget Agent Lab |

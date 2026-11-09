@@ -48,9 +48,15 @@ export function normalizeAnnotations(annotations) {
   return out;
 }
 
-export async function contractFingerprint({ inputSchema, annotations, description }) {
-  const schemaFp = await sha256Hex(canonicalJson(inputSchema ?? null));
+// The contract fingerprint and the fingerprint of each of its three parts, so a later comparison
+// can say which part moved: the description an agent reads, the input schema, or the annotations.
+export async function contractParts({ inputSchema, annotations, description }) {
+  const schema = await sha256Hex(canonicalJson(inputSchema ?? null));
   const annotationsFp = await sha256Hex(canonicalJson(normalizeAnnotations(annotations)));
   const descriptionFp = await sha256Hex(description ?? '');
-  return sha256Hex(schemaFp + annotationsFp + descriptionFp);
+  return { contract: await sha256Hex(schema + annotationsFp + descriptionFp), description: descriptionFp, schema, annotations: annotationsFp };
+}
+
+export async function contractFingerprint(tool) {
+  return (await contractParts(tool)).contract;
 }

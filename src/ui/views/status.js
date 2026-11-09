@@ -4,6 +4,7 @@ import { requestOrigins } from '../../shared/permissions.js';
 import { el, badge, t } from '../dom.js';
 import { reviewSecurity } from '../../core/security/review.js';
 import { diffBaseline } from '../../core/security/baseline.js';
+import { trialNote, trialAlert } from '../components/trial-note.js';
 
 function envLabel(state) {
   const map = {
@@ -60,6 +61,14 @@ export function renderStatus(factsEl, result, { onGranted, tabId = null }) {
       title: t('status_toolsDiscoveredAndFramesExplorer'),
     }),
   ];
+
+  // A WebMCP origin-trial token Chrome ignores, or one about to expire, is worth a badge.
+  const trial = trialAlert(result.env);
+  if (trial) {
+    const node = badge(trial.label, trial.kind, trialNote(result.env) ?? '');
+    node.classList.add('trial-badge');
+    nodes.push(node);
+  }
 
   const inventory=el('span',{class:'diagnostic-inventory',text:t('status_inventorySplit',[String(diagnostic.imperative),String(diagnostic.declarative),String(diagnostic.unknown)]),title:t('status_inventoryHelp')});
   const grade=reviewSecurity({discovery:result}).score;
@@ -143,13 +152,27 @@ export async function appendSecurityBadge(factsEl, result) {
   if (!stored?.baseline) return null;
   const diff = diffBaseline(stored.baseline, reviewSecurity({ discovery: result }), result);
   factsEl.querySelector('.sec-status-badge')?.remove();
-  if (!diff?.regressed || !factsEl.isConnected) return diff;
-  const node = badge(
-    t('status_securityNew', [String(diff.added.length)]),
-    diff.maxAdded === 'high' || diff.maxAdded === 'critical' ? 'danger' : 'warn',
-    t('status_securityNewHelp', [t(`security_sev_${diff.maxAdded}`)]),
-  );
-  node.classList.add('sec-status-badge');
-  factsEl.append(node);
+  factsEl.querySelector('.sec-drift-badge')?.remove();
+  if (!diff || !factsEl.isConnected) return diff;
+  if (diff.regressed) {
+    const node = badge(
+      t('status_securityNew', [String(diff.added.length)]),
+      diff.maxAdded === 'high' || diff.maxAdded === 'critical' ? 'danger' : 'warn',
+      t('status_securityNewHelp', [t(`security_sev_${diff.maxAdded}`)]),
+    );
+    node.classList.add('sec-status-badge');
+    factsEl.append(node);
+  }
+  // A reviewed tool whose contract is no longer the reviewed one; a rewritten description is
+  // what an agent reads, so it is the stronger signal.
+  if (diff.drifted) {
+    const node = badge(
+      t('status_contractsChanged', [String(diff.contractsChanged.length)]),
+      diff.contractsChanged.some((c) => c.parts?.includes('description')) ? 'danger' : 'warn',
+      t('status_contractsChangedHelp', [diff.contractsChanged.slice(0, 6).map((c) => c.name).join(', ')]),
+    );
+    node.classList.add('sec-drift-badge');
+    factsEl.append(node);
+  }
   return diff;
 }

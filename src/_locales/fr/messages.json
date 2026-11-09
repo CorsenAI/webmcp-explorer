@@ -1794,7 +1794,7 @@
     "message": "Aucun onglet inspectable"
   },
   "noToolsBody": {
-    "message": "Aucun outil n’est exposé sur cette page. Si vous en attendez, rechargez la page et vérifiez la console."
+    "message": "Aucun outil n’est encore exposé sur cette page. Certains sites ne chargent leurs scripts qu’au premier mouvement du pointeur ou défilement : passez le pointeur sur la page, les outils enregistrés alors apparaîtront ici. Sinon, rechargez la page et vérifiez la console."
   },
   "noToolsTitle": {
     "message": "Aucun outil WebMCP sur cette page"
@@ -3500,7 +3500,7 @@
     "message": "Fréquence à laquelle les onglets ouverts sont réexaminés."
   },
   "settings_recheckHelp": {
-    "message": "À chaque intervalle, réexamine chaque onglet ouvert dont le site possède une référence et qu’Explorer est autorisé à inspecter, et affiche sur le badge de la barre d’outils le nombre de nouveaux constats. Désactivé par défaut."
+    "message": "À chaque intervalle, réexamine chaque onglet ouvert dont le site possède une référence et qu’Explorer est autorisé à inspecter, et affiche sur le badge de la barre d’outils le nombre de nouveaux constats et d’outils dont le contrat a changé. Désactivé par défaut."
   },
   "settings_recheckMinutes": {
     "message": "$1 minutes"
@@ -3515,7 +3515,19 @@
     "message": "Non planifié."
   },
   "settings_recheckResult": {
-    "message": "$1 site(s) vérifié(s) ; $2 nouveau(x) constat(s) depuis leur référence."
+    "message": "$1 site(s) vérifié(s) ; $2 nouveau(x) constat(s) et $3 contrat(s) modifié(s) depuis leur référence.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    },
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts."
   },
   "settings_revoke": {
     "message": "Révoquer"
@@ -4824,6 +4836,108 @@
   },
   "baseline_newRules": {
     "message": "$1 constat(s) proviennent de règles ajoutées après l’enregistrement de cette référence : de nouveaux contrôles, pas des changements du site."
+  },
+  "env_otValid": {
+    "message": "Cette page porte un jeton Origin Trial WebMCP que Chrome prend en compte ici : valide jusqu’au $1 ($2 jours restants).",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "Le jeton Origin Trial WebMCP de cette page a expiré le $1. Chrome ignore les jetons expirés : renouvelez-le dans la console des Origin Trials de Chrome et remplacez-le sur la page.",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "Le jeton Origin Trial WebMCP de cette page est enregistré pour $1, pas pour cette origine. Chrome l’ignore ici.",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "Cette page porte un jeton Origin Trial WebMCP tiers, destiné aux scripts servis depuis $1 et valide jusqu’au $2. Il ne s’applique que lorsqu’un tel script l’injecte.",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "Un jeton Origin Trial WebMCP de cette page n’est pas signé avec la clé de Chrome. Chrome l’ignore.",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "Jeton d’essai expiré",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "Jeton d’essai : $1 jours restants",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "Jeton d’essai ignoré",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "description",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "schéma d’entrée",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "annotations",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "Description modifiée depuis cette référence : $1. Un agent lit la description pour décider quand appeler un outil. Lisez le nouveau texte dans Outils avant de mettre la référence à jour.",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "Contrats modifiés : $1",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "Le contrat de ces outils n’est plus celui de votre référence enregistrée : $1. Ouvrez Sécurité pour voir quelle partie a changé.",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "message": "Contrats de départ issus des formulaires de cette page"

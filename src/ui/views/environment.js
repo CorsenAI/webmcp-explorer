@@ -1,6 +1,7 @@
 import { emulationControl } from '../components/emulation.js';
 import { el, row, t } from '../dom.js';
 import { diagnosticEvidence } from '../components/diagnostic-evidence.js';
+import { trialNote } from '../components/trial-note.js';
 
 const REASON_KEY = {
   'insecure-context': 'reasonInsecureContext',
@@ -44,6 +45,9 @@ export function renderEnvironment(root, result, { onDemo = null, tabId = null, e
   if (refusal && reason !== 'api-call-rejected') {
     nodes.push(el('p', { class: 'field-desc', text: t('env_browserSaid', [quoted]) }));
   }
+  // An expired or misplaced WebMCP origin-trial token is a common reason for an absent API.
+  const trial = trialNote(result.env);
+  if (trial) nodes.push(el('p', { class: 'field-note env-trial', text: trial }));
 
   // A screen that only explains why nothing works is a dead end, and this one is the first
   // thing a Store visitor without the flag would see (D-031, D-049).

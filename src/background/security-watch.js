@@ -1,7 +1,7 @@
 // Re-checks the posture of open tabs against their saved baselines (S3). Passive only: it runs
 // the ordinary discovery and the ordinary review on tabs that are already open and whose origin
 // Explorer may inspect; it never opens a page, never runs a probe, never leaves the device. A
-// regression paints the action badge; the panel shows the detail. Off until the person turns
+// regression or a changed contract paints the action badge; the panel shows the detail. Off until the person turns
 // it on in Settings; the alarm lives and dies with that setting.
 
 import { discover } from './discover.js';
@@ -23,7 +23,7 @@ export async function recheckOpenTabs() {
   if (!baselines.length) {
     // Nothing to compare any more: a badge painted for a forgotten baseline must go.
     await paintBadge(0);
-    return { checked: [], regressed: 0 };
+    return { checked: [], regressed: 0, drifted: 0 };
   }
   const byOrigin = new Map(baselines.map((b) => [b.origin, b]));
   let tabs = [];
@@ -33,8 +33,11 @@ export async function recheckOpenTabs() {
     tabs = [];
   }
   // Every open tab of an origin is reviewed: two pages of one site can expose different tools.
-  // The origin's record keeps the tab that moved the most, and says how many tabs were seen.
+  // The origin's record keeps the tab with the most new findings, and the changed contracts of
+  // all its tabs by tool name: one page's new findings must not hide another page's rewritten
+  // description, and a tool open on two pages counts once.
   const perOrigin = new Map();
+  const worse = (a, b) => (a.regressed && !b.regressed) || (a.regressed === b.regressed && a.added > b.added);
   for (const tab of tabs) {
     // A tab's url is visible only for origins Explorer may inspect; others are simply skipped.
     const origin = originOf(tab.url);
@@ -44,24 +47,31 @@ export async function recheckOpenTabs() {
       const discovery = await discover(tab.id, tab.url);
       if (!discovery || discovery.error) continue;
       const review = reviewSecurity({ discovery });
-      const summary = summarizeDiff(diffBaseline(byOrigin.get(origin), review, discovery));
-      const entry = { origin, tabId: tab.id, url: tab.url, ...summary };
-      const current = perOrigin.get(origin);
-      if (!current) perOrigin.set(origin, { ...entry, tabs: 1 });
-      else {
-        const worse = (entry.regressed && !current.regressed) || (entry.regressed === current.regressed && entry.added > current.added);
-        perOrigin.set(origin, { ...(worse ? entry : current), tabs: current.tabs + 1 });
+      const diff = diffBaseline(byOrigin.get(origin), review, discovery);
+      if (!diff) continue;
+      const entry = { origin, tabId: tab.id, url: tab.url, ...summarizeDiff(diff) };
+      const record = perOrigin.get(origin) ?? { worst: null, tabs: 0, changed: new Set(), described: new Set() };
+      record.tabs += 1;
+      for (const c of diff.contractsChanged) {
+        record.changed.add(c.name);
+        if (c.parts?.includes('description')) record.described.add(c.name);
       }
+      if (!record.worst || worse(entry, record.worst)) record.worst = entry;
+      perOrigin.set(origin, record);
     } catch {
       // A tab that cannot be inspected right now is skipped; the next check tries again.
     }
   }
-  const checked = [...perOrigin.values()];
+  const checked = [...perOrigin.values()].map((r) => ({ ...r.worst, tabs: r.tabs,
+    contractsChanged: r.changed.size, descriptionsChanged: r.described.size, drifted: r.changed.size > 0 }));
   // Counts only are stored on the baseline (PRIVACY): the tab's URL stays in this result.
-  for (const c of checked) await updateBaselineCheck(c.origin, { at: c.at, added: c.added, maxAdded: c.maxAdded, resolved: c.resolved, toolsAdded: c.toolsAdded, toolsRemoved: c.toolsRemoved, contractsChanged: c.contractsChanged, regressed: c.regressed, tabs: c.tabs });
+  for (const c of checked) await updateBaselineCheck(c.origin, { at: c.at, added: c.added, maxAdded: c.maxAdded, resolved: c.resolved, toolsAdded: c.toolsAdded, toolsRemoved: c.toolsRemoved, contractsChanged: c.contractsChanged, descriptionsChanged: c.descriptionsChanged, regressed: c.regressed, drifted: c.drifted, tabs: c.tabs });
   const regressed = checked.filter((c) => c.regressed).reduce((n, c) => n + c.added, 0);
-  await paintBadge(regressed);
-  return { checked, regressed };
+  // A reviewed tool whose contract moved counts too: nothing new may be flagged, and yet the
+  // description an agent reads is no longer the one that was reviewed.
+  const drifted = checked.reduce((n, c) => n + (c.contractsChanged ?? 0), 0);
+  await paintBadge(regressed + drifted);
+  return { checked, regressed, drifted };
 }
 
 async function paintBadge(count) {

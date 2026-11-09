@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Deferred registration</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px;min-height:2400px}</style></head>
+<body>
+<h1>Deferred registration</h1>
+<p>Performance plugins hold scripts until a visitor's first interaction. This page registers its
+tools only then: one on the first wheel event, one on the second.</p>
+<p id="state">no tools yet</p>
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+const state = document.getElementById('state');
+const lookup = (name, description) => {
+  mc?.registerTool({
+    name, description,
+    inputSchema: { type: 'object', additionalProperties: false, properties: { id: { type: 'string', pattern: '^[0-9]{6}$', description: 'Six-digit identifier.' } }, required: ['id'] },
+    annotations: { readOnlyHint: true },
+    execute: async () => 'ok',
+  });
+  state.textContent = state.textContent === 'no tools yet' ? name : `${state.textContent}, ${name}`;
+};
+// Wheel events only (WP Rocket and LiteSpeed Cache both wait for them): in a headful browser a
+// pointer resting over the window fires mousemove and mouseover when the page appears, which
+// releases a mousemove trigger before anyone acts. A resting pointer never turns the wheel.
+let wheels = 0;
+window.addEventListener('wheel', () => {
+  wheels += 1;
+  if (wheels === 1) lookup('get_product', 'Get one product by its identifier.');
+  else if (wheels === 2) lookup('get_order', 'Get one order by its identifier.');
+}, { passive: true });
+</script>
+</body></html>

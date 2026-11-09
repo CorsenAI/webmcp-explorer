@@ -1794,7 +1794,7 @@
     "message": "Kein untersuchbarer Tab"
   },
   "noToolsBody": {
-    "message": "Auf dieser Seite werden keine Tools bereitgestellt. Laden Sie die Seite neu und prüfen Sie die Konsole."
+    "message": "Auf dieser Seite werden noch keine Tools bereitgestellt. Manche Websites laden ihre Skripte erst bei der ersten Zeigerbewegung oder beim ersten Scrollen: Bewegen Sie den Zeiger über die Seite, dann erscheinen die dabei registrierten Tools hier. Andernfalls laden Sie die Seite neu und prüfen Sie die Konsole."
   },
   "noToolsTitle": {
     "message": "Keine WebMCP-Tools auf dieser Seite"
@@ -3500,7 +3500,7 @@
     "message": "Wie oft die offenen Tabs erneut geprüft werden."
   },
   "settings_recheckHelp": {
-    "message": "Prüft in jedem Intervall alle offenen Tabs, deren Website eine Referenz hat und die Explorer untersuchen darf, und zeigt die Anzahl neuer Befunde am Symbolleisten-Badge an. Standardmäßig deaktiviert."
+    "message": "Prüft in jedem Intervall alle offenen Tabs, deren Website eine Referenz hat und die Explorer untersuchen darf, und zeigt am Symbolleisten-Badge die Anzahl neuer Befunde und der Werkzeuge mit geändertem Vertrag an. Standardmäßig deaktiviert."
   },
   "settings_recheckMinutes": {
     "message": "$1 Minuten"
@@ -3515,7 +3515,19 @@
     "message": "Nicht geplant."
   },
   "settings_recheckResult": {
-    "message": "$1 Website(s) geprüft; $2 neue(r) Befund(e) seit deren Referenz."
+    "message": "$1 Website(s) geprüft; $2 neue(r) Befund(e) und $3 geänderte(r) Vertrag/Verträge seit deren Referenz.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    },
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts."
   },
   "settings_revoke": {
     "message": "Entziehen"
@@ -4824,6 +4836,108 @@
   },
   "baseline_newRules": {
     "message": "$1 Befund(e) stammen aus Regeln, die nach dem Speichern dieser Referenz hinzukamen: neue Prüfungen, keine Änderungen an der Website."
+  },
+  "env_otValid": {
+    "message": "Diese Seite enthält ein WebMCP-Origin-Trial-Token, das Chrome hier berücksichtigt: gültig bis $1 (noch $2 Tage).",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "Das WebMCP-Origin-Trial-Token dieser Seite ist am $1 abgelaufen. Chrome ignoriert abgelaufene Tokens: Erneuern Sie es in der Origin-Trials-Konsole von Chrome und ersetzen Sie es auf der Seite.",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "Das WebMCP-Origin-Trial-Token dieser Seite ist für $1 registriert, nicht für diesen Ursprung. Chrome ignoriert es hier.",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "Diese Seite enthält ein WebMCP-Origin-Trial-Token eines Drittanbieters für Skripte von $1, gültig bis $2. Es gilt nur, wenn ein solches Skript es einfügt.",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "Ein WebMCP-Origin-Trial-Token dieser Seite ist nicht mit dem Schlüssel von Chrome signiert. Chrome ignoriert es.",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "Trial-Token abgelaufen",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "Trial-Token: noch $1 Tage",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "Trial-Token ignoriert",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "Beschreibung",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "Eingabeschema",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "Annotationen",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "Beschreibung seit dieser Referenz geändert: $1. Ein Agent liest die Beschreibung, um zu entscheiden, wann er ein Werkzeug aufruft. Lesen Sie den neuen Text unter Werkzeuge, bevor Sie die Referenz aktualisieren.",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "Verträge geändert: $1",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "Der Vertrag dieser Werkzeuge entspricht nicht mehr Ihrer gespeicherten Referenz: $1. Öffnen Sie Sicherheit, um zu sehen, welcher Teil sich geändert hat.",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "message": "Startverträge aus den Formularen dieser Seite"

@@ -1794,7 +1794,7 @@
     "message": "אין כרטיסייה לבדיקה"
   },
   "noToolsBody": {
-    "message": "לא נחשפו כלים בדף זה. אם ציפית לכלים, רענן את הדף ובדוק את מסוף המפתחים."
+    "message": "עדיין לא נחשפו כלים בדף זה. אתרים מסוימים טוענים את הסקריפטים שלהם רק אחרי תנועת המצביע או הגלילה הראשונה: הזז את המצביע מעל הדף, והכלים שיירשמו אז יופיעו כאן. אחרת, רענן את הדף ובדוק את מסוף המפתחים."
   },
   "noToolsTitle": {
     "message": "אין כלי WebMCP בדף זה"
@@ -3500,7 +3500,7 @@
     "message": "באיזו תדירות הלשוניות הפתוחות נסקרות מחדש."
   },
   "settings_recheckHelp": {
-    "message": "בכל מרווח זמן, סוקר מחדש כל לשונית פתוחה שלאתר שלה יש קו בסיס וש-Explorer רשאי לבדוק, ומציג על תג סרגל הכלים את מספר הממצאים החדשים. כבוי כברירת מחדל."
+    "message": "בכל מרווח זמן, סוקר מחדש כל לשונית פתוחה שלאתר שלה יש קו בסיס וש-Explorer רשאי לבדוק, ומציג על תג סרגל הכלים את מספר הממצאים החדשים והכלים שהחוזה שלהם השתנה. כבוי כברירת מחדל."
   },
   "settings_recheckMinutes": {
     "message": "$1 דקות"
@@ -3515,7 +3515,19 @@
     "message": "לא מתוזמן."
   },
   "settings_recheckResult": {
-    "message": "נבדקו $1 אתרים; $2 ממצאים חדשים מאז קו הבסיס שלהם."
+    "message": "נבדקו $1 אתרים; $2 ממצאים חדשים ו-$3 חוזים שהשתנו מאז קו הבסיס שלהם.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    },
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts."
   },
   "settings_revoke": {
     "message": "בטל הרשאה"
@@ -4824,6 +4836,108 @@
   },
   "baseline_newRules": {
     "message": "$1 ממצאים נובעים מכללים שנוספו אחרי שמירת קו הבסיס הזה: בדיקות חדשות, לא שינויים באתר."
+  },
+  "env_otValid": {
+    "message": "בדף זה יש אסימון Origin Trial של WebMCP ש-Chrome מכבד כאן: בתוקף עד $1 (נותרו $2 ימים).",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "תוקף אסימון ה-Origin Trial של WebMCP בדף זה פג ב-$1. Chrome מתעלם מאסימונים שפג תוקפם: חדשו אותו במסוף ה-Origin Trials של Chrome והחליפו אותו בדף.",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "אסימון ה-Origin Trial של WebMCP בדף זה רשום עבור $1, ולא עבור המקור הזה. Chrome מתעלם ממנו כאן.",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "בדף זה יש אסימון Origin Trial של WebMCP מצד שלישי, המיועד לסקריפטים המוגשים מ-$1 ובתוקף עד $2. הוא חל רק כאשר סקריפט כזה מזריק אותו.",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "אסימון Origin Trial של WebMCP בדף זה אינו חתום במפתח של Chrome. Chrome מתעלם ממנו.",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "תוקף אסימון הניסוי פג",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "אסימון ניסוי: נותרו $1 ימים",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "אסימון הניסוי אינו מכובד",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "תיאור",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "סכמת קלט",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "הערות",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "התיאור השתנה מאז קו הבסיס הזה: $1. סוכן קורא את התיאור כדי להחליט מתי לקרוא לכלי. קראו את הטקסט החדש בכלים לפני עדכון קו הבסיס.",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "חוזים שהשתנו: $1",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "החוזה של הכלים האלה כבר אינו זה שבקו הבסיס השמור שלכם: $1. פתחו את סעיף האבטחה כדי לראות איזה חלק השתנה.",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "message": "חוזי פתיחה מתוך הטפסים של דף זה"

@@ -1794,7 +1794,7 @@
     "message": "検査可能なタブがありません"
   },
   "noToolsBody": {
-    "message": "公開されているツールが見つかりません。ページを再読み込みしてコンソールを確認してください。"
+    "message": "このページではまだツールが公開されていません。サイトによっては、最初のポインター移動やスクロールの後にスクリプトを読み込みます。ページ上でポインターを動かすと、その時点で登録されたツールがここに表示されます。表示されない場合は、ページを再読み込みしてコンソールを確認してください。"
   },
   "noToolsTitle": {
     "message": "このページには WebMCP ツールがありません"
@@ -3500,7 +3500,7 @@
     "message": "開いているタブを再監査する頻度です。"
   },
   "settings_recheckHelp": {
-    "message": "一定間隔ごとに、ベースラインがあり Explorer に権限がある開いているタブを再監査し、新規検出数をツールバーバッジに表示します（既定ではオフ）。"
+    "message": "一定間隔ごとに、ベースラインがあり Explorer に権限がある開いているタブを再監査し、新規検出数と契約が変更されたツールの数をツールバーバッジに表示します（既定ではオフ）。"
   },
   "settings_recheckMinutes": {
     "message": "$1 分"
@@ -3515,7 +3515,19 @@
     "message": "スケジュールなし。"
   },
   "settings_recheckResult": {
-    "message": "$1 サイトをチェックしました（ベースライン以降の新規検出: $2 件）。"
+    "message": "$1 サイトをチェックしました（ベースライン以降の新規検出: $2 件、契約の変更: $3 件）。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    },
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts."
   },
   "settings_revoke": {
     "message": "取り消す"
@@ -4824,6 +4836,108 @@
   },
   "baseline_newRules": {
     "message": "$1 件の検出事項は、このベースラインの保存後に追加されたルールによるものです。サイトの変更ではなく、新しいチェックです。"
+  },
+  "env_otValid": {
+    "message": "このページには、Chrome がここで有効と認める WebMCP オリジントライアルのトークンがあります。有効期限: $1（残り $2 日）。",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "このページの WebMCP オリジントライアルのトークンは $1 に期限切れになりました。Chrome は期限切れのトークンを無視します。Chrome のオリジントライアル コンソールで更新し、ページ上のトークンを差し替えてください。",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "このページの WebMCP オリジントライアルのトークンは、このオリジンではなく $1 に登録されています。Chrome はここでは無視します。",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "このページには、$1 から配信されるスクリプト向けのサードパーティ WebMCP オリジントライアル トークンがあります（有効期限: $2）。そのようなスクリプトが挿入した場合にのみ適用されます。",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "このページの WebMCP オリジントライアル トークンは Chrome の鍵で署名されていません。Chrome は無視します。",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "トライアル トークン期限切れ",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "トライアル トークン: 残り $1 日",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "トライアル トークン無効",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "説明",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "入力スキーマ",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "アノテーション",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "このベースライン以降に説明が変更されました: $1。エージェントは説明を読んでツールを呼び出すかどうかを判断します。ベースラインを更新する前に、「ツール」で新しい文面を確認してください。",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "契約の変更: $1 件",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "これらのツールの契約は、保存済みベースラインのものと異なります: $1。変更箇所は「セキュリティ」で確認できます。",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "message": "このページのフォームから作るスターター契約"

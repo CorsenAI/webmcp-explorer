@@ -13,6 +13,8 @@
 // Note: `devFlag` cannot be filled in by a page probe — no API reads chrome://flags — so in
 // practice `testing-flag` is indistinguishable from `native`. See KNOWN_LIMITATIONS L-09.
 
+import { webmcpTrialOf } from './origin-trial.js';
+
 export const REQUIRED_SURFACE = ['registerTool', 'getTools', 'executeTool', 'addEventListener'];
 
 export const REASONS = [
@@ -74,7 +76,10 @@ export function diagnoseEnvironment(signals = {}) {
       ? { during: 'call', name: String(callError.name ?? 'Error'), message: String(callError.message ?? '') }
       : null);
 
-  const capability = classifyEnvironment(signals);
+  // With reviewed tokens (origin-trial.js), "origin trial" means a WebMCP token Chrome honours
+  // here, not merely an origin-trial meta tag for some feature.
+  const trial = Array.isArray(signals.originTrials) ? webmcpTrialOf(signals.originTrials) : null;
+  const capability = classifyEnvironment(trial ? { ...signals, originTrialToken: trial.active } : signals);
   const frameContext = frameContextOf(signals);
   const toolsPermission = toolsPermissionOf(signals);
 
@@ -121,6 +126,8 @@ export function diagnoseEnvironment(signals = {}) {
     // An object named modelContextTesting: Chrome removed that API in 152 (engine v3 note).
     legacyTestingApi: signals.testingApiPresent === true,
     checks,
+    // The page's WebMCP origin-trial token, when its tokens were reviewed: honoured or not, and why.
+    originTrial: trial ? { ...trial, others: signals.originTrials.filter((t) => !t.webmcp).length } : null,
     // The browser's own refusal, when there was one, so the screen can quote it.
     refusal,
   };

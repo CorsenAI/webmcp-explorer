@@ -1794,7 +1794,7 @@
     "message": "لا توجد علامة تبويب قابلة للفحص"
   },
   "noToolsBody": {
-    "message": "لم يتم عرض أي أدوات في هذه الصفحة. إذا كنت تتوقع وجودها، فأعد تحميل الصفحة وتحقق من وحدة التحكم."
+    "message": "لم تُعرض أي أدوات في هذه الصفحة بعد. بعض المواقع لا تحمّل نصوصها البرمجية إلا بعد أول تحريك للمؤشر أو تمرير: حرّك المؤشر فوق الصفحة، وستظهر هنا الأدوات المسجّلة حينها. وإلا فأعد تحميل الصفحة وتحقق من وحدة التحكم."
   },
   "noToolsTitle": {
     "message": "لا توجد أدوات WebMCP في هذه الصفحة"
@@ -3500,7 +3500,7 @@
     "message": "مدى تكرار إعادة مراجعة علامات التبويب المفتوحة."
   },
   "settings_recheckHelp": {
-    "message": "في كل فترة، يعيد مراجعة كل علامة تبويب مفتوحة لموقع له خط أساس ويحق لـ Explorer فحصه، ويعرض عدد النتائج الجديدة على شارة شريط الأدوات. متوقف افتراضياً."
+    "message": "في كل فترة، يعيد مراجعة كل علامة تبويب مفتوحة لموقع له خط أساس ويحق لـ Explorer فحصه، ويعرض على شارة شريط الأدوات عدد النتائج الجديدة والأدوات التي تغيّر عقدها. متوقف افتراضياً."
   },
   "settings_recheckMinutes": {
     "message": "$1 دقائق"
@@ -3515,7 +3515,19 @@
     "message": "غير مجدول."
   },
   "settings_recheckResult": {
-    "message": "تم فحص $1 موقع؛ وهناك $2 نتيجة جديدة منذ خطوط الأساس الخاصة بها."
+    "message": "تم فحص $1 موقع؛ وهناك $2 نتيجة جديدة و$3 عقد متغيّر منذ خطوط الأساس الخاصة بها.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    },
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts."
   },
   "settings_revoke": {
     "message": "إلغاء الصلاحية"
@@ -4824,6 +4836,108 @@
   },
   "baseline_newRules": {
     "message": "تأتي $1 من الملاحظات من قواعد أُضيفت بعد حفظ خط الأساس هذا: فحوص جديدة، لا تغييرات في الموقع."
+  },
+  "env_otValid": {
+    "message": "تحمل هذه الصفحة رمز Origin Trial لـ WebMCP يعتمده Chrome هنا: صالح حتى $1 (بقي $2 يوماً).",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "انتهت صلاحية رمز Origin Trial لـ WebMCP في هذه الصفحة بتاريخ $1. يتجاهل Chrome الرموز المنتهية: جدّده من لوحة Origin Trials في Chrome واستبدله في الصفحة.",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "رمز Origin Trial لـ WebMCP في هذه الصفحة مسجّل للأصل $1 وليس لهذا الأصل. يتجاهله Chrome هنا.",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "تحمل هذه الصفحة رمز Origin Trial لـ WebMCP خاصاً بطرف ثالث، موجهاً إلى النصوص البرمجية المقدَّمة من $1 وصالحاً حتى $2. لا يُطبَّق إلا عندما يحقنه نص برمجي من ذلك الأصل.",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "أحد رموز Origin Trial لـ WebMCP في هذه الصفحة غير موقّع بمفتاح Chrome. يتجاهله Chrome.",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "انتهت صلاحية رمز التجربة",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "رمز التجربة: بقي $1 يوماً",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "رمز التجربة متجاهَل",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "الوصف",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "مخطط الإدخال",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "التعليقات التوضيحية",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "تغيّر الوصف منذ خط الأساس هذا: $1. يقرأ الوكيل الوصف ليقرر متى يستدعي الأداة. اقرأ النص الجديد في الأدوات قبل تحديث خط الأساس.",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "عقود تغيرت: $1",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "عقد هذه الأدوات لم يعد مطابقاً لخط الأساس المحفوظ لديك: $1. افتح قسم الأمان لمعرفة الجزء الذي تغيّر.",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "message": "عقود بدء من نماذج هذه الصفحة"

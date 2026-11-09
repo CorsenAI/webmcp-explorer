@@ -324,7 +324,7 @@ export async function renderSettings(root, { onChanged = () => {} } = {}) {
       now.disabled = true;
       const out = await send({ type: 'security-recheck-now' });
       now.disabled = false;
-      if (out) say(t('settings_recheckResult', [String(out.checked?.length ?? 0), String(out.regressed ?? 0)]));
+      if (out) say(t('settings_recheckResult', [String(out.checked?.length ?? 0), String(out.regressed ?? 0), String(out.drifted ?? 0)]));
       await refreshSecurity();
     });
     nodes.push(

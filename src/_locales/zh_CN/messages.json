@@ -1794,7 +1794,7 @@
     "message": "没有可检查的标签页"
   },
   "noToolsBody": {
-    "message": "当前页面未暴露任何工具。如果您预期有工具，请刷新页面并检查控制台。"
+    "message": "当前页面尚未暴露任何工具。部分网站只在首次移动指针或滚动后才加载脚本：将指针移到页面上，届时注册的工具会显示在这里。否则，请刷新页面并检查控制台。"
   },
   "noToolsTitle": {
     "message": "此页面上没有 WebMCP 工具"
@@ -3500,7 +3500,7 @@
     "message": "重新审阅已打开标签页的频率。"
   },
   "settings_recheckHelp": {
-    "message": "每隔设定时间，对已保存基线且 Explorer 有权检查的打开标签页进行重新审阅，并在工具栏徽章上显示新增发现的数量。默认关闭。"
+    "message": "每隔设定时间，对已保存基线且 Explorer 有权检查的打开标签页进行重新审阅，并在工具栏徽章上显示新增发现和合约已变更工具的数量。默认关闭。"
   },
   "settings_recheckMinutes": {
     "message": "$1 分钟"
@@ -3515,7 +3515,19 @@
     "message": "未启用定时复查。"
   },
   "settings_recheckResult": {
-    "message": "已检查 $1 个网站；自基线以来新增 $2 项发现。"
+    "message": "已检查 $1 个网站；自基线以来新增 $2 项发现，$3 项合约变更。",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      },
+      "3": {
+        "content": "$3"
+      }
+    },
+    "description": "Re-check result; $1 sites, $2 new findings, $3 changed contracts."
   },
   "settings_revoke": {
     "message": "撤销权限"
@@ -4824,6 +4836,108 @@
   },
   "baseline_newRules": {
     "message": "$1 个发现项来自保存此基线之后新增的规则：这是新的检查，而非网站的变化。"
+  },
+  "env_otValid": {
+    "message": "此页面带有 Chrome 在此认可的 WebMCP 源试用令牌：有效期至 $1（剩余 $2 天）。",
+    "description": "Environment note; $1 date, $2 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otExpired": {
+    "message": "此页面的 WebMCP 源试用令牌已于 $1 过期。Chrome 会忽略过期令牌：请在 Chrome 源试用控制台中续期，并替换页面上的令牌。",
+    "description": "Environment note; $1 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otWrongOrigin": {
+    "message": "此页面的 WebMCP 源试用令牌注册的来源是 $1，而不是当前来源。Chrome 在此会忽略它。",
+    "description": "Environment note; $1 origin.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "env_otThirdParty": {
+    "message": "此页面带有第三方 WebMCP 源试用令牌，适用于由 $1 提供的脚本，有效期至 $2。仅当此类脚本注入该令牌时才生效。",
+    "description": "Environment note; $1 origin, $2 date.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
+  "env_otBadSignature": {
+    "message": "此页面上的某个 WebMCP 源试用令牌不是用 Chrome 的密钥签名的。Chrome 会忽略它。",
+    "description": "Environment note."
+  },
+  "status_trialExpired": {
+    "message": "试用令牌已过期",
+    "description": "Status bar badge."
+  },
+  "status_trialDaysLeft": {
+    "message": "试用令牌：剩余 $1 天",
+    "description": "Status bar badge; $1 days.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_trialIgnored": {
+    "message": "试用令牌被忽略",
+    "description": "Status bar badge."
+  },
+  "baseline_partDescription": {
+    "message": "描述",
+    "description": "Contract part name."
+  },
+  "baseline_partSchema": {
+    "message": "输入模式",
+    "description": "Contract part name."
+  },
+  "baseline_partAnnotations": {
+    "message": "注解",
+    "description": "Contract part name."
+  },
+  "baseline_descriptionChanged": {
+    "message": "自此基线以来描述已变更：$1。智能体根据描述决定何时调用工具。更新基线之前，请先在“工具”中阅读新的文本。",
+    "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChanged": {
+    "message": "合约变更：$1 项",
+    "description": "Status bar badge; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "status_contractsChangedHelp": {
+    "message": "这些工具的合约已不同于您保存的基线：$1。打开“安全”查看变更的部分。",
+    "description": "Badge tooltip; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
   },
   "security_startersTitle": {
     "message": "基于此页面表单的起步契约"
