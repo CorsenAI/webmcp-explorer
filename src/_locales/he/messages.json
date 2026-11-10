@@ -821,6 +821,35 @@
   "discovery_titleHelp": {
     "message": "שלוף את קובצי הגילוי וקרא את כותרת ה-Permissions-Policy של הדף."
   },
+  "discovery_otIntro": {
+    "message": "הסריקה קוראת גם את כותרת התגובה Origin-Trial, ש-Explorer אינו יכול לראות מתוך הדף.",
+    "description": "Origin scan box, second line of the introduction."
+  },
+  "discovery_otHeaderNone": {
+    "message": "כותרת Origin-Trial: אינה קיימת בתגובה זו ללא אישורים.",
+    "description": "Origin scan result line."
+  },
+  "discovery_otHeaderOther": {
+    "message": "כותרת Origin-Trial: $1 אסימונים, אף אחד מהם אינו עבור ניסוי WebMCP.",
+    "description": "Origin scan result line; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "discovery_otHeader": {
+    "message": "כותרת Origin-Trial: $1 אסימונים. $2",
+    "description": "Origin scan result line; $1 count, $2 the sentence about the WebMCP token.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
   "enableFlagBody": {
     "message": "לפיתוח מקומי, אם גרסת Chrome שלך מציעה דגל זה, הפעל אותו והפעל מחדש את Chrome."
   },
@@ -1837,6 +1866,15 @@
   },
   "probes_consentRequired": {
     "message": "הבדיקות לא הורצו: אשרו תחילה שאתם שולטים באתר זה."
+  },
+  "sec_contract_changed_in_session_fix": {
+    "message": "ודאו שהשינוי הוא שלכם: פתחו את הכלי כדי לקרוא את החוזה הנוכחי, והפעילו את מצב מדידה כדי לראות איזה סקריפט רשם אותו. לאחר בדיקת החוזה, שמרו קו בסיס כדי ששינוי מאוחר יותר ידווח ביחס אליו."
+  },
+  "sec_contract_changed_in_session_title": {
+    "message": "החוזה השתנה תחת אותו שם בסשן זה"
+  },
+  "sec_contract_changed_in_session_why": {
+    "message": "הכלי שמר על שמו בזמן שהתיאור, סכמת הקלט או ההערות שלו הוחלפו. סוכן שקרא את החוזה הקודם קורא כעת לחוזה אחר (arXiv 2606.06387, סוגיות מפרט #92 ו-#328). רכיב שמתרנדר מחדש עם טקסט אחר גורם לאותה תוצאה; הראיה מציינת מה השתנה."
   },
   "secrets_title": {
     "message": "מפתחות ספקים בסקריפטים של הדף (WMCP-SEC-013)",
@@ -2969,7 +3007,7 @@
     "message": "הוסר ונרשם מחדש בסשן זה"
   },
   "sec_re_registered_in_session_why": {
-    "message": "כלי שנעלם וחוזר עשוי להיות אותו כלי שהורכב מחדש, או חוזה שונה תחת אותו שם (arXiv 2606.06387, סוגיית מפרט #92). ציר הזמן זיהה את השינוי; Explorer לא השווה בין החוזים."
+    "message": "כלי שנעלם וחוזר עשוי להיות אותו כלי שהורכב מחדש, או חוזה שונה תחת אותו שם (arXiv 2606.06387, סוגיית מפרט #92). ציר הזמן זיהה את השינוי, אך לא ניתן היה להשוות בין שני החוזים."
   },
   "sec_readonly_claim_on_mutating_verb_fix": {
     "message": "הסירו את readOnlyHint או שנו את שם הכלי כך שיתאים לפעולתו; בדקו מחדש את הרמזים לאחר כל שינוי."
@@ -3847,6 +3885,9 @@
   "timeline_agent": {
     "message": "סוכן"
   },
+  "timeline_changedParts": {
+    "message": "השתנה תחת אותו שם: $1"
+  },
   "timeline_clear": {
     "message": "נקה"
   },
@@ -3867,6 +3908,9 @@
   },
   "timeline_kindCancelled": {
     "message": "בוטל"
+  },
+  "timeline_kindChanged": {
+    "message": "החוזה השתנה"
   },
   "timeline_kindExecuted": {
     "message": "בוצע"
@@ -3898,6 +3942,9 @@
   "timeline_nothingRecordedYetRegistrationsAnd": {
     "message": "טרם נרשמו אירועים. רישומים וקריאות לכלים יופיעו כאן בזמן אמת."
   },
+  "timeline_otherContract": {
+    "message": "זה כבר לא החוזה שהיה לפני ההסרה: $1"
+  },
   "timeline_pause": {
     "message": "השהיה"
   },
@@ -3906,6 +3953,9 @@
   },
   "timeline_resume": {
     "message": "המשך"
+  },
+  "timeline_sameContract": {
+    "message": "אותו חוזה כמו לפני ההסרה"
   },
   "timeline_sampled": {
     "message": " · דגימה"
@@ -4880,7 +4930,15 @@
     }
   },
   "env_otBadSignature": {
-    "message": "אסימון Origin Trial של WebMCP בדף זה אינו חתום במפתח של Chrome. Chrome מתעלם ממנו.",
+    "message": "אסימון Origin Trial של WebMCP בדף זה אינו חתום במפתח של Chrome. Chrome מתעלם ממנו. ייתכן שהוא שייך לניסוי של דפדפן אחר, כמו Microsoft Edge.",
+    "description": "Environment note."
+  },
+  "env_otOutsideHead": {
+    "message": "אסימון ה-Origin Trial של WebMCP בדף זה נמצא ברכיב meta מחוץ ל-<head>. Chrome קורא רכיבים כאלה רק בתוך <head> ומתעלם מרכיב זה: העבר אותו אל <head> או שלח את האסימון בכותרת Origin-Trial.",
+    "description": "Environment note."
+  },
+  "env_otWhitespace": {
+    "message": "אסימון ה-Origin Trial של WebMCP בדף זה מכיל רווחים או מעברי שורה ברכיב ה-meta שלו. Chrome קורא את המאפיין כפי שהוא ודוחה את האסימון: כתוב אותו בשורה אחת, בלי שום תו לפניו או אחריו.",
     "description": "Environment note."
   },
   "status_trialExpired": {
@@ -4915,6 +4973,35 @@
   "baseline_descriptionChanged": {
     "message": "התיאור השתנה מאז קו הבסיס הזה: $1. סוכן קורא את התיאור כדי להחליט מתי לקרוא לכלי. קראו את הטקסט החדש בכלים לפני עדכון קו הבסיס.",
     "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "baseline_export": {
+    "message": "ייצא קו בסיס",
+    "description": "Baseline box button."
+  },
+  "baseline_exportHelp": {
+    "message": "שומר את קו הבסיס הזה כקובץ: שמות הכלים שנסקרו, טביעות האצבע של החוזים ומפתחות הממצאים, ללא טקסט מהדף. שמור אותו כגיבוי או העבר אותו לעמית.",
+    "description": "Tooltip of the export button."
+  },
+  "baseline_import": {
+    "message": "ייבא קו בסיס",
+    "description": "Baseline box button."
+  },
+  "baseline_importHelp": {
+    "message": "טוען קובץ קו בסיס שיוצא מ-Explorer עבור אתר זה. הוא מחליף את קו הבסיס השמור כאן.",
+    "description": "Tooltip of the import button."
+  },
+  "baseline_importInvalid": {
+    "message": "קובץ זה אינו קו בסיס שיוצא מ-WebMCP Explorer.",
+    "description": "Shown when the chosen file is not a baseline file."
+  },
+  "baseline_importOtherSite": {
+    "message": "קו הבסיס הזה נוצר עבור $1, ולא עבור אתר זה.",
+    "description": "Shown when the file belongs to another site; $1 its origin.",
     "placeholders": {
       "1": {
         "content": "$1"

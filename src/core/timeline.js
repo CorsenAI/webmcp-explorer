@@ -6,9 +6,13 @@
 // UI must be able to state how many events were dropped rather than showing a tidy list
 // that silently omits history.
 
+import { CONTRACT_PARTS } from './security/contract-lock.js';
+
 export const EVENT_KINDS = [
   'registered',
   'unregistered',
+  // A listed tool whose contract was replaced under its own name, with no removal in between.
+  'changed',
   'activated',
   'cancelled',
   'executed',
@@ -81,6 +85,21 @@ export function executionKind(call) {
   if (call?.ok) return 'executed';
   if (call?.code === 'cancelled') return 'cancelled';
   return 'failed';
+}
+
+// One tool's contract as the page watcher fingerprints it: three SHA-256 values in the order of
+// CONTRACT_PARTS (description, input schema, annotations), joined by dots.
+const TOOL_DIGEST = /^[0-9a-f]{64}\.[0-9a-f]{64}\.[0-9a-f]{64}$/;
+export const isToolDigest = (value) => typeof value === 'string' && TOOL_DIGEST.test(value);
+
+// The parts that differ between two fingerprints of one tool name: an empty list when the
+// contract is the same, null when either side is unknown. An unknown comparison is never
+// reported as "unchanged".
+export function changedParts(before, after) {
+  if (!isToolDigest(before) || !isToolDigest(after)) return null;
+  const a = before.split('.');
+  const b = after.split('.');
+  return CONTRACT_PARTS.filter((_, index) => a[index] !== b[index]);
 }
 
 // The `toolchange` event only says that the set changed, never what changed. Registrations

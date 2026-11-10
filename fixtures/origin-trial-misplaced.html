@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Origin-trial token outside head</title>
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:24px}</style></head>
+<body>
+<h1>Origin-trial token outside head</h1>
+<p>The same token as origin-trial.html, in a meta element written in the body, as a tag manager
+would insert it. Chrome reads origin-trial meta elements only inside <code>&lt;head&gt;</code>.</p>
+<meta http-equiv="origin-trial" content="A+HQHgvZXuOxwIIWvaRvUPDsL5zHyn6H3MByyelyzQ3XIf1lCUuyUVYvLlGrPMCounupKIF5mapQl/ipMDIuuA0AAABJeyJvcmlnaW4iOiJodHRwOi8vbG9jYWxob3N0Ojg3NzciLCJmZWF0dXJlIjoiV2ViTUNQIiwiZXhwaXJ5IjoxOTI0OTkyMDAwfQ==">
+<script type="module">
+const mc = document.modelContext || navigator.modelContext;
+mc?.registerTool({
+  name: 'get_status',
+  description: 'Get the current service status.',
+  inputSchema: { type: 'object', additionalProperties: false, properties: {} },
+  annotations: { readOnlyHint: true },
+  execute: async () => 'ok',
+});
+</script>
+</body></html>

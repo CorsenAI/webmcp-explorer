@@ -821,6 +821,35 @@
   "discovery_titleHelp": {
     "message": "获取部分 Agent 和审计工具检查的发现文件，并读取页面的 Permissions-Policy 响应头。仅在点击按钮时运行。"
   },
+  "discovery_otIntro": {
+    "message": "扫描还会读取 Origin-Trial 响应标头，Explorer 无法从页面内部看到它。",
+    "description": "Origin scan box, second line of the introduction."
+  },
+  "discovery_otHeaderNone": {
+    "message": "Origin-Trial 标头：此无凭据响应中没有。",
+    "description": "Origin scan result line."
+  },
+  "discovery_otHeaderOther": {
+    "message": "Origin-Trial 标头：$1 个令牌，没有用于 WebMCP 试用的令牌。",
+    "description": "Origin scan result line; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "discovery_otHeader": {
+    "message": "Origin-Trial 标头：$1 个令牌。$2",
+    "description": "Origin scan result line; $1 count, $2 the sentence about the WebMCP token.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
   "enableFlagBody": {
     "message": "用于本地开发测试：若您的 Chrome 版本提供此实验标志 (Flag)，请将其设为 Enabled 并重启 Chrome。"
   },
@@ -1837,6 +1866,15 @@
   },
   "probes_consentRequired": {
     "message": "探测未运行：请先确认您控制此网站。"
+  },
+  "sec_contract_changed_in_session_fix": {
+    "message": "请确认此变更出自你方：打开该工具阅读其当前契约，并开启插桩模式查看是哪个脚本注册了它。契约复核后请保存基线，以便之后的变更以它为准进行报告。"
+  },
+  "sec_contract_changed_in_session_title": {
+    "message": "在本次会话中同名下的契约已变更"
+  },
+  "sec_contract_changed_in_session_why": {
+    "message": "工具名称未变，但其描述、输入模式或注解已被替换。读取过先前契约的智能体现在调用的是另一份契约（arXiv 2606.06387，规范 Issue #92 和 #328）。以其他文本重新渲染的组件也会产生同样的效果；证据会指明变更的部分。"
   },
   "secrets_title": {
     "message": "页面脚本中的服务商密钥 (WMCP-SEC-013)",
@@ -2969,7 +3007,7 @@
     "message": "在本次会话中被移除后又重新注册"
   },
   "sec_re_registered_in_session_why": {
-    "message": "消失后又重新出现的工具可能是重新挂载的同一工具，也可能是同名下的不同契约（arXiv 2606.06387，规范 Issue #92）。时间线观测到了这一变化，但 Explorer 未自动比对前后的契约。"
+    "message": "消失后又重新出现的工具可能是重新挂载的同一工具，也可能是同名下的不同契约（arXiv 2606.06387，规范 Issue #92）。时间线观测到了这一变化，但无法比对前后两份契约。"
   },
   "sec_readonly_claim_on_mutating_verb_fix": {
     "message": "移除 readOnlyHint，或重命名工具使其名称与实际行为一致；每次更改后请重新审阅提示注解。"
@@ -3847,6 +3885,9 @@
   "timeline_agent": {
     "message": "代理"
   },
+  "timeline_changedParts": {
+    "message": "同名下已变更：$1"
+  },
   "timeline_clear": {
     "message": "清空"
   },
@@ -3867,6 +3908,9 @@
   },
   "timeline_kindCancelled": {
     "message": "已取消"
+  },
+  "timeline_kindChanged": {
+    "message": "契约已变更"
   },
   "timeline_kindExecuted": {
     "message": "已执行"
@@ -3898,6 +3942,9 @@
   "timeline_nothingRecordedYetRegistrationsAnd": {
     "message": "暂无记录。工具的注册、注销和调用事件会实时显示在这里。"
   },
+  "timeline_otherContract": {
+    "message": "已不是移除前的契约：$1"
+  },
   "timeline_pause": {
     "message": "暂停"
   },
@@ -3906,6 +3953,9 @@
   },
   "timeline_resume": {
     "message": "继续"
+  },
+  "timeline_sameContract": {
+    "message": "与移除前的契约相同"
   },
   "timeline_sampled": {
     "message": " · 采样模式"
@@ -4880,7 +4930,15 @@
     }
   },
   "env_otBadSignature": {
-    "message": "此页面上的某个 WebMCP 源试用令牌不是用 Chrome 的密钥签名的。Chrome 会忽略它。",
+    "message": "此页面上的某个 WebMCP 源试用令牌不是用 Chrome 的密钥签名的。Chrome 会忽略它。它可能属于其他浏览器（例如 Microsoft Edge）的试用。",
+    "description": "Environment note."
+  },
+  "env_otOutsideHead": {
+    "message": "此页面的 WebMCP 源试用令牌位于 <head> 之外的 meta 元素中。Chrome 只读取 <head> 内的此类元素，因此会忽略它：请将其移入 <head>，或通过 Origin-Trial 标头发送令牌。",
+    "description": "Environment note."
+  },
+  "env_otWhitespace": {
+    "message": "此页面的 WebMCP 源试用令牌在其 meta 元素中包含空格或换行。Chrome 按原样读取该属性并拒绝此令牌：请将令牌写在一行内，前后不要有任何字符。",
     "description": "Environment note."
   },
   "status_trialExpired": {
@@ -4915,6 +4973,35 @@
   "baseline_descriptionChanged": {
     "message": "自此基线以来描述已变更：$1。智能体根据描述决定何时调用工具。更新基线之前，请先在“工具”中阅读新的文本。",
     "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "baseline_export": {
+    "message": "导出基线",
+    "description": "Baseline box button."
+  },
+  "baseline_exportHelp": {
+    "message": "将此基线保存为文件：包含已审阅工具的名称、契约指纹和发现项的键，不含页面文本。可留作备份，或交给同事。",
+    "description": "Tooltip of the export button."
+  },
+  "baseline_import": {
+    "message": "导入基线",
+    "description": "Baseline box button."
+  },
+  "baseline_importHelp": {
+    "message": "加载从 Explorer 为此站点导出的基线文件。它会替换此处保存的基线。",
+    "description": "Tooltip of the import button."
+  },
+  "baseline_importInvalid": {
+    "message": "该文件不是从 WebMCP Explorer 导出的基线。",
+    "description": "Shown when the chosen file is not a baseline file."
+  },
+  "baseline_importOtherSite": {
+    "message": "该基线是为 $1 创建的，不是为当前站点创建的。",
+    "description": "Shown when the file belongs to another site; $1 its origin.",
     "placeholders": {
       "1": {
         "content": "$1"

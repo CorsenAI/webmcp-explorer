@@ -1,11 +1,11 @@
 // Live timeline: attaches the observers to granted origins and turns raw page events into
 // timeline entries.
 //
-// The MAIN-world watcher reports snapshots of tool names; registrations and
-// unregistrations are derived here by diffing (core/timeline.js). Doing the diff in the
-// extension keeps the page-side script tiny and side-effect free.
+// The MAIN-world watcher reports snapshots of tool names with a fingerprint of each contract;
+// registrations, unregistrations and contract changes are derived here by diffing
+// (core/timeline.js). Doing the diff in the extension keeps the page-side script side-effect free.
 
-import { createTimeline, diffToolNames, executionKind } from '../core/timeline.js';
+import { createTimeline, diffToolNames, changedParts, isToolDigest, executionKind } from '../core/timeline.js';
 import { watchMainWorld } from '../page/watch.js';
 import { relayInPage } from '../content/relay.js';
 import { originPattern } from '../shared/permissions.js';
@@ -46,6 +46,21 @@ export function liveDebug() {
     tabs: [...timelines.keys()],
     snapshotKeys: [...snapshots.keys()],
   };
+}
+
+// The last fingerprint of the tool names that left a document, so a name that comes back can be
+// compared with what it was. Bounded: a page churning names must not grow the worker's memory.
+const MAX_RETIRED = 500;
+function retire(retired, toolName, digest) {
+  retired.delete(toolName);
+  if (retired.size >= MAX_RETIRED) retired.delete(retired.keys().next().value);
+  retired.set(toolName, digest);
+}
+
+// name → fingerprint, or null where the page gave none or one that is not in the expected form.
+function digestsOf(payload) {
+  const list = Array.isArray(payload.digests) && payload.digests.length === payload.names.length ? payload.digests : null;
+  return new Map(payload.names.map((name, index) => [name, list && isToolDigest(list[index]) ? list[index] : null]));
 }
 
 export function timelineFor(tabId) {
@@ -98,7 +113,8 @@ async function attachObservers(tabId) {
   for (const result of baselines) {
     if (!Array.isArray(result.result?.names)) continue;
     watchedDocuments.set(`${tabId}:${result.frameId}`,result.documentId);
-    recordLiveEvent(tabId,result.frameId,{kind:'snapshot',names:result.result.names,doc:result.documentId,origin:result.result.origin});
+    recordLiveEvent(tabId,result.frameId,{kind:'snapshot',names:result.result.names,digests:result.result.digests,
+      seq:result.result.seq,doc:result.documentId,origin:result.result.origin});
   }
   return true;
 }
@@ -149,7 +165,15 @@ export function recordLiveEvent(tabId, frameId, payload) {
     const key = `${tabId}:${frameId}`;
     const previous = snapshots.get(key) ?? null;
     const doc = payload.doc ?? null;
-    snapshots.set(key, { doc, names: payload.names, origin });
+    const sameDocument = previous !== null && previous.doc === doc;
+    // The watcher numbers its snapshots. The baseline returned by the injection can be overtaken
+    // by a snapshot the watcher posted after it; diffing the older one against the newer would
+    // report the page's history backwards, so a snapshot that is not newer is dropped.
+    const seq = Number.isSafeInteger(payload.seq) && payload.seq > 0 ? payload.seq : null;
+    if (sameDocument && seq !== null && previous.seq !== null && seq <= previous.seq) return [];
+    const digests = digestsOf(payload);
+    const retired = sameDocument ? previous.retired : new Map();
+    snapshots.set(key, { doc, names: payload.names, origin, digests, seq, retired });
 
     // The very first snapshot of a document is its existing state, not a burst of new
     // registrations: recording it as such would make every page look like it just
@@ -158,15 +182,28 @@ export function recordLiveEvent(tabId, frameId, payload) {
     // against the page that was left would invent unregistrations (D-029). The token, not
     // the tab's loading state, decides: Chrome reports a pushState as a load as well, and
     // purging on that swallowed the next real change (measured, D-055).
-    if (previous === null || previous.doc !== doc) return [];
+    if (!sameDocument) return [];
 
     const { added, removed } = diffToolNames(previous.names, payload.names);
     const events = [];
     for (const toolName of added) {
-      events.push(timeline.push({ kind: 'registered', at, toolName, origin, frameId }));
+      // A name this document listed before and lists again: with both fingerprints, the event
+      // says whether it is the contract that left or another one, and which parts differ.
+      const parts = retired.has(toolName) ? changedParts(retired.get(toolName), digests.get(toolName)) : null;
+      retired.delete(toolName);
+      events.push(timeline.push({ kind: 'registered', at, toolName, origin, frameId,
+        ...(parts ? { contract: parts.length > 0 ? 'changed' : 'same', parts } : {}) }));
     }
     for (const toolName of removed) {
+      retire(retired, toolName, previous.digests.get(toolName) ?? null);
       events.push(timeline.push({ kind: 'unregistered', at, toolName, origin, frameId }));
+    }
+    // A tool replaced under its own name never leaves the list (measured, D-148): the names are
+    // the same in both snapshots and only the fingerprint moved.
+    for (const toolName of [...payload.names].sort()) {
+      if (!previous.digests.has(toolName)) continue;
+      const parts = changedParts(previous.digests.get(toolName), digests.get(toolName));
+      if (parts?.length > 0) events.push(timeline.push({ kind: 'changed', at, toolName, origin, frameId, parts }));
     }
     const recorded = events.filter(Boolean);
     if (recorded.length > 0) notifyLive(tabId, recorded.map((e) => e.kind));

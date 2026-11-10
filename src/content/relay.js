@@ -18,6 +18,11 @@ export function relayInPage(channel) {
       if(p.kind==='snapshot') {
         if(!Array.isArray(p.names)||p.names.length>2000||p.names.some(n=>typeof n!=='string'||n.length>200))return;
         payload.names=p.names;
+        // Fingerprints and the sequence number are optional: without them the worker still
+        // diffs the names. The worker checks their form again; this only bounds what is sent.
+        if(Array.isArray(p.digests)&&p.digests.length===p.names.length
+          &&p.digests.every(d=>d===null||(typeof d==='string'&&d.length===194)))payload.digests=p.digests;
+        if(Number.isSafeInteger(p.seq)&&p.seq>0)payload.seq=p.seq;
       } else if(p.kind!=='dom-changed') {
         if(typeof p.toolName!=='string'||p.toolName.length>200)return;
         payload.toolName=p.toolName;

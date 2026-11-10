@@ -13,7 +13,7 @@ import { starterContracts, imperativeStarter } from '../src/core/security/starte
 import { quickFix } from '../src/core/security/quick-fix.js';
 import { fixDiff, unifiedDiff, canonicalJson } from '../src/core/security/fix-diff.js';
 import { jsonLiteral, htmlText } from '../src/core/security/snippet-encode.js';
-import { makeBaseline, diffBaseline, ENGINE_V3_CODES } from '../src/core/security/baseline.js';
+import { makeBaseline, diffBaseline, ENGINE_V3_CODES, ENGINE_VERSION } from '../src/core/security/baseline.js';
 import { securitySarif } from '../src/core/export/sarif.js';
 
 const ORIGIN = 'https://shop.test';
@@ -226,7 +226,7 @@ test('a baseline made before engine v3 shows new-rule findings apart from regres
   assert.equal(diff.added.length, 0);
   assert.equal(diff.regressed, false);
   const current = makeBaseline(reviewSecurity({ discovery: d0 }), d0);
-  assert.equal(current.engine, 3);
+  assert.equal(current.engine, ENGINE_VERSION);
   assert.equal(diffBaseline(current, reviewSecurity({ discovery: d1 }), d1).regressed, true);
 });
 

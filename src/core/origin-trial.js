@@ -11,6 +11,11 @@
 // or expired tokens", developer.chrome.com/docs/web-platform/origin-trials). Each token is validated
 // on its own and a trial keeps the latest expiry among its valid tokens
 // (core/origin_trials/origin_trial_context.cc).
+// Delivery matters as much as content. Chrome reads an origin-trial meta element only inside <head>
+// (http_equiv.cc: `if (in_document_head_element)`), hands its content attribute to the decoder
+// unchanged (html_meta_element.cc ProcessHttpEquiv) and decodes with the strict Base64 rules
+// (base/base64.h kStrict; trial_token.cc Extract): a blank or a line break in the attribute, or
+// missing padding, makes the token malformed. Only the header parser strips blanks around a token.
 // Imperative and declarative WebMCP share one trial, named "WebMCP" (runtime_enabled_features.json5).
 // Pure JavaScript: no chrome.* API, so it runs unchanged in Node and in the extension.
 
@@ -25,15 +30,20 @@ const HEADER_BYTES = 69; // version + signature + payload length
 const DEFAULT_PORT = { 'https:': '443', 'http:': '80', 'wss:': '443', 'ws:': '80' };
 const fail = (reason) => ({ ok: false, reason });
 
+// The token text exactly as Chrome would receive it: no trimming, strict Base64 (length divisible
+// by 4, at most two padding characters, nothing else). atob() alone is more forgiving than Chrome.
 function bytesOf(text) {
-  const clean = String(text ?? '').trim();
-  if (!clean || clean.length > MAX_TOKEN_CHARS || !/^[A-Za-z0-9+/]+={0,2}$/.test(clean)) return null;
-  try { return Uint8Array.from(atob(clean), (c) => c.charCodeAt(0)); } catch { return null; }
+  const raw = String(text ?? '');
+  if (!raw || raw.length > MAX_TOKEN_CHARS) return fail('not-base64');
+  if (/\s/.test(raw)) return fail('whitespace');
+  if (raw.length % 4 !== 0 || !/^[A-Za-z0-9+/]+={0,2}$/.test(raw)) return fail('not-base64');
+  try { return { ok: true, bytes: Uint8Array.from(atob(raw), (c) => c.charCodeAt(0)) }; } catch { return fail('not-base64'); }
 }
 
 export function decodeTrialToken(text) {
-  const bytes = bytesOf(text);
-  if (!bytes) return fail('not-base64');
+  const read = bytesOf(text);
+  if (!read.ok) return read;
+  const bytes = read.bytes;
   if (bytes.length < HEADER_BYTES) return fail('too-short');
   const version = bytes[0];
   if (version !== 2 && version !== 3) return fail('unknown-version');
@@ -121,31 +131,50 @@ export function splitTokenHeader(value) {
   return String(value ?? '').split(/[,\n]/).map((part) => part.trim().replace(/^["']|["']$/g, '').trim()).filter(Boolean).slice(0, MAX_TOKENS);
 }
 
-// entries: [{ source, token }]. source says how a copy of the token reached the page: 'header'
-// (response header), 'markup' (a meta element in the HTML as served), 'script' (a meta element
-// added after parsing) or 'meta' (a meta element whose provenance is not known, which is all an
-// extension sees). One plain record per distinct token, never the token text: sources joined by
-// "+", feature, origin, flags, expiry, status and signature result.
+// entries: [{ source, token, inHead }]. source says how a copy of the token reached the page:
+// 'header' (response header), 'markup' (a meta element in the HTML as served), 'script' (a meta
+// element added after parsing) or 'meta' (a meta element whose provenance is not known, which is
+// all an extension sees). inHead: false marks a meta element outside <head>, which Chrome does not
+// read. One plain record per distinct token text, never the text itself: sources joined by "+",
+// feature, origin, flags, expiry, status and signature result.
+// Delivery faults are reported first, in the order Chrome meets them: 'outside-head' (no copy is in
+// a place Chrome reads), then 'malformed' with reason 'whitespace' (blanks in the token; the facts
+// of the token without them are kept, so the page's WebMCP token is still recognised). `otherwise`
+// is what the token would be without the fault.
 const SOURCES = ['header', 'markup', 'script', 'meta'];
 export async function reviewTrialTokens(entries = [], { pageOrigin, now = Date.now(), publicKeys, subtle } = {}) {
   const seen = new Map();
   for (const entry of entries) {
-    const text = String(entry?.token ?? '').trim();
-    if (!text) continue;
+    const text = String(entry?.token ?? '');
+    if (!text.trim()) continue;
     const source = SOURCES.includes(entry.source) ? entry.source : 'meta';
-    if (seen.has(text)) { if (!seen.get(text).includes(source)) seen.get(text).push(source); continue; }
-    if (seen.size < MAX_TOKENS) seen.set(text, [source]);
+    let copy = seen.get(text);
+    if (!copy) {
+      if (seen.size >= MAX_TOKENS) continue;
+      copy = { sources: [], read: [] };
+      seen.set(text, copy);
+    }
+    if (!copy.sources.includes(source)) copy.sources.push(source);
+    if ((source === 'header' || entry.inHead !== false) && !copy.read.includes(source)) copy.read.push(source);
   }
   const out = [];
-  for (const [text, sources] of seen) {
-    const source = sources.join('+');
-    const token = decodeTrialToken(text);
+  for (const [text, copy] of seen) {
+    const source = copy.sources.join('+');
+    let token = decodeTrialToken(text);
+    let blanks = false;
+    if (!token.ok && token.reason === 'whitespace') {
+      const without = decodeTrialToken(text.replace(/\s+/g, ''));
+      if (without.ok) { token = without; blanks = true; }
+    }
     if (!token.ok) { out.push({ source, status: 'malformed', reason: token.reason, feature: null, webmcp: false, signature: 'invalid' }); continue; }
-    const staticOnly = sources.every((s) => s === 'header' || s === 'markup');
+    const staticOnly = copy.read.every((s) => s === 'header' || s === 'markup');
+    const assessed = assessTrialToken(token, { pageOrigin, now, staticOnly });
+    const fault = copy.read.length === 0 ? { status: 'outside-head', otherwise: assessed.status }
+      : blanks ? { status: 'malformed', reason: 'whitespace', otherwise: assessed.status } : null;
     out.push({
       source, feature: token.feature.slice(0, 100), webmcp: token.feature === WEBMCP_TRIAL, origin: token.origin,
       isSubdomain: token.isSubdomain, isThirdParty: token.isThirdParty, usage: token.usage,
-      ...assessTrialToken(token, { pageOrigin, now, staticOnly }),
+      ...assessed, ...(fault ?? {}),
       signature: await verifyTrialToken(token, { ...(publicKeys ? { publicKeys } : {}), ...(subtle !== undefined ? { subtle } : {}) }),
     });
   }
@@ -156,15 +185,17 @@ export async function reviewTrialTokens(entries = [], { pageOrigin, now = Date.n
 // honoured and keeps the latest expiry, so among honoured tokens the one that lasts longest counts:
 // a first-party token before a third-party one, which only covers the script that adds it. When
 // none is honoured, the token closest to working says why: one Chrome signed before one it did not,
-// then expired, insecure page, another origin, third-party not added by a script. Ties keep the
-// first token in page order.
-const NEAREST = { expired: 0, 'insecure-origin': 1, 'wrong-origin': 2, 'not-injected': 3 };
+// then a delivery fault (outside <head>, blanks in the token) on a token that is otherwise good,
+// expired, insecure page, another origin, third-party not added by a script. Ties keep the first
+// token in page order.
+const NEAREST = { 'outside-head': 0, malformed: 0, expired: 1, 'insecure-origin': 2, 'wrong-origin': 3, 'not-injected': 4 };
 export function webmcpTrialOf(tokens = []) {
   const own = tokens.filter((t) => t.webmcp);
   const honoured = own.filter((t) => (t.status === 'valid' || t.status === 'third-party') && t.signature !== 'invalid');
   const latest = (list) => list.reduce((best, t) => (best && Date.parse(best.expiresAt) >= Date.parse(t.expiresAt) ? best : t), null);
   const active = latest(honoured.filter((t) => t.status === 'valid')) ?? latest(honoured);
-  const rank = (t) => (t.signature === 'invalid' ? 10 : 0) + (NEAREST[t.status] ?? 5);
+  const good = (status) => status === undefined || status === 'valid' || status === 'third-party';
+  const rank = (t) => (t.signature === 'invalid' ? 10 : 0) + (NEAREST[t.status] ?? 6) + (good(t.otherwise) ? 0 : 0.5);
   const nearest = own.reduce((best, t) => (best && rank(best) <= rank(t) ? best : t), null);
   return { present: own.length > 0, active: Boolean(active), token: active ?? nearest, count: own.length };
 }

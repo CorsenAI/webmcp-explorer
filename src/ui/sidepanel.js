@@ -420,9 +420,10 @@ async function restore() {
 
 refreshEl.addEventListener('click', render);
 
-// A registration or a removal on the inspected tab redraws the Tools list by itself — a page
-// that registers on a route change must not need the refresh button (measured against the
-// other inspectors, docs/BENCHMARK.md T8). Executions do not redraw; a detail screen with
+// A registration, a removal or a replaced contract on the inspected tab redraws the Tools list by
+// itself — a page that registers on a route change must not need the refresh button (measured
+// against the other inspectors, docs/BENCHMARK.md T8), and a description rewritten under the same
+// name must not stay on screen as it was. Executions do not redraw; a detail screen with
 // arguments being typed is never rebuilt underneath the user: the list catches up when they
 // come back to it.
 const LIVE_REDRAW_MS = 400;
@@ -430,7 +431,7 @@ let liveRedraw = null;
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg?.type !== 'live-changed' || msg.tabId !== inspectedTabId) return;
   if (section !== 'tools' || openToolId !== null || recipeDrafts.get(inspectedTabId)?.open) return;
-  if (!(msg.kinds ?? []).some((kind) => kind === 'registered' || kind === 'unregistered')) return;
+  if (!(msg.kinds ?? []).some((kind) => kind === 'registered' || kind === 'unregistered' || kind === 'changed')) return;
   clearTimeout(liveRedraw);
   liveRedraw = setTimeout(() => { liveRedraw = null; render(); }, LIVE_REDRAW_MS);
 });

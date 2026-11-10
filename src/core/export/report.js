@@ -110,6 +110,10 @@ export function timelineReport(events = [], { origin = null, stats = null, at = 
       durationMs: Number.isFinite(event.durationMs) ? event.durationMs : null,
       code: event.code ?? null,
       error: event.error ?? null,
+      // Only where the contract fingerprints were compared: a tool replaced under its own name
+      // (kind "changed"), or a name that came back with the same contract or with another one.
+      ...(event.contract === 'same' || event.contract === 'changed' ? { contract: event.contract } : {}),
+      ...(Array.isArray(event.parts) ? { parts: event.parts.filter((part) => typeof part === 'string').slice(0, 3) } : {}),
     })),
   };
 
@@ -126,7 +130,11 @@ export function timelineReport(events = [], { origin = null, stats = null, at = 
   if (json.skippedWhilePaused) lines.push('', `> ${json.skippedWhilePaused} event${json.skippedWhilePaused === 1 ? '' : 's'} missed while recording was paused.`);
   lines.push('', '| Time | Event | Tool | Frame | Duration | Note |', '| --- | --- | --- | --- | --- | --- |');
   for (const event of json.events) {
-    const note = event.error ?? event.code ?? '';
+    const moved = (event.parts ?? []).join(', ');
+    const compared = event.kind === 'changed' ? `changed under the same name: ${moved}`
+      : event.contract === 'same' ? 'same contract as before its removal'
+        : event.contract === 'changed' ? `not the contract it had before its removal: ${moved}` : '';
+    const note = event.error ?? event.code ?? compared;
     lines.push(`| ${event.at.slice(11, 23)} | ${event.kind} | \`${cell(event.tool ?? '—')}\` | `
       + `${event.frameId ?? '—'} | ${event.durationMs === null ? '—' : `${event.durationMs} ms`} | ${cell(note) || '—'} |`);
   }

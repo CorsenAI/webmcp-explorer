@@ -137,9 +137,12 @@ export function probeMainWorld(fromOrigins, callbackPatterns = null) {
     polyfillActive: Boolean(mc && mc.__explorerPolyfill),
     originTrialToken: Boolean(document.querySelector('meta[http-equiv="origin-trial" i]')),
     // The tokens themselves (public by nature: every visitor receives them), bounded, so the
-    // extension can say which trial each one is for and whether Chrome still honours it.
+    // extension can say which trial each one is for and whether Chrome still honours it. The
+    // attribute is kept exactly as written and each element says whether it sits inside <head>:
+    // Chrome reads origin-trial meta elements only there, and decodes the text without trimming.
     originTrialTokens: Array.from(document.querySelectorAll('meta[http-equiv="origin-trial" i]')).slice(0, 20)
-      .map((m) => String(m.getAttribute('content') ?? '').slice(0, 6144)).filter(Boolean),
+      .map((m) => ({ token: String(m.getAttribute('content') ?? '').slice(0, 6144), inHead: m.closest('head') !== null }))
+      .filter((entry) => entry.token),
     devFlag: false,
     secureContext: window.isSecureContext === true,
     crossOriginIsolated: window.crossOriginIsolated === true,

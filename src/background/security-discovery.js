@@ -2,6 +2,7 @@
 // business tool execution or response body storage. Each distinct URL is requested at most once.
 import { finding } from '../core/security/catalog.js';
 import { hasOrigin } from '../shared/permissions.js';
+import { reviewTrialTokens, splitTokenHeader, MAX_TOKENS, MAX_TOKEN_CHARS } from '../core/origin-trial.js';
 
 export const CONVENTION_PATHS = ['/.well-known/webmcp', '/.well-known/webmcp.json', '/llms.txt'];
 const TIMEOUT_MS = 8000;
@@ -26,6 +27,10 @@ async function fetchCapped(url, { headersOnly = false } = {}) {
         if (value.length > 2048) truncatedHeaders.push(name);
       }
     }
+    // Origin-trial tokens sent as a header: a content script cannot see them in the page (L-38).
+    // Kept apart from the header list, which is shown and exported: the token text goes no further
+    // than the decoder below.
+    const originTrialHeader = (response.headers.get('origin-trial') ?? '').slice(0, MAX_TOKENS * (MAX_TOKEN_CHARS + 4)) || null;
     let text = null, size = 0, truncated = false;
     if (!headersOnly && response.ok && response.body?.getReader) {
       const reader = response.body.getReader(), chunks = [];
@@ -46,7 +51,7 @@ async function fetchCapped(url, { headersOnly = false } = {}) {
       try { await response.body?.cancel?.(); } catch { /* nothing to cancel */ }
       if (!headersOnly && response.ok) text = '';
     }
-    return { url, status: response.status, ok: response.ok, headers, truncatedHeaders, text, size, truncated };
+    return { url, status: response.status, ok: response.ok, headers, truncatedHeaders, text, size, truncated, originTrialHeader };
   } catch (error) {
     return { url, status: null, ok: false, error: error?.name === 'AbortError' ? 'timeout' : String(error?.message ?? error).slice(0, 200) };
   } finally { clearTimeout(timer); }
@@ -106,6 +111,11 @@ export async function fetchDiscovery({ pageUrl }) {
       evidence: evidence(new URL(r.url).pathname, `Access-Control-Allow-Origin: ${allowOrigin ?? 'absent'}; Access-Control-Allow-Credentials: ${credentials ?? 'absent'}`),
       detail: { allowOrigin, credentials, invalidCredentialsWildcard, browserCorsTested: false } }));
   }
-  return { origin, pageUrl, files: files.map(({ text, ...rest }) => rest),
-    page: { url: page.url, status: page.status, headers: page.headers ?? {}, truncatedHeaders: page.truncatedHeaders ?? [], error: page.error ?? null }, findings, at: Date.now() };
+  // The page's Origin-Trial header, decoded and checked like the meta tokens: records only.
+  const originTrials = page.ok && page.originTrialHeader
+    ? await reviewTrialTokens(splitTokenHeader(page.originTrialHeader).map((token) => ({ source: 'header', token })), { pageOrigin: origin })
+    : [];
+  return { origin, pageUrl, files: files.map(({ text, originTrialHeader, ...rest }) => rest),
+    page: { url: page.url, status: page.status, headers: page.headers ?? {}, truncatedHeaders: page.truncatedHeaders ?? [], error: page.error ?? null,
+      originTrials: page.ok ? originTrials : null }, findings, at: Date.now() };
 }

@@ -821,6 +821,35 @@
   "discovery_titleHelp": {
     "message": "Récupérer les fichiers de découverte recherchés par certains agents et lire l’en-tête Permissions-Policy de la page."
   },
+  "discovery_otIntro": {
+    "message": "L’analyse lit aussi l’en-tête de réponse Origin-Trial, qu’Explorer ne peut pas voir depuis la page.",
+    "description": "Origin scan box, second line of the introduction."
+  },
+  "discovery_otHeaderNone": {
+    "message": "En-tête Origin-Trial : absent de cette réponse sans identifiants.",
+    "description": "Origin scan result line."
+  },
+  "discovery_otHeaderOther": {
+    "message": "En-tête Origin-Trial : $1 jeton(s), aucun pour l’essai WebMCP.",
+    "description": "Origin scan result line; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "discovery_otHeader": {
+    "message": "En-tête Origin-Trial : $1 jeton(s). $2",
+    "description": "Origin scan result line; $1 count, $2 the sentence about the WebMCP token.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
   "enableFlagBody": {
     "message": "Pour le développement local, si votre version de Chrome propose ce drapeau (flag), activez-le puis relancez Chrome."
   },
@@ -1837,6 +1866,15 @@
   },
   "probes_consentRequired": {
     "message": "Les sondes n’ont pas été lancées : confirmez d’abord que vous contrôlez ce site."
+  },
+  "sec_contract_changed_in_session_fix": {
+    "message": "Vérifiez que ce changement vient de vous : ouvrez l’outil pour lire son contrat actuel et activez le mode Instrumentation pour voir quel script l’a enregistré. Une fois le contrat relu, enregistrez une ligne de base afin qu’un changement ultérieur soit signalé par rapport à elle."
+  },
+  "sec_contract_changed_in_session_title": {
+    "message": "Contrat modifié sous le même nom au cours de cette session"
+  },
+  "sec_contract_changed_in_session_why": {
+    "message": "L’outil a gardé son nom alors que sa description, son schéma d’entrée ou ses annotations ont été remplacés. Un agent qui a lu le contrat précédent appelle désormais un contrat différent (arXiv 2606.06387, tickets spéc. #92 et #328). Un composant qui se réaffiche avec un autre texte produit le même effet ; la preuve nomme ce qui a changé."
   },
   "secrets_title": {
     "message": "Clés de fournisseurs dans les scripts de la page (WMCP-SEC-013)",
@@ -2969,7 +3007,7 @@
     "message": "Retiré puis réenregistré au cours de cette session"
   },
   "sec_re_registered_in_session_why": {
-    "message": "Un outil qui disparaît puis revient peut être le même outil remonté, ou un contrat différent sous le même nom (arXiv 2606.06387, ticket spéc. #92). Le journal a vu le changement ; Explorer n’a pas comparé les contrats."
+    "message": "Un outil qui disparaît puis revient peut être le même outil remonté, ou un contrat différent sous le même nom (arXiv 2606.06387, ticket spéc. #92). Le journal a vu le changement, mais les deux contrats n’ont pas pu être comparés."
   },
   "sec_readonly_claim_on_mutating_verb_fix": {
     "message": "Retirez readOnlyHint ou renommez l’outil pour que son nom reflète ce qu’il fait ; revérifiez les indices après chaque modification."
@@ -3847,6 +3885,9 @@
   "timeline_agent": {
     "message": "Agent"
   },
+  "timeline_changedParts": {
+    "message": "Modifié sous le même nom : $1"
+  },
   "timeline_clear": {
     "message": "Effacer"
   },
@@ -3867,6 +3908,9 @@
   },
   "timeline_kindCancelled": {
     "message": "annulé"
+  },
+  "timeline_kindChanged": {
+    "message": "contrat modifié"
   },
   "timeline_kindExecuted": {
     "message": "exécuté"
@@ -3898,6 +3942,9 @@
   "timeline_nothingRecordedYetRegistrationsAnd": {
     "message": "Rien d’enregistré pour le moment. Les enregistrements et appels apparaîtront ici en direct."
   },
+  "timeline_otherContract": {
+    "message": "Ce n’est plus le contrat d’avant son retrait : $1"
+  },
   "timeline_pause": {
     "message": "Pause"
   },
@@ -3906,6 +3953,9 @@
   },
   "timeline_resume": {
     "message": "Reprendre"
+  },
+  "timeline_sameContract": {
+    "message": "Même contrat qu’avant son retrait"
   },
   "timeline_sampled": {
     "message": " · échantillonné"
@@ -4880,7 +4930,15 @@
     }
   },
   "env_otBadSignature": {
-    "message": "Un jeton Origin Trial WebMCP de cette page n’est pas signé avec la clé de Chrome. Chrome l’ignore.",
+    "message": "Un jeton Origin Trial WebMCP de cette page n’est pas signé avec la clé de Chrome. Chrome l’ignore. Il peut appartenir à l’essai d’un autre navigateur, comme celui de Microsoft Edge.",
+    "description": "Environment note."
+  },
+  "env_otOutsideHead": {
+    "message": "Le jeton Origin Trial WebMCP de cette page se trouve dans une balise meta hors de <head>. Chrome ne lit ces balises que dans <head> et ignore celle-ci : déplacez-la dans <head> ou envoyez le jeton dans l’en-tête Origin-Trial.",
+    "description": "Environment note."
+  },
+  "env_otWhitespace": {
+    "message": "Le jeton Origin Trial WebMCP de cette page contient des espaces ou des retours à la ligne dans sa balise meta. Chrome lit l’attribut tel quel et refuse le jeton : écrivez-le sur une seule ligne, sans rien autour.",
     "description": "Environment note."
   },
   "status_trialExpired": {
@@ -4915,6 +4973,35 @@
   "baseline_descriptionChanged": {
     "message": "Description modifiée depuis cette référence : $1. Un agent lit la description pour décider quand appeler un outil. Lisez le nouveau texte dans Outils avant de mettre la référence à jour.",
     "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "baseline_export": {
+    "message": "Exporter la référence",
+    "description": "Baseline box button."
+  },
+  "baseline_exportHelp": {
+    "message": "Enregistre cette référence dans un fichier : noms des outils revus, empreintes des contrats et clés des constats, sans texte de la page. Gardez-le en sauvegarde ou transmettez-le à un collègue.",
+    "description": "Tooltip of the export button."
+  },
+  "baseline_import": {
+    "message": "Importer une référence",
+    "description": "Baseline box button."
+  },
+  "baseline_importHelp": {
+    "message": "Charge un fichier de référence exporté depuis Explorer pour ce site. Il remplace la référence enregistrée ici.",
+    "description": "Tooltip of the import button."
+  },
+  "baseline_importInvalid": {
+    "message": "Ce fichier n’est pas une référence exportée depuis WebMCP Explorer.",
+    "description": "Shown when the chosen file is not a baseline file."
+  },
+  "baseline_importOtherSite": {
+    "message": "Cette référence a été créée pour $1, pas pour ce site.",
+    "description": "Shown when the file belongs to another site; $1 its origin.",
     "placeholders": {
       "1": {
         "content": "$1"

@@ -77,7 +77,9 @@ export async function discover(tabId, topUrl) {
   for (const frame of frames) {
     const tokens = Array.isArray(frame.probe.originTrialTokens) ? frame.probe.originTrialTokens : [];
     if (tokens.length) {
-      const originTrials = await reviewTrialTokens(tokens.map((token) => ({ source: 'meta', token })), { pageOrigin: frame.origin });
+      const originTrials = await reviewTrialTokens(tokens.map((entry) => (typeof entry === 'string'
+        ? { source: 'meta', token: entry }
+        : { source: 'meta', token: entry?.token, inHead: entry?.inHead !== false })), { pageOrigin: frame.origin });
       frame.env = diagnoseEnvironment({ ...frame.probe, originTrials });
     }
     delete frame.probe;

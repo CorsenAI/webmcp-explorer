@@ -6,11 +6,13 @@
 import { el, badge, t } from '../dom.js';
 import { exportBar } from '../components/export-bar.js';
 import { timelineReport } from '../../core/export/report.js';
+import { CONTRACT_PARTS } from '../../core/security/contract-lock.js';
 
 function kindLabel(kind) {
   const map = {
     registered: t('timeline_kindRegistered'),
     unregistered: t('timeline_kindUnregistered'),
+    changed: t('timeline_kindChanged'),
     activated: t('timeline_kindActivated'),
     cancelled: t('timeline_kindCancelled'),
     executed: t('timeline_kindExecuted'),
@@ -22,6 +24,7 @@ function kindLabel(kind) {
 const KIND_KIND = {
   registered: 'ok',
   unregistered: 'warn',
+  changed: 'warn',
   activated: 'accent',
   cancelled: 'warn',
   executed: 'ok',
@@ -30,7 +33,7 @@ const KIND_KIND = {
 
 function getFilters() {
   return [
-    { key: 'lifecycle', label: t('timeline_lifecycle'), kinds: ['registered', 'unregistered'] },
+    { key: 'lifecycle', label: t('timeline_lifecycle'), kinds: ['registered', 'unregistered', 'changed'] },
     { key: 'calls', label: t('agentTranscript_calls'), kinds: ['executed', 'failed'] },
     { key: 'agent', label: t('timeline_agent'), kinds: ['activated', 'cancelled'] },
   ];
@@ -42,19 +45,34 @@ function timeOf(at) {
   });
 }
 
+const PART_KEY = { description: 'baseline_partDescription', schema: 'baseline_partSchema', annotations: 'baseline_partAnnotations' };
+const partsText = (parts) => CONTRACT_PARTS.filter((part) => (parts ?? []).includes(part)).map((part) => t(PART_KEY[part])).join(', ');
+
+// What the contract fingerprints say about an event, when they say anything: a tool replaced
+// under its own name, or a name that came back with the contract it had or with another one.
+function contractNote(event) {
+  if (event.kind === 'changed') return t('timeline_changedParts', [partsText(event.parts)]);
+  if (event.kind === 'registered' && event.contract === 'same') return t('timeline_sameContract');
+  if (event.kind === 'registered' && event.contract === 'changed') return t('timeline_otherContract', [partsText(event.parts)]);
+  return null;
+}
+
 function eventRow(event) {
+  const note = contractNote(event);
+  const replaced = event.kind === 'registered' && event.contract === 'changed';
   const parts = [
     el('span', { class: 'muted tl-time', text: timeOf(event.at) }),
-    badge(kindLabel(event.kind), KIND_KIND[event.kind] ?? 'accent'),
+    badge(kindLabel(event.kind), replaced ? 'warn' : KIND_KIND[event.kind] ?? 'accent'),
     el('span', { class: 'tl-name mono', text: event.toolName ?? '—', title: event.toolName ?? '' }),
   ];
 
   if (typeof event.durationMs === 'number') {
     parts.push(el('span', { class: 'muted tl-dur', text: t('timeline_1Ms', [String(event.durationMs)]) }));
   }
+  if (note) parts.push(el('span', { class: 'muted tl-detail', text: note }));
 
   const row = el('div', {
-    class: 'tl-row',
+    class: note ? 'tl-row tl-row-noted' : 'tl-row',
     title: [event.origin, event.frameId === null ? null : t('common_frameN', [String(event.frameId)]), event.error]
       .filter(Boolean).join(' · '),
   }, parts);

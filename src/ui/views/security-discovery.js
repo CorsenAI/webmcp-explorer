@@ -6,12 +6,23 @@ import { el, t } from '../dom.js';
 import { renderFinding } from './security.js';
 import { withRule } from '../../core/security/rules.js';
 import { quickFix } from '../../core/security/quick-fix.js';
+import { webmcpTrialOf } from '../../core/origin-trial.js';
+import { trialNote } from '../components/trial-note.js';
+
+// The Origin-Trial header of the scanned response, in the same words as the page's meta tokens.
+function headerTrialText(tokens) {
+  if (!tokens.length) return t('discovery_otHeaderNone');
+  const trial = webmcpTrialOf(tokens);
+  if (!trial.present) return t('discovery_otHeaderOther', [String(tokens.length)]);
+  return t('discovery_otHeader', [String(tokens.length), trialNote({ originTrial: trial }) ?? '']);
+}
 
 export function renderDiscovery(root, { result, onFindings = () => {} }) {
   const origin = result?.topOrigin ?? null;
   const box = el('details', { class: 'ck-bar sec-discovery' }, [
     el('summary', { text: t('discovery_title'), title: t('discovery_titleHelp') }),
     el('p', { class: 'field-desc', text: t('discovery_intro') }),
+    el('p', { class: 'field-desc', text: t('discovery_otIntro') }),
   ]);
   root.append(box);
   if (!origin || !result?.url) return box;
@@ -33,7 +44,8 @@ export function renderDiscovery(root, { result, onFindings = () => {} }) {
     }
     files.replaceChildren(...out.files.map((f) => el('li', {
       text: t('discovery_results', [new URL(f.url).pathname, f.status === null ? (f.error ?? 'error') : `${f.status}${f.headers?.['content-type'] ? ` · ${f.headers['content-type']}` : ''}${f.size ? ` · ${f.size} bytes` : ''}`]),
-    })), el('li', { text: t('discovery_results', ['page headers', out.page.status === null ? (out.page.error ?? 'error') : String(out.page.status)]) }));
+    })), el('li', { text: t('discovery_results', ['page headers', out.page.status === null ? (out.page.error ?? 'error') : String(out.page.status)]) }),
+      ...(Array.isArray(out.page.originTrials) ? [el('li', { class: 'sec-ot-header', text: headerTrialText(out.page.originTrials) })] : []));
     out.findings = out.findings.map(f => {
       const enriched = withRule(f), fix = quickFix(enriched);
       return { ...enriched, remediation: fix, remediationCodeSnippet: fix.code };

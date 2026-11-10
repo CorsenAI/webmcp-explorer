@@ -5,6 +5,7 @@ import { keyVault } from '../storage/key-vault.js';
 const storageProtection = keyVault().protect();
 const bridgeReady = storageProtection.then(() => localBridge.init());
 bridgeReady.catch(() => {});
+import { exportBaseline, importBaseline } from '../core/security/baseline.js';
 import { countReviewed, clearSecurityData, listControlled, setControlled, getBaseline, saveBaseline, forgetBaseline, listBaselines, countBaselines } from '../storage/security.js';
 import { recheckOpenTabs, applyRecheckSetting, recheckSetting, installRecheckAlarm } from './security-watch.js';
 import { fetchDiscovery } from './security-discovery.js';
@@ -150,6 +151,14 @@ const HANDLERS = {
   'security-baseline-get': async (msg) => ({ baseline: await getBaseline(msg.origin) }),
   'security-baseline-save': async (msg) => ({ baseline: await saveBaseline(msg.baseline) }),
   'security-baseline-forget': async (msg) => { await forgetBaseline(msg.origin); return { forgotten: true }; },
+  // A baseline as a file (reviewed names, fingerprints and finding keys; no page text), and its
+  // way back for the same site. An imported file is re-checked field by field before it is stored.
+  'security-baseline-export': async (msg) => ({ file: exportBaseline(await getBaseline(msg.origin)) }),
+  'security-baseline-import': async (msg) => {
+    const read = importBaseline(msg.file, { origin: msg.origin });
+    if (read.error) return read;
+    return { baseline: await saveBaseline(read.baseline) };
+  },
   'security-baseline-list': async () => ({ baselines: await listBaselines() }),
   'security-recheck-get': () => recheckSetting(),
   'security-recheck-set': (msg) => applyRecheckSetting({ enabled: msg.enabled, minutes: msg.minutes }),

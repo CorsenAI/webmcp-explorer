@@ -52,6 +52,12 @@ async function handler(req, res) {
   const policy = path === '/policy' || path.startsWith('/policy/');
   if (policy) path = path.slice('/policy'.length) || '/';
 
+  // Anything under /trial/ is the same fixture served with an Origin-Trial response header that
+  // carries the token of origin-trial.html (signed with a throwaway key, not Chrome's): a content
+  // script cannot see that header, the on-request origin scan can.
+  const trial = path === '/trial' || path.startsWith('/trial/');
+  if (trial) path = path.slice('/trial'.length) || '/';
+
   const underSrc = path === '/src' || path.startsWith('/src/');
   const base = underSrc ? PROJECT : ROOT;
   const file = join(base, normalize(path === '/' ? '/index.html' : path));
@@ -68,6 +74,10 @@ async function handler(req, res) {
     if (strict) headers['content-security-policy'] = STRICT_CSP;
     if (oac0) headers['origin-agent-cluster'] = '?0';
     if (policy) headers['permissions-policy'] = 'tools=(self)';
+    if (trial) {
+      const token = /http-equiv="origin-trial" content="([^"]+)"/.exec(await readFile(join(ROOT, 'origin-trial.html'), 'utf8'))?.[1];
+      if (token) headers['origin-trial'] = token;
+    }
     res.writeHead(200, headers).end(body);
   } catch {
     res.writeHead(404).end('not found');

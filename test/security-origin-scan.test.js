@@ -58,3 +58,33 @@ test('006 permission revocation and a lost response stay unknown, without a retr
   assert.ok(r.page.error);
   assert.ok(!r.findings.some(f => f.code === 'convention-permissions-policy-absent'));
 });
+
+test('the Origin-Trial header of the page response is decoded into records; its text goes no further', async t => {
+  const { webcrypto } = await import('node:crypto');
+  const pair = await webcrypto.subtle.generateKey({ name: 'Ed25519' }, true, ['sign', 'verify']);
+  const sign = async (payload) => {
+    const body = Buffer.from(JSON.stringify(payload));
+    const length = Buffer.alloc(4); length.writeUInt32BE(body.length);
+    const signature = Buffer.from(await webcrypto.subtle.sign('Ed25519', pair.privateKey, Buffer.concat([Buffer.from([3]), length, body])));
+    return Buffer.concat([Buffer.from([3]), signature, length, body]).toString('base64');
+  };
+  const far = Math.floor(Date.now() / 1000) + 90 * 86400;
+  const own = await sign({ origin: 'https://shop.test:443', feature: 'WebMCP', expiry: far });
+  const other = await sign({ origin: 'https://shop.test:443', feature: 'SomeOtherTrial', expiry: far });
+  t.mock.method(globalThis, 'fetch', async (url) => (new URL(url).pathname === '/page'
+    ? new Response('', { headers: { 'origin-trial': `${own}, "${other}"`, 'permissions-policy': 'tools=(self)' } })
+    : new Response('nf', { status: 404 })));
+  globalThis.chrome = { permissions: { contains: async () => true } };
+  const scan = await fetchDiscovery({ pageUrl: 'https://shop.test/page' });
+  // Header tokens are reported like the page's meta tokens; this key is not Chrome's.
+  assert.deepEqual(scan.page.originTrials.map((x) => [x.source, x.feature, x.status, x.signature]),
+    [['header', 'WebMCP', 'valid', 'invalid'], ['header', 'SomeOtherTrial', 'valid', 'invalid']]);
+  const text = JSON.stringify(scan);
+  assert.ok(!text.includes(own.slice(8, 60)) && !text.includes(other.slice(8, 60)), 'no token text in the scan result');
+  assert.equal(scan.page.headers['origin-trial'], undefined);
+  // No header: an empty list, not an unknown. A failed page request: unknown.
+  t.mock.method(globalThis, 'fetch', async (url) => (new URL(url).pathname === '/page' ? new Response('') : new Response('nf', { status: 404 })));
+  assert.deepEqual((await fetchDiscovery({ pageUrl: 'https://shop.test/page' })).page.originTrials, []);
+  t.mock.method(globalThis, 'fetch', async () => new Response('nf', { status: 503 }));
+  assert.equal((await fetchDiscovery({ pageUrl: 'https://shop.test/page' })).page.originTrials, null);
+});

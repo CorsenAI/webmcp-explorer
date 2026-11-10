@@ -39,7 +39,10 @@ test('a token decodes to its origin, feature, expiry and flags; Chrome\'s key is
 test('malformed tokens are refused for the reason Chrome would refuse them', async () => {
   const good = await token(webmcp());
   const reasons = {
-    'not base64 !': 'not-base64', '': 'not-base64', [`${'A'.repeat(6145)}`]: 'not-base64', 'QUJD': 'too-short',
+    'not-base64!': 'not-base64', '': 'not-base64', [`${'A'.repeat(6145)}`]: 'not-base64', 'QUJD': 'too-short',
+    // Chrome decodes the text as given, strictly: blanks anywhere and missing padding are refused.
+    'not base64 !': 'whitespace', [` ${good}`]: 'whitespace', [`${good}\n`]: 'whitespace', [`${good.slice(0, 40)}\n${good.slice(40)}`]: 'whitespace',
+    [good.replace(/=+$/, '')]: good.endsWith('=') ? 'not-base64' : undefined, 'QUJ': 'not-base64', 'QUJD-_8=': 'not-base64',
     [await token(webmcp(), { version: 1 })]: 'unknown-version',
     [Buffer.concat([Buffer.from(good, 'base64'), Buffer.from('x')]).toString('base64')]: 'bad-length',
     [await token(null, { raw: '{not json' })]: 'bad-payload',
@@ -52,7 +55,7 @@ test('malformed tokens are refused for the reason Chrome would refuse them', asy
     [await token(webmcp({ isSubdomain: 'yes' }))]: 'bad-payload',
     [await token(webmcp({ usage: 'all' }))]: 'bad-payload',
   };
-  for (const [text, reason] of Object.entries(reasons)) assert.deepEqual(decodeTrialToken(text), { ok: false, reason }, reason);
+  for (const [text, reason] of Object.entries(reasons)) if (reason) assert.deepEqual(decodeTrialToken(text), { ok: false, reason }, reason);
 });
 
 test('origin matching: exact, or subdomains with the same scheme and port; a look-alike host never matches', async () => {
@@ -177,6 +180,41 @@ test('a third-party token counts only when a script adds it: in a header or the 
   assert.equal(assessTrialToken(first, { pageOrigin: 'https://shop.example', now: NOW, staticOnly: true }).status, 'valid');
   const ignored = webmcpTrialOf([await review(['header'])]);
   assert.deepEqual([ignored.present, ignored.active, ignored.token.status], [true, false, 'not-injected']);
+});
+
+test('delivery faults come first: a meta element outside <head> is never read, a token with blanks does not decode', async () => {
+  const review = (entries, pageOrigin = 'https://shop.example') => reviewTrialTokens(entries, { pageOrigin, now: NOW, publicKeys: [TEST_KEY], subtle });
+  const good = await token(webmcp());
+  // Chrome reads origin-trial meta elements only inside <head> (http_equiv.cc).
+  const [body] = await review([{ source: 'markup', token: good, inHead: false }]);
+  assert.deepEqual([body.status, body.otherwise, body.webmcp, body.signature, body.daysLeft], ['outside-head', 'valid', true, 'valid', 30]);
+  assert.deepEqual([webmcpTrialOf([body]).active, webmcpTrialOf([body]).token.status], [false, 'outside-head']);
+  // One copy in a place Chrome reads is enough: in <head>, or in the response header.
+  assert.equal((await review([{ source: 'markup', token: good, inHead: false }, { source: 'script', token: good, inHead: true }]))[0].status, 'valid');
+  assert.equal((await review([{ source: 'header', token: good }, { source: 'markup', token: good, inHead: false }]))[0].status, 'valid');
+  assert.equal((await review([{ source: 'meta', token: good }]))[0].status, 'valid', 'placement not stated: nothing is ruled out');
+  // The attribute reaches the decoder unchanged and Base64 decoding is strict.
+  for (const text of [`\n  ${good}\n`, ` ${good}`, `${good.slice(0, 50)}\n${good.slice(50)}`]) {
+    const [spaced] = await review([{ source: 'markup', token: text, inHead: true }]);
+    assert.deepEqual([spaced.status, spaced.reason, spaced.otherwise, spaced.feature, spaced.webmcp, spaced.origin, spaced.signature],
+      ['malformed', 'whitespace', 'valid', 'WebMCP', true, 'https://shop.example', 'valid']);
+    assert.equal(webmcpTrialOf([spaced]).active, false);
+  }
+  // Outside <head> comes before the blanks: Chrome never gets as far as decoding.
+  assert.equal((await review([{ source: 'markup', token: ` ${good} `, inHead: false }]))[0].status, 'outside-head');
+  // Blanks around something that is no token stay an unknown malformed token.
+  assert.deepEqual((await review([{ source: 'markup', token: ' garbage! ' }]))[0], { source: 'markup', status: 'malformed', reason: 'whitespace', feature: null, webmcp: false, signature: 'invalid' });
+  // The same token with and without blanks are two texts: the clean copy is honoured.
+  const pair = await review([{ source: 'header', token: good }, { source: 'markup', token: `${good}\n`, inHead: true }]);
+  assert.deepEqual(pair.map((t) => t.status), ['valid', 'malformed']);
+  assert.deepEqual([webmcpTrialOf(pair).active, webmcpTrialOf(pair).count], [true, 2]);
+  // A token that only needs moving or cleaning is named before one that has expired.
+  const expired = { source: 'markup', token: await token(webmcp({ expiry: inDays(-2) })), inHead: true };
+  const misplaced = { source: 'markup', token: good, inHead: false };
+  for (const entries of [[expired, misplaced], [misplaced, expired]]) assert.equal(webmcpTrialOf(await review(entries)).token.status, 'outside-head');
+  const misplacedExpired = { source: 'markup', token: await token(webmcp({ expiry: inDays(-9) })), inHead: false };
+  const stale = webmcpTrialOf(await review([expired, misplacedExpired]));
+  assert.deepEqual([stale.token.status, stale.token.otherwise], ['outside-head', 'expired']);
 });
 
 test('the environment says "origin trial" only for a WebMCP token Chrome honours on this page', async () => {

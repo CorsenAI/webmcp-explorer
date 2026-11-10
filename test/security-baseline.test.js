@@ -48,3 +48,33 @@ test('a removed tool is reported removed, not as resolved findings; an informati
   assert.equal(diffBaseline(null, reviewSecurity({ discovery: d1 }), d1), null);
   assert.equal(findingKey({ code: 'x', toolName: null, contractFp: null }), 'x||');
 });
+
+test('a baseline travels as a file: what was reviewed, re-checked and bounded on the way back', async () => {
+  const { exportBaseline, importBaseline, BASELINE_FILE, MAX_BASELINE_TOOLS } = await import('../src/core/security/baseline.js');
+  const fp = (c) => c.repeat(64);
+  const baseline = { origin: 'https://shop.example', at: 1_794_000_000_000, engine: 3, truncated: false, lastCheckAt: 1_794_000_500_000, lastDiff: { added: 2 },
+    tools: [{ logicalId: 'L1', name: 'lookup_order', contractFp: fp('a'), origin: 'https://shop.example', parts: { description: fp('b'), schema: fp('c'), annotations: fp('d') } },
+      { logicalId: 'L2', name: 'old_tool', contractFp: fp('e'), origin: 'https://shop.example' }],
+    findings: [{ key: 'unbounded-string|lookup_order|' + fp('a'), code: 'unbounded-string', severity: 'high', toolName: 'lookup_order', contractFp: fp('a') }] };
+  const file = exportBaseline(baseline, { at: 1_794_100_000_000 });
+  assert.deepEqual([file.app, file.kind, file.version, file.exportedAt], ['webmcp-explorer', 'security-baseline', 1, new Date(1_794_100_000_000).toISOString()]);
+  assert.ok(!('lastDiff' in file.baseline) && !('lastCheckAt' in file.baseline), 'the last re-check belongs to one browser');
+  assert.equal(exportBaseline(null), null);
+  // Round trip for the same site: the comparison a colleague gets is the same.
+  const back = importBaseline(JSON.parse(JSON.stringify(file)), { origin: 'https://shop.example' });
+  assert.deepEqual(back.baseline, { ...baseline, lastCheckAt: null, lastDiff: null });
+  // Refusals: another site (named), another kind of file, a broken record.
+  assert.deepEqual(importBaseline(file, { origin: 'https://other.example' }), { error: 'other-site', origin: 'https://shop.example' });
+  for (const bad of [null, 'text', {}, { ...BASELINE_FILE, kind: 'settings', baseline: file.baseline }, { ...file, version: 2 }, { ...file, baseline: { ...file.baseline, tools: 'x' } },
+    { ...file, baseline: { ...file.baseline, at: 'yesterday' } }]) assert.deepEqual(importBaseline(bad, { origin: 'https://shop.example' }), { error: 'not-a-baseline' });
+  // Outside data: wrong shapes are dropped, texts and counts are bounded, keys are rebuilt.
+  const hostile = { ...file, baseline: { ...file.baseline, engine: 'x'.repeat(5000), extra: 'ignored',
+    tools: [{ name: 'n'.repeat(900), contractFp: 'not-a-hash', parts: { description: 'zz', schema: fp('c') }, logicalId: 7 }, { name: '' }, null, 'tool',
+      ...Array.from({ length: MAX_BASELINE_TOOLS + 20 }, (_, i) => ({ name: `tool_${i}`, contractFp: fp('a') }))],
+    findings: [{ key: 'forged-key', code: 'unbounded-string', severity: 'high', toolName: 'lookup_order', contractFp: fp('a') }, { code: 'x', severity: 'catastrophic' }, { severity: 'low' }, 5] } };
+  const read = importBaseline(hostile, { origin: 'https://shop.example' }).baseline;
+  assert.equal(read.tools.length, MAX_BASELINE_TOOLS);
+  assert.deepEqual(read.tools[0], { logicalId: null, name: 'n'.repeat(300), contractFp: null, origin: null, parts: { schema: fp('c') } });
+  assert.deepEqual(read.findings, [{ key: 'unbounded-string|lookup_order|' + fp('a'), code: 'unbounded-string', severity: 'high', toolName: 'lookup_order', contractFp: fp('a') }]);
+  assert.deepEqual([read.engine, read.truncated, 'extra' in read], [2, true, false]);
+});

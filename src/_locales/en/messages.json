@@ -921,6 +921,35 @@
     "message": "Fetch the discovery files some agents and auditors look for and read the page's Permissions-Policy header. Conventions, not the specification. Runs only when you press the button.",
     "description": "Discovery box tooltip."
   },
+  "discovery_otIntro": {
+    "message": "The scan also reads the Origin-Trial response header, which Explorer cannot see from inside the page.",
+    "description": "Origin scan box, second line of the introduction."
+  },
+  "discovery_otHeaderNone": {
+    "message": "Origin-Trial header: none on this credential-free response.",
+    "description": "Origin scan result line."
+  },
+  "discovery_otHeaderOther": {
+    "message": "Origin-Trial header: $1 token(s), none for the WebMCP trial.",
+    "description": "Origin scan result line; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "discovery_otHeader": {
+    "message": "Origin-Trial header: $1 token(s). $2",
+    "description": "Origin scan result line; $1 count, $2 the sentence about the WebMCP token.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
   "enableFlagBody": {
     "message": "For local development, if your Chrome version offers this flag, set it to Enabled and relaunch Chrome."
   },
@@ -1980,6 +2009,15 @@
   "probes_consentRequired": {
     "message": "Probes did not run: confirm that you control this site first.",
     "description": "Error."
+  },
+  "sec_contract_changed_in_session_fix": {
+    "message": "Confirm that the change is yours: open the tool to read its current contract, and turn on Instrumentation Mode to see which script registered it. Once the contract is reviewed, save a baseline so that a later change is reported against it."
+  },
+  "sec_contract_changed_in_session_title": {
+    "message": "Contract changed under the same name in this session"
+  },
+  "sec_contract_changed_in_session_why": {
+    "message": "The tool kept its name while its description, input schema or annotations were replaced. An agent that read the earlier contract now calls a different one (arXiv 2606.06387, spec issues #92 and #328). A component that re-renders with other text does the same; the evidence names what changed."
   },
   "secrets_title": {
     "message": "Provider keys in page scripts (WMCP-SEC-013)",
@@ -3237,7 +3275,7 @@
     "description": "Security finding re-registered-in-session: title."
   },
   "sec_re_registered_in_session_why": {
-    "message": "A tool that disappears and comes back may be the same tool re-mounted, or a different contract under the same name (arXiv 2606.06387, spec issue #92). The timeline saw the change; Explorer did not compare the contracts.",
+    "message": "A tool that disappears and comes back may be the same tool re-mounted, or a different contract under the same name (arXiv 2606.06387, spec issue #92). The timeline saw the change, but the two contracts could not be compared.",
     "description": "Security finding re-registered-in-session: why it matters."
   },
   "sec_readonly_claim_on_mutating_verb_fix": {
@@ -4328,6 +4366,9 @@
   "timeline_agent": {
     "message": "Agent"
   },
+  "timeline_changedParts": {
+    "message": "Changed under the same name: $1"
+  },
   "timeline_clear": {
     "message": "Clear"
   },
@@ -4348,6 +4389,9 @@
   },
   "timeline_kindCancelled": {
     "message": "cancelled"
+  },
+  "timeline_kindChanged": {
+    "message": "contract changed"
   },
   "timeline_kindExecuted": {
     "message": "executed"
@@ -4379,6 +4423,9 @@
   "timeline_nothingRecordedYetRegistrationsAnd": {
     "message": "Nothing recorded yet. Registrations and calls will appear here as they happen."
   },
+  "timeline_otherContract": {
+    "message": "Not the contract it had before its removal: $1"
+  },
   "timeline_pause": {
     "message": "Pause"
   },
@@ -4387,6 +4434,9 @@
   },
   "timeline_resume": {
     "message": "Resume"
+  },
+  "timeline_sameContract": {
+    "message": "Same contract as before its removal"
   },
   "timeline_sampled": {
     "message": " · sampled"
@@ -5402,7 +5452,15 @@
     }
   },
   "env_otBadSignature": {
-    "message": "A WebMCP origin-trial token on this page is not signed with Chrome's key. Chrome ignores it.",
+    "message": "A WebMCP origin-trial token on this page is not signed with Chrome's key. Chrome ignores it. It may belong to another browser's trial, such as Microsoft Edge's.",
+    "description": "Environment note."
+  },
+  "env_otOutsideHead": {
+    "message": "This page's WebMCP origin-trial token is in a meta element outside <head>. Chrome reads origin-trial meta elements only inside <head> and ignores this one: move it into <head> or send the token in the Origin-Trial header.",
+    "description": "Environment note."
+  },
+  "env_otWhitespace": {
+    "message": "This page's WebMCP origin-trial token has spaces or line breaks in its meta element. Chrome reads the attribute as written and refuses the token: write it on one line, with nothing around it.",
     "description": "Environment note."
   },
   "status_trialExpired": {
@@ -5437,6 +5495,35 @@
   "baseline_descriptionChanged": {
     "message": "Description changed since this baseline: $1. An agent reads the description to decide when to call a tool. Read the new text in Tools before you update the baseline.",
     "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "baseline_export": {
+    "message": "Export baseline",
+    "description": "Baseline box button."
+  },
+  "baseline_exportHelp": {
+    "message": "Save this baseline as a file: the reviewed tool names, contract fingerprints and finding keys, no page text. Keep it as a backup or give it to a colleague.",
+    "description": "Tooltip of the export button."
+  },
+  "baseline_import": {
+    "message": "Import baseline",
+    "description": "Baseline box button."
+  },
+  "baseline_importHelp": {
+    "message": "Load a baseline file exported from Explorer for this site. It replaces the baseline saved here.",
+    "description": "Tooltip of the import button."
+  },
+  "baseline_importInvalid": {
+    "message": "That file is not a baseline exported from WebMCP Explorer.",
+    "description": "Shown when the chosen file is not a baseline file."
+  },
+  "baseline_importOtherSite": {
+    "message": "That baseline was made for $1, not for this site.",
+    "description": "Shown when the file belongs to another site; $1 its origin.",
     "placeholders": {
       "1": {
         "content": "$1"

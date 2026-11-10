@@ -821,6 +821,35 @@
   "discovery_titleHelp": {
     "message": "Erkennungsdateien abrufen und den Permissions-Policy-Header der Seite lesen."
   },
+  "discovery_otIntro": {
+    "message": "Die Prüfung liest auch den Antwort-Header Origin-Trial, den Explorer von der Seite aus nicht sehen kann.",
+    "description": "Origin scan box, second line of the introduction."
+  },
+  "discovery_otHeaderNone": {
+    "message": "Origin-Trial-Header: in dieser Antwort ohne Anmeldedaten nicht vorhanden.",
+    "description": "Origin scan result line."
+  },
+  "discovery_otHeaderOther": {
+    "message": "Origin-Trial-Header: $1 Token, keines für den WebMCP-Trial.",
+    "description": "Origin scan result line; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "discovery_otHeader": {
+    "message": "Origin-Trial-Header: $1 Token. $2",
+    "description": "Origin scan result line; $1 count, $2 the sentence about the WebMCP token.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
   "enableFlagBody": {
     "message": "Für die lokale Entwicklung: Wenn Ihre Chrome-Version dieses Flag anbietet, setzen Sie es auf Enabled und starten Sie Chrome neu."
   },
@@ -1837,6 +1866,15 @@
   },
   "probes_consentRequired": {
     "message": "Sonden wurden nicht ausgeführt: Bestätigen Sie zuerst, dass Sie diese Website kontrollieren."
+  },
+  "sec_contract_changed_in_session_fix": {
+    "message": "Prüfen Sie, ob die Änderung von Ihnen stammt: Öffnen Sie das Werkzeug, um den aktuellen Vertrag zu lesen, und schalten Sie den Instrumentierungsmodus ein, um das registrierende Skript zu sehen. Speichern Sie nach der Prüfung eine Baseline, damit eine spätere Änderung daran gemessen wird."
+  },
+  "sec_contract_changed_in_session_title": {
+    "message": "Vertrag in dieser Sitzung unter gleichem Namen geändert"
+  },
+  "sec_contract_changed_in_session_why": {
+    "message": "Das Werkzeug hat seinen Namen behalten, während Beschreibung, Eingabeschema oder Annotationen ersetzt wurden. Ein Agent, der den früheren Vertrag gelesen hat, ruft nun einen anderen auf (arXiv 2606.06387, Spec-Issues #92 und #328). Eine Komponente, die mit anderem Text neu rendert, bewirkt dasselbe; der Nachweis nennt, was sich geändert hat."
   },
   "secrets_title": {
     "message": "Anbieterschlüssel in Seitenskripten (WMCP-SEC-013)",
@@ -2969,7 +3007,7 @@
     "message": "In dieser Sitzung entfernt und erneut registriert"
   },
   "sec_re_registered_in_session_why": {
-    "message": "Ein Werkzeug, das verschwindet und wiederkehrt, kann dasselbe neu eingebundene Werkzeug sein oder ein anderer Vertrag unter gleichem Namen (arXiv 2606.06387, Spec-Issue #92). Die Zeitleiste hat den Wechsel gesehen; Explorer hat die Verträge nicht verglichen."
+    "message": "Ein Werkzeug, das verschwindet und wiederkehrt, kann dasselbe neu eingebundene Werkzeug sein oder ein anderer Vertrag unter gleichem Namen (arXiv 2606.06387, Spec-Issue #92). Die Zeitleiste hat den Wechsel gesehen, die beiden Verträge ließen sich aber nicht vergleichen."
   },
   "sec_readonly_claim_on_mutating_verb_fix": {
     "message": "Entfernen Sie readOnlyHint oder benennen Sie das Werkzeug passend zu seiner Funktion um; prüfen Sie Hinweise nach jeder Änderung erneut."
@@ -3847,6 +3885,9 @@
   "timeline_agent": {
     "message": "Agent"
   },
+  "timeline_changedParts": {
+    "message": "Unter gleichem Namen geändert: $1"
+  },
   "timeline_clear": {
     "message": "Leeren"
   },
@@ -3867,6 +3908,9 @@
   },
   "timeline_kindCancelled": {
     "message": "abgebrochen"
+  },
+  "timeline_kindChanged": {
+    "message": "Vertrag geändert"
   },
   "timeline_kindExecuted": {
     "message": "ausgeführt"
@@ -3898,6 +3942,9 @@
   "timeline_nothingRecordedYetRegistrationsAnd": {
     "message": "Noch nichts aufgezeichnet. Registrierungen und Aufrufe erscheinen hier live."
   },
+  "timeline_otherContract": {
+    "message": "Nicht mehr der Vertrag von vor dem Entfernen: $1"
+  },
   "timeline_pause": {
     "message": "Pause"
   },
@@ -3906,6 +3953,9 @@
   },
   "timeline_resume": {
     "message": "Fortsetzen"
+  },
+  "timeline_sameContract": {
+    "message": "Derselbe Vertrag wie vor dem Entfernen"
   },
   "timeline_sampled": {
     "message": " · abgetastet"
@@ -4880,7 +4930,15 @@
     }
   },
   "env_otBadSignature": {
-    "message": "Ein WebMCP-Origin-Trial-Token dieser Seite ist nicht mit dem Schlüssel von Chrome signiert. Chrome ignoriert es.",
+    "message": "Ein WebMCP-Origin-Trial-Token dieser Seite ist nicht mit dem Schlüssel von Chrome signiert. Chrome ignoriert es. Es kann zum Trial eines anderen Browsers gehören, etwa von Microsoft Edge.",
+    "description": "Environment note."
+  },
+  "env_otOutsideHead": {
+    "message": "Das WebMCP-Origin-Trial-Token dieser Seite steht in einem meta-Element außerhalb von <head>. Chrome liest solche Elemente nur innerhalb von <head> und ignoriert dieses: Verschieben Sie es in <head> oder senden Sie das Token im Origin-Trial-Header.",
+    "description": "Environment note."
+  },
+  "env_otWhitespace": {
+    "message": "Das WebMCP-Origin-Trial-Token dieser Seite enthält Leerzeichen oder Zeilenumbrüche in seinem meta-Element. Chrome liest das Attribut unverändert und lehnt das Token ab: Schreiben Sie es in eine Zeile, ohne Zeichen davor oder danach.",
     "description": "Environment note."
   },
   "status_trialExpired": {
@@ -4915,6 +4973,35 @@
   "baseline_descriptionChanged": {
     "message": "Beschreibung seit dieser Referenz geändert: $1. Ein Agent liest die Beschreibung, um zu entscheiden, wann er ein Werkzeug aufruft. Lesen Sie den neuen Text unter Werkzeuge, bevor Sie die Referenz aktualisieren.",
     "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "baseline_export": {
+    "message": "Baseline exportieren",
+    "description": "Baseline box button."
+  },
+  "baseline_exportHelp": {
+    "message": "Speichert diese Baseline als Datei: Namen der geprüften Tools, Fingerabdrücke der Verträge und Schlüssel der Befunde, kein Seitentext. Bewahren Sie sie als Sicherung auf oder geben Sie sie an Kolleginnen und Kollegen weiter.",
+    "description": "Tooltip of the export button."
+  },
+  "baseline_import": {
+    "message": "Baseline importieren",
+    "description": "Baseline box button."
+  },
+  "baseline_importHelp": {
+    "message": "Lädt eine aus Explorer exportierte Baseline-Datei für diese Website. Sie ersetzt die hier gespeicherte Baseline.",
+    "description": "Tooltip of the import button."
+  },
+  "baseline_importInvalid": {
+    "message": "Diese Datei ist keine aus WebMCP Explorer exportierte Baseline.",
+    "description": "Shown when the chosen file is not a baseline file."
+  },
+  "baseline_importOtherSite": {
+    "message": "Diese Baseline wurde für $1 erstellt, nicht für diese Website.",
+    "description": "Shown when the file belongs to another site; $1 its origin.",
     "placeholders": {
       "1": {
         "content": "$1"

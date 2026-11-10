@@ -380,6 +380,9 @@ summary { cursor: pointer; }
 .tl-time { flex: none; font-variant-numeric: tabular-nums; }
 .tl-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .tl-dur { flex: none; font-variant-numeric: tabular-nums; }
+/* What the contract comparison found, on a line of its own under the event. */
+.tl-row-noted { flex-wrap: wrap; }
+.tl-detail { flex: 1 0 100%; min-width: 0; overflow-wrap: anywhere; }
 .rail-sep { width: 18px; height: 1px; background: var(--border); margin: 2px 0; }
 .rail-spacer { flex: 1; }
 /* Keep Settings reachable when wrapped diagnostics reduce the rail's available height. */

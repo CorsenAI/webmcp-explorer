@@ -6,13 +6,18 @@
 import { SEVERITY_RANK, CODES } from './catalog.js';
 import { CONTRACT_PARTS } from './contract-lock.js';
 
-// Engine v3 (2026-11-08) added finding codes. A baseline records the engine that made it, so a
-// finding whose code did not exist then is shown as a new rule, never as a regression of the site.
-export const ENGINE_VERSION = 3;
+// Engine v3 (2026-11-08) and v4 (2026-11-10) added finding codes. A baseline records the engine
+// that made it, so a finding whose code did not exist then is shown as a new rule, never as a
+// regression of the site.
+export const ENGINE_VERSION = 4;
 export const ENGINE_V3_CODES = Object.freeze(['declarative-hidden-parameter', 'declarative-credential-field',
   'declarative-param-orphan', 'declarative-post-auto-submit', 'readonly-callback-mutation', 'exposed-to-cross-origin',
   'text-far-over-budget', 'client-secret-exposed', 'output-reflects-input']);
-const CODES_BEFORE = { 2: new Set(CODES.filter((code) => !ENGINE_V3_CODES.includes(code))) };
+export const ENGINE_V4_CODES = Object.freeze(['contract-changed-in-session']);
+const CODES_BEFORE = {
+  2: new Set(CODES.filter((code) => !ENGINE_V3_CODES.includes(code) && !ENGINE_V4_CODES.includes(code))),
+  3: new Set(CODES.filter((code) => !ENGINE_V4_CODES.includes(code))),
+};
 const knownAt = (baseline) => (baseline?.engine === ENGINE_VERSION ? null : CODES_BEFORE[baseline?.engine ?? 2] ?? CODES_BEFORE[2]);
 
 export const MAX_BASELINE_FINDINGS = 300;
@@ -110,4 +115,39 @@ export function summarizeDiff(diff, { at = Date.now() } = {}) {
     regressed: diff.regressed,
     drifted: diff.drifted === true,
   };
+}
+
+// A baseline as a file: what was reviewed for one site (tool names, fingerprints, finding keys),
+// never page text, so it can be kept across a reinstall or handed to a colleague who then gets the
+// same "since baseline" comparison. The last re-check is local to a browser and is left out.
+export const BASELINE_FILE = Object.freeze({ app: 'webmcp-explorer', kind: 'security-baseline', version: 1 });
+
+export function exportBaseline(baseline, { at = Date.now() } = {}) {
+  if (!baseline?.origin) return null;
+  const { lastCheckAt, lastDiff, ...reviewed } = baseline;
+  return { ...BASELINE_FILE, exportedAt: new Date(at).toISOString(), baseline: reviewed };
+}
+
+// Reads such a file for the site being inspected. The file is outside data: every field is checked
+// and bounded again, finding keys are rebuilt, and a file made for another site is refused by name.
+export function importBaseline(file, { origin } = {}) {
+  const none = { error: 'not-a-baseline' };
+  if (!file || typeof file !== 'object' || file.app !== BASELINE_FILE.app || file.kind !== BASELINE_FILE.kind || file.version !== BASELINE_FILE.version) return none;
+  const b = file.baseline;
+  if (!b || typeof b !== 'object' || typeof b.origin !== 'string' || !Array.isArray(b.tools) || !Array.isArray(b.findings) || !Number.isFinite(b.at) || b.at <= 0) return none;
+  if (!origin || b.origin !== origin) return { error: 'other-site', origin: b.origin.slice(0, 200) };
+  const hash = (value) => (typeof value === 'string' && HASH.test(value) ? value : null);
+  const text = (value, max) => (typeof value === 'string' ? value.slice(0, max) : null);
+  const tools = b.tools.filter((t) => t && typeof t === 'object' && typeof t.name === 'string' && t.name).slice(0, MAX_BASELINE_TOOLS)
+    .map((t) => ({ logicalId: text(t.logicalId, 2000), name: t.name.slice(0, 300), contractFp: hash(t.contractFp), origin: text(t.origin, 300),
+      ...(partsOf(t.parts) ? { parts: partsOf(t.parts) } : {}) }));
+  const findings = b.findings
+    .filter((f) => f && typeof f === 'object' && typeof f.code === 'string' && f.code && SEVERITY_RANK[f.severity] !== undefined)
+    .slice(0, MAX_BASELINE_FINDINGS)
+    .map((f) => {
+      const entry = { code: f.code.slice(0, 80), severity: f.severity, toolName: text(f.toolName, 300), contractFp: hash(f.contractFp) };
+      return { key: findingKey(entry), ...entry };
+    });
+  return { baseline: { origin, at: b.at, engine: Number.isInteger(b.engine) ? b.engine : 2, tools, findings,
+    truncated: b.truncated === true || b.tools.length > MAX_BASELINE_TOOLS || b.findings.length > MAX_BASELINE_FINDINGS, lastCheckAt: null, lastDiff: null } };
 }

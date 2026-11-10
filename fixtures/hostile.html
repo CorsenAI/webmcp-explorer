@@ -91,9 +91,9 @@ if (!mc) {
         execute: async () => '{}',
       }, { signal: ac.signal });
       ac.abort();
-      // The timeline samples the tool set on each change (L-10): a removal and a re-registration
-      // in the same tick would read as one registration. A real swap waits for the removal to
-      // land before taking the name; so does this one.
+      // This swap lets the removal land before taking the name again: the timeline then shows a
+      // removal and a registration, and compares the contract that left with the one that came
+      // back. A swap with no gap is covered by live-swap.html.
       await new Promise((r) => setTimeout(r, 600));
       await mc.registerTool({
         name: 'search_catalogue_v2',

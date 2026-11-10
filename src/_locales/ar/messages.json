@@ -821,6 +821,35 @@
   "discovery_titleHelp": {
     "message": "جلب ملفات الاكتشاف وقراءة ترويسة Permissions-Policy للصفحة عند الضغط على الزر."
   },
+  "discovery_otIntro": {
+    "message": "يقرأ الفحص أيضًا ترويسة الاستجابة Origin-Trial، التي لا يستطيع Explorer رؤيتها من داخل الصفحة.",
+    "description": "Origin scan box, second line of the introduction."
+  },
+  "discovery_otHeaderNone": {
+    "message": "ترويسة Origin-Trial: غير موجودة في هذه الاستجابة الخالية من بيانات الاعتماد.",
+    "description": "Origin scan result line."
+  },
+  "discovery_otHeaderOther": {
+    "message": "ترويسة Origin-Trial: $1 رمز/رموز، لا شيء منها لتجربة WebMCP.",
+    "description": "Origin scan result line; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "discovery_otHeader": {
+    "message": "ترويسة Origin-Trial: $1 رمز/رموز. $2",
+    "description": "Origin scan result line; $1 count, $2 the sentence about the WebMCP token.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
   "enableFlagBody": {
     "message": "للتطوير المحلي، إذا كان إصدار Chrome يوفر هذا الخيار، فعّله وأعد تشغيل المتصفح."
   },
@@ -1837,6 +1866,15 @@
   },
   "probes_consentRequired": {
     "message": "لم يتم تشغيل المسابير: أكّد أولاً أنك تتحكم في هذا الموقع."
+  },
+  "sec_contract_changed_in_session_fix": {
+    "message": "تأكد أن التغيير من عندك: افتح الأداة لقراءة عقدها الحالي، وفعّل وضع القياس لمعرفة السكربت الذي سجّلها. بعد مراجعة العقد، احفظ خط الأساس ليُبلَّغ عن أي تغيير لاحق قياساً إليه."
+  },
+  "sec_contract_changed_in_session_title": {
+    "message": "تغيّر العقد تحت نفس الاسم في هذه الجلسة"
+  },
+  "sec_contract_changed_in_session_why": {
+    "message": "احتفظت الأداة باسمها بينما استُبدل وصفها أو مخطط إدخالها أو تعليقاتها التوضيحية. الوكيل الذي قرأ العقد السابق يستدعي الآن عقداً مختلفاً (arXiv 2606.06387، مسألتا المواصفات #92 و#328). المكوّن الذي يعيد العرض بنص آخر يُحدث الأثر نفسه؛ والدليل يسمّي ما تغيّر."
   },
   "secrets_title": {
     "message": "مفاتيح المزوّدين في النصوص البرمجية للصفحة (WMCP-SEC-013)",
@@ -2969,7 +3007,7 @@
     "message": "أُزيلت وأعيد تسجيلها في هذه الجلسة"
   },
   "sec_re_registered_in_session_why": {
-    "message": "الأداة التي تختفي ثم تعود قد تكون نفس الأداة أعيد تركيبها، أو عقداً مختلفاً تحت نفس الاسم (arXiv 2606.06387، مسألة المواصفات #92). رصد الجدول الزمني التغيير؛ لكن Explorer لم يقارن العقدين."
+    "message": "الأداة التي تختفي ثم تعود قد تكون نفس الأداة أعيد تركيبها، أو عقداً مختلفاً تحت نفس الاسم (arXiv 2606.06387، مسألة المواصفات #92). رصد الجدول الزمني التغيير، لكن تعذّرت مقارنة العقدين."
   },
   "sec_readonly_claim_on_mutating_verb_fix": {
     "message": "أزل readOnlyHint أو أعد تسمية الأداة بحيث يطابق الاسم ما تفعله؛ وأعد مراجعة التلميحات بعد كل تغيير."
@@ -3847,6 +3885,9 @@
   "timeline_agent": {
     "message": "الوكيل"
   },
+  "timeline_changedParts": {
+    "message": "تغيّر تحت نفس الاسم: $1"
+  },
   "timeline_clear": {
     "message": "مسح"
   },
@@ -3867,6 +3908,9 @@
   },
   "timeline_kindCancelled": {
     "message": "ملغى"
+  },
+  "timeline_kindChanged": {
+    "message": "تغيّر العقد"
   },
   "timeline_kindExecuted": {
     "message": "منفذ"
@@ -3898,6 +3942,9 @@
   "timeline_nothingRecordedYetRegistrationsAnd": {
     "message": "لم يتم تسجيل أي أحداث بعد. ستظهر عمليات التسجيل والاستدعاء هنا فور حدوثها."
   },
+  "timeline_otherContract": {
+    "message": "لم يعد العقد الذي كان قبل الإزالة: $1"
+  },
   "timeline_pause": {
     "message": "إيقاف مؤقت"
   },
@@ -3906,6 +3953,9 @@
   },
   "timeline_resume": {
     "message": "استئناف"
+  },
+  "timeline_sameContract": {
+    "message": "العقد نفسه كما كان قبل الإزالة"
   },
   "timeline_sampled": {
     "message": " · عينة"
@@ -4880,7 +4930,15 @@
     }
   },
   "env_otBadSignature": {
-    "message": "أحد رموز Origin Trial لـ WebMCP في هذه الصفحة غير موقّع بمفتاح Chrome. يتجاهله Chrome.",
+    "message": "أحد رموز Origin Trial لـ WebMCP في هذه الصفحة غير موقّع بمفتاح Chrome. يتجاهله Chrome. قد يكون تابعًا لتجربة متصفح آخر، مثل Microsoft Edge.",
+    "description": "Environment note."
+  },
+  "env_otOutsideHead": {
+    "message": "رمز Origin Trial لـ WebMCP في هذه الصفحة موجود في عنصر meta خارج <head>. يقرأ Chrome هذه العناصر داخل <head> فقط ويتجاهل هذا العنصر: انقله إلى <head> أو أرسل الرمز في ترويسة Origin-Trial.",
+    "description": "Environment note."
+  },
+  "env_otWhitespace": {
+    "message": "رمز Origin Trial لـ WebMCP في هذه الصفحة يحتوي على مسافات أو فواصل أسطر داخل عنصر meta. يقرأ Chrome السمة كما هي ويرفض الرمز: اكتبه في سطر واحد دون أي شيء قبله أو بعده.",
     "description": "Environment note."
   },
   "status_trialExpired": {
@@ -4915,6 +4973,35 @@
   "baseline_descriptionChanged": {
     "message": "تغيّر الوصف منذ خط الأساس هذا: $1. يقرأ الوكيل الوصف ليقرر متى يستدعي الأداة. اقرأ النص الجديد في الأدوات قبل تحديث خط الأساس.",
     "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "baseline_export": {
+    "message": "تصدير خط الأساس",
+    "description": "Baseline box button."
+  },
+  "baseline_exportHelp": {
+    "message": "يحفظ خط الأساس هذا في ملف: أسماء الأدوات التي تمت مراجعتها، وبصمات العقود، ومفاتيح النتائج، دون أي نص من الصفحة. احتفظ به كنسخة احتياطية أو أعطه لزميل.",
+    "description": "Tooltip of the export button."
+  },
+  "baseline_import": {
+    "message": "استيراد خط الأساس",
+    "description": "Baseline box button."
+  },
+  "baseline_importHelp": {
+    "message": "يحمّل ملف خط أساس تم تصديره من Explorer لهذا الموقع. يستبدل خط الأساس المحفوظ هنا.",
+    "description": "Tooltip of the import button."
+  },
+  "baseline_importInvalid": {
+    "message": "هذا الملف ليس خط أساس مُصدَّرًا من WebMCP Explorer.",
+    "description": "Shown when the chosen file is not a baseline file."
+  },
+  "baseline_importOtherSite": {
+    "message": "تم إنشاء خط الأساس هذا للموقع $1، وليس لهذا الموقع.",
+    "description": "Shown when the file belongs to another site; $1 its origin.",
     "placeholders": {
       "1": {
         "content": "$1"

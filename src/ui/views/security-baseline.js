@@ -5,6 +5,7 @@
 import { el, badge, t } from '../dom.js';
 import { makeBaseline, diffBaseline } from '../../core/security/baseline.js';
 import { severityLabel } from './security.js';
+import { saveText } from '../components/export-bar.js';
 
 const when = (ms) => new Date(ms).toLocaleString();
 const names = (list) => (list.length ? list.slice(0, 6).join(', ') + (list.length > 6 ? '…' : '') : '—');
@@ -28,10 +29,30 @@ export function renderBaseline(root, { result, review, baseline, onChanged = () 
     onChanged(next);
   };
 
+  // A baseline file exported from Explorer for this site: the way back after a reinstall, or a
+  // colleague's review. The file is read here and checked field by field in the background.
+  const importStatus = el('p', { class: 'field-note sec-baseline-import-status', hidden: '' });
+  // Not shown: the Import button opens it. It still carries a name and a hint, like every control.
+  const picker = el('input', { type: 'file', accept: '.json,application/json', hidden: '', class: 'sec-baseline-file',
+    'aria-label': t('baseline_import'), title: t('baseline_importHelp') });
+  const importButton = el('button', { text: t('baseline_import'), title: t('baseline_importHelp') });
+  importButton.addEventListener('click', () => picker.click());
+  picker.addEventListener('change', async () => {
+    const chosen = picker.files?.[0];
+    picker.value = '';
+    if (!chosen) return;
+    let file = null;
+    if (chosen.size <= 2_000_000) { try { file = JSON.parse(await chosen.text()); } catch { file = null; } }
+    const out = await send({ type: 'security-baseline-import', file, origin });
+    if (out?.baseline) { onChanged(out.baseline); return; }
+    importStatus.hidden = false;
+    importStatus.textContent = out?.error === 'other-site' ? t('baseline_importOtherSite', [String(out.origin)]) : t('baseline_importInvalid');
+  });
+
   if (!baseline) {
     const button = el('button', { class: 'primary', text: t('baseline_save'), title: t('baseline_saveHelp') });
     button.addEventListener('click', save);
-    box.append(el('p', { class: 'field-desc', text: t('baseline_none') }), el('div', { class: 'row-inline' }, [button]));
+    box.append(el('p', { class: 'field-desc', text: t('baseline_none') }), el('div', { class: 'row-inline' }, [button, importButton, picker]), importStatus);
     return null;
   }
 
@@ -60,6 +81,14 @@ export function renderBaseline(root, { result, review, baseline, onChanged = () 
     await send({ type: 'security-baseline-forget', origin });
     onChanged(null);
   });
-  box.append(el('div', { class: 'row-inline' }, [update, forget]));
+  const exportButton = el('button', { text: t('baseline_export'), title: t('baseline_exportHelp') });
+  exportButton.addEventListener('click', async () => {
+    const out = await send({ type: 'security-baseline-export', origin });
+    if (!out?.file) return;
+    let host = 'site';
+    try { host = new URL(origin).host.replace(/[^A-Za-z0-9.-]/g, '-'); } catch { /* keep the default */ }
+    saveText(`webmcp-baseline-${host}`, `${JSON.stringify(out.file, null, 2)}\n`, 'json');
+  });
+  box.append(el('div', { class: 'row-inline' }, [update, forget, exportButton, importButton, picker]), importStatus);
   return diff;
 }

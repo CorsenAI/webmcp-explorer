@@ -50,7 +50,9 @@ export function renderStatus(factsEl, result, { onGranted, tabId = null }) {
         ? `${result.env.refusal.name}: ${result.env.refusal.message}`
         : (result.env.missing?.length
           ? t('status_missingApiMethods', [result.env.missing.join(', ')])
-          : (diagnostic.runtime==='legacy'?'navigator.modelContext':diagnostic.runtime==='emulated'?'JS emulation':'document.modelContext')+' · '+t('status_webmcpRuntimeDetectedForThis')),
+          : (diagnostic.runtime==='legacy'?'navigator.modelContext':diagnostic.runtime==='emulated'?'JS emulation':'document.modelContext')+' · '+t('status_webmcpRuntimeDetectedForThis')
+            // An honoured trial token: its end date belongs with the label that names the trial.
+            + (state === 'origin-trial' && trialNote(result.env) ? ` ${trialNote(result.env)}` : '')),
     ),
     el('span', {
       // Each count carries its own singular: "1 tools · 1 frames" was shipping on every page

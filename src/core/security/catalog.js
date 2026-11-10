@@ -90,6 +90,8 @@ export const CATALOG = {
   'opaque-origin-tool': entry(AXIS.surface, 'info', NATURE.observed, ['spec-6.3.2']),
   // Lifecycle: the tool set moving under the agent.
   're-registered-in-session': entry(AXIS.lifecycle, 'medium', NATURE.indicator, ['arxiv-msti', 'spec-issue-92']),
+  // Engine v4 (2026-11-10): both contracts were fingerprinted, so the change is a measurement.
+  'contract-changed-in-session': entry(AXIS.lifecycle, 'medium', NATURE.observed, ['arxiv-msti', 'spec-issue-92', 'spec-issue-328']),
   'registered-more-than-once': entry(AXIS.lifecycle, 'medium', NATURE.observed, ['arxiv-msti', 'spec-issue-92', 'spec-issue-328']),
   // Active probes (S2): what the tool's own code does with inputs the schema forbids, and what
   // comes back. Observed on the person's own site, with their explicit confirmation.

@@ -821,6 +821,35 @@
   "discovery_titleHelp": {
     "message": "ディスカバリファイルとページの Permissions-Policy ヘッダーを確認します。ボタンを押したときだけ実行されます。"
   },
+  "discovery_otIntro": {
+    "message": "このスキャンは Origin-Trial レスポンス ヘッダーも読み取ります。Explorer はページ内からこのヘッダーを見ることができません。",
+    "description": "Origin scan box, second line of the introduction."
+  },
+  "discovery_otHeaderNone": {
+    "message": "Origin-Trial ヘッダー: この認証情報なしのレスポンスにはありません。",
+    "description": "Origin scan result line."
+  },
+  "discovery_otHeaderOther": {
+    "message": "Origin-Trial ヘッダー: トークン $1 個、WebMCP トライアル用のものはありません。",
+    "description": "Origin scan result line; $1 count.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "discovery_otHeader": {
+    "message": "Origin-Trial ヘッダー: トークン $1 個。$2",
+    "description": "Origin scan result line; $1 count, $2 the sentence about the WebMCP token.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      },
+      "2": {
+        "content": "$2"
+      }
+    }
+  },
   "enableFlagBody": {
     "message": "ローカル開発向けに Chrome がこのフラグを提供している場合は、Enabled に設定して Chrome を再起動してください。"
   },
@@ -1837,6 +1866,15 @@
   },
   "probes_consentRequired": {
     "message": "プローブは実行されませんでした。先にこのサイトを管理していることを確認してください。"
+  },
+  "sec_contract_changed_in_session_fix": {
+    "message": "この変更が自分たちによるものか確認してください。ツールを開いて現在の契約を読み、計測モードを有効にして登録元のスクリプトを確認します。契約を確認したらベースラインを保存し、以降の変更がそれを基準に報告されるようにしてください。"
+  },
+  "sec_contract_changed_in_session_title": {
+    "message": "このセッション中に同じ名前のまま契約が変更されました"
+  },
+  "sec_contract_changed_in_session_why": {
+    "message": "ツールの名前はそのままで、説明・入力スキーマ・アノテーションのいずれかが差し替えられました。以前の契約を読んだエージェントは、現在は別の契約を呼び出すことになります（arXiv 2606.06387、仕様 Issue #92 および #328）。別の文面で再描画されるコンポーネントでも同じことが起こります。証拠には変更された部分が示されます。"
   },
   "secrets_title": {
     "message": "ページスクリプト内のプロバイダーキー (WMCP-SEC-013)",
@@ -2969,7 +3007,7 @@
     "message": "このセッション中に削除され再登録されました"
   },
   "sec_re_registered_in_session_why": {
-    "message": "消えてから再び現れたツールは、同じコンポーネントの再マウントである場合もあれば、同じ名前で異なる契約に差し替えられた場合もあります（arXiv 2606.06387、仕様 Issue #92）。タイムラインは変化を検出しましたが、契約内容の自動比較は行っていません。"
+    "message": "消えてから再び現れたツールは、同じコンポーネントの再マウントである場合もあれば、同じ名前で異なる契約に差し替えられた場合もあります（arXiv 2606.06387、仕様 Issue #92）。タイムラインは変化を検出しましたが、2 つの契約を比較できませんでした。"
   },
   "sec_readonly_claim_on_mutating_verb_fix": {
     "message": "readOnlyHint を削除するか、実際の動作に合わせてツール名を変更し、変更ごとにヒントを見直してください。"
@@ -3847,6 +3885,9 @@
   "timeline_agent": {
     "message": "エージェント"
   },
+  "timeline_changedParts": {
+    "message": "同じ名前のまま変更: $1"
+  },
   "timeline_clear": {
     "message": "クリア"
   },
@@ -3867,6 +3908,9 @@
   },
   "timeline_kindCancelled": {
     "message": "キャンセル"
+  },
+  "timeline_kindChanged": {
+    "message": "契約変更"
   },
   "timeline_kindExecuted": {
     "message": "実行完了"
@@ -3898,6 +3942,9 @@
   "timeline_nothingRecordedYetRegistrationsAnd": {
     "message": "まだ記録はありません。ツールの登録や呼び出しが発生するとここに表示されます。"
   },
+  "timeline_otherContract": {
+    "message": "削除前の契約とは異なります: $1"
+  },
   "timeline_pause": {
     "message": "一時停止"
   },
@@ -3906,6 +3953,9 @@
   },
   "timeline_resume": {
     "message": "再開"
+  },
+  "timeline_sameContract": {
+    "message": "削除前と同じ契約です"
   },
   "timeline_sampled": {
     "message": " · サンプリング"
@@ -4880,7 +4930,15 @@
     }
   },
   "env_otBadSignature": {
-    "message": "このページの WebMCP オリジントライアル トークンは Chrome の鍵で署名されていません。Chrome は無視します。",
+    "message": "このページの WebMCP オリジントライアル トークンは Chrome の鍵で署名されていません。Chrome は無視します。Microsoft Edge など、別のブラウザのトライアル用のトークンである可能性があります。",
+    "description": "Environment note."
+  },
+  "env_otOutsideHead": {
+    "message": "このページの WebMCP オリジントライアルのトークンは <head> の外にある meta 要素に書かれています。Chrome は <head> 内の meta 要素だけを読み取るため、このトークンは無視されます。<head> 内に移動するか、Origin-Trial ヘッダーで送信してください。",
+    "description": "Environment note."
+  },
+  "env_otWhitespace": {
+    "message": "このページの WebMCP オリジントライアルのトークンは、meta 要素内に空白または改行を含んでいます。Chrome は属性をそのまま読み取り、このトークンを拒否します。前後に何も付けず、1 行で記述してください。",
     "description": "Environment note."
   },
   "status_trialExpired": {
@@ -4915,6 +4973,35 @@
   "baseline_descriptionChanged": {
     "message": "このベースライン以降に説明が変更されました: $1。エージェントは説明を読んでツールを呼び出すかどうかを判断します。ベースラインを更新する前に、「ツール」で新しい文面を確認してください。",
     "description": "Baseline note; $1 tool names.",
+    "placeholders": {
+      "1": {
+        "content": "$1"
+      }
+    }
+  },
+  "baseline_export": {
+    "message": "ベースラインをエクスポート",
+    "description": "Baseline box button."
+  },
+  "baseline_exportHelp": {
+    "message": "このベースラインをファイルに保存します。レビュー済みツールの名前、コントラクトのフィンガープリント、検出項目のキーを含み、ページのテキストは含みません。バックアップとして保管するか、同僚に渡してください。",
+    "description": "Tooltip of the export button."
+  },
+  "baseline_import": {
+    "message": "ベースラインをインポート",
+    "description": "Baseline box button."
+  },
+  "baseline_importHelp": {
+    "message": "このサイト用に Explorer からエクスポートしたベースライン ファイルを読み込みます。ここに保存されているベースラインは置き換えられます。",
+    "description": "Tooltip of the import button."
+  },
+  "baseline_importInvalid": {
+    "message": "このファイルは WebMCP Explorer からエクスポートされたベースラインではありません。",
+    "description": "Shown when the chosen file is not a baseline file."
+  },
+  "baseline_importOtherSite": {
+    "message": "このベースラインはこのサイトではなく $1 用に作成されたものです。",
+    "description": "Shown when the file belongs to another site; $1 its origin.",
     "placeholders": {
       "1": {
         "content": "$1"

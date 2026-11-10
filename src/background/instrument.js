@@ -38,7 +38,22 @@ export async function isInstrumented(url) {
   return (await instrumentedOrigins()).includes(pattern);
 }
 
-export async function setInstrumented(url, on) {
+// One change to the registered content scripts at a time. Turning instrumentation or emulation on
+// or off reads the registrations and then changes them; two such requests interleaved could leave
+// the instrumentation script registered after it was turned off, or reject (measured on
+// 2026-11-09: 4 and 55 times in 60 rounds sent together, never when sent one after the other).
+let queue = Promise.resolve();
+function serial(work) {
+  const run = queue.then(work, work);
+  queue = run.then(() => {}, () => {});
+  return run;
+}
+
+export function setInstrumented(url, on) {
+  return serial(() => applyInstrumented(url, on));
+}
+
+async function applyInstrumented(url, on) {
   const pattern = originPattern(url);
   if (!pattern) return { error: 'That page cannot be instrumented.' };
 
@@ -80,7 +95,11 @@ export async function setInstrumented(url, on) {
 }
 
 // A revoked origin must not keep an instrumented content script behind.
-export async function forgetInstrumentation(origins = []) {
+export function forgetInstrumentation(origins = []) {
+  return serial(() => removeInstrumentation(origins));
+}
+
+async function removeInstrumentation(origins) {
   const patterns = new Set(origins);
   const ids = (await registered())
     .filter((script) => (script.matches ?? []).some((match) => patterns.has(match)))
@@ -100,7 +119,11 @@ export async function emulatedOrigins() {
   return (await chrome.scripting.getRegisteredContentScripts())
     .filter(s => s.id.startsWith(EMULATION_PREFIX)).flatMap(s => s.matches ?? []);
 }
-export async function setEmulated(url, on) {
+export function setEmulated(url, on) {
+  return serial(() => applyEmulated(url, on));
+}
+
+async function applyEmulated(url, on) {
   const pattern = originPattern(url);
   if (!pattern) return { error: 'This page cannot be emulated.' };
   if (on && !(await chrome.permissions.contains({ origins: [pattern] }))) return { error: 'Allow Explorer on this site first.' };

@@ -1,6 +1,6 @@
 # WebMCP Explorer — Privacy Policy
 
-Last reviewed: 2026-11-09. Applies to WebMCP Explorer 2.5.0.
+Last reviewed: 2026-11-10. Applies to WebMCP Explorer 2.6.0.
 Earlier Store versions may offer fewer features; optional features described below act only
 when you enable or request them.
 
@@ -111,6 +111,13 @@ unknown coverage, not a security certification. Proposed fixes are generated loc
 templates and never applied to the page or executed. Exporting is a copy or download you trigger;
 the report contains page-authored evidence, proposed fixes, unknown checks and that score.
 
+The live timeline follows the tools of a tab once you open Tools, Timeline or Security on it. To
+tell when a tool's contract is replaced under the same name, Explorer computes in the page, for each
+tool, SHA-256 fingerprints of its description, input schema and annotations, and passes on the tool
+names and those fingerprints only. Fingerprints are one-way hashes, not the texts. They are kept in
+memory with the tab's timeline, never stored, and dropped when the tab closes or the browser stops
+the extension's worker. A timeline you export names the part that changed, not the fingerprints.
+
 ### Active probes, only on a site you declare you control
 
 The Security section can also run **probes**: a fixed set of at most five calls per selected
@@ -135,19 +142,27 @@ and of its description, input schema and annotations, so a later review can say 
 fingerprints are one-way hashes, not the texts. The baselines, the re-check setting and the last
 re-check's counts are stored on your device with the other security review data and cleared with it.
 
+You can export a baseline to a file and import one for the same site, for another machine, a
+reinstall or a colleague. The file holds what the baseline holds (tool names, fingerprints, finding
+keys, the site and the date) and is written and read on your device: Explorer sends it nowhere. An
+imported file is checked field by field, bounded like a saved baseline, and refused when it was
+made for another site.
+
 ### Origin-trial tokens
 
 When it inspects a page, Explorer reads the page's `<meta http-equiv="origin-trial">` tokens, at most
 twenty, decodes them in memory and checks them with Chrome's public key, to say whether Chrome would
 honour a WebMCP token on that page. The token text is not stored or sent anywhere; the panel keeps
-the decoded facts (trial name, origin, expiry date, status) only while it shows them.
+the decoded facts (trial name, origin, expiry date, status) only while it shows them. A page cannot
+show an extension its response headers: tokens sent in an `Origin-Trial` header are read only when
+you press Scan Origin (below), from the same request as the other headers, and handled the same way.
 
 ### Discovery conventions, only when you press the button
 
 The Security section can fetch, for the site you are inspecting and only when you press
 **Scan Origin**, three paths some agents and auditors look for
 (`/.well-known/webmcp`, `/.well-known/webmcp.json`, `/llms.txt`) and the current page once more
-to read its `Permissions-Policy`, CSP and CORS headers. These GET requests go to the site's own origin, from
+to read its `Permissions-Policy`, CSP, CORS and `Origin-Trial` headers. These GET requests go to the site's own origin, from
 Explorer, without your cookies, with a timeout and a size cap; nothing is sent anywhere else and
 nothing is stored. Discovery files are labelled optional conventions, not WebMCP requirements. Header evidence
 does not establish the effective policy, authenticated response or exploitable CORS access.
