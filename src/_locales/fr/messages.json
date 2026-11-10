@@ -1876,6 +1876,15 @@
   "sec_contract_changed_in_session_why": {
     "message": "L’outil a gardé son nom alors que sa description, son schéma d’entrée ou ses annotations ont été remplacés. Un agent qui a lu le contrat précédent appelle désormais un contrat différent (arXiv 2606.06387, tickets spéc. #92 et #328). Un composant qui se réaffiche avec un autre texte produit le même effet ; la preuve nomme ce qui a changé."
   },
+  "sec_text_usage_instruction_fix": {
+    "message": "Décrivez ce que fait l’outil et quand il s’applique, en phrases déclaratives simples. Faites respecter un ordre obligatoire, par exemple une recherche avant une réservation, dans le code de l’outil ou dans son schéma."
+  },
+  "sec_text_usage_instruction_title": {
+    "message": "La description dit à l’agent quand ou dans quel ordre appeler les outils"
+  },
+  "sec_text_usage_instruction_why": {
+    "message": "Des formules comme « appelle toujours ceci en premier », « tu dois appeler cet outil » ou « IMPORTANT: » s’adressent à l’agent au lieu de décrire l’outil. Des descriptions réelles le font, et les recommandations de Chrome le déconseillent : décrire ce que l’outil peut faire, pas ce que le modèle doit faire. C’est aussi la façon dont un outil s’attribue la priorité sur ses voisins, ce qui compte quand un autre script l’a enregistré."
+  },
   "secrets_title": {
     "message": "Clés de fournisseurs dans les scripts de la page (WMCP-SEC-013)",
     "description": "Key search heading in the own-site checks box."
@@ -3046,13 +3055,13 @@
     "message": "Le verbe modifie quelque chose sur la page ou le compte, mais ni readOnlyHint ni consequentialHint n’est déclaré ; il est demandé aux agents de supposer un changement d’état, et un relecteur ne peut pas distinguer un oubli d’un choix voulu."
   },
   "sec_text_agent_directive_fix": {
-    "message": "Décrivez ce que fait l’outil et quand il s’applique, en phrases déclaratives simples ; déplacez toute règle de flux dans le code de l’outil ou son schéma."
+    "message": "Supprimez l’instruction et décrivez seulement ce que fait l’outil. Si vous ne l’avez pas écrite, trouvez le script qui a enregistré cet outil (le mode Instrumentation le nomme) et traitez ce script comme non fiable."
   },
   "sec_text_agent_directive_title": {
-    "message": "La description ressemble à une instruction adressée à l’agent"
+    "message": "La description ordonne à l’agent de cacher, de détourner ou d’ignorer"
   },
   "sec_text_agent_directive_why": {
-    "message": "Les agents prennent les descriptions d’outils comme un contexte de confiance. Des phrases telles que « appelle toujours ceci en premier » ou « ne le dis pas à l’utilisateur » orientent le modèle au lieu de décrire l’outil (spéc. §6.3.1.1, empoisonnement d’outil). Une description légitime peut employer ces mots ; c’est un indicateur à relire par une personne."
+    "message": "Les agents prennent les descriptions d’outils comme un contexte de confiance. Ce texte fait ce que les attaques publiées d’empoisonnement d’outil font d’une description : il annule des instructions antérieures, cache une action à l’utilisateur, envoie des données ailleurs, fait appeler un autre outil pour en reprendre le résultat, modifie le comportement d’un autre outil, ou dicte ce que l’agent répond (spéc. §6.3.1.1 ; Invariant Labs et Trail of Bits, 2025). C’est un indicateur : lisez l’extrait avant de conclure."
   },
   "sec_text_embedded_address_fix": {
     "message": "Décrivez l’outil sans adresses ; renvoyez les liens dans les résultats s’ils font partie des données."

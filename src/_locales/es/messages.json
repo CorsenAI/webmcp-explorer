@@ -1876,6 +1876,15 @@
   "sec_contract_changed_in_session_why": {
     "message": "La herramienta conservó su nombre mientras se sustituían su descripción, su esquema de entrada o sus anotaciones. Un agente que leyó el contrato anterior llama ahora a uno distinto (arXiv 2606.06387, issues #92 y #328). Un componente que se vuelve a renderizar con otro texto produce el mismo efecto; la evidencia indica qué cambió."
   },
+  "sec_text_usage_instruction_fix": {
+    "message": "Describe qué hace la herramienta y cuándo se aplica con frases declarativas sencillas. Haz cumplir un orden obligatorio, como una búsqueda antes de una reserva, en el código de la herramienta o en su esquema."
+  },
+  "sec_text_usage_instruction_title": {
+    "message": "La descripción indica al agente cuándo o en qué orden llamar a las herramientas"
+  },
+  "sec_text_usage_instruction_why": {
+    "message": "Frases como «llama siempre a esto primero», «debes llamar a esta herramienta» o «IMPORTANT:» se dirigen al agente en lugar de describir la herramienta. Hay descripciones reales que lo hacen, y las recomendaciones de Chrome lo desaconsejan: describir lo que la herramienta puede hacer, no lo que debe hacer el modelo. También es la forma en que una herramienta se atribuye prioridad sobre las demás, lo que importa cuando la registró otro script."
+  },
   "secrets_title": {
     "message": "Claves de proveedores en los scripts de la página (WMCP-SEC-013)",
     "description": "Key search heading in the own-site checks box."
@@ -3046,13 +3055,13 @@
     "message": "El verbo modifica algo en la página o en la cuenta, pero no se declara ni readOnlyHint ni consequentialHint; a los agentes se les indica asumir un cambio de estado, y un revisor no puede distinguir una omisión involuntaria de una intencionada."
   },
   "sec_text_agent_directive_fix": {
-    "message": "Describe qué hace la herramienta y cuándo se aplica con frases declarativas sencillas; lleva cualquier regla de flujo al código de la herramienta o a su esquema."
+    "message": "Elimina la instrucción y describe solo lo que hace la herramienta. Si no la escribiste tú, localiza el script que registró esta herramienta (el modo Instrumentación lo indica) y trátalo como no fiable."
   },
   "sec_text_agent_directive_title": {
-    "message": "La descripción parece una instrucción dirigida al agente"
+    "message": "La descripción ordena al agente ocultar, desviar o ignorar"
   },
   "sec_text_agent_directive_why": {
-    "message": "Los agentes toman las descripciones de las herramientas como contexto de confianza. Frases como «llama siempre a esto primero» o «no se lo digas al usuario» dirigen al modelo en lugar de describir la herramienta (espec. §6.3.1.1, envenenamiento de herramientas). Una descripción legítima puede usar estas palabras; es un indicador para que lo revise una persona."
+    "message": "Los agentes toman las descripciones de las herramientas como contexto de confianza. Este texto hace lo que los ataques publicados de envenenamiento de herramientas hacen con una descripción: anula instrucciones anteriores, oculta una acción al usuario, envía datos a otro lugar, hace que el agente llame a otra herramienta y traslade su resultado, cambia el comportamiento de otra herramienta, o dicta lo que el agente responde (espec. §6.3.1.1; Invariant Labs y Trail of Bits, 2025). Es un indicador: lee el extracto antes de concluir."
   },
   "sec_text_embedded_address_fix": {
     "message": "Describe la herramienta sin direcciones; devuelve los enlaces en los resultados si forman parte de los datos."

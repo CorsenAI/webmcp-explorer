@@ -49,6 +49,8 @@ export const REFS = {
   'owasp-mcp08': { label: 'OWASP MCP Top 10 — MCP08 Lack of Audit and Telemetry', url: 'https://owasp.org/projects/mcp-top-10' },
   'arxiv-msti': { label: 'arXiv 2606.06387 — WebMCP tool surface poisoning (mid-session tool injection), 2026-06', url: 'https://arxiv.org/abs/2606.06387' },
   'lighthouse-agentic': { label: 'Lighthouse — Agentic browsing audits (llms.txt, registered WebMCP tools), 2026-05-05', url: 'https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring' },
+  'invariant-tool-poisoning': { label: 'Invariant Labs — MCP tool poisoning attacks (instructions in descriptions, shadowing), 2025', url: 'https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks' },
+  'trailofbits-line-jumping': { label: 'Trail of Bits — line jumping: tool descriptions that act before any call, 2025-04-21', url: 'https://blog.trailofbits.com/2025/04/21/jumping-the-line-how-mcp-servers-can-attack-you-before-you-ever-use-them/' },
   'unicode-tr36': { label: 'Unicode TR36 — security considerations (invisible and bidi characters, mixed scripts)', url: 'https://www.unicode.org/reports/tr36/' },
   // Engine v3 (2026-11-08): sources read on that date, see docs/research/2026-11-08-engine-v3-sources.md.
   'spec-exposed-to': { label: 'WebMCP spec — registerTool exposedTo (cross-origin opt-in), 2026-11-02', url: 'https://webmachinelearning.github.io/webmcp/#dom-modelcontextregistertooloptions-exposedto' },
@@ -66,7 +68,9 @@ const entry = (axis, severity, nature, refs) => ({ axis, severity, nature, refs 
 
 export const CATALOG = {
   // Injection surface: what an agent reads before it decides.
-  'text-agent-directive': entry(AXIS.injection, 'high', NATURE.indicator, ['spec-6.3.1.1', 'owasp-mcp03', 'arxiv-msti']),
+  'text-agent-directive': entry(AXIS.injection, 'high', NATURE.indicator, ['spec-6.3.1.1', 'owasp-mcp03', 'arxiv-msti', 'invariant-tool-poisoning', 'trailofbits-line-jumping']),
+  // Engine v5 (2026-11-10): ordering and obligation phrasing, apart from what the attacks write.
+  'text-usage-instruction': entry(AXIS.injection, 'low', NATURE.indicator, ['chrome-best-practices', 'spec-6.3.1.1', 'trailofbits-line-jumping']),
   'text-hidden-characters': entry(AXIS.injection, 'high', NATURE.observed, ['spec-6.3.1.1', 'unicode-tr36', 'owasp-mcp03']),
   'text-mixed-scripts': entry(AXIS.injection, 'medium', NATURE.indicator, ['unicode-tr36', 'spec-6.3.1.1']),
   'text-encoded-blob': entry(AXIS.injection, 'medium', NATURE.indicator, ['spec-6.3.1.1', 'owasp-mcp03']),

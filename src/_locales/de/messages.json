@@ -1876,6 +1876,15 @@
   "sec_contract_changed_in_session_why": {
     "message": "Das Werkzeug hat seinen Namen behalten, während Beschreibung, Eingabeschema oder Annotationen ersetzt wurden. Ein Agent, der den früheren Vertrag gelesen hat, ruft nun einen anderen auf (arXiv 2606.06387, Spec-Issues #92 und #328). Eine Komponente, die mit anderem Text neu rendert, bewirkt dasselbe; der Nachweis nennt, was sich geändert hat."
   },
+  "sec_text_usage_instruction_fix": {
+    "message": "Beschreiben Sie in einfachen Aussagesätzen, was das Werkzeug tut und wann es gilt. Setzen Sie eine zwingende Reihenfolge, etwa eine Suche vor einer Buchung, im Code oder im Schema des Werkzeugs durch."
+  },
+  "sec_text_usage_instruction_title": {
+    "message": "Die Beschreibung sagt dem Agenten, wann oder in welcher Reihenfolge er Werkzeuge aufrufen soll"
+  },
+  "sec_text_usage_instruction_why": {
+    "message": "Formulierungen wie „immer zuerst aufrufen“, „du musst dieses Werkzeug aufrufen“ oder „IMPORTANT:“ richten sich an den Agenten, statt das Werkzeug zu beschreiben. Echte Beschreibungen tun das, und Chromes Empfehlungen raten davon ab: beschreiben, was das Werkzeug kann, nicht, was das Modell tun soll. So verschafft sich ein Werkzeug auch Vorrang vor seinen Nachbarn, was zählt, wenn ein anderes Skript es registriert hat."
+  },
   "secrets_title": {
     "message": "Anbieterschlüssel in Seitenskripten (WMCP-SEC-013)",
     "description": "Key search heading in the own-site checks box."
@@ -3046,13 +3055,13 @@
     "message": "Das Verb verändert etwas auf der Seite oder im Konto, aber weder readOnlyHint noch consequentialHint ist deklariert; Agenten müssen von einer Zustandsänderung ausgehen, und Prüfer können Absicht nicht von Versehen unterscheiden."
   },
   "sec_text_agent_directive_fix": {
-    "message": "Beschreiben Sie in einfachen Aussagesätzen, was das Werkzeug tut und wann es gilt; verlagern Sie Workflow-Regeln in den Code oder das Schema des Werkzeugs."
+    "message": "Entfernen Sie die Anweisung und beschreiben Sie nur, was das Werkzeug tut. Wenn sie nicht von Ihnen stammt, ermitteln Sie das Skript, das dieses Werkzeug registriert hat (der Instrumentierungsmodus nennt es), und behandeln Sie es als nicht vertrauenswürdig."
   },
   "sec_text_agent_directive_title": {
-    "message": "Die Beschreibung liest sich wie eine Anweisung an den Agenten"
+    "message": "Die Beschreibung weist den Agenten an, etwas zu verbergen, umzuleiten oder zu übergehen"
   },
   "sec_text_agent_directive_why": {
-    "message": "Agenten behandeln Tool-Beschreibungen als vertrauenswürdigen Kontext. Formulierungen wie „immer zuerst aufrufen“ oder „dem Nutzer nicht mitteilen“ lenken das Modell, statt das Tool zu beschreiben (Spez. §6.3.1.1, Tool Poisoning). Auch eine legitime Beschreibung kann solche Wörter enthalten; dies ist ein Hinweis zur menschlichen Prüfung."
+    "message": "Agenten behandeln Tool-Beschreibungen als vertrauenswürdigen Kontext. Dieser Text tut, was veröffentlichte Tool-Poisoning-Angriffe mit einer Beschreibung tun: Er setzt frühere Anweisungen außer Kraft, verbirgt eine Aktion vor dem Nutzer, sendet Daten an einen anderen Ort, lässt den Agenten ein anderes Werkzeug aufrufen und dessen Ergebnis weitergeben ändert das Verhalten eines anderen Werkzeugs oder schreibt vor, was der Agent antwortet (Spez. §6.3.1.1; Invariant Labs und Trail of Bits, 2025). Dies ist ein Hinweis: Lesen Sie den Auszug, bevor Sie urteilen."
   },
   "sec_text_embedded_address_fix": {
     "message": "Beschreiben Sie das Werkzeug ohne Adressen; geben Sie Links in den Ergebnissen zurück, falls sie Teil der Daten sind."

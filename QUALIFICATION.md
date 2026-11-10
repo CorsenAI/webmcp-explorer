@@ -1,47 +1,52 @@
-# 2.6.0 qualification
+# 2.6.1 qualification
 
 Qualified on 2026-11-10. Source: 218 files under `src/`. The [source manifest](SOURCE-SHA256.json)
 contains each relative path and SHA-256 digest; its own SHA-256 is
-`44c5f04d4a5535f1b9e8ca83b41dcc62e94e734b0f76bd6626f8f837e1bb0e14`.
+`359413123e4041e0d47b37453e6726e2a9065229d00d0a80a1e3bab0a8359d8a`.
 
-Store package: `webmcp-explorer-2.6.0.zip`, 872043 bytes, SHA-256
-`61b349016de0852a0fbe841fe814d6dd093c6b0c713700aef22213d84c858c3e`, reproducible: built from this
+Store package: `webmcp-explorer-2.6.1.zip`, 878102 bytes, SHA-256
+`a90fe40ba690d7939173bd4389c72712ba18a4609b0a87affd732a17a5df39e1`, reproducible: built from this
 commit with Node 26.8.1, `node tools/pack-store.mjs` gives exactly these bytes (the archive takes its
 timestamps from the commit), and `node tools/verify-store-zip.mjs` matches every entry with `src/`.
 
 | Platform | Browser | Results |
 | --- | --- | --- |
-| Linux | Chrome for Testing 155.0.8059.84 | 798 units; 75/75 functional scenarios on the shipping build (production manifest, permissions granted through Chrome's own dialog); 12/12 permission journeys |
-| macOS 27.2 ARM64 | Chrome for Testing 155.0.8059.84 | 798 units; 75/75 functional scenarios |
-| Windows 11 ARM64 | — | 798 units; package read back entry by entry |
+| Linux | Chrome for Testing 155.0.8059.84 | 805 units; 76/76 functional scenarios on the shipping build (production manifest, permissions granted through Chrome's own dialog); 12/12 permission journeys |
+| macOS 27.2 ARM64 | Chrome for Testing 155.0.8059.84 | 805 units; 76/76 functional scenarios |
+| Windows 11 ARM64 | — | 805 units; package read back entry by entry |
 
-These are the same 798 distinct unit cases repeated on each OS. On the Windows ARM64 machine, Chrome
+These are the same 805 distinct unit cases repeated on each OS. On the Windows ARM64 machine, Chrome
 for Testing runs as x64 under emulation and does not give usable functional runs; no Windows
-functional result is claimed for 2.6.0. The first full run of this version gave 74/75 on Linux and
-on macOS: the file input opened by the new Import button had neither a name nor a hint, which the
-scenario that checks every control reports. It was corrected and the whole qualification was run
-again on the corrected build: 75/75 on both. Store gate (`node tools/check-store-build.mjs`): 218
-files, 1679 messages, no finding. No new permission.
+functional result is claimed for 2.6.1. Store gate (`node tools/check-store-build.mjs`): 218 files,
+1682 messages, no finding. No new permission.
 
-What 2.6.0 adds:
+What 2.6.1 changes: one rule of the security review, and nothing else since 2.6.0.
 
-- **Token delivery as Chrome reads it.** Chrome reads an origin-trial meta element only inside
-  `<head>`, takes its content as written and decodes it with strict Base64. A meta element in the
-  body, or a token with spaces, line breaks or missing padding, is now reported as never read;
-  2.5.0 reported such a token as honoured. A token that Chrome's key did not sign is named as
-  possibly another browser's.
-- **Live contract changes.** The timeline compares a SHA-256 fingerprint of each tool's description,
-  input schema and annotations as well as the tool names. A tool replaced under its own name is
-  reported with the part that changed, and a tool that was removed and came back is said to carry
-  the same contract or another one. The security review reports another contract under the same
-  name as an observed finding (`contract-changed-in-session`); a re-mount with the same contract is
-  not a finding. Measured on Chrome 155 first: with no gap, a microtask or a task between the
-  removal and the new registration, the name never leaves the tool list, so names alone cannot show
-  a replacement.
-- **Baseline files.** A security baseline can be exported to a file and imported for the same site.
-- **`Origin-Trial` header.** Scan Origin reads the header from the request it already makes.
-- **One request at a time.** Turning Instrumentation Mode and emulation on or off is queued in the
-  background.
+A description that addresses the agent is rated in two tiers. `text-agent-directive`, critical, is
+what published tool-poisoning cases write in a description: an order to ignore earlier instructions,
+to hide an action from the user, to send data elsewhere, to call another tool and carry its result,
+to read a secret file, to change how another tool behaves, to take effect without being called, to go
+to another site, or a rule about what the agent must answer. `text-usage-instruction`, low and new,
+is guidance on when or in what order to call tools ("always call this first", "you must call this
+tool", an "IMPORTANT:" label).
+
+The rule was measured before it was changed, on source text only (no page was loaded):
+
+| Set | 2.6.0 | 2.6.1 |
+| --- | --- | --- |
+| 488 descriptions from the source of 12 public WebMCP projects | 13 rated critical | none critical, 11 low |
+| 16 phrasings published with the attacks (WebMCP draft §6.3.1.1, Invariant Labs, Trail of Bits) | 5 rated critical | 14 critical, 1 low, 1 not matched |
+
+The 13 were workflow guidance such as "use X to find the id before calling this", in demos published
+by browser vendors among others. Both findings are indicators over English text that quote their
+excerpt: a rephrased instruction or one in another language is not found, and the real set shows
+what the earlier list got wrong without bounding the errors of the new one.
+
+What 2.6.0 added (2026-11-10): origin-trial tokens read the way Chrome reads them (a meta element
+outside `<head>` or a token written with blanks is never read); a tool contract replaced under its
+own name reported live with the part that changed; security baselines exported to a file and
+imported for the same site; the `Origin-Trial` header read by Scan Origin; instrumentation requests
+applied one at a time.
 
 Limits: the timeline samples the tool list when the page signals a change and starts when the panel
 follows a tab; the observer runs in the page's own world, where a page that looks for it can find

@@ -24,8 +24,10 @@ Free, no account, no telemetry. Apache-2.0.
   prompt-injection indicators, hidden or look-alike characters, consequential actions without hints,
   read-only claims contradicted by the callback's own source, declarative forms that submit hidden
   business fields, untrusted content, `exposedTo` lists and frames, text far beyond Chrome's
-  budgets and changes in registered contracts. A provisional grade shows its calculation and what
-  could not be observed.
+  budgets and changes in registered contracts. A description that tells the agent to hide an
+  action, send data elsewhere or ignore earlier instructions is rated critical; one that only says
+  when or in what order to call a tool is rated low. A provisional grade shows its calculation and
+  what could not be observed.
 - **Catch a changed contract**: while the panel follows a page, a tool whose description, input
   schema or annotations are replaced under the same name is reported in the timeline and as a
   finding that names the part; a tool that re-mounts with the same contract is not flagged. Between
@@ -109,5 +111,5 @@ and the trademark boundary. Chrome and WebMCP are referenced descriptively; this
 an official Google product. It is also unrelated to the experimental `webmcp-explorer` sample in
 Microsoft Edge's `webmcp-labs` repository.
 
-See [QUALIFICATION.md](QUALIFICATION.md) for the qualification of this source (2.6.0) and
+See [QUALIFICATION.md](QUALIFICATION.md) for the qualification of this source (2.6.1) and
 [SOURCE-SHA256.json](SOURCE-SHA256.json) for the hashes of its product files.

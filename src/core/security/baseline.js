@@ -6,17 +6,20 @@
 import { SEVERITY_RANK, CODES } from './catalog.js';
 import { CONTRACT_PARTS } from './contract-lock.js';
 
-// Engine v3 (2026-11-08) and v4 (2026-11-10) added finding codes. A baseline records the engine
-// that made it, so a finding whose code did not exist then is shown as a new rule, never as a
-// regression of the site.
-export const ENGINE_VERSION = 4;
+// Engine v3 (2026-11-08), v4 and v5 (2026-11-10) added finding codes. A baseline
+// records the engine that made it, so a finding whose code did not exist then is shown as a new
+// rule, never as a regression of the site.
+export const ENGINE_VERSION = 5;
 export const ENGINE_V3_CODES = Object.freeze(['declarative-hidden-parameter', 'declarative-credential-field',
   'declarative-param-orphan', 'declarative-post-auto-submit', 'readonly-callback-mutation', 'exposed-to-cross-origin',
   'text-far-over-budget', 'client-secret-exposed', 'output-reflects-input']);
 export const ENGINE_V4_CODES = Object.freeze(['contract-changed-in-session']);
+export const ENGINE_V5_CODES = Object.freeze(['text-usage-instruction']);
+const since = (...lists) => new Set(CODES.filter((code) => !lists.some((list) => list.includes(code))));
 const CODES_BEFORE = {
-  2: new Set(CODES.filter((code) => !ENGINE_V3_CODES.includes(code) && !ENGINE_V4_CODES.includes(code))),
-  3: new Set(CODES.filter((code) => !ENGINE_V4_CODES.includes(code))),
+  2: since(ENGINE_V3_CODES, ENGINE_V4_CODES, ENGINE_V5_CODES),
+  3: since(ENGINE_V4_CODES, ENGINE_V5_CODES),
+  4: since(ENGINE_V5_CODES),
 };
 const knownAt = (baseline) => (baseline?.engine === ENGINE_VERSION ? null : CODES_BEFORE[baseline?.engine ?? 2] ?? CODES_BEFORE[2]);
 

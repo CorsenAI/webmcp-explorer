@@ -1,6 +1,6 @@
 # WebMCP Explorer — Privacy Policy
 
-Last reviewed: 2026-11-10. Applies to WebMCP Explorer 2.6.0.
+Last reviewed: 2026-11-10. Applies to WebMCP Explorer 2.6.1.
 Earlier Store versions may offer fewer features; optional features described below act only
 when you enable or request them.
 

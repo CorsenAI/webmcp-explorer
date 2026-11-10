@@ -2019,6 +2019,15 @@
   "sec_contract_changed_in_session_why": {
     "message": "The tool kept its name while its description, input schema or annotations were replaced. An agent that read the earlier contract now calls a different one (arXiv 2606.06387, spec issues #92 and #328). A component that re-renders with other text does the same; the evidence names what changed."
   },
+  "sec_text_usage_instruction_fix": {
+    "message": "Describe what the tool does and when it applies, in plain declarative sentences. Enforce an order that must hold, such as a search before a booking, in the tool's own code or its schema."
+  },
+  "sec_text_usage_instruction_title": {
+    "message": "Description tells the agent when or in what order to call tools"
+  },
+  "sec_text_usage_instruction_why": {
+    "message": "Phrases such as “always call this first”, “you must call this tool” or “IMPORTANT:” address the agent instead of describing the tool. Real descriptions do this, and Chrome's guidance advises against it: describe what the tool can do, not what the model should do. It is also how a tool claims priority over its neighbours, which matters when another script registered it."
+  },
   "secrets_title": {
     "message": "Provider keys in page scripts (WMCP-SEC-013)",
     "description": "Key search heading in the own-site checks box."
@@ -3327,15 +3336,15 @@
     "description": "Security finding state-change-without-hint: why it matters."
   },
   "sec_text_agent_directive_fix": {
-    "message": "Describe what the tool does and when it applies, in plain declarative sentences; move any workflow rule into the tool's own code or its schema.",
+    "message": "Remove the instruction and describe only what the tool does. If you did not write it, find the script that registered this tool (Instrumentation Mode names it) and treat that script as untrusted.",
     "description": "Security finding text-agent-directive: what to do."
   },
   "sec_text_agent_directive_title": {
-    "message": "Description reads like an instruction to the agent",
+    "message": "Description instructs the agent to hide, redirect or override",
     "description": "Security finding text-agent-directive: title."
   },
   "sec_text_agent_directive_why": {
-    "message": "Agents take tool descriptions as trusted context. Phrases such as “always call this first” or “do not tell the user” steer the model instead of describing the tool (spec §6.3.1.1, tool poisoning). A legitimate description can use these words; this is an indicator for a person to read.",
+    "message": "Agents take tool descriptions as trusted context. This text does what published tool-poisoning attacks do with a description: it overrides earlier instructions, hides an action from the user, sends data elsewhere, has the agent call another tool and carry its result, changes how another tool behaves, or dictates what the agent answers (spec §6.3.1.1; Invariant Labs and Trail of Bits, 2025). It is an indicator: read the excerpt before concluding.",
     "description": "Security finding text-agent-directive: why it matters."
   },
   "sec_text_embedded_address_fix": {

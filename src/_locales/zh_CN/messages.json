@@ -1876,6 +1876,15 @@
   "sec_contract_changed_in_session_why": {
     "message": "工具名称未变，但其描述、输入模式或注解已被替换。读取过先前契约的智能体现在调用的是另一份契约（arXiv 2606.06387，规范 Issue #92 和 #328）。以其他文本重新渲染的组件也会产生同样的效果；证据会指明变更的部分。"
   },
+  "sec_text_usage_instruction_fix": {
+    "message": "请用平实的陈述句描述工具的功能及适用场景。必须遵守的顺序（例如先搜索后预订）应在工具自身的代码或模式中强制执行。"
+  },
+  "sec_text_usage_instruction_title": {
+    "message": "描述告诉代理何时或按什么顺序调用工具"
+  },
+  "sec_text_usage_instruction_why": {
+    "message": "诸如“始终先调用此工具”“你必须调用此工具”或“IMPORTANT:”之类的语句是在对代理说话，而不是描述工具。真实的描述中也有这种写法，但 Chrome 的指南不建议这样做：应描述工具能做什么，而不是模型应该做什么。这也是工具为自己争取优先于其他工具的方式，当它由另一个脚本注册时尤其值得注意。"
+  },
   "secrets_title": {
     "message": "页面脚本中的服务商密钥 (WMCP-SEC-013)",
     "description": "Key search heading in the own-site checks box."
@@ -3046,13 +3055,13 @@
     "message": "动词表明会更改页面或账户状态，但既未声明 readOnlyHint 也未声明 consequentialHint；代理会被指示假定其会改变状态，而审阅者也无法区分这是有意为之还是疏忽遗漏。"
   },
   "sec_text_agent_directive_fix": {
-    "message": "请用平实的陈述句描述工具的功能及适用场景；将任何工作流规则移入工具自身的代码或模式中。"
+    "message": "请删除该指令，只描述工具的功能。如果不是你写的，请找出注册此工具的脚本（插桩模式会指明），并将该脚本视为不可信。"
   },
   "sec_text_agent_directive_title": {
-    "message": "描述读起来像对代理的指令"
+    "message": "描述指示代理隐瞒、转移或忽略"
   },
   "sec_text_agent_directive_why": {
-    "message": "代理会将工具描述视为受信任的上下文。诸如“始终先调用此工具”或“不要告诉用户”之类的语句是在操控模型而非描述工具（规范 §6.3.1.1，工具投毒）。合法描述中也可能出现这些词，此处仅作风险指标供人工审阅。"
+    "message": "代理会将工具描述视为受信任的上下文。这段文字的作用与已公开的工具投毒攻击在描述中的做法相同：推翻先前的指令、向用户隐瞒某项操作、把数据发送到别处、让代理调用另一个工具并带出其结果，改变另一个工具的行为，或规定代理的回答内容（规范 §6.3.1.1；Invariant Labs 与 Trail of Bits，2025）。这是一项指标：请先阅读摘录再下结论。"
   },
   "sec_text_embedded_address_fix": {
     "message": "描述工具时不要包含地址；如果链接属于数据的一部分，请在返回结果中提供。"

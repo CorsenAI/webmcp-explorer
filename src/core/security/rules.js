@@ -6,8 +6,8 @@ export const AGENTIC_SOURCE = 'https://genai.owasp.org/resource/owasp-top-10-for
 const rule = (severity, title, owasp, codes, precision, description, help) => ({ severity, title, owasp, codes, precision, description, help });
 export const RULES = {
   'WMCP-SEC-001': rule('critical', 'Tool description injection', ['ASI01', 'ASI02'],
-    ['text-agent-directive', 'text-hidden-characters', 'text-mixed-scripts', 'text-encoded-blob', 'text-markup', 'text-embedded-address', 'text-active-payload'], 'medium',
-    'Model-facing tool text contains instructions addressed to the agent, invisible or direction-changing characters, look-alike scripts, encoded blobs, markup or addresses.',
+    ['text-agent-directive', 'text-usage-instruction', 'text-hidden-characters', 'text-mixed-scripts', 'text-encoded-blob', 'text-markup', 'text-embedded-address', 'text-active-payload'], 'medium',
+    'Model-facing tool text carries an instruction that overrides earlier instructions, hides an action from the user, redirects data or another tool, or tells the agent when and in what order to call tools; or it contains invisible or direction-changing characters, look-alike scripts, encoded blobs, markup or addresses.',
     'Describe only the action, its inputs and its result. Remove agent-directed instructions and invisible characters; keep links and markup out of model-facing text.'),
   'WMCP-SEC-002': rule('high', 'Mutating tool annotations', ['ASI02', 'ASI09'],
     ['consequential-without-hint', 'state-change-without-hint', 'readonly-claim-on-mutating-verb', 'mutation-hints-incomplete'], 'medium',

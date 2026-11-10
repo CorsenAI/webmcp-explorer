@@ -31,8 +31,10 @@ const codes = (r) => r.findings.map((f) => f.code).sort();
 const token = (prefix, n, ch = 'x') => prefix + ch.repeat(n);
 
 test('families 001-007 are unchanged and every new code belongs to exactly one new family', () => {
+  // Engine v5 split the agent-directive phrases in two: 001 gained text-usage-instruction. The
+  // seven families are otherwise as engine v2 had them.
   const v2 = {
-    'WMCP-SEC-001': ['critical', 'Tool description injection', 'ASI01,ASI02', 'text-agent-directive,text-hidden-characters,text-mixed-scripts,text-encoded-blob,text-markup,text-embedded-address,text-active-payload'],
+    'WMCP-SEC-001': ['critical', 'Tool description injection', 'ASI01,ASI02', 'text-agent-directive,text-usage-instruction,text-hidden-characters,text-mixed-scripts,text-encoded-blob,text-markup,text-embedded-address,text-active-payload'],
     'WMCP-SEC-002': ['high', 'Mutating tool annotations', 'ASI02,ASI09', 'consequential-without-hint,state-change-without-hint,readonly-claim-on-mutating-verb,mutation-hints-incomplete'],
     'WMCP-SEC-003': ['high', 'Input schema constraints', 'ASI02,ASI05', 'unbounded-string,permissive-object'],
     'WMCP-SEC-004': ['high', 'Authentication and confirmation boundary', 'ASI03,ASI09', 'mutating-auto-submit'],
