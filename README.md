@@ -49,9 +49,9 @@ Free, no account, no telemetry. Apache-2.0.
   companion; Corsen Guard asks for approval before calls by default.
 - Eight interface languages, including Hebrew and Arabic RTL.
 
-| Run a tool, read the result, reproduce the call | Review security findings with their evidence |
+| Run a tool, read the result, reproduce the call | Review security with evidence, and each fix as a diff |
 | --- | --- |
-| ![Result of a tool call shown as readable fields, with buttons to save it as a check, reproduce the call or use it in a recipe](docs/images/run.png) | ![Critical finding: a tool description that reads like an instruction to the agent, with the exact excerpt as evidence and why it matters](docs/images/security.png) |
+| ![Result of a tool call shown as readable fields, with buttons to save it as a check, reproduce the call or use it in a recipe](docs/images/run.png) | ![Security review of a contact-form tool: the proposed fix shown as a before/after diff of its contract, closing the input schema and adding a maximum length, with a button to copy the diff](docs/images/security.png) |
 
 ## Try it in a minute
 
